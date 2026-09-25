@@ -849,7 +849,13 @@
         updateRsMaskVisual();
         const sel = document.getElementById("rs-voice-select");
         const audioUrl = (sel && sel.value) ? sel.value : q.audio_url;
-        startKaraokeSession("rs-stage", "rs-progress", words, audioUrl || q, (curr, total) => {
+        const isDefaultTts = (audioUrl === q.audio_url);
+        const targetObj = isDefaultTts ? q : {
+          audio_url: audioUrl,
+          audio_duration: q.audio_duration,
+          word_timings: null
+        };
+        startKaraokeSession("rs-stage", "rs-progress", words, targetObj, (curr, total) => {
           document.getElementById("rs-word-prog").innerText = curr + " / " + total;
         }, () => {}, wordIdx);
       } else if (tab === "di") {
@@ -975,31 +981,39 @@
 
     // Badges
     const badgeContainer = document.getElementById("rs-badges");
+    const hasTeachers = (q.teacher_audios && q.teacher_audios.length > 0);
+    const audioBadge = hasTeachers
+      ? `<span class="badge" style="background:#ecfdf5; color:#047857; border-color:#a7f3d0;">🎙️ 萤火虫考场原声 (${q.teacher_audios.length}套示范)</span>`
+      : `<span class="badge" style="background:#eff6ff; color:#1d4ed8; border-color:#bfdbfe;">🤖 AI 神经网络原声 (130 WPM)</span>`;
+
     badgeContainer.innerHTML = `
       <span class="badge" style="background:#fee2e2; color:#b91c1c; border-color:#fca5a5;">🔥 ${q.tags && q.tags.tier || "高频真题"}</span>
       <span class="badge" style="background:#fef3c7; color:#b45309; border-color:#fde68a;">⚡ 难度：${q.tags && q.tags.difficulty || "常规"}</span>
-      <span class="badge" style="background:#ecfdf5; color:#047857; border-color:#a7f3d0;">考场原声 MP3</span>
+      ${audioBadge}
     `;
 
     document.getElementById("rs-trans").innerText = q.translation || "暂无译文";
 
-    // Voice options
+    // Voice options: prioritizes authentic recordings whenever available!
     const sel = document.getElementById("rs-voice-select");
     sel.innerHTML = "";
-    
-    // Add primary neural audio option
-    const optPrimary = document.createElement("option");
-    optPrimary.value = q.audio_url;
-    optPrimary.innerText = "标准备考原声 (女声 130 WPM)";
-    sel.appendChild(optPrimary);
 
-    if (q.teacher_audios && q.teacher_audios.length > 0) {
+    if (hasTeachers) {
       q.teacher_audios.forEach((a, i) => {
         const opt = document.createElement("option");
         opt.value = a.audioUrl;
-        opt.innerText = a.title || ("考场示范音源 " + (i + 1));
+        opt.innerText = "🎙️ 真人原声: " + (a.title || ("示范音源 " + (i + 1))) + (i === 0 ? " (默认推荐)" : "");
         sel.appendChild(opt);
       });
+      const optTts = document.createElement("option");
+      optTts.value = q.audio_url;
+      optTts.innerText = "🤖 AI 领跑: 标准女声 (130 WPM 毫秒打点)";
+      sel.appendChild(optTts);
+    } else {
+      const optPrimary = document.createElement("option");
+      optPrimary.value = q.audio_url;
+      optPrimary.innerText = "🤖 AI 神经网络原声 (130 WPM)";
+      sel.appendChild(optPrimary);
     }
 
     const words = q.sentence.split(/\s+/).filter(Boolean);
@@ -1058,7 +1072,13 @@
       // Sync Karaoke Mode: startKaraokeSession handles playback and synchronization
       const words = q.sentence.split(/\s+/).filter(Boolean);
       updateRsMaskVisual();
-      startKaraokeSession("rs-stage", "rs-progress", words, q, (curr, total) => {
+      const isDefaultTts = (audioUrl === q.audio_url);
+      const targetObj = isDefaultTts ? q : {
+        audio_url: audioUrl,
+        audio_duration: q.audio_duration,
+        word_timings: null
+      };
+      startKaraokeSession("rs-stage", "rs-progress", words, targetObj, (curr, total) => {
         document.getElementById("rs-word-prog").innerText = curr + " / " + total;
       });
     } else {
