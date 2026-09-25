@@ -29,6 +29,10 @@
   h1 { font-size: 1.5rem; font-weight: 700; color: #1e293b; display: flex; align-items: center; gap: 8px; }
   .badge { background: #eff6ff; color: var(--primary); font-size: 0.75rem; padding: 3px 8px; border-radius: 9999px; font-weight: 600; border: 1px solid #bfdbfe; }
   
+  .version-banner { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 10px 14px; margin-bottom: 18px; transition: background-color 0.2s, border-color 0.2s; }
+  .banner-warn { background: #fffbeb !important; border-color: #fde68a !important; }
+  .banner-danger { background: #fef2f2 !important; border-color: #fca5a5 !important; }
+
   .tag-fire { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
   .tag-new { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
   .tag-return { background: #f3e8ff; color: #7e22ce; border: 1px solid #e9d5ff; font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
@@ -131,6 +135,20 @@
     </div>
     <span class="badge">🔥 智能错题本已启用</span>
   </header>
+
+  <div class="version-banner" id="version-banner">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.05rem;">📅</span>
+        <span style="font-weight: 700; color: #0f172a; font-size: 0.9rem;">题库发布基准日期：<span style="color: #2563eb;">2026年09月25日</span></span>
+        <span id="freshness-badge" class="badge" style="background: #dcfce7; color: #15803d; border-color: #bbf7d0;">最新同步版本</span>
+      </div>
+      <span style="font-size: 0.78rem; color: var(--text-muted);">来源：萤火虫官方周预测 (185 题全套)</span>
+    </div>
+    <div style="margin-top: 6px; font-size: 0.8rem; color: #475569; line-height: 1.45;" id="freshness-tip">
+      💡 <strong>时效性说明</strong>：PTE 考场机经具有周期性轮替规律（通常每周三例行更新）。如果当前现实日期与上方题库同步日期<strong>相隔过久（如超过 1~2 周）</strong>，部分考题可能已轮换下架或热度降频，请注意拉取最新题库以确保高效备考！
+    </div>
+  </div>
 
   <div class="stats-bar">
     <div class="stat-card clickable-card" onclick="switchTab('history')" title="点击查看完整答题历史档案明细">
@@ -262,6 +280,10 @@
     <input type="text" id="search-q" class="search-box" placeholder="输入关键词、题号或标签筛选 (如: 131001, library, 新题, 高频, 错题)..." oninput="filterQuestions()">
     <div id="q-list-container" class="question-list"></div>
   </div>
+
+  <footer style="text-align: center; margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-muted);">
+    PTE Academic WFD 极速听写训练系统 · 题库同步基准版本：2026年09月25日 · 原声考场音频归萤火虫官方所有
+  </footer>
 </div>
 
 <script>
@@ -1158,10 +1180,43 @@
     }
   });
 
+  const SYNC_DATE_ISO = "2026-09-25";
+  function checkFreshness() {
+    try {
+      const syncDate = new Date(SYNC_DATE_ISO);
+      const now = new Date();
+      const diffMs = now.getTime() - syncDate.getTime();
+      const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+      const badge = document.getElementById("freshness-badge");
+      const banner = document.getElementById("version-banner");
+      const tip = document.getElementById("freshness-tip");
+      if (!badge || !banner || !tip) return;
+
+      if (diffDays > 14) {
+        banner.className = "version-banner banner-danger";
+        badge.style.background = "#fee2e2";
+        badge.style.color = "#b91c1c";
+        badge.style.borderColor = "#fca5a5";
+        badge.innerText = "已距今 " + diffDays + " 天 (注意时效)";
+        tip.innerHTML = "⚠️ <strong>提醒</strong>：当前题库距今已有 " + diffDays + " 天。PTE 官方机经已多次更新轮换，部分考题可能已下架换题，建议尽快同步最新机经！";
+      } else if (diffDays > 7) {
+        banner.className = "version-banner banner-warn";
+        badge.style.background = "#fef3c7";
+        badge.style.color = "#b45309";
+        badge.style.borderColor = "#fde68a";
+        badge.innerText = "距今 " + diffDays + " 天 (建议关注新题)";
+        tip.innerHTML = "💡 <strong>提醒</strong>：当前题库发布于 " + diffDays + " 天前。若近期参加考试，请关注本周是否有新增真题。";
+      } else {
+        badge.innerText = diffDays <= 0 ? "今日最新同步" : (diffDays + " 天前同步");
+      }
+    } catch (e) {}
+  }
+
   function init() {
     loadQuestion(0);
     renderList(QUESTIONS);
     updateStats();
+    checkFreshness();
   }
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
