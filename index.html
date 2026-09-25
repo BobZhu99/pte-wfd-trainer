@@ -321,6 +321,57 @@
 
   function tokenize(text) {
     return text.match(/[A-Za-z0-9]+(?:'[A-Za-z0-9]+)?/g) || [];
+  function normalizeUkUs(w) {
+    let s = w.toLowerCase();
+    const special = {
+      'defence': 'defense', 'defense': 'defense',
+      'offence': 'offense', 'offense': 'offense',
+      'pretence': 'pretense', 'pretense': 'pretense',
+      'licence': 'license', 'license': 'license',
+      'practise': 'practice', 'practice': 'practice',
+      'programme': 'program', 'program': 'program',
+      'programmes': 'programs', 'programs': 'programs',
+      'catalogue': 'catalog', 'catalog': 'catalog',
+      'catalogues': 'catalogs', 'catalogs': 'catalogs',
+      'dialogue': 'dialog', 'dialog': 'dialog',
+      'dialogues': 'dialogs', 'dialogs': 'dialogs',
+      'ageing': 'aging', 'aging': 'aging',
+      'judgement': 'judgment', 'judgment': 'judgment',
+      'judgements': 'judgments', 'judgments': 'judgments',
+      'acknowledgement': 'acknowledgment', 'acknowledgment': 'acknowledgment',
+      'grey': 'gray', 'gray': 'gray',
+      'greys': 'grays', 'grays': 'grays',
+      'aeroplane': 'airplane', 'airplane': 'airplane',
+      'aeroplanes': 'airplanes', 'airplanes': 'airplanes',
+      'aluminium': 'aluminum', 'aluminum': 'aluminum'
+    };
+    if (special[s]) return special[s];
+
+    s = s.replace(/y[sz]e/g, "yze")
+         .replace(/y[sz]ing/g, "yzing")
+         .replace(/y[sz]ed/g, "yzed")
+         .replace(/y[sz]es/g, "yzes")
+         .replace(/y[sz]er/g, "yzer");
+    s = s.replace(/([a-z]{3,})[sz]ation/g, "$1zation")
+         .replace(/([a-z]{3,})[sz]ations/g, "$1zations")
+         .replace(/([a-z]{3,})[sz]ing/g, "$1zing")
+         .replace(/([a-z]{3,})[sz]ed/g, "$1zed")
+         .replace(/([a-z]{3,})[sz]es/g, "$1zes")
+         .replace(/([a-z]{3,})[sz]e/g, "$1ze");
+    if (!["our", "tour", "pour", "sour", "four", "scour"].includes(s)) {
+      s = s.replace(/([a-z]{2,})our([a-z]*)/g, "$1or$2");
+    }
+    s = s.replace(/([a-z]{2,})tre$/g, "$1ter")
+         .replace(/([a-z]{2,})bre$/g, "$1ber");
+    s = s.replace(/([a-z]{2,})lling$/g, "$1ling")
+         .replace(/([a-z]{2,})lled$/g, "$1led")
+         .replace(/([a-z]{2,})ller$/g, "$1ler");
+    return s;
+  }
+
+  function areWordsEquivalent(w1, w2) {
+    if (w1 === w2) return true;
+    return normalizeUkUs(w1) === normalizeUkUs(w2);
   }
 
   function isWordVariation(w1, w2) {
@@ -391,6 +442,7 @@
 
     const matchedWords = [];
     const missingWords = [];
+    const ukUsUsed = [];
     let score = 0;
 
     targetClean.forEach(w => {
@@ -399,7 +451,22 @@
         userCounts[w]--;
         matchedWords.push(w);
       } else {
-        missingWords.push(w);
+        // Check for UK/US spelling equivalent in user words
+        let foundEq = null;
+        for (let u in userCounts) {
+          if (userCounts[u] > 0 && areWordsEquivalent(u, w)) {
+            foundEq = u;
+            break;
+          }
+        }
+        if (foundEq) {
+          score++;
+          userCounts[foundEq]--;
+          matchedWords.push(foundEq);
+          ukUsUsed.push(foundEq + " (英/美互通，等价于 " + w + ")");
+        } else {
+          missingWords.push(w);
+        }
       }
     });
 
@@ -445,6 +512,7 @@
       missingWords: missingWords,
       extraWords: extraWords,
       addWordsUsed: addWordsUsed,
+      ukUsUsed: ukUsUsed,
       typos: typos,
       hasCapital: hasCapital,
       hasPeriod: hasPeriod,
@@ -574,9 +642,30 @@
     html += '</div>';
     html += '<div class="details-section">';
 
-    if (res.isPerfect) {
-      html += '<div style="color: var(--success); font-weight: 700;">🎉 满分！单词、拼写完全一致，毫无失误！</div>';
+    if (res.isPerfect || res.score === res.total) {
+      html += '<div style="color: var(--success); font-weight: 700;">🎉 满分！所有得分点已成功拿满！</div>';
+      if (res.ukUsUsed && res.ukUsUsed.length > 0) {
+        html += '<div style="margin-top: 6px;"><strong style="color: #059669;">🇬🇧/🇺🇸 识别到英美拼写互通 (官方全给分):</strong><div class="tag-group" style="margin-top: 4px;">';
+        res.ukUsUsed.forEach(u => {
+          html += '<span class="tag" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;">' + u + '</span>';
+        });
+        html += '</div></div>';
+      }
+      if (res.addWordsUsed && res.addWordsUsed.length > 0) {
+        html += '<div style="margin-top: 6px;"><strong style="color: var(--info-text);">🛡️ 识别到考场试词:</strong><div class="tag-group" style="margin-top: 4px;">';
+        res.addWordsUsed.forEach(w => {
+          html += '<span class="tag tag-trial">' + w + '</span>';
+        });
+        html += '</div></div>';
+      }
     } else {
+      if (res.ukUsUsed && res.ukUsUsed.length > 0) {
+        html += '<div><strong style="color: #059669;">🇬🇧/🇺🇸 识别到英美拼写互通 (PTE 官方完全给分):</strong><div class="tag-group" style="margin-top: 4px;">';
+        res.ukUsUsed.forEach(u => {
+          html += '<span class="tag" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;">' + u + '</span>';
+        });
+        html += '</div></div>';
+      }
       if (res.missingWords.length > 0) {
         html += '<div><strong style="color: var(--danger);">❌ 具体的未得分/遗漏词:</strong><div class="tag-group" style="margin-top: 4px;">';
         res.missingWords.forEach(w => {
