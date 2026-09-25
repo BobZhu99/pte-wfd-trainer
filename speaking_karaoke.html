@@ -245,7 +245,7 @@
       </div>
       <div style="display: flex; gap: 6px;">
         <button class="nav-btn" id="btn-rs-mode" onclick="toggleRsSubMode()" style="background: #eff6ff; color: var(--primary);">模式: <strong>先听再复述</strong> 🔄</button>
-        <button class="nav-btn" id="btn-rs-mask" onclick="toggleRsMask()">👁️ 显隐字幕</button>
+        <button class="nav-btn" id="btn-rs-mask" onclick="toggleRsMask()">👁️ 显隐字幕与翻译</button>
       </div>
     </div>
 
@@ -1026,7 +1026,7 @@
       if (stage) stage.style.filter = "blur(14px)";
       if (trans) trans.style.display = "none";
       if (btn) {
-        btn.innerHTML = "🙈 字幕: <strong>已隐藏 (点击恢复)</strong>";
+        btn.innerHTML = "🙈 字幕与翻译: <strong>已隐藏 (点击恢复)</strong>";
         btn.style.background = "#fee2e2";
         btn.style.color = "#b91c1c";
         btn.style.borderColor = "#fca5a5";
@@ -1035,7 +1035,7 @@
       if (stage) stage.style.filter = "none";
       if (trans) trans.style.display = "block";
       if (btn) {
-        btn.innerHTML = "👁️ 显隐字幕";
+        btn.innerHTML = "👁️ 显隐字幕与翻译";
         btn.style.background = "#f1f5f9";
         btn.style.color = "#334155";
         btn.style.borderColor = "var(--border)";
