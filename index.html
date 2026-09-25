@@ -221,7 +221,9 @@
       <div id="preview-translation" style="color: #64748b; font-size: 0.88rem;"></div>
     </div>
 
-    <textarea id="practice-input" spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off" writingsuggestions="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false" placeholder="请在此输入听写内容... (敲击回车 Enter 即可直接批改)" oninput="updateWordCount('practice-input', 'practice-wc')" onkeydown="handleEnter(event, 'practice')"></textarea>
+    <form spellcheck="false" autocomplete="off" autocorrect="off" onsubmit="return false;" style="margin: 0; padding: 0;">
+      <textarea id="practice-input" lang="zxx" spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off" writingsuggestions="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false" data-ms-editor="false" aria-autocomplete="none" placeholder="请在此输入听写内容... (敲击回车 Enter 即可直接批改)" oninput="updateWordCount('practice-input', 'practice-wc')" onkeydown="handleEnter(event, 'practice')"></textarea>
+    </form>
 
     <div class="action-row">
       <span class="word-counter" id="practice-wc">单词数: 0</span>
@@ -272,7 +274,9 @@
     <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px;">
       无论你在哪练习，把听写答案直接粘贴在下方，算法自动模糊匹配 185 题库并输出 PTE 得分：
     </p>
-    <textarea id="free-input" spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off" writingsuggestions="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false" placeholder="直接粘贴或输入听写文本... (敲击回车 Enter 立即批改)" oninput="updateWordCount('free-input', 'free-wc')" onkeydown="handleEnter(event, 'free')"></textarea>
+    <form spellcheck="false" autocomplete="off" autocorrect="off" onsubmit="return false;" style="margin: 0; padding: 0;">
+      <textarea id="free-input" lang="zxx" spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off" writingsuggestions="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false" data-ms-editor="false" aria-autocomplete="none" placeholder="直接粘贴或输入听写文本... (敲击回车 Enter 立即批改)" oninput="updateWordCount('free-input', 'free-wc')" onkeydown="handleEnter(event, 'free')"></textarea>
+    </form>
     <div class="action-row">
       <span class="word-counter" id="free-wc">单词数: 0</span>
       <button class="btn-submit" onclick="gradeFreeInput()">一键极速批改 (Enter)</button>
