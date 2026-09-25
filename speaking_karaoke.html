@@ -483,9 +483,14 @@
       activeAudio.playbackRate = currentWpm / 130;
     }
 
-    // Update expected times
-    renderRaStage();
-    renderDiStage();
+    // Only update expected total duration text, NEVER wipe stage innerHTML!
+    if (currentTab === "ra" && RA_DATA[raIdx]) {
+      const words = RA_DATA[raIdx].text.split(/\s+/).filter(Boolean);
+      const dur = RA_DATA[raIdx].audio_duration || ((words.length / currentWpm) * 60);
+      const adjDur = (dur / (currentWpm / 130)).toFixed(1);
+      const totalEl = document.getElementById("ra-time-total");
+      if (totalEl) totalEl.innerText = adjDur + "s";
+    }
   }
 
   function toggleNativeAudio() {
@@ -580,7 +585,20 @@
     return timings;
   }
 
-  function startKaraokeSession(stageId, progressId, words, targetObj, onProgress, onFinish) {
+  function prepareQuestionTimings(q, words) {
+    if (q && q.word_timings && q.word_timings.length > 0) {
+      return q.word_timings.map(wt => ({
+        start: wt[0],
+        dur: wt[1],
+        end: wt[0] + wt[1]
+      }));
+    }
+    const baseWordSec = (60 / currentWpm);
+    const totalEstSec = words.length * baseWordSec;
+    return calculateWordTimings(words, (q && q.audio_duration) ? q.audio_duration : totalEstSec);
+  }
+
+  function startKaraokeSession(stageId, progressId, words, targetObj, onProgress, onFinish, startWordIdx = 0) {
     stopCurrentSession(true);
     isPlaying = true;
 
@@ -607,9 +625,13 @@
       }
     }
 
-    // Reset visual spans
-    const spans = document.querySelectorAll("#" + stageId + " .karaoke-word");
-    spans.forEach(s => { s.className = "karaoke-word unread"; });
+    // Reset visual spans according to startWordIdx
+    const initialSpans = document.querySelectorAll("#" + stageId + " .karaoke-word");
+    initialSpans.forEach((s, idx) => {
+      if (idx < startWordIdx) s.className = "karaoke-word read";
+      else if (idx === startWordIdx && startWordIdx > 0) s.className = "karaoke-word active";
+      else s.className = "karaoke-word unread";
+    });
 
     if (groundTruthTimings && groundTruthTimings.length > 0) {
       currentWordTimings = groundTruthTimings.map(wt => ({
@@ -621,9 +643,18 @@
       currentWordTimings = calculateWordTimings(words, expectedAudioDur);
     }
 
+    const startOffsetSec = (startWordIdx > 0 && currentWordTimings[startWordIdx]) ? currentWordTimings[startWordIdx].start : 0;
+
     if (isNativeAudioOn && audioUrl) {
       activeAudio = new Audio(audioUrl);
       activeAudio.playbackRate = currentWpm / 130;
+
+      if (startOffsetSec > 0) {
+        activeAudio.addEventListener('loadedmetadata', () => {
+          try { activeAudio.currentTime = startOffsetSec; } catch(e){}
+        }, { once: true });
+        try { activeAudio.currentTime = startOffsetSec; } catch(e){}
+      }
 
       activeAudio.onended = () => {
         document.getElementById(progressId).style.width = "100%";
@@ -653,14 +684,13 @@
         if (activeIdx === -1 && curT >= totalT) activeIdx = words.length - 1;
 
         if (activeIdx !== -1) {
-          spans.forEach((s, idx) => {
+          const liveSpans = document.querySelectorAll("#" + stageId + " .karaoke-word");
+          liveSpans.forEach((s, idx) => {
             if (idx < activeIdx) s.className = "karaoke-word read";
             else if (idx === activeIdx) s.className = "karaoke-word active";
             else s.className = "karaoke-word unread";
           });
 
-          // Breath pause indicator
-          const currentTiming = currentWordTimings[activeIdx];
           const breathEl = document.getElementById(stageId + "-breath-" + activeIdx);
           if (breathEl && /[,;]$/.test(words[activeIdx])) {
             breathEl.classList.add("show");
@@ -680,7 +710,7 @@
 
     } else {
       // Visual Pacing / Metronome Mode (without audio)
-      let wordIdx = 0;
+      let wordIdx = startWordIdx;
       const startT = performance.now();
 
       function stepVisual() {
@@ -692,7 +722,8 @@
           return;
         }
 
-        spans.forEach((s, idx) => {
+        const liveSpans = document.querySelectorAll("#" + stageId + " .karaoke-word");
+        liveSpans.forEach((s, idx) => {
           if (idx < wordIdx) s.className = "karaoke-word read";
           else if (idx === wordIdx) s.className = "karaoke-word active";
           else s.className = "karaoke-word unread";
@@ -700,7 +731,7 @@
 
         playTick(wordIdx % 4 === 0);
 
-        const currentTiming = currentWordTimings[wordIdx];
+        const currentTiming = currentWordTimings[wordIdx] || { dur: 0.3 };
         const breathEl = document.getElementById(stageId + "-breath-" + wordIdx);
         if (breathEl && isBreathOn && (/[,;]$/.test(words[wordIdx]) || /[.!?]$/.test(words[wordIdx]))) {
           breathEl.classList.add("show");
@@ -724,25 +755,75 @@
 
   // Click on any word in the subtitles to jump / seek
   function seekToWord(tab, wordIdx) {
-    if (!currentWordTimings || currentWordTimings.length <= wordIdx) return;
+    let q = null;
+    let words = [];
+    if (tab === "ra") { q = RA_DATA[raIdx]; words = q.text.split(/\s+/).filter(Boolean); }
+    else if (tab === "rs") { q = RS_DATA[rsIdx]; words = q.sentence.split(/\s+/).filter(Boolean); }
+    else if (tab === "di") { q = DI_DATA[diIdx]; words = q.text.split(/\s+/).filter(Boolean); }
+    if (!q || words.length === 0) return;
+
+    if (!currentWordTimings || currentWordTimings.length !== words.length) {
+      currentWordTimings = prepareQuestionTimings(q, words);
+    }
+    if (!currentWordTimings || wordIdx >= currentWordTimings.length) return;
     const targetTiming = currentWordTimings[wordIdx];
     const stageId = tab + "-stage";
-    const spans = document.querySelectorAll("#" + stageId + " .karaoke-word");
 
-    spans.forEach((s, idx) => {
+    // Immediate DOM update for active highlight
+    const liveSpans = document.querySelectorAll("#" + stageId + " .karaoke-word");
+    liveSpans.forEach((s, idx) => {
       if (idx < wordIdx) s.className = "karaoke-word read";
       else if (idx === wordIdx) s.className = "karaoke-word active";
       else s.className = "karaoke-word unread";
     });
 
-    if (activeAudio) {
-      activeAudio.currentTime = targetTiming.start;
-      if (activeAudio.paused) activeAudio.play().catch(()=>{});
+    if (isPlaying) {
+      if (activeAudio) {
+        activeAudio.currentTime = Math.max(0, targetTiming.start);
+        if (activeAudio.paused) activeAudio.play().catch(()=>{});
+      } else {
+        if (activeTimer) { clearTimeout(activeTimer); activeTimer = null; }
+        startKaraokeSession(stageId, tab + "-progress", words, q, null, null, wordIdx);
+      }
     } else {
-      // If not running, start session from clicked word
-      if (tab === "ra") toggleKaraokeRa();
-      else if (tab === "rs") toggleKaraokeRs();
-      else if (tab === "di") toggleKaraokeDi();
+      // Stopped: start session directly positioned at clicked wordIdx
+      if (tab === "ra") {
+        document.getElementById("btn-play-ra").classList.add("running");
+        document.getElementById("ra-play-icon").innerText = "⏹";
+        document.getElementById("ra-play-label").innerText = "停止导读";
+        startKaraokeSession("ra-stage", "ra-progress", words, q, (curr, total, curT, totalT) => {
+          document.getElementById("ra-word-prog").innerText = curr + " / " + total;
+          document.getElementById("ra-time-elapsed").innerText = (curT || 0).toFixed(1) + "s";
+          document.getElementById("ra-time-total").innerText = (totalT || 0).toFixed(1) + "s";
+        }, () => {}, wordIdx);
+      } else if (tab === "rs") {
+        document.getElementById("btn-play-rs").classList.add("running");
+        document.getElementById("rs-play-icon").innerText = "⏹";
+        document.getElementById("rs-play-label").innerText = "停止复述";
+        document.getElementById("rs-stage").style.filter = "none";
+        const sel = document.getElementById("rs-voice-select");
+        const audioUrl = (sel && sel.value) ? sel.value : q.audio_url;
+        startKaraokeSession("rs-stage", "rs-progress", words, audioUrl, (curr, total) => {
+          document.getElementById("rs-word-prog").innerText = curr + " / " + total;
+        }, () => {}, wordIdx);
+      } else if (tab === "di") {
+        document.getElementById("btn-play-di").classList.add("running");
+        document.getElementById("di-play-icon").innerText = "⏹";
+        document.getElementById("di-play-label").innerText = "停止领跑";
+        const startT = performance.now();
+        startKaraokeSession("di-stage", "di-progress", words, q, (curr, total, curT, totalT) => {
+          const elap = (curT !== undefined) ? curT : ((performance.now() - startT) / 1000);
+          const remain = Math.max(0, 25 - elap).toFixed(1);
+          document.getElementById("di-timer").innerText = remain + "s";
+          const segIdx = Math.min(3, Math.floor(elap / 6.25));
+          for (let i = 0; i < 4; i++) {
+            const seg = document.getElementById("di-seg-" + i);
+            if (seg) seg.className = "di-segment" + (i === segIdx ? " active" : "");
+          }
+        }, () => {
+          document.getElementById("di-timer").innerText = "0.0s (完美卡点!)";
+        }, wordIdx);
+      }
     }
   }
 
@@ -767,6 +848,7 @@
     document.getElementById("ra-trans").innerText = q.translation || "暂无译文";
 
     const words = q.text.split(/\s+/).filter(Boolean);
+    currentWordTimings = prepareQuestionTimings(q, words);
     const stage = document.getElementById("ra-stage");
     
     let html = "";
@@ -867,6 +949,7 @@
     }
 
     const words = q.sentence.split(/\s+/).filter(Boolean);
+    currentWordTimings = prepareQuestionTimings(q, words);
     const stage = document.getElementById("rs-stage");
     
     let html = "";
@@ -978,6 +1061,7 @@
     document.getElementById("di-trans").innerText = q.translation || "暂无解析";
 
     const words = q.text.split(/\s+/).filter(Boolean);
+    currentWordTimings = prepareQuestionTimings(q, words);
     const stage = document.getElementById("di-stage");
     
     let html = "";
