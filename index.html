@@ -191,7 +191,9 @@
         <span id="curr-q-tags" style="margin-left: 6px;"></span>
         <span id="curr-q-record-badge" style="margin-left: 6px; font-size: 0.78rem;"></span>
       </div>
-      <div style="display: flex; gap: 6px;">
+      <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
+        <button class="nav-btn" id="btn-shuffle-order" style="background: #eef2ff; color: #4338ca; border-color: #c7d2fe; font-weight: 600;" onclick="shuffleQuestions()" title="重新随机打乱全部 185 题做题顺序">🔀 重新乱序</button>
+        <button class="nav-btn" id="btn-restore-order" style="font-size: 0.82rem;" onclick="restoreOriginalOrder()" title="恢复按官方周预测原顺序排列">📋 恢复原序</button>
         <button class="nav-btn" onclick="prevQuestion()">⬅ 上一题</button>
         <button class="nav-btn" onclick="randomQuestion()">🎲 随机一题</button>
         <button class="nav-btn" onclick="nextQuestion()">下一题 ➡</button>
@@ -300,6 +302,14 @@
   let currentIndex = 0;
   let currentAudio = null;
   let currentVoiceUrl = "";
+
+  function shuffleArray(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
 
   // 答题档案存储体系
   // 1. pte_wfd_logs: 完整流水记录数组 [{qid, index, sentence, userInput, score, total, pct, isPerfect, timestamp, missingWords, typos, addWordsUsed}]
@@ -632,9 +642,9 @@
 
   function renderResult(res, targetEl, prevLogs) {
     let pctClass = res.pct >= 90 ? "pct-pass" : (res.pct >= 70 ? "pct-warn" : "pct-fail");
-    const displayQIdx = (res.targetItem.index != null && !isNaN(res.targetItem.index)) ? res.targetItem.index : (currentIndex + 1);
+    const origIdx = res.targetItem.raw_index || res.targetItem.index || (currentIndex + 1);
     let html = '<div class="score-header">';
-    html += '<span class="score-badge">第 ' + displayQIdx + ' 题 (萤火虫 #' + res.targetItem.qid + '): ' + res.score + ' / ' + res.total + ' 分</span>';
+    html += '<span class="score-badge">第 ' + (currentIndex + 1) + ' 题 (原序#' + origIdx + ' · #' + res.targetItem.qid + '): ' + res.score + ' / ' + res.total + ' 分</span>';
     html += '<span class="pct-badge ' + pctClass + '">正确率: ' + res.pct + '%</span>';
     html += '</div>';
     html += '<div class="sentence-display"><strong>官方标准答案:</strong><br>' + res.targetItem.sentence;
@@ -980,9 +990,9 @@
     stopCurrentAudio();
     currentIndex = idx;
     const q = QUESTIONS[currentIndex];
-    const displayIndex = (q.index != null && !isNaN(q.index)) ? q.index : (currentIndex + 1);
-    document.getElementById("curr-q-title").innerText = "第 " + displayIndex + " / " + QUESTIONS.length + " 题";
-    document.getElementById("curr-q-id").innerText = "#" + q.qid;
+    const origIdx = q.raw_index || q.index || (currentIndex + 1);
+    document.getElementById("curr-q-title").innerText = "第 " + (currentIndex + 1) + " / " + QUESTIONS.length + " 题";
+    document.getElementById("curr-q-id").innerText = "#" + q.qid + " (原序#" + origIdx + ")";
     
     // Render tags
     let tagsHtml = "";
@@ -1032,16 +1042,34 @@
   }
 
   function prevQuestion() {
-    if (currentIndex > 0) loadQuestion(currentIndex - 1);
+    currentIndex = (currentIndex - 1 + QUESTIONS.length) % QUESTIONS.length;
+    loadQuestion(currentIndex);
   }
 
   function nextQuestion() {
-    if (currentIndex < QUESTIONS.length - 1) loadQuestion(currentIndex + 1);
+    currentIndex = (currentIndex + 1) % QUESTIONS.length;
+    loadQuestion(currentIndex);
   }
 
   function randomQuestion() {
     const rand = Math.floor(Math.random() * QUESTIONS.length);
     loadQuestion(rand);
+  }
+
+  function shuffleQuestions() {
+    stopCurrentAudio();
+    shuffleArray(QUESTIONS);
+    currentIndex = 0;
+    loadQuestion(0);
+    renderList(QUESTIONS);
+  }
+
+  function restoreOriginalOrder() {
+    stopCurrentAudio();
+    QUESTIONS.sort((a, b) => (a.raw_index || a.index || 0) - (b.raw_index || b.index || 0));
+    currentIndex = 0;
+    loadQuestion(0);
+    renderList(QUESTIONS);
   }
 
   function toggleAnswerPreview() {
@@ -1313,6 +1341,7 @@
   }
 
   function init() {
+    shuffleArray(QUESTIONS);
     loadQuestion(0);
     renderList(QUESTIONS);
     updateStats();
