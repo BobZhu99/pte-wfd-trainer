@@ -181,6 +181,25 @@
   .vocab-filter-bar { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
   .vocab-filter-btn { background: #f1f5f9; border: 1px solid var(--border); padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; cursor: pointer; font-weight: 600; color: var(--text-muted); transition: all 0.15s; }
   .vocab-filter-btn.active { background: #7c3aed; color: white; border-color: #7c3aed; }
+
+  /* 跨设备数据同步中心样式 */
+  .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.68); backdrop-filter: blur(5px); z-index: 99999; display: none; align-items: center; justify-content: center; padding: 16px; }
+  .modal-overlay.show { display: flex; }
+  .modal-card { background: white; border-radius: 14px; width: 100%; max-width: 660px; max-height: 90vh; overflow-y: auto; box-shadow: 0 25px 35px -5px rgba(0, 0, 0, 0.25); border: 1px solid var(--border); padding: 22px; animation: modalPop 0.2s cubic-bezier(0.16, 1, 0.3, 1); }
+  @keyframes modalPop { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+  
+  .sync-tab-btn { background: #f1f5f9; border: 1px solid var(--border); padding: 7px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; cursor: pointer; color: var(--text-muted); transition: all 0.15s; }
+  .sync-tab-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
+  
+  .sync-card-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; }
+  .sync-stat-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px; }
+  .sync-link-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px; margin-top: 12px; }
+  
+  .sync-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #94a3b8; transition: background-color 0.2s; }
+  .sync-dot.synced { background: #16a34a; box-shadow: 0 0 6px rgba(22, 163, 74, 0.5); }
+  .sync-dot.syncing { background: #d97706; animation: syncPulse 1s infinite alternate; }
+  @keyframes syncPulse { from { opacity: 0.4; } to { opacity: 1; } }
+
 </style>
 </head>
 <body>
@@ -194,6 +213,9 @@
       <a href="speaking_karaoke.html" style="text-decoration:none; padding: 7px 14px; background: linear-gradient(135deg, #4f46e5, #7c3aed); color: white; border-radius: 8px; font-weight: 600; font-size: 0.84rem; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(79, 70, 229, 0.25); transition: opacity 0.2s;">
         🎤 120~140 WPM 口语导引 (RA/RS/DI) ↗
       </a>
+      <button class="nav-btn" id="btn-open-sync" onclick="openSyncModal()" style="padding: 7px 13px; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; font-weight: 600; font-size: 0.84rem; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: all 0.15s;" title="管理手机/电脑多设备跨端数据同步与备份">
+        ☁️ 跨设备云同步 <span class="sync-dot" id="sync-status-indicator"></span>
+      </button>
       <span class="badge">🔥 智能错题本已启用</span>
     </div>
   </header>
@@ -202,7 +224,7 @@
     <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
       <div style="display: flex; align-items: center; gap: 8px;">
         <span style="font-size: 1.05rem;">📅</span>
-        <span style="font-weight: 700; color: #0f172a; font-size: 0.9rem;">题库发布基准日期：<span style="color: #2563eb;">2026年09月26日</span></span>
+        <span style="font-weight: 700; color: #0f172a; font-size: 0.9rem;">题库发布基准日期：<span style="color: #2563eb;">2026年09月27日</span></span>
         <span id="freshness-badge" class="badge" style="background: #dcfce7; color: #15803d; border-color: #bbf7d0;">最新同步版本</span>
       </div>
       <span style="font-size: 0.78rem; color: var(--text-muted);">来源：萤火虫官方周预测 (185 题全套)</span>
@@ -242,6 +264,7 @@
     <button class="tab-btn" id="btn-tab-history" onclick="switchTab('history')">📜 答题历史档案明细</button>
     <button class="tab-btn" id="btn-tab-free" onclick="switchTab('free')">⚡ 自由输入秒判</button>
     <button class="tab-btn" id="btn-tab-list" onclick="switchTab('list')">📚 185 题库列表</button>
+    <button class="tab-btn" id="btn-tab-sync" onclick="openSyncModal()" style="color: #2563eb; font-weight: 600;">☁️ 跨设备数据同步</button>
   </div>
 
   <!-- TAB 1: PRACTICE MODE -->
@@ -372,6 +395,7 @@
         <p style="font-size: 0.85rem; color: var(--text-muted);">按做题时间倒序展示每一次做题的完整输入、得分及纠错记录。</p>
       </div>
       <div style="display: flex; gap: 6px;">
+        <button class="nav-btn" style="background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; font-weight: 600;" onclick="openSyncModal()">☁️ 跨设备数据同步</button>
         <button class="nav-btn" onclick="exportRecords()">💾 导出做题档案 (JSON)</button>
         <button class="nav-btn" onclick="clearAllHistory()">🗑️ 清空所有记录</button>
       </div>
@@ -401,7 +425,7 @@
   </div>
 
   <footer style="text-align: center; margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-muted);">
-    PTE Academic WFD 极速听写训练系统 · 题库同步基准版本：2026年09月26日 · 原声考场音频归萤火虫官方所有
+    PTE Academic WFD 极速听写训练系统 · 题库同步基准版本：2026年09月27日 · 原声考场音频归萤火虫官方所有
   </footer>
 </div>
 
@@ -711,6 +735,11 @@
 
     updateStats();
     updateCurrentQuestionBadge();
+
+    // 云端静默自动同步
+    if (localStorage.getItem("pte_gist_auto_upload") !== "false") {
+      debounceGistPush();
+    }
   }
 
   function updateStats() {
@@ -1611,7 +1640,7 @@
     }
   });
 
-  const SYNC_DATE_ISO = "2026-09-26";
+  const SYNC_DATE_ISO = "2026-09-27";
   function checkFreshness() {
     try {
       const syncDate = new Date(SYNC_DATE_ISO);
@@ -2826,6 +2855,612 @@
     }, 2400);
   }
 
+
+  // ==========================================
+  // 跨设备数据流转与云端同步核心引擎 (CROSS-DEVICE SYNC ENGINE)
+  // ==========================================
+
+  let currentSyncTab = "gist";
+  let gistPushDebounceTimer = null;
+
+  function openSyncModal() {
+    updateSyncUI();
+    const modal = document.getElementById("sync-modal");
+    if (modal) modal.classList.add("show");
+  }
+
+  function closeSyncModal() {
+    const modal = document.getElementById("sync-modal");
+    if (modal) modal.classList.remove("show");
+  }
+
+  function handleSyncModalClick(e) {
+    if (e.target && e.target.id === "sync-modal") {
+      closeSyncModal();
+    }
+  }
+
+  function setSyncTab(tab) {
+    currentSyncTab = tab;
+    document.querySelectorAll(".sync-tab-btn").forEach(b => b.classList.remove("active"));
+    const actBtn = document.getElementById("tab-sync-" + tab + "-btn");
+    if (actBtn) actBtn.classList.add("active");
+
+    const panes = ["gist", "code", "file"];
+    panes.forEach(p => {
+      const el = document.getElementById("sync-pane-" + p);
+      if (el) el.style.display = (p === tab ? "block" : "none");
+    });
+  }
+
+  function getDeviceId() {
+    let id = localStorage.getItem("pte_device_id");
+    if (!id) {
+      id = "device_" + Math.random().toString(36).substring(2, 9);
+      try { localStorage.setItem("pte_device_id", id); } catch(e) {}
+    }
+    return id;
+  }
+
+  // 智能双向增量数据合并核心算法
+  function mergeStudyData(remoteData) {
+    if (!remoteData) return { success: false, msg: "数据为空" };
+
+    let addedLogs = 0;
+    let addedVocab = 0;
+
+    // 1. 合并流水记录 (按 qid + timeStr + score 去重)
+    if (Array.isArray(remoteData.logs)) {
+      const existingLogKeys = new Set(practiceLogs.map(l => (String(l.qid) + "_" + String(l.timeStr) + "_" + String(l.score))));
+      remoteData.logs.forEach(rLog => {
+        const key = String(rLog.qid) + "_" + String(rLog.timeStr) + "_" + String(rLog.score);
+        if (!existingLogKeys.has(key)) {
+          practiceLogs.push(rLog);
+          existingLogKeys.add(key);
+          addedLogs++;
+        }
+      });
+      // 按时间戳倒序排列
+      practiceLogs.sort((a, b) => {
+        const ta = new Date(a.timeStr || 0).getTime() || a.id || 0;
+        const tb = new Date(b.timeStr || 0).getTime() || b.id || 0;
+        return tb - ta;
+      });
+      if (practiceLogs.length > 500) practiceLogs = practiceLogs.slice(0, 500);
+    }
+
+    // 2. 合并错题与战绩统计 (合并取最大尝试次数与对错频次)
+    if (remoteData.stats && typeof remoteData.stats === "object") {
+      for (let qid in remoteData.stats) {
+        const rStat = remoteData.stats[qid];
+        if (!questionStats[qid]) {
+          questionStats[qid] = rStat;
+        } else {
+          const lStat = questionStats[qid];
+          lStat.passCount = Math.max(lStat.passCount || 0, rStat.passCount || 0);
+          lStat.failCount = Math.max(lStat.failCount || 0, rStat.failCount || 0);
+          lStat.attempts = Math.max(lStat.attempts || 0, rStat.attempts || 0);
+
+          // 合并遗漏词频次
+          lStat.missingStats = lStat.missingStats || {};
+          if (rStat.missingStats) {
+            for (let w in rStat.missingStats) {
+              lStat.missingStats[w] = Math.max(lStat.missingStats[w] || 0, rStat.missingStats[w]);
+            }
+          }
+
+          // 合并拼写失误列表
+          lStat.typoList = lStat.typoList || [];
+          if (Array.isArray(rStat.typoList)) {
+            const typoKeys = new Set(lStat.typoList.map(t => (t.typed + "->" + t.expected)));
+            rStat.typoList.forEach(t => {
+              const k = t.typed + "->" + t.expected;
+              if (!typoKeys.has(k)) {
+                lStat.typoList.push(t);
+                typoKeys.add(k);
+              }
+            });
+          }
+        }
+      }
+    }
+
+    // 3. 合并生词本 (无损保留双端生词、词根解析与掌握状态)
+    if (Array.isArray(remoteData.vocab)) {
+      const vocabMap = {};
+      practiceVocab.forEach((v, idx) => {
+        vocabMap[(v.word || "").toLowerCase()] = idx;
+      });
+
+      remoteData.vocab.forEach(rVocab => {
+        const cleanW = (rVocab.word || "").toLowerCase().trim();
+        if (!cleanW) return;
+        if (vocabMap[cleanW] != null) {
+          const lVocab = practiceVocab[vocabMap[cleanW]];
+          if (rVocab.mastered) lVocab.mastered = true;
+          if ((!lVocab.meanings || lVocab.meanings.includes("获取中")) && rVocab.meanings) {
+            lVocab.meanings = rVocab.meanings;
+          }
+          if (!lVocab.prefix && rVocab.prefix) lVocab.prefix = rVocab.prefix;
+          if (!lVocab.root && rVocab.root) lVocab.root = rVocab.root;
+          if (!lVocab.suffix && rVocab.suffix) lVocab.suffix = rVocab.suffix;
+          if (!lVocab.logic && rVocab.logic) lVocab.logic = rVocab.logic;
+          if (!lVocab.examTip && rVocab.examTip) lVocab.examTip = rVocab.examTip;
+        } else {
+          practiceVocab.push(rVocab);
+          vocabMap[cleanW] = practiceVocab.length - 1;
+          addedVocab++;
+        }
+      });
+    }
+
+    try {
+      localStorage.setItem("pte_wfd_logs", JSON.stringify(practiceLogs));
+      localStorage.setItem("pte_wfd_qstats", JSON.stringify(questionStats));
+      localStorage.setItem("pte_wfd_vocab", JSON.stringify(practiceVocab));
+    } catch(e) {}
+
+    updateStats();
+    updateCurrentQuestionBadge();
+
+    const mTab = document.getElementById("tab-mistakes");
+    if (mTab && mTab.style.display !== "none") renderMistakesView();
+    const vTab = document.getElementById("tab-vocab");
+    if (vTab && vTab.style.display !== "none") renderVocabView();
+    const hTab = document.getElementById("tab-history");
+    if (hTab && hTab.style.display !== "none") renderHistoryView();
+
+    return {
+      success: true,
+      addedLogs: addedLogs,
+      addedVocab: addedVocab,
+      totalLogs: practiceLogs.length,
+      totalVocab: practiceVocab.length
+    };
+  }
+
+  // 构建完整备份包
+  function createFullBackupBundle() {
+    return {
+      version: 1,
+      app: "PTE WFD Trainer",
+      updatedAt: new Date().toISOString(),
+      timeStr: new Date().toLocaleString(),
+      deviceId: getDeviceId(),
+      logs: practiceLogs,
+      stats: questionStats,
+      vocab: practiceVocab
+    };
+  }
+
+  // 1. GITHUB GIST 自动云同步
+  async function bindGistSync() {
+    const tokenInput = document.getElementById("gist-token-input");
+    const idInput = document.getElementById("gist-custom-id-input");
+    if (!tokenInput) return;
+    const token = tokenInput.value.trim();
+    if (!token) {
+      alert("请先粘贴您的 GitHub Personal Access Token！");
+      return;
+    }
+
+    const customId = idInput ? idInput.value.trim() : "";
+    const bundle = createFullBackupBundle();
+
+    const ind = document.getElementById("sync-status-indicator");
+    if (ind) ind.className = "sync-dot syncing";
+
+    try {
+      if (customId) {
+        // 绑定已有 Gist
+        const resp = await fetch("https://api.github.com/gists/" + customId, {
+          headers: {
+            "Authorization": "Bearer " + token,
+            "Accept": "application/vnd.github+json"
+          }
+        });
+        if (!resp.ok) throw new Error("无法读取指定的 Gist ID (HTTP " + resp.status + ")，请核对 Token 权限与 ID 是否正确。");
+        const data = await resp.json();
+        
+        localStorage.setItem("pte_gist_token", token);
+        localStorage.setItem("pte_gist_id", customId);
+        localStorage.setItem("pte_gist_auto_upload", "true");
+        localStorage.setItem("pte_gist_auto_download", "true");
+        localStorage.setItem("pte_last_sync_time", new Date().toLocaleString());
+
+        // 如果云端有数据，进行合并
+        if (data.files && data.files["pte_wfd_data.json"] && data.files["pte_wfd_data.json"].content) {
+          try {
+            const remoteBundle = JSON.parse(data.files["pte_wfd_data.json"].content);
+            mergeStudyData(remoteBundle);
+          } catch(e) {}
+        }
+        
+        // 立即反向上传一次合并后的最新数据
+        await pushToGist(true);
+        updateSyncUI();
+        alert("🎉 成功绑定已有云端中枢！已完成双向数据合并同步。");
+      } else {
+        // 创建新 Gist
+        const payload = {
+          description: "PTE Academic 学习档案 (自动同步中枢)",
+          public: false,
+          files: {
+            "pte_wfd_data.json": {
+              content: JSON.stringify(bundle, null, 2)
+            }
+          }
+        };
+
+        const resp = await fetch("https://api.github.com/gists", {
+          method: "POST",
+          headers: {
+            "Authorization": "Bearer " + token,
+            "Accept": "application/vnd.github+json",
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (!resp.ok) {
+          const errData = await resp.json().catch(() => ({}));
+          throw new Error("GitHub 创建 Gist 失败 (" + resp.status + "): " + (errData.message || "请检查 Token 是否勾选了 gist 权限"));
+        }
+
+        const resData = await resp.json();
+        const newGistId = resData.id;
+
+        localStorage.setItem("pte_gist_token", token);
+        localStorage.setItem("pte_gist_id", newGistId);
+        localStorage.setItem("pte_gist_auto_upload", "true");
+        localStorage.setItem("pte_gist_auto_download", "true");
+        localStorage.setItem("pte_last_sync_time", new Date().toLocaleString());
+
+        updateSyncUI();
+        alert(`🎉 恭喜！已成功在您的 GitHub 建立专属私有云同步文件！
+当前电脑学习记录已成功同步至云端。`);
+      }
+    } catch(err) {
+      alert("❌ 绑定失败: " + err.message);
+      if (ind) ind.className = "sync-dot";
+    }
+  }
+
+  async function pushToGist(silent) {
+    const token = localStorage.getItem("pte_gist_token");
+    const gistId = localStorage.getItem("pte_gist_id");
+    if (!token || !gistId) return;
+
+    const ind = document.getElementById("sync-status-indicator");
+    if (ind) ind.className = "sync-dot syncing";
+
+    try {
+      const bundle = createFullBackupBundle();
+      const payload = {
+        description: "PTE Academic 学习档案 (最后同步: " + new Date().toLocaleString() + ")",
+        files: {
+          "pte_wfd_data.json": {
+            content: JSON.stringify(bundle, null, 2)
+          }
+        }
+      };
+
+      const resp = await fetch("https://api.github.com/gists/" + gistId, {
+        method: "PATCH",
+        headers: {
+          "Authorization": "Bearer " + token,
+          "Accept": "application/vnd.github+json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!resp.ok) throw new Error("上传失败 (HTTP " + resp.status + ")");
+
+      const syncTime = new Date().toLocaleString();
+      localStorage.setItem("pte_last_sync_time", syncTime);
+      if (ind) ind.className = "sync-dot synced";
+
+      const timeEl = document.getElementById("gist-last-sync-time");
+      if (timeEl) timeEl.innerText = syncTime;
+
+      if (!silent) {
+        showToast("☁️ 已成功上传最新学习进度至 GitHub 云端！");
+      }
+    } catch(err) {
+      if (ind) ind.className = "sync-dot";
+      if (!silent) alert("上传失败: " + err.message);
+    }
+  }
+
+  async function pullFromGist(silent, isMerge = true) {
+    const token = localStorage.getItem("pte_gist_token");
+    const gistId = localStorage.getItem("pte_gist_id");
+    if (!token || !gistId) return;
+
+    const ind = document.getElementById("sync-status-indicator");
+    if (ind) ind.className = "sync-dot syncing";
+
+    try {
+      const resp = await fetch("https://api.github.com/gists/" + gistId, {
+        headers: {
+          "Authorization": "Bearer " + token,
+          "Accept": "application/vnd.github+json"
+        }
+      });
+
+      if (!resp.ok) throw new Error("拉取失败 (HTTP " + resp.status + ")");
+      const data = await resp.json();
+      if (!data.files || !data.files["pte_wfd_data.json"] || !data.files["pte_wfd_data.json"].content) {
+        throw new Error("云端未找到学习档案数据文件。");
+      }
+
+      const remoteBundle = JSON.parse(data.files["pte_wfd_data.json"].content);
+
+      if (isMerge) {
+        const res = mergeStudyData(remoteBundle);
+        if (!silent) {
+          alert(`🎉 成功从云端拉取并智能合并！
+新增同步流水: ${res.addedLogs} 条
+新增生词收录: ${res.addedVocab} 个`);
+        }
+      } else {
+        if (confirm("确定要完全覆盖本设备当前的练习记录吗？此操作不可撤销。")) {
+          practiceLogs = remoteBundle.logs || [];
+          questionStats = remoteBundle.stats || {};
+          practiceVocab = remoteBundle.vocab || [];
+          try {
+            localStorage.setItem("pte_wfd_logs", JSON.stringify(practiceLogs));
+            localStorage.setItem("pte_wfd_qstats", JSON.stringify(questionStats));
+            localStorage.setItem("pte_wfd_vocab", JSON.stringify(practiceVocab));
+          } catch(e) {}
+          updateStats();
+          updateCurrentQuestionBadge();
+          if (!silent) alert("已完全应用云端档案覆盖当前记录！");
+        }
+      }
+
+      const syncTime = new Date().toLocaleString();
+      localStorage.setItem("pte_last_sync_time", syncTime);
+      if (ind) ind.className = "sync-dot synced";
+
+      const timeEl = document.getElementById("gist-last-sync-time");
+      if (timeEl) timeEl.innerText = syncTime;
+    } catch(err) {
+      if (ind) ind.className = "sync-dot";
+      if (!silent) alert("拉取失败: " + err.message);
+    }
+  }
+
+  async function syncGistBidirectional() {
+    // 智能双向合并：先拉取远程合并到本地，再把合并后的完整数据推送至云端
+    await pullFromGist(true, true);
+    await pushToGist(true);
+    alert("🎉 智能双向同步完成！电脑与云端数据已完全一致。");
+  }
+
+  function unbindGist() {
+    if (confirm("确定要解除当前设备的云端同步绑定吗？(本地数据和 GitHub 上的文件均不会被删除)")) {
+      localStorage.removeItem("pte_gist_token");
+      localStorage.removeItem("pte_gist_id");
+      localStorage.removeItem("pte_last_sync_time");
+      updateSyncUI();
+      showToast("已解除云端同步绑定。");
+    }
+  }
+
+  function toggleAutoUpload(val) {
+    localStorage.setItem("pte_gist_auto_upload", val ? "true" : "false");
+  }
+
+  function toggleAutoDownload(val) {
+    localStorage.setItem("pte_gist_auto_download", val ? "true" : "false");
+  }
+
+  function debounceGistPush() {
+    if (gistPushDebounceTimer) clearTimeout(gistPushDebounceTimer);
+    gistPushDebounceTimer = setTimeout(() => {
+      pushToGist(true);
+    }, 1500);
+  }
+
+  function copyMobileBindLink() {
+    const input = document.getElementById("mobile-bind-url-input");
+    if (!input || !input.value) return;
+    navigator.clipboard.writeText(input.value).then(() => {
+      alert(`📋 手机免密一键绑定链接已复制到剪贴板！
+请通过微信传输助手/QQ/备忘录发送至手机，在手机浏览器打开该链接即可一秒自动绑定同步！`);
+    }).catch(() => {
+      input.select();
+      document.execCommand("copy");
+      alert("📋 链接已复制！");
+    });
+  }
+
+  function updateSyncUI() {
+    const token = localStorage.getItem("pte_gist_token");
+    const gistId = localStorage.getItem("pte_gist_id");
+    const boundView = document.getElementById("gist-bound-view");
+    const unboundView = document.getElementById("gist-unbound-view");
+    const ind = document.getElementById("sync-status-indicator");
+
+    if (token && gistId) {
+      if (boundView) boundView.style.display = "block";
+      if (unboundView) unboundView.style.display = "none";
+      if (ind) ind.className = "sync-dot synced";
+
+      const idBadge = document.getElementById("gist-id-badge");
+      if (idBadge) idBadge.innerText = "#" + gistId.slice(0, 10) + "...";
+
+      const ghLink = document.getElementById("gist-github-link");
+      if (ghLink) ghLink.href = "https://gist.github.com/" + gistId;
+
+      const timeEl = document.getElementById("gist-last-sync-time");
+      if (timeEl) timeEl.innerText = localStorage.getItem("pte_last_sync_time") || "已连接";
+
+      const chkUpload = document.getElementById("chk-auto-upload");
+      if (chkUpload) chkUpload.checked = (localStorage.getItem("pte_gist_auto_upload") !== "false");
+
+      const chkDownload = document.getElementById("chk-auto-download");
+      if (chkDownload) chkDownload.checked = (localStorage.getItem("pte_gist_auto_download") !== "false");
+
+      // 生成移动端一键免密绑定链接
+      const mobileInput = document.getElementById("mobile-bind-url-input");
+      if (mobileInput) {
+        let base = window.location.origin + window.location.pathname;
+        if (!base.startsWith("http")) {
+          // 本地 file 协议时，生成对应 GitHub Pages 网址
+          base = "https://bobzhu99.github.io/pte-wfd-trainer/";
+        }
+        mobileInput.value = base + "?sync_token=" + encodeURIComponent(token) + "&gist_id=" + encodeURIComponent(gistId);
+      }
+    } else {
+      if (boundView) boundView.style.display = "none";
+      if (unboundView) unboundView.style.display = "block";
+      if (ind) ind.className = "sync-dot";
+    }
+  }
+
+  // 2. 剪贴板即时暗号流转 (零配置)
+  function copySyncCode() {
+    const bundle = createFullBackupBundle();
+    try {
+      const jsonStr = JSON.stringify(bundle);
+      const b64 = btoa(unescape(encodeURIComponent(jsonStr)));
+      const syncCode = "PTE_SYNC_v1:" + b64;
+      navigator.clipboard.writeText(syncCode).then(() => {
+        alert(`🎉 同步暗号已复制到剪贴板！
+暗号包含全部 ${practiceLogs.length} 条做题记录与 ${practiceVocab.length} 个生词。
+请发送到另一台设备并点击「粘贴暗号恢复」即可秒速同步！`);
+      }).catch(() => {
+        prompt("请全选复制下方同步暗号：", syncCode);
+      });
+    } catch(err) {
+      alert("生成同步暗号失败: " + err.message);
+    }
+  }
+
+  function pasteSyncCode(isMerge) {
+    const input = document.getElementById("sync-code-input");
+    if (!input) return;
+    const raw = input.value.trim();
+    if (!raw) {
+      alert("请先粘贴同步暗号！");
+      return;
+    }
+
+    try {
+      let b64 = raw;
+      if (raw.startsWith("PTE_SYNC_v1:")) {
+        b64 = raw.slice("PTE_SYNC_v1:".length);
+      }
+      const jsonStr = decodeURIComponent(escape(atob(b64)));
+      const bundle = JSON.parse(jsonStr);
+
+      if (isMerge) {
+        const res = mergeStudyData(bundle);
+        alert(`🎉 增量合并导入成功！
+新增做题流水: ${res.addedLogs} 条
+新增生词记录: ${res.addedVocab} 个`);
+      } else {
+        if (confirm("确定要完全覆盖本设备记录吗？")) {
+          practiceLogs = bundle.logs || [];
+          questionStats = bundle.stats || {};
+          practiceVocab = bundle.vocab || [];
+          try {
+            localStorage.setItem("pte_wfd_logs", JSON.stringify(practiceLogs));
+            localStorage.setItem("pte_wfd_qstats", JSON.stringify(questionStats));
+            localStorage.setItem("pte_wfd_vocab", JSON.stringify(practiceVocab));
+          } catch(e) {}
+          updateStats();
+          updateCurrentQuestionBadge();
+          alert("已完全覆盖当前记录！");
+        }
+      }
+      input.value = "";
+      closeSyncModal();
+    } catch(err) {
+      alert("暗号格式不正确或解析失败: " + err.message);
+    }
+  }
+
+  // 3. 离线 JSON 备份文件
+  function exportFullBackup() {
+    const bundle = createFullBackupBundle();
+    const dateStr = new Date().toISOString().slice(0, 10);
+    const blob = new Blob([JSON.stringify(bundle, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "PTE_全套学习记录备份_" + dateStr + ".json";
+    a.click();
+    URL.revokeObjectURL(url);
+    showToast("备份文件已下载保存！");
+  }
+
+  function importBackupFile(isMerge) {
+    const input = document.getElementById("backup-file-selector");
+    if (!input || !input.files || input.files.length === 0) {
+      alert("请先选择一个 .json 备份文件！");
+      return;
+    }
+    const file = input.files[0];
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      try {
+        const bundle = JSON.parse(e.target.result);
+        if (isMerge) {
+          const res = mergeStudyData(bundle);
+          alert(`🎉 备份文件智能合并成功！
+合并流水记录: ${res.addedLogs} 条
+合并生词笔记: ${res.addedVocab} 个`);
+        } else {
+          if (confirm("确定要完全覆盖本设备当前的练习记录吗？")) {
+            practiceLogs = bundle.logs || [];
+            questionStats = bundle.stats || {};
+            practiceVocab = bundle.vocab || [];
+            try {
+              localStorage.setItem("pte_wfd_logs", JSON.stringify(practiceLogs));
+              localStorage.setItem("pte_wfd_qstats", JSON.stringify(questionStats));
+              localStorage.setItem("pte_wfd_vocab", JSON.stringify(practiceVocab));
+            } catch(err) {}
+            updateStats();
+            updateCurrentQuestionBadge();
+            alert("已成功从备份文件恢复！");
+          }
+        }
+        input.value = "";
+        closeSyncModal();
+      } catch(err) {
+        alert("无法解析该备份文件: " + err.message);
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  // 检查 URL 是否包含移动端免密一键绑定参数
+  function checkUrlSyncParams() {
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const syncToken = urlParams.get("sync_token");
+      const gistId = urlParams.get("gist_id");
+      if (syncToken && gistId) {
+        localStorage.setItem("pte_gist_token", syncToken);
+        localStorage.setItem("pte_gist_id", gistId);
+        localStorage.setItem("pte_gist_auto_upload", "true");
+        localStorage.setItem("pte_gist_auto_download", "true");
+        
+        // 清理 URL 参数，保护令牌私密性
+        window.history.replaceState({}, document.title, window.location.pathname);
+        
+        // 立即从云端拉取最新记录
+        pullFromGist(true, true).then(() => {
+          showToast("🎉 恭喜！已成功绑定云端同步中枢并同步全量数据！");
+        });
+      }
+    } catch(e) {}
+  }
+
   // 5. 渲染难词生词本界面
   function renderVocabView() {
     const container = document.getElementById("vocab-container");
@@ -2943,11 +3578,18 @@
 
   function init() {
     autoRepairCachedVocab();
+    checkUrlSyncParams();
     shuffleArray(QUESTIONS);
     loadQuestion(0);
     renderList(QUESTIONS);
     updateStats();
     checkFreshness();
+    updateSyncUI();
+
+    // 网页加载时若开启了自动同步，静默拉取云端最新记录
+    if (localStorage.getItem("pte_gist_auto_download") !== "false" && localStorage.getItem("pte_gist_token") && localStorage.getItem("pte_gist_id")) {
+      pullFromGist(true, true);
+    }
   }
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
@@ -2955,5 +3597,154 @@
     init();
   }
 </script>
+
+<!-- 跨设备数据流转与云端同步中枢 MODAL -->
+<div id="sync-modal" class="modal-overlay" onclick="handleSyncModalClick(event)">
+  <div class="modal-card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid var(--border); padding-bottom: 12px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.5rem;">☁️</span>
+        <div>
+          <h2 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin: 0;">跨设备数据流转与云端同步中枢</h2>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">电脑、iPhone/iPad、安卓多端练习记录、错题本与生词本永久保留同步</p>
+        </div>
+      </div>
+      <button class="nav-btn" onclick="closeSyncModal()" style="font-size: 1.1rem; line-height: 1; padding: 4px 10px; cursor: pointer; border-radius: 6px;">✕</button>
+    </div>
+
+    <!-- Sync Sub-Tabs -->
+    <div style="display: flex; gap: 6px; margin-bottom: 16px; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; flex-wrap: wrap;">
+      <button class="sync-tab-btn active" id="tab-sync-gist-btn" onclick="setSyncTab('gist')">☁️ GitHub 云端自动同步 (推荐)</button>
+      <button class="sync-tab-btn" id="tab-sync-code-btn" onclick="setSyncTab('code')">📋 剪贴板暗号即时流转 (零配置)</button>
+      <button class="sync-tab-btn" id="tab-sync-file-btn" onclick="setSyncTab('file')">💾 离线档案文件备份 (JSON)</button>
+    </div>
+
+    <!-- PANE 1: GITHUB GIST CLOUD SYNC -->
+    <div id="sync-pane-gist">
+      <div id="gist-bound-view" style="display: none;">
+        <div class="sync-card-box" style="background: #f0fdf4; border-color: #bbf7d0;">
+          <div class="sync-stat-row">
+            <div>
+              <span class="status-tag status-perfect" style="font-size: 0.82rem;">✅ 已绑定云端同步中枢</span>
+              <span id="gist-id-badge" class="badge" style="margin-left: 6px; font-family: monospace;"></span>
+            </div>
+            <a id="gist-github-link" href="#" target="_blank" style="font-size: 0.78rem; color: #16a34a; text-decoration: underline;">在 GitHub 查看数据源 ↗</a>
+          </div>
+          <div style="font-size: 0.85rem; color: #334155; margin-bottom: 12px;">
+            上次云端同步时间：<strong id="gist-last-sync-time">尚未同步</strong>
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="btn-submit" style="padding: 7px 16px; font-size: 0.88rem; background: #16a34a;" onclick="pushToGist(false)">☁️ 立即上传本地记录到云端</button>
+            <button class="nav-btn" style="background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; font-size: 0.88rem; font-weight: 600;" onclick="pullFromGist(false, true)">📥 立即从云端拉取 (智能合并)</button>
+            <button class="nav-btn" style="font-size: 0.88rem;" onclick="syncGistBidirectional()">🔄 智能双向合并同步</button>
+          </div>
+        </div>
+
+        <!-- 自动静默同步设置 -->
+        <div class="sync-card-box">
+          <div style="font-weight: 700; font-size: 0.9rem; color: #1e293b; margin-bottom: 8px;">⚙️ 自动同步设置</div>
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #334155; margin-bottom: 8px; cursor: pointer;">
+            <input type="checkbox" id="chk-auto-upload" onchange="toggleAutoUpload(this.checked)" checked>
+            <span><strong>每次完成听写批改后</strong>，自动静默同步至云端</span>
+          </label>
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #334155; cursor: pointer;">
+            <input type="checkbox" id="chk-auto-download" onchange="toggleAutoDownload(this.checked)" checked>
+            <span><strong>每次打开本网页时</strong>，自动检测并拉取云端最新记录</span>
+          </label>
+        </div>
+
+        <!-- 手机一键免密流转快捷链接 -->
+        <div class="sync-link-box">
+          <div style="font-weight: 700; color: #1d4ed8; font-size: 0.9rem; margin-bottom: 4px;">📱 手机 / iPad 免密一键绑定链接 (核心亮点):</div>
+          <p style="font-size: 0.8rem; color: #475569; margin-bottom: 8px; line-height: 1.45;">
+            将下方专属链接发送到手机（如通过微信传输助手或备忘录），手机点击打开即可<strong>秒级自动绑定云端中枢并拉取全部进度</strong>，无需在手机上繁琐输入 Token！
+          </p>
+          <div style="display: flex; gap: 6px;">
+            <input type="text" id="mobile-bind-url-input" readonly style="flex: 1; padding: 6px 10px; font-size: 0.82rem; border: 1px solid #bfdbfe; border-radius: 6px; background: white; font-family: monospace;">
+            <button class="btn-submit" style="padding: 6px 14px; font-size: 0.84rem; background: #2563eb;" onclick="copyMobileBindLink()">📋 复制链接</button>
+          </div>
+        </div>
+
+        <div style="margin-top: 14px; text-align: right;">
+          <button class="nav-btn" style="font-size: 0.8rem; color: #dc2626; border-color: #fca5a5;" onclick="unbindGist()">🔌 解除当前云端绑定</button>
+        </div>
+      </div>
+
+      <div id="gist-unbound-view">
+        <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px 14px; font-size: 0.85rem; color: #1e40af; line-height: 1.5; margin-bottom: 14px;">
+          💡 <strong>为什么推荐 GitHub 云端同步？</strong><br>
+          使用您的私有 GitHub Gist 作为个人云存储，<strong>官方原生支持跨域、100% 私有安全、永久免费、无任何容量上限</strong>。只需一次配置，多设备自动保持最新！
+        </div>
+
+        <div style="font-size: 0.88rem; font-weight: 600; color: #1e293b; margin-bottom: 6px;">
+          步骤 1：获取 GitHub 访问令牌 (只需勾选 gist 权限，仅耗时 30 秒)
+        </div>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 8px;">
+          点击下方链接直达 GitHub Token 创建页面（已为您预设好名称与权限）：
+        </p>
+        <a href="https://github.com/settings/tokens/new?description=PTE_Study_Sync&scopes=gist" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: #0f172a; color: white; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600; margin-bottom: 14px;">
+          🔗 立即前往 GitHub 创建 Token (点底部 Generate Token 即可) ↗
+        </a>
+
+        <div style="font-size: 0.88rem; font-weight: 600; color: #1e293b; margin-bottom: 6px;">
+          步骤 2：粘贴您的 Token 并立即初始化
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px;">
+          <input type="password" id="gist-token-input" placeholder="请在此粘贴生成的 Personal Access Token (以 ghp_ 开头)..." style="padding: 8px 12px; border: 1.5px solid var(--border); border-radius: 6px; font-size: 0.9rem; font-family: monospace;">
+          <input type="text" id="gist-custom-id-input" placeholder="已有 Gist ID (可选，留空则系统全自动为您创建全新的私有备份文件)..." style="padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 0.85rem; font-family: monospace;">
+        </div>
+        <button class="btn-submit" style="width: 100%; padding: 10px; font-size: 0.95rem;" onclick="bindGistSync()">✨ 立即初始化并绑定云端同步中枢</button>
+      </div>
+    </div>
+
+    <!-- PANE 2: CLIPBOARD CODE SYNC -->
+    <div id="sync-pane-code" style="display: none;">
+      <div class="sync-card-box">
+        <div style="font-weight: 700; font-size: 0.92rem; color: #1e293b; margin-bottom: 6px;">📤 从本设备导出同步暗号</div>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 10px;">
+          一键生成包含当前电脑/手机上全部练习流水、错题统计和生词本的极速编码。通过微信传输助手或便签发送至另一设备：
+        </p>
+        <button class="btn-submit" style="background: #7c3aed; padding: 8px 18px; font-size: 0.88rem;" onclick="copySyncCode()">📋 一键打包并复制同步暗号</button>
+      </div>
+
+      <div class="sync-card-box">
+        <div style="font-weight: 700; font-size: 0.92rem; color: #1e293b; margin-bottom: 6px;">📥 粘贴暗号恢复至本设备</div>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 10px;">
+          在下方粘贴从其他设备复制过来的同步暗号：
+        </p>
+        <textarea id="sync-code-input" placeholder="请在此粘贴来自其他设备的同步暗号 (以 PTE_SYNC: 开头)..." style="width: 100%; min-height: 80px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 0.85rem; font-family: monospace; resize: vertical; margin-bottom: 10px;"></textarea>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <button class="btn-submit" style="padding: 8px 16px; font-size: 0.88rem; background: #16a34a;" onclick="pasteSyncCode(true)">🔄 智能增量合并导入 (推荐，两端记录互不丢失)</button>
+          <button class="nav-btn" style="padding: 8px 14px; font-size: 0.88rem; color: #dc2626; border-color: #fca5a5;" onclick="pasteSyncCode(false)">⚠️ 完全覆盖当前记录</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANE 3: FILE BACKUP -->
+    <div id="sync-pane-file" style="display: none;">
+      <div class="sync-card-box">
+        <div style="font-weight: 700; font-size: 0.92rem; color: #1e293b; margin-bottom: 6px;">💾 导出本地完整档案快照</div>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 10px;">
+          保存为一个标准的 JSON 离线数据文件，可在任意电脑或手机上永久备份、归档：
+        </p>
+        <button class="btn-submit" style="padding: 8px 18px; font-size: 0.88rem;" onclick="exportFullBackup()">💾 下载完整学习档案文件 (.json)</button>
+      </div>
+
+      <div class="sync-card-box">
+        <div style="font-weight: 700; font-size: 0.92rem; color: #1e293b; margin-bottom: 6px;">📥 从备份文件恢复数据</div>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 10px;">
+          选择此前导出的备份文件恢复到当前浏览器：
+        </p>
+        <input type="file" id="backup-file-selector" accept=".json" style="margin-bottom: 12px; font-size: 0.85rem;">
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <button class="btn-submit" style="padding: 8px 16px; font-size: 0.88rem; background: #16a34a;" onclick="importBackupFile(true)">🔄 智能合并恢复 (保留两端全部题目记录)</button>
+          <button class="nav-btn" style="padding: 8px 14px; font-size: 0.88rem; color: #dc2626; border-color: #fca5a5;" onclick="importBackupFile(false)">⚠️ 完全覆盖当前记录</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>
