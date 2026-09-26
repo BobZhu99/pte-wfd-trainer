@@ -145,7 +145,7 @@
     <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
       <div style="display: flex; align-items: center; gap: 8px;">
         <span style="font-size: 1.05rem;">📅</span>
-        <span style="font-weight: 700; color: #0f172a; font-size: 0.9rem;">题库发布基准日期：<span style="color: #2563eb;">2026年09月25日</span></span>
+        <span style="font-weight: 700; color: #0f172a; font-size: 0.9rem;">题库发布基准日期：<span style="color: #2563eb;">2026年09月26日</span></span>
         <span id="freshness-badge" class="badge" style="background: #dcfce7; color: #15803d; border-color: #bbf7d0;">最新同步版本</span>
       </div>
       <span style="font-size: 0.78rem; color: var(--text-muted);">来源：萤火虫官方周预测 (185 题全套)</span>
@@ -291,7 +291,7 @@
   </div>
 
   <footer style="text-align: center; margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-muted);">
-    PTE Academic WFD 极速听写训练系统 · 题库同步基准版本：2026年09月25日 · 原声考场音频归萤火虫官方所有
+    PTE Academic WFD 极速听写训练系统 · 题库同步基准版本：2026年09月26日 · 原声考场音频归萤火虫官方所有
   </footer>
 </div>
 
@@ -321,6 +321,8 @@
 
   function tokenize(text) {
     return text.match(/[A-Za-z0-9]+(?:'[A-Za-z0-9]+)?/g) || [];
+  }
+
   function normalizeUkUs(w) {
     let s = w.toLowerCase();
     const special = {
@@ -1278,7 +1280,7 @@
     }
   });
 
-  const SYNC_DATE_ISO = "2026-09-25";
+  const SYNC_DATE_ISO = "2026-09-26";
   function checkFreshness() {
     try {
       const syncDate = new Date(SYNC_DATE_ISO);
