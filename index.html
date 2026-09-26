@@ -57,9 +57,21 @@
   .nav-btn:hover { background: #e2e8f0; }
   
   .audio-player-box { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px 16px; display: flex; align-items: center; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
-  .btn-play { background: var(--primary); color: white; border: none; padding: 8px 18px; border-radius: 6px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; }
+  .btn-play { background: var(--primary); color: white; border: none; padding: 8px 18px; border-radius: 6px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: background 0.15s; }
   .btn-play:hover { background: var(--primary-hover); }
   .btn-play.playing { background: #ea580c; }
+  .btn-pause { background: #f8fafc; border: 1.5px solid #cbd5e1; color: #334155; padding: 7px 14px; border-radius: 6px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: all 0.15s ease; font-size: 0.88rem; }
+  .btn-pause:hover:not(:disabled) { background: #f1f5f9; border-color: #94a3b8; }
+  .btn-pause:disabled { opacity: 0.45; cursor: not-allowed; }
+  .btn-pause.is-paused { background: #ecfdf5 !important; color: #047857 !important; border-color: #86efac !important; box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2); }
+  .btn-pause.is-playing { background: #fffbeb !important; color: #b45309 !important; border-color: #fde68a !important; }
+  .btn-stop { background: #f8fafc; border: 1.5px solid #cbd5e1; color: #475569; padding: 7px 12px; border-radius: 6px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; transition: all 0.15s ease; font-size: 0.86rem; }
+  .btn-stop:hover:not(:disabled) { background: #fee2e2; color: #b91c1c; border-color: #fca5a5; }
+  .btn-stop:disabled { opacity: 0.45; cursor: not-allowed; }
+  .audio-progress-wrap { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 140px; max-width: 240px; }
+  .audio-progress-bar { flex: 1; height: 6px; background: #e2e8f0; border-radius: 9999px; overflow: hidden; cursor: pointer; position: relative; }
+  .audio-progress-fill { width: 0%; height: 100%; background: var(--primary); transition: width 0.1s linear; }
+  .audio-time-label { font-size: 0.78rem; color: var(--text-muted); font-family: monospace; white-space: nowrap; }
   .speed-select { border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 0.85rem; background: white; }
 
   textarea { width: 100%; min-height: 110px; padding: 12px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 1.05rem; line-height: 1.6; resize: vertical; margin-bottom: 12px; outline: none; transition: border-color 0.2s; }
@@ -252,6 +264,15 @@
 
     <div class="audio-player-box">
       <button class="btn-play" id="btn-play-audio" onclick="playAudioCurrent()">🔊 播放真题音频 (Alt+P)</button>
+      <button class="btn-pause" id="btn-pause-audio" onclick="togglePauseCurrent()" disabled title="暂停或继续播放音频 (Alt+K)">⏸ 暂停</button>
+      <button class="btn-stop" id="btn-stop-audio" onclick="stopCurrentAudio()" disabled title="停止播放并重置到开头">⏹ 停止</button>
+      <div class="audio-progress-wrap" id="audio-progress-wrap" style="display: none;">
+        <span class="audio-time-label" id="audio-curr-time">0:00</span>
+        <div class="audio-progress-bar" id="audio-progress-bar" onclick="seekAudio(event)" title="点击跳转播放进度">
+          <div class="audio-progress-fill" id="audio-progress-fill"></div>
+        </div>
+        <span class="audio-time-label" id="audio-dur-time">0:00</span>
+      </div>
       <label style="font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px;">
         语速:
         <select id="audio-speed" class="speed-select" onchange="updateAudioSpeed()">
@@ -1212,18 +1233,104 @@
     box.style.display = box.style.display === "none" ? "block" : "none";
   }
 
+  let isAudioPaused = false;
+  let isAudioPlaying = false;
+  let isTTSMode = false;
+
   function stopCurrentAudio() {
     if (currentAudio) {
       currentAudio.pause();
+      currentAudio.currentTime = 0;
       currentAudio = null;
     }
     if (window.speechSynthesis) {
       window.speechSynthesis.cancel();
     }
-    const btn = document.getElementById("btn-play-audio");
-    if (btn) {
-      btn.innerText = "🔊 播放真题音频 (Alt+P)";
-      btn.classList.remove("playing");
+    resetAudioState();
+  }
+
+  function resetAudioState() {
+    isAudioPlaying = false;
+    isAudioPaused = false;
+    isTTSMode = false;
+    setAudioUIState("stopped");
+    const fillEl = document.getElementById("audio-progress-fill");
+    const curTimeEl = document.getElementById("audio-curr-time");
+    if (fillEl) fillEl.style.width = "0%";
+    if (curTimeEl) curTimeEl.innerText = "0:00";
+  }
+
+  function setAudioUIState(state) {
+    const btnPlay = document.getElementById("btn-play-audio");
+    const btnPause = document.getElementById("btn-pause-audio");
+    const btnStop = document.getElementById("btn-stop-audio");
+
+    if (!btnPlay || !btnPause || !btnStop) return;
+
+    if (state === "playing") {
+      btnPlay.innerText = "🔄 重新播放";
+      btnPlay.classList.add("playing");
+
+      btnPause.disabled = false;
+      btnPause.innerHTML = "⏸ 暂停";
+      btnPause.className = "btn-pause is-playing";
+
+      btnStop.disabled = false;
+    } else if (state === "paused") {
+      btnPlay.innerText = "🔊 重新播放";
+      btnPlay.classList.remove("playing");
+
+      btnPause.disabled = false;
+      btnPause.innerHTML = "▶ 继续播放";
+      btnPause.className = "btn-pause is-paused";
+
+      btnStop.disabled = false;
+    } else { // stopped
+      btnPlay.innerText = "🔊 播放真题音频 (Alt+P)";
+      btnPlay.classList.remove("playing");
+
+      btnPause.disabled = true;
+      btnPause.innerHTML = "⏸ 暂停";
+      btnPause.className = "btn-pause";
+
+      btnStop.disabled = true;
+    }
+  }
+
+  function togglePauseCurrent() {
+    if (isAudioPaused) {
+      resumeCurrentAudio();
+    } else if (isAudioPlaying) {
+      pauseAudioCurrent();
+    }
+  }
+
+  function pauseAudioCurrent() {
+    if (isTTSMode) {
+      if (window.speechSynthesis) window.speechSynthesis.pause();
+    } else if (currentAudio) {
+      currentAudio.pause();
+    }
+    isAudioPaused = true;
+    isAudioPlaying = false;
+    setAudioUIState("paused");
+  }
+
+  function resumeCurrentAudio() {
+    if (!isAudioPaused) return;
+    if (isTTSMode) {
+      if (window.speechSynthesis) window.speechSynthesis.resume();
+      isAudioPlaying = true;
+      isAudioPaused = false;
+      setAudioUIState("playing");
+    } else if (currentAudio) {
+      currentAudio.play().then(() => {
+        isAudioPlaying = true;
+        isAudioPaused = false;
+        setAudioUIState("playing");
+      }).catch(err => {
+        console.warn("Resume audio failed:", err);
+      });
     }
   }
 
@@ -1242,11 +1349,16 @@
 
   function playAudioCurrent() {
     const q = QUESTIONS[currentIndex];
-    const btn = document.getElementById("btn-play-audio");
 
-    if (currentAudio && !currentAudio.paused) {
-      stopCurrentAudio();
+    // 如果处于暂停状态，点击主播放按钮可直接继续播放
+    if (isAudioPaused) {
+      resumeCurrentAudio();
       return;
+    }
+
+    // 如果正在播放中，点击则从头重新播放
+    if (isAudioPlaying) {
+      stopCurrentAudio();
     }
 
     const audioSrc = currentVoiceUrl || q.audio_url;
@@ -1255,50 +1367,100 @@
     if (audioSrc) {
       try {
         stopCurrentAudio();
+        isTTSMode = false;
         currentAudio = new Audio(audioSrc);
         currentAudio.playbackRate = speed;
-        btn.innerText = "⏹ 停止播放";
-        btn.classList.add("playing");
 
-        currentAudio.onended = function() {
-          btn.innerText = "🔊 播放真题音频 (Alt+P)";
-          btn.classList.remove("playing");
-          currentAudio = null;
-        };
+        setupAudioEvents(currentAudio);
 
-        currentAudio.onerror = function() {
-          console.warn("Real audio failed, falling back to TTS...");
-          playTTSFallback(q.sentence, speed, btn);
-        };
-
-        currentAudio.play().catch(function(err) {
+        currentAudio.play().then(() => {
+          isAudioPlaying = true;
+          isAudioPaused = false;
+          setAudioUIState("playing");
+        }).catch(err => {
           console.warn("Audio play blocked, fallback to TTS:", err);
-          playTTSFallback(q.sentence, speed, btn);
+          playTTSFallback(q.sentence, speed);
         });
         return;
       } catch (e) {
-        console.warn("Audio object error:", e);
+        console.warn("Audio init failed:", e);
       }
     }
 
-    playTTSFallback(q.sentence, speed, btn);
+    playTTSFallback(q.sentence, speed);
   }
 
-  function playTTSFallback(text, speed, btn) {
+  function setupAudioEvents(audio) {
+    const fillEl = document.getElementById("audio-progress-fill");
+    const curTimeEl = document.getElementById("audio-curr-time");
+    const durTimeEl = document.getElementById("audio-dur-time");
+    const wrapEl = document.getElementById("audio-progress-wrap");
+
+    if (wrapEl) wrapEl.style.display = "flex";
+
+    audio.ontimeupdate = function() {
+      if (!audio.duration) return;
+      const pct = (audio.currentTime / audio.duration) * 100;
+      if (fillEl) fillEl.style.width = pct + "%";
+      if (curTimeEl) curTimeEl.innerText = formatTime(audio.currentTime);
+      if (durTimeEl) durTimeEl.innerText = formatTime(audio.duration);
+    };
+
+    audio.onloadedmetadata = function() {
+      if (durTimeEl && audio.duration) durTimeEl.innerText = formatTime(audio.duration);
+    };
+
+    audio.onended = function() {
+      resetAudioState();
+    };
+
+    audio.onerror = function() {
+      console.warn("Audio error, fallback to TTS");
+      const q = QUESTIONS[currentIndex];
+      const speed = parseFloat(document.getElementById("audio-speed").value || "1.0");
+      playTTSFallback(q.sentence, speed);
+    };
+  }
+
+  function formatTime(sec) {
+    const s = Math.floor(sec || 0);
+    const m = Math.floor(s / 60);
+    const rem = s % 60;
+    return m + ":" + String(rem).padStart(2, "0");
+  }
+
+  function seekAudio(e) {
+    if (!currentAudio || !currentAudio.duration) return;
+    const bar = document.getElementById("audio-progress-bar");
+    if (!bar) return;
+    const rect = bar.getBoundingClientRect();
+    const pos = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    currentAudio.currentTime = pos * currentAudio.duration;
+  }
+
+  function playTTSFallback(text, speed) {
     if (!window.speechSynthesis) {
       alert("浏览器暂不支持播放音频。");
       return;
     }
     window.speechSynthesis.cancel();
+    isTTSMode = true;
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.rate = speed;
     utterance.lang = "en-AU";
-    btn.innerText = "⏹ 停止朗读";
-    btn.classList.add("playing");
+
+    utterance.onstart = function() {
+      isAudioPlaying = true;
+      isAudioPaused = false;
+      setAudioUIState("playing");
+    };
 
     utterance.onend = function() {
-      btn.innerText = "🔊 播放真题音频 (Alt+P)";
-      btn.classList.remove("playing");
+      resetAudioState();
+    };
+
+    utterance.onerror = function() {
+      resetAudioState();
     };
 
     window.speechSynthesis.speak(utterance);
@@ -1432,11 +1594,14 @@
     renderList(filtered);
   }
 
-  // 快捷键: Alt + P 播放音频, Alt + Right 下一题, Alt + Left 上一题
+  // 快捷键: Alt + P 播放/重播, Alt + K 暂停/继续, Alt + Right 下一题, Alt + Left 上一题
   document.addEventListener("keydown", function(e) {
     if (e.altKey && e.key.toLowerCase() === "p") {
       e.preventDefault();
       playAudioCurrent();
+    } else if (e.altKey && e.key.toLowerCase() === "k") {
+      e.preventDefault();
+      togglePauseCurrent();
     } else if (e.altKey && e.key === "ArrowRight") {
       e.preventDefault();
       nextQuestion();
