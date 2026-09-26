@@ -124,6 +124,51 @@
   .status-perfect { background: var(--success-bg); color: var(--success); }
   .status-tried { background: #e0f2fe; color: #0284c7; }
   .status-mistake { background: var(--danger-bg); color: var(--danger); }
+
+  /* 生词本卡片及词根词缀样式 */
+  .vocab-card { background: white; border: 1px solid #e2e8f0; border-left: 5px solid #8b5cf6; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 5px rgba(0,0,0,0.03); transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .vocab-card:hover { box-shadow: 0 4px 12px rgba(139, 92, 246, 0.08); }
+  .vocab-card.mastered { border-left-color: var(--success); background: #fafdfa; }
+  .vocab-header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px; }
+  .vocab-word-title { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .vocab-word-text { font-size: 1.35rem; font-weight: 700; color: #6d28d9; letter-spacing: -0.01em; }
+  .vocab-phonetic { font-family: "Segoe UI", Roboto, serif; color: var(--text-muted); font-size: 0.95rem; font-style: italic; }
+  .vocab-pos { background: #f3e8ff; color: #7e22ce; font-size: 0.75rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; }
+  .vocab-actions { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  
+  .vocab-btn-speak { background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe; border-radius: 6px; padding: 5px 10px; font-size: 0.82rem; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; transition: background 0.15s; }
+  .vocab-btn-speak:hover { background: #ede9fe; }
+  
+  .vocab-trans-box { font-size: 0.96rem; color: #1e293b; margin-bottom: 10px; line-height: 1.5; padding: 6px 0; }
+  
+  .vocab-etym-box { background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 12px 14px; margin-bottom: 12px; font-size: 0.88rem; }
+  .vocab-etym-title { font-weight: 700; color: #5b21b6; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+  .vocab-etym-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .etym-tag { padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+  .etym-prefix { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+  .etym-root { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+  .etym-suffix { background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
+  .vocab-etym-logic { color: #475569; line-height: 1.45; margin-bottom: 6px; }
+  .vocab-exam-tip { background: #fffbeb; border: 1px dashed #fde68a; color: #92400e; padding: 6px 10px; border-radius: 6px; font-size: 0.82rem; }
+  
+  .vocab-src-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 14px; font-size: 0.88rem; }
+  .vocab-src-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 6px; }
+  .vocab-src-title { font-weight: 700; color: #0f172a; font-size: 0.84rem; }
+  .vocab-src-sent { color: #1e293b; line-height: 1.5; font-size: 0.92rem; margin-bottom: 4px; }
+  .vocab-src-trans { color: var(--text-muted); font-size: 0.84rem; }
+  .vocab-mark { background: #fef08a; padding: 1px 4px; border-radius: 3px; font-weight: 700; color: #854d0e; }
+  
+  .btn-vocab-add-tag { background: #f5f3ff; border: 1px solid #ddd6fe; color: #6d28d9; cursor: pointer; font-size: 0.72rem; font-weight: 700; padding: 1px 5px; margin-left: 6px; border-radius: 4px; transition: all 0.15s; vertical-align: middle; }
+  .btn-vocab-add-tag:hover { background: #ede9fe; border-color: #c4b5fd; }
+  
+  .sentence-vocab-bar { background: #fdf4ff; border: 1px solid #f0abfc; border-radius: 8px; padding: 10px 14px; margin-top: 14px; }
+  .word-chip { background: white; border: 1px solid #e879f9; color: #a21caf; padding: 4px 10px; border-radius: 9999px; font-size: 0.82rem; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; transition: all 0.15s ease; margin: 3px 2px; }
+  .word-chip:hover { background: #fae8ff; border-color: #d946ef; transform: translateY(-1px); }
+  .word-chip.added { background: #ecfdf5; border-color: #6ee7b7; color: #047857; }
+  
+  .vocab-filter-bar { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
+  .vocab-filter-btn { background: #f1f5f9; border: 1px solid var(--border); padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; cursor: pointer; font-weight: 600; color: var(--text-muted); transition: all 0.15s; }
+  .vocab-filter-btn.active { background: #7c3aed; color: white; border-color: #7c3aed; }
 </style>
 </head>
 <body>
@@ -172,11 +217,16 @@
       <div class="stat-val" style="color: var(--danger);" id="stat-mistake-count">0</div>
       <div class="stat-label">待攻克错题数 <span style="font-size: 0.72rem; color: var(--danger); font-weight: 600;">↗ 攻克</span></div>
     </div>
+    <div class="stat-card clickable-card" onclick="switchTab('vocab')" title="点击查看难词生词本与词根词缀">
+      <div class="stat-val" style="color: #7c3aed;" id="stat-vocab-count">0</div>
+      <div class="stat-label">生词收藏数 <span style="font-size: 0.72rem; color: #7c3aed; font-weight: 600;">↗ 词汇</span></div>
+    </div>
   </div>
 
   <div class="tabs">
     <button class="tab-btn active" id="btn-tab-practice" onclick="switchTab('practice')">🎧 逐题听写训练 (考场原声)</button>
     <button class="tab-btn" id="btn-tab-mistakes" onclick="switchTab('mistakes')">📕 错题本与深度诊断 (<span id="tab-mistake-badge">0</span>)</button>
+    <button class="tab-btn" id="btn-tab-vocab" onclick="switchTab('vocab')">📖 难词生词本 (<span id="tab-vocab-badge">0</span>)</button>
     <button class="tab-btn" id="btn-tab-history" onclick="switchTab('history')">📜 答题历史档案明细</button>
     <button class="tab-btn" id="btn-tab-free" onclick="switchTab('free')">⚡ 自由输入秒判</button>
     <button class="tab-btn" id="btn-tab-list" onclick="switchTab('list')">📚 185 题库列表</button>
@@ -256,6 +306,43 @@
     <div id="mistakes-container"></div>
   </div>
 
+  <!-- TAB: VOCABULARY NOTEBOOK (难词生词本) -->
+  <div id="tab-vocab" class="card" style="display: none;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
+      <div>
+        <h3 style="font-size: 1.15rem; color: #1e293b; display: flex; align-items: center; gap: 6px;">📖 WFD 核心难词生词本</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">立体剖析词根词缀 · 构词机理 · 考场易错陷阱 · 萤火虫真题出处语境溯源</p>
+      </div>
+      <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+        <button class="nav-btn" style="background: #f5f3ff; color: #6d28d9; border-color: #ddd6fe; font-size: 0.84rem; font-weight: 600;" onclick="importPresetVocab()" title="一键收录 40+ 道萤火虫真题中最核心、失分率最高的学术难词">✨ 导入 WFD 核心高频难词库 (40+词)</button>
+        <button class="nav-btn" style="font-size: 0.82rem;" onclick="exportVocab()">💾 导出生词本 (JSON)</button>
+        <button class="nav-btn" style="background: #fee2e2; color: #b91c1c; border-color: #fca5a5; font-size: 0.82rem;" onclick="clearVocab()">清空生词本</button>
+      </div>
+    </div>
+
+    <!-- 手动收录生词条 -->
+    <div style="display: flex; gap: 8px; margin-bottom: 16px; align-items: center; flex-wrap: wrap; background: #faf5ff; padding: 12px 14px; border-radius: 8px; border: 1px solid #e9d5ff;">
+      <input type="text" id="vocab-input-text" spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off" writingsuggestions="false" placeholder="➕ 手动收录英文生词 (如: accommodation, controversy, infrastructure)..." onkeydown="handleVocabInputEnter(event)" style="flex: 1; min-width: 240px; padding: 8px 12px; border: 1.5px solid #d8b4fe; border-radius: 6px; font-size: 0.9rem; outline: none;">
+      <button class="btn-submit" style="padding: 8px 18px; font-size: 0.9rem; background: #7c3aed;" onclick="addCustomWordFromInput()">收录生词</button>
+    </div>
+
+    <!-- 筛选与搜索 -->
+    <div class="vocab-filter-bar">
+      <div style="display: flex; gap: 6px;">
+        <button class="vocab-filter-btn active" id="filter-vocab-all" onclick="setVocabFilter('all')">全部 (<span id="count-vocab-all">0</span>)</button>
+        <button class="vocab-filter-btn" id="filter-vocab-pending" onclick="setVocabFilter('pending')">⏳ 待攻克 (<span id="count-vocab-pending">0</span>)</button>
+        <button class="vocab-filter-btn" id="filter-vocab-mastered" onclick="setVocabFilter('mastered')">✅ 已掌握 (<span id="count-vocab-mastered">0</span>)</button>
+      </div>
+      <div style="flex: 1; min-width: 220px; display: flex; gap: 6px;">
+        <input type="text" id="vocab-search" spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off" writingsuggestions="false" placeholder="🔍 搜索生词、词根、释义或题号..." oninput="renderVocabView()" style="flex: 1; padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 0.85rem;">
+        <button class="nav-btn" style="font-size: 0.82rem; padding: 4px 10px;" onclick="document.getElementById('vocab-search').value=''; renderVocabView();">重置</button>
+      </div>
+    </div>
+
+    <div id="vocab-container"></div>
+  </div>
+
+
   <!-- TAB 3: HISTORY LOG -->
   <div id="tab-history" class="card" style="display: none;">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px;">
@@ -316,13 +403,16 @@
   // 2. pte_wfd_qstats: 每道题统计 { [qid]: { passCount: 0, failCount: 0, attempts: 0, missingStats: {}, typoStats: [] } }
   let practiceLogs = [];
   let questionStats = {};
+  let practiceVocab = [];
 
   try {
     practiceLogs = JSON.parse(localStorage.getItem("pte_wfd_logs") || "[]");
     questionStats = JSON.parse(localStorage.getItem("pte_wfd_qstats") || "{}");
+    practiceVocab = JSON.parse(localStorage.getItem("pte_wfd_vocab") || "[]");
   } catch (e) {
     practiceLogs = [];
     questionStats = {};
+    practiceVocab = [];
   }
 
   function cleanWord(w) {
@@ -622,6 +712,20 @@
     document.getElementById("stat-perfect-count").innerText = perfectAttempts;
     document.getElementById("stat-mistake-count").innerText = mistakeCount;
     document.getElementById("tab-mistake-badge").innerText = mistakeCount;
+    
+    let vocabCount = practiceVocab.length;
+    let pendingVocabCount = practiceVocab.filter(v => !v.mastered).length;
+    let masteredVocabCount = practiceVocab.filter(v => v.mastered).length;
+    const statVocabEl = document.getElementById("stat-vocab-count");
+    if (statVocabEl) statVocabEl.innerText = vocabCount;
+    const tabVocabEl = document.getElementById("tab-vocab-badge");
+    if (tabVocabEl) tabVocabEl.innerText = vocabCount;
+    const countAllEl = document.getElementById("count-vocab-all");
+    if (countAllEl) countAllEl.innerText = vocabCount;
+    const countPendEl = document.getElementById("count-vocab-pending");
+    if (countPendEl) countPendEl.innerText = pendingVocabCount;
+    const countMastEl = document.getElementById("count-vocab-mastered");
+    if (countMastEl) countMastEl.innerText = masteredVocabCount;
   }
 
   function updateCurrentQuestionBadge() {
@@ -681,7 +785,7 @@
       if (res.missingWords.length > 0) {
         html += '<div><strong style="color: var(--danger);">❌ 具体的未得分/遗漏词:</strong><div class="tag-group" style="margin-top: 4px;">';
         res.missingWords.forEach(w => {
-          html += '<span class="tag tag-miss">' + w + '</span>';
+          html += '<span class="tag tag-miss">' + w + ' <button class="btn-vocab-add-tag" onclick="quickAddWord(&apos;' + w + '&apos;,&apos;' + res.targetItem.qid + '&apos;,this)" title="一键收录进难词生词本">⭐记生词</button></span>';
         });
         html += '</div></div>';
       }
@@ -695,7 +799,7 @@
       if (res.typos.length > 0) {
         html += '<div><strong style="color: var(--warn);">🔍 具体的拼写错误订正:</strong><div class="tag-group" style="margin-top: 4px;">';
         res.typos.forEach(t => {
-          html += '<span class="tag tag-typo">' + t.typed + ' ➡️ 应为 ' + t.expected + '</span>';
+          html += '<span class="tag tag-typo">' + t.typed + ' ➡️ 应为 ' + t.expected + ' <button class="btn-vocab-add-tag" onclick="quickAddWord(&apos;' + t.expected + '&apos;,&apos;' + res.targetItem.qid + '&apos;,this)" title="一键收录进难词生词本">⭐记生词</button></span>';
         });
         html += '</div></div>';
       }
@@ -713,6 +817,35 @@
     if (tips.length > 0) {
       html += '<div class="tips-box">💡 <strong>考场贴士</strong>: ' + tips.join("；") + '</div>';
     }
+
+    // 本句核心词速记快捷条 (点击一键收录生词本，自动剖析词根词缀与出处)
+    const sentenceTokens = tokenize(res.targetItem.sentence);
+    const stopWords = new Set(['the', 'and', 'for', 'are', 'was', 'were', 'will', 'that', 'this', 'with', 'from', 'have', 'has', 'had', 'been', 'their', 'there', 'they', 'them', 'about', 'into', 'some', 'more', 'most', 'very', 'which', 'who', 'what', 'when', 'where', 'why', 'how', 'all', 'any', 'both', 'each', 'few', 'other', 'such', 'only', 'same', 'than', 'too', 'can', 'may', 'should', 'would', 'could', 'must']);
+    const meaningfulWords = [];
+    const seenWords = new Set();
+    sentenceTokens.forEach(raw => {
+      const clean = cleanWord(raw);
+      if (clean.length >= 4 && !stopWords.has(clean) && !seenWords.has(clean)) {
+        seenWords.add(clean);
+        meaningfulWords.push(clean);
+      }
+    });
+
+    if (meaningfulWords.length > 0) {
+      html += '<div class="sentence-vocab-bar">';
+      html += '<div style="font-weight: 700; font-size: 0.85rem; color: #7e22ce; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 4px;">';
+      html += '<span>📖 本句核心高频词速记 (点击一键收录生词本，自动剖析词根词缀与出处):</span>';
+      html += '<span style="font-size: 0.74rem; color: #a21caf; font-weight: normal;">已收录单词将显示绿色勾选</span>';
+      html += '</div><div class="tag-group">';
+      meaningfulWords.forEach(w => {
+        const isAlreadyAdded = practiceVocab.some(v => v.word.toLowerCase() === w.toLowerCase());
+        html += '<button class="word-chip ' + (isAlreadyAdded ? 'added' : '') + '" id="chip-' + w + '" onclick="quickAddWordChip(&apos;' + w + '&apos;,&apos;' + res.targetItem.qid + '&apos;,this)">';
+        html += (isAlreadyAdded ? '✅ ' : '➕ ') + w;
+        html += '</button>';
+      });
+      html += '</div></div>';
+    }
+
     html += '</div>';
 
     // 如果本题之前有历史作答记录，展示往次作答对比诊断
@@ -775,7 +908,8 @@
     qids.sort((a, b) => questionStats[b].failCount - questionStats[a].failCount);
 
     // 搜索过滤
-    const searchVal = (document.getElementById("mistake-search") ? document.getElementById("mistake-search").value : "").trim().toLowerCase();
+    const mistakeSearchEl = document.getElementById("mistake-search");
+    const searchVal = (mistakeSearchEl && mistakeSearchEl.value ? mistakeSearchEl.value : "").trim().toLowerCase();
     if (searchVal) {
       qids = qids.filter(qid => {
         const s = questionStats[qid];
@@ -1214,12 +1348,15 @@
     document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
     document.getElementById("tab-practice").style.display = mode === "practice" ? "block" : "none";
     document.getElementById("tab-mistakes").style.display = mode === "mistakes" ? "block" : "none";
+    document.getElementById("tab-vocab").style.display = mode === "vocab" ? "block" : "none";
     document.getElementById("tab-history").style.display = mode === "history" ? "block" : "none";
     document.getElementById("tab-free").style.display = mode === "free" ? "block" : "none";
     document.getElementById("tab-list").style.display = mode === "list" ? "block" : "none";
-    document.getElementById("btn-tab-" + mode).classList.add("active");
+    const targetTabBtn = document.getElementById("btn-tab-" + mode);
+    if (targetTabBtn) targetTabBtn.classList.add("active");
 
     if (mode === "mistakes") renderMistakesView();
+    if (mode === "vocab") renderVocabView();
     if (mode === "history") renderHistoryView();
   }
 
@@ -1338,6 +1475,1100 @@
         badge.innerText = diffDays <= 0 ? "今日最新同步" : (diffDays + " 天前同步");
       }
     } catch (e) {}
+  }
+
+
+  // ==========================================
+  // WFD 难词生词本与词根词缀核心引擎 (VOCABULARY NOTEBOOK)
+  // ==========================================
+
+  let currentVocabFilter = "all";
+
+  // 1. 精编 40+ 道萤火虫高频核心难词库 (词根词缀 + 构词机理 + 考场易错陷阱)
+  const WFD_PRESET_VOCAB_DB = {
+    "accommodation": {
+      phonetic: "/əˌkɒməˈdeɪʃn/",
+      pos: "n.",
+      meanings: "住处，住所；膳宿；和解，适应",
+      prefix: "ac- (源自 ad-，在 c 前同化，表“朝向、使...”) ",
+      root: "commod (源自拉丁语 commodus，表“合适、便利、适度”) ",
+      suffix: "-ation (复合名词后缀，表行为过程或结果实体) ",
+      logic: "使之合适便利 -> 提供舒适便利的容身之处 -> 住宿、膳宿",
+      examTip: "⚠️ PTE 核心双拼考点！注意双 c 双 m (cc + mm)，考场极易漏写字母！常考不可数及单数形式。",
+      defaultQid: "131785"
+    },
+    "accumulation": {
+      phonetic: "/əˌkjuːmjəˈleɪʃn/",
+      pos: "n.",
+      meanings: "积累，积聚；堆积物",
+      prefix: "ac- (源自 ad-，表“朝向、加强”) ",
+      root: "cumul (源自拉丁语 cumulus，表“堆积、堆成山”) ",
+      suffix: "-ation (名词后缀，表动作或结果) ",
+      logic: "朝一处堆积成山 -> 积少成多 -> 积累、积聚",
+      examTip: "⚠️ 牢记「双 c 单 m (cc + m)」，与 accommodation 的双 m 严格区分！",
+      defaultQid: "131219"
+    },
+    "controversy": {
+      phonetic: "/ˈkɒntrəvɜːsi/",
+      pos: "n.",
+      meanings: "争论，辩论，公开争议",
+      prefix: "contro- (contra- 的变体，表“相反、对抗、相对”) ",
+      root: "vers (源自拉丁语 vertere，表“转动、方向”) ",
+      suffix: "-y (名词后缀，表性质、状态) ",
+      logic: "朝相反的方向转动/各持相反方向 -> 针锋相对、各执一词 -> 公开争论",
+      examTip: "⚠️ 注意 contro 不要误写成 contra，尾部是 versy 而不是 versity。",
+      defaultQid: "131001"
+    },
+    "celebrated": {
+      phonetic: "/ˈselɪbreɪtɪd/",
+      pos: "adj.",
+      meanings: "著名的，闻名的，广受赞誉的",
+      prefix: "无前缀",
+      root: "celebr (源自拉丁语 celeber，表“人多聚集的、光荣的、赞誉”) ",
+      suffix: "-ate (动词后缀) + -ed (形容词后缀，表完成或被动状态) ",
+      logic: "众人聚集赞誉的 -> 举世闻名的、著名的",
+      examTip: "⚠️ 考试中常与 theory 搭配（the celebrated theory），切勿漏写末尾 -ed！",
+      defaultQid: "131001"
+    },
+    "architectural": {
+      phonetic: "/ˌɑːkɪˈtektʃərəl/",
+      pos: "adj.",
+      meanings: "建筑学的，建筑风格的，结构上的",
+      prefix: "arch- (源自希腊语 arche，表“首要的、总的、大”) ",
+      root: "tect (源自希腊语 tekton，表“木匠、工匠、建造”) ",
+      suffix: "-ure (名词后缀: 结果/产物) + -al (形容词后缀: ...的) ",
+      logic: "大师傅/总工匠的设计产物 -> 建筑学/建筑风格的",
+      examTip: "⚠️ ch 发 /k/ 音，tect 不要误写成 text；注意音节长，拼写要稳。",
+      defaultQid: "131002"
+    },
+    "architecture": {
+      phonetic: "/ˈɑːkɪtektʃə(r)/",
+      pos: "n.",
+      meanings: "建筑学，建筑结构，体系结构",
+      prefix: "arch- (表“主要的、首领”) ",
+      root: "tect (表“建造、工匠”) ",
+      suffix: "-ure (名词后缀，表行为、结果或体系) ",
+      logic: "总策划与总建造的艺术体系 -> 建筑学",
+      examTip: "⚠️ 注意区分名词 architecture 与形容词 architectural。",
+      defaultQid: "131547"
+    },
+    "durable": {
+      phonetic: "/ˈdjʊərəbl/",
+      pos: "adj.",
+      meanings: "耐用的，经久的，持久的",
+      prefix: "无前缀",
+      root: "dur (源自拉丁语 durus，表“坚硬的、持续的”) ",
+      suffix: "-able (形容词后缀，表“能够...的、易于...的”) ",
+      logic: "能长久经受磨砺、持续坚挺的 -> 经久耐用的",
+      examTip: "⚠️ 常见考点并列句：useful, durable and beautiful。",
+      defaultQid: "131002"
+    },
+    "affordable": {
+      phonetic: "/əˈfɔːdəbl/",
+      pos: "adj.",
+      meanings: "买得起的，负担得起的，廉价的",
+      prefix: "af- (源自 ad-，在 f 前同化，表“使、朝向”) ",
+      root: "ford (源自古英语 fordian，表“推进、向前走、跨过”) ",
+      suffix: "-able (形容词后缀，表“能够...的”) ",
+      logic: "能够向前推进承担得起的 -> 负担得起的",
+      examTip: "⚠️ 牢记双写 f (af-ford-able)，考场常考 affordable housing。",
+      defaultQid: "131009"
+    },
+    "assignments": {
+      phonetic: "/əˈsaɪnmənts/",
+      pos: "n.",
+      meanings: "布置的作业，分派的任务 [复数]",
+      prefix: "as- (源自 ad-，在 s 前同化，表“去、向、给予”) ",
+      root: "sign (源自拉丁语 signum，表“记号、指定、签名”) ",
+      suffix: "-ment (名词后缀，表行为或结果) + -s (复数后缀) ",
+      logic: "指定分派给个人的事务 -> 作业、任务",
+      examTip: "⚠️ 必背复数 s！PTE 听写极易漏写复数 -s，听音时注意尾音！",
+      defaultQid: "131013"
+    },
+    "circumstances": {
+      phonetic: "/ˈsɜːkəmstənsɪz/",
+      pos: "n.",
+      meanings: "环境，境况，条件，客观情况 [复数]",
+      prefix: "circum- (拉丁语前缀，表“环绕、周围、圆圈”) ",
+      root: "sta (源自拉丁语 stare，表“站立、处于、存在”) ",
+      suffix: "-ance (名词后缀，表状态) + -s (复数后缀) ",
+      logic: "环绕站立在周围的一切事物 -> 周围的环境、境况",
+      examTip: "⚠️ 考场必考复数 -s (under any circumstances / in certain circumstances)。",
+      defaultQid: "131154"
+    },
+    "mathematics": {
+      phonetic: "/ˌmæθəˈmætɪks/",
+      pos: "n.",
+      meanings: "数学，数学计算",
+      prefix: "无前缀",
+      root: "mathem (源自希腊语 mathema，表“科学、学问、知识”) ",
+      suffix: "-ics (学术、学科名词后缀，如 physics, politics) ",
+      logic: "研究严谨数量与空间结构的学问 -> 数学",
+      examTip: "⚠️ 单词本身自带 -s，代表一门学科，不可写成 mathematic！",
+      defaultQid: "131542"
+    },
+    "foundation": {
+      phonetic: "/faʊnˈdeɪʃn/",
+      pos: "n.",
+      meanings: "基础，地基；创立，基金会",
+      prefix: "无前缀",
+      root: "found / fund (源自拉丁语 fundus，表“底部、基底”) ",
+      suffix: "-ation (名词后缀，表动作或结果实体) ",
+      logic: "打造底部支撑结构 -> 地基、基础",
+      examTip: "⚠️ 常与 provide a foundation for... 搭配，不要误写成 findation。",
+      defaultQid: "1311174"
+    },
+    "analyzing": {
+      phonetic: "/ˈænəlaɪzɪŋ/",
+      pos: "v.",
+      meanings: "分析，分解剖析 [现在分词/动名词]",
+      prefix: "ana- (源自希腊语，表“分开、自下而上、彻底”) ",
+      root: "lyz / lys (源自希腊语 lyein，表“解开、松开、松散”) ",
+      suffix: "-ing (动名词/现在分词后缀) ",
+      logic: "彻底拆解开来逐一审视 -> 分析、剖析",
+      examTip: "⚠️ 英式 analysing 与美式 analyzing 官方均给满分！注意中间是 y 不是 i。",
+      defaultQid: "1311174"
+    },
+    "understanding": {
+      phonetic: "/ˌʌndəˈstændɪŋ/",
+      pos: "n.",
+      meanings: "理解，领悟；认识，体谅",
+      prefix: "under- (在此表“在...之间、深入其下”) ",
+      root: "stand (表“站立、立足”) ",
+      suffix: "-ing (动名词后缀，表行为或能力) ",
+      logic: "立足于事物深层核心之中 -> 真正洞察领悟 -> 理解",
+      examTip: "⚠️ PTE 高频搭配：understanding of human behaviors。",
+      defaultQid: "1311089"
+    },
+    "psychology": {
+      phonetic: "/saɪˈkɒlədʒi/",
+      pos: "n.",
+      meanings: "心理学，心理机制",
+      prefix: "无前缀",
+      root: "psych (源自希腊语 psyche，表“心灵、灵魂、精神”) ",
+      suffix: "-ology (源自希腊语 logos，表“学科、学说、理论”) ",
+      logic: "探究人类心灵与精神活动的科学 -> 心理学",
+      examTip: "⚠️ 首字母 p 不发音！千万别漏写 p；ch 拼写容易漏 h。",
+      defaultQid: "1311089"
+    },
+    "infrastructure": {
+      phonetic: "/ˈɪnfrəstrʌktʃə(r)/",
+      pos: "n.",
+      meanings: "基础设施，公共建设",
+      prefix: "infra- (拉丁语前缀，表“在...下方、下层、基底”) ",
+      root: "struct (源自拉丁语 struere，表“建造、构建”) ",
+      suffix: "-ure (名词后缀，表体系、结构) ",
+      logic: "在社会日常运转下层铺设的骨架工程 -> 基础设施",
+      examTip: "⚠️ infra 不要拼成 intro 或 inter，结构是 infra + structure。",
+      defaultQid: "131014"
+    },
+    "environmental": {
+      phonetic: "/ɪnˌvaɪrənˈmentl/",
+      pos: "adj.",
+      meanings: "环境的，周围环境的，自然环境的",
+      prefix: "en- (表“进入、成为、包围”) ",
+      root: "viron (源自古法语 viron，表“圆圈、转圈、周围”) ",
+      suffix: "-ment (名词后缀) + -al (形容词后缀) ",
+      logic: "处于层层包围之中的外界总和 -> 环境的",
+      examTip: "⚠️ 注意 ron 中间有个 n 不要丢，音节拼写要完整。",
+      defaultQid: "131021"
+    },
+    "sustainable": {
+      phonetic: "/səˈsteɪnəbl/",
+      pos: "adj.",
+      meanings: "可持续的，可维持的，能长期保持的",
+      prefix: "sus- (源自 sub-，在 s 前变体，表“在...下方”) ",
+      root: "tain (源自拉丁语 tenere，表“握住、支撑、保持”) ",
+      suffix: "-able (形容词后缀，表“能够...的”) ",
+      logic: "从底部长久托住支撑得起的 -> 可持续的",
+      examTip: "⚠️ 词根是 tain (如 maintain, contain)，不要漏拼 i。",
+      defaultQid: "131014"
+    },
+    "perspectives": {
+      phonetic: "/pəˈspektɪvz/",
+      pos: "n.",
+      meanings: "视角，观点，洞察力 [复数]",
+      prefix: "per- (拉丁语前缀，表“彻底、完全、穿透”) ",
+      root: "spect (源自拉丁语 specere，表“看、审视”) ",
+      suffix: "-ive (名词/形容词后缀) + -s (复数后缀) ",
+      logic: "彻底看透事物的角度 -> 视角、观点",
+      examTip: "⚠️ 必写复数 -s！听写中几乎 100% 出现复数形式（different perspectives）。",
+      defaultQid: "131025"
+    },
+    "representatives": {
+      phonetic: "/ˌreprɪˈzentətɪvz/",
+      pos: "n.",
+      meanings: "代表，代理人 [复数]",
+      prefix: "re- (再、又) + present (展示、呈献) ",
+      root: "sent (表“存在、呈现”) ",
+      suffix: "-ative (人称名词后缀) + -s (复数后缀) ",
+      logic: "代表群体再次出席呈献诉求的人 -> 代表",
+      examTip: "⚠️ 音节长达 5 个音节，易拼错中间 a 和 i，尾部复数 -s 务必写全。",
+      defaultQid: "131484"
+    },
+    "contemporary": {
+      phonetic: "/kənˈtemprəri/",
+      pos: "adj.",
+      meanings: "当代的，现代的；同时代的",
+      prefix: "con- (表“共同、一起”) ",
+      root: "tempor (源自拉丁语 tempus，表“时间、时代”) ",
+      suffix: "-ary (形容词后缀，表“与...相关的”) ",
+      logic: "处于同一时间时代的 -> 当代的、同时代的",
+      examTip: "⚠️ 词根是 tempor (如 temporary)，不要丢掉中间的 o。",
+      defaultQid: "1311182"
+    },
+    "curriculum": {
+      phonetic: "/kəˈrɪkjələm/",
+      pos: "n.",
+      meanings: "学校全部课程，课程体系",
+      prefix: "无前缀",
+      root: "curr (源自拉丁语 currere，表“跑动、奔跑、跑道”) ",
+      suffix: "-iculum (拉丁语名词后缀，表“行进场所、载体”) ",
+      logic: "学生求知奔跑的赛道轨道 -> 课程体系",
+      examTip: "⚠️ 牢记「双 r 单 l (rr + l)」，复数是 curricula 或 curriculums。",
+      defaultQid: "131151"
+    },
+    "archaeologists": {
+      phonetic: "/ˌɑːkiˈɒlədʒɪsts/",
+      pos: "n.",
+      meanings: "考古学家 [复数]",
+      prefix: "archae- (源自希腊语 archaios，表“古老的、原始的”) ",
+      root: "log (表“学说、论述”) ",
+      suffix: "-ist (从事某学科的人) + -s (复数) ",
+      logic: "探究古老原始遗存的专家 -> 考古学家",
+      examTip: "⚠️ ae 易错漏；ch 发 /k/；末尾务必带复数 -s！",
+      defaultQid: "131263"
+    },
+    "participation": {
+      phonetic: "/pɑːˌtɪsɪˈpeɪʃn/",
+      pos: "n.",
+      meanings: "参加，参与，分享",
+      prefix: "part- (表“部分、一份”) ",
+      root: "cip (源自 capere，表“拿取、获取”) ",
+      suffix: "-ation (名词后缀，表行为或过程) ",
+      logic: "在集体活动中分得一份、参与其中 -> 参加、参与",
+      examTip: "⚠️ cip 不要误写成 cep 或 cap，读音 /tɪsɪpeɪʃn/。",
+      defaultQid: "131334"
+    },
+    "qualification": {
+      phonetic: "/ˌkwɒlɪfɪˈkeɪʃn/",
+      pos: "n.",
+      meanings: "资格，资历，资格证明",
+      prefix: "无前缀",
+      root: "qual (源自 qualis，表“品质、素质”) + fic (表“制造、做成”) ",
+      suffix: "-ation (名词后缀) ",
+      logic: "使之具备合规素质证明 -> 资格、资历",
+      examTip: "⚠️ fic 不要错拼成 fec，通常作单数或复数 qualifications。",
+      defaultQid: "131358"
+    },
+    "collaboration": {
+      phonetic: "/kəˌlæbəˈreɪʃn/",
+      pos: "n.",
+      meanings: "合作，协同工作，合著",
+      prefix: "col- (源自 con-，在 l 前同化，表“共同、一起”) ",
+      root: "labor (源自拉丁语 labor，表“劳动、工作”) ",
+      suffix: "-ation (名词后缀) ",
+      logic: "大家在一起共同辛勤劳动 -> 合作、协作",
+      examTip: "⚠️ 双 l 单 b (ll + b)，不可漏写前缀中的 l。",
+      defaultQid: "131509"
+    },
+    "atmosphere": {
+      phonetic: "/ˈætməsfɪə(r)/",
+      pos: "n.",
+      meanings: "大气层，气体；气氛，环境氛围",
+      prefix: "atmo- (源自希腊语 atmos，表“水汽、气体、蒸汽”) ",
+      root: "sphere (源自希腊语 sphaira，表“球体、范围、圈层”) ",
+      suffix: "无后缀",
+      logic: "包裹星球外围的气体球层 -> 大气层；引申为生活氛围",
+      examTip: "⚠️ sphere 的 ph 发 /f/ 读音，结尾是 -ere 不是 -ear。",
+      defaultQid: "131021"
+    },
+    "investigation": {
+      phonetic: "/ɪnˌvestɪˈɡeɪʃn/",
+      pos: "n.",
+      meanings: "调查，审查，深入探究",
+      prefix: "in- (向内、深入) ",
+      root: "vestig (源自拉丁语 vestigium，表“脚印、足迹、痕迹”) ",
+      suffix: "-ation (名词后缀) ",
+      logic: "深入顺着足迹追寻真相 -> 深入调查",
+      examTip: "⚠️ vestig 中的 i 不要写成 e，动词是 investigate。",
+      defaultQid: "131263"
+    },
+    "distinction": {
+      phonetic: "/dɪˈstɪŋkʃn/",
+      pos: "n.",
+      meanings: "区别，差别；卓越，优秀",
+      prefix: "dis- (分开、分别) ",
+      root: "stinct (源自拉丁语 stinguere，表“刺、做记号、区分”) ",
+      suffix: "-ion (名词后缀) ",
+      logic: "用小刺分别标记区分开 -> 区别、差异",
+      examTip: "⚠️ distinction between A and B 经典高频句型。",
+      defaultQid: "131154"
+    },
+    "comprehensive": {
+      phonetic: "/ˌkɒmprɪˈhensɪv/",
+      pos: "adj.",
+      meanings: "全面的，综合的，详尽的",
+      prefix: "com- (完全、全部) ",
+      root: "prehend (源自拉丁语 prehendere，表“抓住、理解、包含”) ",
+      suffix: "-ive (形容词后缀，表“具有...倾向/特征的”) ",
+      logic: "把所有细节彻底抓获囊括于一身 -> 全面的、综合的",
+      examTip: "⚠️ prehend 词根中间是 h-e-n-d，不要漏掉 h。",
+      defaultQid: "131316"
+    },
+    "significance": {
+      phonetic: "/sɪɡˈnɪfɪkəns/",
+      pos: "n.",
+      meanings: "重要性，重大意义；含义",
+      prefix: "无前缀",
+      root: "sign (记号、标记) + fic (做、使) ",
+      suffix: "-ance (抽象名词后缀) ",
+      logic: "被做上重大标记的事物 -> 重大意义、重要性",
+      examTip: "⚠️ 尾部是 -ance 而不是 -ence，注意与 significant 形容词区分。",
+      defaultQid: "131458"
+    },
+    "preliminary": {
+      phonetic: "/prɪˈlɪmɪnəri/",
+      pos: "adj.",
+      meanings: "初步的，预备性的，开端的",
+      prefix: "pre- (在之前、预先) ",
+      root: "limin (源自拉丁语 limen，表“门槛、界限”) ",
+      suffix: "-ary (形容词后缀，表“与...相关的”) ",
+      logic: "在正式跨过门槛之前所做的工作 -> 初步的、预备的",
+      examTip: "⚠️ limin 中间是两个 i，不要误拼成 limen。",
+      defaultQid: "131284"
+    },
+    "nutritional": {
+      phonetic: "/njuːˈtrɪʃənl/",
+      pos: "adj.",
+      meanings: "营养的，滋养的，食物营养价值的",
+      prefix: "无前缀",
+      root: "nutri (源自拉丁语 nutrire，表“哺育、喂养、滋养”) ",
+      suffix: "-tion (名词) + -al (形容词后缀) ",
+      logic: "提供哺育滋养特质的 -> 营养的",
+      examTip: "⚠️ nutri- 不要拼成 nutre-，注意音标 /trɪʃənl/。",
+      defaultQid: "131172"
+    },
+    "scholarships": {
+      phonetic: "/ˈskɒləʃɪps/",
+      pos: "n.",
+      meanings: "奖学金 [复数]",
+      prefix: "无前缀",
+      root: "scholar (学者、学生，源自希腊语 schole“闲暇、求学”) ",
+      suffix: "-ship (状态、身份、资助形式) + -s (复数后缀) ",
+      logic: "给予求学者的学术资助金 -> 奖学金",
+      examTip: "⚠️ 考场必考复数 -s！千万别漏写末尾 s。",
+      defaultQid: "131694"
+    },
+    "laboratory": {
+      phonetic: "/ləˈbɒrətri/",
+      pos: "n.",
+      meanings: "实验室，研究室",
+      prefix: "无前缀",
+      root: "labor (劳动、工作、科学操作) ",
+      suffix: "-atory (场所名词后缀，如 dormitory) ",
+      logic: "进行科学操作劳动的专业场所 -> 实验室",
+      examTip: "⚠️ 英音读 /ləˈbɒrətri/，美音读 /ˈlæbrətɔːri/；复数 laboratories 变 y 为 ies。",
+      defaultQid: "131449"
+    },
+    "tutorials": {
+      phonetic: "/tjuːˈtɔːriəlz/",
+      pos: "n.",
+      meanings: "大学辅导课，研讨辅导小组 [复数]",
+      prefix: "无前缀",
+      root: "tutor (源自拉丁语 tueri，表“守护、照看、指导导师”) ",
+      suffix: "-ial (形容词/名词后缀) + -s (复数后缀) ",
+      logic: "导师负责对学生小班个性指导的课程 -> 辅导课",
+      examTip: "⚠️ 必写复数 -s！常与 lectures 并列（lectures and tutorials）。",
+      defaultQid: "131007"
+    },
+    "vulnerable": {
+      phonetic: "/ˈvʌlnərəbl/",
+      pos: "adj.",
+      meanings: "脆弱的，易受攻击/伤害的",
+      prefix: "无前缀",
+      root: "vulner (源自拉丁语 vulnus，表“伤口、创伤”) ",
+      suffix: "-able (形容词后缀，表“容易...的”) ",
+      logic: "容易遭受创伤的 -> 脆弱易伤的",
+      examTip: "⚠️ vulner 不要误写成 volner，中间有个 e。",
+      defaultQid: "131484"
+    },
+    "straightforward": {
+      phonetic: "/ˌstreɪtˈfɔːwəd/",
+      pos: "adj.",
+      meanings: "简单易懂的，直截了当的，坦率的",
+      prefix: "straight (直的、直接的) + forward (向前的) ",
+      root: "复合构词",
+      suffix: "-ward (方位副词/形容词后缀) ",
+      logic: "径直向前毫无弯曲 -> 直截了当的、容易理解的",
+      examTip: "⚠️ straight 中间的 gh 不发音，容易漏写 gh！",
+      defaultQid: "131025"
+    }
+  };
+
+  // 2. 动态构词拆解引擎 (针对用户自主输入或题库未预置词汇)
+  function analyzeWordEtymology(rawWord) {
+    const w = rawWord.toLowerCase().replace(/[^a-z]/g, "");
+    if (!w) return null;
+
+    if (WFD_PRESET_VOCAB_DB[w]) {
+      return Object.assign({ word: w }, WFD_PRESET_VOCAB_DB[w]);
+    }
+
+    let baseW = w;
+    if (w.endsWith("ies") && WFD_PRESET_VOCAB_DB[w.slice(0, -3) + "y"]) baseW = w.slice(0, -3) + "y";
+    else if (w.endsWith("es") && WFD_PRESET_VOCAB_DB[w.slice(0, -2)]) baseW = w.slice(0, -2);
+    else if (w.endsWith("s") && WFD_PRESET_VOCAB_DB[w.slice(0, -1)]) baseW = w.slice(0, -1);
+
+    if (baseW !== w && WFD_PRESET_VOCAB_DB[baseW]) {
+      const b = WFD_PRESET_VOCAB_DB[baseW];
+      return {
+        word: w,
+        phonetic: b.phonetic,
+        pos: b.pos,
+        meanings: b.meanings + " (复数形式)",
+        prefix: b.prefix,
+        root: b.root,
+        suffix: b.suffix + " + -s (复数标记)",
+        logic: b.logic,
+        examTip: "⚠️ 原形为「" + baseW + "」。" + b.examTip,
+        defaultQid: b.defaultQid
+      };
+    }
+
+    const PREFIXES = [
+      { prefix: "anti", mean: "反对、抗", type: "anti-" },
+      { prefix: "auto", mean: "自己、自动", type: "auto-" },
+      { prefix: "circum", mean: "环绕、周围", type: "circum-" },
+      { prefix: "contra", mean: "相反、对抗", type: "contra-" },
+      { prefix: "contro", mean: "相反、相对", type: "contro-" },
+      { prefix: "counter", mean: "反对、对应", type: "counter-" },
+      { prefix: "extra", mean: "超出、额外", type: "extra-" },
+      { prefix: "infra", mean: "在...下方、基底", type: "infra-" },
+      { prefix: "inter", mean: "相互、在...之间", type: "inter-" },
+      { prefix: "intra", mean: "在内部", type: "intra-" },
+      { prefix: "multi", mean: "多数、复合", type: "multi-" },
+      { prefix: "super", mean: "在...之上、超级", type: "super-" },
+      { prefix: "trans", mean: "穿过、跨越", type: "trans-" },
+      { prefix: "under", mean: "在...下方、不足", type: "under-" },
+      { prefix: "over", mean: "过度、在上方", type: "over-" },
+      { prefix: "post", mean: "在...之后", type: "post-" },
+      { prefix: "retro", mean: "向后、追溯", type: "retro-" },
+      { prefix: "semi", mean: "半、部分", type: "semi-" },
+      { prefix: "fore", mean: "在前、预先", type: "fore-" },
+      { prefix: "arch", mean: "首要、总管", type: "arch-" },
+      { prefix: "tele", mean: "远程、远距离", type: "tele-" },
+      { prefix: "com", mean: "完全、共同", type: "com-" },
+      { prefix: "con", mean: "完全、共同", type: "con-" },
+      { prefix: "col", mean: "共同、一起", type: "col-" },
+      { prefix: "cor", mean: "共同、互相", type: "cor-" },
+      { prefix: "dis", mean: "分离、否定、散开", type: "dis-" },
+      { prefix: "dif", mean: "分开、不", type: "dif-" },
+      { prefix: "pre", mean: "在...之前、预先", type: "pre-" },
+      { prefix: "pro", mean: "向前、支持、赞同", type: "pro-" },
+      { prefix: "sub", mean: "在...之下、次级", type: "sub-" },
+      { prefix: "suc", mean: "在...之下", type: "suc-" },
+      { prefix: "suf", mean: "在...之下", type: "suf-" },
+      { prefix: "sug", mean: "在...之下", type: "sug-" },
+      { prefix: "sup", mean: "在...之下", type: "sup-" },
+      { prefix: "sur", mean: "在...之上、超过", type: "sur-" },
+      { prefix: "sus", mean: "在...下方支撑", type: "sus-" },
+      { prefix: "syn", mean: "共同、同步", type: "syn-" },
+      { prefix: "sym", mean: "共同、相同", type: "sym-" },
+      { prefix: "non", mean: "非、不", type: "non-" },
+      { prefix: "mis", mean: "错误、坏", type: "mis-" },
+      { prefix: "mal", mean: "恶劣、不良", type: "mal-" },
+      { prefix: "uni", mean: "单一、统一", type: "uni-" },
+      { prefix: "bi", mean: "双、两", type: "bi-" },
+      { prefix: "tri", mean: "三、三重", type: "tri-" },
+      { prefix: "en", mean: "进入、使成为", type: "en-" },
+      { prefix: "em", mean: "进入、处于...中", type: "em-" },
+      { prefix: "ex", mean: "出、向外、完全", type: "ex-" },
+      { prefix: "re", mean: "再次、向后、重新", type: "re-" },
+      { prefix: "de", mean: "向下、离开、消除", type: "de-" },
+      { prefix: "in", mean: "向内或表否定“不”", type: "in-" },
+      { prefix: "im", mean: "向内或表否定“不”", type: "im-" },
+      { prefix: "il", mean: "不、无", type: "il-" },
+      { prefix: "ir", mean: "不、无", type: "ir-" },
+      { prefix: "un", mean: "不、未、解开", type: "un-" },
+      { prefix: "ab", mean: "离开、偏离", type: "ab-" },
+      { prefix: "ad", mean: "朝向、加强", type: "ad-" },
+      { prefix: "ac", mean: "朝向、加强", type: "ac-" },
+      { prefix: "af", mean: "朝向、加强", type: "af-" },
+      { prefix: "ag", mean: "朝向、加强", type: "ag-" },
+      { prefix: "al", mean: "朝向、加强", type: "al-" },
+      { prefix: "ap", mean: "朝向、加强", type: "ap-" },
+      { prefix: "ar", mean: "朝向、加强", type: "ar-" },
+      { prefix: "as", mean: "朝向、加强", type: "as-" },
+      { prefix: "at", mean: "朝向、加强", type: "at-" }
+    ];
+
+    const SUFFIXES = [
+      { suffix: "ology", mean: "...学科、学说", pos: "n.", type: "-ology" },
+      { suffix: "ologist", mean: "...学专家、学者", pos: "n.", type: "-ologist" },
+      { suffix: "ation", mean: "行为、过程、状态或结果", pos: "n.", type: "-ation" },
+      { suffix: "ition", mean: "行为、状态", pos: "n.", type: "-ition" },
+      { suffix: "ution", mean: "行为、状态", pos: "n.", type: "-ution" },
+      { suffix: "sion", mean: "行为、结果", pos: "n.", type: "-sion" },
+      { suffix: "tion", mean: "动作、状态", pos: "n.", type: "-tion" },
+      { suffix: "ment", mean: "具体行为、工具或结果", pos: "n.", type: "-ment" },
+      { suffix: "ence", mean: "性质、状态、行为", pos: "n.", type: "-ence" },
+      { suffix: "ance", mean: "性质、状况", pos: "n.", type: "-ance" },
+      { suffix: "able", mean: "能...的、可以...的", pos: "adj.", type: "-able" },
+      { suffix: "ible", mean: "能...的、易于...的", pos: "adj.", type: "-ible" },
+      { suffix: "ical", mean: "与...有关的", pos: "adj.", type: "-ical" },
+      { suffix: "less", mean: "无...的、不具有...的", pos: "adj.", type: "-less" },
+      { suffix: "ness", mean: "性质、状态", pos: "n.", type: "-ness" },
+      { suffix: "ship", mean: "身份、关系、技能", pos: "n.", type: "-ship" },
+      { suffix: "ward", mean: "向...方向", pos: "adj./adv.", type: "-ward" },
+      { suffix: "like", mean: "像...一样的", pos: "adj.", type: "-like" },
+      { suffix: "wise", mean: "方式、方向", pos: "adv.", type: "-wise" },
+      { suffix: "ity", mean: "性质、状态、程度", pos: "n.", type: "-ity" },
+      { suffix: "ive", mean: "具有...性质的、有倾向的", pos: "adj./n.", type: "-ive" },
+      { suffix: "ful", mean: "充满...的、富有...的", pos: "adj.", type: "-ful" },
+      { suffix: "ous", mean: "具有...特征的、充满的", pos: "adj.", type: "-ous" },
+      { suffix: "ial", mean: "关于...的、具有...特性的", pos: "adj.", type: "-ial" },
+      { suffix: "ant", mean: "...的人或物，起...作用的", pos: "n./adj.", type: "-ant" },
+      { suffix: "ent", mean: "...的，起...作用的人/物", pos: "n./adj.", type: "-ent" },
+      { suffix: "ist", mean: "专门从事...的人、专家", pos: "n.", type: "-ist" },
+      { suffix: "ism", mean: "...主义、学说、特征", pos: "n.", type: "-ism" },
+      { suffix: "ify", mean: "使...化、变成", pos: "v.", type: "-ify" },
+      { suffix: "ize", mean: "使...化、实施", pos: "v.", type: "-ize" },
+      { suffix: "ise", mean: "使...化 [英式]", pos: "v.", type: "-ise" },
+      { suffix: "ate", mean: "使成为、具有...的", pos: "v./adj.", type: "-ate" },
+      { suffix: "ory", mean: "场所、与...相关的", pos: "n./adj.", type: "-ory" },
+      { suffix: "ary", mean: "相关的、属于...的人/物", pos: "n./adj.", type: "-ary" },
+      { suffix: "ery", mean: "场所、行为结果", pos: "n.", type: "-ery" },
+      { suffix: "ing", mean: "正在进行的、动作状态", pos: "n./adj.", type: "-ing" },
+      { suffix: "ic", mean: "具有...特性的", pos: "adj.", type: "-ic" },
+      { suffix: "al", mean: "与...相关的、...特性的", pos: "adj.", type: "-al" },
+      { suffix: "ly", mean: "呈...方式、地", pos: "adv.", type: "-ly" },
+      { suffix: "er", mean: "从事...的人或工具", pos: "n.", type: "-er" },
+      { suffix: "or", mean: "执行...动作的人或器物", pos: "n.", type: "-or" },
+      { suffix: "ed", mean: "完成状态或被动特性", pos: "adj./v.", type: "-ed" },
+      { suffix: "en", mean: "使变成、由...制成的", pos: "v./adj.", type: "-en" },
+      { suffix: "ty", mean: "性质、状态", pos: "n.", type: "-ty" },
+      { suffix: "y", mean: "充满...的、性质状态", pos: "adj./n.", type: "-y" }
+    ];
+
+    const ROOTS = [
+      { root: "struct", mean: "建造、构建" },
+      { root: "spect", mean: "看、观察、审视" },
+      { root: "tract", mean: "拉、引、拖" },
+      { root: "vers", mean: "转、转动、转向" },
+      { root: "vert", mean: "转、翻转" },
+      { root: "port", mean: "运送、搬运、门户" },
+      { root: "form", mean: "形状、形式" },
+      { root: "press", mean: "压、压制" },
+      { root: "tain", mean: "拿住、保持、支撑" },
+      { root: "ten", mean: "握住、持续" },
+      { root: "duc", mean: "引导、带来" },
+      { root: "duct", mean: "引导、引导管" },
+      { root: "sens", mean: "感觉、感知" },
+      { root: "sent", mean: "感觉、体会" },
+      { root: "vid", mean: "看、看见" },
+      { root: "vis", mean: "看、目光" },
+      { root: "voc", mean: "声音、呼叫" },
+      { root: "vok", mean: "声音、呼唤" },
+      { root: "dict", mean: "说、讲、言语" },
+      { root: "fact", mean: "做、制作" },
+      { root: "fect", mean: "做、作用于" },
+      { root: "fic", mean: "做、造" },
+      { root: "script", mean: "写、字迹" },
+      { root: "scrib", mean: "写、记录" },
+      { root: "rupt", mean: "断裂、破裂" },
+      { root: "cred", mean: "相信、信任" },
+      { root: "ced", mean: "行走、让步" },
+      { root: "ceed", mean: "前进、进行" },
+      { root: "cess", mean: "走、停止、过程" },
+      { root: "cur", mean: "跑、流动、发生" },
+      { root: "curs", mean: "跑、运行" },
+      { root: "cap", mean: "抓取、头部" },
+      { root: "cept", mean: "拿取、接受" },
+      { root: "cip", mean: "获取、抓取" },
+      { root: "ceiv", mean: "拿取、领受" },
+      { root: "gen", mean: "产生、出生、基因" },
+      { root: "grad", mean: "步、走、等级" },
+      { root: "gress", mean: "步、前行" },
+      { root: "jur", mean: "法律、发誓" },
+      { root: "jud", mean: "审判、判断" },
+      { root: "leg", mean: "法律、读、挑选" },
+      { root: "lect", mean: "选出、收集、讲读" },
+      { root: "mit", mean: "送出、发射" },
+      { root: "miss", mean: "送出、派遣" },
+      { root: "mov", mean: "移动" },
+      { root: "mot", mean: "移动、运动" },
+      { root: "pel", mean: "推、驱逐" },
+      { root: "puls", mean: "推、脉冲" },
+      { root: "pend", mean: "悬挂、称量、支付" },
+      { root: "pens", mean: "花费、称重" },
+      { root: "pon", mean: "放置" },
+      { root: "pos", mean: "放置、摆放" },
+      { root: "posit", mean: "放置、方位" },
+      { root: "sta", mean: "站立、保持" },
+      { root: "stat", mean: "站立、状态" },
+      { root: "stit", mean: "建立、确立" },
+      { root: "tend", mean: "伸展、趋向" },
+      { root: "tens", mean: "伸展、紧绷" },
+      { root: "vent", mean: "来、到达、事件" },
+      { root: "ven", mean: "来、来到" },
+      { root: "viv", mean: "活、生命" },
+      { root: "vit", mean: "生命、生机" },
+      { root: "mem", mean: "记忆、记住" },
+      { root: "oper", mean: "工作、操作" },
+      { root: "part", mean: "部分、分开" },
+      { root: "path", mean: "痛苦、情感" },
+      { root: "phil", mean: "爱、喜爱" },
+      { root: "phon", mean: "声音、话音" },
+      { root: "psych", mean: "心灵、精神" },
+      { root: "sci", mean: "知道、认识" },
+      { root: "sign", mean: "标记、记号" },
+      { root: "sol", mean: "独自、太阳" },
+      { root: "spir", mean: "呼吸、精神" },
+      { root: "tempor", mean: "时间、时期" },
+      { root: "termin", mean: "界限、终点" },
+      { root: "terr", mean: "土地、陆地" },
+      { root: "turb", mean: "混乱、搅动" },
+      { root: "urb", mean: "城市" },
+      { root: "vac", mean: "空、腾出" },
+      { root: "val", mean: "强壮、价值" },
+      { root: "vol", mean: "意志、意愿" },
+      { root: "volv", mean: "滚动、旋转" }
+    ];
+
+    let foundPrefix = null;
+    let remAfterPrefix = w;
+    for (let p of PREFIXES) {
+      if (w.startsWith(p.prefix) && w.length >= p.prefix.length + 3) {
+        foundPrefix = p;
+        remAfterPrefix = w.slice(p.prefix.length);
+        break;
+      }
+    }
+
+    let foundSuffix = null;
+    let remAfterSuffix = remAfterPrefix;
+    for (let s of SUFFIXES) {
+      if (remAfterPrefix.endsWith(s.suffix) && remAfterPrefix.length >= s.suffix.length + 2) {
+        foundSuffix = s;
+        remAfterSuffix = remAfterPrefix.slice(0, -s.suffix.length);
+        break;
+      }
+    }
+
+    let foundRoot = null;
+    for (let r of ROOTS) {
+      if (w.includes(r.root)) {
+        foundRoot = r;
+        break;
+      }
+    }
+
+    let pos = foundSuffix ? foundSuffix.pos : "n./v.";
+    let prefixStr = foundPrefix ? (foundPrefix.type + " (表“" + foundPrefix.mean + "”) ") : "无特殊前缀";
+    let suffixStr = foundSuffix ? (foundSuffix.type + " (" + foundSuffix.pos + " 后缀，表“" + foundSuffix.mean + "”) ") : "无特殊后缀";
+    let rootStr = foundRoot ? (foundRoot.root + " (核心词根，表“" + foundRoot.mean + "”) ") : ((remAfterSuffix || w) + " (核心词干)");
+
+    let logic = "";
+    if (foundPrefix && foundRoot && foundSuffix) {
+      logic = "前缀 " + foundPrefix.type + " + 词根 " + foundRoot.root + " + 后缀 " + foundSuffix.type + " 构成：以「" + foundRoot.mean + "」为核心，体现「" + foundPrefix.mean + "」及「" + foundSuffix.mean + "」之意。";
+    } else if (foundRoot && foundSuffix) {
+      logic = "词根 " + foundRoot.root + " (“" + foundRoot.mean + "”) 附加后缀 " + foundSuffix.type + " 衍生而成。";
+    } else if (foundPrefix && foundRoot) {
+      logic = "前缀 " + foundPrefix.type + " (“" + foundPrefix.mean + "”) 作用于词根 " + foundRoot.root + " (“" + foundRoot.mean + "”)。";
+    } else {
+      logic = "核心词干「" + (remAfterSuffix || w) + "」派生词。建议按自然拼读音节拆分记忆。";
+    }
+
+    return {
+      word: w,
+      phonetic: "/" + w + "/",
+      pos: pos,
+      meanings: "WFD 核心高频词汇",
+      prefix: prefixStr,
+      root: rootStr,
+      suffix: suffixStr,
+      logic: logic,
+      examTip: "⚠️ 建议在 PTE 考场听写时特别留意单复数与过去式词尾，必要时合理利用试词法则双保险。",
+      defaultQid: ""
+    };
+  }
+
+  // 3. 萤火虫真题自动来源追踪匹配
+  function findSourceForWord(word) {
+    const cleanW = word.toLowerCase().replace(/[^a-z]/g, "");
+    if (!cleanW) return null;
+    for (let q of QUESTIONS) {
+      const tokens = tokenize(q.sentence).map(cleanWord);
+      if (tokens.includes(cleanW) || tokens.some(t => areWordsEquivalent(t, cleanW) || isWordVariation(t, cleanW))) {
+        return {
+          qid: q.qid,
+          index: q.raw_index || q.index,
+          sentence: q.sentence,
+          translation: q.translation || ""
+        };
+      }
+    }
+    return null;
+  }
+
+  function highlightWordInSentence(sentence, targetWord) {
+    if (!sentence || !targetWord) return sentence || "";
+    try {
+      const cleanW = targetWord.toLowerCase().replace(/[^a-z]/g, "");
+      const regex = new RegExp("\b(" + cleanW + "[a-z]*)\b", "gi");
+      return sentence.replace(regex, '<mark class="vocab-mark">$1</mark>');
+    } catch(e) {
+      return sentence;
+    }
+  }
+
+  function speakWord(word) {
+    if (!window.speechSynthesis) {
+      alert("浏览器暂不支持发音朗读。");
+      return;
+    }
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(word);
+    u.rate = 0.88;
+    u.lang = "en-AU";
+    window.speechSynthesis.speak(u);
+  }
+
+  // 4. 收录生词核心逻辑
+  function addWordToVocab(rawWord, qid, sentence, translation, silent) {
+    const clean = rawWord.toLowerCase().replace(/[^a-z'-]/g, "").trim();
+    if (!clean || clean.length < 2) return null;
+
+    // 检查是否已收录
+    const existingIdx = practiceVocab.findIndex(v => v.word.toLowerCase() === clean);
+    if (existingIdx !== -1) {
+      if (!silent) {
+        showToast("「" + clean + "」已在生词本中，无需重复添加！");
+      }
+      return practiceVocab[existingIdx];
+    }
+
+    const etym = analyzeWordEtymology(clean);
+    let srcQid = qid || (etym ? etym.defaultQid : "");
+    let srcSentence = sentence || "";
+    let srcTrans = translation || "";
+    let srcIndex = "";
+
+    if (!srcSentence && srcQid) {
+      const matchedQ = QUESTIONS.find(q => String(q.qid) === String(srcQid));
+      if (matchedQ) {
+        srcSentence = matchedQ.sentence;
+        srcTrans = matchedQ.translation || "";
+        srcIndex = matchedQ.raw_index || matchedQ.index;
+      }
+    }
+
+    if (!srcSentence) {
+      const foundSrc = findSourceForWord(clean);
+      if (foundSrc) {
+        srcQid = foundSrc.qid;
+        srcSentence = foundSrc.sentence;
+        srcTrans = foundSrc.translation;
+        srcIndex = foundSrc.index;
+      }
+    }
+
+    const now = new Date();
+    const timeStr = now.getFullYear() + "/" + (now.getMonth() + 1) + "/" + now.getDate() + " " +
+                    String(now.getHours()).padStart(2, "0") + ":" + String(now.getMinutes()).padStart(2, "0");
+
+    const vocabItem = {
+      id: Date.now() + Math.floor(Math.random() * 1000),
+      word: clean,
+      phonetic: etym.phonetic || ("/" + clean + "/"),
+      pos: etym.pos || "n.",
+      meanings: etym.meanings || "核心词汇",
+      prefix: etym.prefix,
+      root: etym.root,
+      suffix: etym.suffix,
+      logic: etym.logic,
+      examTip: etym.examTip,
+      sourceQid: srcQid || "",
+      sourceIndex: srcIndex || "",
+      sourceSentence: srcSentence || "",
+      sourceTranslation: srcTrans || "",
+      mastered: false,
+      addedAt: timeStr
+    };
+
+    practiceVocab.unshift(vocabItem);
+
+    try {
+      localStorage.setItem("pte_wfd_vocab", JSON.stringify(practiceVocab));
+    } catch(e) {}
+
+    updateStats();
+    if (!silent) {
+      showToast("已成功收录「" + clean + "」至难词生词本！");
+    }
+
+    const vocabTabEl = document.getElementById("tab-vocab");
+    if (vocabTabEl && vocabTabEl.style.display !== "none") {
+      renderVocabView();
+    }
+
+    return vocabItem;
+  }
+
+  function quickAddWord(word, qid, btnEl) {
+    addWordToVocab(word, qid);
+    if (btnEl) {
+      btnEl.innerText = "✅已收录";
+      btnEl.style.background = "#dcfce7";
+      btnEl.style.color = "#15803d";
+      btnEl.style.borderColor = "#bbf7d0";
+      btnEl.disabled = true;
+    }
+  }
+
+  function quickAddWordChip(word, qid, btnEl) {
+    addWordToVocab(word, qid);
+    if (btnEl) {
+      btnEl.classList.add("added");
+      btnEl.innerText = "✅ " + word;
+    }
+  }
+
+  function addCustomWordFromInput() {
+    const input = document.getElementById("vocab-input-text");
+    if (!input) return;
+    const val = input.value.trim();
+    if (!val) {
+      alert("请输入要收录的英文生词！");
+      return;
+    }
+    addWordToVocab(val);
+    input.value = "";
+  }
+
+  function handleVocabInputEnter(e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      addCustomWordFromInput();
+    }
+  }
+
+  function importPresetVocab() {
+    const keys = Object.keys(WFD_PRESET_VOCAB_DB);
+    let addedCount = 0;
+    keys.forEach(k => {
+      const exists = practiceVocab.some(v => v.word.toLowerCase() === k.toLowerCase());
+      if (!exists) {
+        addWordToVocab(k, WFD_PRESET_VOCAB_DB[k].defaultQid, "", "", true);
+        addedCount++;
+      }
+    });
+    updateStats();
+    renderVocabView();
+    alert("🎉 成功导入 " + addedCount + " 个 WFD 高频核心难词！(已跳过先前已收录词汇)");
+  }
+
+  function setVocabFilter(type) {
+    currentVocabFilter = type;
+    document.querySelectorAll(".vocab-filter-btn").forEach(b => b.classList.remove("active"));
+    const actBtn = document.getElementById("filter-vocab-" + type);
+    if (actBtn) actBtn.classList.add("active");
+    renderVocabView();
+  }
+
+  function toggleVocabMastered(word) {
+    const item = practiceVocab.find(v => v.word.toLowerCase() === word.toLowerCase());
+    if (item) {
+      item.mastered = !item.mastered;
+      try {
+        localStorage.setItem("pte_wfd_vocab", JSON.stringify(practiceVocab));
+      } catch(e) {}
+      updateStats();
+      renderVocabView();
+    }
+  }
+
+  function deleteVocab(word) {
+    if (confirm("确定要从生词本中移除「" + word + "」吗？")) {
+      practiceVocab = practiceVocab.filter(v => v.word.toLowerCase() !== word.toLowerCase());
+      try {
+        localStorage.setItem("pte_wfd_vocab", JSON.stringify(practiceVocab));
+      } catch(e) {}
+      updateStats();
+      renderVocabView();
+    }
+  }
+
+  function clearVocab() {
+    if (confirm("确定要清空全部生词本收藏记录吗？")) {
+      practiceVocab = [];
+      try {
+        localStorage.removeItem("pte_wfd_vocab");
+      } catch(e) {}
+      updateStats();
+      renderVocabView();
+    }
+  }
+
+  function exportVocab() {
+    const data = {
+      title: "PTE WFD 核心难词生词本与词根词缀档案",
+      exportTime: new Date().toISOString(),
+      count: practiceVocab.length,
+      vocabList: practiceVocab
+    };
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "PTE_WFD_难词生词本_" + new Date().toISOString().slice(0, 10) + ".json";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function showToast(msg) {
+    let toast = document.getElementById("pte-toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "pte-toast";
+      toast.style.position = "fixed";
+      toast.style.bottom = "24px";
+      toast.style.right = "24px";
+      toast.style.background = "#1e1b4b";
+      toast.style.color = "#ffffff";
+      toast.style.padding = "10px 18px";
+      toast.style.borderRadius = "8px";
+      toast.style.boxShadow = "0 6px 16px rgba(0,0,0,0.2)";
+      toast.style.fontSize = "0.88rem";
+      toast.style.fontWeight = "600";
+      toast.style.zIndex = "9999";
+      toast.style.transition = "opacity 0.25s ease, transform 0.25s ease";
+      toast.style.pointerEvents = "none";
+      document.body.appendChild(toast);
+    }
+    toast.innerText = msg;
+    toast.style.opacity = "1";
+    toast.style.transform = "translateY(0)";
+    setTimeout(() => {
+      toast.style.opacity = "0";
+      toast.style.transform = "translateY(10px)";
+    }, 2400);
+  }
+
+  // 5. 渲染难词生词本界面
+  function renderVocabView() {
+    const container = document.getElementById("vocab-container");
+    if (!container) return;
+
+    let list = practiceVocab.slice();
+
+    if (currentVocabFilter === "pending") {
+      list = list.filter(v => !v.mastered);
+    } else if (currentVocabFilter === "mastered") {
+      list = list.filter(v => v.mastered);
+    }
+
+    const vocabSearchEl = document.getElementById("vocab-search");
+    const kw = (vocabSearchEl && vocabSearchEl.value ? vocabSearchEl.value : "").trim().toLowerCase();
+    if (kw) {
+      list = list.filter(v => {
+        return v.word.toLowerCase().includes(kw) ||
+               (v.meanings && v.meanings.toLowerCase().includes(kw)) ||
+               (v.root && v.root.toLowerCase().includes(kw)) ||
+               (v.prefix && v.prefix.toLowerCase().includes(kw)) ||
+               (v.suffix && v.suffix.toLowerCase().includes(kw)) ||
+               (v.sourceQid && String(v.sourceQid).includes(kw)) ||
+               (v.sourceSentence && v.sourceSentence.toLowerCase().includes(kw));
+      });
+    }
+
+    if (list.length === 0) {
+      if (practiceVocab.length === 0) {
+        container.innerHTML = `
+          <div style="text-align: center; padding: 48px 20px; background: #faf5ff; border: 1.5px dashed #d8b4fe; border-radius: 12px; margin-top: 10px;">
+            <div style="font-size: 2.2rem; margin-bottom: 10px;">📖</div>
+            <div style="font-weight: 700; color: #5b21b6; font-size: 1.1rem; margin-bottom: 6px;">你的难词生词本当前还是空的</div>
+            <p style="color: var(--text-muted); font-size: 0.88rem; max-width: 520px; margin: 0 auto 16px;">
+              在做题或自由批改时，点击遗漏词旁的「⭐记生词」或本句速记按钮即可一键收录；亦可在上方输入框手动输入收录，或一键导入官方高频核心难词库！
+            </p>
+            <button class="btn-submit" style="background: #7c3aed; padding: 9px 20px;" onclick="importPresetVocab()">✨ 一键导入 WFD 核心高频难词库 (40+词)</button>
+          </div>
+        `;
+      } else {
+        container.innerHTML = '<div style="text-align: center; padding: 36px; color: var(--text-muted);">未找到符合当前条件的生词记录。</div>';
+      }
+      return;
+    }
+
+    let html = "";
+    list.forEach(item => {
+      const isMastered = !!item.mastered;
+      html += '<div class="vocab-card ' + (isMastered ? 'mastered' : '') + '">';
+      
+      // Header
+      html += '<div class="vocab-header-row">';
+      html += '<div class="vocab-word-title">';
+      html += '<span class="vocab-word-text">' + item.word + '</span>';
+      if (item.phonetic) html += '<span class="vocab-phonetic">' + item.phonetic + '</span>';
+      if (item.pos) html += '<span class="vocab-pos">' + item.pos + '</span>';
+      html += '<button class="vocab-btn-speak" onclick="speakWord(&apos;' + item.word + '&apos;)">🔊 发音</button>';
+      html += '</div>';
+
+      html += '<div class="vocab-actions">';
+      if (isMastered) {
+        html += '<span class="status-tag status-perfect">✅ 已掌握</span>';
+        html += '<button class="nav-btn" style="font-size: 0.76rem; padding: 3px 8px;" onclick="toggleVocabMastered(&apos;' + item.word + '&apos;)">🔄 移回待攻克</button>';
+      } else {
+        html += '<span class="status-tag status-mistake">⏳ 待攻克</span>';
+        html += '<button class="nav-btn" style="font-size: 0.76rem; padding: 3px 8px; background: #ecfdf5; color: #047857; border-color: #a7f3d0;" onclick="toggleVocabMastered(&apos;' + item.word + '&apos;)">✅ 标为已掌握</button>';
+      }
+      html += '<button class="nav-btn" style="font-size: 0.76rem; padding: 3px 6px; color: #b91c1c;" onclick="deleteVocab(&apos;' + item.word + '&apos;)" title="删除本条">🗑️</button>';
+      html += '</div>';
+      html += '</div>'; // end vocab-header-row
+
+      // Meanings
+      html += '<div class="vocab-trans-box"><strong>中文释义:</strong> ' + item.meanings + '</div>';
+
+      // Etymology breakdown
+      html += '<div class="vocab-etym-box">';
+      html += '<div class="vocab-etym-title">🧩 词根词缀立体剖析:</div>';
+      html += '<div class="vocab-etym-tags">';
+      if (item.prefix) html += '<span class="etym-tag etym-prefix">前缀: ' + item.prefix + '</span>';
+      if (item.root) html += '<span class="etym-tag etym-root">词根: ' + item.root + '</span>';
+      if (item.suffix) html += '<span class="etym-tag etym-suffix">后缀: ' + item.suffix + '</span>';
+      html += '</div>';
+      if (item.logic) {
+        html += '<div class="vocab-etym-logic">💡 <strong>构词记忆</strong>: ' + item.logic + '</div>';
+      }
+      if (item.examTip) {
+        html += '<div class="vocab-exam-tip">' + item.examTip + '</div>';
+      }
+      html += '</div>'; // end vocab-etym-box
+
+      // Source question context
+      if (item.sourceSentence || item.sourceQid) {
+        const highlightedSentence = highlightWordInSentence(item.sourceSentence, item.word);
+        html += '<div class="vocab-src-box">';
+        html += '<div class="vocab-src-header">';
+        html += '<span class="vocab-src-title">📍 萤火虫真题出处: ' + (item.sourceIndex ? ('第 ' + item.sourceIndex + ' 题 ') : '') + '<span class="badge">#' + (item.sourceQid || '真题') + '</span></span>';
+        if (item.sourceQid) {
+          html += '<button class="nav-btn" style="font-size: 0.76rem; padding: 2px 8px; background: var(--primary); color: white; border: none; font-weight: 600;" onclick="goToPracticeByQid(&apos;' + item.sourceQid + '&apos;)">🎯 立即做这道原题 ↗</button>';
+        }
+        html += '</div>';
+        if (item.sourceSentence) {
+          html += '<div class="vocab-src-sent">“ ' + highlightedSentence + ' ”</div>';
+        }
+        if (item.sourceTranslation) {
+          html += '<div class="vocab-src-trans">' + item.sourceTranslation + '</div>';
+        }
+        html += '</div>'; // end vocab-src-box
+      }
+
+      html += '</div>'; // end vocab-card
+    });
+
+    container.innerHTML = html;
   }
 
   function init() {
