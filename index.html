@@ -200,21 +200,26 @@
   .sync-dot.syncing { background: #d97706; animation: syncPulse 1s infinite alternate; }
   /* 官方标准答案单词点击交互与词典弹窗 */
   .dict-clickable-word {
-    cursor: pointer;
+    cursor: pointer !important;
     padding: 1px 4px;
     margin: 0 1px;
     border-radius: 4px;
     transition: all 0.15s ease;
     display: inline-block;
+    vertical-align: baseline;
     color: inherit;
-    border-bottom: 1.5px dotted #93c5fd;
+    border-bottom: 1.5px dotted #6366f1;
+    user-select: text;
   }
   .dict-clickable-word:hover {
     background: #ede9fe;
     color: #6d28d9;
-    border-bottom-color: #6d28d9;
+    border-bottom: 1.5px solid #6d28d9;
     box-shadow: 0 2px 6px rgba(109, 40, 217, 0.16);
     transform: translateY(-1px);
+  }
+  .dict-clickable-word:active {
+    transform: scale(0.96);
   }
   .dict-hint-badge {
     display: inline-flex;
@@ -2687,7 +2692,8 @@
     if (!sentence || !targetWord) return sentence || "";
     try {
       const cleanW = targetWord.toLowerCase().replace(/[^a-z]/g, "");
-      const regex = new RegExp("\b(" + cleanW + "[a-z]*)\b", "gi");
+      if (!cleanW) return sentence;
+      const regex = new RegExp("\\b(" + cleanW + "[a-z]*)\\b", "gi");
       return sentence.replace(regex, '<mark class="vocab-mark">$1</mark>');
     } catch(e) {
       return sentence;
@@ -3028,17 +3034,30 @@
 
   function formatClickableSentence(sentence, qid) {
     if (!sentence) return "";
-    return sentence.replace(/([a-zA-Z0-9]+(?:'[a-zA-Z0-9]+)?)/g, function(match, word) {
+    return sentence.replace(/\b([a-zA-Z0-9]+(?:'[a-zA-Z0-9]+)?)\b/g, function(match, word) {
       const qAttr = qid ? (' data-qid="' + qid + '"') : '';
-      return '<span class="dict-clickable-word" data-word="' + word + '"' + qAttr + ' onclick="handleWordClick(this)" title="点击查「' + word + '」官方精释词典与词根词缀">' + word + '</span>';
+      return '<span class="dict-clickable-word" data-word="' + word + '"' + qAttr + ' onclick="handleWordClick(this); if (window.event) window.event.stopPropagation();" title="点击查「' + word + '」官方精释词典与词根词缀">' + word + '</span>';
     });
   }
 
+  let lastDictOpenTime = 0;
   function handleWordClick(el) {
+    if (!el) return;
+    const now = Date.now();
+    if (now - lastDictOpenTime < 100) return;
+    lastDictOpenTime = now;
     const rawWord = el.getAttribute("data-word") || el.innerText;
     const qid = el.getAttribute("data-qid") || "";
     openDictModal(rawWord, qid);
   }
+
+  // 全局单词点击委托监听 (双重保障，确保动态注入的官方答案单词 100% 能够响应点击)
+  document.addEventListener("click", function(e) {
+    const wordSpan = (e.target && e.target.closest) ? e.target.closest(".dict-clickable-word") : null;
+    if (wordSpan) {
+      handleWordClick(wordSpan);
+    }
+  });
 
   function openDictModal(rawWord, qid) {
     renderDictModalContent(rawWord, qid);
