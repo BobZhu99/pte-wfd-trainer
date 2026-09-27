@@ -94,6 +94,16 @@
     100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
   }
 
+  .btn-pause { background: #f8fafc; border: 1.5px solid #cbd5e1; color: #334155; padding: 9px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: all 0.15s ease; font-size: 0.9rem; }
+  .btn-pause:hover:not(:disabled) { background: #f1f5f9; border-color: #94a3b8; }
+  .btn-pause:disabled { opacity: 0.45; cursor: not-allowed; }
+  .btn-pause.is-paused { background: #ecfdf5 !important; color: #047857 !important; border-color: #86efac !important; box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2); }
+  .btn-pause.is-playing { background: #fffbeb !important; color: #b45309 !important; border-color: #fde68a !important; }
+
+  .btn-stop { background: #f8fafc; border: 1.5px solid #cbd5e1; color: #475569; padding: 9px 14px; border-radius: 8px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; transition: all 0.15s ease; font-size: 0.88rem; }
+  .btn-stop:hover:not(:disabled) { background: #fee2e2; color: #b91c1c; border-color: #fca5a5; }
+  .btn-stop:disabled { opacity: 0.45; cursor: not-allowed; }
+
   .progress-info { font-size: 0.86rem; color: var(--text-muted); display: flex; align-items: center; gap: 12px; }
   .time-text { font-family: monospace; font-weight: 700; color: #1e293b; }
 
@@ -186,9 +196,15 @@
     </div>
 
     <div class="action-bar">
-      <div style="display: flex; gap: 10px; align-items: center;">
+      <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
         <button class="btn-play-karaoke" id="btn-play-ra" onclick="toggleKaraokeRa()">
           <span id="ra-play-icon">▶</span> <span id="ra-play-label">开始卡拉OK导读</span>
+        </button>
+        <button class="btn-pause" id="btn-pause-ra" onclick="togglePauseRa()" disabled title="暂停/继续播放音频 (Alt+K / 空格键)">
+          <span id="ra-pause-icon">⏸</span> <span id="ra-pause-label">暂停</span>
+        </button>
+        <button class="btn-stop" id="btn-stop-ra" onclick="stopKaraokeRa()" disabled title="停止并重置到开头">
+          <span>⏹</span> <span>停止</span>
         </button>
         <button class="btn-record" id="btn-record-ra" onclick="toggleRecordRa()">
           <span>🎙️</span> <span id="ra-record-label">录音自测</span>
@@ -257,9 +273,15 @@
     </div>
 
     <div class="action-bar">
-      <div style="display: flex; gap: 10px; align-items: center;">
+      <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
         <button class="btn-play-karaoke" id="btn-play-rs" onclick="playRsAuthenticAudio()">
           <span id="rs-play-icon">🔊</span> <span id="rs-play-label">播放题干原声</span>
+        </button>
+        <button class="btn-pause" id="btn-pause-rs" onclick="togglePauseRs()" disabled title="暂停/继续播放音频 (Alt+K / 空格键)">
+          <span id="rs-pause-icon">⏸</span> <span id="rs-pause-label">暂停</span>
+        </button>
+        <button class="btn-stop" id="btn-stop-rs" onclick="stopKaraokeRs()" disabled title="停止并重置到开头">
+          <span>⏹</span> <span>停止</span>
         </button>
         <button class="btn-record" id="btn-record-rs" onclick="toggleRecordRs()">
           <span>🎙️</span> <span id="rs-record-label">录音复述</span>
@@ -331,9 +353,15 @@
     </div>
 
     <div class="action-bar">
-      <div style="display: flex; gap: 10px; align-items: center;">
+      <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
         <button class="btn-play-karaoke" id="btn-play-di" onclick="toggleKaraokeDi()">
           <span id="di-play-icon">▶</span> <span id="di-play-label">启动 25 秒卡拉OK领跑</span>
+        </button>
+        <button class="btn-pause" id="btn-pause-di" onclick="togglePauseDi()" disabled title="暂停/继续播放音频 (Alt+K / 空格键)">
+          <span id="di-pause-icon">⏸</span> <span id="di-pause-label">暂停</span>
+        </button>
+        <button class="btn-stop" id="btn-stop-di" onclick="stopKaraokeDi()" disabled title="停止并重置到开头">
+          <span>⏹</span> <span>停止</span>
         </button>
         <button class="btn-record" id="btn-record-di" onclick="toggleRecordDi()">
           <span>🎙️</span> <span id="di-record-label">实战录音</span>
@@ -427,28 +455,28 @@
     if (!clean) return 1.0;
 
     // 1. Currency ($130, $20, €50, etc.)
-    if (/^[$£€¥]\d+/.test(clean)) {
+    if (/^[$£€¥][0-9]+/.test(clean)) {
       const digits = clean.replace(/[^0-9]/g, '');
       return digits.length >= 3 ? 4.5 : 3.2;
     }
 
     // 2. Numbers with units: mm, cm, m, km, kg, %, ℃, °C
-    if (/\d+(mm|cm|km|kg|kilos|℃|°C|%)|\d+\s*%/i.test(clean)) {
+    if (/[0-9]+(mm|cm|km|kg|kilos|℃|°C|%)|[0-9]+\s*%/i.test(clean)) {
       return clean.includes('%') ? 3.6 : 4.5;
     }
 
     // 3. 4-digit years (e.g. 1839, 1718, 1996, 2008, 2016)
-    if (/^(1[7-9]\d\d|20\d\d)$/.test(clean)) {
+    if (/^(1[7-9][0-9][0-9]|20[0-9][0-9])$/.test(clean)) {
       return 5.2; // "eighteen thirty-nine", "nineteen ninety-six" (gives ample time)
     }
 
     // 4. Decimal numbers (e.g. 1.6, 2.2, 14.8, 1.9, 1.36)
-    if (/^\d+\.\d+$/.test(clean)) {
+    if (/^[0-9]+\.[0-9]+$/.test(clean)) {
       return 4.2; // "fourteen point eight", "one point six"
     }
 
     // 5. Large multi-digit numbers (e.g. 15,000, 100,000, 1099, 215)
-    if (/^\d[\d,]*$/.test(clean)) {
+    if (/^[0-9][0-9,]*$/.test(clean)) {
       const numOnly = clean.replace(/,/g, '');
       if (numOnly.length >= 5) return 5.5; // "fifteen thousand"
       if (numOnly.length >= 4) return 4.8;
@@ -565,25 +593,167 @@
     updateWpmDisplay();
   }
 
-  function stopCurrentSession(keepRecording = false) {
-    isPlaying = false;
-    if (activeTimer) { clearInterval(activeTimer); clearTimeout(activeTimer); activeTimer = null; }
-    if (animFrameId) { cancelAnimationFrame(animFrameId); animFrameId = null; }
-    if (activeAudio) { activeAudio.pause(); activeAudio = null; }
-    
-    // Reset play buttons
-    ["ra", "rs", "di"].forEach(t => {
-      const btn = document.getElementById("btn-play-" + t);
-      const icon = document.getElementById(t + "-play-icon");
-      const label = document.getElementById(t + "-play-label");
-      if (btn) {
-        btn.classList.remove("running");
-        icon.innerText = (t === "rs" ? "🔊" : "▶");
+  let isPaused = false;
+  let activeSyncLoopFn = null;
+  let pausedVisualResumeFn = null;
+  let sessionPauseTime = 0;
+  let sessionTotalPausedMs = 0;
+
+  function setAudioUIState(t, state) {
+    const btnPlay = document.getElementById("btn-play-" + t);
+    const btnPause = document.getElementById("btn-pause-" + t);
+    const btnStop = document.getElementById("btn-stop-" + t);
+    const icon = document.getElementById(t + "-play-icon");
+    const label = document.getElementById(t + "-play-label");
+    const pauseIcon = document.getElementById(t + "-pause-icon");
+    const pauseLabel = document.getElementById(t + "-pause-label");
+
+    if (!btnPlay) return;
+
+    if (state === "playing") {
+      btnPlay.classList.add("running");
+      if (icon) icon.innerText = "🔄";
+      if (label) {
+        if (t === "ra") label.innerText = "重新导读";
+        else if (t === "rs") label.innerText = "重新播放";
+        else if (t === "di") label.innerText = "重新领跑";
+      }
+
+      if (btnPause) {
+        btnPause.disabled = false;
+        btnPause.className = "btn-pause is-playing";
+        if (pauseIcon) pauseIcon.innerText = "⏸";
+        if (pauseLabel) pauseLabel.innerText = "暂停";
+        btnPause.title = "暂停播放 (Alt+K / 空格键)";
+      }
+      if (btnStop) btnStop.disabled = false;
+
+    } else if (state === "paused") {
+      btnPlay.classList.remove("running");
+      if (icon) icon.innerText = "▶";
+      if (label) {
+        if (t === "ra") label.innerText = "继续导读";
+        else if (t === "rs") label.innerText = "继续播放";
+        else if (t === "di") label.innerText = "继续领跑";
+      }
+
+      if (btnPause) {
+        btnPause.disabled = false;
+        btnPause.className = "btn-pause is-paused";
+        if (pauseIcon) pauseIcon.innerText = "▶";
+        if (pauseLabel) pauseLabel.innerText = "继续播放";
+        btnPause.title = "继续播放 (Alt+K / 空格键)";
+      }
+      if (btnStop) btnStop.disabled = false;
+
+    } else { // stopped
+      btnPlay.classList.remove("running");
+      if (icon) icon.innerText = (t === "rs" ? "🔊" : "▶");
+      if (label) {
         if (t === "ra") label.innerText = "开始卡拉OK导读";
         else if (t === "rs") label.innerText = "播放题干原声";
         else if (t === "di") label.innerText = "启动 25 秒卡拉OK领跑";
       }
-    });
+
+      if (btnPause) {
+        btnPause.disabled = true;
+        btnPause.className = "btn-pause";
+        if (pauseIcon) pauseIcon.innerText = "⏸";
+        if (pauseLabel) pauseLabel.innerText = "暂停";
+        btnPause.title = "暂停播放 (Alt+K / 空格键)";
+      }
+      if (btnStop) btnStop.disabled = true;
+    }
+  }
+
+  function pauseCurrentSession() {
+    if (!isPlaying || isPaused) return;
+    isPaused = true;
+    sessionPauseTime = performance.now();
+
+    if (activeAudio) {
+      try { activeAudio.pause(); } catch(e) {}
+    }
+    if (animFrameId) {
+      cancelAnimationFrame(animFrameId);
+      animFrameId = null;
+    }
+    if (activeTimer) {
+      clearTimeout(activeTimer);
+      activeTimer = null;
+    }
+
+    setAudioUIState(currentTab, "paused");
+  }
+
+  function resumeCurrentSession() {
+    if (!isPlaying || !isPaused) return;
+    isPaused = false;
+    if (sessionPauseTime > 0) {
+      sessionTotalPausedMs += (performance.now() - sessionPauseTime);
+      sessionPauseTime = 0;
+    }
+
+    setAudioUIState(currentTab, "playing");
+
+    if (activeAudio) {
+      activeAudio.play().then(() => {
+        if (typeof activeSyncLoopFn === "function") {
+          animFrameId = requestAnimationFrame(activeSyncLoopFn);
+        }
+      }).catch(err => {
+        console.warn("Resume audio playback failed:", err);
+      });
+    } else if (typeof pausedVisualResumeFn === "function") {
+      pausedVisualResumeFn();
+    }
+  }
+
+  function togglePauseRa() {
+    if (currentTab !== "ra") switchTab("ra");
+    if (isPaused) resumeCurrentSession();
+    else if (isPlaying) pauseCurrentSession();
+    else toggleKaraokeRa();
+  }
+
+  function togglePauseRs() {
+    if (currentTab !== "rs") switchTab("rs");
+    if (isPaused) resumeCurrentSession();
+    else if (isPlaying) pauseCurrentSession();
+    else playRsAuthenticAudio();
+  }
+
+  function togglePauseDi() {
+    if (currentTab !== "di") switchTab("di");
+    if (isPaused) resumeCurrentSession();
+    else if (isPlaying) pauseCurrentSession();
+    else toggleKaraokeDi();
+  }
+
+  function stopKaraokeRa() { stopCurrentSession(); renderRaStage(); }
+  function stopKaraokeRs() { stopCurrentSession(); renderRsStage(); }
+  function stopKaraokeDi() { stopCurrentSession(); renderDiStage(); }
+
+  function stopCurrentSession(keepRecording = false) {
+    isPlaying = false;
+    isPaused = false;
+    activeSyncLoopFn = null;
+    pausedVisualResumeFn = null;
+    sessionPauseTime = 0;
+    sessionTotalPausedMs = 0;
+
+    if (activeTimer) { clearInterval(activeTimer); clearTimeout(activeTimer); activeTimer = null; }
+    if (animFrameId) { cancelAnimationFrame(animFrameId); animFrameId = null; }
+    if (activeAudio) {
+      try {
+        activeAudio.pause();
+        activeAudio.currentTime = 0;
+      } catch(e) {}
+      activeAudio = null;
+    }
+    
+    // Reset play, pause, stop buttons across all tabs
+    ["ra", "rs", "di"].forEach(t => setAudioUIState(t, "stopped"));
 
     if (!keepRecording && isRecording) stopRecording();
   }
@@ -642,11 +812,15 @@
   function startKaraokeSession(stageId, progressId, words, targetObj, onProgress, onFinish, startWordIdx = 0) {
     stopCurrentSession(true);
     isPlaying = true;
+    isPaused = false;
+    sessionTotalPausedMs = 0;
+    sessionPauseTime = 0;
 
     activeStageId = stageId;
     activeProgressId = progressId;
     currentWords = words;
     onProgressCb = onProgress;
+    setAudioUIState(currentTab, "playing");
 
     const baseWordSec = (60 / currentWpm);
     const totalEstSec = words.length * baseWordSec;
@@ -710,7 +884,7 @@
 
       // Synchronize using requestAnimationFrame with 0.04s lead compensation
       function syncLoop() {
-        if (!isPlaying || !activeAudio) return;
+        if (!isPlaying || isPaused || !activeAudio) return;
         const curT = activeAudio.currentTime + 0.04;
         const totalT = activeAudio.duration || expectedAudioDur || 1;
 
@@ -751,6 +925,7 @@
 
         animFrameId = requestAnimationFrame(syncLoop);
       }
+      activeSyncLoopFn = syncLoop;
       animFrameId = requestAnimationFrame(syncLoop);
 
     } else {
@@ -759,8 +934,8 @@
       const startT = performance.now();
 
       function stepVisual() {
-        if (!isPlaying || wordIdx >= words.length) {
-          if (isPlaying && wordIdx >= words.length) {
+        if (!isPlaying || isPaused || wordIdx >= words.length) {
+          if (isPlaying && !isPaused && wordIdx >= words.length) {
             const prog = document.getElementById(progressId);
             if (prog) prog.style.width = "100%";
             setTimeout(() => { stopCurrentSession(false); if (onFinish) onFinish(); }, 300);
@@ -784,7 +959,7 @@
           setTimeout(() => { if (breathEl) breathEl.classList.remove("show"); }, 250);
         }
 
-        const curT = (performance.now() - startT) / 1000;
+        const curT = (performance.now() - startT - sessionTotalPausedMs) / 1000;
         if (onProgress) onProgress(wordIdx + 1, words.length, curT, totalEstSec);
 
         const pct = ((wordIdx + 1) / words.length) * 100;
@@ -796,6 +971,7 @@
         wordIdx++;
         activeTimer = setTimeout(stepVisual, durMs + pauseMs);
       }
+      pausedVisualResumeFn = stepVisual;
       stepVisual();
     }
   }
@@ -829,23 +1005,21 @@
     if (isPlaying && activeAudio) {
       try {
         activeAudio.currentTime = seekTime;
-        if (activeAudio.paused) activeAudio.play().catch(()=>{});
+        if (!isPaused && activeAudio.paused) activeAudio.play().catch(()=>{});
       } catch(e) {}
+    } else if (isPaused) {
+      if (activeAudio) {
+        try { activeAudio.currentTime = seekTime; } catch(e) {}
+      }
     } else {
       // Stopped: start session directly positioned at clicked wordIdx
       if (tab === "ra") {
-        document.getElementById("btn-play-ra").classList.add("running");
-        document.getElementById("ra-play-icon").innerText = "⏹";
-        document.getElementById("ra-play-label").innerText = "停止导读";
         startKaraokeSession("ra-stage", "ra-progress", words, q, (curr, total, curT, totalT) => {
           document.getElementById("ra-word-prog").innerText = curr + " / " + total;
           document.getElementById("ra-time-elapsed").innerText = (curT || 0).toFixed(1) + "s";
           document.getElementById("ra-time-total").innerText = (totalT || 0).toFixed(1) + "s";
         }, () => {}, wordIdx);
       } else if (tab === "rs") {
-        document.getElementById("btn-play-rs").classList.add("running");
-        document.getElementById("rs-play-icon").innerText = "⏹";
-        document.getElementById("rs-play-label").innerText = "停止复述";
         updateRsMaskVisual();
         const sel = document.getElementById("rs-voice-select");
         const audioUrl = (sel && sel.value) ? sel.value : q.audio_url;
@@ -859,12 +1033,9 @@
           document.getElementById("rs-word-prog").innerText = curr + " / " + total;
         }, () => {}, wordIdx);
       } else if (tab === "di") {
-        document.getElementById("btn-play-di").classList.add("running");
-        document.getElementById("di-play-icon").innerText = "⏹";
-        document.getElementById("di-play-label").innerText = "停止领跑";
         const startT = performance.now();
         startKaraokeSession("di-stage", "di-progress", words, q, (curr, total, curT, totalT) => {
-          const elap = (curT !== undefined) ? curT : ((performance.now() - startT) / 1000);
+          const elap = (curT !== undefined) ? curT : ((performance.now() - startT - sessionTotalPausedMs) / 1000);
           const remain = Math.max(0, 25 - elap).toFixed(1);
           document.getElementById("di-timer").innerText = remain + "s";
           const segIdx = Math.min(3, Math.floor(elap / 6.25));
@@ -925,16 +1096,15 @@
   }
 
   function toggleKaraokeRa() {
+    if (isPaused) {
+      resumeCurrentSession();
+      return;
+    }
     if (isPlaying) {
       stopCurrentSession();
-      return;
     }
     const q = RA_DATA[raIdx];
     const words = q.text.split(/\s+/).filter(Boolean);
-
-    document.getElementById("btn-play-ra").classList.add("running");
-    document.getElementById("ra-play-icon").innerText = "⏹";
-    document.getElementById("ra-play-label").innerText = "停止导读";
 
     startKaraokeSession(
       "ra-stage",
@@ -950,9 +1120,9 @@
     );
   }
 
-  function prevRa() { raIdx = (raIdx - 1 + RA_DATA.length) % RA_DATA.length; renderRaStage(); }
-  function nextRa() { raIdx = (raIdx + 1) % RA_DATA.length; renderRaStage(); }
-  function randomRa() { raIdx = Math.floor(Math.random() * RA_DATA.length); renderRaStage(); }
+  function prevRa() { stopCurrentSession(); raIdx = (raIdx - 1 + RA_DATA.length) % RA_DATA.length; renderRaStage(); }
+  function nextRa() { stopCurrentSession(); raIdx = (raIdx + 1) % RA_DATA.length; renderRaStage(); }
+  function randomRa() { stopCurrentSession(); raIdx = Math.floor(Math.random() * RA_DATA.length); renderRaStage(); }
   function customRaPrompt() {
     const text = prompt("请粘贴你想练习朗读的英文段落 (单词数建议 50~80 词):");
     if (text && text.trim().length > 10) {
@@ -1058,6 +1228,13 @@
   }
 
   function playRsAuthenticAudio() {
+    if (isPaused) {
+      resumeCurrentSession();
+      return;
+    }
+    if (isPlaying) {
+      stopCurrentSession();
+    }
     const q = RS_DATA[rsIdx];
     let audioUrl = q.audio_url;
     const sel = document.getElementById("rs-voice-select");
@@ -1084,12 +1261,15 @@
     } else {
       // Exam Mode: text blurred -> audio ends -> beep -> guide repetition (keep hidden if rsMasked!)
       stopCurrentSession();
+      isPlaying = true;
+      isPaused = false;
+      setAudioUIState("rs", "playing");
       activeAudio = new Audio(audioUrl);
       activeAudio.playbackRate = currentWpm / 130;
-      activeAudio.play();
+      activeAudio.play().catch(e => console.warn(e));
       activeAudio.onended = () => {
         playTick(true);
-        setTimeout(() => {
+        activeTimer = setTimeout(() => {
           updateRsMaskVisual();
           toggleKaraokeRs();
         }, 600);
@@ -1098,16 +1278,15 @@
   }
 
   function toggleKaraokeRs() {
+    if (isPaused) {
+      resumeCurrentSession();
+      return;
+    }
     if (isPlaying) {
       stopCurrentSession();
-      return;
     }
     const q = RS_DATA[rsIdx];
     const words = q.sentence.split(/\s+/).filter(Boolean);
-
-    document.getElementById("btn-play-rs").classList.add("running");
-    document.getElementById("rs-play-icon").innerText = "⏹";
-    document.getElementById("rs-play-label").innerText = "停止复述";
 
     updateRsMaskVisual();
     startKaraokeSession("rs-stage", "rs-progress", words, null, (curr, total) => {
@@ -1115,9 +1294,9 @@
     });
   }
 
-  function prevRs() { rsIdx = (rsIdx - 1 + RS_DATA.length) % RS_DATA.length; renderRsStage(); }
-  function nextRs() { rsIdx = (rsIdx + 1) % RS_DATA.length; renderRsStage(); }
-  function randomRs() { rsIdx = Math.floor(Math.random() * RS_DATA.length); renderRsStage(); }
+  function prevRs() { stopCurrentSession(); rsIdx = (rsIdx - 1 + RS_DATA.length) % RS_DATA.length; renderRsStage(); }
+  function nextRs() { stopCurrentSession(); rsIdx = (rsIdx + 1) % RS_DATA.length; renderRsStage(); }
+  function randomRs() { stopCurrentSession(); rsIdx = Math.floor(Math.random() * RS_DATA.length); renderRsStage(); }
   function changeRsVoice() { playRsAuthenticAudio(); }
   function toggleRsMask() {
     rsMasked = !rsMasked;
@@ -1203,16 +1382,15 @@
   }
 
   function toggleKaraokeDi() {
+    if (isPaused) {
+      resumeCurrentSession();
+      return;
+    }
     if (isPlaying) {
       stopCurrentSession();
-      return;
     }
     const q = DI_DATA[diIdx];
     const words = q.text.split(/\s+/).filter(Boolean);
-
-    document.getElementById("btn-play-di").classList.add("running");
-    document.getElementById("di-play-icon").innerText = "⏹";
-    document.getElementById("di-play-label").innerText = "停止领跑";
 
     const startT = performance.now();
     startKaraokeSession(
@@ -1221,7 +1399,7 @@
       words,
       q,
       (curr, total, curT, totalT) => {
-        const elap = (curT !== undefined) ? curT : ((performance.now() - startT) / 1000);
+        const elap = (curT !== undefined) ? curT : ((performance.now() - startT - sessionTotalPausedMs) / 1000);
         const remain = Math.max(0, 25 - elap).toFixed(1);
         document.getElementById("di-timer").innerText = remain + "s";
 
@@ -1238,9 +1416,9 @@
     );
   }
 
-  function prevDi() { diIdx = (diIdx - 1 + DI_DATA.length) % DI_DATA.length; renderDiStage(); }
-  function nextDi() { diIdx = (diIdx + 1) % DI_DATA.length; renderDiStage(); }
-  function randomDi() { diIdx = Math.floor(Math.random() * DI_DATA.length); renderDiStage(); }
+  function prevDi() { stopCurrentSession(); diIdx = (diIdx - 1 + DI_DATA.length) % DI_DATA.length; renderDiStage(); }
+  function nextDi() { stopCurrentSession(); diIdx = (diIdx + 1) % DI_DATA.length; renderDiStage(); }
+  function randomDi() { stopCurrentSession(); diIdx = Math.floor(Math.random() * DI_DATA.length); renderDiStage(); }
 
   // =========================================================================
   // AUDIO RECORDING (MediaRecorder)
@@ -1313,15 +1491,30 @@
   function toggleRecordRs() { toggleRecord("rs"); }
   function toggleRecordDi() { toggleRecord("di"); }
 
-  // Keyboard shortcut: Space to toggle karaoke play
+  // Keyboard shortcut: Space / Alt+K to toggle play/pause, Alt+P to play
   document.addEventListener("keydown", (e) => {
-    if (e.code === "Space" && e.target.tagName !== "INPUT" && e.target.tagName !== "TEXTAREA") {
+    if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA" || e.target.isContentEditable) {
+      return;
+    }
+    if (e.code === "Space") {
+      e.preventDefault();
+      togglePauseCurrentTab();
+    } else if (e.altKey && (e.key === "k" || e.key === "K")) {
+      e.preventDefault();
+      togglePauseCurrentTab();
+    } else if (e.altKey && (e.key === "p" || e.key === "P")) {
       e.preventDefault();
       if (currentTab === "ra") toggleKaraokeRa();
-      else if (currentTab === "rs") toggleKaraokeRs();
+      else if (currentTab === "rs") playRsAuthenticAudio();
       else if (currentTab === "di") toggleKaraokeDi();
     }
   });
+
+  function togglePauseCurrentTab() {
+    if (currentTab === "ra") togglePauseRa();
+    else if (currentTab === "rs") togglePauseRs();
+    else if (currentTab === "di") togglePauseDi();
+  }
 
   // Init
   function init() {
