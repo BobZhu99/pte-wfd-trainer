@@ -198,7 +198,37 @@
   .sync-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #94a3b8; transition: background-color 0.2s; }
   .sync-dot.synced { background: #16a34a; box-shadow: 0 0 6px rgba(22, 163, 74, 0.5); }
   .sync-dot.syncing { background: #d97706; animation: syncPulse 1s infinite alternate; }
-  @keyframes syncPulse { from { opacity: 0.4; } to { opacity: 1; } }
+  /* 官方标准答案单词点击交互与词典弹窗 */
+  .dict-clickable-word {
+    cursor: pointer;
+    padding: 1px 4px;
+    margin: 0 1px;
+    border-radius: 4px;
+    transition: all 0.15s ease;
+    display: inline-block;
+    color: inherit;
+    border-bottom: 1.5px dotted #93c5fd;
+  }
+  .dict-clickable-word:hover {
+    background: #ede9fe;
+    color: #6d28d9;
+    border-bottom-color: #6d28d9;
+    box-shadow: 0 2px 6px rgba(109, 40, 217, 0.16);
+    transform: translateY(-1px);
+  }
+  .dict-hint-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.74rem;
+    color: #4338ca;
+    background: #eef2ff;
+    border: 1px solid #c7d2fe;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    font-weight: 500;
+    user-select: none;
+  }
 
 </style>
 </head>
@@ -312,9 +342,13 @@
       <button class="nav-btn" style="margin-left: auto;" onclick="toggleAnswerPreview()">👁️ 查看/隐藏答案与翻译</button>
     </div>
 
-    <div id="answer-preview-box" style="display: none; background: #f1f5f9; padding: 12px 14px; border-radius: 6px; margin-bottom: 12px; font-size: 0.95rem; color: #334155;">
-      <div id="preview-sentence" style="font-weight: 600; margin-bottom: 4px;"></div>
-      <div id="preview-translation" style="color: #64748b; font-size: 0.88rem;"></div>
+    <div id="answer-preview-box" style="display: none; background: #f1f5f9; padding: 12px 14px; border-radius: 8px; margin-bottom: 12px; font-size: 0.95rem; color: #334155; border: 1px solid #cbd5e1;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 4px;">
+        <span style="font-weight: 700; font-size: 0.84rem; color: #475569;">官方标准答案:</span>
+        <span class="dict-hint-badge" title="点击句子中的任意单词可立即查看精释词典与词根词缀">📖 点击单词查词典</span>
+      </div>
+      <div id="preview-sentence" style="font-weight: 600; margin-bottom: 4px; line-height: 1.6;"></div>
+      <div id="preview-translation" style="color: #64748b; font-size: 0.88rem; margin-top: 4px;"></div>
     </div>
 
     <form spellcheck="false" autocomplete="off" autocorrect="off" onsubmit="return false;" style="margin: 0; padding: 0;">
@@ -833,9 +867,14 @@
     html += '<span class="score-badge">第 ' + (currentIndex + 1) + ' 题 (原序#' + origIdx + ' · #' + res.targetItem.qid + '): ' + res.score + ' / ' + res.total + ' 分</span>';
     html += '<span class="pct-badge ' + pctClass + '">正确率: ' + res.pct + '%</span>';
     html += '</div>';
-    html += '<div class="sentence-display"><strong>官方标准答案:</strong><br>' + res.targetItem.sentence;
+    html += '<div class="sentence-display">';
+    html += '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 4px;">';
+    html += '<strong>官方标准答案:</strong>';
+    html += '<span class="dict-hint-badge" title="点击句子中的任意单词可立即查看官方精释词典与词根词缀">📖 点击单词进入词典</span>';
+    html += '</div>';
+    html += '<div style="line-height: 1.6; font-size: 1.05rem;">' + formatClickableSentence(res.targetItem.sentence, res.targetItem.qid) + '</div>';
     if (res.targetItem.translation) {
-      html += '<div style="color: #64748b; font-size: 0.88rem; margin-top: 4px;">' + res.targetItem.translation + '</div>';
+      html += '<div style="color: #64748b; font-size: 0.88rem; margin-top: 6px;">' + res.targetItem.translation + '</div>';
     }
     html += '</div>';
     html += '<div class="details-section">';
@@ -1031,7 +1070,7 @@
       html += '</div>';
       html += '</div>';
 
-      html += '<div class="mistake-sentence">' + (q.sentence || s.sentence) + '</div>';
+      html += '<div class="mistake-sentence">' + formatClickableSentence(q.sentence || s.sentence, qid) + '</div>';
       if (s.translation || q.translation) {
         html += '<div style="color: #64748b; font-size: 0.85rem; margin-bottom: 8px;">' + (q.translation || s.translation) + '</div>';
       }
@@ -1081,7 +1120,7 @@
       html += '</div>';
 
       html += '<div style="font-size: 0.92rem; margin-bottom: 4px;"><strong>你的作答:</strong> <span style="font-family: monospace; color: #1e293b;">' + log.userInput + '</span></div>';
-      html += '<div style="font-size: 0.88rem; color: #64748b; margin-bottom: 6px;"><strong>标准原句:</strong> ' + log.sentence + '</div>';
+      html += '<div style="font-size: 0.88rem; color: #64748b; margin-bottom: 6px;"><strong>标准原句:</strong> ' + formatClickableSentence(log.sentence, log.qid) + '</div>';
 
       if (!log.isPerfect) {
         html += '<div class="tag-group" style="margin-top: 6px;">';
@@ -1253,7 +1292,7 @@
     
     const previewBox = document.getElementById("answer-preview-box");
     previewBox.style.display = "none";
-    document.getElementById("preview-sentence").innerText = q.sentence;
+    document.getElementById("preview-sentence").innerHTML = formatClickableSentence(q.sentence, q.qid);
     document.getElementById("preview-translation").innerText = q.translation || "";
     
     const resBox = document.getElementById("practice-result");
@@ -1745,8 +1784,13 @@
     if (countAllEl) countAllEl.innerText = QUESTIONS.length;
   }
 
-  // 快捷键: Alt + P 播放/重播, Alt + K 暂停/继续, Alt + Right 下一题, Alt + Left 上一题
+  // 快捷键: Alt + P 播放/重播, Alt + K 暂停/继续, Alt + Right 下一题, Alt + Left 上一题, Escape 关闭弹窗
   document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+      closeDictModal();
+      closeSyncModal();
+      return;
+    }
     if (e.altKey && e.key.toLowerCase() === "p") {
       e.preventDefault();
       playAudioCurrent();
@@ -2979,6 +3023,244 @@
 
 
   // ==========================================
+  // 官方标准答案单词点击交互与精释词典引擎
+  // ==========================================
+
+  function formatClickableSentence(sentence, qid) {
+    if (!sentence) return "";
+    return sentence.replace(/([a-zA-Z0-9]+(?:'[a-zA-Z0-9]+)?)/g, function(match, word) {
+      const qAttr = qid ? (' data-qid="' + qid + '"') : '';
+      return '<span class="dict-clickable-word" data-word="' + word + '"' + qAttr + ' onclick="handleWordClick(this)" title="点击查「' + word + '」官方精释词典与词根词缀">' + word + '</span>';
+    });
+  }
+
+  function handleWordClick(el) {
+    const rawWord = el.getAttribute("data-word") || el.innerText;
+    const qid = el.getAttribute("data-qid") || "";
+    openDictModal(rawWord, qid);
+  }
+
+  function openDictModal(rawWord, qid) {
+    renderDictModalContent(rawWord, qid);
+    const modal = document.getElementById("dict-modal");
+    if (modal) modal.classList.add("show");
+  }
+
+  function closeDictModal() {
+    const modal = document.getElementById("dict-modal");
+    if (modal) modal.classList.remove("show");
+  }
+
+  function handleDictModalClick(e) {
+    if (e.target && e.target.id === "dict-modal") {
+      closeDictModal();
+    }
+  }
+
+  function renderDictModalContent(rawCleanWord, qid) {
+    const clean = cleanWord(rawCleanWord);
+    if (!clean) return;
+
+    let baseW = clean;
+    if (clean.endsWith("ies")) baseW = clean.slice(0, -3) + "y";
+    else if (clean.endsWith("es")) baseW = clean.slice(0, -2);
+    else if (clean.endsWith("s")) baseW = clean.slice(0, -1);
+
+    let dictEntry = (typeof WFD_OFFLINE_DICTIONARY !== "undefined") ? (
+      WFD_OFFLINE_DICTIONARY[clean] ||
+      WFD_OFFLINE_DICTIONARY[baseW] ||
+      WFD_OFFLINE_DICTIONARY[clean + "s"] ||
+      WFD_OFFLINE_DICTIONARY[clean + "es"] ||
+      null
+    ) : null;
+
+    const etym = analyzeWordEtymology(clean);
+
+    let srcQid = qid || (etym ? etym.defaultQid : "");
+    let srcSentence = "";
+    let srcTrans = "";
+    let srcIndex = "";
+
+    if (srcQid) {
+      const matchedQ = QUESTIONS.find(q => String(q.qid) === String(srcQid));
+      if (matchedQ) {
+        srcSentence = matchedQ.sentence;
+        srcTrans = matchedQ.translation || "";
+        srcIndex = matchedQ.raw_index || matchedQ.index;
+      }
+    }
+    if (!srcSentence) {
+      const foundSrc = findSourceForWord(clean);
+      if (foundSrc) {
+        srcQid = foundSrc.qid;
+        srcSentence = foundSrc.sentence;
+        srcTrans = foundSrc.translation;
+        srcIndex = foundSrc.index;
+      }
+    }
+
+    const vocabItem = practiceVocab.find(v => v.word.toLowerCase() === clean);
+    const isAdded = !!vocabItem;
+    const isMastered = vocabItem ? !!vocabItem.mastered : false;
+
+    let phonetic = (dictEntry && dictEntry.phonetic) ? dictEntry.phonetic : ((etym && etym.phonetic) ? etym.phonetic : ("/" + clean + "/"));
+    let pos = (dictEntry && dictEntry.pos) ? dictEntry.pos : ((etym && etym.pos) ? etym.pos : "");
+    let meanings = (dictEntry && dictEntry.trans) ? dictEntry.trans : ((etym && etym.meanings && !etym.meanings.includes("获取中")) ? etym.meanings : "");
+
+    let html = '';
+    // 1. Header
+    html += '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px;">';
+    html += '  <div style="display: flex; align-items: center; gap: 8px;">';
+    html += '    <span style="font-size: 1.4rem;">📖</span>';
+    html += '    <div>';
+    html += '      <h2 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin: 0;">PTE 官方真题精释词典</h2>';
+    html += '      <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">精准释义 · 词根词缀立体剖析 · 考场易错陷阱 · 真题语境出处</p>';
+    html += '    </div>';
+    html += '  </div>';
+    html += '  <button class="nav-btn" onclick="closeDictModal()" style="font-size: 1.1rem; line-height: 1; padding: 4px 10px; cursor: pointer; border-radius: 6px;">✕</button>';
+    html += '</div>';
+
+    // 2. Word title row
+    html += '<div style="background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 10px; padding: 14px 16px; margin-bottom: 14px;">';
+    html += '  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 8px;">';
+    html += '    <div style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;">';
+    html += '      <span style="font-size: 1.6rem; font-weight: 800; color: #6d28d9; letter-spacing: -0.01em;">' + clean + '</span>';
+    if (phonetic) {
+      html += '    <span style="font-size: 0.95rem; color: var(--text-muted); font-style: italic;">' + phonetic + '</span>';
+    }
+    if (pos) {
+      html += '    <span class="vocab-pos">' + pos + '</span>';
+    }
+    html += '      <button class="vocab-btn-speak" onclick="speakWord(&apos;' + clean + '&apos;)">🔊 发音</button>';
+    html += '    </div>';
+    html += '    <div>';
+    if (isAdded) {
+      html += isMastered ? '<span class="status-tag status-perfect">✅ 生词本已掌握</span>' : '<span class="status-tag status-tried">⏳ 生词本待攻克</span>';
+    } else {
+      html += '      <span class="status-tag" style="background: #f1f5f9; color: #64748b;">未收录</span>';
+    }
+    html += '    </div>';
+    html += '  </div>';
+
+    // 3. Meanings
+    html += '  <div id="dict-modal-meanings" style="font-size: 1rem; color: #1e293b; line-height: 1.5; font-weight: 500; margin-top: 8px;">';
+    if (meanings) {
+      html += '    <span style="color: #6d28d9; font-weight: 700; margin-right: 6px;">中文释义:</span>' + meanings;
+    } else {
+      html += '    <span style="color: #64748b;">正在联网获取最准释义...</span>';
+    }
+    html += '  </div>';
+    html += '</div>';
+
+    // 4. Etymology Box (词根词缀立体剖析)
+    if (etym && (etym.prefix || etym.root || etym.suffix || etym.logic || etym.examTip)) {
+      html += '<div class="vocab-etym-box" style="margin-bottom: 14px;">';
+      html += '  <div class="vocab-etym-title">🧬 词根词缀与构词剖析:</div>';
+      html += '  <div class="vocab-etym-tags">';
+      if (etym.prefix) html += '<span class="etym-tag etym-prefix">前缀: ' + etym.prefix + '</span> ';
+      if (etym.root) html += '<span class="etym-tag etym-root">词根: ' + etym.root + '</span> ';
+      if (etym.suffix) html += '<span class="etym-tag etym-suffix">后缀: ' + etym.suffix + '</span> ';
+      html += '  </div>';
+      if (etym.logic) {
+        html += '  <div class="vocab-etym-logic"><strong>💡 记忆逻辑:</strong> ' + etym.logic + '</div>';
+      }
+      if (etym.examTip) {
+        html += '  <div class="vocab-exam-tip">' + etym.examTip + '</div>';
+      }
+      html += '</div>';
+    }
+
+    // 5. Source Sentence Box (语境与真题原句)
+    if (srcSentence) {
+      const highlightedSentence = highlightWordInSentence(srcSentence, clean);
+      html += '<div class="vocab-src-box" style="margin-bottom: 14px;">';
+      html += '  <div class="vocab-src-header">';
+      html += '    <span class="vocab-src-title">📍 萤火虫真题出处: ' + (srcIndex ? ('第 ' + srcIndex + ' 题 ') : '') + '<span class="badge">#' + (srcQid || '真题') + '</span></span>';
+      html += '  </div>';
+      html += '  <div class="vocab-src-sent">“ ' + highlightedSentence + ' ”</div>';
+      if (srcTrans) {
+        html += '  <div class="vocab-src-trans">' + srcTrans + '</div>';
+      }
+      html += '</div>';
+    }
+
+    // 6. Action buttons
+    html += '<div style="display: flex; gap: 8px; justify-content: space-between; align-items: center; flex-wrap: wrap;">';
+    html += '  <div style="display: flex; gap: 8px; flex-wrap: wrap;">';
+    if (!isAdded) {
+      html += '    <button class="btn-submit" style="background: #7c3aed; padding: 7px 16px; font-size: 0.88rem;" onclick="dictAddWord(&apos;' + clean + '&apos;, &apos;' + (srcQid || '') + '&apos;)">⭐ 一键收录到生词本</button>';
+    } else {
+      html += '    <button class="nav-btn" style="font-size: 0.86rem; font-weight: 600;" onclick="dictToggleMastered(&apos;' + clean + '&apos;, &apos;' + (srcQid || '') + '&apos;)">' + (isMastered ? '🔄 移回待攻克' : '✅ 标记为已掌握') + '</button>';
+      html += '    <button class="nav-btn" style="font-size: 0.86rem; color: #dc2626; border-color: #fca5a5;" onclick="dictRemoveWord(&apos;' + clean + '&apos;, &apos;' + (srcQid || '') + '&apos;)">🗑️ 移出生词本</button>';
+    }
+    html += '  </div>';
+    html += '  <button class="nav-btn" style="font-size: 0.86rem;" onclick="openVocabCardFromDict(&apos;' + clean + '&apos;)">📖 前往生词本 ↗</button>';
+    html += '</div>';
+
+    // 7. Search other word input
+    html += '<div style="display: flex; gap: 6px; margin-top: 14px; border-top: 1px solid var(--border); padding-top: 12px; align-items: center;">';
+    html += '  <input type="text" id="dict-search-input" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="🔍 查其他单词 (输入后按回车 Enter)..." onkeydown="handleDictSearchEnter(event, &apos;' + (srcQid || '') + '&apos;)" style="flex: 1; padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 0.85rem; outline: none;">';
+    html += '  <button class="nav-btn" style="padding: 6px 14px; font-size: 0.85rem;" onclick="dictSearchOtherWord(&apos;' + (srcQid || '') + '&apos;)">查询</button>';
+    html += '</div>';
+
+    const modalContent = document.getElementById("dict-modal-content");
+    if (modalContent) modalContent.innerHTML = html;
+
+    // Fallback: If no meaning, fetch online asynchronously
+    if (!meanings || meanings.includes("获取中")) {
+      fetchOnlineDefinition(clean).then(res => {
+        if (res && res.meanings) {
+          const meaningsEl = document.getElementById("dict-modal-meanings");
+          if (meaningsEl) {
+            meaningsEl.innerHTML = '<span style="color: #6d28d9; font-weight: 700; margin-right: 6px;">中文释义:</span>' + res.meanings;
+          }
+        }
+      });
+    }
+  }
+
+  function dictAddWord(word, qid) {
+    addWordToVocab(word, qid);
+    renderDictModalContent(word, qid);
+  }
+
+  function dictToggleMastered(word, qid) {
+    toggleVocabMastered(word);
+    renderDictModalContent(word, qid);
+  }
+
+  function dictRemoveWord(word, qid) {
+    deleteVocab(word);
+    renderDictModalContent(word, qid);
+  }
+
+  function openVocabCardFromDict(word) {
+    closeDictModal();
+    switchTab("vocab");
+    const searchInput = document.getElementById("vocab-search");
+    if (searchInput) {
+      searchInput.value = word;
+      renderVocabView();
+    }
+  }
+
+  function dictSearchOtherWord(currentQid) {
+    const input = document.getElementById("dict-search-input");
+    if (!input) return;
+    const kw = input.value.trim();
+    if (kw) {
+      renderDictModalContent(kw, currentQid);
+    }
+  }
+
+  function handleDictSearchEnter(e, currentQid) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      dictSearchOtherWord(currentQid);
+    }
+  }
+
+  // ==========================================
   // 跨设备数据流转与云端同步核心引擎 (CROSS-DEVICE SYNC ENGINE)
   // ==========================================
 
@@ -3719,6 +4001,13 @@
     init();
   }
 </script>
+
+<!-- PTE 官方精释词典与词根词缀剖析 MODAL -->
+<div id="dict-modal" class="modal-overlay" onclick="handleDictModalClick(event)">
+  <div class="modal-card" style="max-width: 620px;">
+    <div id="dict-modal-content"></div>
+  </div>
+</div>
 
 <!-- 跨设备数据流转与云端同步中枢 MODAL -->
 <div id="sync-modal" class="modal-overlay" onclick="handleSyncModalClick(event)">
