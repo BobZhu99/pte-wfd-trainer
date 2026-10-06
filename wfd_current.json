@@ -1,0 +1,1003 @@
+[
+  {
+    "index": 1,
+    "raw_index": 1,
+    "qid": "131001",
+    "sentence": "The celebrated theory is still the source of great controversy.",
+    "word_count": 10
+  },
+  {
+    "index": 2,
+    "raw_index": 2,
+    "qid": "131002",
+    "sentence": "A good architectural structure should be useful, durable and beautiful.",
+    "word_count": 10
+  },
+  {
+    "index": 3,
+    "raw_index": 3,
+    "qid": "131003",
+    "sentence": "A group meeting will be held tomorrow in the library conference room.",
+    "word_count": 12
+  },
+  {
+    "index": 4,
+    "raw_index": 4,
+    "qid": "131005",
+    "sentence": "Educational level is found to be related to social and economic background.",
+    "word_count": 12
+  },
+  {
+    "index": 5,
+    "raw_index": 5,
+    "qid": "131007",
+    "sentence": "Tutorials are scheduled in the final week of the term.",
+    "word_count": 10
+  },
+  {
+    "index": 6,
+    "raw_index": 6,
+    "qid": "131009",
+    "sentence": "Affordable housing is an important issue for all members of society.",
+    "word_count": 11
+  },
+  {
+    "index": 7,
+    "raw_index": 7,
+    "qid": "131012",
+    "sentence": "All industries are a system of inputs, processes, outputs and feedback.",
+    "word_count": 11
+  },
+  {
+    "index": 8,
+    "raw_index": 8,
+    "qid": "131013",
+    "sentence": "All of the assignments must be submitted in person to the faculty office.",
+    "word_count": 13
+  },
+  {
+    "index": 9,
+    "raw_index": 9,
+    "qid": "131014",
+    "sentence": "Economic development needs to be supported by the government.",
+    "word_count": 9
+  },
+  {
+    "index": 10,
+    "raw_index": 10,
+    "qid": "131015",
+    "sentence": "All of your assignments are due by tomorrow.",
+    "word_count": 8
+  },
+  {
+    "index": 11,
+    "raw_index": 11,
+    "qid": "131020",
+    "sentence": "Our view is that educational reforms have been inadequately implemented.",
+    "word_count": 10
+  },
+  {
+    "index": 12,
+    "raw_index": 12,
+    "qid": "131021",
+    "sentence": "Most scientists believe that climate change threatens the lives on earth.",
+    "word_count": 11
+  },
+  {
+    "index": 13,
+    "raw_index": 13,
+    "qid": "131045",
+    "sentence": "Consumer confidence has a direct influence on sales.",
+    "word_count": 8
+  },
+  {
+    "index": 14,
+    "raw_index": 14,
+    "qid": "131050",
+    "sentence": "Despite their differences, all forms of life share certain characteristics.",
+    "word_count": 10
+  },
+  {
+    "index": 15,
+    "raw_index": 15,
+    "qid": "131053",
+    "sentence": "The economic status of the early Roman Republic will be examined.",
+    "word_count": 11
+  },
+  {
+    "index": 16,
+    "raw_index": 16,
+    "qid": "131054",
+    "sentence": "The academic strength of the early Roman Republic will be examined.",
+    "word_count": 11
+  },
+  {
+    "index": 17,
+    "raw_index": 17,
+    "qid": "131061",
+    "sentence": "Human beings compete with other living things for resources and space.",
+    "word_count": 11
+  },
+  {
+    "index": 18,
+    "raw_index": 18,
+    "qid": "131068",
+    "sentence": "He landed a job in a very prestigious law firm.",
+    "word_count": 10
+  },
+  {
+    "index": 19,
+    "raw_index": 19,
+    "qid": "131084",
+    "sentence": "It is really a comprehensive program covering both theory and practice.",
+    "word_count": 11
+  },
+  {
+    "index": 20,
+    "raw_index": 20,
+    "qid": "131111",
+    "sentence": "Organizational failure is considered from various perspectives in academic literature.",
+    "word_count": 10
+  },
+  {
+    "index": 21,
+    "raw_index": 21,
+    "qid": "131113",
+    "sentence": "Our professor is hosting the business development conference.",
+    "word_count": 8
+  },
+  {
+    "index": 22,
+    "raw_index": 22,
+    "qid": "131154",
+    "sentence": "Statistical results should be expressed in different ways depending on the circumstances.",
+    "word_count": 12
+  },
+  {
+    "index": 23,
+    "raw_index": 23,
+    "qid": "131159",
+    "sentence": "Students have the options to live in college residences or apartments.",
+    "word_count": 11
+  },
+  {
+    "index": 24,
+    "raw_index": 24,
+    "qid": "131172",
+    "sentence": "Food that contains antibiotics provides little or no nutritional value.",
+    "word_count": 10
+  },
+  {
+    "index": 25,
+    "raw_index": 25,
+    "qid": "131175",
+    "sentence": "The application processes may take longer than expected.",
+    "word_count": 8
+  },
+  {
+    "index": 26,
+    "raw_index": 26,
+    "qid": "131183",
+    "sentence": "The business policy seminar includes an internship with a local firm.",
+    "word_count": 11
+  },
+  {
+    "index": 27,
+    "raw_index": 27,
+    "qid": "131186",
+    "sentence": "The chemistry building is located near the entrance to the campus.",
+    "word_count": 11
+  },
+  {
+    "index": 28,
+    "raw_index": 28,
+    "qid": "131196",
+    "sentence": "Rising inflation may indicate an increase in the demand for consumer products.",
+    "word_count": 12
+  },
+  {
+    "index": 29,
+    "raw_index": 29,
+    "qid": "131214",
+    "sentence": "The key difference between courses is the kind of assessment.",
+    "word_count": 10
+  },
+  {
+    "index": 30,
+    "raw_index": 30,
+    "qid": "131219",
+    "sentence": "The massive accumulation of data was converted into a communicable argument.",
+    "word_count": 11
+  },
+  {
+    "index": 31,
+    "raw_index": 31,
+    "qid": "131222",
+    "sentence": "The most popular courses still have a few places left.",
+    "word_count": 10
+  },
+  {
+    "index": 32,
+    "raw_index": 32,
+    "qid": "131231",
+    "sentence": "The railway makes long-distance travel possible for everyone.",
+    "word_count": 8
+  },
+  {
+    "index": 33,
+    "raw_index": 33,
+    "qid": "131284",
+    "sentence": "Traffic is the main cause of air pollution in many cities.",
+    "word_count": 11
+  },
+  {
+    "index": 34,
+    "raw_index": 34,
+    "qid": "131292",
+    "sentence": "Upgrading manufacturing systems can increase efficiency.",
+    "word_count": 6
+  },
+  {
+    "index": 35,
+    "raw_index": 35,
+    "qid": "131303",
+    "sentence": "Parents' talk to children tends to be simplified.",
+    "word_count": 8
+  },
+  {
+    "index": 36,
+    "raw_index": 36,
+    "qid": "131316",
+    "sentence": "You will acquire many skills during the academic studies.",
+    "word_count": 9
+  },
+  {
+    "index": 37,
+    "raw_index": 37,
+    "qid": "131332",
+    "sentence": "Check the website if you are looking for discounted textbooks.",
+    "word_count": 10
+  },
+  {
+    "index": 38,
+    "raw_index": 38,
+    "qid": "131334",
+    "sentence": "Education and training provide important skills for the labor force.",
+    "word_count": 10
+  },
+  {
+    "index": 39,
+    "raw_index": 39,
+    "qid": "131335",
+    "sentence": "Farming methods across the world have greatly developed recently.",
+    "word_count": 9
+  },
+  {
+    "index": 40,
+    "raw_index": 40,
+    "qid": "131343",
+    "sentence": "Mature students usually adapt to university life extremely well.",
+    "word_count": 9
+  },
+  {
+    "index": 41,
+    "raw_index": 41,
+    "qid": "131345",
+    "sentence": "The science library is currently located on the ground floor of the library.",
+    "word_count": 13
+  },
+  {
+    "index": 42,
+    "raw_index": 42,
+    "qid": "131346",
+    "sentence": "Several candidates would be qualified as the greatest scientists of all time.",
+    "word_count": 12
+  },
+  {
+    "index": 43,
+    "raw_index": 43,
+    "qid": "131347",
+    "sentence": "Students are advised that the lecture today has been canceled.",
+    "word_count": 10
+  },
+  {
+    "index": 44,
+    "raw_index": 44,
+    "qid": "131348",
+    "sentence": "The Industrial Revolution in Europe was driven by steam technology.",
+    "word_count": 10
+  },
+  {
+    "index": 45,
+    "raw_index": 45,
+    "qid": "131356",
+    "sentence": "They developed a unique approach to training their employees.",
+    "word_count": 9
+  },
+  {
+    "index": 46,
+    "raw_index": 46,
+    "qid": "131358",
+    "sentence": "Those who are considering a career in marketing should attend the talk.",
+    "word_count": 12
+  },
+  {
+    "index": 47,
+    "raw_index": 47,
+    "qid": "131367",
+    "sentence": "The university has invested in new technologies designed to support learning.",
+    "word_count": 11
+  },
+  {
+    "index": 48,
+    "raw_index": 48,
+    "qid": "131370",
+    "sentence": "A good academic paper should present a clear argument.",
+    "word_count": 9
+  },
+  {
+    "index": 49,
+    "raw_index": 49,
+    "qid": "131380",
+    "sentence": "Collaboration between departments is a feature of successful companies.",
+    "word_count": 9
+  },
+  {
+    "index": 50,
+    "raw_index": 50,
+    "qid": "131382",
+    "sentence": "Experts are now able to forecast weather over much longer periods.",
+    "word_count": 11
+  },
+  {
+    "index": 51,
+    "raw_index": 51,
+    "qid": "131391",
+    "sentence": "Our courses help improve critical thinking and independent learning skills.",
+    "word_count": 10
+  },
+  {
+    "index": 52,
+    "raw_index": 52,
+    "qid": "131399",
+    "sentence": "Students are encouraged to monitor their own attendance.",
+    "word_count": 8
+  },
+  {
+    "index": 53,
+    "raw_index": 53,
+    "qid": "131401",
+    "sentence": "The ability to work with fellow students cannot be stressed enough.",
+    "word_count": 11
+  },
+  {
+    "index": 54,
+    "raw_index": 54,
+    "qid": "131403",
+    "sentence": "Essays and assignments are spread out across the academic year.",
+    "word_count": 10
+  },
+  {
+    "index": 55,
+    "raw_index": 55,
+    "qid": "131411",
+    "sentence": "The department has a higher-than-normal proportion of postgraduate students.",
+    "word_count": 9
+  },
+  {
+    "index": 56,
+    "raw_index": 56,
+    "qid": "131417",
+    "sentence": "A professor took one year off to work on her book.",
+    "word_count": 11
+  },
+  {
+    "index": 57,
+    "raw_index": 57,
+    "qid": "131428",
+    "sentence": "The lecture tomorrow will discuss the educational policy of the United States.",
+    "word_count": 12
+  },
+  {
+    "index": 58,
+    "raw_index": 58,
+    "qid": "131449",
+    "sentence": "Protective clothing must always be worn in the laboratory.",
+    "word_count": 9
+  },
+  {
+    "index": 59,
+    "raw_index": 59,
+    "qid": "131452",
+    "sentence": "Make sure you choose a course that provides great career opportunities.",
+    "word_count": 11
+  },
+  {
+    "index": 60,
+    "raw_index": 60,
+    "qid": "131457",
+    "sentence": "Social media is criticized for causing internet addiction.",
+    "word_count": 8
+  },
+  {
+    "index": 61,
+    "raw_index": 61,
+    "qid": "131458",
+    "sentence": "Sugar is a compound including carbon, oxygen, and hydrogen atoms.",
+    "word_count": 10
+  },
+  {
+    "index": 62,
+    "raw_index": 62,
+    "qid": "131471",
+    "sentence": "The printers automatically print on both sides of each page.",
+    "word_count": 10
+  },
+  {
+    "index": 63,
+    "raw_index": 63,
+    "qid": "131474",
+    "sentence": "There is a widely believed perception that engineering is for boys.",
+    "word_count": 11
+  },
+  {
+    "index": 64,
+    "raw_index": 64,
+    "qid": "131480",
+    "sentence": "You should provide examples to support your ideas and arguments.",
+    "word_count": 10
+  },
+  {
+    "index": 65,
+    "raw_index": 65,
+    "qid": "131483",
+    "sentence": "Distance learning allows you to develop a career around your commitments.",
+    "word_count": 11
+  },
+  {
+    "index": 66,
+    "raw_index": 66,
+    "qid": "131484",
+    "sentence": "Growing population has posed a challenge to many governments.",
+    "word_count": 9
+  },
+  {
+    "index": 67,
+    "raw_index": 67,
+    "qid": "131503",
+    "sentence": "Muscle cells bring parts of the body closer together.",
+    "word_count": 9
+  },
+  {
+    "index": 68,
+    "raw_index": 68,
+    "qid": "131508",
+    "sentence": "Photography can be very useful to geographical research.",
+    "word_count": 8
+  },
+  {
+    "index": 69,
+    "raw_index": 69,
+    "qid": "131509",
+    "sentence": "Request for late applications will not be accepted under any circumstances.",
+    "word_count": 11
+  },
+  {
+    "index": 70,
+    "raw_index": 70,
+    "qid": "131522",
+    "sentence": "A mixture is defined as a compound of chemically separate parts.",
+    "word_count": 11
+  },
+  {
+    "index": 71,
+    "raw_index": 71,
+    "qid": "131530",
+    "sentence": "Your ideas are discussed and debated in seminars and tutorials.",
+    "word_count": 10
+  },
+  {
+    "index": 72,
+    "raw_index": 72,
+    "qid": "131534",
+    "sentence": "Academic libraries across the world are steadily incorporating social media.",
+    "word_count": 10
+  },
+  {
+    "index": 73,
+    "raw_index": 73,
+    "qid": "131542",
+    "sentence": "Classical mechanics is sometimes considered as a branch of applied mathematics.",
+    "word_count": 11
+  },
+  {
+    "index": 74,
+    "raw_index": 74,
+    "qid": "131547",
+    "sentence": "New materials and techniques are changing the style of modern architecture.",
+    "word_count": 11
+  },
+  {
+    "index": 75,
+    "raw_index": 75,
+    "qid": "131575",
+    "sentence": "Honey can be used as food and a health product.",
+    "word_count": 10
+  },
+  {
+    "index": 76,
+    "raw_index": 76,
+    "qid": "131577",
+    "sentence": "Farmers need to adapt to the changes in climate.",
+    "word_count": 9
+  },
+  {
+    "index": 77,
+    "raw_index": 77,
+    "qid": "131579",
+    "sentence": "Many university lectures can now be viewed on the internet.",
+    "word_count": 10
+  },
+  {
+    "index": 78,
+    "raw_index": 78,
+    "qid": "131580",
+    "sentence": "An effective business manager is always open to new ideas.",
+    "word_count": 10
+  },
+  {
+    "index": 79,
+    "raw_index": 79,
+    "qid": "131590",
+    "sentence": "Philosophy uses logic and reasons to analyze human experience.",
+    "word_count": 9
+  },
+  {
+    "index": 80,
+    "raw_index": 80,
+    "qid": "131603",
+    "sentence": "Marine environments have been destroyed through pollution and unsustainable development.",
+    "word_count": 10
+  },
+  {
+    "index": 81,
+    "raw_index": 81,
+    "qid": "131604",
+    "sentence": "Designers need to keep up with the social trends.",
+    "word_count": 9
+  },
+  {
+    "index": 82,
+    "raw_index": 82,
+    "qid": "131607",
+    "sentence": "A new collection of articles has just been published.",
+    "word_count": 9
+  },
+  {
+    "index": 83,
+    "raw_index": 83,
+    "qid": "131611",
+    "sentence": "The digital camera has some advantages over traditional film.",
+    "word_count": 9
+  },
+  {
+    "index": 84,
+    "raw_index": 84,
+    "qid": "131621",
+    "sentence": "Air pollution is a serious problem all over the world.",
+    "word_count": 10
+  },
+  {
+    "index": 85,
+    "raw_index": 85,
+    "qid": "131625",
+    "sentence": "The commissioner will apportion the funds among all the authorities.",
+    "word_count": 10
+  },
+  {
+    "index": 86,
+    "raw_index": 86,
+    "qid": "131628",
+    "sentence": "Please note that the seminar has now been canceled.",
+    "word_count": 9
+  },
+  {
+    "index": 87,
+    "raw_index": 87,
+    "qid": "131636",
+    "sentence": "Many diseases that were once serious have now been eradicated.",
+    "word_count": 10
+  },
+  {
+    "index": 88,
+    "raw_index": 88,
+    "qid": "131683",
+    "sentence": "The use of mobile phones is not permitted in the library.",
+    "word_count": 11
+  },
+  {
+    "index": 89,
+    "raw_index": 89,
+    "qid": "131688",
+    "sentence": "Rising sea temperatures are a sign of climate change.",
+    "word_count": 9
+  },
+  {
+    "index": 90,
+    "raw_index": 90,
+    "qid": "131724",
+    "sentence": "He wrote poetry and plays as well as scientific papers.",
+    "word_count": 10
+  },
+  {
+    "index": 91,
+    "raw_index": 91,
+    "qid": "131775",
+    "sentence": "More research is needed before any definitive conclusion can be drawn.",
+    "word_count": 11
+  },
+  {
+    "index": 92,
+    "raw_index": 92,
+    "qid": "131785",
+    "sentence": "Students are encouraged to think carefully about their accommodation needs.",
+    "word_count": 10
+  },
+  {
+    "index": 93,
+    "raw_index": 93,
+    "qid": "131802",
+    "sentence": "The north campus car park could be closed on Sunday.",
+    "word_count": 10
+  },
+  {
+    "index": 94,
+    "raw_index": 94,
+    "qid": "131818",
+    "sentence": "There must be planets in the universe that can support life.",
+    "word_count": 11
+  },
+  {
+    "index": 95,
+    "raw_index": 95,
+    "qid": "131850",
+    "sentence": "Optional tutorials are offered in the final week of the term.",
+    "word_count": 11
+  },
+  {
+    "index": 96,
+    "raw_index": 96,
+    "qid": "131852",
+    "sentence": "Banks charge interest on the money they lend to customers.",
+    "word_count": 10
+  },
+  {
+    "index": 97,
+    "raw_index": 97,
+    "qid": "131864",
+    "sentence": "The college operates a system of continuous assessments.",
+    "word_count": 8
+  },
+  {
+    "index": 98,
+    "raw_index": 98,
+    "qid": "131898",
+    "sentence": "There is a pharmacy on campus near the bookstore.",
+    "word_count": 9
+  },
+  {
+    "index": 99,
+    "raw_index": 99,
+    "qid": "131903",
+    "sentence": "Students will focus on reporting news on changing the media world.",
+    "word_count": 11
+  },
+  {
+    "index": 100,
+    "raw_index": 100,
+    "qid": "131921",
+    "sentence": "The director of the gallery was grateful for the anonymous donation.",
+    "word_count": 11
+  },
+  {
+    "index": 101,
+    "raw_index": 101,
+    "qid": "131922",
+    "sentence": "Studies showed there is a positive correlation between the two variables.",
+    "word_count": 11
+  },
+  {
+    "index": 102,
+    "raw_index": 102,
+    "qid": "131927",
+    "sentence": "Building trust is not something that can be achieved overnight.",
+    "word_count": 10
+  },
+  {
+    "index": 103,
+    "raw_index": 103,
+    "qid": "131929",
+    "sentence": "The dance department stages elaborated performances each semester.",
+    "word_count": 8
+  },
+  {
+    "index": 104,
+    "raw_index": 104,
+    "qid": "131933",
+    "sentence": "Student representatives will be visiting the classes with voting forms.",
+    "word_count": 10
+  },
+  {
+    "index": 105,
+    "raw_index": 105,
+    "qid": "131986",
+    "sentence": "New media have transcended traditional national boundaries.",
+    "word_count": 7
+  },
+  {
+    "index": 106,
+    "raw_index": 106,
+    "qid": "131996",
+    "sentence": "While some people regard it as reforming zeal, others regard it as recklessness.",
+    "word_count": 13
+  },
+  {
+    "index": 107,
+    "raw_index": 107,
+    "qid": "1311019",
+    "sentence": "There is a great deal of debate on that topic.",
+    "word_count": 10
+  },
+  {
+    "index": 108,
+    "raw_index": 108,
+    "qid": "1311027",
+    "sentence": "We encourage students to complete their applications before the deadline .",
+    "word_count": 11
+  },
+  {
+    "index": 109,
+    "raw_index": 109,
+    "qid": "1311037",
+    "sentence": "The student shop sells a range of stationery.",
+    "word_count": 8
+  },
+  {
+    "index": 110,
+    "raw_index": 110,
+    "qid": "1311057",
+    "sentence": "Strangely, people are simultaneously impressed by and skeptical about statistics.",
+    "word_count": 10
+  },
+  {
+    "index": 111,
+    "raw_index": 111,
+    "qid": "1311065",
+    "sentence": "Currently the growth of the economy is unpredictable.",
+    "word_count": 8
+  },
+  {
+    "index": 112,
+    "raw_index": 112,
+    "qid": "1311067",
+    "sentence": "When the root system of a plant fails, foliage suffers.",
+    "word_count": 10
+  },
+  {
+    "index": 113,
+    "raw_index": 113,
+    "qid": "1311068",
+    "sentence": "The course includes a combination of pure and applied mathematics.",
+    "word_count": 10
+  },
+  {
+    "index": 114,
+    "raw_index": 114,
+    "qid": "1311075",
+    "sentence": "Students must wear protective clothing that is provided in the medical laboratory.",
+    "word_count": 12
+  },
+  {
+    "index": 115,
+    "raw_index": 115,
+    "qid": "1311081",
+    "sentence": "The museum is closed on the third Monday of every month.",
+    "word_count": 11
+  },
+  {
+    "index": 116,
+    "raw_index": 116,
+    "qid": "1311083",
+    "sentence": "You must be able to work in a team.",
+    "word_count": 9
+  },
+  {
+    "index": 117,
+    "raw_index": 117,
+    "qid": "1311084",
+    "sentence": "Some people believe that education should be free to everyone.",
+    "word_count": 10
+  },
+  {
+    "index": 118,
+    "raw_index": 118,
+    "qid": "1311085",
+    "sentence": "You can use your laptops in the lecture.",
+    "word_count": 8
+  },
+  {
+    "index": 119,
+    "raw_index": 119,
+    "qid": "1311086",
+    "sentence": "Computers used to be larger than they are now.",
+    "word_count": 9
+  },
+  {
+    "index": 120,
+    "raw_index": 120,
+    "qid": "1311089",
+    "sentence": "Social psychology is concerned with the understanding of human behaviors.",
+    "word_count": 10
+  },
+  {
+    "index": 121,
+    "raw_index": 121,
+    "qid": "1311092",
+    "sentence": "It is important to plan your study time carefully.",
+    "word_count": 9
+  },
+  {
+    "index": 122,
+    "raw_index": 122,
+    "qid": "1311105",
+    "sentence": "The library will be closed for staff training tomorrow morning.",
+    "word_count": 10
+  },
+  {
+    "index": 123,
+    "raw_index": 123,
+    "qid": "1311107",
+    "sentence": "Plants are able to continue growing throughout their lives.",
+    "word_count": 9
+  },
+  {
+    "index": 124,
+    "raw_index": 124,
+    "qid": "1311108",
+    "sentence": "You need to put those books on the table over there.",
+    "word_count": 11
+  },
+  {
+    "index": 125,
+    "raw_index": 125,
+    "qid": "1311169",
+    "sentence": "When attending a job interview, punctuality is the key.",
+    "word_count": 9
+  },
+  {
+    "index": 126,
+    "raw_index": 126,
+    "qid": "1311170",
+    "sentence": "Universities need to secure research funds for projects.",
+    "word_count": 8
+  },
+  {
+    "index": 127,
+    "raw_index": 127,
+    "qid": "1311171",
+    "sentence": "The studies showed the Hong Kong people are the most active in Asia.",
+    "word_count": 13
+  },
+  {
+    "index": 128,
+    "raw_index": 128,
+    "qid": "1311174",
+    "sentence": "Mathematics provides a foundation for understanding and analyzing data.",
+    "word_count": 9
+  },
+  {
+    "index": 129,
+    "raw_index": 129,
+    "qid": "1311176",
+    "sentence": "Football is played throughout all years at the university.",
+    "word_count": 9
+  },
+  {
+    "index": 130,
+    "raw_index": 130,
+    "qid": "1311178",
+    "sentence": "Take the first step by applying for a university scholarship (scholarships) now.",
+    "word_count": 12
+  },
+  {
+    "index": 131,
+    "raw_index": 131,
+    "qid": "1311179",
+    "sentence": "There is probably life in the other planets in the universe.",
+    "word_count": 11
+  },
+  {
+    "index": 132,
+    "raw_index": 132,
+    "qid": "1311180",
+    "sentence": "Without doubt, this theory has a number of limitations.",
+    "word_count": 9
+  },
+  {
+    "index": 133,
+    "raw_index": 133,
+    "qid": "1311181",
+    "sentence": "Unemployment rate has fallen to its lowest level in years.",
+    "word_count": 10
+  },
+  {
+    "index": 134,
+    "raw_index": 134,
+    "qid": "1311182",
+    "sentence": "The teacher training course includes observing the classes.",
+    "word_count": 8
+  },
+  {
+    "index": 135,
+    "raw_index": 135,
+    "qid": "1311184",
+    "sentence": "A library plays an important part in students' lives.",
+    "word_count": 9
+  },
+  {
+    "index": 136,
+    "raw_index": 136,
+    "qid": "1311185",
+    "sentence": "Class participation is an important part of your final grade.",
+    "word_count": 10
+  },
+  {
+    "index": 137,
+    "raw_index": 137,
+    "qid": "1311188",
+    "sentence": "Chemical reactions occur when substances combine or change.",
+    "word_count": 8
+  },
+  {
+    "index": 138,
+    "raw_index": 138,
+    "qid": "1311189",
+    "sentence": "Course work gives students the chances to thoroughly explore the subject.",
+    "word_count": 11
+  },
+  {
+    "index": 139,
+    "raw_index": 139,
+    "qid": "1311247",
+    "sentence": "A university degree is required for entry into various professions.",
+    "word_count": 10
+  },
+  {
+    "index": 140,
+    "raw_index": 140,
+    "qid": "1311252",
+    "sentence": "Polar regions' islands are ideal for astrophysicists and meteorologists to carry out field experiments.",
+    "word_count": 14
+  },
+  {
+    "index": 141,
+    "raw_index": 141,
+    "qid": "1311253",
+    "sentence": "Her design incorporates the best aspects of vernacular architecture.",
+    "word_count": 9
+  },
+  {
+    "index": 142,
+    "raw_index": 142,
+    "qid": "1311259",
+    "sentence": "This class teaches you the importance of planning your essays.",
+    "word_count": 10
+  },
+  {
+    "index": 143,
+    "raw_index": 143,
+    "qid": "131694",
+    "sentence": "The closing date of applications for travel scholarships is next Monday.",
+    "word_count": 11
+  }
+]
