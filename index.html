@@ -521,7 +521,13 @@
 
   function loadActiveQuestions() {
     try {
+      const meta = localStorage.getItem("pte_custom_bank_meta");
       const raw = localStorage.getItem("pte_custom_questions");
+      if (!meta && raw) {
+        // 无自定义元数据说明为此前自动缓存，自动平滑升级为最新官方预设
+        localStorage.removeItem("pte_custom_questions");
+        return JSON.parse(JSON.stringify(DEFAULT_QUESTIONS));
+      }
       if (raw) {
         const parsed = JSON.parse(raw);
         if (Array.isArray(parsed) && parsed.length > 0) {
