@@ -162,7 +162,311 @@
   }
   #btn-module-wfd.active .sidebar-active-indicator { background: #38bdf8; display: block; }
   #btn-module-karaoke.active .sidebar-active-indicator { background: #c084fc; display: block; }
+  #btn-module-planner.active .sidebar-active-indicator { background: #f59e0b; display: block; }
   #btn-module-overview.active .sidebar-active-indicator { background: #34d399; display: block; }
+
+  /* ================= 每日练题目标与实战打卡看板样式 ================= */
+  .planner-header-banner {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 22px 26px;
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.12);
+  }
+  .planner-banner-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .planner-title-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .planner-icon-badge {
+    font-size: 2rem;
+    background: #334155;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid #475569;
+    flex-shrink: 0;
+  }
+  .planner-banner-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+  }
+  .planner-stat-card {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    padding: 10px 14px;
+    backdrop-filter: blur(6px);
+  }
+  .planner-stat-card .val {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #38bdf8;
+  }
+  .planner-stat-card .lbl {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    margin-top: 2px;
+  }
+  
+  .planner-preset-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 18px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  }
+  .preset-pill-btn {
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    color: #334155;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .preset-pill-btn:hover {
+    background: #eff6ff;
+    border-color: #93c5fd;
+    color: #1d4ed8;
+    transform: translateY(-1px);
+  }
+  .preset-pill-btn.primary {
+    background: #eff6ff;
+    border-color: #3b82f6;
+    color: #1d4ed8;
+  }
+
+  .planner-tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .planner-task-card {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 18px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .planner-task-card:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    border-color: #cbd5e1;
+  }
+  .planner-task-card.is-completed {
+    border-color: #86efac;
+    background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 40%);
+    box-shadow: 0 4px 14px rgba(34, 197, 94, 0.08);
+  }
+  .planner-task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .planner-task-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+  }
+  .planner-task-badge.speaking { background: #ffedd5; color: #c2410c; border-color: #fed7aa; }
+  .planner-task-badge.listening { background: #e0f2fe; color: #0369a1; border-color: #bae6fd; }
+  .planner-task-badge.reading { background: #f3e8ff; color: #7e22ce; border-color: #e9d5ff; }
+  .planner-task-badge.writing { background: #ffe4e6; color: #be123c; border-color: #fecdd3; }
+
+  .planner-progress-box {
+    margin: 10px 0 12px;
+  }
+  .planner-progress-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.76rem;
+    color: #64748b;
+    margin-bottom: 4px;
+  }
+  .planner-progress-track {
+    background: #e2e8f0;
+    border-radius: 9999px;
+    height: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+  .planner-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+    border-radius: 9999px;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s;
+  }
+  .planner-progress-bar.done {
+    background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+  }
+
+  .planner-inputs-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+  .planner-inputs-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .planner-input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .planner-input-field label {
+    font-size: 0.72rem;
+    color: #64748b;
+    font-weight: 600;
+  }
+  .planner-num-input {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    background: white;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: border-color 0.15s;
+    -moz-appearance: textfield;
+  }
+  .planner-num-input:focus {
+    border-color: #2563eb;
+    outline: none;
+    background: #eff6ff;
+  }
+  .planner-quick-btns {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+  .planner-btn-step {
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #334155;
+    cursor: pointer;
+    transition: all 0.12s;
+    user-select: none;
+  }
+  .planner-btn-step:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+    color: #0f172a;
+  }
+  .planner-btn-step.add {
+    background: #ecfdf5;
+    border-color: #a7f3d0;
+    color: #047857;
+  }
+  .planner-btn-step.add:hover {
+    background: #d1fae5;
+  }
+
+  .planner-history-item {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    transition: all 0.15s;
+  }
+  .planner-history-item:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .planner-history-item.all-done {
+    background: #f0fdf4;
+    border-color: #86efac;
+  }
+
+  /* 平板端优化 (601px - 1024px) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .planner-tasks-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+  }
+
+  /* 手机移动端优化 (<= 600px) */
+  @media (max-width: 600px) {
+    .planner-header-banner {
+      padding: 16px 14px;
+      border-radius: 12px;
+    }
+    .planner-icon-badge {
+      width: 40px;
+      height: 40px;
+      font-size: 1.5rem;
+      border-radius: 10px;
+    }
+    .planner-banner-stats {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+    .planner-tasks-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .planner-btn-step {
+      padding: 6px 14px;
+      font-size: 0.85rem;
+      min-height: 38px;
+    }
+    .planner-num-input {
+      font-size: 1.15rem;
+      padding: 9px;
+      min-height: 42px;
+    }
+  }
 
   .sidebar-tool-btn {
     display: flex;
@@ -305,9 +609,26 @@
     .sidebar-nav {
       flex-direction: row;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 6px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
       margin: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sidebar-nav {
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 4px !important;
+    }
+    .sidebar-btn {
+      padding: 6px 2px !important;
+      border-radius: 6px !important;
+    }
+    .sidebar-btn-title {
+      font-size: 0.72rem !important;
+    }
+    .sidebar-btn-icon {
+      font-size: 1.05rem !important;
     }
     .sidebar-btn {
       padding: 8px 4px;
@@ -1011,7 +1332,7 @@
       <div class="brand-icon">🦁</div>
       <div class="brand-text">
         <div class="brand-title">PTE 考霸助手</div>
-        <div class="brand-sub">突击 57+ · 10.20 考期</div>
+        <div class="brand-sub">突击 57+ · 11.11 考期</div>
       </div>
     </div>
 
@@ -1049,7 +1370,17 @@
         <span class="sidebar-active-indicator"></span>
       </button>
 
-      <!-- 按钮 3: PTE 考试总览 (全题型权重) -->
+      <!-- 按钮 3: 每日备考打卡与目标看板 -->
+      <button class="sidebar-btn" id="btn-module-planner" onclick="switchAppModule('planner')" title="每日练题目标 · 实战填空 · 达成记录">
+        <span class="sidebar-btn-icon">📋</span>
+        <div class="sidebar-btn-content">
+          <div class="sidebar-btn-title">每日目标打卡</div>
+          <div class="sidebar-btn-desc">目标与实战填空 · 达成记录</div>
+        </div>
+        <span class="sidebar-active-indicator"></span>
+      </button>
+
+      <!-- 按钮 4: PTE 考试总览 (全题型权重) -->
       <button class="sidebar-btn" id="btn-module-overview" onclick="switchAppModule('overview')" title="PTE 22 题型权重与考场界面解析">
         <span class="sidebar-btn-icon">📊</span>
         <div class="sidebar-btn-content">
@@ -1429,7 +1760,100 @@
       <iframe id="karaoke-iframe" src="speaking_karaoke.html" style="width: 100%; height: calc(100vh - 160px); min-height: 820px; border: 1px solid var(--border); border-radius: 14px; background: #ffffff;" allow="microphone"></iframe>
     </div>
 
-    <!-- 模块 3: PTE 考试总览 (全题型权重与考场拆解) -->
+    <!-- 模块 3: 每日备考目标与实战打卡看板 -->
+    <div id="module-view-planner" class="module-view" style="display: none;">
+      <div class="container">
+        <!-- 头部总览横幅 -->
+        <div class="planner-header-banner">
+          <div class="planner-banner-top">
+            <div class="planner-title-box">
+              <div class="planner-icon-badge">🎯</div>
+              <div>
+                <h2 style="font-size: 1.35rem; font-weight: 800; margin: 0; color: white; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                  <span>PTE 每日练题目标与实战打卡看板</span>
+                  <span style="font-size: 0.72rem; background: #ea580c; color: white; padding: 2px 8px; border-radius: 9999px;">学员独立档案</span>
+                </h2>
+                <p style="font-size: 0.82rem; color: #94a3b8; margin: 4px 0 0;" id="planner-today-date-text">
+                  今日计划打卡 · 设定目标与填空记录 · 100% 达成将自动计入勋章日历
+                </p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+              <span id="planner-streak-badge" style="background: linear-gradient(135deg, #ea580c 0%, #f97316 100%); color: white; font-weight: 800; font-size: 0.85rem; padding: 6px 14px; border-radius: 9999px; box-shadow: 0 2px 8px rgba(234,88,12,0.3); display: inline-flex; align-items: center; gap: 5px;">
+                🔥 连续达成 0 天
+              </span>
+              <button class="nav-btn" onclick="confirmManualFinishDay()" style="background: #10b981; color: white; border: none; font-weight: 700; padding: 7px 16px; border-radius: 8px; cursor: pointer;">
+                ✨ 确认今日打卡完成
+              </button>
+            </div>
+          </div>
+
+          <!-- 4 项全局统计指标 -->
+          <div class="planner-banner-stats">
+            <div class="planner-stat-card">
+              <div class="val" id="planner-stat-completion-rate">0%</div>
+              <div class="lbl">今日全科达成率</div>
+            </div>
+            <div class="planner-stat-card">
+              <div class="val" id="planner-stat-completed-items" style="color: #4ade80;">0 / 7</div>
+              <div class="lbl">达标题型项目数</div>
+            </div>
+            <div class="planner-stat-card">
+              <div class="val" id="planner-stat-total-practiced" style="color: #facc15;">0 题</div>
+              <div class="lbl">今日实际练习总量</div>
+            </div>
+            <div class="planner-stat-card">
+              <div class="val" id="planner-stat-countdown" style="color: #fb923c;">计算中...</div>
+              <div class="lbl">距离考期天数</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 科学预设方案一键套用 -->
+        <div class="planner-preset-bar">
+          <span style="font-size: 0.82rem; font-weight: 700; color: #475569; display: flex; align-items: center; gap: 5px;">
+            ⚡ 快捷目标预设:
+          </span>
+          <button class="preset-pill-btn primary" onclick="applyPresetPlan('competent')" title="基于 LIN 25/016 Competent English (口语 54+) 科学规划">
+            🎯 Competent 54+ 冲刺 (推荐)
+          </button>
+          <button class="preset-pill-btn" onclick="applyPresetPlan('485')" title="针对 485 工签 55 分保底">
+            ⚡ 485 工签保底 (55+)
+          </button>
+          <button class="preset-pill-btn" onclick="applyPresetPlan('proficient')" title="针对技术移民七炸 65+">
+            🔥 七炸高分挑战 (65+)
+          </button>
+          <button class="preset-pill-btn" onclick="applyPresetPlan('reset')" style="color: #dc2626; border-color: #fca5a5;">
+            🔄 今日数据归零
+          </button>
+        </div>
+
+        <!-- 今日各题型练习卡片容器 -->
+        <div class="planner-tasks-grid" id="planner-tasks-container">
+          <!-- 动态渲染 7 大核心题型卡片 -->
+        </div>
+
+        <!-- 历史达成记录与打卡日历卡片 -->
+        <div class="card" style="margin-top: 24px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 1.25rem;">🏆</span>
+              <h3 style="font-size: 1.05rem; font-weight: 800; color: #0f172a; margin: 0;">每日达成历史档案 (打卡记录)</h3>
+            </div>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <button class="nav-btn" onclick="clearPlannerHistory()" style="font-size: 0.78rem; color: #dc2626; border-color: #fca5a5;">
+                🗑️ 清空历史记录
+              </button>
+            </div>
+          </div>
+          <div id="planner-history-container" style="display: flex; flex-direction: column; gap: 10px;">
+            <!-- 动态渲染历史打卡记录 -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 模块 4: PTE 考试总览 (全题型权重与考场拆解) -->
     <div id="module-view-overview" class="module-view" style="display: none;">
       <div id="tab-score-explorer" class="card" style="display: block; margin-top: 0;">
         <!-- 顶部标题 -->
@@ -1916,7 +2340,7 @@
       const isExistingUser = !!legacyLogs;
       const initialName = isExistingUser ? "Xudong Zhu" : "新学员";
       const initialAvatar = isExistingUser ? "🧑‍💻" : "🎓";
-      const initialExamDate = localStorage.getItem("pte_exam_date") || "2026-10-20";
+      const initialExamDate = localStorage.getItem("pte_exam_date") || "2026-11-11";
       const initialExamTarget = localStorage.getItem("pte_exam_target") || "目标：总分 57+ · 各项 50+";
 
       list = [{
@@ -2045,6 +2469,7 @@
     if (hTab && hTab.style.display !== "none") renderHistoryView();
 
     const activeP = getActiveProfile();
+    if (typeof renderPlannerView === "function") renderPlannerView();
     showToast("👤 已切换至学员档案：" + activeP.avatar + " " + activeP.name);
     renderProfilesListModal();
   }
@@ -2066,7 +2491,7 @@
       name: name,
       avatar: avatar,
       createdAt: new Date().toISOString(),
-      examDate: "2026-10-20",
+      examDate: "2026-11-11",
       examTarget: "目标：485工签最新法条 LIN 25/089 (总分55 · 听40/读42/写41/说39 · 1年有效)"
     };
 
@@ -2077,7 +2502,7 @@
     localStorage.setItem("pte_wfd_logs_" + newId, "[]");
     localStorage.setItem("pte_wfd_qstats_" + newId, "{}");
     localStorage.setItem("pte_wfd_vocab_" + newId, "[]");
-    localStorage.setItem("pte_exam_date_" + newId, "2026-10-20");
+    localStorage.setItem("pte_exam_date_" + newId, "2026-11-11");
     localStorage.setItem("pte_exam_target_" + newId, "目标：485工签最新法条 LIN 25/089 (总分55 · 听40/读42/写41/说39 · 1年有效)");
 
     if (nameInput) nameInput.value = "";
@@ -2536,6 +2961,9 @@
       timeStr: timeStr
     };
     practiceLogs.unshift(logEntry); // 最新排在最前
+    if (typeof incrementDailyPracticeCount === "function") {
+      incrementDailyPracticeCount("WFD", 1);
+    }
 
     // 限制最大存储条数（防止 localStorage 溢出）
     if (practiceLogs.length > 500) practiceLogs.pop();
@@ -3503,7 +3931,7 @@
     if (activeBtn) activeBtn.classList.add("active");
 
     // 2. 切换主模块视图可见性
-    const modules = ["wfd", "karaoke", "overview"];
+    const modules = ["wfd", "karaoke", "planner", "overview"];
     modules.forEach(m => {
       const el = document.getElementById("module-view-" + m);
       if (el) el.style.display = (m === moduleName) ? "block" : "none";
@@ -3518,6 +3946,9 @@
       if (iframe && (!iframe.src || iframe.src === "about:blank")) {
         iframe.src = "speaking_karaoke.html";
       }
+    } else if (moduleName === "planner") {
+      stopCurrentAudio();
+      renderPlannerView();
     } else if (moduleName === "overview") {
       stopCurrentAudio();
       renderTaskList();
@@ -3534,10 +3965,400 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+
+  // =========================================================================
+  // 🎯 PTE 每日练题目标与实战打卡看板引擎 (Planner & Tracker Engine)
+  // =========================================================================
+
+  const PLANNER_TASK_DEFS = [
+    { key: "DI", name: "DI 描述图像", english: "Describe Image", weight: "口语 31% · 全科 15%", unit: "题", category: "speaking", desc: "口语第一大题，模板流利度第一" },
+    { key: "RS", name: "RS 句子复述", english: "Repeat Sentence", weight: "口语 16% + 听力 17%", unit: "题", category: "speaking", desc: "听口双命脉，Chunk 意群流利不回读" },
+    { key: "SGD", name: "SGD 讨论总结", english: "Summarize Group Discussion", weight: "口语 19% + 听力 20%", unit: "题", category: "speaking", desc: "新题型主力，抓 2-3 观点套模板" },
+    { key: "RA", name: "RA 大声朗读", english: "Read Aloud", weight: "口语 9% · 全科 4%", unit: "题", category: "speaking", desc: "意群断句呼吸，防喷麦，强化发音" },
+    { key: "WFD", name: "WFD 听写句子", english: "Write From Dictation", weight: "写作 23% + 听力 13%", unit: "题", category: "listening", desc: "全场命门，刷透双机构预测库 (系统做题自动累计)" },
+    { key: "FIB_D", name: "FIB-D 阅读填空", english: "Reading Dropdown", weight: "阅读 25% · 全科 7%", unit: "篇", category: "reading", desc: "阅读第一大题，学术高频搭配感知" },
+    { key: "WE_SWT", name: "WE / SWT 写作", english: "Write Essay & Summarize Text", weight: "写作 59% (WE 31% + SWT 28%)", unit: "篇", category: "writing", desc: "万能模板防错，打字 0 拼写手误" }
+  ];
+
+  const PLANNER_PRESETS = {
+    competent: { DI: 4, RS: 20, SGD: 2, RA: 4, WFD: 30, FIB_D: 3, WE_SWT: 1 },
+    "485": { DI: 3, RS: 15, SGD: 0, RA: 3, WFD: 25, FIB_D: 2, WE_SWT: 1 },
+    proficient: { DI: 6, RS: 35, SGD: 4, RA: 6, WFD: 40, FIB_D: 5, WE_SWT: 2 },
+    reset: { DI: 0, RS: 0, SGD: 0, RA: 0, WFD: 0, FIB_D: 0, WE_SWT: 0 }
+  };
+
+  function getPlannerTodayDateStr() {
+    const d = new Date();
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, "0");
+    const day = String(d.getDate()).padStart(2, "0");
+    return y + "-" + m + "-" + day;
+  }
+
+  function getPlannerGoals() {
+    const pid = getActiveProfileId();
+    const key = "pte_planner_goals_" + pid;
+    try {
+      const saved = localStorage.getItem(key);
+      if (saved) return JSON.parse(saved);
+    } catch(e) {}
+    return Object.assign({}, PLANNER_PRESETS.competent);
+  }
+
+  function savePlannerGoals(goals) {
+    const pid = getActiveProfileId();
+    localStorage.setItem("pte_planner_goals_" + pid, JSON.stringify(goals));
+  }
+
+  function getPlannerTodayActuals() {
+    const pid = getActiveProfileId();
+    const today = getPlannerTodayDateStr();
+    const key = "pte_planner_act_" + pid + "_" + today;
+    try {
+      const saved = localStorage.getItem(key);
+      if (saved) return JSON.parse(saved);
+    } catch(e) {}
+    return { DI: 0, RS: 0, SGD: 0, RA: 0, WFD: 0, FIB_D: 0, WE_SWT: 0 };
+  }
+
+  function savePlannerTodayActuals(acts) {
+    const pid = getActiveProfileId();
+    const today = getPlannerTodayDateStr();
+    const key = "pte_planner_act_" + pid + "_" + today;
+    localStorage.setItem(key, JSON.stringify(acts));
+  }
+
+  function getPlannerHistory() {
+    const pid = getActiveProfileId();
+    const key = "pte_planner_hist_" + pid;
+    try {
+      const saved = localStorage.getItem(key);
+      if (saved) return JSON.parse(saved);
+    } catch(e) {}
+    return [];
+  }
+
+  function savePlannerHistory(hist) {
+    const pid = getActiveProfileId();
+    localStorage.setItem("pte_planner_hist_" + pid, JSON.stringify(hist));
+  }
+
+  function updateTargetCount(taskKey, val) {
+    let num = parseInt(val, 10);
+    if (isNaN(num) || num < 0) num = 0;
+    const goals = getPlannerGoals();
+    goals[taskKey] = num;
+    savePlannerGoals(goals);
+    renderPlannerView();
+    showToast("🎯 已更新 " + taskKey + " 目标为 " + num + " 题");
+  }
+
+  function updateActualCount(taskKey, val) {
+    let num = parseInt(val, 10);
+    if (isNaN(num) || num < 0) num = 0;
+    const acts = getPlannerTodayActuals();
+    acts[taskKey] = num;
+    savePlannerTodayActuals(acts);
+    renderPlannerView();
+    checkDailyAutoCompletion(false);
+  }
+
+  function stepActualCount(taskKey, delta) {
+    const acts = getPlannerTodayActuals();
+    let cur = acts[taskKey] || 0;
+    cur = Math.max(0, cur + delta);
+    acts[taskKey] = cur;
+    savePlannerTodayActuals(acts);
+    renderPlannerView();
+    checkDailyAutoCompletion(false);
+  }
+
+  function incrementDailyPracticeCount(taskKey, delta) {
+    const acts = getPlannerTodayActuals();
+    acts[taskKey] = (acts[taskKey] || 0) + (delta || 1);
+    savePlannerTodayActuals(acts);
+    if (currentAppModule === "planner") {
+      renderPlannerView();
+    }
+    checkDailyAutoCompletion(false);
+  }
+
+  function applyPresetPlan(presetKey) {
+    const preset = PLANNER_PRESETS[presetKey];
+    if (!preset) return;
+    if (presetKey === "reset") {
+      if (!confirm("确定要将今日各题型的目标与实际练题数全部归零吗？")) return;
+      savePlannerGoals(Object.assign({}, preset));
+      savePlannerTodayActuals(Object.assign({}, preset));
+      showToast("🔄 今日练题数据已归零");
+    } else {
+      savePlannerGoals(Object.assign({}, preset));
+      showToast("⚡ 已套用预设方案：" + (presetKey === "competent" ? "Competent 54+ 冲刺" : (presetKey === "485" ? "485 工签保底" : "七炸 65+ 挑战")));
+    }
+    renderPlannerView();
+  }
+
+  function calculateStreakDays(hist) {
+    if (!hist || hist.length === 0) return 0;
+    const today = getPlannerTodayDateStr();
+    let streak = 0;
+    let expectedDate = new Date();
+    
+    // 检查今天是否达成
+    const todayRecord = hist.find(h => h.date === today);
+    if (!todayRecord || !todayRecord.allDone) {
+      // 如果今天还没全达成，检查昨天是否达成
+      expectedDate.setDate(expectedDate.getDate() - 1);
+    }
+    
+    while (true) {
+      const y = expectedDate.getFullYear();
+      const m = String(expectedDate.getMonth() + 1).padStart(2, "0");
+      const d = String(expectedDate.getDate()).padStart(2, "0");
+      const ds = y + "-" + m + "-" + d;
+      const rec = hist.find(h => h.date === ds);
+      if (rec && rec.allDone) {
+        streak++;
+        expectedDate.setDate(expectedDate.getDate() - 1);
+      } else {
+        break;
+      }
+    }
+    return streak;
+  }
+
+  function checkDailyAutoCompletion(isManualClick) {
+    const goals = getPlannerGoals();
+    const acts = getPlannerTodayActuals();
+    const today = getPlannerTodayDateStr();
+    
+    let totalTarget = 0;
+    let totalActual = 0;
+    let validItems = 0;
+    let completedItems = 0;
+
+    PLANNER_TASK_DEFS.forEach(t => {
+      const target = goals[t.key] || 0;
+      const act = acts[t.key] || 0;
+      totalTarget += target;
+      totalActual += act;
+      if (target > 0) {
+        validItems++;
+        if (act >= target) completedItems++;
+      }
+    });
+
+    const isAllDone = (validItems > 0 && completedItems === validItems);
+    const hist = getPlannerHistory();
+    let rec = hist.find(h => h.date === today);
+
+    if (!rec) {
+      rec = {
+        date: today,
+        allDone: isAllDone,
+        completedItems: completedItems,
+        validItems: validItems,
+        totalActual: totalActual,
+        details: Object.assign({}, acts),
+        recordedAt: new Date().toLocaleTimeString()
+      };
+      hist.unshift(rec);
+    } else {
+      rec.allDone = isAllDone;
+      rec.completedItems = completedItems;
+      rec.validItems = validItems;
+      rec.totalActual = totalActual;
+      rec.details = Object.assign({}, acts);
+      rec.recordedAt = new Date().toLocaleTimeString();
+    }
+
+    if (hist.length > 60) hist.pop();
+    savePlannerHistory(hist);
+
+    if (isAllDone && (isManualClick || !rec.celebrated)) {
+      rec.celebrated = true;
+      savePlannerHistory(hist);
+      const streak = calculateStreakDays(hist);
+      showToast("🎉 恭喜！今日备考任务全部圆满达成！连续达成 " + streak + " 天！🏆");
+    } else if (isManualClick) {
+      showToast("📝 今日打卡记录已更新保存！已完成 " + completedItems + "/" + validItems + " 项");
+    }
+    renderPlannerHistoryList();
+  }
+
+  function confirmManualFinishDay() {
+    checkDailyAutoCompletion(true);
+  }
+
+  function clearPlannerHistory() {
+    if (!confirm("确定要清空全部历史打卡记录吗？此操作不可撤销。")) return;
+    savePlannerHistory([]);
+    renderPlannerView();
+    showToast("🗑️ 历史打卡记录已清空");
+  }
+
+  function renderPlannerView() {
+    const goals = getPlannerGoals();
+    const acts = getPlannerTodayActuals();
+    const hist = getPlannerHistory();
+    const today = getPlannerTodayDateStr();
+
+    // 1. 顶部日期与连续打卡徽章
+    const dateText = document.getElementById("planner-today-date-text");
+    if (dateText) {
+      const activeP = getActiveProfile();
+      dateText.innerText = "📅 今日打卡：" + today + " · 当前学员：" + activeP.avatar + " " + activeP.name;
+    }
+
+    const streak = calculateStreakDays(hist);
+    const streakBadge = document.getElementById("planner-streak-badge");
+    if (streakBadge) {
+      streakBadge.innerHTML = "🔥 连续达成 " + streak + " 天";
+    }
+
+    // 2. 统计指标计算
+    let totalTarget = 0;
+    let totalActual = 0;
+    let validItems = 0;
+    let completedItems = 0;
+
+    PLANNER_TASK_DEFS.forEach(t => {
+      const target = goals[t.key] || 0;
+      const act = acts[t.key] || 0;
+      totalTarget += target;
+      totalActual += act;
+      if (target > 0) {
+        validItems++;
+        if (act >= target) completedItems++;
+      }
+    });
+
+    const completionRate = validItems > 0 ? Math.round((completedItems / validItems) * 100) : 0;
+    const rateEl = document.getElementById("planner-stat-completion-rate");
+    const itemsEl = document.getElementById("planner-stat-completed-items");
+    const totalActEl = document.getElementById("planner-stat-total-practiced");
+    const cdEl = document.getElementById("planner-stat-countdown");
+
+    if (rateEl) {
+      rateEl.innerText = completionRate + "%";
+      rateEl.style.color = (completionRate === 100) ? "#4ade80" : "#38bdf8";
+    }
+    if (itemsEl) itemsEl.innerText = completedItems + " / " + (validItems || 7);
+    if (totalActEl) totalActEl.innerText = totalActual + " 题";
+    if (cdEl) {
+      const days = getCountdownDays();
+      cdEl.innerText = (days > 0 ? "倒计时 " + days + " 天" : (days === 0 ? "今天考试！" : "已考完"));
+    }
+
+    // 3. 渲染 7 大题型卡片
+    const container = document.getElementById("planner-tasks-container");
+    if (container) {
+      let cardsHtml = "";
+      PLANNER_TASK_DEFS.forEach(t => {
+        const target = goals[t.key] || 0;
+        const act = acts[t.key] || 0;
+        const isDone = (target > 0 && act >= target);
+        const percent = target > 0 ? Math.min(100, Math.round((act / target) * 100)) : (act > 0 ? 100 : 0);
+
+        cardsHtml += '<div class="planner-task-card ' + (isDone ? 'is-completed' : '') + '">' +
+          '<div>' +
+            '<div class="planner-task-header">' +
+              '<div>' +
+                '<div style="display: flex; align-items: center; gap: 6px; margin-bottom: 2px;">' +
+                  '<strong style="font-size: 0.95rem; color: #0f172a;">' + t.name + '</strong>' +
+                  '<span class="planner-task-badge ' + t.category + '">' + t.weight + '</span>' +
+                '</div>' +
+                '<div style="font-size: 0.73rem; color: #64748b;">' + t.desc + '</div>' +
+              '</div>' +
+              '<div>' +
+                (isDone ? '<span class="status-tag status-perfect" style="font-size: 0.72rem; padding: 2px 8px; border-radius: 9999px;">✅ 已达成</span>' : 
+                 (target > 0 ? '<span style="font-size: 0.72rem; color: #ea580c; background: #fff7ed; padding: 2px 7px; border-radius: 9999px; border: 1px solid #fed7aa; font-weight: 600;">还差 ' + (target - act) + ' ' + t.unit + '</span>' : '<span style="font-size: 0.72rem; color: #94a3b8;">未设定</span>')) +
+              '</div>' +
+            '</div>' +
+            '<div class="planner-progress-box">' +
+              '<div class="planner-progress-meta">' +
+                '<span>进度: <strong>' + act + '</strong> / ' + target + ' ' + t.unit + '</span>' +
+                '<span>' + percent + '%</span>' +
+              '</div>' +
+              '<div class="planner-progress-track">' +
+                '<div class="planner-progress-bar ' + (isDone ? 'done' : '') + '" style="width: ' + percent + '%;"></div>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="planner-inputs-box">' +
+            '<div class="planner-inputs-cols">' +
+              '<div class="planner-input-field">' +
+                '<label>🎯 目标题数</label>' +
+                '<input type="number" min="0" class="planner-num-input" value="' + target + '" onchange="updateTargetCount(&apos;' + t.key + '&apos;, this.value)">' +
+              '</div>' +
+              '<div class="planner-input-field">' +
+                '<label>✍️ 今日已练</label>' +
+                '<input type="number" min="0" class="planner-num-input" value="' + act + '" onchange="updateActualCount(&apos;' + t.key + '&apos;, this.value)">' +
+              '</div>' +
+            '</div>' +
+            '<div class="planner-quick-btns">' +
+              '<button type="button" class="planner-btn-step" onclick="stepActualCount(&apos;' + t.key + '&apos;, -1)" title="已练 -1">-1</button>' +
+              '<button type="button" class="planner-btn-step add" onclick="stepActualCount(&apos;' + t.key + '&apos;, 1)" title="已练 +1">+1</button>' +
+              '<button type="button" class="planner-btn-step add" onclick="stepActualCount(&apos;' + t.key + '&apos;, 5)" title="已练 +5">+5</button>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+      });
+      container.innerHTML = cardsHtml;
+    }
+
+    renderPlannerHistoryList();
+  }
+
+  function renderPlannerHistoryList() {
+    const hist = getPlannerHistory();
+    const container = document.getElementById("planner-history-container");
+    if (!container) return;
+
+    if (!hist || hist.length === 0) {
+      container.innerHTML = '<div style="text-align: center; color: #94a3b8; font-size: 0.82rem; padding: 24px; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 8px;">暂无历史打卡记录。今天完成练题后点击上方「✨ 确认今日打卡完成」即可生成首张勋章卡！</div>';
+      return;
+    }
+
+    let html = "";
+    hist.slice(0, 15).forEach(rec => {
+      const rate = rec.validItems > 0 ? Math.round((rec.completedItems / rec.validItems) * 100) : 0;
+      let detailPills = "";
+      if (rec.details) {
+        Object.keys(rec.details).forEach(k => {
+          if (rec.details[k] > 0) {
+            detailPills += '<span style="font-size: 0.7rem; background: #f1f5f9; color: #334155; padding: 2px 6px; border-radius: 4px; border: 1px solid #e2e8f0;">' + k + ': ' + rec.details[k] + '</span> ';
+          }
+        });
+      }
+
+      html += '<div class="planner-history-item ' + (rec.allDone ? 'all-done' : '') + '">' +
+        '<div style="display: flex; align-items: center; gap: 10px;">' +
+          '<div style="font-size: 1.5rem;">' + (rec.allDone ? '🏆' : '📝') + '</div>' +
+          '<div>' +
+            '<div style="display: flex; align-items: center; gap: 8px;">' +
+              '<strong style="font-size: 0.9rem; color: #0f172a;">' + rec.date + '</strong>' +
+              (rec.allDone ? '<span class="status-tag status-perfect" style="font-size: 0.68rem; padding: 1px 6px;">100% 满贯达成</span>' : '<span style="font-size: 0.68rem; color: #ea580c; background: #fff7ed; padding: 1px 6px; border-radius: 4px; border: 1px solid #fed7aa;">达成率 ' + rate + '%</span>') +
+            '</div>' +
+            '<div style="font-size: 0.74rem; color: #64748b; margin-top: 3px;">' +
+              '达成 ' + rec.completedItems + '/' + rec.validItems + ' 项 · 总计完成 ' + (rec.totalActual || 0) + ' 题' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div style="display: flex; gap: 4px; flex-wrap: wrap; align-items: center;">' +
+          detailPills +
+        '</div>' +
+      '</div>';
+    });
+    container.innerHTML = html;
+  }
+
   function initModuleRouting() {
     const hash = (window.location.hash || "").replace("#", "").toLowerCase();
     if (hash === "karaoke" || hash === "speaking") {
       switchAppModule("karaoke");
+    } else if (hash === "planner" || hash === "tracker" || hash === "plan") {
+      switchAppModule("planner");
     } else if (hash === "overview" || hash === "score-explorer" || hash === "scoring") {
       switchAppModule("overview");
     } else {
@@ -3549,7 +4370,7 @@
     const pid = getActiveProfileId();
     const list = getProfilesList();
     const p = list.find(item => item.id === pid);
-    return (p && p.examDate) || localStorage.getItem("pte_exam_date_" + pid) || localStorage.getItem("pte_exam_date") || "2026-10-20";
+    return (p && p.examDate) || localStorage.getItem("pte_exam_date_" + pid) || localStorage.getItem("pte_exam_date") || "2026-11-11";
   }
 
   function getExamTarget() {
@@ -3762,6 +4583,7 @@
 
   window.addEventListener("hashchange", () => {
     initModuleRouting();
+    if (typeof renderPlannerView === "function") renderPlannerView();
   });
 
   function switchTab(mode) {
@@ -7068,7 +7890,7 @@
           <span id="exam-modal-preview-days" style="padding: 6px 12px; background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; border-radius: 8px; font-weight: 700; font-size: 0.84rem; white-space: nowrap;">剩余 -- 天</span>
         </div>
         <div style="display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap;">
-          <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px; background: #fff7ed; color: #c2410c; border-color: #fed7aa;" onclick="setExamDateQuick('2026-10-20')">原定考期 (2026-10-20)</button>
+          <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px; background: #fff7ed; color: #c2410c; border-color: #fed7aa;" onclick="setExamDateQuick('2026-11-11')">原定考期 (2026-11-11)</button>
           <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px;" onclick="setExamDateOffset(7)">+7天 (一周后)</button>
           <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px;" onclick="setExamDateOffset(14)">+14天 (两周后)</button>
           <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px;" onclick="setExamDateOffset(30)">+30天 (一个月后)</button>
@@ -7251,7 +8073,7 @@
                 <span style="font-weight: 800; font-size: 1.05rem; color: #0f172a;" id="active-profile-card-name">Xudong Zhu</span>
                 <span class="status-tag status-perfect" style="font-size: 0.72rem; padding: 2px 6px;">● 当前使用中</span>
               </div>
-              <div style="font-size: 0.78rem; color: #475569; margin-top: 2px;" id="active-profile-card-meta">目标: 57+ · 考期: 2026-10-20</div>
+              <div style="font-size: 0.78rem; color: #475569; margin-top: 2px;" id="active-profile-card-meta">目标: 57+ · 考期: 2026-11-11</div>
             </div>
           </div>
           <button class="nav-btn" onclick="toggleEditCurrentProfile()" style="font-size: 0.8rem; padding: 5px 10px; background: white; border-color: #86efac; color: #15803d; font-weight: 600;">
