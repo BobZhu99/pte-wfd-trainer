@@ -16407,14 +16407,14 @@
     "index": 263,
     "raw_index": 263,
     "ultra_index": null,
-    "qid": "M121021",
-    "sentence": "Calculators may not be used in this examination.",
+    "qid": "M121584",
+    "sentence": "The history department is very active in research.",
     "word_count": 8,
-    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459361858807959554.m4a",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459338326057193473.m4a",
     "audios": [
       {
-        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459361858807959554.m4a",
-        "questionId": "melon_121021",
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459338326057193473.m4a",
+        "questionId": "melon_121584",
         "title": "🍉 大西瓜原声",
         "type": 10
       }
@@ -16427,125 +16427,21 @@
       "tagRepeat": false,
       "tagNew": true,
       "tagDaily": false,
-      "tagShared": true,
+      "tagShared": false,
       "tagMelon106": true
     },
-    "translation": "在这次考试中不可以使用计算器。",
+    "translation": "历史系在研究方面很活跃。",
     "is_ultra": false,
-    "melon_qid": "121021",
-    "melon_sentence": "Calculators may not be used in this examination.",
+    "melon_qid": "121584",
+    "melon_sentence": "The history department is very active in research.",
     "trial_words": [],
-    "is_overlap": true,
-    "is_melon_106": true
+    "is_overlap": false,
+    "is_melon_106": true,
+    "is_melon_exclusive": true
   },
   {
     "index": 264,
     "raw_index": 264,
-    "ultra_index": null,
-    "qid": "M121235",
-    "sentence": "A world-renowned finance director will give a guest lecture.",
-    "word_count": 9,
-    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459363286515486721.m4a",
-    "audios": [
-      {
-        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459363286515486721.m4a",
-        "questionId": "melon_121235",
-        "title": "🍉 大西瓜原声",
-        "type": 10
-      }
-    ],
-    "tags": {
-      "degree": 2,
-      "isSimilar": null,
-      "isJJ": 1,
-      "tagHigh": false,
-      "tagRepeat": false,
-      "tagNew": true,
-      "tagDaily": false,
-      "tagShared": true,
-      "tagMelon106": true
-    },
-    "translation": "一位世界知名的金融(财务管理)总监(专家)将进行一场客座讲座。",
-    "is_ultra": false,
-    "melon_qid": "121235",
-    "melon_sentence": "A world-renowned finance director will give a guest lecture.",
-    "trial_words": [],
-    "is_overlap": true,
-    "is_melon_106": true
-  },
-  {
-    "index": 265,
-    "raw_index": 265,
-    "ultra_index": null,
-    "qid": "M121428",
-    "sentence": "Our facilities include five libraries across the university.",
-    "word_count": 8,
-    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1735226253461446658.m4a",
-    "audios": [
-      {
-        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1735226253461446658.m4a",
-        "questionId": "melon_121428",
-        "title": "🍉 大西瓜原声",
-        "type": 10
-      }
-    ],
-    "tags": {
-      "degree": 2,
-      "isSimilar": null,
-      "isJJ": 1,
-      "tagHigh": false,
-      "tagRepeat": false,
-      "tagNew": true,
-      "tagDaily": false,
-      "tagShared": true,
-      "tagMelon106": true
-    },
-    "translation": "我们的设施包括大学里的五个图书馆。",
-    "is_ultra": false,
-    "melon_qid": "121428",
-    "melon_sentence": "Our facilities include five libraries across the university.",
-    "trial_words": [],
-    "is_overlap": true,
-    "is_melon_106": true
-  },
-  {
-    "index": 266,
-    "raw_index": 266,
-    "ultra_index": null,
-    "qid": "M121456",
-    "sentence": "Practical experiments are a vital part of legal training.",
-    "word_count": 9,
-    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1871417206919716865.m4a",
-    "audios": [
-      {
-        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1871417206919716865.m4a",
-        "questionId": "melon_121456",
-        "title": "🍉 大西瓜原声",
-        "type": 10
-      }
-    ],
-    "tags": {
-      "degree": 2,
-      "isSimilar": null,
-      "isJJ": 1,
-      "tagHigh": false,
-      "tagRepeat": false,
-      "tagNew": true,
-      "tagDaily": false,
-      "tagShared": true,
-      "tagMelon106": true
-    },
-    "translation": "实践实验是化学/法律课程训练的中心/重要部分。",
-    "is_ultra": false,
-    "melon_qid": "121456",
-    "melon_sentence": "Practical experiments are a vital part of legal training.",
-    "trial_words": [],
-    "is_overlap": true,
-    "is_melon_106": true
-  },
-  {
-    "index": 267,
-    "raw_index": 267,
     "ultra_index": null,
     "qid": "M121470",
     "sentence": "Relying on natural ability will not get you far on science.",
@@ -16567,7 +16463,7 @@
       "tagRepeat": false,
       "tagNew": true,
       "tagDaily": false,
-      "tagShared": true,
+      "tagShared": false,
       "tagMelon106": true
     },
     "translation": "依靠天赋的能力，在科学上，不会让你走得很远。",
@@ -16575,21 +16471,22 @@
     "melon_qid": "121470",
     "melon_sentence": "Relying on natural ability will not get you far on science.",
     "trial_words": [],
-    "is_overlap": true,
-    "is_melon_106": true
+    "is_overlap": false,
+    "is_melon_106": true,
+    "is_melon_exclusive": true
   },
   {
-    "index": 268,
-    "raw_index": 268,
+    "index": 265,
+    "raw_index": 265,
     "ultra_index": null,
-    "qid": "M121584",
-    "sentence": "The history department is very active in research.",
-    "word_count": 8,
-    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459338326057193473.m4a",
+    "qid": "M121456",
+    "sentence": "Practical experiments are a vital part of legal training.",
+    "word_count": 9,
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1871417206919716865.m4a",
     "audios": [
       {
-        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459338326057193473.m4a",
-        "questionId": "melon_121584",
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1871417206919716865.m4a",
+        "questionId": "melon_121456",
         "title": "🍉 大西瓜原声",
         "type": 10
       }
@@ -16602,15 +16499,124 @@
       "tagRepeat": false,
       "tagNew": true,
       "tagDaily": false,
-      "tagShared": true,
+      "tagShared": false,
       "tagMelon106": true
     },
-    "translation": "历史系在研究方面很活跃。",
+    "translation": "实践实验是化学/法律课程训练的中心/重要部分。",
     "is_ultra": false,
-    "melon_qid": "121584",
-    "melon_sentence": "The history department is very active in research.",
+    "melon_qid": "121456",
+    "melon_sentence": "Practical experiments are a vital part of legal training.",
     "trial_words": [],
-    "is_overlap": true,
-    "is_melon_106": true
+    "is_overlap": false,
+    "is_melon_106": true,
+    "is_melon_exclusive": true
+  },
+  {
+    "index": 266,
+    "raw_index": 266,
+    "ultra_index": null,
+    "qid": "M121428",
+    "sentence": "Our facilities include five libraries across the university.",
+    "word_count": 8,
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1735226253461446658.m4a",
+    "audios": [
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1735226253461446658.m4a",
+        "questionId": "melon_121428",
+        "title": "🍉 大西瓜原声",
+        "type": 10
+      }
+    ],
+    "tags": {
+      "degree": 2,
+      "isSimilar": null,
+      "isJJ": 1,
+      "tagHigh": false,
+      "tagRepeat": false,
+      "tagNew": true,
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": true
+    },
+    "translation": "我们的设施包括大学里的五个图书馆。",
+    "is_ultra": false,
+    "melon_qid": "121428",
+    "melon_sentence": "Our facilities include five libraries across the university.",
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": true,
+    "is_melon_exclusive": true
+  },
+  {
+    "index": 267,
+    "raw_index": 267,
+    "ultra_index": null,
+    "qid": "M121235",
+    "sentence": "A world-renowned finance director will give a guest lecture.",
+    "word_count": 9,
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459363286515486721.m4a",
+    "audios": [
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459363286515486721.m4a",
+        "questionId": "melon_121235",
+        "title": "🍉 大西瓜原声",
+        "type": 10
+      }
+    ],
+    "tags": {
+      "degree": 2,
+      "isSimilar": null,
+      "isJJ": 1,
+      "tagHigh": false,
+      "tagRepeat": false,
+      "tagNew": true,
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": true
+    },
+    "translation": "一位世界知名的金融(财务管理)总监(专家)将进行一场客座讲座。",
+    "is_ultra": false,
+    "melon_qid": "121235",
+    "melon_sentence": "A world-renowned finance director will give a guest lecture.",
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": true,
+    "is_melon_exclusive": true
+  },
+  {
+    "index": 268,
+    "raw_index": 268,
+    "ultra_index": null,
+    "qid": "M121021",
+    "sentence": "Calculators may not be used in this examination.",
+    "word_count": 8,
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459361858807959554.m4a",
+    "audios": [
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459361858807959554.m4a",
+        "questionId": "melon_121021",
+        "title": "🍉 大西瓜原声",
+        "type": 10
+      }
+    ],
+    "tags": {
+      "degree": 2,
+      "isSimilar": null,
+      "isJJ": 1,
+      "tagHigh": false,
+      "tagRepeat": false,
+      "tagNew": true,
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": true
+    },
+    "translation": "在这次考试中不可以使用计算器。",
+    "is_ultra": false,
+    "melon_qid": "121021",
+    "melon_sentence": "Calculators may not be used in this examination.",
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": true,
+    "is_melon_exclusive": true
   }
 ]
