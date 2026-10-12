@@ -1261,8 +1261,7 @@
     document.getElementById("modal-cross-desc").innerText = crossDesc;
 
     // 考场真实 UI
-    document.getElementById("modal-ui-flow").innerText = "【界面状态演进路线】
-" + task.uiDetail.statusFlow;
+    document.getElementById("modal-ui-flow").innerText = ["【界面状态演进路线】", task.uiDetail.statusFlow].join(String.fromCharCode(10));
     document.getElementById("modal-beep-rule").innerText = task.uiDetail.beepRule;
     document.getElementById("modal-three-sec-rule").innerText = task.uiDetail.threeSecRule;
     document.getElementById("modal-next-rule").innerText = task.uiDetail.nextRule;
