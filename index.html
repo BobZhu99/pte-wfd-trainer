@@ -1634,6 +1634,9 @@
             <button class="nav-btn" id="btn-header-countdown" onclick="openExamDateModal()" style="padding: 7px 13px; background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; font-weight: 700; font-size: 0.84rem; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;" title="点击自定义设置考期与目标">
               📅 <span id="header-countdown-text">考期倒计时: 计算中...</span> <span style="font-size: 0.75rem; color: #ea580c;">⚙️</span>
             </button>
+            <button class="nav-btn" id="btn-header-planner-entry" onclick="switchAppModule('planner')" style="padding: 7px 13px; background: #fef3c7; color: #92400e; border: 1.5px solid #fcd34d; font-weight: 800; font-size: 0.84rem; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 1px 4px rgba(217,119,6,0.15);" title="查看每日备考目标与逐题打卡看板">
+              📋 每日打卡 <span id="header-planner-badge" class="badge" style="background: #ea580c; color: white; border: none; padding: 1px 6px; font-size: 0.72rem;">0/7 项</span>
+            </button>
             <button class="nav-btn" id="btn-open-sync" onclick="openSyncModal()" style="padding: 7px 13px; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; font-weight: 600; font-size: 0.84rem; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;" title="管理手机/电脑多设备跨端数据同步与备份">
               ☁️ 跨设备云同步 <span class="sync-dot" id="sync-status-indicator"></span>
             </button>
@@ -1661,6 +1664,29 @@
       🍉🔥 <strong>双机构融合说明</strong>：已完整打通【🍉 大西瓜周二真题预测】与【🔥 萤火虫官方周预测】！强烈推荐优先刷<strong>【🍉🔥 大西瓜+萤火虫 (134题)】</strong>（两家共同收录的核心重合题，考场必遇），以及<strong>【🍉 106新题季 (140题)】</strong>（大西瓜命中率97%+必中计分题）！每题均已配备大西瓜原声或萤火虫原声，并附带 33 组考场机经变体试词建议！
     </div>
   </div>
+
+  <!-- 首页专属：今日备考任务逐题打卡快捷看板 (0/4 -> 1/4 极速打卡) -->
+  <div id="home-checkin-widget" class="home-checkin-box" style="background: white; border: 1.5px solid #fed7aa; border-radius: 14px; padding: 14px 18px; margin-bottom: 18px; box-shadow: 0 2px 10px rgba(234, 88, 12, 0.06);">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.35rem;">🎯</span>
+        <div>
+          <strong style="font-size: 0.98rem; color: #0f172a;">今日备考任务逐题打卡 (做完一题戳一下)</strong>
+          <span id="home-widget-summary-tag" style="font-size: 0.75rem; background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; padding: 2px 8px; border-radius: 9999px; font-weight: 700; margin-left: 6px;">已达标 0 / 7 项 · 累计打卡 0 题</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 6px; align-items: center;">
+        <button class="nav-btn" onclick="openPlannerSettingsModal()" style="font-size: 0.78rem; padding: 4px 10px; background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 700;">⚙️ 设置目标</button>
+        <button class="nav-btn" onclick="switchAppModule('planner')" style="font-size: 0.78rem; padding: 4px 10px; background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; font-weight: 700;">📋 完整大看板 ↗</button>
+      </div>
+    </div>
+    
+    <!-- 7大题型逐题打卡胶囊列表 (动态渲染) -->
+    <div id="home-checkin-items-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px;">
+      <!-- Dynamically populated -->
+    </div>
+  </div>
+
 
   <!-- 多模式题库范围切换条 (双机构 1:1 实时同步) -->
   <div class="bank-mode-container">
@@ -4526,6 +4552,76 @@
     showToast("🗑️ 历史打卡记录已清空");
   }
 
+  
+  // ---------------- 首页逐题打卡快捷看板渲染 ----------------
+  function renderHomeCheckinWidget() {
+    const goals = getPlannerGoals();
+    const acts = getPlannerTodayActuals();
+
+    let totalTarget = 0;
+    let totalActual = 0;
+    let validItems = 0;
+    let completedItems = 0;
+
+    PLANNER_TASK_DEFS.forEach(t => {
+      const target = goals[t.key] || 0;
+      const act = acts[t.key] || 0;
+      totalTarget += target;
+      totalActual += act;
+      if (target > 0) {
+        validItems++;
+        if (act >= target) completedItems++;
+      }
+    });
+
+    const sumTag = document.getElementById("home-widget-summary-tag");
+    if (sumTag) {
+      sumTag.innerText = "已达标 " + completedItems + " / " + (validItems || 7) + " 项 · 累计打卡 " + totalActual + " 题";
+      sumTag.style.background = (completedItems === validItems && validItems > 0) ? "#dcfce7" : "#fff7ed";
+      sumTag.style.color = (completedItems === validItems && validItems > 0) ? "#15803d" : "#ea580c";
+    }
+
+    const headerBadge = document.getElementById("header-planner-badge");
+    if (headerBadge) {
+      headerBadge.innerText = completedItems + "/" + (validItems || 7) + " 项";
+    }
+
+    const container = document.getElementById("home-checkin-items-grid");
+    if (!container) return;
+
+    let html = "";
+    PLANNER_TASK_DEFS.forEach(t => {
+      const target = goals[t.key] || 0;
+      const act = acts[t.key] || 0;
+      const isDone = (target > 0 && act >= target);
+      const percent = target > 0 ? Math.min(100, Math.round((act / target) * 100)) : (act > 0 ? 100 : 0);
+
+      html += '<div style="background: ' + (isDone ? '#f0fdf4' : '#f8fafc') + '; border: 1px solid ' + (isDone ? '#86efac' : '#e2e8f0') + '; border-radius: 10px; padding: 10px 12px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.15s;">' +
+        '<div>' +
+          '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">' +
+            '<strong style="font-size: 0.88rem; color: #0f172a;">' + t.name.split(" ")[0] + ' ' + t.english.split(" ")[0] + '</strong>' +
+            (isDone ? '<span style="font-size: 0.68rem; color: #16a34a; background: #dcfce7; padding: 1px 5px; border-radius: 4px; font-weight: 700;">✅ 达成</span>' : '<span style="font-size: 0.68rem; color: #64748b;">' + t.weight.split("·")[0].trim() + '</span>') +
+          '</div>' +
+          '<div style="display: flex; align-items: baseline; gap: 4px; margin-bottom: 6px;">' +
+            '<span style="font-size: 1.45rem; font-weight: 800; color: ' + (isDone ? '#16a34a' : '#0f172a') + ';">' + act + '</span>' +
+            '<span style="font-size: 0.88rem; color: #64748b; font-weight: 600;">/ ' + target + ' ' + t.unit + '</span>' +
+            '<span style="font-size: 0.72rem; color: #94a3b8; margin-left: auto;">' + percent + '%</span>' +
+          '</div>' +
+          '<div style="background: #e2e8f0; border-radius: 9999px; height: 5px; overflow: hidden; margin-bottom: 10px;">' +
+            '<div style="height: 100%; width: ' + percent + '%; background: ' + (isDone ? '#10b981' : '#3b82f6') + '; transition: width 0.2s;"></div>' +
+          '</div>' +
+        '</div>' +
+        '<div style="display: flex; gap: 4px;">' +
+          '<button type="button" onclick="checkinOneQuestion(&apos;' + t.key + '&apos;)" style="flex: 1; padding: 7px 6px; background: ' + (isDone ? '#10b981' : '#2563eb') + '; color: white; border: none; border-radius: 6px; font-weight: 800; font-size: 0.82rem; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">' +
+            '🔥 打卡 +1' +
+          '</button>' +
+          '<button type="button" onclick="stepActualCount(&apos;' + t.key + '&apos;, -1)" style="padding: 7px 8px; background: white; color: #64748b; border: 1px solid #cbd5e1; border-radius: 6px; font-weight: 700; font-size: 0.78rem; cursor: pointer;" title="撤销 1 题">-1</button>' +
+        '</div>' +
+      '</div>';
+    });
+    container.innerHTML = html;
+  }
+
   function renderPlannerView() {
     const goals = getPlannerGoals();
     const acts = getPlannerTodayActuals();
@@ -4650,6 +4746,7 @@
     }
 
     renderPlannerHistoryList();
+    renderHomeCheckinWidget();
   }
 
   function renderPlannerHistoryList() {
@@ -4926,6 +5023,7 @@
   window.addEventListener("hashchange", () => {
     initModuleRouting();
     if (typeof renderPlannerView === "function") renderPlannerView();
+    if (typeof renderHomeCheckinWidget === "function") renderHomeCheckinWidget();
   });
 
   function switchTab(mode) {
