@@ -25,6 +25,12 @@
         "questionId": "2c908087672b1edc01672e67ab0b000d",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1729708792813215745.m4a",
+        "questionId": "melon_122005",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -34,10 +40,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "教育水平与社会和经济背景有关。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122005",
+    "melon_sentence": "Educational level is found to be related to social and economic background.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 2,
@@ -77,6 +90,12 @@
         "questionId": "2c908087672b1edc01672e6e29330021",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459355550616686593.m4a",
+        "questionId": "melon_121009",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -86,10 +105,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "所有行业都是一个输入、处理、输出和反馈的系统。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121009",
+    "melon_sentence": "All industry systems consist of input and output processes and feedback.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 3,
@@ -123,6 +149,12 @@
         "questionId": "2c908087672b1edc01672e7067a90033",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1866446934303105026.m4a",
+        "questionId": "melon_122072",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -132,10 +164,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "我们的看法是，教育改革执行得不够充分。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122072",
+    "melon_sentence": "Our view is that all educational reforms have been inadequately implemented.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 4,
@@ -181,6 +220,12 @@
         "questionId": "b8b8ed8618d585b2046f3b04384e7ecd",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1463034835617476609.m4a",
+        "questionId": "melon_121412",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -190,10 +235,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "大多数科学家认为气候变化威胁地球上的生命。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121412",
+    "melon_sentence": "Most scientists believe that climate change threatens lives on the earth.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 5,
@@ -239,6 +291,12 @@
         "questionId": "2c908087672b1edc01672e70c0a60035",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459370212649373697.m4a",
+        "questionId": "melon_123002",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -248,10 +306,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "可持续发展虽然不容易，但是一项不可推卸的责任。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "123002",
+    "melon_sentence": "Although sustainable development is not easy, it is an unavoidable responsibility.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 6,
@@ -306,10 +371,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "消费者信心对销售有直接影响。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 7,
@@ -355,6 +427,12 @@
         "questionId": "2c908087672b1edc01672e7b5ae10084",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1549791681019187201.m4a",
+        "questionId": "melon_121031",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -364,10 +442,20 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "支持这一理论的令人信服的证据很难获得。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121031",
+    "melon_sentence": "Convincing evidence to support the/this theory is hard to obtain.",
+    "trial_words": [
+      "the",
+      "this"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 8,
@@ -413,6 +501,12 @@
         "questionId": "2c908087672b1edc01672e7cc9c30090",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459362199268003842.m4a",
+        "questionId": "melon_121034",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -422,10 +516,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "经济问题导致失业人数大幅增加。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121034",
+    "melon_sentence": "Economic problems caused a big rise in unemployment.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 9,
@@ -480,10 +581,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "我们将考察早期罗马共和国的学术实力。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 10,
@@ -529,6 +637,12 @@
         "questionId": "2c908087672b1edc01672e8518f500d0",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459412448539873282.mp3",
+        "questionId": "melon_121229",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -538,10 +652,20 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "我以为是穿过那个小会议室。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121229",
+    "melon_sentence": "I thought it was through/thrown (at) the small meeting room. （更新！）",
+    "trial_words": [
+      "through",
+      "thrown"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 11,
@@ -581,6 +705,12 @@
         "questionId": "2c908087672b1edc01672e8f6a12012f",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1469639676183736322.m4a",
+        "questionId": "melon_121059",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -590,10 +720,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "大多数大学教学仍然以讲座和研讨会的形式进行。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121059",
+    "melon_sentence": "Most university teaching takes place in lectures and seminars.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 12,
@@ -639,6 +776,12 @@
         "questionId": "2c908087672b1edc01672e9029d80137",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459413883822313473.mp3",
+        "questionId": "melon_122039",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -648,10 +791,20 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "母语者不用参加自己语言的测试。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122039",
+    "melon_sentence": "Native speakers are exempt from the language test/tests in their own language.",
+    "trial_words": [
+      "test",
+      "tests"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 13,
@@ -673,6 +826,12 @@
         "questionId": "2c908087672b1edc01672e917c870147",
         "title": "正常难度（女2）",
         "type": 2
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1602605587344924673.m4a",
+        "questionId": "melon_121063",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -682,10 +841,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "护士可以专攻临床工作或管理。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121063",
+    "melon_sentence": "Nurses specialize in clinical work and management.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 14,
@@ -731,6 +897,12 @@
         "questionId": "2c908087672b1edc01672e9397e50155",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260228/17722581526897436.m4a",
+        "questionId": "melon_122043",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -740,10 +912,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "在学术文献中，人们从不同的角度来思考组织层面的失败。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122043",
+    "melon_sentence": "Organizational failure is considered in various perspectives in academic literature.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 15,
@@ -789,6 +968,12 @@
         "questionId": "2c908087672b1edc01672e942afd015d",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459379925462061057.mp3",
+        "questionId": "melon_121070",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -798,10 +983,22 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "我们的教授正在主持商业发展会议。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121070",
+    "melon_sentence": "Our professor is hosting the/a business developing/development conference.",
+    "trial_words": [
+      "a",
+      "developing",
+      "development",
+      "the"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 16,
@@ -847,6 +1044,12 @@
         "questionId": "2c908087672b1edc01672e950d8d0167",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1463036215832899586.m4a",
+        "questionId": "melon_121071",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -856,10 +1059,20 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "包装对于吸引购买者的注意是非常重要的。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121071",
+    "melon_sentence": "Packaging is very important to attract the attention of buyers/a buyer.",
+    "trial_words": [
+      "a",
+      "buyers"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 17,
@@ -905,6 +1118,12 @@
         "questionId": "2c908087672b1edc01672e95e4260171",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1549796325778853890.m4a",
+        "questionId": "melon_122045",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -914,10 +1133,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "植物是能在陆地或水中生长的生物。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122045",
+    "melon_sentence": "Plants are the living things which (that) can grow on land or in water.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 18,
@@ -963,6 +1189,12 @@
         "questionId": "2c908087672b1edc01672e963ad20175",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1526565658848948225.m4a",
+        "questionId": "melon_121074",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -972,10 +1204,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "请查看网站上的开放时间。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121074",
+    "melon_sentence": "Please check the information on the website for the opening times.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 19,
@@ -1021,6 +1260,12 @@
         "questionId": "2c908087672b1edc01672ea620fa01ec",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459380386923581442.mp3",
+        "questionId": "melon_121090",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1030,10 +1275,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "科学家总是向政府要更多的钱。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121090",
+    "melon_sentence": "Scientists are always asking the government for more money.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 20,
@@ -1079,6 +1331,12 @@
         "questionId": "2c908087672b1edc01672eaec580021e",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458760680457945089.m4a",
+        "questionId": "melon_122054",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1088,10 +1346,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "统计结果应根据情况以不同的方式表示。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122054",
+    "melon_sentence": "Statistical results should be expressed in different ways depending on the circumstances.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 21,
@@ -1125,6 +1390,12 @@
         "questionId": "2c908087672b1edc01672eaf49e30226",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1549796609888423937.m4a",
+        "questionId": "melon_122050",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1134,10 +1405,23 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "建议你们在这个项目中使用多种研究方法。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122050",
+    "melon_sentence": "You/Students are advised(required) to use multiple research methods for/in this project.",
+    "trial_words": [
+      "for",
+      "in",
+      "required",
+      "students",
+      "you"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 22,
@@ -1183,6 +1467,12 @@
         "questionId": "ccf59a4568dda2f012597dcea336ebe8",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459370095858978817.m4a",
+        "questionId": "melon_122058",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1192,10 +1482,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "成功的学生有很好的学习策略。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122058",
+    "melon_sentence": "Students who are successful have a good strategy for learning.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 23,
@@ -1241,6 +1538,12 @@
         "questionId": "2c908087672b1edc01672eb3dce40256",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1610534254872162305.m4a",
+        "questionId": "melon_121100",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1250,10 +1553,20 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "纺织业在改善经济方面起着很大的作用。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121100",
+    "melon_sentence": "Textile manufacturing plays a large role in improving the economy/economies.",
+    "trial_words": [
+      "economies",
+      "economy"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 24,
@@ -1308,10 +1621,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "含有抗生素的食物几乎没有营养价值。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 25,
@@ -1357,6 +1677,12 @@
         "questionId": "2c908087672b1edc01672ed2361e02ef",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459390505459683329.mp3",
+        "questionId": "melon_121109",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1366,10 +1692,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "商业政策研讨会包括了一份在当地公司的实习（工作）。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121109",
+    "melon_sentence": "The business policy seminar includes an internship with a local firm.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 26,
@@ -1403,6 +1736,12 @@
         "questionId": "2c908087672b1edc01672ed28a5802f3",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1480761316628000769.m4a",
+        "questionId": "melon_122066",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1412,10 +1751,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "餐厅主打汤、沙拉、三明治、鸡肉和鱼。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122066",
+    "melon_sentence": "The cafeteria features soups, salads, sandwiches, chicken and fish.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 27,
@@ -1437,6 +1783,12 @@
         "questionId": "95c0258a8bd439e0790939429202d3c6",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1602604230785376258.m4a",
+        "questionId": "melon_121116",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1446,10 +1798,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "这门课程将帮助学生提高他们的发音技巧。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121116",
+    "melon_sentence": "The course helps students to improve their pronunciation skills.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 28,
@@ -1495,6 +1854,12 @@
         "questionId": "b7d855247110397af96f01d350a297c2",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1461234385658343426.m4a",
+        "questionId": "melon_121117",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1504,10 +1869,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "设计师们将在今天晚些时候完成这个设计图。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121117",
+    "melon_sentence": "The designers will complete the plan later today.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 29,
@@ -1547,6 +1919,12 @@
         "questionId": "2c908087672b1edc01672edc3560034b",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260227/17721625934969690.m4a",
+        "questionId": "melon_122073",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1556,10 +1934,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "教职工都很平易近人，友好，而且非常乐于助人。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122073",
+    "melon_sentence": "The faculty staff are very approachable, helpful and extremely friendly.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 30,
@@ -1593,6 +1978,12 @@
         "questionId": "2c908087672b1edc01672f1760b6042d",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459334490961776642.mp3",
+        "questionId": "melon_122087",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1602,10 +1993,19 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "那个新来的技术员在生物实验室里把显微镜摔了。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122087",
+    "melon_sentence": "The technician left (dropped) the new microscope in the biology lab.",
+    "trial_words": [
+      "dropped"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 31,
@@ -1651,6 +2051,12 @@
         "questionId": "af61d9d8f14da1403b83d18b24c02711",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459380865619496961.mp3",
+        "questionId": "melon_123024",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1660,10 +2066,20 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "这首乐器演奏的主题表现出了极为庄重的创作风格。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "123024",
+    "melon_sentence": "The theme of the instrumental work exhibited/exhibits more of a demure compositional style.",
+    "trial_words": [
+      "exhibited",
+      "exhibits"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 32,
@@ -1709,6 +2125,12 @@
         "questionId": "9cbdb4d183c8066a07a664e2c87706b6",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1840586416975831042.m4a",
+        "questionId": "melon_121168",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1718,10 +2140,21 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "来访的演讲人曾是这个系的讲师。  ",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121168",
+    "melon_sentence": "The visiting professor/guest (visitor) used to be the lecturer of this department（speaker from Canada？）.",
+    "trial_words": [
+      "guest",
+      "professor",
+      "visitor"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 33,
@@ -1767,6 +2200,12 @@
         "questionId": "2c908087672b1edc01672f2199880499",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459366268711768066.m4a",
+        "questionId": "melon_121430",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1776,10 +2215,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "我们的实验设备是免费的。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121430",
+    "melon_sentence": "Our laboratory equipment is provided free of charge.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 34,
@@ -1825,6 +2271,12 @@
         "questionId": "2c908087672b1edc01672f23c06f04b3",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459411106870104066.mp3",
+        "questionId": "melon_121192",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1834,10 +2286,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "在许多城市，交通是空气污染的主要原因。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121192",
+    "melon_sentence": "Traffic is the main cause of air pollution in many cities.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 35,
@@ -1871,6 +2330,12 @@
         "questionId": "2c908087672b1edc01672f245a6d04b9",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459379421818425346.mp3",
+        "questionId": "melon_121051",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1880,10 +2345,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "一起工作是非常有益的。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121051",
+    "melon_sentence": "It would be extremely beneficial to work together.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 36,
@@ -1929,6 +2401,12 @@
         "questionId": "2c908087672b1edc01672f25758204c7",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459368960385388545.m4a",
+        "questionId": "melon_121740",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1938,10 +2416,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "了解如何使用图书馆会节省你的时间。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121740",
+    "melon_sentence": "You have to learn how to use the library to save your time. 可能存在变体：Understanding how to use the",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 37,
@@ -1987,6 +2472,12 @@
         "questionId": "2c908087672b1edc01672f26a02704d1",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1465518123720404993.m4a",
+        "questionId": "melon_121195",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -1996,10 +2487,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "预计明年大学学费将会上涨。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121195",
+    "melon_sentence": "University fees are expected to increase next year.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 38,
@@ -2045,6 +2543,12 @@
         "questionId": "2c908087672b1edc01672f385da9053b",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1735333312655810561.m4a",
+        "questionId": "melon_122105",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2054,10 +2558,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "成为医学专家需要多年的训练。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122105",
+    "melon_sentence": "Years of training are required to become of a medical specialist.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 39,
@@ -2085,6 +2596,12 @@
         "questionId": "2c908087694c30cb01694d868d3400d8",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459370509861949442.m4a",
+        "questionId": "melon_123017",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2094,10 +2611,20 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "制造业现在雇佣的人比农业和渔业加起来还要多",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "123017",
+    "melon_sentence": "Manufacturing now brings/employs more people in than agriculture and fishing combined.",
+    "trial_words": [
+      "brings",
+      "employs"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 40,
@@ -2143,6 +2670,12 @@
         "questionId": "2c908087694c30cb01694d8a833e00e2",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459369983246110722.m4a",
+        "questionId": "melon_122027",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2152,10 +2685,20 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "多亏了社交媒体，学术界的全球联系蓬勃发展。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122027",
+    "melon_sentence": "Global connections thrived/increased in academic communities, thanks to social media.",
+    "trial_words": [
+      "increased",
+      "thrived"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 41,
@@ -2201,6 +2744,12 @@
         "questionId": "2c908087694c30cb01694d8e2aca00ea",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1946512919818686465.m4a",
+        "questionId": "melon_121405",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2210,10 +2759,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "成熟的学生通常非常适应大学生活。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121405",
+    "melon_sentence": "Mature students usually adapt to university life extremely well.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 42,
@@ -2259,6 +2815,12 @@
         "questionId": "2c908087694c30cb01694d90c73f00ee",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1934824786387554306.m4a",
+        "questionId": "melon_121096",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2268,10 +2830,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "理科图书馆目前位于图书馆地面一层。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121096",
+    "melon_sentence": "The science library is currently located on the ground floor of the building.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 43,
@@ -2305,6 +2874,12 @@
         "questionId": "2c908087694c30cb01694d918a3200f0",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458752786031230978.m4a",
+        "questionId": "melon_121091",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2314,10 +2889,20 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "有几位候选人有资格成为有史以来最伟大的科学家。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121091",
+    "melon_sentence": "Several candidates were graded/will be qualified as the greatest scientists of all time.",
+    "trial_words": [
+      "graded",
+      "will"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 44,
@@ -2357,6 +2942,12 @@
         "questionId": "2c908087694c30cb01694d93065200f2",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20250826/17561964386441051.m4a",
+        "questionId": "melon_123021",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2366,10 +2957,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "学生们接到通知，今天的课被取消了。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "123021",
+    "melon_sentence": "Students are advised that the lecture today has been cancelled英/canceled美.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 45,
@@ -2415,6 +3013,12 @@
         "questionId": "2c908087694c30cb01694d9493e600f4",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1933102356224827394.m4a",
+        "questionId": "melon_121586",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2424,10 +3028,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "欧洲的工业革命是由蒸汽技术推动的。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121586",
+    "melon_sentence": "The Industrial Revolution in Europe was driven by steam technology.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 46,
@@ -2467,6 +3078,12 @@
         "questionId": "2c908087694c30cb01694d99bf5100fe",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1463051402749177857.m4a",
+        "questionId": "melon_121175",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2476,10 +3093,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "每学期都有一个欢迎新生的晚会。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121175",
+    "melon_sentence": "There is a welcome party for all new students for each term. 变体：Students will hold a welcome party before each term.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 47,
@@ -2525,6 +3149,12 @@
         "questionId": "2c908087694c30cb01694dd3bfa50133",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459335033104928769.m4a",
+        "questionId": "melon_122036",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2534,10 +3164,20 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "只要你能从错误中吸取教训，犯错误没什么大不了的。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122036",
+    "melon_sentence": "Making a mistake/ mistakes is fine, as long as you learn from it.",
+    "trial_words": [
+      "mistake",
+      "mistakes"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 48,
@@ -2583,6 +3223,12 @@
         "questionId": "2c908087694c30cb01694dd6f9640137",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458752631697620994.m4a",
+        "questionId": "melon_121065",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2592,10 +3238,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "选举的承诺之一是减少所得税。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121065",
+    "melon_sentence": "One of the election promises is to decrease the income tax.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 49,
@@ -2641,6 +3294,12 @@
         "questionId": "2c908087694c30cb01694ddc2b69013a",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1933464796234010626.m4a",
+        "questionId": "melon_121067",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2650,10 +3309,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "我们的课程有助于提高批判性思维和独立学习能力。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121067",
+    "melon_sentence": "Our courses help improve critical thinking and independent learning skills.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 50,
@@ -2699,6 +3365,12 @@
         "questionId": "00853f949734ac76a899d65ac4bc8ec7",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458759367171031041.m4a",
+        "questionId": "melon_121695",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2708,10 +3380,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "本课程提供了可以获得宝贵行业经验的机会。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121695",
+    "melon_sentence": "This course provides the opportunity to get valuable industry experience.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 51,
@@ -2757,6 +3436,12 @@
         "questionId": "2c908087694c30cb01694de593bc0148",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1610534669525250049.m4a",
+        "questionId": "melon_121099",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2766,10 +3451,20 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "我们鼓励学生自己监督自己的出勤率。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121099",
+    "melon_sentence": "Students are encouraged to monitor their own attendance/their study by themselves.",
+    "trial_words": [
+      "attendance",
+      "their"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 52,
@@ -2815,6 +3510,12 @@
         "questionId": "2c908087694c30cb01696fd9794b0179",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1934900027306561537.m4a",
+        "questionId": "melon_121766",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2824,10 +3525,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "经济现在出现了复苏的初步迹象。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121766",
+    "melon_sentence": "The economy is now showing the first sign of recovery.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 53,
@@ -2861,6 +3569,12 @@
         "questionId": "2c908087694c30cb01696fdc1b80017f",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1735677054084472833.m4a",
+        "questionId": "melon_121101",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2870,10 +3584,20 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "当地野生动物的困境一直被开发商忽视。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121101",
+    "melon_sentence": "The plight of wildlife has been ignored by the local developer/developers.",
+    "trial_words": [
+      "developer",
+      "developers"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 54,
@@ -2919,6 +3643,12 @@
         "questionId": "2c908087694c30cb01696fe27e500185",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458753867268276225.m4a",
+        "questionId": "melon_121152",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2928,10 +3658,20 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "这个网站被设计成高度交互式的。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121152",
+    "melon_sentence": "The/This site is designed to be highly interactive.",
+    "trial_words": [
+      "the",
+      "this"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 55,
@@ -2977,6 +3717,12 @@
         "questionId": "2c908087694c30cb01697018c87501aa",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458754999440949250.m4a",
+        "questionId": "melon_121209",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2986,10 +3732,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "你应该把你的学期论文交到办公室。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121209",
+    "melon_sentence": "You should submit your team papers to the general office",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 56,
@@ -3017,6 +3770,12 @@
         "questionId": "9a96d053ab6a3216cfc8747ccc9aa8cf",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1663483623124344833.m4a",
+        "questionId": "melon_121498",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3026,10 +3785,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "速度的定义是物体或人移动的速度。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121498",
+    "melon_sentence": "Speed is defined as how quickly a person or an object moves.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 57,
@@ -3069,6 +3835,12 @@
         "questionId": "95763d46aef82bc8d6156717e69b14ee",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458756126718869505.m4a",
+        "questionId": "melon_121392",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3078,10 +3850,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "确保你选择的课程能提供很好的就业机会。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121392",
+    "melon_sentence": "Make sure you choose a course that provides great career opportunities.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 58,
@@ -3115,6 +3894,12 @@
         "questionId": "187f434a2bae778240458d88161bc6ae",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1602596084603953153.m4a",
+        "questionId": "melon_121725",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3124,10 +3909,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "我们不再回应任何后续的参考请求。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121725",
+    "melon_sentence": "We no longer respond to any postal reference requests.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 59,
@@ -3155,6 +3947,12 @@
         "questionId": "0c0b7901896a43b932f9da57e60c6ec0",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20250831/17566231638134579.m4a",
+        "questionId": "melon_121518",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3164,10 +3962,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "糖是一种包括碳、氧和氢原子的化合物。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121518",
+    "melon_sentence": "Sugar is a compound of carbon, oxygen, and hydrogen atoms.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 60,
@@ -3213,6 +4018,12 @@
         "questionId": "d68a7b896341c2470eabbae362ef15ee",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459364926102474754.m4a",
+        "questionId": "melon_121375",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3222,10 +4033,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "毕业典礼必须穿正式的衣服。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121375",
+    "melon_sentence": "It is necessary to dress formally for the graduation ceremony.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 61,
@@ -3241,6 +4059,12 @@
         "questionId": "b899c5084f7f23b0bdcb944ee0bfd159",
         "title": "正常难度（女1）",
         "type": 1
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1729718373157199873.m4a",
+        "questionId": "melon_121231",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3250,10 +4074,20 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "一系列展示经济研究的讲座被录了下来。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121231",
+    "melon_sentence": "A series of lectures showed that our economic research (us in economics) have been recorded.",
+    "trial_words": [
+      "economics",
+      "us"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 62,
@@ -3299,6 +4133,12 @@
         "questionId": "82b31311d5258be5e8181f8836f665c5",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459355107958231041.mp3",
+        "questionId": "melon_121026",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3308,10 +4148,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "随着经济繁荣，消费者信心往往会增强。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121026",
+    "melon_sentence": "Consumer confidence tends to increase as the economy expands.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 63,
@@ -3357,6 +4204,12 @@
         "questionId": "70baa7b1789ab3365c8927c14600de86",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20250826/17562022994762360.m4a",
+        "questionId": "melon_123034",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3366,10 +4219,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "含有过多热量的食物几乎没有提供营养价值。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "123034",
+    "melon_sentence": "Food containing empty calories provides little or no nutritional value.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 64,
@@ -3415,6 +4275,12 @@
         "questionId": "67f2cd757b5b638c130e9d2b5b5d9adb",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459368294623514625.m4a",
+        "questionId": "melon_121678",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3424,10 +4290,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "人们普遍认为，工程学适合男孩。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121678",
+    "melon_sentence": "There is a widely believed perception that engineering is for boys.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 65,
@@ -3473,6 +4346,12 @@
         "questionId": "4ed4555642e0150eb97f6ee9cc7258cb",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459365251265892353.m4a",
+        "questionId": "melon_121397",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3482,10 +4361,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "一些机构的职业课程是由私营企业资助的。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121397",
+    "melon_sentence": "Many vocational courses in the institution are funded by private entrepreneurs.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 66,
@@ -3531,6 +4417,12 @@
         "questionId": "a20562a2262bd9737128667dd25fdf99",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1729473460880564225.m4a",
+        "questionId": "melon_121610",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3540,10 +4432,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "图书馆在夏季的开放时间减少了。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121610",
+    "melon_sentence": "The opening hours of the library are reduced during summer.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 67,
@@ -3589,6 +4488,12 @@
         "questionId": "e39207edc065d163ca6b55ef42d7b4ac",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1663474041970860034.m4a",
+        "questionId": "melon_121379",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3598,10 +4503,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "新闻业面临着数字革命带来的危机。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121379",
+    "melon_sentence": "Journalism faces the crisis in the light of the digital revolution.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 68,
@@ -3647,6 +4559,12 @@
         "questionId": "4aa27f8c64854907f977bee7c6cc714b",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459427870806937602.m4a",
+        "questionId": "melon_121378",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3656,10 +4574,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "步行到大学要花很长时间。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121378",
+    "melon_sentence": "It takes a long time to walk to the university.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 69,
@@ -3687,6 +4612,12 @@
         "questionId": "43e8920c11dc5028fff40ef6f74b66c8",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1734959184220282881.m4a",
+        "questionId": "melon_121605",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3696,10 +4627,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "消息要到下一周才会收到。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121605",
+    "melon_sentence": "The news is not received until the following week.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 70,
@@ -3721,6 +4659,12 @@
         "questionId": "025c369678b42da2e94b28fb353ca1a2",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1945040819455021057.m4a",
+        "questionId": "melon_123060",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3730,10 +4674,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "混合物被定义为化学上分离部分的组合。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "123060",
+    "melon_sentence": "Mixtures are defined as the compounding of chemically separate parts.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 71,
@@ -3773,6 +4724,12 @@
         "questionId": "24fff74d1ea7cc730d9ac355a551286c",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459365383529074689.m4a",
+        "questionId": "melon_121399",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3782,10 +4739,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "许多粮食作物需要大量的水和肥料。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121399",
+    "melon_sentence": "Many food crops require a large amount of water and fertiliser（UK）/fertilizer（US）.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 72,
@@ -3831,6 +4795,12 @@
         "questionId": "ea9d57261fd5cab483ff33e4a10ef2b9",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458756232184643586.m4a",
+        "questionId": "melon_121422",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3840,10 +4810,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "制造业的新发展正在改变我们的生活方式。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121422",
+    "melon_sentence": "New developments in manufacturing are constantly changing the way we live.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 73,
@@ -3889,6 +4866,12 @@
         "questionId": "321f0ac883f0d8980c62d316733a2ee9",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1797868960679485441.m4a",
+        "questionId": "melon_121758",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3898,10 +4881,28 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "新材料和新技术正在改变现代建筑的风格。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121758",
+    "melon_sentence": "New materials and techniques are changing the types/style of modern architecture. New materials and technologies/techniques provide/are providing new tools/ theories to/for architecture.",
+    "trial_words": [
+      "are",
+      "for",
+      "provide",
+      "style",
+      "techniques",
+      "technologies",
+      "theories",
+      "to",
+      "tools",
+      "types"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 74,
@@ -3917,6 +4918,12 @@
         "questionId": "2ad17ff997f0716c608c77511ea3d85e",
         "title": "正常难度（女1）",
         "type": 1
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1729333182949515265.m4a",
+        "questionId": "melon_121686",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3926,10 +4933,20 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "下周，班里将进行化学测试。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121686",
+    "melon_sentence": "There will be a chemistry test in the class/classroom next week.",
+    "trial_words": [
+      "class",
+      "classroom"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 75,
@@ -3969,6 +4986,12 @@
         "questionId": "e274fd13703a7157e369d17a2f229a92",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459364658539433985.m4a",
+        "questionId": "melon_121366",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -3978,10 +5001,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "信息技术改变了人们今天学习的方式。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121366",
+    "melon_sentence": "Information technology has changed the way we study today.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 76,
@@ -4009,6 +5039,12 @@
         "questionId": "620bd5dccd955722017a508c5499c65f",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1663474347534295042.m4a",
+        "questionId": "melon_121577",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4018,10 +5054,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "农民需要适应气候的变化。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121577",
+    "melon_sentence": "The farmers need to adapt to the changes of the climate.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 77,
@@ -4067,6 +5110,12 @@
         "questionId": "943d2d4133b992460d9a37e4ff3cc50c",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1729385648596475905.m4a",
+        "questionId": "melon_121255",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4076,10 +5125,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "一个有能力的业务经理总是会接受新想法。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121255",
+    "melon_sentence": "An effective business manager is always open to new ideas.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 78,
@@ -4125,6 +5181,12 @@
         "questionId": "a4cfd271d08fe53e2d44aa7d7c9f17b1",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459368397799198722.m4a",
+        "questionId": "melon_121679",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4134,10 +5196,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "金融专业的学生有一个会计作业。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121679",
+    "melon_sentence": "There is an accounting assessment for finance students.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 79,
@@ -4183,6 +5252,12 @@
         "questionId": "c6304243f3ebfea8765b66051bb84390",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1663487370768523266.m4a",
+        "questionId": "melon_121389",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4192,10 +5267,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "语言学是针对语言的科学研究和科学分析。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121389",
+    "melon_sentence": "Linguistics is the scientific study and analysis of language.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 80,
@@ -4241,6 +5323,12 @@
         "questionId": "c9a6bf583313fdfe4571de52c90a0db9",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1841721934820204546.m4a",
+        "questionId": "melon_121324",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4250,10 +5338,20 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "课外活动可以帮助学生发展更多新的才能。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121324",
+    "melon_sentence": "Extracurricular activities can help students to develop new/more talents.",
+    "trial_words": [
+      "more",
+      "new"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 81,
@@ -4290,10 +5388,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "树木通过吸收从道路上流下的雨水的方式来助益城市。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 82,
@@ -4327,6 +5432,12 @@
         "questionId": "3e3ad4084bc5614b6e2c41a2069e16da",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459321959086067713.m4a",
+        "questionId": "melon_123041",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4336,10 +5447,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "新媒体新闻是一个令人兴奋的研究领域。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "123041",
+    "melon_sentence": "New media journalism is an exciting area to study.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 83,
@@ -4367,6 +5485,12 @@
         "questionId": "6b227a624926c1bfa19bb28c18c7dc88",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1939941128878968833.m4a",
+        "questionId": "melon_121398",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4376,10 +5500,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "许多曾经严重的疾病现在已被根除。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121398",
+    "melon_sentence": "Many diseases that were once serious have now been eradicated.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 84,
@@ -4419,6 +5550,12 @@
         "questionId": "313c346deb9b6841ba315cd14c1d831a",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260515/17788277470257127.m4a",
+        "questionId": "melon_121658",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4428,10 +5565,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "图书馆内不准使用手机。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121658",
+    "melon_sentence": "The use of mobile phones is not permitted in the library.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 85,
@@ -4477,6 +5621,12 @@
         "questionId": "04a3c0cf86c906c74a9df0d165d621a3",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459367266486358018.m4a",
+        "questionId": "melon_121500",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4486,10 +5636,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "从统计学上，出现这种结果的可能性极低。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121500",
+    "melon_sentence": "Statistically speaking, the likelihood of this result is extremely low.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 86,
@@ -4535,6 +5692,12 @@
         "questionId": "8b3a39df0c880a180285be19a995f527",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1663452672591765505.m4a",
+        "questionId": "melon_121649",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4544,10 +5707,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "尽管“病”和“疾病”有明显的区别，但这两个术语仍然令人困惑。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121649",
+    "melon_sentence": "The terms of illnesses and diseases are often confused despite the clear differences.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 87,
@@ -4581,6 +5751,12 @@
         "questionId": "fb50299e9224d234d1cc118e31dd3d29",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459174760930906113.m4a",
+        "questionId": "melon_123056",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4590,10 +5766,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "他不仅写科学论文，还写诗歌和戏剧。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "123056",
+    "melon_sentence": "You wrote poetry and plays as well as scientific papers.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 88,
@@ -4648,10 +5831,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "行业专家将讨论自动化劳动力市场中的工作机会。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 89,
@@ -4697,6 +5887,12 @@
         "questionId": "9613689c99d1c22fec962a248dc84fbc",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459367680942313474.m4a",
+        "questionId": "melon_121568",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4706,10 +5902,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "经济预测结果是不正确的。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121568",
+    "melon_sentence": "The economic predictions turned out to be incorrect.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 90,
@@ -4755,6 +5958,12 @@
         "questionId": "b6952209f887ccc644d039dd8104afe6",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458759631210856450.m4a",
+        "questionId": "melon_121754",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4764,10 +5973,20 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "细胞是所有动植物的基本组成部分。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121754",
+    "melon_sentence": "Cells are the most basic building blocks of/for all animals and plants.",
+    "trial_words": [
+      "for",
+      "of"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 91,
@@ -4813,6 +6032,12 @@
         "questionId": "a26b47b83598c6866d8047e2518f3a06",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459365140607569921.m4a",
+        "questionId": "melon_121388",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4822,10 +6047,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "良好的营养对整体健康和活力至关重要。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121388",
+    "melon_sentence": "Good nutrition is crucial to general health and vitality.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 92,
@@ -4865,6 +6097,12 @@
         "questionId": "7be27247baeb3bd5ce811b880f630c9a",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1838472026961010689.m4a",
+        "questionId": "melon_121434",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4874,10 +6112,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "父母对他们的孩子负有经济责任，直到他们成年。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121434",
+    "melon_sentence": "Parents are financially responsible for their children right up to their adulthood.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 93,
@@ -4917,6 +6162,12 @@
         "questionId": "1ccbb73fd3bc40be17096b7696b59e5c",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459363429360898049.m4a",
+        "questionId": "melon_121242",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4926,10 +6177,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "先进科技创造了经济增长。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121242",
+    "melon_sentence": "Advanced technology will create growth in the economy.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 94,
@@ -4975,6 +6233,12 @@
         "questionId": "806d2404a51df43c21e9192f59b96f51",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458759768255545346.m4a",
+        "questionId": "melon_121813",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -4984,10 +6248,20 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "这门课程的一个典型部分包括了社会研究。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121813",
+    "melon_sentence": "The typical part of this course involves the social study/ the study of society.",
+    "trial_words": [
+      "study",
+      "the"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 95,
@@ -5033,6 +6307,12 @@
         "questionId": "4d6c064a3e73b605e44ca5251793547b",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1555948003452325889.m4a",
+        "questionId": "melon_121272",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5042,10 +6322,20 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "银行从借给客户的钱中收取利息。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121272",
+    "melon_sentence": "Banks charge interest for money they lend/loan to their customers.",
+    "trial_words": [
+      "lend",
+      "loan"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 96,
@@ -5091,6 +6381,12 @@
         "questionId": "2f6e349594df58619d99208cff10897f",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1871426148580253698.m4a",
+        "questionId": "melon_121632",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5100,10 +6396,22 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "科学家们建立了当今社会的各个部分。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121632",
+    "melon_sentence": "The scientists (have) found most of (all parts of)  the studies (science) today.",
+    "trial_words": [
+      "all",
+      "of",
+      "parts",
+      "science"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 97,
@@ -5158,10 +6466,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "这部分课程是关于心理学的。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 98,
@@ -5201,6 +6516,12 @@
         "questionId": "1ead14f22f9beb868c2b9e2077998f91",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1950049432527458306.m4a",
+        "questionId": "melon_121469",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5210,10 +6531,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "经济衰退激发了令人兴奋的创造力和高比例的公众智慧。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121469",
+    "melon_sentence": "Recessions trigger creativity and exciting creative opportunities, according to public wisdom.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 99,
@@ -5259,6 +6587,12 @@
         "questionId": "2397c7ef0417f98098204ec18e0d145a",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458758736460955650.m4a",
+        "questionId": "melon_121583",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5268,10 +6602,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "历史课通过三份书面作业来评估。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121583",
+    "melon_sentence": "The history course is assessed by three written assignments.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 100,
@@ -5317,6 +6658,12 @@
         "questionId": "b9f09dfeabb161994c19d47d561385f5",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458757398469591041.m4a",
+        "questionId": "melon_121513",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5326,10 +6673,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "学生将专注于报道改变媒体世界的新闻。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121513",
+    "melon_sentence": "Students will focus on reporting news on changing media world.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 101,
@@ -5375,6 +6729,12 @@
         "questionId": "dab846a9b7c9e66c4ce2297a2361c996",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1465636064252162050.m4a",
+        "questionId": "melon_121515",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5384,10 +6744,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "研究表明，这两个变量之间存在正相关关系。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121515",
+    "melon_sentence": "Studies show (that) there is a positive correlation between two variables.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 102,
@@ -5415,6 +6782,12 @@
         "questionId": "e0a5f2c543ae0c6e6a86ed8937394809",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1461236081713246209.m4a",
+        "questionId": "melon_121723",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5424,10 +6797,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "我们有复杂成熟的方法来研究大脑的活动。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121723",
+    "melon_sentence": "We have sophisticated ways to study in brain action.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 103,
@@ -5467,6 +6847,12 @@
         "questionId": "30572bc363cee9909b869db9931b8177",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1461235541797269506.m4a",
+        "questionId": "melon_121557",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5476,10 +6862,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "舞蹈系每学期都有精心设计的表演。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121557",
+    "melon_sentence": "The dance department stages elaborated performances each semester.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 104,
@@ -5525,6 +6918,12 @@
         "questionId": "7eb4a4f51de24642ede90f9fed977ee4",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1469997482007097345.m4a",
+        "questionId": "melon_121502",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5534,10 +6933,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "学生代表将带着投票表格去每个班级。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121502",
+    "melon_sentence": "Student representatives will visit classes with voting forms.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 105,
@@ -5577,6 +6983,12 @@
         "questionId": "9d5de335f723eea822863f6efcc3e08f",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1950104583363645441.m4a",
+        "questionId": "melon_121361",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5586,10 +6998,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "他一生创作了大量的作品。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121361",
+    "melon_sentence": "In his lifetime, he composed a large number of works.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 106,
@@ -5611,6 +7030,12 @@
         "questionId": "da052b419aca7afe3f3ec10365b26b99",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1734961955065585666.m4a",
+        "questionId": "melon_123061",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5620,10 +7045,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "他的分析研究似乎是基于了错误的前提条件。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "123061",
+    "melon_sentence": "His analysis study appears to be based on false premise.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 107,
@@ -5651,6 +7083,12 @@
         "questionId": "747f2aeba29396fd6e8528331ad0559a",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1602599487535063042.m4a",
+        "questionId": "melon_121473",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5660,10 +7098,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "研究表明，锻炼让我们感觉更好。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121473",
+    "melon_sentence": "Research shows that exercising makes us feel better.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 108,
@@ -5697,6 +7142,12 @@
         "questionId": "e32de1ccbaf0681b50ab160032051be7",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1602596774252388354.m4a",
+        "questionId": "melon_121639",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5706,10 +7157,20 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "学生商店出售各种文具。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121639",
+    "melon_sentence": "The student shop/sells has a range of stationery.",
+    "trial_words": [
+      "sells",
+      "shop"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 109,
@@ -5737,6 +7198,12 @@
         "questionId": "2236cff0de1768486b0eafc75fd39f4a",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1603452662844497922.m4a",
+        "questionId": "melon_122122",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5746,10 +7213,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "在你选择大学课程之前，你应该考虑一下你未来的职业。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122122",
+    "melon_sentence": "Before choosing your course, you should consider your future career.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 110,
@@ -5783,6 +7257,12 @@
         "questionId": "7921877aae8604a1387c5557be2d3de9",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1942103677984591873.m4a",
+        "questionId": "melon_121340",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5792,10 +7272,24 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "这门课程的毕业生通常会在金融部门工作。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121340",
+    "melon_sentence": "Graduates from this course typically pursue/find jobs/careers in the financial department/sector/field.",
+    "trial_words": [
+      "careers",
+      "department",
+      "find",
+      "jobs",
+      "pursue",
+      "sector"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 111,
@@ -5811,6 +7305,12 @@
         "questionId": "08c6dc710c6fe90b0ec85e35e044482c",
         "title": "正常难度（女1）",
         "type": 1
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1603452205124296705.m4a",
+        "questionId": "melon_121194",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5820,10 +7320,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "导师应该在课程开始时设定明确的目标。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121194",
+    "melon_sentence": "Tutors should set (clear) goals at the start of the class.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 112,
@@ -5866,10 +7373,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "她首先针对上一讲的内容进行了概述。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 113,
@@ -5915,6 +7429,12 @@
         "questionId": "997f6c5c9c6d4b9720a9f7363e8ee86a",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1683768107480408066.m4a",
+        "questionId": "melon_122055",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5924,10 +7444,22 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "奇怪的是，人们对\"统计数据\"既感到印象深刻又持怀疑态度。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122055",
+    "melon_sentence": "Strangely, people are  simultaneously impressed/impacted by and skeptical/sceptical about using statistics.",
+    "trial_words": [
+      "impacted",
+      "impressed",
+      "sceptical",
+      "skeptical"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 114,
@@ -5955,6 +7487,12 @@
         "questionId": "912c7d6ac799c5ffe985d6db2eb8654b",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1650852430470029314.m4a",
+        "questionId": "melon_121164",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5964,10 +7502,22 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "下学期的课程表将于下周公布。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121164",
+    "melon_sentence": "The (new) timetable for/about the next/new term will be available next week.",
+    "trial_words": [
+      "about",
+      "for",
+      "new",
+      "next"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 115,
@@ -5995,6 +7545,12 @@
         "questionId": "80a26b93ad9ee41a235bc651ebb1d015",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1664191205367455745.m4a",
+        "questionId": "melon_121826",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6004,10 +7560,20 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "目前的经济增长是不可预测的。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121826",
+    "melon_sentence": "Currently, the growth of economy/ the company is unpredictable.",
+    "trial_words": [
+      "economy",
+      "the"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 116,
@@ -6053,6 +7619,12 @@
         "questionId": "e9872091d6c33c7600a3a8d6c1c2bf96",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1693516872730828802.m4a",
+        "questionId": "melon_121553",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6062,10 +7634,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "这门课程包括纯数学和应用数学的结合。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121553",
+    "melon_sentence": "The course involves a combination of Pure and Applied Mathematics.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 117,
@@ -6093,6 +7672,12 @@
         "questionId": "a827381ae0f33f66a6482d8d1bc7bdc1",
         "title": "正常难度（男1）",
         "type": 3
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1668473888952029185.m4a",
+        "questionId": "melon_121279",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6102,10 +7687,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "计算器使我们加数字时不犯错误。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121279",
+    "melon_sentence": "Calculators allow us to add numbers without making mistakes.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 118,
@@ -6133,6 +7725,12 @@
         "questionId": "e36e5163b4f883e6e82876b89f390523",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1846146408596430849.m4a",
+        "questionId": "melon_121637",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6142,10 +7740,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "股市崩盘在全世界产生了影响。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121637",
+    "melon_sentence": "The stock market crash has repercussions throughout the world",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 119,
@@ -6161,6 +7766,12 @@
         "questionId": "c9e40a0b98506136e01779a4ef1ff624",
         "title": "正常难度（女1）",
         "type": 1
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260509/17783193737985966.m4a",
+        "questionId": "melon_121851",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6170,10 +7781,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "近二十年来人口急剧增加。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121851",
+    "melon_sentence": "The population has risen sharply in the last twenty years.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 120,
@@ -6195,6 +7813,12 @@
         "questionId": "00c8a1ee1561679f0cf73431718abda1",
         "title": "正常难度（男1）",
         "type": 3
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1729135838383595521.m4a",
+        "questionId": "melon_121198",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6204,10 +7828,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "你必须能够在团队中工作。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121198",
+    "melon_sentence": "You must be able to work in a team.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 121,
@@ -6229,6 +7860,12 @@
         "questionId": "9e39c0f2c7db6308d3071dbaea78d201",
         "title": "正常难度（男1）",
         "type": 3
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1729131221088231425.m4a",
+        "questionId": "melon_121493",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6238,10 +7875,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "有些人认为教育应该对每个人免费。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121493",
+    "melon_sentence": "Some people believe that education should be free for all.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 122,
@@ -6263,6 +7907,12 @@
         "questionId": "ac4241bad5ad9d5ff8f19cc1223c45a6",
         "title": "正常难度（男1）",
         "type": 3
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1729352963689832449.m4a",
+        "questionId": "melon_121738",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6272,10 +7922,20 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "你们可以在课堂上使用笔记本电脑。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121738",
+    "melon_sentence": "You can use your own/a laptop during the lecture.",
+    "trial_words": [
+      "a",
+      "own"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 123,
@@ -6291,6 +7951,12 @@
         "questionId": "d10742e21fdd4d528fabcfd24d00e7b2",
         "title": "正常难度（女1）",
         "type": 1
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1933812442459033601.m4a",
+        "questionId": "melon_121846",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6300,10 +7966,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "过去的计算机比现在的大。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121846",
+    "melon_sentence": "Computers used to be larger than they are now.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 124,
@@ -6328,10 +8001,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "图书馆将于明天上午闭馆进行员工培训。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 125,
@@ -6377,6 +8057,12 @@
         "questionId": "ca95952003af914840661ac769c57f7a",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1734149463804502017.m4a",
+        "questionId": "melon_121703",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6386,10 +8072,17 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "小组研究设计可能避免了太多的信息。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121703",
+    "melon_sentence": "Too much information may be avoided by good research design.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 126,
@@ -6405,6 +8098,12 @@
         "questionId": "d347dedaba7dea9f47b5e0020c155aa8",
         "title": "正常难度（女1）",
         "type": 1
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1735333711072747521.m4a",
+        "questionId": "melon_121446",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6414,10 +8113,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "植物终其一生都能持续生长。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121446",
+    "melon_sentence": "Plants are able to continue growing throughout their lives.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 127,
@@ -6433,6 +8139,12 @@
         "questionId": "47bf2530eb2088bee97e2dc0107c94c1",
         "title": "正常难度（女1）",
         "type": 1
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1734478549252857858.m4a",
+        "questionId": "melon_121745",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6442,10 +8154,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "你需要把这些书放在那边的桌子上。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121745",
+    "melon_sentence": "You need to put these books on the table over there.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 128,
@@ -6491,6 +8210,12 @@
         "questionId": "7817184c98136aa687409d0b41f0312b",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260602/17803871694964683.m4a",
+        "questionId": "melon_121710",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6500,10 +8225,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "大学需要为项目争取研究经费。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121710",
+    "melon_sentence": "Universities need to secure grants for research projects.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 129,
@@ -6549,6 +8281,12 @@
         "questionId": "420370084b59ca4081bb910f331d1994",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260512/17785686148519827.m4a",
+        "questionId": "melon_121854",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6558,10 +8296,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "办公室时间将从下学期起调整。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121854",
+    "melon_sentence": "The office hours will be changed from next term.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 130,
@@ -6607,6 +8352,12 @@
         "questionId": "5cc91a929b97378fa26924490776225d",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260512/17785739516096238.m4a",
+        "questionId": "melon_121849",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6616,10 +8367,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "这所大学一年四季都踢足球。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121849",
+    "melon_sentence": "Football is played throughout all the year at the university.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 131,
@@ -6665,6 +8423,12 @@
         "questionId": "058b2b053c22d9e9bed064ac45cf218c",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260929/17906589153535298.m4a",
+        "questionId": "melon_121852",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6674,10 +8438,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "我们正在寻找吸引学习者的新方法。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121852",
+    "melon_sentence": "We are looking into introducing new ways to engage learners.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 132,
@@ -6732,10 +8503,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "宇宙中的其他行星上可能有生命。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 133,
@@ -6781,6 +8559,12 @@
         "questionId": "f7d4aec9a4823a0b474511c1a7b4bd95",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260507/17781284186019200.m4a",
+        "questionId": "melon_121204",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6790,10 +8574,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "毫无疑问，这个理论有一些局限性。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121204",
+    "melon_sentence": "Without doubt, this theory has a number of limitations.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 134,
@@ -6839,6 +8630,12 @@
         "questionId": "bf6150ef7187ecb35e9b4110648d20c0",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260513/17786453824786172.m4a",
+        "questionId": "melon_121160",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6848,10 +8645,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "教师培训课程包括观摩课堂。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "121160",
+    "melon_sentence": "The teacher training requires an observation of the classes.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 135,
@@ -6897,6 +8701,12 @@
         "questionId": "d71dc4a63c82f291417272204c79a3d9",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260508/17782201339175326.m4a",
+        "questionId": "melon_122131",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6906,10 +8716,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "当物质结合或变化时就会发生化学反应。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122131",
+    "melon_sentence": "Chemical reactions occur when substances combine or change.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 136,
@@ -6964,10 +8781,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "所有实验步骤都已在实验手册中列出。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 137,
@@ -7013,6 +8837,12 @@
         "questionId": "cb052efe1eb01a7ec239ddea2a0b76e6",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459178370188218370.m4a",
+        "questionId": "melon_123042",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -7022,10 +8852,22 @@
       "tagHigh": true,
       "tagRepeat": true,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "请将课本归放到图书馆的正确书架上。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "123042",
+    "melon_sentence": "Please return the reference/ reserved book to the correct position on the (library’s/library) shelf.",
+    "trial_words": [
+      "library",
+      "library’s",
+      "reference",
+      "reserved"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 138,
@@ -7080,10 +8922,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "神经科学是由完全独立的多个部分组成的。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 139,
@@ -7129,6 +8978,12 @@
         "questionId": "aaba08a79bc651cda64f1023ae246935",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260602/17803826037054214.m4a",
+        "questionId": "melon_122136",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -7138,10 +8993,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "她的设计融合了地方建筑的精华。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": "122136",
+    "melon_sentence": "Her designs incorporate the best aspects of vernacular architecture.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 140,
@@ -7196,10 +9058,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "在本课程中，老师将教您如何规划论文。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 141,
@@ -7254,10 +9123,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": true,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "护理被定义为医疗实践和临床工作。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 142,
@@ -7312,10 +9188,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": true,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "学期结束前，您应将书籍归还到图书馆。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 143,
@@ -7370,10 +9253,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": true,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "制造业的新发展在我们的生活中起着重要作用。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 144,
@@ -7428,10 +9318,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": true,
-      "tagDaily": true
+      "tagDaily": true,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "实践体验是课程的重要组成部分。",
-    "is_ultra": true
+    "is_ultra": true,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 145,
@@ -7480,10 +9377,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "这一著名的理论至今仍是巨大争议的根源。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 146,
@@ -7538,10 +9442,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "一个好的建筑结构应该实用、耐用、美观。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 147,
@@ -7596,10 +9507,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "明天将在图书馆会议室举行小组会议。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 148,
@@ -7654,10 +9572,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "辅导课安排在学期的最后一周。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 149,
@@ -7712,10 +9637,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "经济适用房对社会所有成员来说都是一个重要问题。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 150,
@@ -7770,10 +9702,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "所有作业必须亲自提交到学院办公室/教职员工办公室。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 151,
@@ -7828,10 +9767,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "经济发展需要政府的支持。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 152,
@@ -7886,10 +9832,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "你明天应该交所有的作业。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 153,
@@ -7926,10 +9879,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "美国人通常用定量术语来定义植物生长的过程。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 154,
@@ -7984,10 +9944,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "简介是演讲的基本要素。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 155,
@@ -8042,10 +10009,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "避免混淆这些变化的原因和结果。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 156,
@@ -8088,10 +10062,17 @@
       "tagHigh": false,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "某些科学原理必须要通过口头教学或逻辑推理来学习。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 157,
@@ -8140,10 +10121,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "尽管存在差异，但所有形式的生命都有某些共同的特征。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 158,
@@ -8183,6 +10171,12 @@
         "questionId": "2c908087672b1edc01672e7d12c20092",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1551948743157288961.m4a",
+        "questionId": "melon_121121",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -8192,10 +10186,20 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "我们将考察早期罗马共和国的经济状况。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": "121121",
+    "melon_sentence": "(The) economic status/stream/streams of early Roman Republic will be examined.",
+    "trial_words": [
+      "status",
+      "stream"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 159,
@@ -8244,10 +10248,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "人类与其他生物竞争资源和空间。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 160,
@@ -8296,10 +10307,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "他在一家非常著名的律师事务所找到了一份工作。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 161,
@@ -8342,10 +10360,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "这确实是一个包括理论和实践的综合项目。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 162,
@@ -8382,10 +10407,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "想要轻易解决这个问题也许是不可能的。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 163,
@@ -8440,10 +10472,17 @@
       "tagHigh": false,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "观众们紧张地屏息等待着音乐会。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 164,
@@ -8498,10 +10537,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "有些人认为教育不是那么重要。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 165,
@@ -8556,10 +10602,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "学生可以选择住在大学宿舍或公寓。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 166,
@@ -8614,10 +10667,17 @@
       "tagHigh": false,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "大学毕业生将在领域内工作一年。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 167,
@@ -8654,10 +10714,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "申请过程可能比预期的时间更长。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 168,
@@ -8712,10 +10779,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "化学楼位于校园入口处附近。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 169,
@@ -8770,10 +10844,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "通货膨胀加剧可能表明对消费品的需求增加。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 170,
@@ -8828,10 +10909,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "课程之间的主要区别在于评估方式的不同。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 171,
@@ -8886,10 +10974,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "大量的数据积累被转化为一种可用于沟通的论证形式。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 172,
@@ -8944,10 +11039,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "最受欢迎的课程仍有一些空缺席位。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 173,
@@ -9002,10 +11104,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "铁路使每个人都能进行长途旅行。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 174,
@@ -9060,10 +11169,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "在这个领域明显需要进一步研究。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 175,
@@ -9118,10 +11234,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "升级制造系统可以提高效率。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 176,
@@ -9176,10 +11299,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "在这个阶段，我们不能考虑任何的涨价。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 177,
@@ -9234,10 +11364,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "父母对孩子的谈话往往被简化。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 178,
@@ -9292,10 +11429,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "在学习期间你会学到很多技能。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 179,
@@ -9350,10 +11494,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "如果你想买打折的教科书，可以登陆网站。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 180,
@@ -9408,10 +11559,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "教育和培训为劳动力提供了重要的技能。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 181,
@@ -9466,10 +11624,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "最近世界各地的耕作方法都有了很大的发展。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 182,
@@ -9515,6 +11680,12 @@
         "questionId": "2c908087694c30cb01694da7b6ca0104",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1602603010393907202.m4a",
+        "questionId": "melon_121180",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -9524,10 +11695,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "他们开发了一种独特的方法来培训他们的员工。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": "121180",
+    "melon_sentence": "They developed a unique approach to training their employees.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 183,
@@ -9582,10 +11760,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "那些正在考虑从事市场营销的人应该参加这次演讲。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 184,
@@ -9610,10 +11795,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "大学已投资于新技术，旨在支持学习。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 185,
@@ -9662,10 +11854,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "一篇好的学术论文应该呈现一个清晰的论点。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 186,
@@ -9720,10 +11919,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "部门间的协作是成功公司的一个特点。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 187,
@@ -9769,6 +11975,12 @@
         "questionId": "2c908087694c30cb01694dbdfe030129",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458760318200102914.m4a",
+        "questionId": "melon_122021",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -9778,10 +11990,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "专家们现在能够预测更长期的天气。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": "122021",
+    "melon_sentence": "Experts are now able to forecast weather over much longer periods.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 188,
@@ -9836,10 +12055,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "我们鼓励学生自觉监督自己的学习。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 189,
@@ -9894,10 +12120,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "与同学一起工作的能力是再怎么强调也不为过的。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 190,
@@ -9952,10 +12185,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "论文和作业分散在整个学年内。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 191,
@@ -10010,10 +12250,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "我们星期四上午有一节课。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 192,
@@ -10068,10 +12315,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "选修课程向工程学生介绍了建筑实操和建筑概念。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 193,
@@ -10096,10 +12350,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "这个学院的研究生比例高于正常水平。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 194,
@@ -10124,10 +12385,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "一位教授休了一年的假，专注于撰写她的书籍。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 195,
@@ -10176,10 +12444,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "明天的讲座将讨论美国的教育政策。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 196,
@@ -10222,10 +12497,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "在实验室里必须一直穿着防护服。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 197,
@@ -10280,10 +12562,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "人们批评社交媒体会导致网瘾。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 198,
@@ -10332,10 +12621,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "打印机自动打印每页的两面。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 199,
@@ -10390,10 +12686,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "你应该提供例子来支持你的观点和论点。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 200,
@@ -10448,10 +12751,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "远程学习让你能够围绕已有的事务或安排来发展职业。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 201,
@@ -10506,10 +12816,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "不断增长的人口对许多政府构成了挑战。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 202,
@@ -10564,10 +12881,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "处理人口增长对许多政府来说都是一项挑战。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 203,
@@ -10622,10 +12946,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "肌肉细胞使身体的各个部分紧密相连。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 204,
@@ -10650,10 +12981,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "摄影对地理研究很有用。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 205,
@@ -10708,10 +13046,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "在任何情况下，都不接受逾期递交的申请。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 206,
@@ -10766,10 +13111,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "该地区有大量的水下栖息地和物种。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 207,
@@ -10800,10 +13152,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "你的想法在研讨会和辅导课中被讨论和辩论。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 208,
@@ -10858,10 +13217,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "世界各地的学术图书馆都在逐步地使用社交媒体。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 209,
@@ -10910,10 +13276,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "经典力学有时候被认为是应用数学的一个分支。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 210,
@@ -10944,10 +13317,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "蜂蜜既可以作为食品，也可以作为保健品。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 211,
@@ -11002,10 +13382,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "现在可以在网上观看许多大学的讲座。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 212,
@@ -11060,10 +13447,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "哲学用逻辑和理由来分析人类的经验。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 213,
@@ -11118,10 +13512,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "由于污染和不可持续的发展，海洋环境遭到破坏。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 214,
@@ -11167,6 +13568,12 @@
         "questionId": "614699492fd46ffe974323fd24d99a57",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1729717293438492674.m4a",
+        "questionId": "melon_121303",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -11176,10 +13583,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "设计师需要跟上社会潮流。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": "121303",
+    "melon_sentence": "Designers need to keep up with the social trend.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 215,
@@ -11210,10 +13624,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "一本新的文集刚刚出版。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 216,
@@ -11268,10 +13689,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "数码相机比传统胶卷有一些优势。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 217,
@@ -11326,10 +13754,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "空气污染在全世界都是个严重的问题。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 218,
@@ -11378,10 +13813,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "专员将把这笔资金分配给所有当局。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 219,
@@ -11430,10 +13872,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "请注意，研讨会现已取消。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 220,
@@ -11488,10 +13937,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "海水温度上升是气候变化的征兆。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 221,
@@ -11546,10 +14002,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "旅游奖学金的申请截止日期是下星期一。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 222,
@@ -11604,10 +14067,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "在得出任何明确的结论之前，还需要进行更多的研究。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 223,
@@ -11656,10 +14126,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "我们鼓励学生仔细考虑他们的住宿需求。  ",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 224,
@@ -11714,10 +14191,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "北校区的停车场可能在周日关闭。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 225,
@@ -11772,10 +14256,17 @@
       "tagHigh": false,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "年度报告可以提供公司财务方面的重要信息。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 226,
@@ -11821,6 +14312,12 @@
         "questionId": "7f79b3e6a9ce802be67e108e28ebdb6c",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260508/17782401711806264.m4a",
+        "questionId": "melon_121803",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -11830,10 +14327,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "宇宙中一定有可以维持生命的行星。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": "121803",
+    "melon_sentence": "There must be planets that can support life in the universe.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 227,
@@ -11876,10 +14380,17 @@
       "tagHigh": false,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "课程大纲可在学院内部网站上查阅。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 228,
@@ -11922,10 +14433,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "选修辅导课在学期的最后一周提供。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 229,
@@ -11980,10 +14498,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "这所学院实行持续评估制度。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 230,
@@ -12038,10 +14563,17 @@
       "tagHigh": false,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "这种发展对环境有很大的负面影响。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 231,
@@ -12096,10 +14628,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "校园里书店附近有个药房。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 232,
@@ -12154,10 +14693,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "美术馆馆长对匿名捐赠表示感谢。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 233,
@@ -12206,10 +14752,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "建立信任不是一朝一夕就能实现的。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 234,
@@ -12264,10 +14817,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "新媒体超越了传统的国界。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 235,
@@ -12298,10 +14858,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "有人认为这是改革的热情，也有人认为这是鲁莽。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 236,
@@ -12326,10 +14893,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "关于那个话题有很多争论。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 237,
@@ -12366,10 +14940,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "营销预算自年初以来已经翻了一番。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 238,
@@ -12406,10 +14987,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "我们鼓励学生在截止日期前完成申请。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 239,
@@ -12434,10 +15022,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "当植物的根系衰竭时，叶子也会受损。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 240,
@@ -12474,10 +15069,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "学生必须穿着医学实验室提供的防护服。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 241,
@@ -12508,10 +15110,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "博物馆每个月的第三个星期一闭馆。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 242,
@@ -12536,10 +15145,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "社会心理学关注的是对人类行为的理解。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 243,
@@ -12564,10 +15180,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "认真规划学习时间是很重要的。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 244,
@@ -12592,10 +15215,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "有一个最佳学生演讲奖。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 245,
@@ -12650,10 +15280,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "参加面试时，准时是关键。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 246,
@@ -12708,10 +15345,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "研究显示，香港人是亚洲最活跃的。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 247,
@@ -12766,10 +15410,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "数学为理解和分析数据提供了基础。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 248,
@@ -12824,10 +15475,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "现在就开始申请大学奖学金吧。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 249,
@@ -12882,10 +15540,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "失业率已降至多年来的最低水平。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 250,
@@ -12940,10 +15605,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "图书馆在学生的生活中扮演着重要的角色。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 251,
@@ -12998,10 +15670,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "课堂参与是期末成绩的重要组成部分。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 252,
@@ -13056,10 +15735,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "你可以在网站上找到投诉表格。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 253,
@@ -13114,10 +15800,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "课程作业让学生有机会深入探索这门学科。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 254,
@@ -13172,10 +15865,17 @@
       "tagHigh": false,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "很明显，我们的面部表情在全球范围内存在差异。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 255,
@@ -13230,10 +15930,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "海平面的上升表明了气候在发生变化。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 256,
@@ -13288,10 +15995,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "要进入各类职业领域，通常需要拥有大学学历。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 257,
@@ -13346,10 +16060,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "你可以在网站上找到那个复杂的表格。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 258,
@@ -13404,10 +16125,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "极地地区的岛屿非常适合天体物理学家和气象学家进行实地实验。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 259,
@@ -13462,10 +16190,17 @@
       "tagHigh": false,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "投资将用于改善交通基础设施。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 260,
@@ -13520,10 +16255,17 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "显然，不同文化之间的面部表情看起来非常相似。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 261,
@@ -13578,10 +16320,17 @@
       "tagHigh": false,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "会议将于周四上午举行。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": null,
+    "melon_sentence": null,
+    "trial_words": [],
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 262,
@@ -13627,6 +16376,12 @@
         "questionId": "41cec21259bad9489e33ff9caac0060c",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260825/17876479516042400.m4a",
+        "questionId": "melon_121857",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -13636,9 +16391,226 @@
       "tagHigh": true,
       "tagRepeat": false,
       "tagNew": false,
-      "tagDaily": false
+      "tagDaily": false,
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "本课程将教你如何规划论文的重要性。",
-    "is_ultra": false
+    "is_ultra": false,
+    "melon_qid": "121857",
+    "melon_sentence": "This class teaches you the importance of planning your essay.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
+  },
+  {
+    "index": 263,
+    "raw_index": 263,
+    "ultra_index": null,
+    "qid": "M121021",
+    "sentence": "Calculators may not be used in this examination.",
+    "word_count": 8,
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459361858807959554.m4a",
+    "audios": [
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459361858807959554.m4a",
+        "questionId": "melon_121021",
+        "title": "🍉 大西瓜原声",
+        "type": 10
+      }
+    ],
+    "tags": {
+      "degree": 2,
+      "isSimilar": null,
+      "isJJ": 1,
+      "tagHigh": false,
+      "tagRepeat": false,
+      "tagNew": true,
+      "tagDaily": false,
+      "tagShared": true,
+      "tagMelon106": true
+    },
+    "translation": "在这次考试中不可以使用计算器。",
+    "is_ultra": false,
+    "melon_qid": "121021",
+    "melon_sentence": "Calculators may not be used in this examination.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
+  },
+  {
+    "index": 264,
+    "raw_index": 264,
+    "ultra_index": null,
+    "qid": "M121235",
+    "sentence": "A world-renowned finance director will give a guest lecture.",
+    "word_count": 9,
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459363286515486721.m4a",
+    "audios": [
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459363286515486721.m4a",
+        "questionId": "melon_121235",
+        "title": "🍉 大西瓜原声",
+        "type": 10
+      }
+    ],
+    "tags": {
+      "degree": 2,
+      "isSimilar": null,
+      "isJJ": 1,
+      "tagHigh": false,
+      "tagRepeat": false,
+      "tagNew": true,
+      "tagDaily": false,
+      "tagShared": true,
+      "tagMelon106": true
+    },
+    "translation": "一位世界知名的金融(财务管理)总监(专家)将进行一场客座讲座。",
+    "is_ultra": false,
+    "melon_qid": "121235",
+    "melon_sentence": "A world-renowned finance director will give a guest lecture.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
+  },
+  {
+    "index": 265,
+    "raw_index": 265,
+    "ultra_index": null,
+    "qid": "M121428",
+    "sentence": "Our facilities include five libraries across the university.",
+    "word_count": 8,
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1735226253461446658.m4a",
+    "audios": [
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1735226253461446658.m4a",
+        "questionId": "melon_121428",
+        "title": "🍉 大西瓜原声",
+        "type": 10
+      }
+    ],
+    "tags": {
+      "degree": 2,
+      "isSimilar": null,
+      "isJJ": 1,
+      "tagHigh": false,
+      "tagRepeat": false,
+      "tagNew": true,
+      "tagDaily": false,
+      "tagShared": true,
+      "tagMelon106": true
+    },
+    "translation": "我们的设施包括大学里的五个图书馆。",
+    "is_ultra": false,
+    "melon_qid": "121428",
+    "melon_sentence": "Our facilities include five libraries across the university.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
+  },
+  {
+    "index": 266,
+    "raw_index": 266,
+    "ultra_index": null,
+    "qid": "M121456",
+    "sentence": "Practical experiments are a vital part of legal training.",
+    "word_count": 9,
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1871417206919716865.m4a",
+    "audios": [
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1871417206919716865.m4a",
+        "questionId": "melon_121456",
+        "title": "🍉 大西瓜原声",
+        "type": 10
+      }
+    ],
+    "tags": {
+      "degree": 2,
+      "isSimilar": null,
+      "isJJ": 1,
+      "tagHigh": false,
+      "tagRepeat": false,
+      "tagNew": true,
+      "tagDaily": false,
+      "tagShared": true,
+      "tagMelon106": true
+    },
+    "translation": "实践实验是化学/法律课程训练的中心/重要部分。",
+    "is_ultra": false,
+    "melon_qid": "121456",
+    "melon_sentence": "Practical experiments are a vital part of legal training.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
+  },
+  {
+    "index": 267,
+    "raw_index": 267,
+    "ultra_index": null,
+    "qid": "M121470",
+    "sentence": "Relying on natural ability will not get you far on science.",
+    "word_count": 11,
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458756533541191682.m4a",
+    "audios": [
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458756533541191682.m4a",
+        "questionId": "melon_121470",
+        "title": "🍉 大西瓜原声",
+        "type": 10
+      }
+    ],
+    "tags": {
+      "degree": 2,
+      "isSimilar": null,
+      "isJJ": 1,
+      "tagHigh": false,
+      "tagRepeat": false,
+      "tagNew": true,
+      "tagDaily": false,
+      "tagShared": true,
+      "tagMelon106": true
+    },
+    "translation": "依靠天赋的能力，在科学上，不会让你走得很远。",
+    "is_ultra": false,
+    "melon_qid": "121470",
+    "melon_sentence": "Relying on natural ability will not get you far on science.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
+  },
+  {
+    "index": 268,
+    "raw_index": 268,
+    "ultra_index": null,
+    "qid": "M121584",
+    "sentence": "The history department is very active in research.",
+    "word_count": 8,
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459338326057193473.m4a",
+    "audios": [
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459338326057193473.m4a",
+        "questionId": "melon_121584",
+        "title": "🍉 大西瓜原声",
+        "type": 10
+      }
+    ],
+    "tags": {
+      "degree": 2,
+      "isSimilar": null,
+      "isJJ": 1,
+      "tagHigh": false,
+      "tagRepeat": false,
+      "tagNew": true,
+      "tagDaily": false,
+      "tagShared": true,
+      "tagMelon106": true
+    },
+    "translation": "历史系在研究方面很活跃。",
+    "is_ultra": false,
+    "melon_qid": "121584",
+    "melon_sentence": "The history department is very active in research.",
+    "trial_words": [],
+    "is_overlap": true,
+    "is_melon_106": true
   }
 ]
