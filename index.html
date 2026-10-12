@@ -463,6 +463,62 @@
     border-color: #3b82f6;
     color: #1d4ed8;
   }
+  .preset-pill-btn.active-cat {
+    background: #2563eb !important;
+    color: white !important;
+    border-color: #2563eb !important;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+  }
+  .modal-filter-pill {
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.12s;
+  }
+  .modal-filter-pill:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+  }
+  .modal-filter-pill.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+  }
+  .planner-add-task-slot {
+    border: 2px dashed #cbd5e1;
+    border-radius: 14px;
+    padding: 24px;
+    text-align: center;
+    cursor: pointer;
+    background: #f8fafc;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+  }
+  .planner-add-task-slot:hover {
+    border-color: #3b82f6;
+    background: #eff6ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+  }
+  .planner-task-card.is-inactive {
+    border: 1.5px dashed #cbd5e1;
+    background: #f8fafc;
+    opacity: 0.88;
+  }
+  .planner-task-card.is-inactive:hover {
+    opacity: 1;
+    border-color: #94a3b8;
+    background: white;
+  }
 
   .planner-tasks-grid {
     display: grid;
@@ -2061,6 +2117,24 @@
           <button class="preset-pill-btn" onclick="applyPresetPlan('reset')" style="color: #dc2626; border-color: #fca5a5;">
             🔄 今日数据归零
           </button>
+        </div>
+
+        <!-- 题型分类过滤栏与添加题型入口 -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin: 16px 0 14px; flex-wrap: wrap; gap: 8px;">
+          <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center;" id="planner-cat-filter-group">
+            <span style="font-size: 0.82rem; font-weight: 700; color: #475569;">题型筛选:</span>
+            <button type="button" class="preset-pill-btn active-cat" id="cat-btn-active" onclick="setPlannerCategoryFilter('active')">⭐ 今日已选打卡 (<span id="cat-badge-active">0</span>)</button>
+            <button type="button" class="preset-pill-btn" id="cat-btn-all" onclick="setPlannerCategoryFilter('all')">📚 全部 22 题型 (22)</button>
+            <button type="button" class="preset-pill-btn" id="cat-btn-speaking" onclick="setPlannerCategoryFilter('speaking')">🎤 口语 (7)</button>
+            <button type="button" class="preset-pill-btn" id="cat-btn-writing" onclick="setPlannerCategoryFilter('writing')">✍️ 写作 (2)</button>
+            <button type="button" class="preset-pill-btn" id="cat-btn-reading" onclick="setPlannerCategoryFilter('reading')">📖 阅读 (5)</button>
+            <button type="button" class="preset-pill-btn" id="cat-btn-listening" onclick="setPlannerCategoryFilter('listening')">🎧 听力 (8)</button>
+          </div>
+          <div>
+            <button type="button" class="nav-btn" onclick="openPlannerSettingsModal()" style="background: #eff6ff; color: #2563eb; border: 1.5px solid #bfdbfe; font-weight: 700; font-size: 0.82rem; padding: 6px 14px; border-radius: 8px; cursor: pointer;">
+              ➕ 增减题型 / 设置目标 ↗
+            </button>
+          </div>
         </div>
 
         <!-- 今日各题型练习卡片容器 -->
@@ -4202,24 +4276,49 @@
 
 
   // =========================================================================
-  // 🎯 PTE 每日练题目标与实战打卡看板引擎 (逐题打卡闭环版)
+  // 🎯 PTE 每日练题目标与实战打卡看板引擎 (支持全 22 题型自由增删 + 逐题打卡)
   // =========================================================================
 
-  const PLANNER_TASK_DEFS = [
-    { key: "DI", name: "DI 描述图像", english: "Describe Image", weight: "口语 31% · 全科 15%", unit: "题", category: "speaking", desc: "口语第一大题，模板流利度第一" },
-    { key: "RS", name: "RS 句子复述", english: "Repeat Sentence", weight: "口语 16% + 听力 17%", unit: "题", category: "speaking", desc: "听口双命脉，Chunk 意群流利不回读" },
-    { key: "SGD", name: "SGD 讨论总结", english: "Summarize Group Discussion", weight: "口语 19% + 听力 20%", unit: "题", category: "speaking", desc: "新题型主力，抓 2-3 观点套模板" },
-    { key: "RA", name: "RA 大声朗读", english: "Read Aloud", weight: "口语 9% · 全科 4%", unit: "题", category: "speaking", desc: "意群断句呼吸，防喷麦，强化发音" },
-    { key: "WFD", name: "WFD 听写句子", english: "Write From Dictation", weight: "写作 23% + 听力 13%", unit: "题", category: "listening", desc: "全场命门，刷透双机构预测库 (系统做题自动累计)" },
-    { key: "FIB_D", name: "FIB-D 阅读填空", english: "Reading Dropdown", weight: "阅读 25% · 全科 7%", unit: "篇", category: "reading", desc: "阅读第一大题，学术高频搭配感知" },
-    { key: "WE_SWT", name: "WE / SWT 写作", english: "Write Essay & Summarize Text", weight: "写作 59% (WE 31% + SWT 28%)", unit: "篇", category: "writing", desc: "万能模板防错，打字 0 拼写手误" }
+  const ALL_PLANNER_TASK_DEFS = [
+    // 口语 (Speaking - 7题)
+    { key: "RS", name: "RS 句子复述", english: "Repeat Sentence", category: "speaking", unit: "题", tier: "tier1", isCore: true, weight: "口语 16% + 听力 17%", desc: "听口双命脉，Chunk意群记忆，流利不回读" },
+    { key: "DI", name: "DI 描述图像", english: "Describe Image", category: "speaking", unit: "题", tier: "tier1", isCore: true, weight: "口语 31% · 全科 15%", desc: "口语第一大题，模板流利度第一" },
+    { key: "SGD", name: "SGD 讨论总结", english: "Summarize Group Discussion", category: "speaking", unit: "题", tier: "tier1", isCore: true, weight: "口语 19% + 听力 20%", desc: "新题型主力，抓 2-3 观点套模板" },
+    { key: "RA", name: "RA 大声朗读", english: "Read Aloud", category: "speaking", unit: "题", tier: "tier2", isCore: true, weight: "口语 9% · 全科 4%", desc: "意群断句呼吸，防喷麦，强化发音" },
+    { key: "RL", name: "RL 复述讲座", english: "Re-tell Lecture", category: "speaking", unit: "题", tier: "tier2", isCore: false, weight: "口语 13% + 听力 13%", desc: "老题型，听讲座记 3-4 个主谓宾套模板" },
+    { key: "RTS", name: "RTS 应对情景", english: "Respond to a Situation", category: "speaking", unit: "题", tier: "tier2", isCore: false, weight: "口语 13% · 全科 6%", desc: "日常交际情景，按要求给出 2-3 句应对" },
+    { key: "ASQ", name: "ASQ 回答短问题", english: "Answer Short Question", category: "speaking", unit: "题", tier: "tier3", isCore: false, weight: "听力 4% · 全科 2%", desc: "低性价比常识题，会就答不会随意过" },
+
+    // 写作 (Writing - 2题)
+    { key: "WE", name: "WE 议论文写作", english: "Write Essay", category: "writing", unit: "篇", tier: "tier1", isCore: true, weight: "写作 31% · 全科 7%", desc: "万能模板防错，打字 0 拼写语法手误" },
+    { key: "SWT", name: "SWT 总结文本", english: "Summarize Written Text", category: "writing", unit: "篇", tier: "tier1", isCore: true, weight: "写作 28% + 阅读 23%", desc: "一句话概括长文，连接词拼接关键句" },
+
+    // 阅读 (Reading - 5题)
+    { key: "FIB-D", name: "FIB-D 阅读填空", english: "Reading Dropdown", category: "reading", unit: "篇", tier: "tier1", isCore: true, weight: "阅读 25% · 全科 7%", desc: "阅读第一大题，学术高频固定搭配" },
+    { key: "FIB-DD", name: "FIB-DD 拖拽填空", english: "Reading Drag & Drop", category: "reading", unit: "篇", tier: "tier2", isCore: false, weight: "阅读 20% · 全科 6%", desc: "词性语法预判，从选词库拖拽填空" },
+    { key: "RO", name: "RO 段落重排", english: "Re-order Paragraphs", category: "reading", unit: "题", tier: "tier3", isCore: false, weight: "阅读 9% · 全科 3%", desc: "成对计分，找首句与代词指代关系" },
+    { key: "R-MCM", name: "R-MCM 阅读多选", english: "Reading Multi Choice", category: "reading", unit: "题", tier: "tier3", isCore: false, weight: "阅读 5% · 倒扣分", desc: "倒扣分题型！不确定只选 1 个最稳选项" },
+    { key: "R-MCS", name: "R-MCS 阅读单选", english: "Reading Single Choice", category: "reading", unit: "题", tier: "tier3", isCore: false, weight: "阅读 3% · 极低占比", desc: "读题目抓关键词回原文定位，秒过" },
+
+    // 听力 (Listening - 8题)
+    { key: "WFD", name: "WFD 听写句子", english: "Write From Dictation", category: "listening", unit: "题", tier: "tier1", isCore: true, weight: "写作 23% + 听力 13%", desc: "全场第一命门！双机构周预测题库打卡 (系统做题自动累计)" },
+    { key: "SST", name: "SST 听力总结", english: "Summarize Spoken Text", category: "listening", unit: "篇", tier: "tier2", isCore: false, weight: "写作 18% + 听力 10%", desc: "听长音频记 3-4 核心论点，套万能模版" },
+    { key: "HIW", name: "HIW 高亮错词", english: "Highlight Incorrect Words", category: "listening", unit: "篇", tier: "tier2", isCore: false, weight: "阅读 13% + 听力 8%", desc: "眼睛比音频快半秒，倒扣分，不确定别点" },
+    { key: "FIB-L", name: "FIB-L 听力填空", english: "Fill in the Blanks (L)", category: "listening", unit: "篇", tier: "tier3", isCore: false, weight: "听力 8% · 全科 3%", desc: "听录音填空，注意单复数与过去式后缀" },
+    { key: "L-MCM", name: "L-MCM 听力多选", english: "Listening Multi Choice", category: "listening", unit: "题", tier: "tier3", isCore: false, weight: "听力 3% · 倒扣分", desc: "倒扣分，仅选 1 个完全确定的选项" },
+    { key: "HCS", name: "HCS 高亮总结", english: "Highlight Correct Summary", category: "listening", unit: "题", tier: "tier3", isCore: false, weight: "阅读 3% + 听力 2%", desc: "选出最佳总结段落，抓主旨排除细节偏差" },
+    { key: "L-MCS", name: "L-MCS 听力单选", english: "Listening Single Choice", category: "listening", unit: "题", tier: "tier3", isCore: false, weight: "听力 2% · 极低占比", desc: "听音频选主旨，无需花费过多思考时间" },
+    { key: "SMW", name: "SMW 选择缺失词", english: "Select Missing Word", category: "listening", unit: "题", tier: "tier3", isCore: false, weight: "听力 1% · 滴声选词", desc: "结尾哔声选词，根据语境情感逻辑秒选" }
   ];
 
+  const PLANNER_TASK_DEFS = ALL_PLANNER_TASK_DEFS;
+
   const PLANNER_PRESETS = {
-    competent: { DI: 4, RS: 20, SGD: 2, RA: 4, WFD: 30, FIB_D: 3, WE_SWT: 1 },
-    "485": { DI: 3, RS: 15, SGD: 0, RA: 3, WFD: 25, FIB_D: 2, WE_SWT: 1 },
-    proficient: { DI: 6, RS: 35, SGD: 4, RA: 6, WFD: 40, FIB_D: 5, WE_SWT: 2 },
-    reset: { DI: 0, RS: 0, SGD: 0, RA: 0, WFD: 0, FIB_D: 0, WE_SWT: 0 }
+    competent: { RS: 20, DI: 4, SGD: 2, RA: 4, "FIB-D": 3, WFD: 30, WE: 1, SWT: 1 },
+    "485": { RS: 15, DI: 3, SGD: 0, RA: 3, "FIB-D": 2, WFD: 25, WE: 1, SWT: 1 },
+    proficient: { RS: 35, DI: 6, SGD: 4, RA: 6, "FIB-D": 5, WFD: 40, WE: 2, SWT: 2, RL: 3, SST: 2, HIW: 4, "FIB-L": 3 },
+    all22: { RS: 15, DI: 4, SGD: 2, RA: 4, RL: 2, RTS: 2, ASQ: 4, WE: 1, SWT: 1, "FIB-D": 3, "FIB-DD": 2, RO: 2, "R-MCM": 1, "R-MCS": 1, WFD: 25, SST: 2, HIW: 3, "FIB-L": 3, "L-MCM": 1, HCS: 1, "L-MCS": 1, SMW: 1 },
+    reset: {}
   };
 
   function getPlannerTodayDateStr() {
@@ -4233,11 +4332,23 @@
   function getPlannerGoals() {
     const pid = getActiveProfileId();
     const key = "pte_planner_goals_" + pid;
+    let goals = {};
     try {
       const saved = localStorage.getItem(key);
-      if (saved) return JSON.parse(saved);
+      if (saved) goals = JSON.parse(saved);
     } catch(e) {}
-    return Object.assign({}, PLANNER_PRESETS.competent);
+    if (!goals || Object.keys(goals).length === 0) {
+      goals = Object.assign({}, PLANNER_PRESETS.competent);
+    }
+    // Backward compatibility for FIB_D and WE_SWT
+    if (goals["FIB_D"] !== undefined && goals["FIB-D"] === undefined) {
+      goals["FIB-D"] = goals["FIB_D"];
+    }
+    if (goals["WE_SWT"] !== undefined) {
+      if (goals["WE"] === undefined) goals["WE"] = goals["WE_SWT"];
+      if (goals["SWT"] === undefined) goals["SWT"] = goals["WE_SWT"];
+    }
+    return goals;
   }
 
   function savePlannerGoals(goals) {
@@ -4249,11 +4360,20 @@
     const pid = getActiveProfileId();
     const today = getPlannerTodayDateStr();
     const key = "pte_planner_act_" + pid + "_" + today;
+    let acts = {};
     try {
       const saved = localStorage.getItem(key);
-      if (saved) return JSON.parse(saved);
+      if (saved) acts = JSON.parse(saved);
     } catch(e) {}
-    return { DI: 0, RS: 0, SGD: 0, RA: 0, WFD: 0, FIB_D: 0, WE_SWT: 0 };
+    if (!acts) acts = {};
+    if (acts["FIB_D"] !== undefined && acts["FIB-D"] === undefined) {
+      acts["FIB-D"] = acts["FIB_D"];
+    }
+    if (acts["WE_SWT"] !== undefined) {
+      if (acts["WE"] === undefined) acts["WE"] = acts["WE_SWT"];
+      if (acts["SWT"] === undefined) acts["SWT"] = acts["WE_SWT"];
+    }
+    return acts;
   }
 
   function savePlannerTodayActuals(acts) {
@@ -4278,12 +4398,18 @@
     localStorage.setItem("pte_planner_hist_" + pid, JSON.stringify(hist));
   }
 
-  // ---------------- 弹窗设置逻辑 ----------------
+  // ---------------- 弹窗设置逻辑 (全22题型自由增删) ----------------
   let modalTempGoals = {};
+  let modalFilter = "all";
+  let modalSearchQuery = "";
 
   function openPlannerSettingsModal() {
     modalTempGoals = Object.assign({}, getPlannerGoals());
-    renderModalTasksList();
+    modalFilter = "all";
+    modalSearchQuery = "";
+    const searchInput = document.getElementById("modal-task-search-input");
+    if (searchInput) searchInput.value = "";
+    setModalFilter("all");
     const modal = document.getElementById("planner-settings-modal");
     if (modal) modal.classList.add("show");
   }
@@ -4299,10 +4425,28 @@
     }
   }
 
+  function setModalFilter(filter) {
+    modalFilter = filter;
+    document.querySelectorAll(".modal-filter-pill").forEach(btn => {
+      btn.classList.toggle("active", btn.id === "modal-tab-" + filter);
+    });
+    renderModalTasksList();
+  }
+
+  function filterModalTasksList() {
+    const input = document.getElementById("modal-task-search-input");
+    modalSearchQuery = input ? input.value.trim().toLowerCase() : "";
+    renderModalTasksList();
+  }
+
   function modalLoadPreset(presetKey) {
     const preset = PLANNER_PRESETS[presetKey];
     if (!preset) return;
-    modalTempGoals = Object.assign({}, preset);
+    if (presetKey === "reset") {
+      modalTempGoals = {};
+    } else {
+      modalTempGoals = Object.assign({}, preset);
+    }
     renderModalTasksList();
     showToast("⚡ 已载入方案数值，点击下方「保存」即可生效");
   }
@@ -4310,25 +4454,75 @@
   function renderModalTasksList() {
     const container = document.getElementById("planner-modal-tasks-list");
     if (!container) return;
+
+    let activeCount = 0;
+    ALL_PLANNER_TASK_DEFS.forEach(t => {
+      if ((modalTempGoals[t.key] || 0) > 0) activeCount++;
+    });
+
+    const activeCountBadge = document.getElementById("modal-filter-active-count");
+    if (activeCountBadge) activeCountBadge.innerText = activeCount;
+
+    const summaryText = document.getElementById("modal-active-summary-text");
+    if (summaryText) {
+      summaryText.innerText = "已启用 " + activeCount + " / 22 个题型进行每日打卡 · 设为 0 或移除即跳过不练";
+    }
+
+    let filtered = ALL_PLANNER_TASK_DEFS.filter(t => {
+      const curVal = (modalTempGoals[t.key] !== undefined) ? modalTempGoals[t.key] : 0;
+      if (modalFilter === "active" && curVal <= 0) return false;
+      if (modalFilter === "speaking" && t.category !== "speaking") return false;
+      if (modalFilter === "writing" && t.category !== "writing") return false;
+      if (modalFilter === "reading" && t.category !== "reading") return false;
+      if (modalFilter === "listening" && t.category !== "listening") return false;
+      if (modalSearchQuery) {
+        const q = modalSearchQuery;
+        const match = t.key.toLowerCase().includes(q) ||
+                      t.name.toLowerCase().includes(q) ||
+                      t.english.toLowerCase().includes(q) ||
+                      t.desc.toLowerCase().includes(q) ||
+                      t.weight.toLowerCase().includes(q);
+        if (!match) return false;
+      }
+      return true;
+    });
+
+    if (filtered.length === 0) {
+      container.innerHTML = '<div style="text-align: center; color: #94a3b8; font-size: 0.82rem; padding: 24px; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 8px;">无符合条件的题型。可切换上方分类标签或清空搜索框。</div>';
+      return;
+    }
+
     let html = "";
-    PLANNER_TASK_DEFS.forEach(t => {
+    filtered.forEach(t => {
       const curVal = (modalTempGoals[t.key] !== undefined) ? modalTempGoals[t.key] : 0;
       const isEnabled = curVal > 0;
+      const tierBadge = t.tier === "tier1" ? '<span style="font-size:0.68rem; background:#fee2e2; color:#b91c1c; padding:1px 5px; border-radius:4px; font-weight:700;">🔥Tier 1</span>' :
+                        (t.tier === "tier2" ? '<span style="font-size:0.68rem; background:#fef3c7; color:#b45309; padding:1px 5px; border-radius:4px; font-weight:700;">⭐Tier 2</span>' :
+                         '<span style="font-size:0.68rem; background:#f1f5f9; color:#64748b; padding:1px 5px; border-radius:4px; font-weight:600;">💤Tier 3</span>');
+
       html += '<div class="planner-modal-task-row ' + (isEnabled ? '' : 'is-disabled') + '" id="modal-task-row-' + t.key + '">' +
         '<div style="display: flex; align-items: center; gap: 10px; min-width: 0; flex: 1;">' +
-          '<input type="checkbox" id="modal-chk-' + t.key + '" ' + (isEnabled ? 'checked' : '') + ' style="width: 18px; height: 18px; cursor: pointer;" onchange="toggleModalTaskActive(&apos;' + t.key + '&apos;, this.checked)">' +
+          '<input type="checkbox" id="modal-chk-' + t.key + '" ' + (isEnabled ? 'checked' : '') + ' style="width: 18px; height: 18px; cursor: pointer; flex-shrink: 0;" onchange="toggleModalTaskActive(&apos;' + t.key + '&apos;, this.checked)">' +
           '<div style="min-width: 0;">' +
             '<div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">' +
               '<strong style="font-size: 0.92rem; color: #0f172a;">' + t.name + '</strong>' +
               '<span class="planner-task-badge ' + t.category + '">' + t.weight + '</span>' +
+              tierBadge +
             '</div>' +
             '<div style="font-size: 0.73rem; color: #64748b; margin-top: 2px;">' + t.desc + '</div>' +
           '</div>' +
         '</div>' +
-        '<div class="planner-stepper-box">' +
-          '<button type="button" class="planner-stepper-btn" onclick="stepModalGoal(&apos;' + t.key + '&apos;, -1)">-</button>' +
-          '<input type="number" min="0" class="planner-stepper-input" id="modal-input-' + t.key + '" value="' + curVal + '" onchange="changeModalInputGoal(&apos;' + t.key + '&apos;, this.value)">' +
-          '<button type="button" class="planner-stepper-btn" onclick="stepModalGoal(&apos;' + t.key + '&apos;, 1)">+</button>' +
+        '<div style="display: flex; align-items: center; gap: 8px; flex-shrink: 0;">' +
+          (isEnabled ? 
+            ('<div class="planner-stepper-box">' +
+              '<button type="button" class="planner-stepper-btn" onclick="stepModalGoal(&apos;' + t.key + '&apos;, -1)">-</button>' +
+              '<input type="number" min="0" class="planner-stepper-input" id="modal-input-' + t.key + '" value="' + curVal + '" onchange="changeModalInputGoal(&apos;' + t.key + '&apos;, this.value)">' +
+              '<button type="button" class="planner-stepper-btn" onclick="stepModalGoal(&apos;' + t.key + '&apos;, 1)">+</button>' +
+            '</div>' +
+            '<span style="font-size: 0.75rem; color: #64748b; font-weight: 600; width: 16px;">' + t.unit + '</span>' +
+            '<button type="button" onclick="toggleModalTaskActive(&apos;' + t.key + '&apos;, false)" style="border: none; background: #fee2e2; color: #b91c1c; font-size: 0.72rem; padding: 5px 8px; border-radius: 6px; cursor: pointer; font-weight: 700;" title="从每日打卡移除">✕ 移除</button>') :
+            ('<button type="button" onclick="toggleModalTaskActive(&apos;' + t.key + '&apos;, true)" style="border: 1px dashed #86efac; background: #f0fdf4; color: #16a34a; font-size: 0.78rem; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 4px;">➕ 加入打卡</button>')
+          ) +
         '</div>' +
       '</div>';
     });
@@ -4339,7 +4533,12 @@
     if (!isChecked) {
       modalTempGoals[taskKey] = 0;
     } else {
-      modalTempGoals[taskKey] = (PLANNER_PRESETS.competent[taskKey] || 5);
+      let defaultVal = 3;
+      if (taskKey === "RS" || taskKey === "WFD") defaultVal = 20;
+      else if (taskKey === "DI" || taskKey === "RA") defaultVal = 4;
+      else if (taskKey === "WE" || taskKey === "SWT") defaultVal = 1;
+      else if (taskKey === "SGD" || taskKey === "FIB-D") defaultVal = 2;
+      modalTempGoals[taskKey] = defaultVal;
     }
     renderModalTasksList();
   }
@@ -4365,6 +4564,47 @@
     showToast("🎉 自定义练题目标已保存并应用！");
   }
 
+  // ---------------- 主看板快捷增删与筛选 ----------------
+  let currentPlannerCategory = "active"; // "active", "all", "speaking", "writing", "reading", "listening"
+
+  function setPlannerCategoryFilter(cat) {
+    currentPlannerCategory = cat;
+    document.querySelectorAll("#planner-cat-filter-group .preset-pill-btn").forEach(btn => {
+      btn.classList.toggle("active-cat", btn.id === "cat-btn-" + cat);
+    });
+    renderPlannerView();
+  }
+
+  function quickAddTaskToPlanner(taskKey) {
+    const goals = getPlannerGoals();
+    const tDef = ALL_PLANNER_TASK_DEFS.find(item => item.key === taskKey);
+    const tName = tDef ? tDef.name : taskKey;
+    let defVal = 3;
+    if (taskKey === "RS" || taskKey === "WFD") defVal = 20;
+    else if (taskKey === "DI" || taskKey === "RA") defVal = 4;
+    else if (taskKey === "WE" || taskKey === "SWT") defVal = 1;
+    else if (taskKey === "SGD" || taskKey === "FIB-D") defVal = 2;
+    goals[taskKey] = defVal;
+    savePlannerGoals(goals);
+    renderPlannerView();
+    showToast("🎉 已将「" + tName + "」加入今日打卡目标 (" + defVal + " " + (tDef ? tDef.unit : "题") + ")！");
+    recordDailyFootprint();
+  }
+
+  function removeTaskFromPlanner(taskKey) {
+    const goals = getPlannerGoals();
+    const tDef = ALL_PLANNER_TASK_DEFS.find(item => item.key === taskKey);
+    const tName = tDef ? tDef.name : taskKey;
+    const msg = "确定要将「" + tName + "」从今日打卡计划中移除吗？" + String.fromCharCode(10) + "（移除后设为 0 题，随时可在题型列表或设置中重新添加）";
+    if (confirm(msg)) {
+      goals[taskKey] = 0;
+      savePlannerGoals(goals);
+      renderPlannerView();
+      showToast("🗑️ 已将「" + tName + "」从今日计划中移除");
+      recordDailyFootprint();
+    }
+  }
+
   // ---------------- 主看板交互：练完一题立即打卡 ----------------
   function checkinOneQuestion(taskKey) {
     stepActualCount(taskKey, 1);
@@ -4380,7 +4620,7 @@
     savePlannerTodayActuals(acts);
     renderPlannerView();
 
-    const tDef = PLANNER_TASK_DEFS.find(item => item.key === taskKey);
+    const tDef = ALL_PLANNER_TASK_DEFS.find(item => item.key === taskKey);
     const tName = tDef ? tDef.name : taskKey;
     const unit = tDef ? tDef.unit : "题";
 
@@ -4446,13 +4686,17 @@
     const preset = PLANNER_PRESETS[presetKey];
     if (!preset) return;
     if (presetKey === "reset") {
-      if (!confirm("确定要将今日各题型的目标与实际练题数全部归零吗？")) return;
-      savePlannerGoals(Object.assign({}, preset));
-      savePlannerTodayActuals(Object.assign({}, preset));
+      const msg = "确定要将今日各题型的目标与实际练题数全部归零吗？";
+      if (!confirm(msg)) return;
+      savePlannerGoals({});
+      savePlannerTodayActuals({});
       showToast("🔄 今日练题数据已归零");
     } else {
       savePlannerGoals(Object.assign({}, preset));
-      showToast("⚡ 已套用预设方案：" + (presetKey === "competent" ? "Competent 54+ 冲刺" : (presetKey === "485" ? "485 工签保底" : "七炸 65+ 挑战")));
+      const planName = presetKey === "competent" ? "Competent 54+ 冲刺 (推荐8核心)" :
+                       (presetKey === "485" ? "485 工签保底 (7项)" :
+                        (presetKey === "proficient" ? "七炸 65+ 挑战 (12项)" : "开启全部 22 题型"));
+      showToast("⚡ 已套用预设方案：" + planName);
     }
     renderPlannerView();
     recordDailyFootprint();
@@ -4496,7 +4740,7 @@
     let validItems = 0;
     let completedItems = 0;
 
-    PLANNER_TASK_DEFS.forEach(t => {
+    ALL_PLANNER_TASK_DEFS.forEach(t => {
       const target = goals[t.key] || 0;
       const act = acts[t.key] || 0;
       totalTarget += target;
@@ -4546,7 +4790,8 @@
   }
 
   function clearPlannerHistory() {
-    if (!confirm("确定要清空全部历史打卡记录吗？此操作不可撤销。")) return;
+    const msg = "确定要清空全部历史打卡记录吗？此操作不可撤销。";
+    if (!confirm(msg)) return;
     savePlannerHistory([]);
     renderPlannerView();
     showToast("🗑️ 历史打卡记录已清空");
@@ -4563,7 +4808,7 @@
     let validItems = 0;
     let completedItems = 0;
 
-    PLANNER_TASK_DEFS.forEach(t => {
+    ALL_PLANNER_TASK_DEFS.forEach(t => {
       const target = goals[t.key] || 0;
       const act = acts[t.key] || 0;
       totalTarget += target;
@@ -4576,21 +4821,30 @@
 
     const sumTag = document.getElementById("home-widget-summary-tag");
     if (sumTag) {
-      sumTag.innerText = "已达标 " + completedItems + " / " + (validItems || 7) + " 项 · 累计打卡 " + totalActual + " 题";
+      sumTag.innerText = "已达标 " + completedItems + " / " + (validItems || 0) + " 项 · 累计打卡 " + totalActual + " 题";
       sumTag.style.background = (completedItems === validItems && validItems > 0) ? "#dcfce7" : "#fff7ed";
       sumTag.style.color = (completedItems === validItems && validItems > 0) ? "#15803d" : "#ea580c";
     }
 
     const headerBadge = document.getElementById("header-planner-badge");
     if (headerBadge) {
-      headerBadge.innerText = completedItems + "/" + (validItems || 7) + " 项";
+      headerBadge.innerText = completedItems + "/" + (validItems || 0) + " 项";
     }
 
     const container = document.getElementById("home-checkin-items-grid");
     if (!container) return;
 
+    let activeTasks = ALL_PLANNER_TASK_DEFS.filter(t => (goals[t.key] || 0) > 0 || (acts[t.key] || 0) > 0);
+
+    if (activeTasks.length === 0) {
+      container.innerHTML = '<div style="grid-column: 1 / -1; text-align: center; color: #64748b; font-size: 0.82rem; padding: 16px; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 8px;">' +
+        '今日暂未设定任何打卡题型 · 点击右上方 <button type="button" class="nav-btn" onclick="openPlannerSettingsModal()" style="font-size: 0.75rem; padding: 2px 8px; margin: 0 4px;">⚙️ 设置目标</button> 即可从 22 题型中自由勾选！' +
+        '</div>';
+      return;
+    }
+
     let html = "";
-    PLANNER_TASK_DEFS.forEach(t => {
+    activeTasks.forEach(t => {
       const target = goals[t.key] || 0;
       const act = acts[t.key] || 0;
       const isDone = (target > 0 && act >= target);
@@ -4599,8 +4853,8 @@
       html += '<div style="background: ' + (isDone ? '#f0fdf4' : '#f8fafc') + '; border: 1px solid ' + (isDone ? '#86efac' : '#e2e8f0') + '; border-radius: 10px; padding: 10px 12px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.15s;">' +
         '<div>' +
           '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">' +
-            '<strong style="font-size: 0.88rem; color: #0f172a;">' + t.name.split(" ")[0] + ' ' + t.english.split(" ")[0] + '</strong>' +
-            (isDone ? '<span style="font-size: 0.68rem; color: #16a34a; background: #dcfce7; padding: 1px 5px; border-radius: 4px; font-weight: 700;">✅ 达成</span>' : '<span style="font-size: 0.68rem; color: #64748b;">' + t.weight.split("·")[0].trim() + '</span>') +
+            '<strong style="font-size: 0.88rem; color: #0f172a;">' + t.name.split(" ")[0] + ' ' + (t.english ? t.english.split(" ")[0] : '') + '</strong>' +
+            (isDone ? '<span style="font-size: 0.68rem; color: #16a34a; background: #dcfce7; padding: 1px 5px; border-radius: 4px; font-weight: 700;">✅ 达成</span>' : '<span style="font-size: 0.68rem; color: #64748b;">' + t.weight.split("·")[0].split("+")[0].trim() + '</span>') +
           '</div>' +
           '<div style="display: flex; align-items: baseline; gap: 4px; margin-bottom: 6px;">' +
             '<span style="font-size: 1.45rem; font-weight: 800; color: ' + (isDone ? '#16a34a' : '#0f172a') + ';">' + act + '</span>' +
@@ -4647,7 +4901,7 @@
     let validItems = 0;
     let completedItems = 0;
 
-    PLANNER_TASK_DEFS.forEach(t => {
+    ALL_PLANNER_TASK_DEFS.forEach(t => {
       const target = goals[t.key] || 0;
       const act = acts[t.key] || 0;
       totalTarget += target;
@@ -4668,80 +4922,153 @@
       rateEl.innerText = completionRate + "%";
       rateEl.style.color = (completionRate === 100) ? "#4ade80" : "#38bdf8";
     }
-    if (itemsEl) itemsEl.innerText = completedItems + " / " + (validItems || 7);
+    if (itemsEl) itemsEl.innerText = completedItems + " / " + validItems;
     if (totalActEl) totalActEl.innerText = totalActual + " 题";
     if (cdEl) {
       const days = getCountdownDays();
       cdEl.innerText = (days > 0 ? "倒计时 " + days + " 天" : (days === 0 ? "今天考试！" : "已考完"));
     }
 
-    // 3. 渲染 7 大题型卡片 (突出练完打卡主按钮与大号进度)
+    // 更新筛选胶囊计数
+    let activeTaskCount = 0;
+    ALL_PLANNER_TASK_DEFS.forEach(t => {
+      if ((goals[t.key] || 0) > 0 || (acts[t.key] || 0) > 0) activeTaskCount++;
+    });
+    const activeBadge = document.getElementById("cat-badge-active");
+    if (activeBadge) activeBadge.innerText = activeTaskCount;
+
+    // 3. 动态渲染各题型卡片 (根据 currentPlannerCategory 过滤)
     const container = document.getElementById("planner-tasks-container");
     if (container) {
-      let cardsHtml = "";
-      PLANNER_TASK_DEFS.forEach(t => {
+      let tasksToRender = ALL_PLANNER_TASK_DEFS.filter(t => {
         const target = goals[t.key] || 0;
         const act = acts[t.key] || 0;
-        const isDone = (target > 0 && act >= target);
-        const percent = target > 0 ? Math.min(100, Math.round((act / target) * 100)) : (act > 0 ? 100 : 0);
+        if (currentPlannerCategory === "active") {
+          return target > 0 || act > 0;
+        } else if (currentPlannerCategory === "all") {
+          return true;
+        } else {
+          return t.category === currentPlannerCategory;
+        }
+      });
 
-        cardsHtml += '<div class="planner-task-card ' + (isDone ? 'is-completed' : '') + '">' +
-          '<div>' +
-            '<div class="planner-task-header">' +
-              '<div>' +
-                '<div style="display: flex; align-items: center; gap: 6px; margin-bottom: 2px;">' +
-                  '<strong style="font-size: 0.96rem; color: #0f172a;">' + t.name + '</strong>' +
-                  '<span class="planner-task-badge ' + t.category + '">' + t.weight + '</span>' +
-                '</div>' +
-                '<div style="font-size: 0.73rem; color: #64748b;">' + t.desc + '</div>' +
-              '</div>' +
-              '<div style="display: flex; align-items: center; gap: 4px;">' +
-                (isDone ? '<span class="status-tag status-perfect" style="font-size: 0.72rem; padding: 2px 8px; border-radius: 9999px;">✅ 目标已达成</span>' : 
-                 (target > 0 ? '<span style="font-size: 0.72rem; color: #ea580c; background: #fff7ed; padding: 2px 7px; border-radius: 9999px; border: 1px solid #fed7aa; font-weight: 600;">还差 ' + (target - act) + ' ' + t.unit + '</span>' : '<span style="font-size: 0.72rem; color: #94a3b8; background: #f1f5f9; padding: 2px 6px; border-radius: 4px;">跳过不准备</span>')) +
-                '<button type="button" onclick="openPlannerSettingsModal()" style="border: none; background: transparent; cursor: pointer; font-size: 0.95rem; color: #94a3b8; padding: 2px;" title="配置该题型目标">⚙️</button>' +
-              '</div>' +
-            '</div>' +
+      let cardsHtml = "";
 
-            '<!-- 大号进度看板展示 (0 / 4 题) -->' +
-            '<div class="checkin-progress-display">' +
-              '<div class="checkin-progress-ratio ' + (isDone ? 'done' : '') + '">' +
-                '<span style="font-size: 1.85rem; font-weight: 800;">' + act + '</span>' +
-                '<span style="font-size: 1.15rem; color: #64748b; font-weight: 600;"> / ' + target + ' ' + t.unit + '</span>' +
-                '<span style="font-size: 0.78rem; color: #94a3b8; margin-left: 6px; font-weight: 600;">(' + percent + '%)</span>' +
-              '</div>' +
-              '<div class="planner-progress-track" style="margin-top: 6px;">' +
-                '<div class="planner-progress-bar ' + (isDone ? 'done' : '') + '" style="width: ' + percent + '%;"></div>' +
-              '</div>' +
-            '</div>' +
-          '</div>' +
-
-          '<!-- 核心打卡操作区 (练完一题点一次) -->' +
-          '<div>' +
-            '<div class="checkin-action-bar">' +
-              '<button type="button" class="btn-checkin-primary ' + (isDone ? 'done-state' : '') + '" onclick="checkinOneQuestion(&apos;' + t.key + '&apos;)" title="每做完一题点此打卡">' +
-                '🔥 练完打卡 (+1)' +
-              '</button>' +
-              '<button type="button" class="btn-checkin-secondary" onclick="stepActualCount(&apos;' + t.key + '&apos;, 5)" title="连练 5 题一次性打卡">+5</button>' +
-              '<button type="button" class="btn-checkin-secondary" onclick="stepActualCount(&apos;' + t.key + '&apos;, -1)" title="点多手滑撤销 1 题">-1</button>' +
-            '</div>' +
-
-            '<!-- 手动数字填空辅助 -->' +
-            '<div style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 8px; padding: 6px 10px; font-size: 0.76rem; color: #64748b;">' +
-              '<div style="display: flex; align-items: center; gap: 4px;">' +
-                '<span>✍️ 已练填空:</span>' +
-                '<input type="number" min="0" value="' + act + '" onchange="updateActualCount(&apos;' + t.key + '&apos;, this.value)" style="width: 44px; padding: 2px 4px; text-align: center; font-weight: 700; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 0.82rem;">' +
-                '<span>' + t.unit + '</span>' +
-              '</div>' +
-              '<div style="display: flex; align-items: center; gap: 4px;">' +
-                '<span>🎯 目标:</span>' +
-                '<button type="button" onclick="stepTargetCount(&apos;' + t.key + '&apos;, -1)" style="border:1px solid #cbd5e1; background:white; border-radius:3px; padding:1px 5px; cursor:pointer;">-</button>' +
-                '<span style="font-weight: 800; color: #0f172a;">' + target + '</span>' +
-                '<button type="button" onclick="stepTargetCount(&apos;' + t.key + '&apos;, 1)" style="border:1px solid #cbd5e1; background:white; border-radius:3px; padding:1px 5px; cursor:pointer;">+</button>' +
-              '</div>' +
-            '</div>' +
+      if (tasksToRender.length === 0 && currentPlannerCategory === "active") {
+        cardsHtml = '<div style="grid-column: 1 / -1; text-align: center; padding: 36px 20px; background: white; border: 2px dashed #cbd5e1; border-radius: 14px;">' +
+          '<div style="font-size: 2.2rem; margin-bottom: 8px;">🎯</div>' +
+          '<h3 style="font-size: 1.1rem; color: #0f172a; margin-bottom: 6px;">今日暂未开启任何题型打卡</h3>' +
+          '<p style="font-size: 0.82rem; color: #64748b; margin-bottom: 16px;">您可以一键套用推荐方案，或切换上方分类直接开启任意题型。</p>' +
+          '<div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">' +
+            '<button type="button" class="preset-pill-btn primary" onclick="applyPresetPlan(&apos;competent&apos;)">🎯 一键套用 Competent 8大核心题型</button>' +
+            '<button type="button" class="preset-pill-btn" onclick="openPlannerSettingsModal()">⚙️ 自主挑选 22 题型</button>' +
           '</div>' +
         '</div>';
-      });
+      } else {
+        tasksToRender.forEach(t => {
+          const target = goals[t.key] || 0;
+          const act = acts[t.key] || 0;
+          const isConfigured = target > 0 || act > 0;
+          const isDone = (target > 0 && act >= target);
+          const percent = target > 0 ? Math.min(100, Math.round((act / target) * 100)) : (act > 0 ? 100 : 0);
+
+          if (!isConfigured) {
+            // 未激活卡片：突出简洁的“➕ 开启此题打卡”
+            cardsHtml += '<div class="planner-task-card is-inactive">' +
+              '<div>' +
+                '<div class="planner-task-header">' +
+                  '<div>' +
+                    '<div style="display: flex; align-items: center; gap: 6px; margin-bottom: 2px;">' +
+                      '<strong style="font-size: 0.96rem; color: #475569;">' + t.name + '</strong>' +
+                      '<span class="planner-task-badge ' + t.category + '">' + t.weight + '</span>' +
+                    '</div>' +
+                    '<div style="font-size: 0.73rem; color: #64748b;">' + t.desc + '</div>' +
+                  '</div>' +
+                  '<span style="font-size: 0.72rem; color: #94a3b8; background: #f1f5f9; padding: 2px 6px; border-radius: 4px;">未列入计划</span>' +
+                '</div>' +
+                '<div style="text-align: center; padding: 20px 0; color: #94a3b8; font-size: 0.82rem;">' +
+                  '此题今日设为 0，不计入打卡考核' +
+                '</div>' +
+              '</div>' +
+              '<div>' +
+                '<button type="button" onclick="quickAddTaskToPlanner(&apos;' + t.key + '&apos;)" style="width: 100%; padding: 10px; background: #f0fdf4; color: #16a34a; border: 1.5px dashed #86efac; border-radius: 8px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.15s; display: flex; align-items: center; justify-content: center; gap: 6px;">' +
+                  '➕ 开启此题打卡 (加入今日计划)' +
+                '</button>' +
+              '</div>' +
+            '</div>';
+          } else {
+            // 已激活题型卡片：逐题打卡 + 大号进度 + 快速增减
+            cardsHtml += '<div class="planner-task-card ' + (isDone ? 'is-completed' : '') + '">' +
+              '<div>' +
+                '<div class="planner-task-header">' +
+                  '<div>' +
+                    '<div style="display: flex; align-items: center; gap: 6px; margin-bottom: 2px;">' +
+                      '<strong style="font-size: 0.96rem; color: #0f172a;">' + t.name + '</strong>' +
+                      '<span class="planner-task-badge ' + t.category + '">' + t.weight + '</span>' +
+                    '</div>' +
+                    '<div style="font-size: 0.73rem; color: #64748b;">' + t.desc + '</div>' +
+                  '</div>' +
+                  '<div style="display: flex; align-items: center; gap: 4px;">' +
+                    (isDone ? '<span class="status-tag status-perfect" style="font-size: 0.72rem; padding: 2px 8px; border-radius: 9999px;">✅ 目标已达成</span>' : 
+                     (target > 0 ? '<span style="font-size: 0.72rem; color: #ea580c; background: #fff7ed; padding: 2px 7px; border-radius: 9999px; border: 1px solid #fed7aa; font-weight: 600;">还差 ' + (target - act) + ' ' + t.unit + '</span>' : '<span style="font-size: 0.72rem; color: #94a3b8; background: #f1f5f9; padding: 2px 6px; border-radius: 4px;">今日设为0</span>')) +
+                    '<button type="button" onclick="openPlannerSettingsModal()" style="border: none; background: transparent; cursor: pointer; font-size: 0.95rem; color: #94a3b8; padding: 2px;" title="配置该题型目标">⚙️</button>' +
+                    '<button type="button" onclick="removeTaskFromPlanner(&apos;' + t.key + '&apos;)" style="border: none; background: #fee2e2; color: #b91c1c; font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; cursor: pointer; font-weight: 700; margin-left: 2px;" title="从今日打卡计划中移除此题">✕</button>' +
+                  '</div>' +
+                '</div>' +
+
+                '<!-- 大号进度看板展示 (0 / 4 题) -->' +
+                '<div class="checkin-progress-display">' +
+                  '<div class="checkin-progress-ratio ' + (isDone ? 'done' : '') + '">' +
+                    '<span style="font-size: 1.85rem; font-weight: 800;">' + act + '</span>' +
+                    '<span style="font-size: 1.15rem; color: #64748b; font-weight: 600;"> / ' + target + ' ' + t.unit + '</span>' +
+                    '<span style="font-size: 0.78rem; color: #94a3b8; margin-left: 6px; font-weight: 600;">(' + percent + '%)</span>' +
+                  '</div>' +
+                  '<div class="planner-progress-track" style="margin-top: 6px;">' +
+                    '<div class="planner-progress-bar ' + (isDone ? 'done' : '') + '" style="width: ' + percent + '%;"></div>' +
+                  '</div>' +
+                '</div>' +
+              '</div>' +
+
+              '<!-- 核心打卡操作区 (练完一题点一次) -->' +
+              '<div>' +
+                '<div class="checkin-action-bar">' +
+                  '<button type="button" class="btn-checkin-primary ' + (isDone ? 'done-state' : '') + '" onclick="checkinOneQuestion(&apos;' + t.key + '&apos;)" title="每做完一题点此打卡">' +
+                    '🔥 练完打卡 (+1)' +
+                  '</button>' +
+                  '<button type="button" class="btn-checkin-secondary" onclick="stepActualCount(&apos;' + t.key + '&apos;, 5)" title="连练 5 题一次性打卡">+5</button>' +
+                  '<button type="button" class="btn-checkin-secondary" onclick="stepActualCount(&apos;' + t.key + '&apos;, -1)" title="点多手滑撤销 1 题">-1</button>' +
+                '</div>' +
+
+                '<!-- 手动数字填空辅助 -->' +
+                '<div style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 8px; padding: 6px 10px; font-size: 0.76rem; color: #64748b;">' +
+                  '<div style="display: flex; align-items: center; gap: 4px;">' +
+                    '<span>✍️ 已练填空:</span>' +
+                    '<input type="number" min="0" value="' + act + '" onchange="updateActualCount(&apos;' + t.key + '&apos;, this.value)" style="width: 44px; padding: 2px 4px; text-align: center; font-weight: 700; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 0.82rem;">' +
+                    '<span>' + t.unit + '</span>' +
+                  '</div>' +
+                  '<div style="display: flex; align-items: center; gap: 4px;">' +
+                    '<span>🎯 目标:</span>' +
+                    '<button type="button" onclick="stepTargetCount(&apos;' + t.key + '&apos;, -1)" style="border:1px solid #cbd5e1; background:white; border-radius:3px; padding:1px 5px; cursor:pointer;">-</button>' +
+                    '<span style="font-weight: 800; color: #0f172a;">' + target + '</span>' +
+                    '<button type="button" onclick="stepTargetCount(&apos;' + t.key + '&apos;, 1)" style="border:1px solid #cbd5e1; background:white; border-radius:3px; padding:1px 5px; cursor:pointer;">+</button>' +
+                  '</div>' +
+                '</div>' +
+              '</div>' +
+            '</div>';
+          }
+        });
+
+        // 如果在“今日已选打卡”视图，在卡片末尾追加一个显眼的“添加更多题型”引导卡片
+        if (currentPlannerCategory === "active") {
+          cardsHtml += '<div class="planner-add-task-slot" onclick="openPlannerSettingsModal()">' +
+            '<div style="font-size: 2.2rem; margin-bottom: 6px;">➕</div>' +
+            '<strong style="font-size: 1.05rem; color: #1e293b;">添加更多题型到今日计划</strong>' +
+            '<p style="font-size: 0.78rem; color: #64748b; margin: 4px 0 12px; max-width: 260px;">想练 SST、复述讲座、听力填空或高亮错词？随时自由加选！</p>' +
+            '<span style="font-size: 0.82rem; background: #2563eb; color: white; padding: 6px 16px; border-radius: 6px; font-weight: 700; box-shadow: 0 2px 6px rgba(37,99,235,0.25);">从全部 22 题型中添加 ↗</span>' +
+          '</div>';
+        }
+      }
+
       container.innerHTML = cardsHtml;
     }
 
@@ -4791,7 +5118,6 @@
     });
     container.innerHTML = html;
   }
-
   function initModuleRouting() {
     const hash = (window.location.hash || "").replace("#", "").toLowerCase();
     if (hash === "karaoke" || hash === "speaking") {
@@ -8309,27 +8635,43 @@
 
 <!-- 每日练题目标自定义设置 MODAL -->
 <div id="planner-settings-modal" class="modal-overlay" onclick="handlePlannerSettingsModalClick(event)">
-  <div class="modal-card" style="max-width: 620px;">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid var(--border); padding-bottom: 12px;">
+  <div class="modal-card" style="max-width: 680px; width: 95%;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 12px;">
       <div style="display: flex; align-items: center; gap: 8px;">
         <span style="font-size: 1.5rem;">⚙️</span>
         <div>
-          <h2 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin: 0;">自定义设置各题型练题目标</h2>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">自由设定每日刷题量 · 支持勾选/跳过低分题型 · 独立保存于当前学员档案</p>
+          <h2 style="font-size: 1.15rem; font-weight: 800; color: #0f172a; margin: 0;">自定义设置各题型练题目标 (全 22 题型自由增删)</h2>
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">自由勾选/添加任意题型 · 设为 0 即跳过不准备 · 独立保存于当前学员档案</p>
         </div>
       </div>
-      <button class="nav-btn" onclick="closePlannerSettingsModal()" style="font-size: 1.1rem; line-height: 1; padding: 4px 10px; cursor: border-radius: 6px;">✕</button>
+      <button class="nav-btn" onclick="closePlannerSettingsModal()" style="font-size: 1.1rem; line-height: 1; padding: 4px 10px; cursor: pointer; border-radius: 6px;">✕</button>
     </div>
 
-    <div class="modal-body" style="padding: 4px 2px; max-height: calc(85vh - 120px); overflow-y: auto; flex: 1 1 auto; min-height: 0;">
+    <div class="modal-body" style="padding: 4px 2px; max-height: calc(85vh - 130px); overflow-y: auto; flex: 1 1 auto; min-height: 0;">
       <!-- 快捷预设一键填入 -->
-      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 14px; margin-bottom: 14px;">
-        <div style="font-size: 0.78rem; font-weight: 700; color: #475569; margin-bottom: 6px;">⚡ 一键载入预设方案 (可在此基础上自由加减):</div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 14px; margin-bottom: 12px;">
+        <div style="font-size: 0.78rem; font-weight: 700; color: #475569; margin-bottom: 6px;">⚡ 一键载入科学规划 (可在其基础上任意增删修改):</div>
         <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-          <button type="button" class="preset-pill-btn primary" onclick="modalLoadPreset('competent')">🎯 Competent 54+ 冲刺</button>
-          <button type="button" class="preset-pill-btn" onclick="modalLoadPreset('485')">⚡ 485 工签保底 (55+)</button>
-          <button type="button" class="preset-pill-btn" onclick="modalLoadPreset('proficient')">🔥 七炸 65+ 挑战</button>
+          <button type="button" class="preset-pill-btn primary" onclick="modalLoadPreset('competent')">🎯 Competent 54+ (推荐8核心)</button>
+          <button type="button" class="preset-pill-btn" onclick="modalLoadPreset('485')">⚡ 485 工签保底 (7项)</button>
+          <button type="button" class="preset-pill-btn" onclick="modalLoadPreset('proficient')">🔥 七炸 65+ 挑战 (12项)</button>
+          <button type="button" class="preset-pill-btn" onclick="modalLoadPreset('all22')">✨ 开启全部 22 题型</button>
           <button type="button" class="preset-pill-btn" onclick="modalLoadPreset('reset')" style="color: #dc2626; border-color: #fca5a5;">🔄 全部清零</button>
+        </div>
+      </div>
+
+      <!-- 分类筛选与搜索条 -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;">
+        <div style="display: flex; gap: 5px; flex-wrap: wrap;" id="modal-cat-filter-pills">
+          <button type="button" class="modal-filter-pill active" id="modal-tab-all" onclick="setModalFilter('all')">全部 (22)</button>
+          <button type="button" class="modal-filter-pill" id="modal-tab-active" onclick="setModalFilter('active')">⭐ 正在打卡 (<span id="modal-filter-active-count">0</span>)</button>
+          <button type="button" class="modal-filter-pill" id="modal-tab-speaking" onclick="setModalFilter('speaking')">🎤 口语 (7)</button>
+          <button type="button" class="modal-filter-pill" id="modal-tab-writing" onclick="setModalFilter('writing')">✍️ 写作 (2)</button>
+          <button type="button" class="modal-filter-pill" id="modal-tab-reading" onclick="setModalFilter('reading')">📖 阅读 (5)</button>
+          <button type="button" class="modal-filter-pill" id="modal-tab-listening" onclick="setModalFilter('listening')">🎧 听力 (8)</button>
+        </div>
+        <div style="position: relative; width: 100%; max-width: 200px;">
+          <input type="text" id="modal-task-search-input" placeholder="🔍 快速搜索题型..." oninput="filterModalTasksList()" style="width: 100%; padding: 5px 8px; font-size: 0.78rem; border: 1px solid #cbd5e1; border-radius: 6px;">
         </div>
       </div>
 
@@ -8341,10 +8683,10 @@
 
     <!-- 弹窗底部操作按钮 -->
     <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px; border-top: 1px solid var(--border); padding-top: 12px; flex-wrap: wrap; gap: 8px;">
-      <span style="font-size: 0.76rem; color: #64748b;">💡 设为 0 或取消勾选即代表「跳过不准备」，不会计入每日打卡考核。</span>
+      <span style="font-size: 0.76rem; color: #64748b;" id="modal-active-summary-text">💡 设为 0 或点击移除即代表「跳过不准备」，不会计入每日打卡考核。</span>
       <div style="display: flex; gap: 8px;">
         <button class="nav-btn" onclick="closePlannerSettingsModal()" style="padding: 8px 16px;">取消</button>
-        <button class="btn-submit" onclick="savePlannerSettingsFromModal()" style="background: #2563eb; color: white; padding: 8px 20px; font-weight: 700; border-radius: 8px; border: none; cursor: pointer;">💾 保存并应用目标</button>
+        <button class="btn-submit" onclick="savePlannerSettingsFromModal()" style="background: #2563eb; color: white; padding: 8px 20px; font-weight: 700; border-radius: 8px; border: none; cursor: pointer; box-shadow: 0 2px 8px rgba(37,99,235,0.25);">💾 保存并应用目标</button>
       </div>
     </div>
   </div>
