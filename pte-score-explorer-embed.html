@@ -673,35 +673,41 @@
 // ================= 全量 22 题型权威数据库 =================
 const PTE_TASK_DATABASE = [
   {
-    id: "RA",
-    code: "RA",
-    name: "大声朗读",
-    english: "Read Aloud",
-    part: "Part 1 口语与写作",
-    section: "Section 2 (口语大题)",
-    examOrder: 1,
-    positionDesc: "Part 1 口语与写作 · Section 2 录音答题部分的第 1 题（个人介绍 Personal Intro 后的首个正式计分大题）",
-    count: "6–7 题",
-    tier: "tier1",
-    tierName: "🔥 必背核心 (Tier 1)",
-    weights: { overall: 11, speaking: 22, reading: 22, listening: 0, writing: 0 },
-    integrated: true,
-    negativeMarking: false,
-    timing: {
-      prompt: "屏幕呈现一段学术文本，长约 50~70 词",
-      prep: "30~40 秒（根据文本长度自动设定倒计时）",
-      answer: "40 秒正式录音",
-      timerType: "单题独立倒计时",
-      timeStrategy: "准备倒计时一结束会听到清脆的「BEEP」提示音，听到滴声后必须在1秒内自然开口；绝对不能抢读（抢读前几个词不收音）。录音开始后如果超过3秒不发声，麦克风自动切断判0分！读完最后一句后留半秒停顿，立刻手动点击右下角 Next 提交，防止录入考场杂音。"
+    "id": "RA",
+    "code": "RA",
+    "name": "大声朗读",
+    "english": "Read Aloud",
+    "part": "Part 1 口语与写作",
+    "section": "Section 2 (口语大题)",
+    "examOrder": 1,
+    "positionDesc": "Part 1 口语与写作 · Section 2 录音答题部分的第 1 题（个人介绍 Personal Intro 后的首个正式计分大题）",
+    "count": "6–7 题",
+    "tier": "tier2",
+    "tierName": "⭐ 重点拿分 (Tier 2)",
+    "weights": {
+      "overall": 4,
+      "speaking": 9,
+      "listening": 0,
+      "reading": 0,
+      "writing": 0
     },
-    uiDetail: {
-      statusFlow: "Beginning in 35 seconds... 倒计时 ➔ 听到 BEEP 滴声 ➔ Recording... 蓝色进度条走动 ➔ Completed",
-      beepRule: "有提示音！准备时间结束时会响一声「BEEP」，必须等滴声结束后立即开口，切勿提前抢读！",
-      threeSecRule: "适用！录音开始后 3 秒内无有效声音，录音自动终止并锁定判 0 分！",
-      nextRule: "录音完毕后立即点击 Next；一旦点击 Next，单向不可逆，无法返回修改！",
-      features: "屏幕中央清晰文本框，下方录音状态框与音量波动计（Recording Status）。"
+    "integrated": false,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "屏幕呈现一段学术文本，长约 50~70 词",
+      "prep": "30~40 秒（根据文本长度自动设定倒计时）",
+      "answer": "40 秒正式录音",
+      "timerType": "单题独立倒计时",
+      "timeStrategy": "准备倒计时一结束会听到清脆的「BEEP」提示音，听到滴声后必须在1秒内自然开口；绝对不能抢读（抢读前几个词不收音）。录音开始后如果超过3秒不发声，麦克风自动切断判0分！读完最后一句后留半秒停顿，立刻手动点击右下角 Next 提交，防止录入考场杂音。"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "Beginning in 35 seconds... 倒计时 ➔ 听到 BEEP 滴声 ➔ Recording... 蓝色进度条走动 ➔ Completed",
+      "beepRule": "有提示音！准备时间结束时会响一声「BEEP」，必须等滴声结束后立即开口，切勿提前抢读！",
+      "threeSecRule": "适用！录音开始后 3 秒内无有效声音，录音自动终止并锁定判 0 分！",
+      "nextRule": "录音完毕后立即点击 Next；一旦点击 Next，单向不可逆，无法返回修改！",
+      "features": "屏幕中央清晰文本框，下方录音状态框与音量波动计（Recording Status）。"
+    },
+    "melonTips": [
       "大西瓜升级版『1句话轻松读』与『意群呼吸法』：将长句按介词短语、连词划分为 3~4 个意群 Chunk，意群内一口气连贯读完，意群间微停顿 0.3 秒换气。",
       "流利度（Fluency）压倒一切！机器评分机制中，流利度是发音和内容分的乘数。即使某个生词读错或卡顿，绝对不要回读、倒回去纠正（Self-correction 会直接判定断流并严重扣分），必须硬着头皮顺畅读到底！",
       "重弱读与失爆：动词、名词、形容词等实词重读，虚词弱读；遇到生词根据自然拼读规律大胆读出，气势不能断。",
@@ -709,173 +715,281 @@ const PTE_TASK_DATABASE = [
     ]
   },
   {
-    id: "RS",
-    code: "RS",
-    name: "句子复述",
-    english: "Repeat Sentence",
-    part: "Part 1 口语与写作",
-    section: "Section 2 (口语大题)",
-    examOrder: 2,
-    positionDesc: "Part 1 口语与写作 · Section 2 口语大题部分的第 2 题（接在 RA 之后连放 10~12 题）",
-    count: "10–12 题",
-    tier: "tier1",
-    tierName: "🔥 必背核心 (Tier 1)",
-    weights: { overall: 13, speaking: 30, listening: 20, reading: 0, writing: 0 },
-    integrated: true,
-    negativeMarking: false,
-    timing: {
-      prompt: "播放一句句子音频，长度约 3~9 秒（约 7~15 词），仅播放一次",
-      prep: "无单独准备时间！音频一放完即刻开录",
-      answer: "15 秒录音时间（通常 3~6 秒内复述完毕即可点 Next）",
-      timerType: "单题独立倒计时",
-      timeStrategy: "音频播放结束会有极短间隔，随后录音框自动变为 Recording。复述完毕后，留 0.5 秒直接点 Next，切忌在静音中等待 15 秒耗尽。"
+    "id": "RS",
+    "code": "RS",
+    "name": "句子复述",
+    "english": "Repeat Sentence",
+    "part": "Part 1 口语与写作",
+    "section": "Section 2 (口语大题)",
+    "examOrder": 2,
+    "positionDesc": "Part 1 口语与写作 · Section 2 口语大题部分的第 2 题（接在 RA 之后连放 10~12 题）",
+    "count": "10–12 题",
+    "tier": "tier1",
+    "tierName": "🔥 核心高分 (Tier 1)",
+    "weights": {
+      "overall": 7,
+      "speaking": 16,
+      "listening": 17,
+      "reading": 0,
+      "writing": 0
     },
-    uiDetail: {
-      statusFlow: "Playing... 音频进度条（只播放一次） ➔ Recording... 录音开启 ➔ 考生复述 ➔ Completed",
-      beepRule: "无准备时间滴声！部分考场音频结束后有微弱提示音，观察屏幕状态栏变为「Recording」即刻复述！",
-      threeSecRule: "适用！音频结束后 3 秒内未开口，系统自动掐断麦克风判 0 分！",
-      nextRule: "复述完必须立刻点击 Next 提交，节省体力和时间。",
-      features: "界面无文字内容，仅有一个音频播放框和一个录音状态框。"
+    "integrated": true,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "播放一句句子音频，长度约 3~9 秒（约 7~15 词），仅播放一次",
+      "prep": "无单独准备时间！音频一放完即刻开录",
+      "answer": "15 秒录音时间（通常 3~6 秒内复述完毕即可点 Next）",
+      "timerType": "单题独立倒计时",
+      "timeStrategy": "音频播放结束会有极短间隔，随后录音框自动变为 Recording。复述完毕后，留 0.5 秒直接点 Next，切忌在静音中等待 15 秒耗尽。"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "Playing... 音频进度条（只播放一次） ➔ Recording... 录音开启 ➔ 考生复述 ➔ Completed",
+      "beepRule": "无准备时间滴声！部分考场音频结束后有微弱提示音，观察屏幕状态栏变为「Recording」即刻复述！",
+      "threeSecRule": "适用！音频结束后 3 秒内未开口，系统自动掐断麦克风判 0 分！",
+      "nextRule": "复述完必须立刻点击 Next 提交，节省体力和时间。",
+      "features": "界面无文字内容，仅有一个音频播放框和一个录音状态框。"
+    },
+    "melonTips": [
       "口语与听力的双料第一大题！口语贡献高达 30%，听力贡献高达 20%，被称为 PTE『全场生命线』！",
       "大西瓜独家『Chunk 理解法 + 去包袱法』：不要尝试死记硬背每个单词的字母！把句子切分为两截（主谓截 + 宾补截），记住句子的核心画面与意思。",
       "保流利度 > 单词全对！如果句子后半段没听清，哪怕只复述前半句，只要用自信、匀速、饱满的语调流利说出，依然能拿到流利度和发音满分，外加大部分内容分！千万不能结巴停顿说『em... er...』。"
     ]
   },
   {
-    id: "DI",
-    code: "DI",
-    name: "描述图像",
-    english: "Describe Image",
-    part: "Part 1 口语与写作",
-    section: "Section 2 (口语大题)",
-    examOrder: 3,
-    positionDesc: "Part 1 口语与写作 · Section 2 口语大题部分的第 3 题（接在 RS 之后）",
-    count: "3–4 题 (老版5~6题)",
-    tier: "tier2",
-    tierName: "⭐ 重点拿分 (Tier 2)",
-    weights: { overall: 7, speaking: 22, reading: 0, listening: 0, writing: 0 },
-    integrated: false,
-    negativeMarking: false,
-    timing: {
-      prompt: "屏幕显示各类图表（柱状图、折线图、饼图、地图、流程图、照片等）",
-      prep: "25 秒准备时间",
-      answer: "40 秒录音时间（大西瓜建议说 25~30 秒即可点 Next）",
-      timerType: "单题独立倒计时",
-      timeStrategy: "25 秒准备时间内迅速扫视标题、横纵坐标最大值与最小值。听到 BEEP 滴声后开说，说到 28 秒左右自然收尾，立刻点击 Next。"
+    "id": "DI",
+    "code": "DI",
+    "name": "描述图像",
+    "english": "Describe Image",
+    "part": "Part 1 口语与写作",
+    "section": "Section 2 (口语大题)",
+    "examOrder": 3,
+    "positionDesc": "Part 1 口语与写作 · Section 2 口语大题部分的第 3 题（接在 RS 之后）",
+    "count": "3–4 题 (老版5~6题)",
+    "tier": "tier1",
+    "tierName": "🔥 核心高分 (Tier 1)",
+    "weights": {
+      "overall": 15,
+      "speaking": 31,
+      "listening": 0,
+      "reading": 0,
+      "writing": 0
     },
-    uiDetail: {
-      statusFlow: "Beginning in 25 seconds... 倒计时 ➔ BEEP 滴声 ➔ Recording... (40s) ➔ Completed",
-      beepRule: "有提示音！25 秒准备倒计时结束会响一声「BEEP」，听到滴声后必须立即开口作答！",
-      threeSecRule: "适用！听到滴声后 3 秒内必须开讲，超时自动断录判 0 分！",
-      nextRule: "说完套话与要点后立即点 Next，不要拖延等待 40 秒自动结束。",
-      features: "左侧/上方呈现高清图表，下方有倒计时和录音状态栏。"
+    "integrated": false,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "屏幕显示各类图表（柱状图、折线图、饼图、地图、流程图、照片等）",
+      "prep": "25 秒准备时间",
+      "answer": "40 秒录音时间（大西瓜建议说 25~30 秒即可点 Next）",
+      "timerType": "单题独立倒计时",
+      "timeStrategy": "25 秒准备时间内迅速扫视标题、横纵坐标最大值与最小值。听到 BEEP 滴声后开说，说到 28 秒左右自然收尾，立刻点击 Next。"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "Beginning in 25 seconds... 倒计时 ➔ BEEP 滴声 ➔ Recording... (40s) ➔ Completed",
+      "beepRule": "有提示音！25 秒准备倒计时结束会响一声「BEEP」，听到滴声后必须立即开口作答！",
+      "threeSecRule": "适用！听到滴声后 3 秒内必须开讲，超时自动断录判 0 分！",
+      "nextRule": "说完套话与要点后立即点 Next，不要拖延等待 40 秒自动结束。",
+      "features": "左侧/上方呈现高清图表，下方有倒计时和录音状态栏。"
+    },
+    "melonTips": [
       "纯送分题，套模板闭眼拿满分！考的是语言组织与流利表达能力，绝对不是考你的数学或统计分析能力！",
       "大西瓜独家『万能1句话模板 / 经典流利度模板』：Introduction（标题）➔ Maxima（最大值）➔ Minima（最小值）➔ Conclusion（总结）。",
       "数字读法灵活化：复杂的带小数点的数字如果怕卡壳，直接读『it increases significantly』或只读整数，杜绝在数字念法上卡顿犹豫！"
     ]
   },
   {
-    id: "RL",
-    code: "RL",
-    name: "复述讲座",
-    english: "Re-tell Lecture",
-    part: "Part 1 口语与写作",
-    section: "Section 2 (口语大题)",
-    examOrder: 4,
-    positionDesc: "Part 1 口语与写作 · Section 2 口语大题部分的第 4 题（接在 DI 之后）",
-    count: "1–2 题 (老版2~3题)",
-    tier: "tier2",
-    tierName: "⭐ 重点拿分 (Tier 2)",
-    weights: { overall: 5, speaking: 11, listening: 9, reading: 0, writing: 0 },
-    integrated: true,
-    negativeMarking: false,
-    timing: {
-      prompt: "播放一段学术讲座音频（约 60~90 秒），可能伴有图片或小视频",
-      prep: "音频播放完毕后，有 10 秒准备时间",
-      answer: "40 秒正式录音时间（建议复述 28~35 秒）",
-      timerType: "单题独立倒计时",
-      timeStrategy: "听音频时在可擦写白板上速记 6~8 个关键名词/短语。音频结束后利用 10 秒瞄一眼笔记，听到 BEEP 声立刻套用大西瓜万能模板流利念出。"
+    "id": "RL",
+    "code": "RL",
+    "name": "复述讲座",
+    "english": "Retell Lecture",
+    "part": "Part 1 口语与写作",
+    "section": "Section 2 (口语大题)",
+    "examOrder": 4,
+    "positionDesc": "Part 1 口语与写作 · Section 2 口语大题部分的第 4 题（接在 DI 之后）",
+    "count": "1–2 题 (老版2~3题)",
+    "tier": "tier2",
+    "tierName": "⭐ 重点拿分 (Tier 2)",
+    "weights": {
+      "overall": 6,
+      "speaking": 13,
+      "listening": 13,
+      "reading": 0,
+      "writing": 0
     },
-    uiDetail: {
-      statusFlow: "Playing audio (60~90s) ➔ 10s 准备倒计时 ➔ BEEP 滴声 ➔ Recording... (40s) ➔ Completed",
-      beepRule: "有提示音！10 秒准备时间结束时响起 BEEP 声，随后开启麦克风录音！",
-      threeSecRule: "适用！听到滴声后 3 秒内必须开口作答！",
-      nextRule: "说完模板内容后，留 0.5 秒立刻点击 Next 提交。",
-      features: "屏幕中央有参考图片或视频窗口，带有播放音频状态框与白板草稿区配合。"
+    "integrated": true,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "播放一段学术讲座音频（约 60~90 秒），可能伴有图片或小视频",
+      "prep": "音频播放完毕后，有 10 秒准备时间",
+      "answer": "40 秒正式录音时间（建议复述 28~35 秒）",
+      "timerType": "单题独立倒计时",
+      "timeStrategy": "听音频时在可擦写白板上速记 6~8 个关键名词/短语。音频结束后利用 10 秒瞄一眼笔记，听到 BEEP 声立刻套用大西瓜万能模板流利念出。"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "Playing audio (60~90s) ➔ 10s 准备倒计时 ➔ BEEP 滴声 ➔ Recording... (40s) ➔ Completed",
+      "beepRule": "有提示音！10 秒准备时间结束时响起 BEEP 声，随后开启麦克风录音！",
+      "threeSecRule": "适用！听到滴声后 3 秒内必须开口作答！",
+      "nextRule": "说完模板内容后，留 0.5 秒立刻点击 Next 提交。",
+      "features": "屏幕中央有参考图片或视频窗口，带有播放音频状态框与白板草稿区配合。"
+    },
+    "melonTips": [
       "大西瓜『万能名词模板串联法』：The lecture mainly talks about [词1]. Furthermore, the speaker mentioned [词2] and [词3]. In addition, he emphasized [词4]. Overall, the lecture is very informative.",
       "听懂不是关键，记对核心名词才是关键！听的时候只抓取听得懂的大写名词、专有名词、重复出现的词，每个词记下来作为填空代入模板中，保持像朗读一样高流利输出即可拿高分！"
     ]
   },
   {
-    id: "ASQ",
-    code: "ASQ",
-    name: "回答短问题",
-    english: "Answer Short Question",
-    part: "Part 1 口语与写作",
-    section: "Section 2 (口语大题)",
-    examOrder: 5,
-    positionDesc: "Part 1 口语与写作 · Section 2 口语大题部分的第 5 题（口语大题的最后一项）",
-    count: "5–6 题",
-    tier: "tier3",
-    tierName: "⚡ 策略速过 (Tier 3)",
-    weights: { overall: 1.5, listening: 2, speaking: 1, reading: 0, writing: 0 },
-    integrated: true,
-    negativeMarking: false,
-    timing: {
-      prompt: "播放一个简短日常/常识问题（约 3~9 秒），偶尔配有一张图片",
-      prep: "无单独准备时间",
-      answer: "10 秒录音时间（回答一个单词或简短词组）",
-      timerType: "单题独立倒计时",
-      timeStrategy: "问题音频一结束，立刻说出答案词，说完一秒内立刻点击 Next，绝不拖延。"
+    "id": "ASQ",
+    "code": "ASQ",
+    "name": "回答短问题",
+    "english": "Answer Short Question",
+    "part": "Part 1 口语与写作",
+    "section": "Section 2 (口语大题)",
+    "examOrder": 5,
+    "positionDesc": "Part 1 口语与写作 · Section 2 口语大题部分的第 5 题（口语大题的最后一项）",
+    "count": "5–6 题",
+    "tier": "tier3",
+    "tierName": "⚡ 策略速过 (Tier 3)",
+    "weights": {
+      "overall": 2,
+      "speaking": 0,
+      "listening": 4,
+      "reading": 0,
+      "writing": 0
     },
-    uiDetail: {
-      statusFlow: "Playing (3~9s) ➔ Recording... (10s) ➔ 考生作答 ➔ Completed",
-      beepRule: "部分考场有轻微滴声，观察屏幕状态变为 Recording 立即作答！",
-      threeSecRule: "适用！3 秒内必须发出声音。",
-      nextRule: "答出单词后秒点 Next，不要在录音中发呆。",
-      features: "极简界面，仅有状态框和偶现的插图。"
+    "integrated": true,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "播放一个简短日常/常识问题（约 3~9 秒），偶尔配有一张图片",
+      "prep": "无单独准备时间",
+      "answer": "10 秒录音时间（回答一个单词或简短词组）",
+      "timerType": "单题独立倒计时",
+      "timeStrategy": "问题音频一结束，立刻说出答案词，说完一秒内立刻点击 Next，绝不拖延。"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "Playing (3~9s) ➔ Recording... (10s) ➔ 考生作答 ➔ Completed",
+      "beepRule": "部分考场有轻微滴声，观察屏幕状态变为 Recording 立即作答！",
+      "threeSecRule": "适用！3 秒内必须发出声音。",
+      "nextRule": "答出单词后秒点 Next，不要在录音中发呆。",
+      "features": "极简界面，仅有状态框和偶现的插图。"
+    },
+    "melonTips": [
       "分值占比极低，总分仅占约 1%~2%，属于随缘题，无需花大量精力死磕机经！",
       "答题避坑绝招：如果知道答案直接说；如果不知道答案，直接重复问题里听到的任意核心名词，或者猜一个常见单词，切忌保持沉默导致 3 秒静音断麦！"
     ]
   },
   {
-    id: "SWT",
-    code: "SWT",
-    name: "总结书面文本",
-    english: "Summarize Written Text",
-    part: "Part 1 口语与写作",
-    section: "Section 3 (摘要写作)",
-    examOrder: 6,
-    positionDesc: "Part 1 口语与写作 · Section 3 摘要写作部分第 1 题（接在 ASQ 口语结束之后，标志进入写作模块）",
-    count: "1–2 题 (老版2~3题)",
-    tier: "tier1",
-    tierName: "🔥 必背核心 (Tier 1)",
-    weights: { overall: 7, writing: 12, reading: 10, listening: 0, speaking: 0 },
-    integrated: true,
-    negativeMarking: false,
-    timing: {
-      prompt: "屏幕呈现一段长文章，长度通常在 150~300 词之间",
-      prep: "无单独准备时间（阅读文章与写作包含在10分钟总倒计时内）",
-      answer: "每题独立倒计时 10 分钟整！要求写出一句话总结（5~75词）",
-      timerType: "单题独立倒计时（每道题各给10分钟，时间不累积到下一题）",
-      timeStrategy: "前 2~3 分钟阅读定位各段首尾中心句，中间 4~5 分钟利用连接词合并成一句话并打字，最后 2~3 分钟核查标点和字数。时间用完自动跳下一题，检查无误可提前点 Next。"
+    "id": "SGD",
+    "code": "SGD",
+    "name": "总结小组讨论",
+    "english": "Summarize Group Discussion",
+    "part": "Part 1 口语与写作",
+    "section": "Section 2 (新架构扩展题型 / PTE Core)",
+    "examOrder": 6,
+    "positionDesc": "Part 1 口语与写作 · Section 2 录音答题部分（培生最新全球架构改革试点，紧随 ASQ 之后）",
+    "count": "2–3 题",
+    "tier": "tier1",
+    "tierName": "🔥 核心高分 (Tier 1)",
+    "weights": {
+      "overall": 9,
+      "speaking": 19,
+      "listening": 20,
+      "reading": 0,
+      "writing": 0
     },
-    uiDetail: {
-      statusFlow: "屏幕右上角 10:00 独立倒计时 ➔ 下方文本框输入 ➔ 实时显示 Word Count ➔ 点击 Next 提交",
-      beepRule: "无提示音（纯打字题）。",
-      threeSecRule: "不适用（打字题）。",
-      nextRule: "每题有独立的 10 分钟！如果 6 分钟做完并仔细检查完毕，可以直接点 Next，剩余的 4 分钟不会累计到下一题。",
-      features: "文章展示在上半屏，下半屏是答题框，下方提供 Total Word Count 实时字数器，以及 Cut / Copy / Paste 按钮。"
+    "integrated": true,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "播放一段三人小组讨论音频（长约 2~3 分钟，只播放一次）",
+      "prep": "音频结束后有 10 秒准备时间",
+      "answer": "2 分钟口语复述录音（对体力和耐力要求极高）",
+      "timerType": "单题独立倒计时",
+      "timeStrategy": "使用大西瓜 9 宫格笔记法记录 3 人的不同观点，10 秒内套用模板，匀速输出 90 秒左右。"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "Playing audio (最长3分钟) ➔ 10s 准备 ➔ BEEP 滴声 ➔ Recording (2分钟) ➔ Completed",
+      "beepRule": "有提示音！10 秒准备后响 BEEP 开录！",
+      "threeSecRule": "适用！3 秒内必须开口。",
+      "nextRule": "点 Next 不可逆。",
+      "features": "长音频播放，需要高度集中的多角色笔记记录。"
+    },
+    "melonTips": [
+      "大西瓜独家『9宫格笔记法』：在白板上分列记录 Person A, Person B, Person C 的赞同与反对意见，使用流利模板串联发言。"
+    ]
+  },
+  {
+    "id": "RTS",
+    "code": "RTS",
+    "name": "应对情景",
+    "english": "Respond to a Situation",
+    "part": "Part 1 口语与写作",
+    "section": "Section 2 (新架构扩展题型 / PTE Core)",
+    "examOrder": 7,
+    "positionDesc": "Part 1 口语与写作 · Section 2 录音答题部分（培生最新全球架构改革试点）",
+    "count": "2–3 题",
+    "tier": "tier2",
+    "tierName": "⭐ 重点拿分 (Tier 2)",
+    "weights": {
+      "overall": 6,
+      "speaking": 13,
+      "listening": 0,
+      "reading": 0,
+      "writing": 0
+    },
+    "integrated": false,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "屏幕显示日常生活场景文本（不超过 60 词），同时播放情景提示音频",
+      "prep": "10 秒准备时间",
+      "answer": "40 秒录音口语应对",
+      "timerType": "单题独立倒计时",
+      "timeStrategy": "设身处地代入角色，用大西瓜万能情景模板自然表达沟通。"
+    },
+    "uiDetail": {
+      "statusFlow": "阅读情景 ➔ 10 秒准备 ➔ BEEP 滴声 ➔ Recording (40s) ➔ Completed",
+      "beepRule": "有提示音！听到滴声后作答。",
+      "threeSecRule": "适用！3 秒内必须开口。",
+      "nextRule": "说完点 Next。",
+      "features": "模拟生活对话情景。"
+    },
+    "melonTips": [
+      "假装自己就在现实生活情境中（如跟房东交涉、跟同学请假），套用万能日常口语礼貌模板，保持匀速自信流利即可。"
+    ]
+  },
+  {
+    "id": "SWT",
+    "code": "SWT",
+    "name": "总结书面文本",
+    "english": "Summarize Written Text",
+    "part": "Part 1 口语与写作",
+    "section": "Section 3 (摘要写作)",
+    "examOrder": 8,
+    "positionDesc": "Part 1 口语与写作 · Section 3 摘要写作部分第 1 题（接在 ASQ 口语结束之后，标志进入写作模块）",
+    "count": "1–2 题 (老版2~3题)",
+    "tier": "tier1",
+    "tierName": "🔥 核心高分 (Tier 1)",
+    "weights": {
+      "overall": 7,
+      "speaking": 0,
+      "listening": 0,
+      "reading": 23,
+      "writing": 28
+    },
+    "integrated": true,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "屏幕呈现一段长文章，长度通常在 150~300 词之间",
+      "prep": "无单独准备时间（阅读文章与写作包含在10分钟总倒计时内）",
+      "answer": "每题独立倒计时 10 分钟整！要求写出一句话总结（5~75词）",
+      "timerType": "单题独立倒计时（每道题各给10分钟，时间不累积到下一题）",
+      "timeStrategy": "前 2~3 分钟阅读定位各段首尾中心句，中间 4~5 分钟利用连接词合并成一句话并打字，最后 2~3 分钟核查标点和字数。时间用完自动跳下一题，检查无误可提前点 Next。"
+    },
+    "uiDetail": {
+      "statusFlow": "屏幕右上角 10:00 独立倒计时 ➔ 下方文本框输入 ➔ 实时显示 Word Count ➔ 点击 Next 提交",
+      "beepRule": "无提示音（纯打字题）。",
+      "threeSecRule": "不适用（打字题）。",
+      "nextRule": "每题有独立的 10 分钟！如果 6 分钟做完并仔细检查完毕，可以直接点 Next，剩余的 4 分钟不会累计到下一题。",
+      "features": "文章展示在上半屏，下半屏是答题框，下方提供 Total Word Count 实时字数器，以及 Cut / Copy / Paste 按钮。"
+    },
+    "melonTips": [
       "大西瓜评定『四星核心大题』，同时重度赋分给阅读和写作！",
       "死穴禁忌：整篇总结必须且只能有【一个句号】（One single sentence）！如果有两个句号，或者句末漏了句号，形式分（Form）直接得 0 分，整道题直接废掉！",
       "字数红线：严格控制在 5 ~ 75 词之间（大西瓜黄金推荐字数：35~50 词最佳，既保证内容要点丰富，又不易产生语法错误）。",
@@ -883,139 +997,163 @@ const PTE_TASK_DATABASE = [
     ]
   },
   {
-    id: "WE",
-    code: "WE",
-    name: "议论文写作",
-    english: "Write Essay",
-    part: "Part 1 口语与写作",
-    section: "Section 4 (独立写作)",
-    examOrder: 7,
-    positionDesc: "Part 1 口语与写作 · Section 4 独立写作部分的第 1 题（Part 1 的终点大题）",
-    count: "1–2 题 (绝大多数考生只抽到 1 题)",
-    tier: "tier2",
-    tierName: "⭐ 重点拿分 (Tier 2)",
-    weights: { overall: 6, writing: 11, listening: 0, reading: 0, speaking: 0 },
-    integrated: false,
-    negativeMarking: false,
-    timing: {
-      prompt: "给定一个争议性话题提示（通常为 2~3 句话）",
-      prep: "无单独准备时间（思考构思包含在 20 分钟内）",
-      answer: "每题独立倒计时 20 分钟整！要求写出一篇 200~300 词的规范议论文",
-      timerType: "单题独立倒计时（20分钟/题）",
-      timeStrategy: "前 2 分钟套入大西瓜万能论述模板骨架并填入题目关键词；中间 12~14 分钟扩写论据支持句；最后 4 分钟必须通读全文，地毯式检查拼写错误、主谓一致、冠词和大小写！"
+    "id": "WE",
+    "code": "WE",
+    "name": "议论文写作",
+    "english": "Write Essay",
+    "part": "Part 1 口语与写作",
+    "section": "Section 4 (独立写作)",
+    "examOrder": 9,
+    "positionDesc": "Part 1 口语与写作 · Section 4 独立写作部分的第 1 题（Part 1 的终点大题）",
+    "count": "1–2 题 (绝大多数考生只抽到 1 题)",
+    "tier": "tier1",
+    "tierName": "🔥 核心高分 (Tier 1)",
+    "weights": {
+      "overall": 7,
+      "speaking": 0,
+      "listening": 0,
+      "reading": 0,
+      "writing": 31
     },
-    uiDetail: {
-      statusFlow: "屏幕右上角 20:00 独立倒计时 ➔ 文本框打字 ➔ 实时显示 Word Count ➔ 点击 Next 提交",
-      beepRule: "无提示音（写作题）。",
-      threeSecRule: "不适用。",
-      nextRule: "检查完毕可点击 Next 提交，本题多余时间不转入 Part 2 阅读部分。",
-      features: "提供 Cut, Copy, Paste 按钮与 Word Count 计数器。"
+    "integrated": false,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "给定一个争议性话题提示（通常为 2~3 句话）",
+      "prep": "无单独准备时间（思考构思包含在 20 分钟内）",
+      "answer": "每题独立倒计时 20 分钟整！要求写出一篇 200~300 词的规范议论文",
+      "timerType": "单题独立倒计时（20分钟/题）",
+      "timeStrategy": "前 2 分钟套入大西瓜万能论述模板骨架并填入题目关键词；中间 12~14 分钟扩写论据支持句；最后 4 分钟必须通读全文，地毯式检查拼写错误、主谓一致、冠词和大小写！"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "屏幕右上角 20:00 独立倒计时 ➔ 文本框打字 ➔ 实时显示 Word Count ➔ 点击 Next 提交",
+      "beepRule": "无提示音（写作题）。",
+      "threeSecRule": "不适用。",
+      "nextRule": "检查完毕可点击 Next 提交，本题多余时间不转入 Part 2 阅读部分。",
+      "features": "提供 Cut, Copy, Paste 按钮与 Word Count 计数器。"
+    },
+    "melonTips": [
       "纯写作单项赋分题，只要熟背模板就是保分利器！PTE 采用机器评分（Intelligent Essay Assessor），机器只看逻辑结构标记词（Coherence）、词汇拼写（Spelling）、语法多样性（Grammar）和字数，绝不主观挑剔观点的高低深浅！",
       "字数铁律：严格限制在 200~300 词之间（建议写 220~260 词为最佳安全区间）。字数少于 120 词或多于 380 词，总分直接归 0！",
       "大西瓜『万能公式法模板』全覆盖！只需往模板的预留空隙中填入与题目相关的名词与短语即可轻松拿满 90 分写作结构分。"
     ]
   },
   {
-    id: "RW-FIB",
-    code: "FIB-D",
-    name: "阅读填空 (下拉选词)",
-    english: "Reading & Writing: Fill in the Blanks",
-    part: "Part 2 阅读部分",
-    section: "阅读 Section 1 (合并计时大题)",
-    examOrder: 8,
-    positionDesc: "Part 2 阅读部分 · 开门第 1 题（阅读最核心、分值最高的第一大题）",
-    count: "5–6 题",
-    tier: "tier1",
-    tierName: "🔥 必背核心 (Tier 1)",
-    weights: { overall: 12, reading: 22, writing: 18, listening: 0, speaking: 0 },
-    integrated: true,
-    negativeMarking: false,
-    timing: {
-      prompt: "呈现一篇学术短文（长约 200~300 词），文中挖出 4~6 个空格",
-      prep: "无单独准备时间",
-      answer: "单题无独立计时！在阅读模块总时间（约 25~30 分钟）内作答",
-      timerType: "⚠️ 整个 Part 2 阅读部分合并倒计时（整体 25~30 分钟）",
-      timeStrategy: "阅读定海神针！严格分配时间：建议每道 FIB-D 题耗时控制在 1.5 ~ 2.0 分钟之内，切忌在一道题的一个空格上卡壳 4 分钟，否则会导致后面的拖拽填空做不完！"
+    "id": "FIB-D",
+    "code": "FIB-D",
+    "name": "阅读填空 (下拉选词)",
+    "english": "Reading — Fill in the Blanks (Dropdown)",
+    "part": "Part 2 阅读部分",
+    "section": "阅读 Section 1 (合并计时大题)",
+    "examOrder": 10,
+    "positionDesc": "Part 2 阅读部分 · 开门第 1 题（阅读最核心、分值最高的第一大题）",
+    "count": "5–6 题",
+    "tier": "tier1",
+    "tierName": "🔥 核心高分 (Tier 1)",
+    "weights": {
+      "overall": 7,
+      "speaking": 0,
+      "listening": 0,
+      "reading": 25,
+      "writing": 0
     },
-    uiDetail: {
-      statusFlow: "右上角显示阅读总倒计时 (如 28:00) ➔ 鼠标点击文本中的下拉箭头 ➔ 弹出 4 个选项供单选 ➔ 选定后填入空格 ➔ 点 Next",
-      beepRule: "无提示音。",
-      threeSecRule: "不适用。",
-      nextRule: "完成所有空后点击 Next 立即进入下一题，不可返回修改！",
-      features: "每个空格都是一个内嵌式 Dropdown 菜单，点击后展示 4 个近义词或形近词选项。"
+    "integrated": false,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "呈现一篇学术短文（长约 200~300 词），文中挖出 4~6 个空格",
+      "prep": "无单独准备时间",
+      "answer": "单题无独立计时！在阅读模块总时间（约 25~30 分钟）内作答",
+      "timerType": "⚠️ 整个 Part 2 阅读部分合并倒计时（整体 25~30 分钟）",
+      "timeStrategy": "阅读定海神针！严格分配时间：建议每道 FIB-D 题耗时控制在 1.5 ~ 2.0 分钟之内，切忌在一道题的一个空格上卡壳 4 分钟，否则会导致后面的拖拽填空做不完！"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "右上角显示阅读总倒计时 (如 28:00) ➔ 鼠标点击文本中的下拉箭头 ➔ 弹出 4 个选项供单选 ➔ 选定后填入空格 ➔ 点 Next",
+      "beepRule": "无提示音。",
+      "threeSecRule": "不适用。",
+      "nextRule": "完成所有空后点击 Next 立即进入下一题，不可返回修改！",
+      "features": "每个空格都是一个内嵌式 Dropdown 菜单，点击后展示 4 个近义词或形近词选项。"
+    },
+    "melonTips": [
       "阅读和写作的双向王牌大题！给阅读贡献 22% 的同时，还给写作输送高达 18% 的巨额分数！",
       "大西瓜四大解题雷达：固定搭配（Collocation）、语法词性判断（词性空格法）、逻辑连接词（转折/因果）、上下文主题词复现。",
       "遇到完全不认识的生词，利用大西瓜『词性与情感色彩排除法』盲猜一个最像搭配的选项后迅速点击 Next，不要恋战。"
     ]
   },
   {
-    id: "R-MCM",
-    code: "R-MCM",
-    name: "阅读多选题",
-    english: "Multiple Choice, Multiple Answers",
-    part: "Part 2 阅读部分",
-    section: "阅读 Section 1 (合并计时大题)",
-    examOrder: 9,
-    positionDesc: "Part 2 阅读部分 · 第 2 题（接在下拉填空 FIB-D 之后）",
-    count: "1–2 题",
-    tier: "tier3",
-    tierName: "⚡ 策略速过 (Tier 3)",
-    weights: { overall: 1.5, reading: 3, writing: 0, listening: 0, speaking: 0 },
-    integrated: false,
-    negativeMarking: true,
-    timing: {
-      prompt: "阅读一段长约 250~350 词的学术文本，下方附带多选题目与 5~7 个选项",
-      prep: "无单独准备时间",
-      answer: "单题无独立计时；在阅读总倒计时内作答",
-      timerType: "⚠️ 阅读部分合并倒计时",
-      timeStrategy: "⚠️ 高危避坑题！建议全题耗时控制在 1.0 ~ 1.5 分钟以内。读题干定位 1 个 100% 确定的答案后，立刻选定并点 Next！"
+    "id": "R-MCM",
+    "code": "R-MCM",
+    "name": "阅读多选题",
+    "english": "Reading — Multiple Choice, Multiple Answers",
+    "part": "Part 2 阅读部分",
+    "section": "阅读 Section 1 (合并计时大题)",
+    "examOrder": 11,
+    "positionDesc": "Part 2 阅读部分 · 第 2 题（接在下拉填空 FIB-D 之后）",
+    "count": "1–2 题",
+    "tier": "tier3",
+    "tierName": "⚡ 策略速过 (Tier 3)",
+    "weights": {
+      "overall": 1,
+      "speaking": 0,
+      "listening": 0,
+      "reading": 5,
+      "writing": 0
     },
-    uiDetail: {
-      statusFlow: "阅读文本 ➔ 勾选方框（Checkbox 复选框） ➔ 点 Next",
-      beepRule: "无提示音。",
-      threeSecRule: "不适用。",
-      nextRule: "做完点 Next，单向不可逆。",
-      features: "选项前为方形复选框（Square Boxes），提示存在多个正确选项。"
+    "integrated": false,
+    "negativeMarking": true,
+    "timing": {
+      "prompt": "阅读一段长约 250~350 词的学术文本，下方附带多选题目与 5~7 个选项",
+      "prep": "无单独准备时间",
+      "answer": "单题无独立计时；在阅读总倒计时内作答",
+      "timerType": "⚠️ 阅读部分合并倒计时",
+      "timeStrategy": "⚠️ 高危避坑题！建议全题耗时控制在 1.0 ~ 1.5 分钟以内。读题干定位 1 个 100% 确定的答案后，立刻选定并点 Next！"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "阅读文本 ➔ 勾选方框（Checkbox 复选框） ➔ 点 Next",
+      "beepRule": "无提示音。",
+      "threeSecRule": "不适用。",
+      "nextRule": "做完点 Next，单向不可逆。",
+      "features": "选项前为方形复选框（Square Boxes），提示存在多个正确选项。"
+    },
+    "melonTips": [
       "🚨 红色最高警报：本题实行【选错倒扣分机制】（Negative Marking）！选对一个 +1 分，选错一个倒扣 -1 分（最低扣到 0 分，不倒扣为负数）。",
       "大西瓜保分黄金军规：【只选一个，当单选做】！除非你有 100% 绝对把握确定第 2 个选项，否则坚决不手贱多选任何一个模糊选项！选一个稳拿 1 分，瞎蒙多选直接归 0 分，还得不偿失浪费了宝贵的阅读时间。"
     ]
   },
   {
-    id: "RO",
-    code: "RO",
-    name: "段落重排",
-    english: "Re-order Paragraphs",
-    part: "Part 2 阅读部分",
-    section: "阅读 Section 1 (合并计时大题)",
-    examOrder: 10,
-    positionDesc: "Part 2 阅读部分 · 第 3 题（接在阅读多选之后）",
-    count: "2–3 题",
-    tier: "tier2",
-    tierName: "⭐ 重点拿分 (Tier 2)",
-    weights: { overall: 3, reading: 6, writing: 0, listening: 0, speaking: 0 },
-    integrated: false,
-    negativeMarking: false,
-    timing: {
-      prompt: "左侧框内呈现 4~5 个打乱顺序的文本段落",
-      prep: "无单独准备时间",
-      answer: "单题无独立计时；在阅读总倒计时内作答",
-      timerType: "⚠️ 阅读部分合并倒计时",
-      timeStrategy: "建议每题严格控制在 1.5 ~ 2 分钟之内。先抓首句，再配对子，两分钟内无论排成怎样必须点 Next。"
+    "id": "RO",
+    "code": "RO",
+    "name": "段落重排",
+    "english": "Reorder Paragraph",
+    "part": "Part 2 阅读部分",
+    "section": "阅读 Section 1 (合并计时大题)",
+    "examOrder": 12,
+    "positionDesc": "Part 2 阅读部分 · 第 3 题（接在阅读多选之后）",
+    "count": "2–3 题",
+    "tier": "tier3",
+    "tierName": "⚡ 策略速过 (Tier 3)",
+    "weights": {
+      "overall": 3,
+      "speaking": 0,
+      "listening": 0,
+      "reading": 9,
+      "writing": 0
     },
-    uiDetail: {
-      statusFlow: "鼠标选定左侧段落 ➔ 拖拽至右侧目标框或点击左右箭头 ➔ 在右侧调整上下顺序 ➔ 点 Next",
-      beepRule: "无提示音。",
-      threeSecRule: "不适用。",
-      nextRule: "点 Next 无法返回。",
-      features: "双栏布局：左侧 Source 乱序栏，右侧 Target 目标栏，支持拖拽排序。"
+    "integrated": false,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "左侧框内呈现 4~5 个打乱顺序的文本段落",
+      "prep": "无单独准备时间",
+      "answer": "单题无独立计时；在阅读总倒计时内作答",
+      "timerType": "⚠️ 阅读部分合并倒计时",
+      "timeStrategy": "建议每题严格控制在 1.5 ~ 2 分钟之内。先抓首句，再配对子，两分钟内无论排成怎样必须点 Next。"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "鼠标选定左侧段落 ➔ 拖拽至右侧目标框或点击左右箭头 ➔ 在右侧调整上下顺序 ➔ 点 Next",
+      "beepRule": "无提示音。",
+      "threeSecRule": "不适用。",
+      "nextRule": "点 Next 无法返回。",
+      "features": "双栏布局：左侧 Source 乱序栏，右侧 Target 目标栏，支持拖拽排序。"
+    },
+    "melonTips": [
       "评分机制揭秘：按【相邻对子（Pairing）】给分！例如正确顺序为 A-B-C-D（共 3 个对子：AB, BC, CD，满分 3 分）。如果排成 A-C-D-B，则 CD 是对的，依然能拿 1 分！",
       "大西瓜『倒推雷达配对法』：",
       "① 首句必定是独立句（Independent sentence）：不包含指示代词（this, that, these）、代词（he, she, they）、或者总结性连词（however, therefore）；",
@@ -1024,35 +1162,41 @@ const PTE_TASK_DATABASE = [
     ]
   },
   {
-    id: "R-FIB",
-    code: "FIB-DD",
-    name: "阅读填空 (拖拽填词)",
-    english: "Reading: Fill in the Blanks",
-    part: "Part 2 阅读部分",
-    section: "阅读 Section 1 (合并计时大题)",
-    examOrder: 11,
-    positionDesc: "Part 2 阅读部分 · 第 4 题（接在段落排序之后，阅读第二大支柱）",
-    count: "4–5 题",
-    tier: "tier1",
-    tierName: "🔥 必背核心 (Tier 1)",
-    weights: { overall: 7, reading: 14, writing: 0, listening: 0, speaking: 0 },
-    integrated: false,
-    negativeMarking: false,
-    timing: {
-      prompt: "呈现一段约 80 词左右的学术短文，挖出 3~5 个空格；屏幕底部提供 6~8 个备选单词库",
-      prep: "无单独准备时间",
-      answer: "单题无独立计时；在阅读总倒计时内作答",
-      timerType: "⚠️ 阅读部分合并倒计时",
-      timeStrategy: "建议每题控制在 1.5 分钟以内。备选词多于空格数，用完的词不能复用。"
+    "id": "FIB-DD",
+    "code": "FIB-DD",
+    "name": "阅读填空 (拖拽填词)",
+    "english": "Reading — Fill in the Blanks (Drag & Drop)",
+    "part": "Part 2 阅读部分",
+    "section": "阅读 Section 1 (合并计时大题)",
+    "examOrder": 13,
+    "positionDesc": "Part 2 阅读部分 · 第 4 题（接在段落排序之后，阅读第二大支柱）",
+    "count": "4–5 题",
+    "tier": "tier2",
+    "tierName": "⭐ 重点拿分 (Tier 2)",
+    "weights": {
+      "overall": 6,
+      "speaking": 0,
+      "listening": 0,
+      "reading": 20,
+      "writing": 0
     },
-    uiDetail: {
-      statusFlow: "鼠标按住底部备选单词 ➔ 拖拽至文章中的虚线空格 ➔ 若修改可拖回词库替换 ➔ 点 Next",
-      beepRule: "无提示音。",
-      threeSecRule: "不适用。",
-      nextRule: "填完所有空格后点击 Next。",
-      features: "上方是带空格的文章，下方是单词池（Word Pool），支持鼠标物理拖拽。"
+    "integrated": false,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "呈现一段约 80 词左右的学术短文，挖出 3~5 个空格；屏幕底部提供 6~8 个备选单词库",
+      "prep": "无单独准备时间",
+      "answer": "单题无独立计时；在阅读总倒计时内作答",
+      "timerType": "⚠️ 阅读部分合并倒计时",
+      "timeStrategy": "建议每题控制在 1.5 分钟以内。备选词多于空格数，用完的词不能复用。"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "鼠标按住底部备选单词 ➔ 拖拽至文章中的虚线空格 ➔ 若修改可拖回词库替换 ➔ 点 Next",
+      "beepRule": "无提示音。",
+      "threeSecRule": "不适用。",
+      "nextRule": "填完所有空格后点击 Next。",
+      "features": "上方是带空格的文章，下方是单词池（Word Pool），支持鼠标物理拖拽。"
+    },
+    "melonTips": [
       "纯阅读核心送分大项！不给写作赋分，专注纯阅读技能考查。",
       "大西瓜『词性盲填大法』：",
       "① 空格前是冠词 a/an/the，后是名词，空格必填【形容词】；",
@@ -1062,68 +1206,81 @@ const PTE_TASK_DATABASE = [
     ]
   },
   {
-    id: "R-MCS",
-    code: "R-MCS",
-    name: "阅读单选题",
-    english: "Multiple Choice, Single Answer",
-    part: "Part 2 阅读部分",
-    section: "阅读 Section 1 (合并计时大题)",
-    examOrder: 12,
-    positionDesc: "Part 2 阅读部分 · 第 5 题（阅读部分的压轴收尾题）",
-    count: "1–2 题",
-    tier: "tier3",
-    tierName: "⚡ 策略速过 (Tier 3)",
-    weights: { overall: 1, reading: 2, writing: 0, listening: 0, speaking: 0 },
-    integrated: false,
-    negativeMarking: false,
-    timing: {
-      prompt: "阅读一段长约 100~150 词的短文，回答一道单选题（4个选项）",
-      prep: "无单独准备时间",
-      answer: "单题无独立计时；在阅读总倒计时内作答",
-      timerType: "⚠️ 阅读部分合并倒计时",
-      timeStrategy: "时间刺客！建议全题控制在 30~45 秒以内！扫一眼题干关键词定位文章，选出最接近的选项后立刻点击 Next！"
+    "id": "R-MCS",
+    "code": "R-MCS",
+    "name": "阅读单选题",
+    "english": "Reading — Multiple Choice, Single Answer",
+    "part": "Part 2 阅读部分",
+    "section": "阅读 Section 1 (合并计时大题)",
+    "examOrder": 14,
+    "positionDesc": "Part 2 阅读部分 · 第 5 题（阅读部分的压轴收尾题）",
+    "count": "1–2 题",
+    "tier": "tier3",
+    "tierName": "⚡ 策略速过 (Tier 3)",
+    "weights": {
+      "overall": 0.5,
+      "speaking": 0,
+      "listening": 0,
+      "reading": 3,
+      "writing": 0,
+      "overallLabel": "<1%"
     },
-    uiDetail: {
-      statusFlow: "阅读短文 ➔ 点击单选圆圈（Radio Button） ➔ 点 Next 结束阅读部分",
-      beepRule: "无提示音。",
-      threeSecRule: "不适用。",
-      nextRule: "这是 Part 2 阅读的最后一题，点击 Next 后将正式结束整个阅读部分并进入 Part 3 听力！",
-      features: "选项前为圆形单选按钮（Round Radio Buttons）。"
+    "integrated": false,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "阅读一段长约 100~150 词的短文，回答一道单选题（4个选项）",
+      "prep": "无单独准备时间",
+      "answer": "单题无独立计时；在阅读总倒计时内作答",
+      "timerType": "⚠️ 阅读部分合并倒计时",
+      "timeStrategy": "时间刺客！建议全题控制在 30~45 秒以内！扫一眼题干关键词定位文章，选出最接近的选项后立刻点击 Next！"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "阅读短文 ➔ 点击单选圆圈（Radio Button） ➔ 点 Next 结束阅读部分",
+      "beepRule": "无提示音。",
+      "threeSecRule": "不适用。",
+      "nextRule": "这是 Part 2 阅读的最后一题，点击 Next 后将正式结束整个阅读部分并进入 Part 3 听力！",
+      "features": "选项前为圆形单选按钮（Round Radio Buttons）。"
+    },
+    "melonTips": [
       "分值极低（总分仅占 1%），切忌在此浪费时间！如果前面做填空题时间吃紧，这题直接 10 秒内盲猜一个选项然后快速点 Next，绝不犹豫！"
     ]
   },
   {
-    id: "SST",
-    code: "SST",
-    name: "总结听力文本",
-    english: "Summarize Spoken Text",
-    part: "Part 3 听力部分",
-    section: "Section 1 (听力独立大题)",
-    examOrder: 13,
-    positionDesc: "Part 3 听力部分 · Section 1 第 1 题（进入听力后的开门首个大题，拥有独立计时）",
-    count: "1–2 题 (绝大部分考场只考 1 题)",
-    tier: "tier1",
-    tierName: "🔥 必背核心 (Tier 1)",
-    weights: { overall: 6, listening: 13, writing: 10, reading: 0, speaking: 0 },
-    integrated: true,
-    negativeMarking: false,
-    timing: {
-      prompt: "播放一段学术讲座音频，时长约 60~90 秒，只播放一次",
-      prep: "无单独准备时间",
-      answer: "每题拥有【单独 10 分钟倒计时】（包含播放音频的时间）！要求写出 50~70 词的文本摘要",
-      timerType: "单题独立倒计时（每道 SST 各给 10:00，绝不影响后续听力合并时间！）",
-      timeStrategy: "音频播放前 5 秒深呼吸；播放 60~90 秒期间在白板狂记名词短语（记 8~10 个词）；随后利用 5 分钟套用大西瓜万能模板成文；剩余 3 分钟死抠拼写、语法和字数字符数。"
+    "id": "SST",
+    "code": "SST",
+    "name": "总结听力文本",
+    "english": "Summarize Spoken Text",
+    "part": "Part 3 听力部分",
+    "section": "Section 1 (听力独立大题)",
+    "examOrder": 15,
+    "positionDesc": "Part 3 听力部分 · Section 1 第 1 题（进入听力后的开门首个大题，拥有独立计时）",
+    "count": "1–2 题 (绝大部分考场只考 1 题)",
+    "tier": "tier2",
+    "tierName": "⭐ 重点拿分 (Tier 2)",
+    "weights": {
+      "overall": 4,
+      "speaking": 0,
+      "listening": 10,
+      "reading": 0,
+      "writing": 18
     },
-    uiDetail: {
-      statusFlow: "音频播放 (60~90s) ➔ 屏幕右上角 10:00 独立倒计时 ➔ 文本框打字 ➔ 下方实时显示 Word Count ➔ 点击 Next 提交",
-      beepRule: "无提示音。",
-      threeSecRule: "不适用。",
-      nextRule: "每题独立 10 分钟！如果提前写完并严谨检查后，可直接点 Next。剩余时间不累加到后续听力合并题。",
-      features: "上方是音频进度条，下方是大文本框，附带 Cut/Copy/Paste 与 Word Count 统计器。"
+    "integrated": true,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "播放一段学术讲座音频，时长约 60~90 秒，只播放一次",
+      "prep": "无单独准备时间",
+      "answer": "每题拥有【单独 10 分钟倒计时】（包含播放音频的时间）！要求写出 50~70 词的文本摘要",
+      "timerType": "单题独立倒计时（每道 SST 各给 10:00，绝不影响后续听力合并时间！）",
+      "timeStrategy": "音频播放前 5 秒深呼吸；播放 60~90 秒期间在白板狂记名词短语（记 8~10 个词）；随后利用 5 分钟套用大西瓜万能模板成文；剩余 3 分钟死抠拼写、语法和字数字符数。"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "音频播放 (60~90s) ➔ 屏幕右上角 10:00 独立倒计时 ➔ 文本框打字 ➔ 下方实时显示 Word Count ➔ 点击 Next 提交",
+      "beepRule": "无提示音。",
+      "threeSecRule": "不适用。",
+      "nextRule": "每题独立 10 分钟！如果提前写完并严谨检查后，可直接点 Next。剩余时间不累加到后续听力合并题。",
+      "features": "上方是音频进度条，下方是大文本框，附带 Cut/Copy/Paste 与 Word Count 统计器。"
+    },
+    "melonTips": [
       "听力与写作双向赋分大题！大西瓜机经命中率极高（命中率常年 95%+）！",
       "字数铁红线：必须严格限制在【50 ~ 70 词】之间！少于 40 词或多于 100 词，内容和形式直接得 0 分！大西瓜黄金推荐字数：55~65 词，安全绝不出圈！",
       "大西瓜『SST轻松记 / 万能模板法』：无需像 SWT 那样写成一句话，SST 允许多句话！套用：The lecture mainly discusses [名词1] and [名词2]. Furthermore, the speaker emphasized [名词3]. In addition, [名词4] is also important. Finally, [名词5] was highlighted.",
@@ -1131,239 +1288,283 @@ const PTE_TASK_DATABASE = [
     ]
   },
   {
-    id: "L-MCM",
-    code: "L-MCM",
-    name: "听力多选题",
-    english: "Multiple Choice, Multiple Answers",
-    part: "Part 3 听力部分",
-    section: "Section 2 (听力合并计时大题)",
-    examOrder: 14,
-    positionDesc: "Part 3 听力部分 · Section 2 听力综合大题的第 1 题（标志进入听力合并计时生死局！）",
-    count: "1–2 题",
-    tier: "tier3",
-    tierName: "⚡ 策略速过 (Tier 3)",
-    weights: { overall: 1.5, listening: 3, reading: 0, writing: 0, speaking: 0 },
-    integrated: false,
-    negativeMarking: true,
-    timing: {
-      prompt: "播放一段学术音频，长约 40~90 秒；下方给出多选问题与 5~7 个选项",
-      prep: "音频播放前有约 7 秒的倒计时浏览题干",
-      answer: "单题无独立倒计时；在 Section 2 听力总倒计时（约 19~24 分钟）内作答",
-      timerType: "⚠️ 听力 Section 2 整体合并倒计时（关系到最后 WFD 的生死存亡！）",
-      timeStrategy: "利用播放前 7 秒迅速扫视题干问题在问什么。音频结束后 15 秒内选出 1 个最确定的选项，立即点击 Next，决不能拖延！"
+    "id": "L-MCM",
+    "code": "L-MCM",
+    "name": "听力多选题",
+    "english": "Listening — Multiple Choice, Multiple Answers",
+    "part": "Part 3 听力部分",
+    "section": "Section 2 (听力合并计时大题)",
+    "examOrder": 16,
+    "positionDesc": "Part 3 听力部分 · Section 2 听力综合大题的第 1 题（标志进入听力合并计时生死局！）",
+    "count": "1–2 题",
+    "tier": "tier3",
+    "tierName": "⚡ 策略速过 (Tier 3)",
+    "weights": {
+      "overall": 1,
+      "speaking": 0,
+      "listening": 3,
+      "reading": 0,
+      "writing": 0
     },
-    uiDetail: {
-      statusFlow: "倒计时 7 秒 ➔ 播放音频 ➔ 勾选方形 Checkbox 复选框 ➔ 点击 Next",
-      beepRule: "无提示音。",
-      threeSecRule: "不适用。",
-      nextRule: "单向不可逆，点击 Next 无法返回。",
-      features: "选项前为方框复选框（Checkbox）。"
+    "integrated": false,
+    "negativeMarking": true,
+    "timing": {
+      "prompt": "播放一段学术音频，长约 40~90 秒；下方给出多选问题与 5~7 个选项",
+      "prep": "音频播放前有约 7 秒的倒计时浏览题干",
+      "answer": "单题无独立倒计时；在 Section 2 听力总倒计时（约 19~24 分钟）内作答",
+      "timerType": "⚠️ 听力 Section 2 整体合并倒计时（关系到最后 WFD 的生死存亡！）",
+      "timeStrategy": "利用播放前 7 秒迅速扫视题干问题在问什么。音频结束后 15 秒内选出 1 个最确定的选项，立即点击 Next，决不能拖延！"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "倒计时 7 秒 ➔ 播放音频 ➔ 勾选方形 Checkbox 复选框 ➔ 点击 Next",
+      "beepRule": "无提示音。",
+      "threeSecRule": "不适用。",
+      "nextRule": "单向不可逆，点击 Next 无法返回。",
+      "features": "选项前为方框复选框（Checkbox）。"
+    },
+    "melonTips": [
       "🚨 红色倒扣分高警报：选对 +1 分，选错倒扣 -1 分！最低 0 分！",
       "大西瓜铁则：【坚决只选 1 个！】听懂多少选多少，不确定的选项坚决不点，当单选题做！把省下来的每一秒钟留给最后一题 WFD！"
     ]
   },
   {
-    id: "L-FIB",
-    code: "FIB-L",
-    name: "听力填空 (打字填词)",
-    english: "Fill in the Blanks",
-    part: "Part 3 听力部分",
-    section: "Section 2 (听力合并计时大题)",
-    examOrder: 15,
-    positionDesc: "Part 3 听力部分 · Section 2 听力综合部分的第 2 题",
-    count: "2–3 题",
-    tier: "tier2",
-    tierName: "⭐ 重点拿分 (Tier 2)",
-    weights: { overall: 4, listening: 7, writing: 7, reading: 0, speaking: 0 },
-    integrated: true,
-    negativeMarking: false,
-    timing: {
-      prompt: "屏幕呈现一段挖出 3~6 个空格的文本，播放 30~60 秒的对应音频",
-      prep: "音频播放前有 7 秒准备倒计时",
-      answer: "随听随打，音频结束后留 30 秒核查",
-      timerType: "⚠️ 听力 Section 2 合并倒计时",
-      timeStrategy: "音频播放前 7 秒迅速扫视空格前后词；音频播放时，建议直接在可擦写白板上速记（或盲打入输入框）；音频播放完毕后预留 30 秒检查时态（过去式 -ed）与名词复数（-s），搞定立刻点 Next。"
+    "id": "FIB-L",
+    "code": "FIB-L",
+    "name": "听力填空 (打字填词)",
+    "english": "Fill in the Blanks (Type In)",
+    "part": "Part 3 听力部分",
+    "section": "Section 2 (听力合并计时大题)",
+    "examOrder": 17,
+    "positionDesc": "Part 3 听力部分 · Section 2 听力综合部分的第 2 题",
+    "count": "2–3 题",
+    "tier": "tier3",
+    "tierName": "⚡ 策略速过 (Tier 3)",
+    "weights": {
+      "overall": 3,
+      "speaking": 0,
+      "listening": 8,
+      "reading": 0,
+      "writing": 0
     },
-    uiDetail: {
-      statusFlow: "7 秒准备 ➔ 音频同步播放 ➔ 键盘打字填入文本框 ➔ 点击 Next",
-      beepRule: "无提示音。",
-      threeSecRule: "不适用。",
-      nextRule: "填完点击 Next 提交。",
-      features: "文本中内嵌打字输入框，支持 Tab 键快速切换至下一个空格。"
+    "integrated": false,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "屏幕呈现一段挖出 3~6 个空格的文本，播放 30~60 秒的对应音频",
+      "prep": "音频播放前有 7 秒准备倒计时",
+      "answer": "随听随打，音频结束后留 30 秒核查",
+      "timerType": "⚠️ 听力 Section 2 合并倒计时",
+      "timeStrategy": "音频播放前 7 秒迅速扫视空格前后词；音频播放时，建议直接在可擦写白板上速记（或盲打入输入框）；音频播放完毕后预留 30 秒检查时态（过去式 -ed）与名词复数（-s），搞定立刻点 Next。"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "7 秒准备 ➔ 音频同步播放 ➔ 键盘打字填入文本框 ➔ 点击 Next",
+      "beepRule": "无提示音。",
+      "threeSecRule": "不适用。",
+      "nextRule": "填完点击 Next 提交。",
+      "features": "文本中内嵌打字输入框，支持 Tab 键快速切换至下一个空格。"
+    },
+    "melonTips": [
       "同时给听力和写作输送关键分数！一个词 1 分，性价比极高！",
       "生死细节：90% 的失分都在【单复数 -s/-es】和【动词时态 -ed】！平时练习一定要盲听速记，听完后根据语法上下文反推空格处究竟是单数还是复数。",
       "考场操作技巧：在键盘上按『Tab 键』可以直接无缝跳到下一个空格，比用鼠标逐个点击空格快 3 倍，绝不漏空！"
     ]
   },
   {
-    id: "HCS",
-    code: "HCS",
-    name: "高亮正确总结",
-    english: "Highlight Correct Summary",
-    part: "Part 3 听力部分",
-    section: "Section 2 (听力合并计时大题)",
-    examOrder: 16,
-    positionDesc: "Part 3 听力部分 · Section 2 听力综合部分的第 3 题",
-    count: "1–2 题",
-    tier: "tier3",
-    tierName: "⚡ 策略速过 (Tier 3)",
-    weights: { overall: 1, listening: 2, reading: 1.5, writing: 0, speaking: 0 },
-    integrated: true,
-    negativeMarking: false,
-    timing: {
-      prompt: "播放长约 30~90 秒的音频，下方给出 4 个长篇大论的总结选项",
-      prep: "播放前约 5 秒准备",
-      answer: "单题无独立计时；在听力 Section 2 倒计时内作答",
-      timerType: "⚠️ 听力 Section 2 合并倒计时",
-      timeStrategy: "典型的时间大坑！音频播放完毕后，30 秒内对照笔记粗略扫视选项，选出最顺眼的一个，立刻点 Next，绝对不能耗时 2 分钟逐字研读！"
+    "id": "HCS",
+    "code": "HCS",
+    "name": "高亮正确总结",
+    "english": "Highlight Correct Summary",
+    "part": "Part 3 听力部分",
+    "section": "Section 2 (听力合并计时大题)",
+    "examOrder": 18,
+    "positionDesc": "Part 3 听力部分 · Section 2 听力综合部分的第 3 题",
+    "count": "1–2 题",
+    "tier": "tier3",
+    "tierName": "⚡ 策略速过 (Tier 3)",
+    "weights": {
+      "overall": 0.5,
+      "speaking": 0,
+      "listening": 2,
+      "reading": 3,
+      "writing": 0,
+      "overallLabel": "<1%"
     },
-    uiDetail: {
-      statusFlow: "播放音频 (30~90s) ➔ 鼠标选择单选圆圈 ➔ 点击 Next",
-      beepRule: "无提示音。",
-      threeSecRule: "不适用。",
-      nextRule: "选完点 Next 单向不可逆。",
-      features: "选项为单选框（Radio Buttons），选项文本往往非常冗长。"
+    "integrated": true,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "播放长约 30~90 秒的音频，下方给出 4 个长篇大论的总结选项",
+      "prep": "播放前约 5 秒准备",
+      "answer": "单题无独立计时；在听力 Section 2 倒计时内作答",
+      "timerType": "⚠️ 听力 Section 2 合并倒计时",
+      "timeStrategy": "典型的时间大坑！音频播放完毕后，30 秒内对照笔记粗略扫视选项，选出最顺眼的一个，立刻点 Next，绝对不能耗时 2 分钟逐字研读！"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "播放音频 (30~90s) ➔ 鼠标选择单选圆圈 ➔ 点击 Next",
+      "beepRule": "无提示音。",
+      "threeSecRule": "不适用。",
+      "nextRule": "选完点 Next 单向不可逆。",
+      "features": "选项为单选框（Radio Buttons），选项文本往往非常冗长。"
+    },
+    "melonTips": [
       "大西瓜考场避坑高能预警：这是听力部分的『耗时大户与时间刺客』！",
       "千万别在音频播放时试图去读那 4 坨长长的选项，根本读不完还会导致听力全漏！在白板上记下核心论点，音频放完后扫选项关键词，选完立刻 Next，必须给 WFD 留出时间！"
     ]
   },
   {
-    id: "L-MCS",
-    code: "L-MCS",
-    name: "听力单选题",
-    english: "Multiple Choice, Single Answer",
-    part: "Part 3 听力部分",
-    section: "Section 2 (听力合并计时大题)",
-    examOrder: 17,
-    positionDesc: "Part 3 听力部分 · Section 2 听力综合部分的第 4 题",
-    count: "1–2 题",
-    tier: "tier3",
-    tierName: "⚡ 策略速过 (Tier 3)",
-    weights: { overall: 1, listening: 2, reading: 0, writing: 0, speaking: 0 },
-    integrated: false,
-    negativeMarking: false,
-    timing: {
-      prompt: "播放约 30~60 秒的短音频，回答一道单选题",
-      prep: "播放前 5 秒准备",
-      answer: "音频结束后 10 秒内选出",
-      timerType: "⚠️ 听力 Section 2 合并倒计时",
-      timeStrategy: "播放前 5 秒看清问题。音频放完 10 秒内作答，哪怕盲猜也要直接过，把时间留给后面的 WFD！"
+    "id": "L-MCS",
+    "code": "L-MCS",
+    "name": "听力单选题",
+    "english": "Listening — Multiple Choice, Single Answer",
+    "part": "Part 3 听力部分",
+    "section": "Section 2 (听力合并计时大题)",
+    "examOrder": 19,
+    "positionDesc": "Part 3 听力部分 · Section 2 听力综合部分的第 4 题",
+    "count": "1–2 题",
+    "tier": "tier3",
+    "tierName": "⚡ 策略速过 (Tier 3)",
+    "weights": {
+      "overall": 0.5,
+      "speaking": 0,
+      "listening": 2,
+      "reading": 0,
+      "writing": 0,
+      "overallLabel": "<1%"
     },
-    uiDetail: {
-      statusFlow: "播放音频 ➔ 单选圆圈 ➔ 点 Next",
-      beepRule: "无提示音。",
-      threeSecRule: "不适用。",
-      nextRule: "选完秒过。",
-      features: "常规单选题界面。"
+    "integrated": false,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "播放约 30~60 秒的短音频，回答一道单选题",
+      "prep": "播放前 5 秒准备",
+      "answer": "音频结束后 10 秒内选出",
+      "timerType": "⚠️ 听力 Section 2 合并倒计时",
+      "timeStrategy": "播放前 5 秒看清问题。音频放完 10 秒内作答，哪怕盲猜也要直接过，把时间留给后面的 WFD！"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "播放音频 ➔ 单选圆圈 ➔ 点 Next",
+      "beepRule": "无提示音。",
+      "threeSecRule": "不适用。",
+      "nextRule": "选完秒过。",
+      "features": "常规单选题界面。"
+    },
+    "melonTips": [
       "占分极低，战术性放弃题目。遇到完全没听懂的，随便蒙一个（选 B 或选 C），立即点 Next，绝不纠结一秒钟！"
     ]
   },
   {
-    id: "SMW",
-    code: "SMW",
-    name: "选择缺失词",
-    english: "Select Missing Word",
-    part: "Part 3 听力部分",
-    section: "Section 2 (听力合并计时大题)",
-    examOrder: 18,
-    positionDesc: "Part 3 听力部分 · Section 2 听力综合部分的第 5 题",
-    count: "1–2 题",
-    tier: "tier3",
-    tierName: "⚡ 策略速过 (Tier 3)",
-    weights: { overall: 1, listening: 2, reading: 0, writing: 0, speaking: 0 },
-    integrated: false,
-    negativeMarking: false,
-    timing: {
-      prompt: "播放约 20~70 秒音频，句子最末尾的关键单词或词组被消音替换为「BEEP（滴）」的一声",
-      prep: "播放前约 5 秒准备",
-      answer: "音频结束后 10 秒内作答",
-      timerType: "⚠️ 听力 Section 2 合并倒计时",
-      timeStrategy: "音频放完 10 秒内作答完毕点 Next。"
+    "id": "SMW",
+    "code": "SMW",
+    "name": "选择缺失词",
+    "english": "Select Missing Word",
+    "part": "Part 3 听力部分",
+    "section": "Section 2 (听力合并计时大题)",
+    "examOrder": 20,
+    "positionDesc": "Part 3 听力部分 · Section 2 听力综合部分的第 5 题",
+    "count": "1–2 题",
+    "tier": "tier3",
+    "tierName": "⚡ 策略速过 (Tier 3)",
+    "weights": {
+      "overall": 1,
+      "speaking": 0,
+      "listening": 1,
+      "reading": 0,
+      "writing": 0
     },
-    uiDetail: {
-      statusFlow: "播放音频 ➔ 进度条接近终点 ➔ 滴声消音 ➔ 单选被遮蔽的词 ➔ 点 Next",
-      beepRule: "音频末尾会出现消音的「BEEP」声！",
-      threeSecRule: "不适用。",
-      nextRule: "选完点 Next。",
-      features: "题干常带音频主题提示，单选圆圈。"
+    "integrated": false,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "播放约 20~70 秒音频，句子最末尾的关键单词或词组被消音替换为「BEEP（滴）」的一声",
+      "prep": "播放前约 5 秒准备",
+      "answer": "音频结束后 10 秒内作答",
+      "timerType": "⚠️ 听力 Section 2 合并倒计时",
+      "timeStrategy": "音频放完 10 秒内作答完毕点 Next。"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "播放音频 ➔ 进度条接近终点 ➔ 滴声消音 ➔ 单选被遮蔽的词 ➔ 点 Next",
+      "beepRule": "音频末尾会出现消音的「BEEP」声！",
+      "threeSecRule": "不适用。",
+      "nextRule": "选完点 Next。",
+      "features": "题干常带音频主题提示，单选圆圈。"
+    },
+    "melonTips": [
       "大西瓜独家盯梢法：眼睛死死盯住音频进度条！当进度条快走到尽头时，集中 120% 的注意力听最后半句话的逻辑（顺承、转折还是因果），猜出滴声处的含义，秒选通过！"
     ]
   },
   {
-    id: "HIW",
-    code: "HIW",
-    name: "高亮错误单词",
-    english: "Highlight Incorrect Words",
-    part: "Part 3 听力部分",
-    section: "Section 2 (听力合并计时大题)",
-    examOrder: 19,
-    positionDesc: "Part 3 听力部分 · Section 2 听力综合部分的第 6 题（WFD 前的最后一道大关）",
-    count: "2–3 题",
-    tier: "tier1",
-    tierName: "🔥 必背核心 (Tier 1)",
-    weights: { overall: 4.5, listening: 8, reading: 8, writing: 0, speaking: 0 },
-    integrated: true,
-    negativeMarking: true,
-    timing: {
-      prompt: "屏幕提供一段短文，播放与之对应的朗读音频（15~50秒）。音频中会有 4~7 个词与屏幕文本不一致",
-      prep: "音频播放前有 10 秒倒计时准备",
-      answer: "鼠标跟随音频朗读速度在屏幕上实时点击高亮读错的单词",
-      timerType: "⚠️ 听力 Section 2 合并倒计时",
-      timeStrategy: "播放前 10 秒将鼠标放在第一行第一个词前；音频一开，鼠标指针紧贴发音节奏移动；音频播放完毕后留 5 秒确认没误点，立刻点击 Next！"
+    "id": "HIW",
+    "code": "HIW",
+    "name": "高亮错误单词",
+    "english": "Highlight Incorrect Words",
+    "part": "Part 3 听力部分",
+    "section": "Section 2 (听力合并计时大题)",
+    "examOrder": 21,
+    "positionDesc": "Part 3 听力部分 · Section 2 听力综合部分的第 6 题（WFD 前的最后一道大关）",
+    "count": "2–3 题",
+    "tier": "tier2",
+    "tierName": "⭐ 重点拿分 (Tier 2)",
+    "weights": {
+      "overall": 4,
+      "speaking": 0,
+      "listening": 8,
+      "reading": 13,
+      "writing": 0
     },
-    uiDetail: {
-      statusFlow: "10 秒倒计时 ➔ 音频播放并实时划词 ➔ 鼠标左键点击单词（高亮变为黄色） ➔ 若点错再次点击取消 ➔ 音频结束点 Next",
-      beepRule: "无提示音。",
-      threeSecRule: "不适用。",
-      nextRule: "音频结束核对无误后立刻点 Next。",
-      features: "可点击文本，单击单词变黄，再次单击恢复原状。"
+    "integrated": true,
+    "negativeMarking": true,
+    "timing": {
+      "prompt": "屏幕提供一段短文，播放与之对应的朗读音频（15~50秒）。音频中会有 4~7 个词与屏幕文本不一致",
+      "prep": "音频播放前有 10 秒倒计时准备",
+      "answer": "鼠标跟随音频朗读速度在屏幕上实时点击高亮读错的单词",
+      "timerType": "⚠️ 听力 Section 2 合并倒计时",
+      "timeStrategy": "播放前 10 秒将鼠标放在第一行第一个词前；音频一开，鼠标指针紧贴发音节奏移动；音频播放完毕后留 5 秒确认没误点，立刻点击 Next！"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "10 秒倒计时 ➔ 音频播放并实时划词 ➔ 鼠标左键点击单词（高亮变为黄色） ➔ 若点错再次点击取消 ➔ 音频结束点 Next",
+      "beepRule": "无提示音。",
+      "threeSecRule": "不适用。",
+      "nextRule": "音频结束核对无误后立刻点 Next。",
+      "features": "可点击文本，单击单词变黄，再次单击恢复原状。"
+    },
+    "melonTips": [
       "🔥 听力和阅读的高性价比送分题！大西瓜学员几乎全员拿满分！",
       "🚨 红色倒扣分机制：标对一个 +1 分，误点一个倒扣 -1 分！最低 0 分！",
       "大西瓜操作要诀：【鼠标跟随，宁缺毋滥】！不确定发音是否对上的词，坚决不要碰，宁可漏选也不要瞎点导致倒扣分！"
     ]
   },
   {
-    id: "WFD",
-    code: "WFD",
-    name: "听写句子",
-    english: "Write from Dictation",
-    part: "Part 3 听力部分",
-    section: "Section 2 (压轴终局大题)",
-    examOrder: 20,
-    positionDesc: "Part 3 听力部分 · Section 2 整个考试的最后一题！【全场终极 MVP】",
-    count: "3–4 题",
-    tier: "tier1",
-    tierName: "👑 全场压轴最高MVP (Tier 1)",
-    weights: { overall: 14.5, writing: 27, listening: 20, reading: 0, speaking: 0 },
-    integrated: true,
-    negativeMarking: false,
-    timing: {
-      prompt: "播放一句句子音频（长约 3~5 秒，约 8~14 词），只播放一次",
-      prep: "播放前约 7 秒准备",
-      answer: "在文本框中打出听到的整句句子",
-      timerType: "⚠️ 听力 Section 2 剩余时间（若前面磨蹭，此处将直接超时！必须预留 5~6 分钟！）",
-      timeStrategy: "PTE 决胜之巅！必须保证进入 WFD 时，右上角剩余时间至少还有 5 分钟！每道题留出 1.5 分钟进行打字、检查拼写与使用大西瓜试词大法。"
+    "id": "WFD",
+    "code": "WFD",
+    "name": "听写句子",
+    "english": "Write from Dictation",
+    "part": "Part 3 听力部分",
+    "section": "Section 2 (压轴终局大题)",
+    "examOrder": 22,
+    "positionDesc": "Part 3 听力部分 · Section 2 整个考试的最后一题！【全场终极 MVP】",
+    "count": "3–4 题",
+    "tier": "tier2",
+    "tierName": "⭐ 重点拿分 (Tier 2)",
+    "weights": {
+      "overall": 5,
+      "speaking": 0,
+      "listening": 13,
+      "reading": 0,
+      "writing": 23
     },
-    uiDetail: {
-      statusFlow: "7 秒准备 ➔ 播放音频 ➔ 文本框打字 ➔ 下方显示 Word Count ➔ 检查试词 ➔ 点击 Next ➔ 最后一题点击 End Exam",
-      beepRule: "无提示音。",
-      threeSecRule: "不适用。",
-      nextRule: "最后一题提交后出现「End of the Test」，点击后举手等待监考老师确认！",
-      features: "大输入框，配有 Word Count 与剪切粘贴工具。"
+    "integrated": true,
+    "negativeMarking": false,
+    "timing": {
+      "prompt": "播放一句句子音频（长约 3~5 秒，约 8~14 词），只播放一次",
+      "prep": "播放前约 7 秒准备",
+      "answer": "在文本框中打出听到的整句句子",
+      "timerType": "⚠️ 听力 Section 2 剩余时间（若前面磨蹭，此处将直接超时！必须预留 5~6 分钟！）",
+      "timeStrategy": "PTE 决胜之巅！必须保证进入 WFD 时，右上角剩余时间至少还有 5 分钟！每道题留出 1.5 分钟进行打字、检查拼写与使用大西瓜试词大法。"
     },
-    melonTips: [
+    "uiDetail": {
+      "statusFlow": "7 秒准备 ➔ 播放音频 ➔ 文本框打字 ➔ 下方显示 Word Count ➔ 检查试词 ➔ 点击 Next ➔ 最后一题点击 End Exam",
+      "beepRule": "无提示音。",
+      "threeSecRule": "不适用。",
+      "nextRule": "最后一题提交后出现「End of the Test」，点击后举手等待监考老师确认！",
+      "features": "大输入框，配有 Word Count 与剪切粘贴工具。"
+    },
+    "melonTips": [
       "👑 PTE 全场总决战的终极 MVP！一题定乾坤！写作贡献高达 27%，听力贡献高达 20%！写作单科的半壁江山全在 WFD！",
       "只加分不倒扣分机制：每个写对的单词得 1 分，拼错或漏写不扣分！",
       "大西瓜独家『试词大法』：",
@@ -1371,72 +1572,6 @@ const PTE_TASK_DATABASE = [
       "② 动词试词：不确定过去式或第三人称单数，原形、过去式、三单【全写上去】（如 exhibit exhibits exhibited）！",
       "③ 冠词试词：不确定是 the 还是 this，直接把 the this 都打上去！",
       "大小写与标点：首字母不强制大写、末尾不加句号机器也能识别得分（但建议保持良好习惯写规范）。"
-    ]
-  },
-  {
-    id: "SGD",
-    code: "SGD",
-    name: "总结小组讨论",
-    english: "Summarize Group Discussion",
-    part: "Part 1 口语与写作",
-    section: "Section 2 (新架构扩展题型 / PTE Core)",
-    examOrder: 21,
-    positionDesc: "Part 1 口语与写作 · Section 2 录音答题部分（培生最新全球架构改革试点，紧随 ASQ 之后）",
-    count: "2–3 题",
-    tier: "tier2",
-    tierName: "⭐ 重点拿分 (新架构)",
-    weights: { overall: 9, listening: 20, speaking: 19, reading: 0, writing: 0 },
-    integrated: true,
-    negativeMarking: false,
-    timing: {
-      prompt: "播放一段三人小组讨论音频（长约 2~3 分钟，只播放一次）",
-      prep: "音频结束后有 10 秒准备时间",
-      answer: "2 分钟口语复述录音（对体力和耐力要求极高）",
-      timerType: "单题独立倒计时",
-      timeStrategy: "使用大西瓜 9 宫格笔记法记录 3 人的不同观点，10 秒内套用模板，匀速输出 90 秒左右。"
-    },
-    uiDetail: {
-      statusFlow: "Playing audio (最长3分钟) ➔ 10s 准备 ➔ BEEP 滴声 ➔ Recording (2分钟) ➔ Completed",
-      beepRule: "有提示音！10 秒准备后响 BEEP 开录！",
-      threeSecRule: "适用！3 秒内必须开口。",
-      nextRule: "点 Next 不可逆。",
-      features: "长音频播放，需要高度集中的多角色笔记记录。"
-    },
-    melonTips: [
-      "大西瓜独家『9宫格笔记法』：在白板上分列记录 Person A, Person B, Person C 的赞同与反对意见，使用流利模板串联发言。"
-    ]
-  },
-  {
-    id: "RTS",
-    code: "RTS",
-    name: "应对情景",
-    english: "Respond to a Situation",
-    part: "Part 1 口语与写作",
-    section: "Section 2 (新架构扩展题型 / PTE Core)",
-    examOrder: 22,
-    positionDesc: "Part 1 口语与写作 · Section 2 录音答题部分（培生最新全球架构改革试点）",
-    count: "2–3 题",
-    tier: "tier2",
-    tierName: "⭐ 重点拿分 (新架构)",
-    weights: { overall: 6, speaking: 13, reading: 0, listening: 0, writing: 0 },
-    integrated: false,
-    negativeMarking: false,
-    timing: {
-      prompt: "屏幕显示日常生活场景文本（不超过 60 词），同时播放情景提示音频",
-      prep: "10 秒准备时间",
-      answer: "40 秒录音口语应对",
-      timerType: "单题独立倒计时",
-      timeStrategy: "设身处地代入角色，用大西瓜万能情景模板自然表达沟通。"
-    },
-    uiDetail: {
-      statusFlow: "阅读情景 ➔ 10 秒准备 ➔ BEEP 滴声 ➔ Recording (40s) ➔ Completed",
-      beepRule: "有提示音！听到滴声后作答。",
-      threeSecRule: "适用！3 秒内必须开口。",
-      nextRule: "说完点 Next。",
-      features: "模拟生活对话情景。"
-    },
-    melonTips: [
-      "假装自己就在现实生活情境中（如跟房东交涉、跟同学请假），套用万能日常口语礼貌模板，保持匀速自信流利即可。"
     ]
   }
 ];
@@ -1521,6 +1656,7 @@ function renderTaskList() {
 
   list.forEach(task => {
     const val = task.weights[currentSkill] || 0;
+    const valDisplay = (currentSkill === "overall" && task.weights.overallLabel) ? task.weights.overallLabel : (val + "%");
     const pctWidth = Math.min(100, (val / maxVal) * 100);
     const isSel = task.id === selectedTaskId ? "selected" : "";
 
@@ -1573,7 +1709,7 @@ function renderTaskList() {
             <div class="bar-track">
               <div class="bar-fill ${currentSkill}" style="width: ${pctWidth}%;"></div>
             </div>
-            <span class="score-val-text">${val}%</span>
+            <span class="score-val-text">${valDisplay}</span>
           </div>
         </div>
 
@@ -1612,7 +1748,8 @@ function openTaskDetail(taskId) {
 
   // 交叉赋分芯片
   let chipsHtml = "";
-  chipsHtml += `<span class="skill-chip" style="background:#059669;color:white;font-weight:800;font-size:0.78rem;">🌟 全科总分贡献: ${task.weights.overall}%</span>`;
+  const overallDisplay = task.weights.overallLabel || (task.weights.overall + "%");
+  chipsHtml += `<span class="skill-chip" style="background:#059669;color:white;font-weight:800;font-size:0.78rem;">🌟 全科总分贡献: ${overallDisplay}</span>`;
   if (task.weights.speaking > 0) chipsHtml += `<span class="skill-chip chip-speaking" style="font-size:0.78rem;">🗣️ 口语贡献: ${task.weights.speaking}%</span>`;
   if (task.weights.listening > 0) chipsHtml += `<span class="skill-chip chip-listening" style="font-size:0.78rem;">🎧 听力贡献: ${task.weights.listening}%</span>`;
   if (task.weights.reading > 0) chipsHtml += `<span class="skill-chip chip-reading" style="font-size:0.78rem;">📖 阅读贡献: ${task.weights.reading}%</span>`;
@@ -1620,12 +1757,28 @@ function openTaskDetail(taskId) {
   document.getElementById("modal-cross-scoring-chips").innerHTML = chipsHtml;
 
   let crossDesc = "该题型采用交叉评分机制（Integrated Scoring）。";
-  if (task.id === "RA") crossDesc = "【口语+阅读】双料大题！朗读文本不仅贡献口语 22% 的发音和流利度分，同时给阅读技能直接输送 22% 的巨多分值！";
-  else if (task.id === "RS") crossDesc = "【口语+听力】全场第一王牌！不仅是口语最大支柱（30%），还直接决定听力 20% 的生死！";
-  else if (task.id === "WFD") crossDesc = "【写作+听力】全场压轴 MVP！一人撑起写作 27% 的超级江山，同时贡献听力 20% 分值！";
-  else if (task.id === "RW-FIB") crossDesc = "【阅读+写作】阅读排头兵！贡献阅读 22% 的同时，还向写作输送高达 18% 的巨额分数！";
-  else if (task.id === "SST") crossDesc = "【听力+写作】听力 Section 1 开门红，兼顾听力与写作双重核心赋分。";
-  else if (task.id === "HIW") crossDesc = "【听力+阅读】高性价比送分题，鼠标点词，听读双送分（各占约 8%）。";
+  if (task.id === "DI") crossDesc = "【口语独占 31% · 全科 15%】PTE School 官方 Table 1 榜首！口语最大供分题型，模板流利度是锁定口语与全科高分的最强基石！";
+  else if (task.id === "WE") crossDesc = "【写作独占 31% · 全科 7%】写作第一权重题型！高分模板配合精准打字，零拼写语法失误稳拿写作 31% 满分！";
+  else if (task.id === "SWT") crossDesc = "【写作 28% + 阅读 23% · 全科 7%】极高权重的双向大题！一句话总结，既直接输送写作 28%，又给阅读贡献 23% 巨额分数！";
+  else if (task.id === "RW-FIB") crossDesc = "【阅读独占 25% · 全科 7%】阅读科目第一王牌！下拉选词填空，单项独占阅读整整 25% 的四分之一江山！";
+  else if (task.id === "WFD") crossDesc = "【写作 23% + 听力 13% · 全科 5%】考试压轴最关键听写题！听写一词一分，不仅贡献听力 13%，更向写作输送高达 23% 分值！";
+  else if (task.id === "SGD") crossDesc = "【听力 20% + 口语 19% · 全科 9%】全新学术讨论题！全科总分高达 9%，听力 20%、口语 19% 双双突破新权重！";
+  else if (task.id === "RS") crossDesc = "【听力 17% + 口语 16% · 全科 7%】经典听口核心题！听力贡献 17%，口语贡献 16%，考查瞬时记忆与流利复述！";
+  else if (task.id === "R-FIB") crossDesc = "【阅读独占 20% · 全科 6%】拖拽填空，纯粹考查阅读词汇与上下文理解，单项占阅读 20%！";
+  else if (task.id === "SST") crossDesc = "【写作 18% + 听力 10% · 全科 4%】听力首题综合考查！抓取关键词套用结构句，稳拿写作 18% 与听力 10%！";
+  else if (task.id === "RTS") crossDesc = "【口语独占 13% · 全科 6%】全新情景回应题！考查日常/学术交流即兴作答，单项独占口语 13% 供分！";
+  else if (task.id === "RL") crossDesc = "【听力 13% + 口语 13% · 全科 6%】复述讲座，听口平分秋色各占 13%，核心在记好逻辑笔记并流利输出！";
+  else if (task.id === "HIW") crossDesc = "【阅读 13% + 听力 8% · 全科 4%】选错倒扣分！听音识别变异词，同时为阅读贡献 13%、听力贡献 8%！";
+  else if (task.id === "RA") crossDesc = "【口语 9% · 全科 4%】基础大声朗读题，单项贡献口语 9%，核心在于意群断句与连贯语速！";
+  else if (task.id === "RO") crossDesc = "【阅读 9% · 全科 3%】段落重排，单项贡献阅读 9%，找准首句主旨与指代词匹配！";
+  else if (task.id === "L-FIB") crossDesc = "【听力 8% · 全科 3%】单项贡献听力 8%，核心考查精准抓听单词拼写与单复数变化！";
+  else if (task.id === "ASQ") crossDesc = "【听力 4% · 全科 2%】单项贡献听力 4%，考查常识词汇快速反应！";
+  else if (task.id === "R-MCA") crossDesc = "【阅读 5% · 全科 1%】多选有倒扣分风险，单项贡献阅读 5%，不确定千万别多选！";
+  else if (task.id === "L-MCA") crossDesc = "【听力 3% · 全科 1%】多选有倒扣分风险，单项贡献听力 3%，保守原则只选 1 个最确定的！";
+  else if (task.id === "R-SCA") crossDesc = "【阅读 3% · 全科 <1%】单选单项贡献阅读 3%，快速扫读定位，绝不恋战！";
+  else if (task.id === "L-SCA") crossDesc = "【听力 2% · 全科 <1%】单选单项贡献听力 2%，抓首尾主旨句快速作答！";
+  else if (task.id === "HCS") crossDesc = "【听力 2% + 阅读 3% · 全科 <1%】边听边读综合考查，贡献听力 2% 与阅读 3%！";
+  else if (task.id === "SMW") crossDesc = "【听力 1% · 全科 1%】选缺失词，单项贡献听力 1%，抓住音频结尾提示词！";
   document.getElementById("modal-cross-desc").innerText = crossDesc;
 
   // 考场真实 UI
