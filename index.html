@@ -199,6 +199,74 @@
     box-shadow: 0 2px 6px rgba(234, 88, 12, 0.15);
   }
 
+  .sidebar-user-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 9px 12px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .sidebar-user-card:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  .sidebar-user-avatar {
+    font-size: 1.35rem;
+    line-height: 1;
+    width: 34px;
+    height: 34px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .sidebar-user-info {
+    min-width: 0;
+    flex: 1;
+  }
+  .sidebar-user-name-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+  }
+  .sidebar-user-name {
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 0.84rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .sidebar-user-switch-badge {
+    font-size: 0.68rem;
+    color: #2563eb;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .sidebar-user-desc {
+    font-size: 0.72rem;
+    color: #64748b;
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .app-main-content {
     flex: 1 1 auto;
     margin-left: 250px;
@@ -231,7 +299,7 @@
       z-index: 1000;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
-    .sidebar-brand, .sidebar-nav-title, .sidebar-footer {
+    .sidebar-brand, .sidebar-nav-title, .sidebar-footer, .sidebar-user-card {
       display: none;
     }
     .sidebar-nav {
@@ -947,6 +1015,18 @@
       </div>
     </div>
 
+    <!-- 学员专属档案切换卡片 -->
+    <div class="sidebar-user-card" onclick="openProfileModal()" title="点击切换学员档案或新建用户">
+      <div class="sidebar-user-avatar" id="sidebar-user-avatar">🧑‍💻</div>
+      <div class="sidebar-user-info">
+        <div class="sidebar-user-name-row">
+          <span class="sidebar-user-name" id="sidebar-user-name">Xudong Zhu</span>
+          <span class="sidebar-user-switch-badge">切换 ▾</span>
+        </div>
+        <div class="sidebar-user-desc" id="sidebar-user-desc">已刷 0 题 · 0 错题</div>
+      </div>
+    </div>
+
     <div class="sidebar-nav-title">核心备考模块</div>
     <nav class="sidebar-nav">
       <!-- 按钮 1: WFD 极速听写 -->
@@ -1012,6 +1092,11 @@
             <span style="font-size: 0.82rem; color: var(--text-muted);" id="header-bank-desc">🍉 大西瓜 (周二真题预测 · 106新题季) + 🔥 萤火虫 (极限预测) 双向 1:1 同步 · 33组机经变体试词已注入</span>
           </div>
           <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <button class="nav-btn" id="btn-header-profile" onclick="openProfileModal()" style="padding: 7px 12px; background: #f8fafc; color: #1e293b; border: 1px solid #cbd5e1; font-weight: 700; font-size: 0.84rem; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;" title="点击切换学员档案或新建用户">
+              <span id="header-user-avatar">🧑‍💻</span>
+              <span id="header-user-name">Xudong Zhu</span>
+              <span style="font-size: 0.72rem; color: #2563eb; background: #eff6ff; padding: 1px 5px; border-radius: 4px; border: 1px solid #bfdbfe;">档案 ▾</span>
+            </button>
             <button class="nav-btn" id="btn-header-countdown" onclick="openExamDateModal()" style="padding: 7px 13px; background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; font-weight: 700; font-size: 0.84rem; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;" title="点击自定义设置考期与目标">
               📅 <span id="header-countdown-text">考期倒计时: 计算中...</span> <span style="font-size: 0.75rem; color: #ea580c;">⚙️</span>
             </button>
@@ -1809,21 +1894,409 @@
     return arr;
   }
 
-  // 答题档案存储体系
-  // 1. pte_wfd_logs: 完整流水记录数组 [{qid, index, sentence, userInput, score, total, pct, isPerfect, timestamp, missingWords, typos, addWordsUsed}]
-  // 2. pte_wfd_qstats: 每道题统计 { [qid]: { passCount: 0, failCount: 0, attempts: 0, missingStats: {}, typoStats: [] } }
+  // ==========================================
+  // 多学员专属学习档案隔离存储体系 (Multi-Profile System)
+  // ==========================================
   let practiceLogs = [];
   let questionStats = {};
   let practiceVocab = [];
 
-  try {
-    practiceLogs = JSON.parse(localStorage.getItem("pte_wfd_logs") || "[]");
-    questionStats = JSON.parse(localStorage.getItem("pte_wfd_qstats") || "{}");
-    practiceVocab = JSON.parse(localStorage.getItem("pte_wfd_vocab") || "[]");
-  } catch (e) {
-    practiceLogs = [];
-    questionStats = {};
-    practiceVocab = [];
+  function getActiveProfileId() {
+    return localStorage.getItem("pte_active_profile_id") || "prof_default";
+  }
+
+  function getProfilesList() {
+    let list = [];
+    try {
+      list = JSON.parse(localStorage.getItem("pte_profiles_list") || "[]");
+    } catch(e) { list = []; }
+    if (!list || !list.length) {
+      // 自动初始化首个档案
+      const legacyLogs = localStorage.getItem("pte_wfd_logs");
+      const isExistingUser = !!legacyLogs;
+      const initialName = isExistingUser ? "Xudong Zhu" : "新学员";
+      const initialAvatar = isExistingUser ? "🧑‍💻" : "🎓";
+      const initialExamDate = localStorage.getItem("pte_exam_date") || "2026-10-20";
+      const initialExamTarget = localStorage.getItem("pte_exam_target") || "目标：总分 57+ · 各项 50+";
+
+      list = [{
+        id: "prof_default",
+        name: initialName,
+        avatar: initialAvatar,
+        createdAt: new Date().toISOString(),
+        examDate: initialExamDate,
+        examTarget: initialExamTarget
+      }];
+      try {
+        localStorage.setItem("pte_profiles_list", JSON.stringify(list));
+        localStorage.setItem("pte_active_profile_id", "prof_default");
+        if (isExistingUser) {
+          localStorage.setItem("pte_wfd_logs_prof_default", legacyLogs);
+          localStorage.setItem("pte_wfd_qstats_prof_default", localStorage.getItem("pte_wfd_qstats") || "{}");
+          localStorage.setItem("pte_wfd_vocab_prof_default", localStorage.getItem("pte_wfd_vocab") || "[]");
+        }
+      } catch(e) {}
+    }
+    return list;
+  }
+
+  function getActiveProfile() {
+    const list = getProfilesList();
+    const pid = getActiveProfileId();
+    return list.find(p => p.id === pid) || list[0];
+  }
+
+  function loadActiveProfileData() {
+    const pid = getActiveProfileId();
+    const list = getProfilesList();
+    const p = list.find(item => item.id === pid) || list[0];
+
+    const logsKey = "pte_wfd_logs_" + pid;
+    const qstatsKey = "pte_wfd_qstats_" + pid;
+    const vocabKey = "pte_wfd_vocab_" + pid;
+
+    try {
+      const savedLogs = localStorage.getItem(logsKey);
+      if (savedLogs) {
+        practiceLogs = JSON.parse(savedLogs);
+      } else if (pid === "prof_default") {
+        practiceLogs = JSON.parse(localStorage.getItem("pte_wfd_logs") || "[]");
+      } else {
+        practiceLogs = [];
+      }
+    } catch(e) { practiceLogs = []; }
+
+    try {
+      const savedStats = localStorage.getItem(qstatsKey);
+      if (savedStats) {
+        questionStats = JSON.parse(savedStats);
+      } else if (pid === "prof_default") {
+        questionStats = JSON.parse(localStorage.getItem("pte_wfd_qstats") || "{}");
+      } else {
+        questionStats = {};
+      }
+    } catch(e) { questionStats = {}; }
+
+    try {
+      const savedVocab = localStorage.getItem(vocabKey);
+      if (savedVocab) {
+        practiceVocab = JSON.parse(savedVocab);
+      } else if (pid === "prof_default") {
+        practiceVocab = JSON.parse(localStorage.getItem("pte_wfd_vocab") || "[]");
+      } else {
+        practiceVocab = [];
+      }
+    } catch(e) { practiceVocab = []; }
+
+    // 同步该档案专属考期与冲刺目标
+    if (p) {
+      if (p.examDate) localStorage.setItem("pte_exam_date", p.examDate);
+      if (p.examTarget) localStorage.setItem("pte_exam_target", p.examTarget);
+    }
+
+    // 活跃数据全局镜像投影 (确保所有第三方/导出脚本完美兼容)
+    try {
+      localStorage.setItem("pte_wfd_logs", JSON.stringify(practiceLogs));
+      localStorage.setItem("pte_wfd_qstats", JSON.stringify(questionStats));
+      localStorage.setItem("pte_wfd_vocab", JSON.stringify(practiceVocab));
+    } catch(e) {}
+  }
+
+  function saveActiveUserData() {
+    const pid = getActiveProfileId();
+    try {
+      localStorage.setItem("pte_wfd_logs_" + pid, JSON.stringify(practiceLogs));
+      localStorage.setItem("pte_wfd_qstats_" + pid, JSON.stringify(questionStats));
+      localStorage.setItem("pte_wfd_vocab_" + pid, JSON.stringify(practiceVocab));
+      localStorage.setItem("pte_wfd_logs", JSON.stringify(practiceLogs));
+      localStorage.setItem("pte_wfd_qstats", JSON.stringify(questionStats));
+      localStorage.setItem("pte_wfd_vocab", JSON.stringify(practiceVocab));
+    } catch(e) {}
+    updateProfileUI();
+  }
+
+  // 初始引导加载
+  getProfilesList();
+  loadActiveProfileData();
+
+  function switchProfile(targetPid) {
+    if (targetPid === getActiveProfileId()) return;
+
+    // 1. 固化当前档案进度
+    saveActiveUserData();
+
+    // 2. 切换当前档案指针
+    localStorage.setItem("pte_active_profile_id", targetPid);
+
+    // 3. 载入目标档案数据
+    loadActiveProfileData();
+
+    // 4. 全局重绘所有相关视图
+    updateStats();
+    updateCurrentQuestionBadge();
+    updateSidebarCountdown();
+    updateProfileUI();
+
+    const mTab = document.getElementById("tab-mistakes");
+    if (mTab && mTab.style.display !== "none") renderMistakesView();
+    const vTab = document.getElementById("tab-vocab");
+    if (vTab && vTab.style.display !== "none") renderVocabView();
+    const hTab = document.getElementById("tab-history");
+    if (hTab && hTab.style.display !== "none") renderHistoryView();
+
+    const activeP = getActiveProfile();
+    showToast("👤 已切换至学员档案：" + activeP.avatar + " " + activeP.name);
+    renderProfilesListModal();
+  }
+
+  function createNewProfile() {
+    const nameInput = document.getElementById("new-profile-name-input");
+    const avatarSelect = document.getElementById("new-profile-avatar-select");
+    let name = (nameInput ? nameInput.value.trim() : "");
+    const avatar = (avatarSelect ? avatarSelect.value : "🎓");
+
+    const list = getProfilesList();
+    if (!name) {
+      name = "学员 " + (list.length + 1);
+    }
+
+    const newId = "prof_" + Date.now();
+    const newProfile = {
+      id: newId,
+      name: name,
+      avatar: avatar,
+      createdAt: new Date().toISOString(),
+      examDate: "2026-10-20",
+      examTarget: "目标：总分 57+ · 各项 50+"
+    };
+
+    list.push(newProfile);
+    localStorage.setItem("pte_profiles_list", JSON.stringify(list));
+
+    // 为新档案初始化空白分区
+    localStorage.setItem("pte_wfd_logs_" + newId, "[]");
+    localStorage.setItem("pte_wfd_qstats_" + newId, "{}");
+    localStorage.setItem("pte_wfd_vocab_" + newId, "[]");
+
+    if (nameInput) nameInput.value = "";
+    switchProfile(newId);
+    showToast("🎉 成功创建专属学员档案：" + avatar + " " + name + "！");
+  }
+
+  function deleteProfile(pid) {
+    const list = getProfilesList();
+    if (pid === getActiveProfileId()) {
+      alert("无法删除当前正在使用的学员档案。请先切换到其他档案后再删除！");
+      return;
+    }
+    const target = list.find(p => p.id === pid);
+    const targetName = target ? (target.avatar + " " + target.name) : "该档案";
+    if (!confirm("⚠️ 确定要彻底删除【" + targetName + "】吗？" + String.fromCharCode(10) + "该学员的做题记录、错题本与生词本将被永久删除，不可恢复。")) {
+      return;
+    }
+
+    const updatedList = list.filter(p => p.id !== pid);
+    localStorage.setItem("pte_profiles_list", JSON.stringify(updatedList));
+
+    localStorage.removeItem("pte_wfd_logs_" + pid);
+    localStorage.removeItem("pte_wfd_qstats_" + pid);
+    localStorage.removeItem("pte_wfd_vocab_" + pid);
+
+    showToast("🗑️ 已删除学员档案：" + targetName);
+    renderProfilesListModal();
+  }
+
+  function toggleEditCurrentProfile() {
+    const box = document.getElementById("active-profile-edit-box");
+    if (!box) return;
+    const isShowing = box.style.display === "block";
+    box.style.display = isShowing ? "none" : "block";
+    if (!isShowing) {
+      const p = getActiveProfile();
+      const nameInput = document.getElementById("edit-profile-name-input");
+      const avatarSelect = document.getElementById("edit-profile-avatar-select");
+      if (nameInput) nameInput.value = p.name;
+      if (avatarSelect) avatarSelect.value = p.avatar;
+    }
+  }
+
+  function saveCurrentProfileEdit() {
+    const nameInput = document.getElementById("edit-profile-name-input");
+    const avatarSelect = document.getElementById("edit-profile-avatar-select");
+    const newName = nameInput ? nameInput.value.trim() : "";
+    const newAvatar = avatarSelect ? avatarSelect.value : "";
+    if (!newName) {
+      alert("请输入学员姓名或昵称！");
+      return;
+    }
+
+    const pid = getActiveProfileId();
+    const list = getProfilesList();
+    const p = list.find(item => item.id === pid);
+    if (p) {
+      p.name = newName;
+      if (newAvatar) p.avatar = newAvatar;
+      localStorage.setItem("pte_profiles_list", JSON.stringify(list));
+      updateProfileUI();
+      toggleEditCurrentProfile();
+      renderProfilesListModal();
+      showToast("✅ 已更新当前学员资料为：" + p.avatar + " " + p.name);
+    }
+  }
+
+  function openProfileModal() {
+    renderProfilesListModal();
+    const modal = document.getElementById("profile-modal");
+    if (modal) modal.classList.add("show");
+  }
+
+  function closeProfileModal() {
+    const modal = document.getElementById("profile-modal");
+    if (modal) modal.classList.remove("show");
+  }
+
+  function handleProfileModalClick(e) {
+    if (e.target && e.target.id === "profile-modal") {
+      closeProfileModal();
+    }
+  }
+
+  function renderProfilesListModal() {
+    const activeP = getActiveProfile();
+    const list = getProfilesList();
+
+    const cardAvatar = document.getElementById("active-profile-card-avatar");
+    const cardName = document.getElementById("active-profile-card-name");
+    const cardMeta = document.getElementById("active-profile-card-meta");
+    if (cardAvatar) cardAvatar.innerText = activeP.avatar;
+    if (cardName) cardName.innerText = activeP.name;
+    if (cardMeta) {
+      cardMeta.innerText = "考期: " + (activeP.examDate || getExamDate()) + " · " + (activeP.examTarget || getExamTarget());
+    }
+
+    const statAttempts = document.getElementById("active-card-stat-attempts");
+    const statPerfect = document.getElementById("active-card-stat-perfect");
+    const statMistakes = document.getElementById("active-card-stat-mistakes");
+    const statVocab = document.getElementById("active-card-stat-vocab");
+
+    let perfectCount = 0;
+    practiceLogs.forEach(l => { if (l.isPerfect || l.score === l.total) perfectCount++; });
+    let mistakeCount = 0;
+    Object.keys(questionStats).forEach(qid => {
+      const s = questionStats[qid];
+      if (s && s.failCount > 0) mistakeCount++;
+    });
+
+    if (statAttempts) statAttempts.innerText = practiceLogs.length;
+    if (statPerfect) statPerfect.innerText = perfectCount;
+    if (statMistakes) statMistakes.innerText = mistakeCount;
+    if (statVocab) statVocab.innerText = practiceVocab.length;
+
+    const container = document.getElementById("profiles-list-container");
+    const countBadge = document.getElementById("profiles-count-badge");
+    if (countBadge) countBadge.innerText = "共 " + list.length + " 个档案";
+    if (!container) return;
+
+    if (list.length <= 1) {
+      container.innerHTML = '<div style="font-size: 0.8rem; color: #94a3b8; text-align: center; padding: 12px; background: white; border: 1px dashed #cbd5e1; border-radius: 8px;">暂无其他学员档案。点击下方可新建档案（适合借给朋友刷题）。</div>';
+      return;
+    }
+
+    let html = "";
+    list.forEach(p => {
+      const isActive = (p.id === activeP.id);
+      let pLogsCount = 0;
+      let pMistakeCount = 0;
+      try {
+        const pLogs = JSON.parse(localStorage.getItem("pte_wfd_logs_" + p.id) || "[]");
+        pLogsCount = pLogs.length;
+        const pStats = JSON.parse(localStorage.getItem("pte_wfd_qstats_" + p.id) || "{}");
+        Object.keys(pStats).forEach(qid => {
+          const s = pStats[qid];
+          if (s && s.failCount > 0) pMistakeCount++;
+        });
+      } catch(e) {}
+
+      html += '<div style="display: flex; justify-content: space-between; align-items: center; background: ' + (isActive ? '#f0fdf4' : 'white') + '; border: 1px solid ' + (isActive ? '#86efac' : '#e2e8f0') + '; border-radius: 8px; padding: 8px 12px; transition: all 0.15s;">' +
+        '<div style="display: flex; align-items: center; gap: 10px; min-width: 0;">' +
+          '<span style="font-size: 1.4rem;">' + p.avatar + '</span>' +
+          '<div style="min-width: 0;">' +
+            '<div style="display: flex; align-items: center; gap: 6px;">' +
+              '<strong style="font-size: 0.88rem; color: #0f172a;">' + p.name + '</strong>' +
+              (isActive ? '<span class="status-tag status-perfect" style="font-size: 0.68rem; padding: 1px 5px;">当前</span>' : '') +
+            '</div>' +
+            '<div style="font-size: 0.72rem; color: #64748b; margin-top: 2px;">已练 ' + pLogsCount + ' 次 · 错题 ' + pMistakeCount + ' 道</div>' +
+          '</div>' +
+        '</div>' +
+        '<div style="display: flex; gap: 6px; align-items: center; flex-shrink: 0;">' +
+          (!isActive ? '<button class="nav-btn" style="padding: 4px 10px; font-size: 0.78rem; background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; font-weight: 600;" onclick="switchProfile(&apos;' + p.id + '&apos;)">切换 ↗</button>' : '<span style="font-size: 0.75rem; color: #16a34a; font-weight: 700;">使用中</span>') +
+          (!isActive ? '<button class="nav-btn" style="padding: 4px 8px; font-size: 0.75rem; color: #dc2626; border-color: #fca5a5;" onclick="deleteProfile(&apos;' + p.id + '&apos;)" title="删除该档案">🗑️</button>' : '') +
+        '</div>' +
+      '</div>';
+    });
+
+    container.innerHTML = html;
+  }
+
+  function updateProfileUI() {
+    const activeP = getActiveProfile();
+
+    const sAvatar = document.getElementById("sidebar-user-avatar");
+    const sName = document.getElementById("sidebar-user-name");
+    const sDesc = document.getElementById("sidebar-user-desc");
+    if (sAvatar) sAvatar.innerText = activeP.avatar;
+    if (sName) sName.innerText = activeP.name;
+    if (sDesc) {
+      let mistakeCount = 0;
+      Object.keys(questionStats).forEach(qid => {
+        const s = questionStats[qid];
+        if (s && s.failCount > 0) mistakeCount++;
+      });
+      sDesc.innerText = "已刷 " + practiceLogs.length + " 题 · " + mistakeCount + " 错题";
+    }
+
+    const hAvatar = document.getElementById("header-user-avatar");
+    const hName = document.getElementById("header-user-name");
+    if (hAvatar) hAvatar.innerText = activeP.avatar;
+    if (hName) hName.innerText = activeP.name;
+  }
+
+  function checkFirstVisit() {
+    const hasVisited = localStorage.getItem("pte_visited_flag");
+    const list = getProfilesList();
+    if (!hasVisited && list.length === 1 && practiceLogs.length === 0 && list[0].name === "新学员") {
+      const modal = document.getElementById("first-visit-modal");
+      if (modal) modal.classList.add("show");
+    }
+    localStorage.setItem("pte_visited_flag", "true");
+  }
+
+  function submitFirstVisitProfile() {
+    const input = document.getElementById("first-visit-name-input");
+    const name = input ? input.value.trim() : "";
+    if (name) {
+      const list = getProfilesList();
+      if (list[0]) {
+        list[0].name = name;
+        list[0].avatar = "🧑‍💻";
+        localStorage.setItem("pte_profiles_list", JSON.stringify(list));
+        updateProfileUI();
+        showToast("🎉 欢迎 " + name + "！您的专属学习档案已建立。");
+      }
+    }
+    closeFirstVisitModal();
+  }
+
+  function closeFirstVisitModal() {
+    const modal = document.getElementById("first-visit-modal");
+    if (modal) modal.classList.remove("show");
+    localStorage.setItem("pte_visited_flag", "true");
+  }
+
+  function handleFirstVisitModalClick(e) {
+    if (e.target && e.target.id === "first-visit-modal") {
+      closeFirstVisitModal();
+    }
   }
 
   function cleanWord(w) {
@@ -2093,10 +2566,7 @@
       });
     }
 
-    try {
-      localStorage.setItem("pte_wfd_logs", JSON.stringify(practiceLogs));
-      localStorage.setItem("pte_wfd_qstats", JSON.stringify(questionStats));
-    } catch(e) {}
+    saveActiveUserData();
 
     updateStats();
     updateCurrentQuestionBadge();
@@ -2148,6 +2618,8 @@
     if (countPendEl) countPendEl.innerText = pendingVocabCount;
     const countMastEl = document.getElementById("count-vocab-mastered");
     if (countMastEl) countMastEl.innerText = masteredVocabCount;
+
+    updateProfileUI();
   }
 
   function updateCurrentQuestionBadge() {
@@ -6123,6 +6595,8 @@
     updateSyncUI();
     updateBankBannerInfo();
     updateSidebarCountdown();
+    updateProfileUI();
+    checkFirstVisit();
     initModuleRouting();
 
     // 网页加载时若开启了自动同步，静默拉取云端最新记录
@@ -6533,6 +7007,148 @@
         <button type="button" class="nav-btn" onclick="closeExamSettingsModal()" style="padding: 7px 16px;">取消</button>
         <button type="button" class="btn-submit" onclick="saveExamSettings()" style="padding: 7px 20px; background: #ea580c;">💾 保存考期设置</button>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- 多学员专属学习档案管理 MODAL -->
+<div id="profile-modal" class="modal-overlay" onclick="handleProfileModalClick(event)">
+  <div class="modal-card" style="max-width: 600px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid var(--border); padding-bottom: 12px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.5rem;">👤</span>
+        <div>
+          <h2 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin: 0;">学员学习档案管理中心</h2>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">多用户独立存档 · 答题历史/错题本/考期完全隔离 · 绝不串联</p>
+        </div>
+      </div>
+      <button class="nav-btn" onclick="closeProfileModal()" style="font-size: 1.1rem; line-height: 1; padding: 4px 10px; cursor: pointer; border-radius: 6px;">✕</button>
+    </div>
+
+    <div class="modal-body" style="padding: 4px 2px; max-height: calc(85vh - 120px); overflow-y: auto; flex: 1 1 auto; min-height: 0;">
+      
+      <!-- 当前活跃档案卡片 -->
+      <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 14px 16px; margin-bottom: 16px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 2rem;" id="active-profile-card-avatar">🧑‍💻</span>
+            <div>
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <span style="font-weight: 800; font-size: 1.05rem; color: #0f172a;" id="active-profile-card-name">Xudong Zhu</span>
+                <span class="status-tag status-perfect" style="font-size: 0.72rem; padding: 2px 6px;">● 当前使用中</span>
+              </div>
+              <div style="font-size: 0.78rem; color: #475569; margin-top: 2px;" id="active-profile-card-meta">目标: 57+ · 考期: 2026-10-20</div>
+            </div>
+          </div>
+          <button class="nav-btn" onclick="toggleEditCurrentProfile()" style="font-size: 0.8rem; padding: 5px 10px; background: white; border-color: #86efac; color: #15803d; font-weight: 600;">
+            ✏️ 修改当前档案资料
+          </button>
+        </div>
+
+        <!-- 当前档案数据统计指标 -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 10px; background: white; border: 1px solid #dcfce7; border-radius: 8px; padding: 8px 10px; text-align: center;">
+          <div>
+            <div style="font-size: 0.72rem; color: #64748b;">答题总计</div>
+            <div style="font-size: 0.95rem; font-weight: 800; color: #0f172a;" id="active-card-stat-attempts">0</div>
+          </div>
+          <div>
+            <div style="font-size: 0.72rem; color: #64748b;">满分次数</div>
+            <div style="font-size: 0.95rem; font-weight: 800; color: #16a34a;" id="active-card-stat-perfect">0</div>
+          </div>
+          <div>
+            <div style="font-size: 0.72rem; color: #64748b;">错题待攻克</div>
+            <div style="font-size: 0.95rem; font-weight: 800; color: #dc2626;" id="active-card-stat-mistakes">0</div>
+          </div>
+          <div>
+            <div style="font-size: 0.72rem; color: #64748b;">生词收藏</div>
+            <div style="font-size: 0.95rem; font-weight: 800; color: #7c3aed;" id="active-card-stat-vocab">0</div>
+          </div>
+        </div>
+
+        <!-- Inline Edit Form (Hidden by default) -->
+        <div id="active-profile-edit-box" style="display: none; margin-top: 12px; padding-top: 12px; border-top: 1px dashed #bbf7d0;">
+          <div style="font-weight: 700; font-size: 0.85rem; color: #166534; margin-bottom: 6px;">编辑档案基本信息:</div>
+          <div style="display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap;">
+            <input type="text" id="edit-profile-name-input" placeholder="输入学员姓名" style="flex: 1; padding: 6px 10px; font-size: 0.85rem; border: 1px solid #cbd5e1; border-radius: 6px;">
+            <select id="edit-profile-avatar-select" style="padding: 6px 10px; font-size: 0.85rem; border: 1px solid #cbd5e1; border-radius: 6px;">
+              <option value="🧑‍💻">🧑‍💻 极客</option>
+              <option value="🎓">🎓 学霸</option>
+              <option value="🌟">🌟 闪耀</option>
+              <option value="🚀">🚀 冲刺</option>
+              <option value="🦁">🦁 雄狮</option>
+              <option value="🦊">🦊 灵狐</option>
+              <option value="🐱">🐱 萌猫</option>
+              <option value="🎯">🎯 绝杀</option>
+            </select>
+          </div>
+          <div style="display: flex; justify-content: flex-end; gap: 6px;">
+            <button class="nav-btn" style="padding: 4px 10px; font-size: 0.78rem;" onclick="toggleEditCurrentProfile()">取消</button>
+            <button class="btn-submit" style="padding: 4px 12px; font-size: 0.78rem; background: #16a34a;" onclick="saveCurrentProfileEdit()">保存修改</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 已保存的其他学员档案列表 -->
+      <div style="margin-bottom: 16px;">
+        <div style="font-weight: 700; font-size: 0.9rem; color: #1e293b; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+          <span>📋 已有学员档案列表:</span>
+          <span style="font-size: 0.75rem; color: #64748b;" id="profiles-count-badge">共 1 个档案</span>
+        </div>
+        <div id="profiles-list-container" style="display: flex; flex-direction: column; gap: 8px;">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+      <!-- 新建学员专属档案 -->
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; margin-bottom: 14px;">
+        <div style="font-weight: 700; font-size: 0.88rem; color: #1e293b; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+          <span>➕ 新建学员专属档案</span>
+          <span style="font-size: 0.75rem; font-weight: normal; color: #64748b;">(借给朋友/多用户使用)</span>
+        </div>
+        <p style="font-size: 0.78rem; color: #64748b; margin-bottom: 10px; line-height: 1.45;">
+          为朋友或自己建立全新独立档案。新档案的错题本与答题进度完全空白，绝不会与现有档案串联。
+        </p>
+        <div style="display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap;">
+          <input type="text" id="new-profile-name-input" placeholder="输入新学员姓名/昵称 (如: 小明 / Vivian)" style="flex: 1; min-width: 160px; padding: 7px 10px; font-size: 0.85rem; border: 1px solid #cbd5e1; border-radius: 6px;">
+          <select id="new-profile-avatar-select" style="padding: 7px 10px; font-size: 0.85rem; border: 1px solid #cbd5e1; border-radius: 6px;">
+            <option value="🎓">🎓 学霸</option>
+            <option value="🧑‍💻">🧑‍💻 极客</option>
+            <option value="🌟">🌟 闪耀</option>
+            <option value="🚀">🚀 冲刺</option>
+            <option value="🦁">🦁 雄狮</option>
+            <option value="🦊">🦊 灵狐</option>
+            <option value="🐱">🐱 萌猫</option>
+            <option value="🎯">🎯 绝杀</option>
+          </select>
+          <button class="btn-submit" onclick="createNewProfile()" style="padding: 7px 16px; font-size: 0.85rem; background: #2563eb; white-space: nowrap;">
+            ➕ 创建并切换
+          </button>
+        </div>
+      </div>
+
+      <!-- 安全与隐私说明 -->
+      <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 10px 12px; font-size: 0.78rem; color: #1e40af; line-height: 1.5;">
+        🔒 <strong>数据隔离保障</strong>：所有档案的数据均独立保存在本地专属分区内。切换档案后，系统将自动隔离加载该学员的做题流水、错题统计、收藏生词与考期，绝不会发生数据串联或覆盖。
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- 新访客欢迎与专属档案创建 MODAL (仅首次访问弹出) -->
+<div id="first-visit-modal" class="modal-overlay" onclick="handleFirstVisitModalClick(event)">
+  <div class="modal-card" style="max-width: 460px; text-align: center;">
+    <div style="font-size: 2.4rem; margin-bottom: 8px;">👋</div>
+    <h2 style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin-bottom: 6px;">欢迎使用 PTE 智能听写备考助手！</h2>
+    <p style="font-size: 0.84rem; color: #475569; line-height: 1.5; margin-bottom: 16px;">
+      为了确保您的刷题记录、错题本与他人完全隔离不串联，请设置您的专属学员昵称：
+    </p>
+    <div style="margin-bottom: 16px;">
+      <input type="text" id="first-visit-name-input" placeholder="输入您的姓名或昵称 (如: Alex / Vivian)" style="width: 100%; box-sizing: border-box; padding: 10px 14px; font-size: 0.95rem; border: 2px solid #3b82f6; border-radius: 8px; text-align: center; font-weight: 600;">
+    </div>
+    <div style="display: flex; gap: 8px; justify-content: center;">
+      <button class="nav-btn" onclick="closeFirstVisitModal()" style="padding: 8px 16px; font-size: 0.85rem;">使用默认档案</button>
+      <button class="btn-submit" onclick="submitFirstVisitProfile()" style="padding: 8px 24px; font-size: 0.9rem; background: #2563eb;">🚀 开始专属备考</button>
     </div>
   </div>
 </div>
