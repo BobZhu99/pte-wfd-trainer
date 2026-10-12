@@ -2067,7 +2067,7 @@
       avatar: avatar,
       createdAt: new Date().toISOString(),
       examDate: "2026-10-20",
-      examTarget: "目标：总分 57+ · 各项 50+"
+      examTarget: "目标：485工签最新标准 (总分57 · 听43/读48/说42/写51 · 1年有效)"
     };
 
     list.push(newProfile);
@@ -2077,6 +2077,8 @@
     localStorage.setItem("pte_wfd_logs_" + newId, "[]");
     localStorage.setItem("pte_wfd_qstats_" + newId, "{}");
     localStorage.setItem("pte_wfd_vocab_" + newId, "[]");
+    localStorage.setItem("pte_exam_date_" + newId, "2026-10-20");
+    localStorage.setItem("pte_exam_target_" + newId, "目标：485工签最新标准 (总分57 · 听43/读48/说42/写51 · 1年有效)");
 
     if (nameInput) nameInput.value = "";
     switchProfile(newId);
@@ -2101,6 +2103,8 @@
     localStorage.removeItem("pte_wfd_logs_" + pid);
     localStorage.removeItem("pte_wfd_qstats_" + pid);
     localStorage.removeItem("pte_wfd_vocab_" + pid);
+    localStorage.removeItem("pte_exam_date_" + pid);
+    localStorage.removeItem("pte_exam_target_" + pid);
 
     showToast("🗑️ 已删除学员档案：" + targetName);
     renderProfilesListModal();
@@ -3542,11 +3546,17 @@
   }
 
   function getExamDate() {
-    return localStorage.getItem("pte_exam_date") || "2026-10-20";
+    const pid = getActiveProfileId();
+    const list = getProfilesList();
+    const p = list.find(item => item.id === pid);
+    return (p && p.examDate) || localStorage.getItem("pte_exam_date_" + pid) || localStorage.getItem("pte_exam_date") || "2026-10-20";
   }
 
   function getExamTarget() {
-    return localStorage.getItem("pte_exam_target") || "目标：总分 57+ · 各项 50+";
+    const pid = getActiveProfileId();
+    const list = getProfilesList();
+    const p = list.find(item => item.id === pid);
+    return (p && p.examTarget) || localStorage.getItem("pte_exam_target_" + pid) || localStorage.getItem("pte_exam_target") || "目标：485工签最新标准 (总分57 · 听43/读48/说42/写51 · 1年有效)";
   }
 
   function calcExamCountdownDays(dateStr) {
@@ -3606,12 +3616,59 @@
     openExamSettingsModal();
   }
 
+  function selectScoreTier(tier) {
+    const input = document.getElementById("input-exam-target");
+    if (!input) return;
+
+    document.querySelectorAll(".tier-card").forEach(c => {
+      c.style.outline = "none";
+      c.style.boxShadow = "none";
+    });
+    const activeCard = document.getElementById("tier-card-" + tier);
+    if (activeCard) {
+      activeCard.style.outline = "2px solid #2563eb";
+      activeCard.style.boxShadow = "0 0 0 3px rgba(37, 99, 235, 0.2)";
+    }
+
+    if (tier === "485") {
+      input.value = "目标：485工签最新标准 (总分57 · 听43/读48/说42/写51 · 1年有效)";
+    } else if (tier === "competent") {
+      input.value = "目标：技术移民 +0分 门槛 (4单项全部 ≥ 50 · NT州担底线)";
+    } else if (tier === "proficient") {
+      input.value = "目标：技术移民 +10分 黄金档 (4单项全部 ≥ 65 · 七炸冲刺)";
+    } else if (tier === "superior") {
+      input.value = "目标：技术移民 +20分 满分档 (4单项全部 ≥ 79 · 八炸顶峰)";
+    }
+  }
+
   function openExamSettingsModal() {
     const dateInput = document.getElementById("input-exam-date");
     const targetInput = document.getElementById("input-exam-target");
-    if (dateInput) dateInput.value = getExamDate();
-    if (targetInput) targetInput.value = getExamTarget();
+    const currDate = getExamDate();
+    const currTarget = getExamTarget();
+    if (dateInput) dateInput.value = currDate;
+    if (targetInput) targetInput.value = currTarget;
     previewCountdownFromInput();
+
+    // 自动高亮匹配的卡片
+    document.querySelectorAll(".tier-card").forEach(c => {
+      c.style.outline = "none";
+      c.style.boxShadow = "none";
+    });
+    let matchTier = "";
+    if (currTarget.includes("485") || currTarget.includes("57")) matchTier = "485";
+    else if (currTarget.includes("79") || currTarget.includes("八炸") || currTarget.includes("+20")) matchTier = "superior";
+    else if (currTarget.includes("65") || currTarget.includes("七炸") || currTarget.includes("+10")) matchTier = "proficient";
+    else if (currTarget.includes("50") || currTarget.includes("Competent") || currTarget.includes("+0")) matchTier = "competent";
+    
+    if (matchTier) {
+      const card = document.getElementById("tier-card-" + matchTier);
+      if (card) {
+        card.style.outline = "2px solid #2563eb";
+        card.style.boxShadow = "0 0 0 3px rgba(37, 99, 235, 0.2)";
+      }
+    }
+
     const modal = document.getElementById("exam-settings-modal");
     if (modal) modal.classList.add("show");
   }
@@ -3671,17 +3728,36 @@
   function saveExamSettings() {
     const dateInput = document.getElementById("input-exam-date");
     const targetInput = document.getElementById("input-exam-target");
-    if (dateInput && dateInput.value) {
-      localStorage.setItem("pte_exam_date", dateInput.value);
+    const dateVal = dateInput ? dateInput.value : "";
+    const targetVal = targetInput ? targetInput.value.trim() : "";
+
+    const pid = getActiveProfileId();
+    const list = getProfilesList();
+    const p = list.find(item => item.id === pid);
+    if (p) {
+      if (dateVal) p.examDate = dateVal;
+      if (targetVal) p.examTarget = targetVal;
+      try {
+        localStorage.setItem("pte_profiles_list", JSON.stringify(list));
+      } catch(e) {}
     }
-    if (targetInput && targetInput.value.trim()) {
-      localStorage.setItem("pte_exam_target", targetInput.value.trim());
+
+    if (dateVal) {
+      localStorage.setItem("pte_exam_date_" + pid, dateVal);
+      localStorage.setItem("pte_exam_date", dateVal);
     }
+    if (targetVal) {
+      localStorage.setItem("pte_exam_target_" + pid, targetVal);
+      localStorage.setItem("pte_exam_target", targetVal);
+    }
+
     updateSidebarCountdown();
+    updateProfileUI();
     closeExamSettingsModal();
     if (localStorage.getItem("pte_gist_token") && localStorage.getItem("pte_gist_id")) {
       pushToGist(true);
     }
+    showToast("💾 考期与目标已成功保存至当前学员档案！");
   }
 
   window.addEventListener("hashchange", () => {
@@ -6970,13 +7046,13 @@
 
 <!-- 考期与冲刺目标自定义设置 MODAL -->
 <div id="exam-settings-modal" class="modal-overlay" onclick="handleExamSettingsModalClick(event)">
-  <div class="modal-card" style="max-width: 540px;">
+  <div class="modal-card" style="max-width: 680px;">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid var(--border); padding-bottom: 12px;">
       <div style="display: flex; align-items: center; gap: 8px;">
         <span style="font-size: 1.5rem;">📅</span>
         <div>
           <h2 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin: 0;">自定义考期与目标设置</h2>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">实时计算考前冲刺天数 · 支持电脑/手机多端云同步</p>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">实时计算考前冲刺天数 · 绑定学员个人档案 · 485与移民官方要求对照</p>
         </div>
       </div>
       <button class="nav-btn" onclick="closeExamSettingsModal()" style="font-size: 1.1rem; line-height: 1; padding: 4px 10px; cursor: pointer; border-radius: 6px;">✕</button>
@@ -6999,18 +7075,128 @@
         </div>
       </div>
 
-      <div style="margin-bottom: 18px;">
+      <div style="margin-bottom: 16px;">
         <label style="display: block; font-weight: 700; font-size: 0.88rem; color: #1e293b; margin-bottom: 6px;">
-          🏆 冲刺目标与备注 (Target):
+          🏛️ 澳洲内政部 (DHA) 官方工签与移民语言标准对照 (点击卡片一键选定):
         </label>
-        <input type="text" id="input-exam-target" placeholder="例如：目标：总分 57+ · 各项 50+" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box;" value="目标：总分 57+ · 各项 50+">
-        <div style="display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap;">
-          <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px; background: #f0fdf4; color: #15803d; border-color: #bbf7d0;" onclick="setExamTargetQuick('目标：总分 57+ · 各项 50+')">485工签 (总分57·各项50)</button>
-          <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px;" onclick="setExamTargetQuick('目标：4个单项稳过 50+')">NT州担 Competent (各项50+)</button>
-          <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px;" onclick="setExamTargetQuick('目标：七炸 65+ · 稳拿移民分')">七炸 65+ 冲刺</button>
-          <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px;" onclick="setExamTargetQuick('目标：八炸 79+ · 全科通关')">八炸 79+ 顶峰</button>
+        
+        <!-- 4 档官方标准卡片 -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 8px; margin-bottom: 12px;">
+          <!-- TIER 1: 485 毕业生工签 -->
+          <div class="tier-card" onclick="selectScoreTier('485')" id="tier-card-485" style="border: 1px solid #fed7aa; background: #fff7ed; border-radius: 8px; padding: 10px 12px; cursor: pointer; transition: all 0.15s;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <strong style="color: #c2410c; font-size: 0.86rem;">🎓 485 毕业生工签</strong>
+              <span class="badge" style="background: #ea580c; color: white; border: none; font-size: 0.68rem; padding: 1px 6px;">LIN 24/021 新政</span>
+            </div>
+            <div style="font-weight: 800; font-size: 0.95rem; color: #9a3412;">总分 57 · 单项 听43/读48/说42/写51</div>
+            <div style="font-size: 0.72rem; color: #475569; margin-top: 4px; line-height: 1.4;">
+              对应雅思 6.5(5.5) · <strong>⚠️ 必须在递签前 1 年内考出</strong> (2024新政强制，原3年已废止)
+            </div>
+          </div>
+
+          <!-- TIER 2: 技术移民 +0分 Competent -->
+          <div class="tier-card" onclick="selectScoreTier('competent')" id="tier-card-competent" style="border: 1px solid #bfdbfe; background: #eff6ff; border-radius: 8px; padding: 10px 12px; cursor: pointer; transition: all 0.15s;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <strong style="color: #1d4ed8; font-size: 0.86rem;">🥉 技术移民 +0分 门槛</strong>
+              <span class="badge" style="background: #2563eb; color: white; border: none; font-size: 0.68rem; padding: 1px 6px;">EOI入池 / NT州担</span>
+            </div>
+            <div style="font-weight: 800; font-size: 0.95rem; color: #1e40af;">4个单项全部 ≥ 50分 (Competent)</div>
+            <div style="font-size: 0.72rem; color: #475569; margin-top: 4px; line-height: 1.4;">
+              对应雅思4个6.0 · <strong>移民加 0 分</strong> (EOI入池与NT州担底线，只看单项不看总分 · 3年有效)
+            </div>
+          </div>
+
+          <!-- TIER 3: 技术移民 +10分 Proficient -->
+          <div class="tier-card" onclick="selectScoreTier('proficient')" id="tier-card-proficient" style="border: 1px solid #bbf7d0; background: #f0fdf4; border-radius: 8px; padding: 10px 12px; cursor: pointer; transition: all 0.15s;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <strong style="color: #15803d; font-size: 0.86rem;">🥈 技术移民 +10分 黄金档</strong>
+              <span class="badge" style="background: #16a34a; color: white; border: none; font-size: 0.68rem; padding: 1px 6px;">移民直接 +10 分</span>
+            </div>
+            <div style="font-weight: 800; font-size: 0.95rem; color: #166534;">4个单项全部 ≥ 65分 (七炸)</div>
+            <div style="font-size: 0.72rem; color: #475569; margin-top: 4px; line-height: 1.4;">
+              对应雅思4个7.0 · <strong>打分表直接 +10 分</strong> (190/491 州担保核心获邀档 · 3年有效)
+            </div>
+          </div>
+
+          <!-- TIER 4: 技术移民 +20分 Superior -->
+          <div class="tier-card" onclick="selectScoreTier('superior')" id="tier-card-superior" style="border: 1px solid #ddd6fe; background: #faf5ff; border-radius: 8px; padding: 10px 12px; cursor: pointer; transition: all 0.15s;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <strong style="color: #6b21a8; font-size: 0.86rem;">🥇 技术移民 +20分 满分档</strong>
+              <span class="badge" style="background: #7c3aed; color: white; border: none; font-size: 0.68rem; padding: 1px 6px;">移民顶峰 +20 分</span>
+            </div>
+            <div style="font-weight: 800; font-size: 0.95rem; color: #581c87;">4个单项全部 ≥ 79分 (八炸)</div>
+            <div style="font-size: 0.72rem; color: #475569; margin-top: 4px; line-height: 1.4;">
+              对应雅思4个8.0 · <strong>打分表拿满最高 +20 分</strong> (189独立技术与极卷职业顶峰档 · 3年有效)
+            </div>
+          </div>
         </div>
+
+        <label style="display: block; font-weight: 700; font-size: 0.84rem; color: #1e293b; margin-bottom: 4px;">
+          🏆 当前档案设定的冲刺目标 (Target):
+        </label>
+        <input type="text" id="input-exam-target" placeholder="例如：目标：485工签最新标准 (总分57 · 听43/读48/说42/写51 · 1年有效)" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box;" value="目标：485工签最新标准 (总分57 · 听43/读48/说42/写51 · 1年有效)">
       </div>
+
+      <!-- 澳洲移民法 (LIN 24/021 & Schedule 6D) 官方对比细则速查表 (折叠式) -->
+      <details style="margin-bottom: 16px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 8px 12px; font-size: 0.8rem; color: #334155;">
+        <summary style="font-weight: 700; color: #1e293b; cursor: pointer; user-select: none;">
+          📖 点击展开：澳大利亚移民局 (DHA) 官方语言打分法条权威对比表
+        </summary>
+        <div style="margin-top: 8px; overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.76rem; text-align: left;">
+            <thead>
+              <tr style="background: #e2e8f0; color: #0f172a;">
+                <th style="padding: 6px 8px; border: 1px solid #cbd5e1;">签证/类别</th>
+                <th style="padding: 6px 8px; border: 1px solid #cbd5e1;">技术移民加分</th>
+                <th style="padding: 6px 8px; border: 1px solid #cbd5e1;">PTE Academic 官方要求</th>
+                <th style="padding: 6px 8px; border: 1px solid #cbd5e1;">雅思对应</th>
+                <th style="padding: 6px 8px; border: 1px solid #cbd5e1;">有效期</th>
+                <th style="padding: 6px 8px; border: 1px solid #cbd5e1;">法条与适用场景</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0; font-weight: 700; color: #c2410c;">485 毕业生工签</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0;">无 (签证门槛)</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0;"><strong>总分 57</strong> (听43, 读48, 说42, 写51)</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0;">6.5 (单项5.5)</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0; color: #dc2626; font-weight: 700;">1 年内</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0;">LIN 24/021 法条；毕业生工签法定递交门槛</td>
+              </tr>
+              <tr style="background: #f8fafc;">
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0; font-weight: 700; color: #1d4ed8;">Competent English</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0; font-weight: 700;">+0 分 (及格)</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0;"><strong>4 单项全部 ≥ 50</strong> (只看单项)</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0;">4 个 6.0</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0;">3 年内</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0;">技术移民 EOI 入池底线；NT 北领地州担保门槛</td>
+              </tr>
+              <tr>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0; font-weight: 700; color: #15803d;">Proficient English</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0; font-weight: 700; color: #16a34a;">+10 分</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0;"><strong>4 单项全部 ≥ 65</strong> (七炸)</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0;">4 个 7.0</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0;">3 年内</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0;">190 州担保 / 491 偏远地区核心获邀加分</td>
+              </tr>
+              <tr style="background: #f8fafc;">
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0; font-weight: 700; color: #6b21a8;">Superior English</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0; font-weight: 700; color: #7c3aed;">+20 分 (满分)</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0;"><strong>4 单项全部 ≥ 79</strong> (八炸)</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0;">4 个 8.0</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0;">3 年内</td>
+                <td style="padding: 6px 8px; border: 1px solid #e2e8f0;">189 独立技术移民 / 极卷职业最高加分</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="margin-top: 8px; line-height: 1.5; color: #64748b; font-size: 0.73rem;">
+            ⚠️ <strong>避坑关键法则</strong>：<br>
+            1. <strong>485 成绩单有效期只有 1 年</strong>（自递签日起倒推必须在 1 年内，原先的 3 年新政已废除）；<br>
+            2. <strong>技术移民加分只看 4 个单项，绝不看总分</strong>！总分考 70 分但口语只有 49 分，移民局判定为“不合格”，既不能加分也不能递交 EOI；<br>
+            3. <strong>保底建议</strong>：总方针以 485 工签总分 57+（单项最低 43/48/42/51）为基准，同时争取 4 单项全部突破 50+，一次性拿下 485 工签 + NT 州担保入池双保险！
+          </div>
+        </div>
+      </details>
 
       <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 10px 12px; font-size: 0.78rem; color: #1e40af; line-height: 1.5; margin-bottom: 16px;">
         💡 <strong>多设备同步说明</strong>：设置将自动保存在当前浏览器本地中。若您已绑定「跨设备云同步」，保存后将随答题进度自动同步到手机/平板。
