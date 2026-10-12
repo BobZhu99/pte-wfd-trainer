@@ -469,6 +469,14 @@
     border-color: #2563eb !important;
     box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
   }
+  .preset-pill-btn.active-preset {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+    color: #ffffff !important;
+    border-color: #1d4ed8 !important;
+    font-weight: 800 !important;
+    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.35) !important;
+    transform: translateY(-1px);
+  }
   .modal-filter-pill {
     background: #f1f5f9;
     color: #475569;
@@ -2075,23 +2083,26 @@
         </div>
 
         <!-- 科学预设方案一键套用与自定义入口 -->
-        <div class="planner-preset-bar">
+        <div class="planner-preset-bar" id="board-preset-bar">
           <button class="preset-pill-btn" onclick="openPlannerSettingsModal()" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; box-shadow: 0 1px 4px rgba(217,119,6,0.15);">
             ⚙️ 自定义设置各科目标 (点此设置)
           </button>
           <span style="font-size: 0.82rem; font-weight: 700; color: #64748b; margin-left: 4px;">
             或套用推荐预设:
           </span>
-          <button class="preset-pill-btn primary" onclick="applyPresetPlan('competent')" title="基于 LIN 25/016 Competent English (口语 54+) 科学规划">
+          <button type="button" class="preset-pill-btn" id="btn-board-preset-competent" onclick="applyPresetPlan('competent')" title="基于 LIN 25/016 Competent English (口语 54+) 科学规划">
             🎯 Competent 54+ 冲刺 (推荐)
           </button>
-          <button class="preset-pill-btn" onclick="applyPresetPlan('485')" title="针对 485 工签 55 分保底">
+          <button type="button" class="preset-pill-btn" id="btn-board-preset-485" onclick="applyPresetPlan('485')" title="针对 485 工签 55 分保底">
             ⚡ 485 工签保底 (55+)
           </button>
-          <button class="preset-pill-btn" onclick="applyPresetPlan('proficient')" title="针对技术移民七炸 65+">
+          <button type="button" class="preset-pill-btn" id="btn-board-preset-proficient" onclick="applyPresetPlan('proficient')" title="针对技术移民七炸 65+">
             🔥 七炸高分挑战 (65+)
           </button>
-          <button class="preset-pill-btn" onclick="applyPresetPlan('reset')" style="color: #dc2626; border-color: #fca5a5;">
+          <button type="button" class="preset-pill-btn" id="btn-board-preset-all22" onclick="applyPresetPlan('all22')" title="开启全部 22 题型打卡">
+            ✨ 开启全部 22 题型
+          </button>
+          <button type="button" class="preset-pill-btn" id="btn-board-preset-reset" onclick="applyPresetPlan('reset')" style="color: #dc2626; border-color: #fca5a5;">
             🔄 今日数据归零
           </button>
         </div>
@@ -4381,6 +4392,44 @@
   let modalFilter = "all";
   let modalSearchQuery = "";
 
+  function matchesPreset(goals, presetKey) {
+    const preset = PLANNER_PRESETS[presetKey];
+    if (!preset) return false;
+    const presetKeys = Object.keys(preset);
+    if (presetKeys.length === 0) {
+      let nonZero = 0;
+      ALL_PLANNER_TASK_DEFS.forEach(t => {
+        if ((goals[t.key] || 0) > 0) nonZero++;
+      });
+      return nonZero === 0;
+    }
+    for (let i = 0; i < ALL_PLANNER_TASK_DEFS.length; i++) {
+      const k = ALL_PLANNER_TASK_DEFS[i].key;
+      const expected = preset[k] || 0;
+      const actual = goals[k] || 0;
+      if (expected !== actual) return false;
+    }
+    return true;
+  }
+
+  function updatePresetButtonHighlights(goals, targetPrefix) {
+    const presetKeys = ["competent", "485", "proficient", "all22"];
+    let matchedKey = null;
+    for (let i = 0; i < presetKeys.length; i++) {
+      if (matchesPreset(goals, presetKeys[i])) {
+        matchedKey = presetKeys[i];
+        break;
+      }
+    }
+    presetKeys.forEach(k => {
+      const btn = document.getElementById("btn-" + targetPrefix + "-preset-" + k);
+      if (btn) {
+        btn.classList.toggle("active-preset", k === matchedKey);
+        btn.classList.remove("primary");
+      }
+    });
+  }
+
   function openPlannerSettingsModal() {
     modalTempGoals = Object.assign({}, getPlannerGoals());
     modalFilter = "all";
@@ -4388,6 +4437,7 @@
     const searchInput = document.getElementById("modal-task-search-input");
     if (searchInput) searchInput.value = "";
     setModalFilter("all");
+    updatePresetButtonHighlights(modalTempGoals, "modal");
     const modal = document.getElementById("planner-settings-modal");
     if (modal) modal.classList.add("show");
   }
@@ -4425,8 +4475,13 @@
     } else {
       modalTempGoals = Object.assign({}, preset);
     }
+    updatePresetButtonHighlights(modalTempGoals, "modal");
     renderModalTasksList();
-    showToast("⚡ 已载入方案数值，点击下方「保存」即可生效");
+    const planName = presetKey === "competent" ? "Competent 54+ (8核心)" :
+                     (presetKey === "485" ? "485 工签保底 (7项)" :
+                      (presetKey === "proficient" ? "七炸 65+ 挑战 (12项)" : 
+                       (presetKey === "all22" ? "全部 22 题型" : "全部清零")));
+    showToast("⚡ 已载入方案「" + planName + "」，点击下方「保存」即可生效");
   }
 
   function renderModalTasksList() {
@@ -5050,6 +5105,7 @@
       container.innerHTML = cardsHtml;
     }
 
+    updatePresetButtonHighlights(goals, "board");
     renderPlannerHistoryList();
     renderHomeCheckinWidget();
   }
@@ -8637,12 +8693,12 @@
       <!-- 快捷预设一键填入 -->
       <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 14px; margin-bottom: 12px;">
         <div style="font-size: 0.78rem; font-weight: 700; color: #475569; margin-bottom: 6px;">⚡ 一键载入科学规划 (可在其基础上任意增删修改):</div>
-        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-          <button type="button" class="preset-pill-btn primary" onclick="modalLoadPreset('competent')">🎯 Competent 54+ (推荐8核心)</button>
-          <button type="button" class="preset-pill-btn" onclick="modalLoadPreset('485')">⚡ 485 工签保底 (7项)</button>
-          <button type="button" class="preset-pill-btn" onclick="modalLoadPreset('proficient')">🔥 七炸 65+ 挑战 (12项)</button>
-          <button type="button" class="preset-pill-btn" onclick="modalLoadPreset('all22')">✨ 开启全部 22 题型</button>
-          <button type="button" class="preset-pill-btn" onclick="modalLoadPreset('reset')" style="color: #dc2626; border-color: #fca5a5;">🔄 全部清零</button>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap;" id="modal-preset-bar">
+          <button type="button" class="preset-pill-btn" id="btn-modal-preset-competent" onclick="modalLoadPreset('competent')">🎯 Competent 54+ (推荐8核心)</button>
+          <button type="button" class="preset-pill-btn" id="btn-modal-preset-485" onclick="modalLoadPreset('485')">⚡ 485 工签保底 (7项)</button>
+          <button type="button" class="preset-pill-btn" id="btn-modal-preset-proficient" onclick="modalLoadPreset('proficient')">🔥 七炸 65+ 挑战 (12项)</button>
+          <button type="button" class="preset-pill-btn" id="btn-modal-preset-all22" onclick="modalLoadPreset('all22')">✨ 开启全部 22 题型</button>
+          <button type="button" class="preset-pill-btn" id="btn-modal-preset-reset" onclick="modalLoadPreset('reset')" style="color: #dc2626; border-color: #fca5a5;">🔄 全部清零</button>
         </div>
       </div>
 
