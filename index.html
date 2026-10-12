@@ -190,6 +190,13 @@
     border-radius: 10px;
     padding: 10px 12px;
     margin-top: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .sidebar-exam-info:hover {
+    background: #ffedd5;
+    border-color: #fb923c;
+    box-shadow: 0 2px 6px rgba(234, 88, 12, 0.15);
   }
 
   .app-main-content {
@@ -983,10 +990,13 @@
         <span>🔄 题库管理与更新</span>
       </button>
       
-      <div class="sidebar-exam-info">
-        <div style="font-weight: 700; color: #1e293b; font-size: 0.78rem;">📅 10.20 考期倒计时</div>
+      <div class="sidebar-exam-info" onclick="openExamDateModal()" title="点击自定义设置考期与冲刺目标">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div style="font-weight: 700; color: #1e293b; font-size: 0.78rem;" id="sidebar-exam-title">📅 考期倒计时</div>
+          <span style="font-size: 0.7rem; color: #ea580c; font-weight: 700;">⚙️ 设置</span>
+        </div>
         <div style="color: #ea580c; font-weight: 800; font-size: 0.95rem; margin-top: 2px;" id="sidebar-countdown-days">计算中...</div>
-        <div style="font-size: 0.72rem; color: #64748b; margin-top: 2px;">目标：总分 57+ · 各项 50+</div>
+        <div style="font-size: 0.72rem; color: #64748b; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="sidebar-exam-target-desc">目标：总分 57+ · 各项 50+</div>
       </div>
     </div>
   </aside>
@@ -1002,11 +1012,8 @@
             <span style="font-size: 0.82rem; color: var(--text-muted);" id="header-bank-desc">🍉 大西瓜 (周二真题预测 · 106新题季) + 🔥 萤火虫 (极限预测) 双向 1:1 同步 · 33组机经变体试词已注入</span>
           </div>
           <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-            <button class="nav-btn" onclick="switchAppModule('karaoke')" style="padding: 7px 13px; background: linear-gradient(135deg, #4f46e5, #7c3aed); color: white; border: none; font-weight: 600; font-size: 0.84rem; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(79, 70, 229, 0.25);">
-              🎤 口语卡拉OK (RA/RS/DI) ↗
-            </button>
-            <button class="nav-btn" onclick="switchAppModule('overview')" style="padding: 7px 13px; background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; font-weight: 700; font-size: 0.84rem; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
-              📊 PTE考试总览 ↗
+            <button class="nav-btn" id="btn-header-countdown" onclick="openExamDateModal()" style="padding: 7px 13px; background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; font-weight: 700; font-size: 0.84rem; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;" title="点击自定义设置考期与目标">
+              📅 <span id="header-countdown-text">考期倒计时: 计算中...</span> <span style="font-size: 0.75rem; color: #ea580c;">⚙️</span>
             </button>
             <button class="nav-btn" id="btn-open-sync" onclick="openSyncModal()" style="padding: 7px 13px; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; font-weight: 600; font-size: 0.84rem; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;" title="管理手机/电脑多设备跨端数据同步与备份">
               ☁️ 跨设备云同步 <span class="sync-dot" id="sync-status-indicator"></span>
@@ -1100,7 +1107,6 @@
     <button class="tab-btn" id="btn-tab-history" onclick="switchTab('history')">📜 答题历史档案明细</button>
     <button class="tab-btn" id="btn-tab-free" onclick="switchTab('free')">⚡ 自由输入秒判</button>
     <button class="tab-btn" id="btn-tab-list" onclick="switchTab('list')">📚 <span id="tab-list-total-count">141</span> 题库列表</button>
-    <button class="tab-btn" id="btn-tab-score-explorer" onclick="switchTab('score-explorer')" style="color: #047857; font-weight: 700;">📊 全题型权重与考场界面</button>
     <button class="tab-btn" id="btn-tab-sync" onclick="openSyncModal()" style="color: #2563eb; font-weight: 600;">☁️ 跨设备数据同步</button>
   </div>
 
@@ -3063,14 +3069,146 @@
     }
   }
 
-  function updateSidebarCountdown() {
-    const targetDate = new Date("2026-10-20T09:00:00");
+  function getExamDate() {
+    return localStorage.getItem("pte_exam_date") || "2026-10-20";
+  }
+
+  function getExamTarget() {
+    return localStorage.getItem("pte_exam_target") || "目标：总分 57+ · 各项 50+";
+  }
+
+  function calcExamCountdownDays(dateStr) {
+    if (!dateStr) return { diffDays: 0, label: "" };
+    const parts = dateStr.split("-");
+    if (parts.length !== 3) return { diffDays: 0, label: dateStr };
+    const y = parseInt(parts[0], 10);
+    const m = parseInt(parts[1], 10);
+    const d = parseInt(parts[2], 10);
+    const targetTime = new Date(y, m - 1, d, 0, 0, 0).getTime();
     const now = new Date();
-    const diffTime = targetDate.getTime() - now.getTime();
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    const el = document.getElementById("sidebar-countdown-days");
-    if (el) {
-      el.innerText = diffDays > 0 ? ("剩余 " + diffDays + " 天") : "已到考期！";
+    const todayTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0).getTime();
+    const diffDays = Math.round((targetTime - todayTime) / (1000 * 60 * 60 * 24));
+    return {
+      diffDays: diffDays,
+      label: m + "." + d,
+      fullLabel: y + "年" + m + "月" + d + "日"
+    };
+  }
+
+  function updateSidebarCountdown() {
+    const dateStr = getExamDate();
+    const targetDesc = getExamTarget();
+    const info = calcExamCountdownDays(dateStr);
+
+    let countdownText = "";
+    if (info.diffDays > 0) {
+      countdownText = "剩余 " + info.diffDays + " 天";
+    } else if (info.diffDays === 0) {
+      countdownText = "🎯 今天考试！冲刺必胜！";
+    } else {
+      countdownText = "考期已过 " + Math.abs(info.diffDays) + " 天";
+    }
+
+    // 1. 更新左侧栏
+    const titleEl = document.getElementById("sidebar-exam-title");
+    if (titleEl) {
+      titleEl.innerText = "📅 " + info.label + " 考期倒计时";
+    }
+    const daysEl = document.getElementById("sidebar-countdown-days");
+    if (daysEl) {
+      daysEl.innerText = countdownText;
+    }
+    const targetEl = document.getElementById("sidebar-exam-target-desc");
+    if (targetEl) {
+      targetEl.innerText = targetDesc;
+    }
+
+    // 2. 更新 Header 胶囊按钮
+    const headerEl = document.getElementById("header-countdown-text");
+    if (headerEl) {
+      headerEl.innerText = info.label + " 考期: " + countdownText;
+    }
+  }
+
+  function openExamDateModal() {
+    openExamSettingsModal();
+  }
+
+  function openExamSettingsModal() {
+    const dateInput = document.getElementById("input-exam-date");
+    const targetInput = document.getElementById("input-exam-target");
+    if (dateInput) dateInput.value = getExamDate();
+    if (targetInput) targetInput.value = getExamTarget();
+    previewCountdownFromInput();
+    const modal = document.getElementById("exam-settings-modal");
+    if (modal) modal.classList.add("show");
+  }
+
+  function closeExamSettingsModal() {
+    const modal = document.getElementById("exam-settings-modal");
+    if (modal) modal.classList.remove("show");
+  }
+
+  function handleExamSettingsModalClick(e) {
+    if (e.target && e.target.id === "exam-settings-modal") {
+      closeExamSettingsModal();
+    }
+  }
+
+  function previewCountdownFromInput() {
+    const dateInput = document.getElementById("input-exam-date");
+    const previewEl = document.getElementById("exam-modal-preview-days");
+    if (!dateInput || !previewEl) return;
+    const val = dateInput.value;
+    if (!val) {
+      previewEl.innerText = "请选择考期";
+      return;
+    }
+    const info = calcExamCountdownDays(val);
+    if (info.diffDays > 0) {
+      previewEl.innerText = "剩余 " + info.diffDays + " 天";
+    } else if (info.diffDays === 0) {
+      previewEl.innerText = "🎯 今天考试！";
+    } else {
+      previewEl.innerText = "已过 " + Math.abs(info.diffDays) + " 天";
+    }
+  }
+
+  function setExamDateQuick(dateStr) {
+    const dateInput = document.getElementById("input-exam-date");
+    if (dateInput) {
+      dateInput.value = dateStr;
+      previewCountdownFromInput();
+    }
+  }
+
+  function setExamDateOffset(days) {
+    const now = new Date();
+    const target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + days);
+    const y = target.getFullYear();
+    const m = String(target.getMonth() + 1).padStart(2, "0");
+    const d = String(target.getDate()).padStart(2, "0");
+    setExamDateQuick(y + "-" + m + "-" + d);
+  }
+
+  function setExamTargetQuick(targetStr) {
+    const targetInput = document.getElementById("input-exam-target");
+    if (targetInput) targetInput.value = targetStr;
+  }
+
+  function saveExamSettings() {
+    const dateInput = document.getElementById("input-exam-date");
+    const targetInput = document.getElementById("input-exam-target");
+    if (dateInput && dateInput.value) {
+      localStorage.setItem("pte_exam_date", dateInput.value);
+    }
+    if (targetInput && targetInput.value.trim()) {
+      localStorage.setItem("pte_exam_target", targetInput.value.trim());
+    }
+    updateSidebarCountdown();
+    closeExamSettingsModal();
+    if (localStorage.getItem("pte_gist_token") && localStorage.getItem("pte_gist_id")) {
+      pushToGist(true);
     }
   }
 
@@ -4997,10 +5135,17 @@
       localStorage.setItem("pte_wfd_logs", JSON.stringify(practiceLogs));
       localStorage.setItem("pte_wfd_qstats", JSON.stringify(questionStats));
       localStorage.setItem("pte_wfd_vocab", JSON.stringify(practiceVocab));
+      if (remoteData && remoteData.examDate) {
+        localStorage.setItem("pte_exam_date", remoteData.examDate);
+      }
+      if (remoteData && remoteData.examTarget) {
+        localStorage.setItem("pte_exam_target", remoteData.examTarget);
+      }
     } catch(e) {}
 
     updateStats();
     updateCurrentQuestionBadge();
+    updateSidebarCountdown();
 
     const mTab = document.getElementById("tab-mistakes");
     if (mTab && mTab.style.display !== "none") renderMistakesView();
@@ -5028,7 +5173,9 @@
       deviceId: getDeviceId(),
       logs: practiceLogs,
       stats: questionStats,
-      vocab: practiceVocab
+      vocab: practiceVocab,
+      examDate: getExamDate(),
+      examTarget: getExamTarget()
     };
   }
 
@@ -6331,6 +6478,62 @@
       </div>
     </div>
 
+  </div>
+</div>
+
+<!-- 考期与冲刺目标自定义设置 MODAL -->
+<div id="exam-settings-modal" class="modal-overlay" onclick="handleExamSettingsModalClick(event)">
+  <div class="modal-card" style="max-width: 540px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid var(--border); padding-bottom: 12px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.5rem;">📅</span>
+        <div>
+          <h2 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin: 0;">自定义考期与目标设置</h2>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">实时计算考前冲刺天数 · 支持电脑/手机多端云同步</p>
+        </div>
+      </div>
+      <button class="nav-btn" onclick="closeExamSettingsModal()" style="font-size: 1.1rem; line-height: 1; padding: 4px 10px; cursor: pointer; border-radius: 6px;">✕</button>
+    </div>
+
+    <div class="modal-body" style="padding: 4px 2px; max-height: calc(85vh - 120px); overflow-y: auto; flex: 1 1 auto; min-height: 0;">
+      <div style="margin-bottom: 16px;">
+        <label style="display: block; font-weight: 700; font-size: 0.88rem; color: #1e293b; margin-bottom: 6px;">
+          🎯 考试具体日期 (Date):
+        </label>
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <input type="date" id="input-exam-date" style="flex: 1; padding: 8px 12px; font-size: 0.92rem; border: 1px solid #cbd5e1; border-radius: 8px; font-weight: 600; color: #0f172a;" onchange="previewCountdownFromInput()">
+          <span id="exam-modal-preview-days" style="padding: 6px 12px; background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; border-radius: 8px; font-weight: 700; font-size: 0.84rem; white-space: nowrap;">剩余 -- 天</span>
+        </div>
+        <div style="display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap;">
+          <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px; background: #fff7ed; color: #c2410c; border-color: #fed7aa;" onclick="setExamDateQuick('2026-10-20')">原定考期 (2026-10-20)</button>
+          <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px;" onclick="setExamDateOffset(7)">+7天 (一周后)</button>
+          <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px;" onclick="setExamDateOffset(14)">+14天 (两周后)</button>
+          <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px;" onclick="setExamDateOffset(30)">+30天 (一个月后)</button>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 18px;">
+        <label style="display: block; font-weight: 700; font-size: 0.88rem; color: #1e293b; margin-bottom: 6px;">
+          🏆 冲刺目标与备注 (Target):
+        </label>
+        <input type="text" id="input-exam-target" placeholder="例如：目标：总分 57+ · 各项 50+" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box;" value="目标：总分 57+ · 各项 50+">
+        <div style="display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap;">
+          <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px; background: #f0fdf4; color: #15803d; border-color: #bbf7d0;" onclick="setExamTargetQuick('目标：总分 57+ · 各项 50+')">485工签 (总分57·各项50)</button>
+          <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px;" onclick="setExamTargetQuick('目标：4个单项稳过 50+')">NT州担 Competent (各项50+)</button>
+          <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px;" onclick="setExamTargetQuick('目标：七炸 65+ · 稳拿移民分')">七炸 65+ 冲刺</button>
+          <button type="button" class="nav-btn" style="font-size: 0.75rem; padding: 4px 8px;" onclick="setExamTargetQuick('目标：八炸 79+ · 全科通关')">八炸 79+ 顶峰</button>
+        </div>
+      </div>
+
+      <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 10px 12px; font-size: 0.78rem; color: #1e40af; line-height: 1.5; margin-bottom: 16px;">
+        💡 <strong>多设备同步说明</strong>：设置将自动保存在当前浏览器本地中。若您已绑定「跨设备云同步」，保存后将随答题进度自动同步到手机/平板。
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 8px; padding-top: 6px; border-top: 1px solid #e2e8f0;">
+        <button type="button" class="nav-btn" onclick="closeExamSettingsModal()" style="padding: 7px 16px;">取消</button>
+        <button type="button" class="btn-submit" onclick="saveExamSettings()" style="padding: 7px 20px; background: #ea580c;">💾 保存考期设置</button>
+      </div>
+    </div>
   </div>
 </div>
 
