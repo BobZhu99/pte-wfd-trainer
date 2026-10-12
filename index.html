@@ -5613,8 +5613,18 @@
       if (remoteData && remoteData.examTarget) {
         localStorage.setItem("pte_exam_target", remoteData.examTarget);
       }
+      if (remoteData && remoteData.profileName) {
+        const activeP = getActiveProfile();
+        if (activeP && (activeP.name === "新学员" || activeP.name === remoteData.profileName)) {
+          activeP.name = remoteData.profileName;
+          if (remoteData.profileAvatar) activeP.avatar = remoteData.profileAvatar;
+          const list = getProfilesList();
+          localStorage.setItem("pte_profiles_list", JSON.stringify(list));
+        }
+      }
     } catch(e) {}
 
+    saveActiveUserData();
     updateStats();
     updateCurrentQuestionBadge();
     updateSidebarCountdown();
@@ -5637,12 +5647,15 @@
 
   // 构建完整备份包
   function createFullBackupBundle() {
+    const activeP = getActiveProfile();
     return {
       version: 1,
       app: "PTE WFD Trainer",
       updatedAt: new Date().toISOString(),
       timeStr: new Date().toLocaleString(),
       deviceId: getDeviceId(),
+      profileName: activeP ? activeP.name : "Xudong Zhu",
+      profileAvatar: activeP ? activeP.avatar : "🧑‍💻",
       logs: practiceLogs,
       stats: questionStats,
       vocab: practiceVocab,
