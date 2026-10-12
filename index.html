@@ -166,6 +166,130 @@
   #btn-module-overview.active .sidebar-active-indicator { background: #34d399; display: block; }
 
   /* ================= 每日练题目标与实战打卡看板样式 ================= */
+
+  /* 目标自定义弹窗与步进器增强样式 */
+  .planner-modal-task-row {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.15s;
+  }
+  .planner-modal-task-row:hover {
+    border-color: #94a3b8;
+    background: #f8fafc;
+  }
+  .planner-modal-task-row.is-disabled {
+    opacity: 0.55;
+    background: #f1f5f9;
+  }
+  .planner-stepper-box {
+    display: inline-flex;
+    align-items: center;
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .planner-stepper-btn {
+    border: none;
+    background: #ffffff;
+    color: #1e293b;
+    font-size: 1.1rem;
+    font-weight: 800;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.12s;
+  }
+  .planner-stepper-btn:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+  }
+  .planner-stepper-btn:active {
+    background: #cbd5e1;
+  }
+  .planner-stepper-input {
+    width: 54px;
+    height: 36px;
+    border: none;
+    border-left: 1px solid #cbd5e1;
+    border-right: 1px solid #cbd5e1;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0f172a;
+    background: white;
+    -moz-appearance: textfield;
+  }
+  .planner-stepper-input:focus {
+    outline: none;
+    background: #eff6ff;
+  }
+
+  /* 卡片内双列步进器优化 */
+  .card-stepper-wrap {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    background: white;
+    overflow: hidden;
+    margin-top: 4px;
+  }
+  .card-stepper-btn {
+    border: none;
+    background: #f8fafc;
+    color: #334155;
+    font-size: 1.05rem;
+    font-weight: 800;
+    width: 34px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.12s;
+    user-select: none;
+    flex-shrink: 0;
+  }
+  .card-stepper-btn:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+  }
+  .card-stepper-btn.add {
+    color: #047857;
+  }
+  .card-stepper-btn.add:hover {
+    background: #d1fae5;
+  }
+  .card-stepper-input {
+    width: 100%;
+    min-width: 44px;
+    height: 38px;
+    border: none;
+    border-left: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #0f172a;
+    background: white;
+    -moz-appearance: textfield;
+  }
+  .card-stepper-input:focus {
+    outline: none;
+    background: #eff6ff;
+  }
+
   .planner-header-banner {
     background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     border: 1px solid #334155;
@@ -1782,6 +1906,9 @@
               <span id="planner-streak-badge" style="background: linear-gradient(135deg, #ea580c 0%, #f97316 100%); color: white; font-weight: 800; font-size: 0.85rem; padding: 6px 14px; border-radius: 9999px; box-shadow: 0 2px 8px rgba(234,88,12,0.3); display: inline-flex; align-items: center; gap: 5px;">
                 🔥 连续达成 0 天
               </span>
+              <button class="nav-btn" onclick="openPlannerSettingsModal()" style="background: #f59e0b; color: #78350f; border: 1px solid #fcd34d; font-weight: 800; padding: 7px 16px; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; box-shadow: 0 2px 6px rgba(245,158,11,0.25);">
+                ⚙️ 自定义我的目标
+              </button>
               <button class="nav-btn" onclick="confirmManualFinishDay()" style="background: #10b981; color: white; border: none; font-weight: 700; padding: 7px 16px; border-radius: 8px; cursor: pointer;">
                 ✨ 确认今日打卡完成
               </button>
@@ -1809,10 +1936,13 @@
           </div>
         </div>
 
-        <!-- 科学预设方案一键套用 -->
+        <!-- 科学预设方案一键套用与自定义入口 -->
         <div class="planner-preset-bar">
-          <span style="font-size: 0.82rem; font-weight: 700; color: #475569; display: flex; align-items: center; gap: 5px;">
-            ⚡ 快捷目标预设:
+          <button class="preset-pill-btn" onclick="openPlannerSettingsModal()" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; box-shadow: 0 1px 4px rgba(217,119,6,0.15);">
+            ⚙️ 自定义设置各科目标 (点此设置)
+          </button>
+          <span style="font-size: 0.82rem; font-weight: 700; color: #64748b; margin-left: 4px;">
+            或套用推荐预设:
           </span>
           <button class="preset-pill-btn primary" onclick="applyPresetPlan('competent')" title="基于 LIN 25/016 Competent English (口语 54+) 科学规划">
             🎯 Competent 54+ 冲刺 (推荐)
@@ -3967,7 +4097,7 @@
 
 
   // =========================================================================
-  // 🎯 PTE 每日练题目标与实战打卡看板引擎 (Planner & Tracker Engine)
+  // 🎯 PTE 每日练题目标与实战打卡看板引擎 (增强自定义版)
   // =========================================================================
 
   const PLANNER_TASK_DEFS = [
@@ -4043,6 +4173,104 @@
     localStorage.setItem("pte_planner_hist_" + pid, JSON.stringify(hist));
   }
 
+  // ---------------- 弹窗设置逻辑 ----------------
+  let modalTempGoals = {};
+
+  function openPlannerSettingsModal() {
+    modalTempGoals = Object.assign({}, getPlannerGoals());
+    renderModalTasksList();
+    const modal = document.getElementById("planner-settings-modal");
+    if (modal) modal.classList.add("show");
+  }
+
+  function closePlannerSettingsModal() {
+    const modal = document.getElementById("planner-settings-modal");
+    if (modal) modal.classList.remove("show");
+  }
+
+  function handlePlannerSettingsModalClick(e) {
+    if (e.target && e.target.id === "planner-settings-modal") {
+      closePlannerSettingsModal();
+    }
+  }
+
+  function modalLoadPreset(presetKey) {
+    const preset = PLANNER_PRESETS[presetKey];
+    if (!preset) return;
+    modalTempGoals = Object.assign({}, preset);
+    renderModalTasksList();
+    showToast("⚡ 已载入方案数值，点击下方「保存」即可生效");
+  }
+
+  function renderModalTasksList() {
+    const container = document.getElementById("planner-modal-tasks-list");
+    if (!container) return;
+    let html = "";
+    PLANNER_TASK_DEFS.forEach(t => {
+      const curVal = (modalTempGoals[t.key] !== undefined) ? modalTempGoals[t.key] : 0;
+      const isEnabled = curVal > 0;
+      html += '<div class="planner-modal-task-row ' + (isEnabled ? '' : 'is-disabled') + '" id="modal-task-row-' + t.key + '">' +
+        '<div style="display: flex; align-items: center; gap: 10px; min-width: 0; flex: 1;">' +
+          '<input type="checkbox" id="modal-chk-' + t.key + '" ' + (isEnabled ? 'checked' : '') + ' style="width: 18px; height: 18px; cursor: pointer;" onchange="toggleModalTaskActive(&apos;' + t.key + '&apos;, this.checked)">' +
+          '<div style="min-width: 0;">' +
+            '<div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">' +
+              '<strong style="font-size: 0.92rem; color: #0f172a;">' + t.name + '</strong>' +
+              '<span class="planner-task-badge ' + t.category + '">' + t.weight + '</span>' +
+            '</div>' +
+            '<div style="font-size: 0.73rem; color: #64748b; margin-top: 2px;">' + t.desc + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="planner-stepper-box">' +
+          '<button type="button" class="planner-stepper-btn" onclick="stepModalGoal(&apos;' + t.key + '&apos;, -1)">-</button>' +
+          '<input type="number" min="0" class="planner-stepper-input" id="modal-input-' + t.key + '" value="' + curVal + '" onchange="changeModalInputGoal(&apos;' + t.key + '&apos;, this.value)">' +
+          '<button type="button" class="planner-stepper-btn" onclick="stepModalGoal(&apos;' + t.key + '&apos;, 1)">+</button>' +
+        '</div>' +
+      '</div>';
+    });
+    container.innerHTML = html;
+  }
+
+  function toggleModalTaskActive(taskKey, isChecked) {
+    if (!isChecked) {
+      modalTempGoals[taskKey] = 0;
+    } else {
+      modalTempGoals[taskKey] = (PLANNER_PRESETS.competent[taskKey] || 5);
+    }
+    renderModalTasksList();
+  }
+
+  function stepModalGoal(taskKey, delta) {
+    let cur = modalTempGoals[taskKey] || 0;
+    cur = Math.max(0, cur + delta);
+    modalTempGoals[taskKey] = cur;
+    renderModalTasksList();
+  }
+
+  function changeModalInputGoal(taskKey, val) {
+    let num = parseInt(val, 10);
+    if (isNaN(num) || num < 0) num = 0;
+    modalTempGoals[taskKey] = num;
+    renderModalTasksList();
+  }
+
+  function savePlannerSettingsFromModal() {
+    savePlannerGoals(modalTempGoals);
+    closePlannerSettingsModal();
+    renderPlannerView();
+    showToast("🎉 自定义练题目标已保存并应用！");
+  }
+
+  // ---------------- 主看板交互逻辑 ----------------
+  function stepTargetCount(taskKey, delta) {
+    const goals = getPlannerGoals();
+    let cur = goals[taskKey] || 0;
+    cur = Math.max(0, cur + delta);
+    goals[taskKey] = cur;
+    savePlannerGoals(goals);
+    renderPlannerView();
+    showToast("🎯 已更新 " + taskKey + " 目标为 " + cur);
+  }
+
   function updateTargetCount(taskKey, val) {
     let num = parseInt(val, 10);
     if (isNaN(num) || num < 0) num = 0;
@@ -4050,17 +4278,6 @@
     goals[taskKey] = num;
     savePlannerGoals(goals);
     renderPlannerView();
-    showToast("🎯 已更新 " + taskKey + " 目标为 " + num + " 题");
-  }
-
-  function updateActualCount(taskKey, val) {
-    let num = parseInt(val, 10);
-    if (isNaN(num) || num < 0) num = 0;
-    const acts = getPlannerTodayActuals();
-    acts[taskKey] = num;
-    savePlannerTodayActuals(acts);
-    renderPlannerView();
-    checkDailyAutoCompletion(false);
   }
 
   function stepActualCount(taskKey, delta) {
@@ -4068,6 +4285,16 @@
     let cur = acts[taskKey] || 0;
     cur = Math.max(0, cur + delta);
     acts[taskKey] = cur;
+    savePlannerTodayActuals(acts);
+    renderPlannerView();
+    checkDailyAutoCompletion(false);
+  }
+
+  function updateActualCount(taskKey, val) {
+    let num = parseInt(val, 10);
+    if (isNaN(num) || num < 0) num = 0;
+    const acts = getPlannerTodayActuals();
+    acts[taskKey] = num;
     savePlannerTodayActuals(acts);
     renderPlannerView();
     checkDailyAutoCompletion(false);
@@ -4104,10 +4331,8 @@
     let streak = 0;
     let expectedDate = new Date();
     
-    // 检查今天是否达成
     const todayRecord = hist.find(h => h.date === today);
     if (!todayRecord || !todayRecord.allDone) {
-      // 如果今天还没全达成，检查昨天是否达成
       expectedDate.setDate(expectedDate.getDate() - 1);
     }
     
@@ -4250,7 +4475,7 @@
       cdEl.innerText = (days > 0 ? "倒计时 " + days + " 天" : (days === 0 ? "今天考试！" : "已考完"));
     }
 
-    // 3. 渲染 7 大题型卡片
+    // 3. 渲染 7 大题型卡片 (带双步进器与快捷设置)
     const container = document.getElementById("planner-tasks-container");
     if (container) {
       let cardsHtml = "";
@@ -4270,9 +4495,10 @@
                 '</div>' +
                 '<div style="font-size: 0.73rem; color: #64748b;">' + t.desc + '</div>' +
               '</div>' +
-              '<div>' +
+              '<div style="display: flex; align-items: center; gap: 4px;">' +
                 (isDone ? '<span class="status-tag status-perfect" style="font-size: 0.72rem; padding: 2px 8px; border-radius: 9999px;">✅ 已达成</span>' : 
-                 (target > 0 ? '<span style="font-size: 0.72rem; color: #ea580c; background: #fff7ed; padding: 2px 7px; border-radius: 9999px; border: 1px solid #fed7aa; font-weight: 600;">还差 ' + (target - act) + ' ' + t.unit + '</span>' : '<span style="font-size: 0.72rem; color: #94a3b8;">未设定</span>')) +
+                 (target > 0 ? '<span style="font-size: 0.72rem; color: #ea580c; background: #fff7ed; padding: 2px 7px; border-radius: 9999px; border: 1px solid #fed7aa; font-weight: 600;">还差 ' + (target - act) + ' ' + t.unit + '</span>' : '<span style="font-size: 0.72rem; color: #94a3b8; background: #f1f5f9; padding: 2px 6px; border-radius: 4px;">跳过不准备</span>')) +
+                '<button type="button" onclick="openPlannerSettingsModal()" style="border: none; background: transparent; cursor: pointer; font-size: 0.9rem; color: #94a3b8; padding: 2px;" title="配置该题型目标">⚙️</button>' +
               '</div>' +
             '</div>' +
             '<div class="planner-progress-box">' +
@@ -4289,17 +4515,25 @@
             '<div class="planner-inputs-cols">' +
               '<div class="planner-input-field">' +
                 '<label>🎯 目标题数</label>' +
-                '<input type="number" min="0" class="planner-num-input" value="' + target + '" onchange="updateTargetCount(&apos;' + t.key + '&apos;, this.value)">' +
+                '<div class="card-stepper-wrap">' +
+                  '<button type="button" class="card-stepper-btn" onclick="stepTargetCount(&apos;' + t.key + '&apos;, -1)" title="目标 -1">-</button>' +
+                  '<input type="number" min="0" class="card-stepper-input" value="' + target + '" onchange="updateTargetCount(&apos;' + t.key + '&apos;, this.value)">' +
+                  '<button type="button" class="card-stepper-btn add" onclick="stepTargetCount(&apos;' + t.key + '&apos;, 1)" title="目标 +1">+</button>' +
+                '</div>' +
               '</div>' +
               '<div class="planner-input-field">' +
                 '<label>✍️ 今日已练</label>' +
-                '<input type="number" min="0" class="planner-num-input" value="' + act + '" onchange="updateActualCount(&apos;' + t.key + '&apos;, this.value)">' +
+                '<div class="card-stepper-wrap">' +
+                  '<button type="button" class="card-stepper-btn" onclick="stepActualCount(&apos;' + t.key + '&apos;, -1)" title="已练 -1">-</button>' +
+                  '<input type="number" min="0" class="card-stepper-input" value="' + act + '" onchange="updateActualCount(&apos;' + t.key + '&apos;, this.value)">' +
+                  '<button type="button" class="card-stepper-btn add" onclick="stepActualCount(&apos;' + t.key + '&apos;, 1)" title="已练 +1">+</button>' +
+                '</div>' +
               '</div>' +
             '</div>' +
             '<div class="planner-quick-btns">' +
-              '<button type="button" class="planner-btn-step" onclick="stepActualCount(&apos;' + t.key + '&apos;, -1)" title="已练 -1">-1</button>' +
-              '<button type="button" class="planner-btn-step add" onclick="stepActualCount(&apos;' + t.key + '&apos;, 1)" title="已练 +1">+1</button>' +
+              '<button type="button" class="planner-btn-step" onclick="stepActualCount(&apos;' + t.key + '&apos;, -5)" title="已练 -5">-5</button>' +
               '<button type="button" class="planner-btn-step add" onclick="stepActualCount(&apos;' + t.key + '&apos;, 5)" title="已练 +5">+5</button>' +
+              '<button type="button" class="planner-btn-step add" onclick="stepActualCount(&apos;' + t.key + '&apos;, 10)" title="已练 +10">+10</button>' +
             '</div>' +
           '</div>' +
         '</div>';
@@ -7863,6 +8097,50 @@
       </div>
     </div>
 
+  </div>
+</div>
+
+
+<!-- 每日练题目标自定义设置 MODAL -->
+<div id="planner-settings-modal" class="modal-overlay" onclick="handlePlannerSettingsModalClick(event)">
+  <div class="modal-card" style="max-width: 620px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid var(--border); padding-bottom: 12px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.5rem;">⚙️</span>
+        <div>
+          <h2 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin: 0;">自定义设置各题型练题目标</h2>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">自由设定每日刷题量 · 支持勾选/跳过低分题型 · 独立保存于当前学员档案</p>
+        </div>
+      </div>
+      <button class="nav-btn" onclick="closePlannerSettingsModal()" style="font-size: 1.1rem; line-height: 1; padding: 4px 10px; cursor: border-radius: 6px;">✕</button>
+    </div>
+
+    <div class="modal-body" style="padding: 4px 2px; max-height: calc(85vh - 120px); overflow-y: auto; flex: 1 1 auto; min-height: 0;">
+      <!-- 快捷预设一键填入 -->
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 14px; margin-bottom: 14px;">
+        <div style="font-size: 0.78rem; font-weight: 700; color: #475569; margin-bottom: 6px;">⚡ 一键载入预设方案 (可在此基础上自由加减):</div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+          <button type="button" class="preset-pill-btn primary" onclick="modalLoadPreset('competent')">🎯 Competent 54+ 冲刺</button>
+          <button type="button" class="preset-pill-btn" onclick="modalLoadPreset('485')">⚡ 485 工签保底 (55+)</button>
+          <button type="button" class="preset-pill-btn" onclick="modalLoadPreset('proficient')">🔥 七炸 65+ 挑战</button>
+          <button type="button" class="preset-pill-btn" onclick="modalLoadPreset('reset')" style="color: #dc2626; border-color: #fca5a5;">🔄 全部清零</button>
+        </div>
+      </div>
+
+      <!-- 各题型设置列表容器 -->
+      <div id="planner-modal-tasks-list" style="display: flex; flex-direction: column; gap: 8px;">
+        <!-- Dynamically rendered -->
+      </div>
+    </div>
+
+    <!-- 弹窗底部操作按钮 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px; border-top: 1px solid var(--border); padding-top: 12px; flex-wrap: wrap; gap: 8px;">
+      <span style="font-size: 0.76rem; color: #64748b;">💡 设为 0 或取消勾选即代表「跳过不准备」，不会计入每日打卡考核。</span>
+      <div style="display: flex; gap: 8px;">
+        <button class="nav-btn" onclick="closePlannerSettingsModal()" style="padding: 8px 16px;">取消</button>
+        <button class="btn-submit" onclick="savePlannerSettingsFromModal()" style="background: #2563eb; color: white; padding: 8px 20px; font-weight: 700; border-radius: 8px; border: none; cursor: pointer;">💾 保存并应用目标</button>
+      </div>
+    </div>
   </div>
 </div>
 
