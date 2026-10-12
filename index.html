@@ -168,6 +168,85 @@
   /* ================= 每日练题目标与实战打卡看板样式 ================= */
 
   /* 目标自定义弹窗与步进器增强样式 */
+
+  /* 逐题练习打卡大按钮与视觉优化 */
+  .checkin-progress-display {
+    text-align: center;
+    padding: 10px 12px 8px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    margin: 8px 0 12px;
+    transition: all 0.2s;
+  }
+  .checkin-progress-ratio {
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 4px;
+  }
+  .checkin-progress-ratio.done {
+    color: #16a34a;
+  }
+  .checkin-action-bar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .btn-checkin-primary {
+    flex: 1;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 11px 16px;
+    font-size: 0.98rem;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.15s ease;
+    user-select: none;
+    min-height: 44px;
+  }
+  .btn-checkin-primary:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 14px rgba(37, 99, 235, 0.35);
+  }
+  .btn-checkin-primary:active {
+    transform: translateY(1px);
+  }
+  .btn-checkin-primary.done-state {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 3px 10px rgba(16, 185, 129, 0.25);
+  }
+  .btn-checkin-secondary {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.12s;
+    user-select: none;
+    min-height: 44px;
+    white-space: nowrap;
+  }
+  .btn-checkin-secondary:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+  }
+
   .planner-modal-task-row {
     background: white;
     border: 1px solid var(--border);
@@ -1909,9 +1988,9 @@
               <button class="nav-btn" onclick="openPlannerSettingsModal()" style="background: #f59e0b; color: #78350f; border: 1px solid #fcd34d; font-weight: 800; padding: 7px 16px; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; box-shadow: 0 2px 6px rgba(245,158,11,0.25);">
                 ⚙️ 自定义我的目标
               </button>
-              <button class="nav-btn" onclick="confirmManualFinishDay()" style="background: #10b981; color: white; border: none; font-weight: 700; padding: 7px 16px; border-radius: 8px; cursor: pointer;">
-                ✨ 确认今日打卡完成
-              </button>
+              <span style="font-size: 0.76rem; background: rgba(16,185,129,0.18); color: #34d399; border: 1px solid rgba(16,185,129,0.35); padding: 6px 12px; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 5px;">
+                ⚡ 练完一题点一次 · 即时自动保存
+              </span>
             </div>
           </div>
 
@@ -4097,7 +4176,7 @@
 
 
   // =========================================================================
-  // 🎯 PTE 每日练题目标与实战打卡看板引擎 (增强自定义版)
+  // 🎯 PTE 每日练题目标与实战打卡看板引擎 (逐题打卡闭环版)
   // =========================================================================
 
   const PLANNER_TASK_DEFS = [
@@ -4260,7 +4339,52 @@
     showToast("🎉 自定义练题目标已保存并应用！");
   }
 
-  // ---------------- 主看板交互逻辑 ----------------
+  // ---------------- 主看板交互：练完一题立即打卡 ----------------
+  function checkinOneQuestion(taskKey) {
+    stepActualCount(taskKey, 1);
+  }
+
+  function stepActualCount(taskKey, delta) {
+    const acts = getPlannerTodayActuals();
+    const goals = getPlannerGoals();
+    const target = goals[taskKey] || 0;
+    let cur = acts[taskKey] || 0;
+    cur = Math.max(0, cur + delta);
+    acts[taskKey] = cur;
+    savePlannerTodayActuals(acts);
+    renderPlannerView();
+
+    const tDef = PLANNER_TASK_DEFS.find(item => item.key === taskKey);
+    const tName = tDef ? tDef.name : taskKey;
+    const unit = tDef ? tDef.unit : "题";
+
+    if (delta > 0) {
+      if (target > 0 && cur >= target && (cur - delta) < target) {
+        showToast("🏆 恭喜！" + tName + " 今日目标已圆满达成 (" + cur + "/" + target + " " + unit + ")！");
+      } else {
+        showToast("✅ " + tName + " 打卡成功！当前进度: " + cur + " / " + target + " " + unit);
+      }
+    } else {
+      showToast("↩️ 已撤回 " + tName + " 1 题打卡 (当前: " + cur + "/" + target + ")");
+    }
+
+    recordDailyFootprint();
+  }
+
+  function updateActualCount(taskKey, val) {
+    let num = parseInt(val, 10);
+    if (isNaN(num) || num < 0) num = 0;
+    const acts = getPlannerTodayActuals();
+    const goals = getPlannerGoals();
+    acts[taskKey] = num;
+    savePlannerTodayActuals(acts);
+    renderPlannerView();
+
+    const target = goals[taskKey] || 0;
+    showToast("✍️ 已更新 " + taskKey + " 今日完成为 " + num + " / " + target);
+    recordDailyFootprint();
+  }
+
   function stepTargetCount(taskKey, delta) {
     const goals = getPlannerGoals();
     let cur = goals[taskKey] || 0;
@@ -4269,6 +4393,7 @@
     savePlannerGoals(goals);
     renderPlannerView();
     showToast("🎯 已更新 " + taskKey + " 目标为 " + cur);
+    recordDailyFootprint();
   }
 
   function updateTargetCount(taskKey, val) {
@@ -4278,26 +4403,7 @@
     goals[taskKey] = num;
     savePlannerGoals(goals);
     renderPlannerView();
-  }
-
-  function stepActualCount(taskKey, delta) {
-    const acts = getPlannerTodayActuals();
-    let cur = acts[taskKey] || 0;
-    cur = Math.max(0, cur + delta);
-    acts[taskKey] = cur;
-    savePlannerTodayActuals(acts);
-    renderPlannerView();
-    checkDailyAutoCompletion(false);
-  }
-
-  function updateActualCount(taskKey, val) {
-    let num = parseInt(val, 10);
-    if (isNaN(num) || num < 0) num = 0;
-    const acts = getPlannerTodayActuals();
-    acts[taskKey] = num;
-    savePlannerTodayActuals(acts);
-    renderPlannerView();
-    checkDailyAutoCompletion(false);
+    recordDailyFootprint();
   }
 
   function incrementDailyPracticeCount(taskKey, delta) {
@@ -4307,7 +4413,7 @@
     if (currentAppModule === "planner") {
       renderPlannerView();
     }
-    checkDailyAutoCompletion(false);
+    recordDailyFootprint();
   }
 
   function applyPresetPlan(presetKey) {
@@ -4323,6 +4429,7 @@
       showToast("⚡ 已套用预设方案：" + (presetKey === "competent" ? "Competent 54+ 冲刺" : (presetKey === "485" ? "485 工签保底" : "七炸 65+ 挑战")));
     }
     renderPlannerView();
+    recordDailyFootprint();
   }
 
   function calculateStreakDays(hist) {
@@ -4352,7 +4459,8 @@
     return streak;
   }
 
-  function checkDailyAutoCompletion(isManualClick) {
+  // 每一练题动作自动实时计入今日足迹，无需等到全部做完
+  function recordDailyFootprint() {
     const goals = getPlannerGoals();
     const acts = getPlannerTodayActuals();
     const today = getPlannerTodayDateStr();
@@ -4377,42 +4485,38 @@
     const hist = getPlannerHistory();
     let rec = hist.find(h => h.date === today);
 
-    if (!rec) {
-      rec = {
-        date: today,
-        allDone: isAllDone,
-        completedItems: completedItems,
-        validItems: validItems,
-        totalActual: totalActual,
-        details: Object.assign({}, acts),
-        recordedAt: new Date().toLocaleTimeString()
-      };
-      hist.unshift(rec);
-    } else {
-      rec.allDone = isAllDone;
-      rec.completedItems = completedItems;
-      rec.validItems = validItems;
-      rec.totalActual = totalActual;
-      rec.details = Object.assign({}, acts);
-      rec.recordedAt = new Date().toLocaleTimeString();
-    }
+    // 只有当有练习或者设定了目标时记录
+    if (totalActual > 0 || totalTarget > 0) {
+      if (!rec) {
+        rec = {
+          date: today,
+          allDone: isAllDone,
+          completedItems: completedItems,
+          validItems: validItems,
+          totalActual: totalActual,
+          details: Object.assign({}, acts),
+          recordedAt: new Date().toLocaleTimeString()
+        };
+        hist.unshift(rec);
+      } else {
+        rec.allDone = isAllDone;
+        rec.completedItems = completedItems;
+        rec.validItems = validItems;
+        rec.totalActual = totalActual;
+        rec.details = Object.assign({}, acts);
+        rec.recordedAt = new Date().toLocaleTimeString();
+      }
 
-    if (hist.length > 60) hist.pop();
-    savePlannerHistory(hist);
+      if (isAllDone && !rec.celebrated) {
+        rec.celebrated = true;
+        const streak = calculateStreakDays(hist);
+        showToast("🎉 恭喜！今日所有题型全部圆满达成！连续达成 " + streak + " 天！🏆");
+      }
 
-    if (isAllDone && (isManualClick || !rec.celebrated)) {
-      rec.celebrated = true;
+      if (hist.length > 60) hist.pop();
       savePlannerHistory(hist);
-      const streak = calculateStreakDays(hist);
-      showToast("🎉 恭喜！今日备考任务全部圆满达成！连续达成 " + streak + " 天！🏆");
-    } else if (isManualClick) {
-      showToast("📝 今日打卡记录已更新保存！已完成 " + completedItems + "/" + validItems + " 项");
+      renderPlannerHistoryList();
     }
-    renderPlannerHistoryList();
-  }
-
-  function confirmManualFinishDay() {
-    checkDailyAutoCompletion(true);
   }
 
   function clearPlannerHistory() {
@@ -4475,7 +4579,7 @@
       cdEl.innerText = (days > 0 ? "倒计时 " + days + " 天" : (days === 0 ? "今天考试！" : "已考完"));
     }
 
-    // 3. 渲染 7 大题型卡片 (带双步进器与快捷设置)
+    // 3. 渲染 7 大题型卡片 (突出练完打卡主按钮与大号进度)
     const container = document.getElementById("planner-tasks-container");
     if (container) {
       let cardsHtml = "";
@@ -4490,50 +4594,54 @@
             '<div class="planner-task-header">' +
               '<div>' +
                 '<div style="display: flex; align-items: center; gap: 6px; margin-bottom: 2px;">' +
-                  '<strong style="font-size: 0.95rem; color: #0f172a;">' + t.name + '</strong>' +
+                  '<strong style="font-size: 0.96rem; color: #0f172a;">' + t.name + '</strong>' +
                   '<span class="planner-task-badge ' + t.category + '">' + t.weight + '</span>' +
                 '</div>' +
                 '<div style="font-size: 0.73rem; color: #64748b;">' + t.desc + '</div>' +
               '</div>' +
               '<div style="display: flex; align-items: center; gap: 4px;">' +
-                (isDone ? '<span class="status-tag status-perfect" style="font-size: 0.72rem; padding: 2px 8px; border-radius: 9999px;">✅ 已达成</span>' : 
+                (isDone ? '<span class="status-tag status-perfect" style="font-size: 0.72rem; padding: 2px 8px; border-radius: 9999px;">✅ 目标已达成</span>' : 
                  (target > 0 ? '<span style="font-size: 0.72rem; color: #ea580c; background: #fff7ed; padding: 2px 7px; border-radius: 9999px; border: 1px solid #fed7aa; font-weight: 600;">还差 ' + (target - act) + ' ' + t.unit + '</span>' : '<span style="font-size: 0.72rem; color: #94a3b8; background: #f1f5f9; padding: 2px 6px; border-radius: 4px;">跳过不准备</span>')) +
-                '<button type="button" onclick="openPlannerSettingsModal()" style="border: none; background: transparent; cursor: pointer; font-size: 0.9rem; color: #94a3b8; padding: 2px;" title="配置该题型目标">⚙️</button>' +
+                '<button type="button" onclick="openPlannerSettingsModal()" style="border: none; background: transparent; cursor: pointer; font-size: 0.95rem; color: #94a3b8; padding: 2px;" title="配置该题型目标">⚙️</button>' +
               '</div>' +
             '</div>' +
-            '<div class="planner-progress-box">' +
-              '<div class="planner-progress-meta">' +
-                '<span>进度: <strong>' + act + '</strong> / ' + target + ' ' + t.unit + '</span>' +
-                '<span>' + percent + '%</span>' +
+
+            '<!-- 大号进度看板展示 (0 / 4 题) -->' +
+            '<div class="checkin-progress-display">' +
+              '<div class="checkin-progress-ratio ' + (isDone ? 'done' : '') + '">' +
+                '<span style="font-size: 1.85rem; font-weight: 800;">' + act + '</span>' +
+                '<span style="font-size: 1.15rem; color: #64748b; font-weight: 600;"> / ' + target + ' ' + t.unit + '</span>' +
+                '<span style="font-size: 0.78rem; color: #94a3b8; margin-left: 6px; font-weight: 600;">(' + percent + '%)</span>' +
               '</div>' +
-              '<div class="planner-progress-track">' +
+              '<div class="planner-progress-track" style="margin-top: 6px;">' +
                 '<div class="planner-progress-bar ' + (isDone ? 'done' : '') + '" style="width: ' + percent + '%;"></div>' +
               '</div>' +
             '</div>' +
           '</div>' +
-          '<div class="planner-inputs-box">' +
-            '<div class="planner-inputs-cols">' +
-              '<div class="planner-input-field">' +
-                '<label>🎯 目标题数</label>' +
-                '<div class="card-stepper-wrap">' +
-                  '<button type="button" class="card-stepper-btn" onclick="stepTargetCount(&apos;' + t.key + '&apos;, -1)" title="目标 -1">-</button>' +
-                  '<input type="number" min="0" class="card-stepper-input" value="' + target + '" onchange="updateTargetCount(&apos;' + t.key + '&apos;, this.value)">' +
-                  '<button type="button" class="card-stepper-btn add" onclick="stepTargetCount(&apos;' + t.key + '&apos;, 1)" title="目标 +1">+</button>' +
-                '</div>' +
-              '</div>' +
-              '<div class="planner-input-field">' +
-                '<label>✍️ 今日已练</label>' +
-                '<div class="card-stepper-wrap">' +
-                  '<button type="button" class="card-stepper-btn" onclick="stepActualCount(&apos;' + t.key + '&apos;, -1)" title="已练 -1">-</button>' +
-                  '<input type="number" min="0" class="card-stepper-input" value="' + act + '" onchange="updateActualCount(&apos;' + t.key + '&apos;, this.value)">' +
-                  '<button type="button" class="card-stepper-btn add" onclick="stepActualCount(&apos;' + t.key + '&apos;, 1)" title="已练 +1">+</button>' +
-                '</div>' +
-              '</div>' +
+
+          '<!-- 核心打卡操作区 (练完一题点一次) -->' +
+          '<div>' +
+            '<div class="checkin-action-bar">' +
+              '<button type="button" class="btn-checkin-primary ' + (isDone ? 'done-state' : '') + '" onclick="checkinOneQuestion(&apos;' + t.key + '&apos;)" title="每做完一题点此打卡">' +
+                '🔥 练完打卡 (+1)' +
+              '</button>' +
+              '<button type="button" class="btn-checkin-secondary" onclick="stepActualCount(&apos;' + t.key + '&apos;, 5)" title="连练 5 题一次性打卡">+5</button>' +
+              '<button type="button" class="btn-checkin-secondary" onclick="stepActualCount(&apos;' + t.key + '&apos;, -1)" title="点多手滑撤销 1 题">-1</button>' +
             '</div>' +
-            '<div class="planner-quick-btns">' +
-              '<button type="button" class="planner-btn-step" onclick="stepActualCount(&apos;' + t.key + '&apos;, -5)" title="已练 -5">-5</button>' +
-              '<button type="button" class="planner-btn-step add" onclick="stepActualCount(&apos;' + t.key + '&apos;, 5)" title="已练 +5">+5</button>' +
-              '<button type="button" class="planner-btn-step add" onclick="stepActualCount(&apos;' + t.key + '&apos;, 10)" title="已练 +10">+10</button>' +
+
+            '<!-- 手动数字填空辅助 -->' +
+            '<div style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 8px; padding: 6px 10px; font-size: 0.76rem; color: #64748b;">' +
+              '<div style="display: flex; align-items: center; gap: 4px;">' +
+                '<span>✍️ 已练填空:</span>' +
+                '<input type="number" min="0" value="' + act + '" onchange="updateActualCount(&apos;' + t.key + '&apos;, this.value)" style="width: 44px; padding: 2px 4px; text-align: center; font-weight: 700; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 0.82rem;">' +
+                '<span>' + t.unit + '</span>' +
+              '</div>' +
+              '<div style="display: flex; align-items: center; gap: 4px;">' +
+                '<span>🎯 目标:</span>' +
+                '<button type="button" onclick="stepTargetCount(&apos;' + t.key + '&apos;, -1)" style="border:1px solid #cbd5e1; background:white; border-radius:3px; padding:1px 5px; cursor:pointer;">-</button>' +
+                '<span style="font-weight: 800; color: #0f172a;">' + target + '</span>' +
+                '<button type="button" onclick="stepTargetCount(&apos;' + t.key + '&apos;, 1)" style="border:1px solid #cbd5e1; background:white; border-radius:3px; padding:1px 5px; cursor:pointer;">+</button>' +
+              '</div>' +
             '</div>' +
           '</div>' +
         '</div>';
@@ -4550,7 +4658,7 @@
     if (!container) return;
 
     if (!hist || hist.length === 0) {
-      container.innerHTML = '<div style="text-align: center; color: #94a3b8; font-size: 0.82rem; padding: 24px; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 8px;">暂无历史打卡记录。今天完成练题后点击上方「✨ 确认今日打卡完成」即可生成首张勋章卡！</div>';
+      container.innerHTML = '<div style="text-align: center; color: #94a3b8; font-size: 0.82rem; padding: 24px; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 8px;">暂无历史打卡记录。每练完一题点击卡片上的「🔥 练完打卡 (+1)」即可自动保存今日练习足迹！</div>';
       return;
     }
 
@@ -4572,10 +4680,10 @@
           '<div>' +
             '<div style="display: flex; align-items: center; gap: 8px;">' +
               '<strong style="font-size: 0.9rem; color: #0f172a;">' + rec.date + '</strong>' +
-              (rec.allDone ? '<span class="status-tag status-perfect" style="font-size: 0.68rem; padding: 1px 6px;">100% 满贯达成</span>' : '<span style="font-size: 0.68rem; color: #ea580c; background: #fff7ed; padding: 1px 6px; border-radius: 4px; border: 1px solid #fed7aa;">达成率 ' + rate + '%</span>') +
+              (rec.allDone ? '<span class="status-tag status-perfect" style="font-size: 0.68rem; padding: 1px 6px;">100% 满贯达成</span>' : '<span style="font-size: 0.68rem; color: #ea580c; background: #fff7ed; padding: 1px 6px; border-radius: 4px; border: 1px solid #fed7aa;">达成 ' + rec.completedItems + '/' + rec.validItems + ' 项 (' + rate + '%)</span>') +
             '</div>' +
             '<div style="font-size: 0.74rem; color: #64748b; margin-top: 3px;">' +
-              '达成 ' + rec.completedItems + '/' + rec.validItems + ' 项 · 总计完成 ' + (rec.totalActual || 0) + ' 题' +
+              '已打卡完成 ' + (rec.totalActual || 0) + ' 题 · 自动记录于 ' + (rec.recordedAt || '今日') +
             '</div>' +
           '</div>' +
         '</div>' +
