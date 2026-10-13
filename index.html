@@ -844,6 +844,7 @@
     padding: 24px 24px 48px;
     min-width: 0;
     max-width: 1240px;
+    box-sizing: border-box;
   }
   .module-view {
     animation: fadeIn 0.15s ease-out;
@@ -853,7 +854,7 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     .app-layout {
       flex-direction: column;
     }
@@ -866,9 +867,10 @@
       bottom: auto;
       border-right: none;
       border-bottom: 1px solid var(--border);
-      padding: 8px 10px;
+      padding: 8px 12px;
       z-index: 1000;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      background: #ffffff;
     }
     .sidebar-brand, .sidebar-nav-title, .sidebar-footer, .sidebar-user-card {
       display: none;
@@ -877,50 +879,73 @@
       flex-direction: row;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 5px;
+      gap: 6px;
       margin: 0;
+      width: 100%;
+    }
+    .sidebar-btn {
+      padding: 8px 6px;
+      border-radius: 10px;
+      gap: 6px;
+      min-width: 0;
+      justify-content: center;
+      align-items: center;
+    }
+    .sidebar-btn-desc {
+      display: none;
+    }
+    .sidebar-btn-title {
+      font-size: 0.82rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .sidebar-btn-icon {
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+    .sidebar-active-indicator {
+      display: none !important;
+    }
+    .app-main-content {
+      margin-left: 0 !important;
+      padding: 18px 16px 48px;
+      width: 100%;
+      box-sizing: border-box;
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
+    .app-sidebar {
+      padding: 6px 6px;
+    }
     .sidebar-nav {
       grid-template-columns: repeat(4, 1fr) !important;
       gap: 4px !important;
     }
     .sidebar-btn {
       padding: 6px 2px !important;
-      border-radius: 6px !important;
+      border-radius: 8px !important;
+      flex-direction: column !important;
+      text-align: center !important;
+      justify-content: center !important;
+      gap: 2px !important;
     }
     .sidebar-btn-title {
       font-size: 0.72rem !important;
-    }
-    .sidebar-btn-icon {
-      font-size: 1.05rem !important;
-    }
-    .sidebar-btn {
-      padding: 8px 4px;
-      flex-direction: column;
-      text-align: center;
-      justify-content: center;
-      gap: 3px;
-      border-radius: 8px;
-    }
-    .sidebar-btn-desc {
-      display: none;
-    }
-    .sidebar-btn-title {
-      font-size: 0.78rem;
       white-space: nowrap;
     }
     .sidebar-btn-icon {
-      font-size: 1.15rem;
+      font-size: 1.1rem !important;
     }
     .sidebar-active-indicator {
       display: none !important;
     }
     .app-main-content {
-      margin-left: 0;
-      padding: 12px 10px 40px;
+      margin-left: 0 !important;
+      padding: 12px 10px 40px !important;
+      width: 100%;
+      box-sizing: border-box;
     }
   }
 
