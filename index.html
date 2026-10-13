@@ -1714,7 +1714,7 @@
     <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
       <div style="display: flex; align-items: center; gap: 8px;">
         <span style="font-size: 1.05rem;">📅</span>
-        <span style="font-weight: 700; color: #0f172a; font-size: 0.9rem;">题库发布基准日期：<span style="color: #2563eb;" id="banner-sync-date">2026年10月12日</span></span>
+        <span style="font-weight: 700; color: #0f172a; font-size: 0.9rem;">题库发布基准日期：<span style="color: #2563eb;" id="banner-sync-date">2026年10月13日</span></span>
         <span id="freshness-badge" class="badge" style="background: #ffedd5; color: #c2410c; border-color: #fed7aa; font-weight: 700;">🍉🔥 大西瓜 + 萤火虫 双机构 1:1 实时同步</span>
       </div>
       <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
@@ -2227,7 +2227,7 @@
     </div>
 
     <footer style="text-align: center; margin-top: 32px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-muted);">
-      PTE Academic 考霸智能备考系统 · 双机构同步基准：2026年10月12日 · 原声考场音频与机经变体归大西瓜与萤火虫官方所有
+      PTE Academic 考霸智能备考系统 · 双机构同步基准：2026年10月13日 · 原声考场音频与机经变体归大西瓜与萤火虫官方所有
     </footer>
   </main>
 </div>
@@ -5701,7 +5701,7 @@
     }
   });
 
-  const SYNC_DATE_ISO = "2026-10-12";
+  const SYNC_DATE_ISO = "2026-10-13";
   function checkFreshness() {
     try {
       const syncDate = new Date(SYNC_DATE_ISO);
@@ -7490,7 +7490,22 @@
         body: JSON.stringify(payload)
       });
 
-      if (!resp.ok) throw new Error("上传失败 (HTTP " + resp.status + ")");
+      if (!resp.ok) {
+        if (resp.status === 401) {
+          if (!silent) {
+            const doUpdate = confirm("⚠️ 上传失败 (HTTP 401: Unauthorized)" + String.fromCharCode(10) + String.fromCharCode(10) + "根本原因：您的 GitHub 访问令牌 (Personal Access Token) 已过期或失效（GitHub 默认有效期为 30 天）。" + String.fromCharCode(10) + String.fromCharCode(10) + "是否现在粘贴新生成的 Token 立即更新？");
+            if (doUpdate) {
+              promptUpdateToken();
+              return;
+            }
+          }
+          throw new Error("GitHub Token 已过期或失效 (HTTP 401)。请在「云同步」弹窗中更新 Token。");
+        }
+        if (resp.status === 404) {
+          throw new Error("未找到指定的云端 Gist 备份文件 (HTTP 404)，可能已被删除或 ID 变更。");
+        }
+        throw new Error("上传失败 (HTTP " + resp.status + ")");
+      }
 
       const syncTime = new Date().toLocaleString();
       localStorage.setItem("pte_last_sync_time", syncTime);
@@ -7524,7 +7539,22 @@
         }
       });
 
-      if (!resp.ok) throw new Error("拉取失败 (HTTP " + resp.status + ")");
+      if (!resp.ok) {
+        if (resp.status === 401) {
+          if (!silent) {
+            const doUpdate = confirm("⚠️ 从云端拉取失败 (HTTP 401: Unauthorized)" + String.fromCharCode(10) + String.fromCharCode(10) + "根本原因：您的 GitHub 访问令牌 (Personal Access Token) 已过期或失效（GitHub 默认有效期为 30 天）。" + String.fromCharCode(10) + String.fromCharCode(10) + "是否现在粘贴新生成的 Token 立即更新？");
+            if (doUpdate) {
+              promptUpdateToken();
+              return;
+            }
+          }
+          throw new Error("GitHub Token 已过期或失效 (HTTP 401)。请在「云同步」弹窗中更新 Token。");
+        }
+        if (resp.status === 404) {
+          throw new Error("未找到指定的云端 Gist 备份文件 (HTTP 404)。");
+        }
+        throw new Error("拉取失败 (HTTP " + resp.status + ")");
+      }
       const data = await resp.json();
       if (!data.files || !data.files["pte_wfd_data.json"] || !data.files["pte_wfd_data.json"].content) {
         throw new Error("云端未找到学习档案数据文件。");
@@ -7572,6 +7602,18 @@
     await pullFromGist(true, true);
     await pushToGist(true);
     alert("🎉 智能双向同步完成！电脑与云端数据已完全一致。");
+  }
+
+  function promptUpdateToken() {
+    const curGistId = localStorage.getItem("pte_gist_id") || "";
+    const msg = "请输入您在 GitHub 重新生成的 Personal Access Token (以 ghp_ 开头)：" + String.fromCharCode(10) +
+      "（提示：当前绑定的云端档案 " + (curGistId ? "#" + curGistId.slice(0, 10) + "..." : "") + " 将继续保留）" + String.fromCharCode(10) + String.fromCharCode(10) +
+      "💡 建议在 GitHub 生成 Token 时将 Expiration (有效期) 选为「No expiration」避免以后再次过期。";
+    const newToken = prompt(msg);
+    if (!newToken || !newToken.trim()) return;
+    localStorage.setItem("pte_gist_token", newToken.trim());
+    showToast("🔑 Token 已更新！正在尝试同步云端...");
+    pushToGist(false);
   }
 
   function unbindGist() {
@@ -8471,7 +8513,8 @@
           </div>
         </div>
 
-        <div style="margin-top: 14px; text-align: right;">
+        <div style="margin-top: 14px; display: flex; justify-content: flex-end; gap: 8px; flex-wrap: wrap;">
+          <button class="nav-btn" style="font-size: 0.8rem; color: #2563eb; border-color: #bfdbfe;" onclick="promptUpdateToken()">🔑 快捷更换/更新 Token</button>
           <button class="nav-btn" style="font-size: 0.8rem; color: #dc2626; border-color: #fca5a5;" onclick="unbindGist()">🔌 解除当前云端绑定</button>
         </div>
       </div>
@@ -8488,9 +8531,12 @@
         <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 8px;">
           点击下方链接直达 GitHub Token 创建页面（已为您预设好名称与权限）：
         </p>
-        <a href="https://github.com/settings/tokens/new?description=PTE_Study_Sync&scopes=gist" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: #0f172a; color: white; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600; margin-bottom: 14px;">
+        <a href="https://github.com/settings/tokens/new?description=PTE_Study_Sync&scopes=gist" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: #0f172a; color: white; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">
           🔗 立即前往 GitHub 创建 Token (点底部 Generate Token 即可) ↗
         </a>
+        <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 6px; padding: 6px 10px; font-size: 0.78rem; color: #92400e; margin-bottom: 12px; line-height: 1.45;">
+          ⚠️ <strong>防过期关键提示</strong>：GitHub 默认有效期为 30 天（到期会报 HTTP 401）。在打开的页面中，强烈建议在 <strong>Expiration</strong> 下拉菜单选择 <strong>No expiration (永久有效)</strong> 或 90 天，即可一劳永逸！
+        </div>
 
         <div style="font-size: 0.88rem; font-weight: 600; color: #1e293b; margin-bottom: 6px;">
           步骤 2：粘贴您的 Token 并立即初始化
