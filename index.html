@@ -2892,6 +2892,9 @@
       toggleEditCurrentProfile();
       renderProfilesListModal();
       showToast("✅ 已更新当前学员资料为：" + p.avatar + " " + p.name);
+      if (localStorage.getItem("pte_gist_token") && localStorage.getItem("pte_gist_id")) {
+        debounceGistPush();
+      }
     }
   }
 
@@ -7342,14 +7345,32 @@
       if (remoteData && remoteData.examTarget) {
         localStorage.setItem("pte_exam_target", remoteData.examTarget);
       }
-      if (remoteData && remoteData.profileName) {
-        const activeP = getActiveProfile();
-        if (activeP && (activeP.name === "新学员" || activeP.name === remoteData.profileName)) {
-          activeP.name = remoteData.profileName;
-          if (remoteData.profileAvatar) activeP.avatar = remoteData.profileAvatar;
-          const list = getProfilesList();
-          localStorage.setItem("pte_profiles_list", JSON.stringify(list));
+      if (remoteData && (remoteData.profileName || Array.isArray(remoteData.profiles))) {
+        const list = getProfilesList();
+        const pid = getActiveProfileId();
+        let targetP = list.find(p => p.id === pid) || list[0];
+        if (targetP && remoteData.profileName) {
+          targetP.name = remoteData.profileName;
+          if (remoteData.profileAvatar) targetP.avatar = remoteData.profileAvatar;
+          if (remoteData.examDate) targetP.examDate = remoteData.examDate;
+          if (remoteData.examTarget) targetP.examTarget = remoteData.examTarget;
         }
+
+        if (Array.isArray(remoteData.profiles)) {
+          remoteData.profiles.forEach(rP => {
+            if (!rP || !rP.id) return;
+            const existIdx = list.findIndex(p => p.id === rP.id);
+            if (existIdx >= 0) {
+              if (rP.name) list[existIdx].name = rP.name;
+              if (rP.avatar) list[existIdx].avatar = rP.avatar;
+              if (rP.examDate) list[existIdx].examDate = rP.examDate;
+              if (rP.examTarget) list[existIdx].examTarget = rP.examTarget;
+            } else {
+              list.push(rP);
+            }
+          });
+        }
+        localStorage.setItem("pte_profiles_list", JSON.stringify(list));
       }
     } catch(e) {}
 
@@ -7357,6 +7378,8 @@
     updateStats();
     updateCurrentQuestionBadge();
     updateSidebarCountdown();
+    updateProfileUI();
+    renderProfilesListModal();
 
     const mTab = document.getElementById("tab-mistakes");
     if (mTab && mTab.style.display !== "none") renderMistakesView();
@@ -7378,13 +7401,15 @@
   function createFullBackupBundle() {
     const activeP = getActiveProfile();
     return {
-      version: 1,
+      version: 2,
       app: "PTE WFD Trainer",
       updatedAt: new Date().toISOString(),
       timeStr: new Date().toLocaleString(),
       deviceId: getDeviceId(),
       profileName: activeP ? activeP.name : "Xudong Zhu",
       profileAvatar: activeP ? activeP.avatar : "🧑‍💻",
+      profiles: getProfilesList(),
+      activeProfileId: getActiveProfileId(),
       logs: practiceLogs,
       stats: questionStats,
       vocab: practiceVocab,
@@ -7603,9 +7628,26 @@
             localStorage.setItem("pte_wfd_logs", JSON.stringify(practiceLogs));
             localStorage.setItem("pte_wfd_qstats", JSON.stringify(questionStats));
             localStorage.setItem("pte_wfd_vocab", JSON.stringify(practiceVocab));
+            if (remoteBundle.examDate) localStorage.setItem("pte_exam_date", remoteBundle.examDate);
+            if (remoteBundle.examTarget) localStorage.setItem("pte_exam_target", remoteBundle.examTarget);
+            if (remoteBundle.profileName) {
+              const list = getProfilesList();
+              const pid = getActiveProfileId();
+              let targetP = list.find(p => p.id === pid) || list[0];
+              if (targetP) {
+                targetP.name = remoteBundle.profileName;
+                if (remoteBundle.profileAvatar) targetP.avatar = remoteBundle.profileAvatar;
+                if (remoteBundle.examDate) targetP.examDate = remoteBundle.examDate;
+                if (remoteBundle.examTarget) targetP.examTarget = remoteBundle.examTarget;
+                localStorage.setItem("pte_profiles_list", JSON.stringify(list));
+              }
+            }
           } catch(e) {}
+          saveActiveUserData();
           updateStats();
           updateCurrentQuestionBadge();
+          updateProfileUI();
+          renderProfilesListModal();
           if (!silent) alert("已完全应用云端档案覆盖当前记录！");
         }
       }
@@ -7773,9 +7815,24 @@
             localStorage.setItem("pte_wfd_logs", JSON.stringify(practiceLogs));
             localStorage.setItem("pte_wfd_qstats", JSON.stringify(questionStats));
             localStorage.setItem("pte_wfd_vocab", JSON.stringify(practiceVocab));
+            if (bundle.examDate) localStorage.setItem("pte_exam_date", bundle.examDate);
+            if (bundle.examTarget) localStorage.setItem("pte_exam_target", bundle.examTarget);
+            if (bundle.profileName) {
+              const list = getProfilesList();
+              const pid = getActiveProfileId();
+              let targetP = list.find(p => p.id === pid) || list[0];
+              if (targetP) {
+                targetP.name = bundle.profileName;
+                if (bundle.profileAvatar) targetP.avatar = bundle.profileAvatar;
+                localStorage.setItem("pte_profiles_list", JSON.stringify(list));
+              }
+            }
           } catch(e) {}
+          saveActiveUserData();
           updateStats();
           updateCurrentQuestionBadge();
+          updateProfileUI();
+          renderProfilesListModal();
           alert("已完全覆盖当前记录！");
         }
       }
@@ -7825,9 +7882,24 @@
               localStorage.setItem("pte_wfd_logs", JSON.stringify(practiceLogs));
               localStorage.setItem("pte_wfd_qstats", JSON.stringify(questionStats));
               localStorage.setItem("pte_wfd_vocab", JSON.stringify(practiceVocab));
+              if (bundle.examDate) localStorage.setItem("pte_exam_date", bundle.examDate);
+              if (bundle.examTarget) localStorage.setItem("pte_exam_target", bundle.examTarget);
+              if (bundle.profileName) {
+                const list = getProfilesList();
+                const pid = getActiveProfileId();
+                let targetP = list.find(p => p.id === pid) || list[0];
+                if (targetP) {
+                  targetP.name = bundle.profileName;
+                  if (bundle.profileAvatar) targetP.avatar = bundle.profileAvatar;
+                  localStorage.setItem("pte_profiles_list", JSON.stringify(list));
+                }
+              }
             } catch(err) {}
+            saveActiveUserData();
             updateStats();
             updateCurrentQuestionBadge();
+            updateProfileUI();
+            renderProfilesListModal();
             alert("已成功从备份文件恢复！");
           }
         }
