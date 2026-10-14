@@ -5379,6 +5379,12 @@
         "questionId": "18f56c23805f8a7cd70eabb35201dcd9",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1663476142121787393.m4a",
+        "questionId": "melon_121705",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5389,16 +5395,19 @@
       "tagRepeat": true,
       "tagNew": false,
       "tagDaily": true,
-      "tagShared": false,
-      "tagMelon106": false
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "树木通过吸收从道路上流下的雨水的方式来助益城市。",
     "is_ultra": true,
-    "melon_qid": null,
-    "melon_sentence": null,
-    "trial_words": [],
-    "is_overlap": false,
-    "is_melon_106": false
+    "melon_qid": "121705",
+    "melon_sentence": "Trees benefit the city by soaking up/absorbing rain water that runs off road.",
+    "trial_words": [
+      "absorbing",
+      "up"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 82,
@@ -5822,6 +5831,12 @@
         "questionId": "1806b1f6e52eacb60ac7094656a1ef56",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459339081208074242.m4a",
+        "questionId": "melon_121365",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5832,16 +5847,25 @@
       "tagRepeat": true,
       "tagNew": false,
       "tagDaily": true,
-      "tagShared": false,
-      "tagMelon106": false
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "行业专家将讨论自动化劳动力市场中的工作机会。",
     "is_ultra": true,
-    "melon_qid": null,
-    "melon_sentence": null,
-    "trial_words": [],
-    "is_overlap": false,
-    "is_melon_106": false
+    "melon_qid": "121365",
+    "melon_sentence": "Industrial/Industry experts will discuss job opportunities in an optimal/automatic labor (US)/labour (UK) force/workforce.",
+    "trial_words": [
+      "automatic",
+      "force",
+      "industrial",
+      "industry",
+      "optimal",
+      "uk",
+      "us",
+      "workforce"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 89,
@@ -8772,6 +8796,12 @@
         "questionId": "3c81355f6b958a727111b32d9979e62d",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260511/17784787869376336.m4a",
+        "questionId": "melon_122133",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -8782,16 +8812,16 @@
       "tagRepeat": false,
       "tagNew": false,
       "tagDaily": true,
-      "tagShared": false,
-      "tagMelon106": false
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "所有实验步骤都已在实验手册中列出。",
     "is_ultra": true,
-    "melon_qid": null,
-    "melon_sentence": null,
+    "melon_qid": "122133",
+    "melon_sentence": "All experimental procedures are outlined in the laboratory manual.",
     "trial_words": [],
-    "is_overlap": false,
-    "is_melon_106": false
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 137,
@@ -16181,6 +16211,12 @@
         "questionId": "2fb0fc252321ae7b221cf7f90fa2b5d9",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260609/17810005229685583.m4a",
+        "questionId": "melon_121856",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -16191,16 +16227,16 @@
       "tagRepeat": false,
       "tagNew": false,
       "tagDaily": false,
-      "tagShared": false,
-      "tagMelon106": false
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "投资将用于改善交通基础设施。",
     "is_ultra": false,
-    "melon_qid": null,
-    "melon_sentence": null,
+    "melon_qid": "121856",
+    "melon_sentence": "The investment will be dedicated to improving transport infrastructure.",
     "trial_words": [],
-    "is_overlap": false,
-    "is_melon_106": false
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 260,
@@ -16407,6 +16443,45 @@
     "index": 263,
     "raw_index": 263,
     "ultra_index": null,
+    "qid": "M121743",
+    "sentence": "You must answer/know your security question when you reset your password.",
+    "word_count": 11,
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1663872259724517377.m4a",
+    "audios": [
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1663872259724517377.m4a",
+        "questionId": "melon_121743",
+        "title": "🍉 大西瓜原声",
+        "type": 10
+      }
+    ],
+    "tags": {
+      "degree": 2,
+      "isSimilar": null,
+      "isJJ": 1,
+      "tagHigh": false,
+      "tagRepeat": false,
+      "tagNew": true,
+      "tagDaily": false,
+      "tagShared": false,
+      "tagMelon106": true
+    },
+    "translation": "你必须回答/知道你的安全问题，当你重置密码的时候。",
+    "is_ultra": false,
+    "melon_qid": "121743",
+    "melon_sentence": "You must answer/know your security question when you reset your password.",
+    "trial_words": [
+      "answer",
+      "know"
+    ],
+    "is_overlap": false,
+    "is_melon_106": true,
+    "is_melon_exclusive": true
+  },
+  {
+    "index": 264,
+    "raw_index": 264,
+    "ultra_index": null,
     "qid": "M121584",
     "sentence": "The history department is very active in research.",
     "word_count": 8,
@@ -16440,8 +16515,8 @@
     "is_melon_exclusive": true
   },
   {
-    "index": 264,
-    "raw_index": 264,
+    "index": 265,
+    "raw_index": 265,
     "ultra_index": null,
     "qid": "M121470",
     "sentence": "Relying on natural ability will not get you far on science.",
@@ -16476,8 +16551,8 @@
     "is_melon_exclusive": true
   },
   {
-    "index": 265,
-    "raw_index": 265,
+    "index": 266,
+    "raw_index": 266,
     "ultra_index": null,
     "qid": "M121456",
     "sentence": "Practical experiments are a vital part of legal training.",
@@ -16512,8 +16587,8 @@
     "is_melon_exclusive": true
   },
   {
-    "index": 266,
-    "raw_index": 266,
+    "index": 267,
+    "raw_index": 267,
     "ultra_index": null,
     "qid": "M121428",
     "sentence": "Our facilities include five libraries across the university.",
@@ -16548,8 +16623,8 @@
     "is_melon_exclusive": true
   },
   {
-    "index": 267,
-    "raw_index": 267,
+    "index": 268,
+    "raw_index": 268,
     "ultra_index": null,
     "qid": "M121235",
     "sentence": "A world-renowned finance director will give a guest lecture.",
@@ -16584,8 +16659,8 @@
     "is_melon_exclusive": true
   },
   {
-    "index": 268,
-    "raw_index": 268,
+    "index": 269,
+    "raw_index": 269,
     "ultra_index": null,
     "qid": "M121021",
     "sentence": "Calculators may not be used in this examination.",
