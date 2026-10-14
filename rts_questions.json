@@ -1,0 +1,184 @@
+[
+  {
+    "index": 1,
+    "qid": "045310",
+    "melon_id": 4651,
+    "title": "Forgot the Book 背刺借书的朋友",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1954796571656769538.m4a",
+    "situation_text": "Forgot the Book 背刺借书的朋友",
+    "reference_response": "你答应今天把一本书还给朋友，但当你检查包时，发现自己忘记带了。你的朋友非常着急，需要马上用这本书。你想向朋友解释情况，并约好另一个时间把书给他。你会怎么对他说？",
+    "tags": [
+      "非正式帮助请求IH"
+    ],
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 2,
+    "qid": "045309",
+    "melon_id": 4643,
+    "title": "Borrowing Notes from a Friend 向朋友借笔记",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1954738465484623874.m4a",
+    "situation_text": "Borrowing Notes from a Friend 向朋友借笔记",
+    "reference_response": "你弄丢了自己的笔记，而你需要这些笔记来完成课程作业。你和朋友以前一起学习过，并且你知道她的笔记记得很好。你想问她能不能把笔记借给你。你会怎么对她说？",
+    "tags": [
+      "非正式帮助请求IH"
+    ],
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 3,
+    "qid": "045207",
+    "melon_id": 4648,
+    "title": "Missing Food 宿舍食物失踪案",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1954786021681975298.m4a",
+    "situation_text": "Missing Food 宿舍食物失踪案",
+    "reference_response": "你住在学生公寓，与室友共用厨房。然而，你的食物经常不见。你怀疑室友的访客没有遵守规定。你想和室友谈谈这个问题。你会怎么对他说？",
+    "tags": [
+      "非正式投诉IC"
+    ],
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 4,
+    "qid": "045206",
+    "melon_id": 4645,
+    "title": "Don’t Use My Stuff乱动东西的室友",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1954750478445236225.m4a",
+    "situation_text": "Don’t Use My Stuff乱动东西的室友",
+    "reference_response": "你和室友合住，但你发现当你不在家时，你的私人用品和文具经常被室友使用。你担心会丢失一些重要的课程资料。你想请求室友在未经允许的情况下不要使用你的物品。你会怎么对他们说？",
+    "tags": [
+      "非正式投诉IC"
+    ],
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 5,
+    "qid": "045205",
+    "melon_id": 4644,
+    "title": " Noisy Flatmates 考前一夜在家蹦迪的室友",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1954743635299848194.m4a",
+    "situation_text": "Noisy Flatmates 考前一夜在家蹦迪的室友",
+    "reference_response": "你明天有一场重要的考试，但你现在无法入睡。你的室友们很吵，他们正在放很大的音乐、唱歌。你想请求他们安静一些，好让你休息。你会怎么对他们说？",
+    "tags": [
+      "非正式投诉IC"
+    ],
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 6,
+    "qid": "045203",
+    "melon_id": 4595,
+    "title": "Annoying Guy 图书馆里吵闹的家伙",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1954797223992676353.m4a",
+    "situation_text": "Annoying Guy 图书馆里吵闹的家伙",
+    "reference_response": "你下周有一项作业要完成，而此刻你正在图书馆里，但坐在你旁边的人正在不戴耳机的情况下播放视频，这让你无法专心学习，分心得很厉害。你应该和他们交流一下，以确保自己能有一个安静的学习环境。你会怎么说呢？",
+    "tags": [
+      "非正式投诉IC"
+    ],
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 7,
+    "qid": "045114",
+    "melon_id": 4653,
+    "title": "Student Loan Delay 悲惨世界",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20250819/17555938539974602.m4a",
+    "situation_text": "Student Loan Delay 悲惨世界",
+    "reference_response": "你本来应该一次性付清学费，但你的学生贷款还没有到账，目前你没有足够的钱支付学费。你正在做兼职来维持生活，但仍然需要更多时间。你想把情况解释给学校的工作人员，并询问是否可以延期或分期付款。你会怎么对他说？",
+    "tags": [
+      "正式帮助请求FH"
+    ],
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 8,
+    "qid": "045113",
+    "melon_id": 4652,
+    "title": "Computer Trouble 电脑坏了作业交不了，你信吗？",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1954812833250201602.m4a",
+    "situation_text": "Computer Trouble 电脑坏了作业交不了，你信吗？",
+    "reference_response": "你已经完成了作业，但电脑突然坏了，无法在线提交文件。你担心会错过截止日期。你想向教授解释情况，并请教她该怎么办。你会怎么对她说？",
+    "tags": [
+      "正式帮助请求FH"
+    ],
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 9,
+    "qid": "045112",
+    "melon_id": 4650,
+    "title": " Cafeteria Job 请让我做牛马",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1954795335935119362.m4a",
+    "situation_text": "Cafeteria Job 请让我做牛马",
+    "reference_response": "你最近看到一则大学食堂兼职的广告，但你不确定这个职位是否还有效。你还想进一步了解这份工作的具体任务。你决定去找食堂经理询问这些细节。你会怎么对他说？",
+    "tags": [
+      "正式帮助请求FH"
+    ],
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 10,
+    "qid": "045111",
+    "melon_id": 4649,
+    "title": "Change Lecture Time 痴心妄想",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1954790013065547778.m4a",
+    "situation_text": "Change Lecture Time 痴心妄想",
+    "reference_response": "你本周有一节下午 3 点的课，但你刚得知，同一时间有一场你需要参加的运动会。你担心会错过课程。你想问老师是否可以重新安排上课时间，以便你能同时参加两边的活动。你会怎么对她说？",
+    "tags": [
+      "正式帮助请求FH"
+    ],
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 11,
+    "qid": "045110",
+    "melon_id": 4647,
+    "title": "Late Rent 宽限几天",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1954775139811905538.m4a",
+    "situation_text": "Late Rent 宽限几天",
+    "reference_response": "你的房租将在本周五到期，但你无法按时支付。你想询问房东是否可以晚几天交租。你会怎么对他说？",
+    "tags": [
+      "正式帮助请求FH"
+    ],
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 12,
+    "qid": "045109",
+    "melon_id": 4646,
+    "title": "On the Right Track? 写到点子上了吗？",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1954766748087537665.m4a",
+    "situation_text": "On the Right Track? 写到点子上了吗？",
+    "reference_response": "你正在为课程写一篇论文，但不确定自己是否写得方向正确。你想请教授帮你看一下，并给你一些指导。你会怎么对她说？",
+    "tags": [
+      "正式帮助请求FH"
+    ],
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 13,
+    "qid": "045104",
+    "melon_id": 4588,
+    "title": "Job Application 工作申请",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1951856127016751106.m4a",
+    "situation_text": "Job Application 工作申请",
+    "reference_response": "",
+    "tags": [
+      "正式帮助请求FH"
+    ],
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 14,
+    "qid": "045102",
+    "melon_id": 4586,
+    "title": "The Damaged Book 破损的书",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1951852219007553538.m4a",
+    "situation_text": "The Damaged Book 破损的书",
+    "reference_response": "",
+    "tags": [
+      "正式帮助请求FH"
+    ],
+    "source": "大西瓜周二真题预测"
+  }
+]

@@ -4305,28 +4305,28 @@
 
   const ALL_PLANNER_TASK_DEFS = [
     // 口语 (Speaking - 7题)
-    { key: "RS", name: "RS 句子复述", english: "Repeat Sentence", category: "speaking", unit: "题", tier: "tier1", isCore: true, weight: "口语 16% + 听力 17%", desc: "听口双命脉，Chunk意群记忆，流利不回读" },
-    { key: "DI", name: "DI 描述图像", english: "Describe Image", category: "speaking", unit: "题", tier: "tier1", isCore: true, weight: "口语 31% · 全科 15%", desc: "口语第一大题，模板流利度第一" },
-    { key: "SGD", name: "SGD 讨论总结", english: "Summarize Group Discussion", category: "speaking", unit: "题", tier: "tier1", isCore: true, weight: "口语 19% + 听力 20%", desc: "新题型主力，抓 2-3 观点套模板" },
-    { key: "RA", name: "RA 大声朗读", english: "Read Aloud", category: "speaking", unit: "题", tier: "tier2", isCore: true, weight: "口语 9% · 全科 4%", desc: "意群断句呼吸，防喷麦，强化发音" },
+    { key: "RS", name: "RS 句子复述", english: "Repeat Sentence", category: "speaking", unit: "题", tier: "tier1", isCore: true, weight: "口语 16% + 听力 17%", desc: "听口双命脉，Chunk意群记忆，流利不回读", bankCount: 300, bankRoute: "karaoke", bankDesc: "300题真题音频" },
+    { key: "DI", name: "DI 描述图像", english: "Describe Image", category: "speaking", unit: "题", tier: "tier1", isCore: true, weight: "口语 31% · 全科 15%", desc: "口语第一大题，模板流利度第一", bankCount: 120, bankRoute: "karaoke", bankDesc: "120题真题图表" },
+    { key: "SGD", name: "SGD 讨论总结", english: "Summarize Group Discussion", category: "speaking", unit: "题", tier: "tier1", isCore: true, weight: "口语 19% + 听力 20%", desc: "新题型主力，抓 2-3 观点套模板", bankCount: 20, bankRoute: "modal", bankDesc: "20题大西瓜真题原声" },
+    { key: "RA", name: "RA 大声朗读", english: "Read Aloud", category: "speaking", unit: "题", tier: "tier2", isCore: true, weight: "口语 9% · 全科 4%", desc: "意群断句呼吸，防喷麦，强化发音", bankCount: 120, bankRoute: "karaoke", bankDesc: "120题官方音频示范" },
     { key: "RL", name: "RL 复述讲座", english: "Re-tell Lecture", category: "speaking", unit: "题", tier: "tier2", isCore: false, weight: "口语 13% + 听力 13%", desc: "老题型，听讲座记 3-4 个主谓宾套模板" },
-    { key: "RTS", name: "RTS 应对情景", english: "Respond to a Situation", category: "speaking", unit: "题", tier: "tier2", isCore: false, weight: "口语 13% · 全科 6%", desc: "日常交际情景，按要求给出 2-3 句应对" },
+    { key: "RTS", name: "RTS 应对情景", english: "Respond to a Situation", category: "speaking", unit: "题", tier: "tier2", isCore: false, weight: "口语 13% · 全科 6%", desc: "日常交际情景，按要求给出 2-3 句应对", bankCount: 14, bankRoute: "modal", bankDesc: "14题大西瓜真题原声" },
     { key: "ASQ", name: "ASQ 回答短问题", english: "Answer Short Question", category: "speaking", unit: "题", tier: "tier3", isCore: false, weight: "听力 4% · 全科 2%", desc: "低性价比常识题，会就答不会随意过" },
 
     // 写作 (Writing - 2题)
-    { key: "WE", name: "WE 议论文写作", english: "Write Essay", category: "writing", unit: "篇", tier: "tier1", isCore: true, weight: "写作 31% · 全科 7%", desc: "万能模板防错，打字 0 拼写语法手误" },
-    { key: "SWT", name: "SWT 总结文本", english: "Summarize Written Text", category: "writing", unit: "篇", tier: "tier1", isCore: true, weight: "写作 28% + 阅读 23%", desc: "一句话概括长文，连接词拼接关键句" },
+    { key: "WE", name: "WE 议论文写作", english: "Write Essay", category: "writing", unit: "篇", tier: "tier1", isCore: true, weight: "写作 31% · 全科 7%", desc: "万能模板防错，打字 0 拼写语法手误", bankCount: 74, bankRoute: "modal", bankDesc: "74篇双机构高分范文" },
+    { key: "SWT", name: "SWT 总结文本", english: "Summarize Written Text", category: "writing", unit: "篇", tier: "tier1", isCore: true, weight: "写作 28% + 阅读 23%", desc: "一句话概括长文，连接词拼接关键句", bankCount: 123, bankRoute: "modal", bankDesc: "123篇双机构真题标准摘要" },
 
     // 阅读 (Reading - 5题)
-    { key: "FIB-D", name: "FIB-D 阅读填空", english: "Reading Dropdown", category: "reading", unit: "篇", tier: "tier1", isCore: true, weight: "阅读 25% · 全科 7%", desc: "阅读第一大题，学术高频固定搭配" },
-    { key: "FIB-DD", name: "FIB-DD 拖拽填空", english: "Reading Drag & Drop", category: "reading", unit: "篇", tier: "tier2", isCore: false, weight: "阅读 20% · 全科 6%", desc: "词性语法预判，从选词库拖拽填空" },
-    { key: "RO", name: "RO 段落重排", english: "Re-order Paragraphs", category: "reading", unit: "题", tier: "tier3", isCore: false, weight: "阅读 9% · 全科 3%", desc: "成对计分，找首句与代词指代关系" },
+    { key: "FIB-D", name: "FIB-D 阅读填空", english: "Reading Dropdown", category: "reading", unit: "篇", tier: "tier1", isCore: true, weight: "阅读 25% · 全科 7%", desc: "阅读第一大题，学术高频固定搭配", bankCount: 216, bankRoute: "modal", bankDesc: "216篇萤火虫周预测真题" },
+    { key: "FIB-DD", name: "FIB-DD 拖拽填空", english: "Reading Drag & Drop", category: "reading", unit: "篇", tier: "tier2", isCore: false, weight: "阅读 20% · 全科 6%", desc: "词性语法预判，从选词库拖拽填空", bankCount: 146, bankRoute: "modal", bankDesc: "146篇萤火虫周预测真题" },
+    { key: "RO", name: "RO 段落重排", english: "Re-order Paragraphs", category: "reading", unit: "题", tier: "tier3", isCore: false, weight: "阅读 9% · 全科 3%", desc: "成对计分，找首句与代词指代关系", bankCount: 76, bankRoute: "modal", bankDesc: "76题萤火虫周预测真题" },
     { key: "R-MCM", name: "R-MCM 阅读多选", english: "Reading Multi Choice", category: "reading", unit: "题", tier: "tier3", isCore: false, weight: "阅读 5% · 倒扣分", desc: "倒扣分题型！不确定只选 1 个最稳选项" },
     { key: "R-MCS", name: "R-MCS 阅读单选", english: "Reading Single Choice", category: "reading", unit: "题", tier: "tier3", isCore: false, weight: "阅读 3% · 极低占比", desc: "读题目抓关键词回原文定位，秒过" },
 
     // 听力 (Listening - 8题)
-    { key: "WFD", name: "WFD 听写句子", english: "Write From Dictation", category: "listening", unit: "题", tier: "tier1", isCore: true, weight: "写作 23% + 听力 13%", desc: "全场第一命门！双机构周预测题库打卡 (系统做题自动累计)" },
-    { key: "SST", name: "SST 听力总结", english: "Summarize Spoken Text", category: "listening", unit: "篇", tier: "tier2", isCore: false, weight: "写作 18% + 听力 10%", desc: "听长音频记 3-4 核心论点，套万能模版" },
+    { key: "WFD", name: "WFD 听写句子", english: "Write From Dictation", category: "listening", unit: "题", tier: "tier1", isCore: true, weight: "写作 23% + 听力 13%", desc: "全场第一命门！双机构周预测题库打卡 (系统做题自动累计)", bankCount: 182, bankRoute: "wfd", bankDesc: "182题双机构周预测真题" },
+    { key: "SST", name: "SST 听力总结", english: "Summarize Spoken Text", category: "listening", unit: "篇", tier: "tier2", isCore: false, weight: "写作 18% + 听力 10%", desc: "听长音频记 3-4 核心论点，套万能模版", bankCount: 111, bankRoute: "modal", bankDesc: "111篇双机构长音频与核心要点" },
     { key: "HIW", name: "HIW 高亮错词", english: "Highlight Incorrect Words", category: "listening", unit: "篇", tier: "tier2", isCore: false, weight: "阅读 13% + 听力 8%", desc: "眼睛比音频快半秒，倒扣分，不确定别点" },
     { key: "FIB-L", name: "FIB-L 听力填空", english: "Fill in the Blanks (L)", category: "listening", unit: "篇", tier: "tier3", isCore: false, weight: "听力 8% · 全科 3%", desc: "听录音填空，注意单复数与过去式后缀" },
     { key: "L-MCM", name: "L-MCM 听力多选", english: "Listening Multi Choice", category: "listening", unit: "题", tier: "tier3", isCore: false, weight: "听力 3% · 倒扣分", desc: "倒扣分，仅选 1 个完全确定的选项" },
@@ -5121,6 +5121,18 @@
                     '<button type="button" onclick="stepTargetCount(&apos;' + t.key + '&apos;, 1)" style="border:1px solid #cbd5e1; background:white; border-radius:3px; padding:1px 5px; cursor:pointer;">+</button>' +
                   '</div>' +
                 '</div>' +
+
+                '<!-- 直达真题库与强化训练通道 -->' +
+                '<div style="margin-top: 8px;">' +
+                  (t.key === "WFD" ? 
+                    '<button type="button" onclick="switchAppModule(&apos;wfd&apos;)" style="width: 100%; padding: 7px 10px; background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; border-radius: 6px; font-weight: 700; font-size: 0.8rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px;">🚀 立即开始 WFD 极速听写打卡 (182题已就绪) ↗</button>' :
+                   ((t.key === "RS" || t.key === "RA" || t.key === "DI") ?
+                    '<button type="button" onclick="switchAppModule(&apos;karaoke&apos;)" style="width: 100%; padding: 7px 10px; background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; border-radius: 6px; font-weight: 700; font-size: 0.8rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px;">🎙️ 直达 ' + t.name.split(' ')[0] + ' 卡拉OK流利度训练器 ↗</button>' :
+                   (t.bankRoute === "modal" ?
+                    '<button type="button" onclick="openPlannerBankModal(&apos;' + t.key + '&apos;)" style="width: 100%; padding: 7px 10px; background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; border-radius: 6px; font-weight: 700; font-size: 0.8rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px;">📖 刷 ' + t.name.split(' ')[0] + ' 真题库 (' + t.bankDesc + ') ↗</button>' :
+                    '<button type="button" onclick="openTaskDetail(&apos;' + t.key + '&apos;)" style="width: 100%; padding: 7px 10px; background: #f8fafc; color: #475569; border: 1px solid #e2e8f0; border-radius: 6px; font-weight: 600; font-size: 0.78rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px;">🔍 查看考场交互与破题技巧 ↗</button>'
+                   ))) +
+                '</div>' +
               '</div>' +
             '</div>';
           }
@@ -5426,6 +5438,240 @@
     if (typeof renderPlannerView === "function") renderPlannerView();
     if (typeof renderHomeCheckinWidget === "function") renderHomeCheckinWidget();
   });
+
+  // =========================================================================
+  // 📚 每日打卡各题型真题库查看与在线练习弹窗引擎
+  // =========================================================================
+  const PLANNER_BANK_MAP = {
+    SGD: { file: "sgd_questions.json", name: "SGD 讨论总结", title: "SGD 讨论总结 · 大西瓜周二真题预测库 (20题原声)", unit: "题" },
+    RTS: { file: "rts_questions.json", name: "RTS 应对情景", title: "RTS 应对情景 · 大西瓜周二真题预测库 (14题原声)", unit: "题" },
+    "FIB-D": { file: "fib_d_questions.json", name: "FIB-D 阅读填空", title: "FIB-D 阅读下拉填空 · 萤火虫周预测真题库 (216题)", unit: "篇" },
+    "FIB-DD": { file: "fib_dd_questions.json", name: "FIB-DD 拖拽填空", title: "FIB-DD 拖拽填空 · 萤火虫周预测真题库 (146题)", unit: "篇" },
+    RO: { file: "ro_questions.json", name: "RO 段落重排", title: "RO 段落重排 · 萤火虫周预测真题库 (76题)", unit: "题" },
+    WE: { file: "we_questions.json", name: "WE 议论文写作", title: "WE 议论文写作 · 双机构高分范文库 (74篇真题)", unit: "篇" },
+    SWT: { file: "swt_questions.json", name: "SWT 总结文本", title: "SWT 总结文本 · 双机构真题标准摘要库 (123篇)", unit: "篇" },
+    SST: { file: "sst_questions.json", name: "SST 听力总结", title: "SST 听力总结 · 双机构长音频与核心要点库 (111篇)", unit: "篇" }
+  };
+
+  let currentPlannerBankKey = null;
+  let currentPlannerBankQuestions = [];
+  let currentPlannerBankFiltered = [];
+  let selectedPlannerBankIndex = 0;
+  const _cachedPlannerBanks = {};
+
+  async function openPlannerBankModal(taskKey) {
+    currentPlannerBankKey = taskKey;
+    const config = PLANNER_BANK_MAP[taskKey];
+    if (!config) return;
+
+    const modalEl = document.getElementById("planner-bank-viewer-modal");
+    if (!modalEl) return;
+
+    document.getElementById("pb-modal-badge").innerText = taskKey;
+    document.getElementById("pb-modal-title").innerText = config.title;
+    document.getElementById("pb-modal-count-badge").innerText = "加载中...";
+    document.getElementById("pb-questions-list").innerHTML = '<div style="padding: 20px; text-align: center; color: #64748b; font-size: 0.85rem;">⏳ 正在调取最新同步题库数据...</div>';
+    document.getElementById("pb-question-detail-panel").innerHTML = '<div style="padding: 40px 20px; text-align: center; color: #94a3b8;">加载中...</div>';
+    
+    modalEl.classList.add("active");
+    document.body.style.overflow = "hidden";
+
+    try {
+      if (!_cachedPlannerBanks[taskKey]) {
+        const resp = await fetch(config.file);
+        if (!resp.ok) throw new Error("HTTP " + resp.status);
+        _cachedPlannerBanks[taskKey] = await resp.json();
+      }
+      currentPlannerBankQuestions = _cachedPlannerBanks[taskKey] || [];
+      currentPlannerBankFiltered = [...currentPlannerBankQuestions];
+      selectedPlannerBankIndex = 0;
+
+      document.getElementById("pb-modal-count-badge").innerText = currentPlannerBankQuestions.length + " " + config.unit + "已同步";
+      renderPlannerBankSidebar();
+      renderPlannerBankDetail();
+    } catch(err) {
+      document.getElementById("pb-questions-list").innerHTML = '<div style="padding: 20px; color: #dc2626; font-size: 0.85rem;">题库加载异常: ' + err.message + '</div>';
+    }
+  }
+
+  function closePlannerBankModal() {
+    const modalEl = document.getElementById("planner-bank-viewer-modal");
+    if (modalEl) modalEl.classList.remove("active");
+    document.body.style.overflow = "";
+    const audioEl = document.getElementById("pb-audio-player");
+    if (audioEl) {
+      audioEl.pause();
+      audioEl.src = "";
+    }
+  }
+
+  function handlePlannerBankModalClick(e) {
+    if (e.target && e.target.id === "planner-bank-viewer-modal") {
+      closePlannerBankModal();
+    }
+  }
+
+  function filterPlannerBankQuestions() {
+    const q = (document.getElementById("pb-search-input").value || "").toLowerCase().trim();
+    if (!q) {
+      currentPlannerBankFiltered = [...currentPlannerBankQuestions];
+    } else {
+      currentPlannerBankFiltered = currentPlannerBankQuestions.filter(item => {
+        const qid = String(item.qid || "").toLowerCase();
+        const title = String(item.title || "").toLowerCase();
+        const content = String(item.content || item.prompt || item.passage || item.situation_text || item.discussion_text || "").toLowerCase();
+        return qid.includes(q) || title.includes(q) || content.includes(q);
+      });
+    }
+    selectedPlannerBankIndex = 0;
+    renderPlannerBankSidebar();
+    renderPlannerBankDetail();
+  }
+
+  function renderPlannerBankSidebar() {
+    const listEl = document.getElementById("pb-questions-list");
+    if (!listEl) return;
+    if (currentPlannerBankFiltered.length === 0) {
+      listEl.innerHTML = '<div style="padding: 20px 10px; text-align: center; color: #94a3b8; font-size: 0.8rem;">未匹配到相关题目</div>';
+      return;
+    }
+    let html = "";
+    currentPlannerBankFiltered.forEach((item, idx) => {
+      const isSel = idx === selectedPlannerBankIndex;
+      const title = item.title || item.qid || ("第 " + (idx + 1) + " 题");
+      html += '<div onclick="selectPlannerBankItem(' + idx + ')" style="padding: 8px 10px; border-radius: 6px; cursor: pointer; border: 1px solid ' + (isSel ? '#2563eb' : '#e2e8f0') + '; background: ' + (isSel ? '#eff6ff' : '#ffffff') + '; transition: all 0.15s; margin-bottom: 4px;">' +
+        '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">' +
+          '<strong style="font-size: 0.8rem; color: ' + (isSel ? '#1d4ed8' : '#1e293b') + ';">#' + (item.qid || (idx + 1)) + '</strong>' +
+          '<span style="font-size: 0.68rem; color: #64748b; background: #f1f5f9; padding: 1px 5px; border-radius: 3px;">' + (item.source ? (item.source.includes("大西瓜") ? "🍉 大西瓜" : "🔥 萤火虫") : "") + '</span>' +
+        '</div>' +
+        '<div style="font-size: 0.75rem; color: #475569; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">' + title + '</div>' +
+      '</div>';
+    });
+    listEl.innerHTML = html;
+  }
+
+  function selectPlannerBankItem(idx) {
+    selectedPlannerBankIndex = idx;
+    renderPlannerBankSidebar();
+    renderPlannerBankDetail();
+  }
+
+  function renderPlannerBankDetail() {
+    const panel = document.getElementById("pb-question-detail-panel");
+    if (!panel) return;
+    const item = currentPlannerBankFiltered[selectedPlannerBankIndex];
+    if (!item) {
+      panel.innerHTML = '<div style="text-align: center; color: #94a3b8; padding: 40px 0;">未选中任何题目</div>';
+      return;
+    }
+
+    const taskKey = currentPlannerBankKey;
+    let detailHtml = '<div style="background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px;">' +
+      '<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">' +
+        '<div>' +
+          '<div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">' +
+            '<span style="background: #2563eb; color: white; font-weight: 800; font-size: 0.75rem; padding: 2px 8px; border-radius: 4px;">#' + (item.qid || (selectedPlannerBankIndex + 1)) + '</span>' +
+            '<strong style="font-size: 1.05rem; color: #0f172a;">' + (item.title || '') + '</strong>' +
+          '</div>' +
+          '<div style="font-size: 0.75rem; color: #64748b;">来源：' + (item.source || '官方真题预测') + '</div>' +
+        '</div>' +
+        '<button type="button" onclick="checkinOneQuestion(&apos;' + taskKey + '&apos;); showToast(&apos;✅ ' + taskKey + ' 今日打卡 +1！&apos;);" style="padding: 6px 14px; background: #16a34a; color: white; border: none; border-radius: 6px; font-weight: 700; font-size: 0.82rem; cursor: pointer; box-shadow: 0 2px 6px rgba(22,163,74,0.3);">' +
+          '🔥 练完本题，立即打卡 (+1)' +
+        '</button>' +
+      '</div>';
+
+    if (item.audio_url) {
+      detailHtml += '<div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 10px 14px; margin-bottom: 14px;">' +
+        '<div style="font-size: 0.78rem; font-weight: 700; color: #334155; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">' +
+          '<span>🎧 真题原声音频</span>' +
+          '<span style="font-size: 0.72rem; color: #0284c7; background: #e0f2fe; padding: 1px 6px; border-radius: 3px;">高保真还原考场</span>' +
+        '</div>' +
+        '<audio id="pb-audio-player" controls src="' + item.audio_url + '" style="width: 100%; height: 36px; outline: none;"></audio>' +
+      '</div>';
+    }
+
+    if (taskKey === "SGD") {
+      detailHtml += '<div style="margin-bottom: 14px;">' +
+        '<div style="font-size: 0.82rem; font-weight: 700; color: #1e293b; margin-bottom: 6px;">📝 讨论背景与三人对话逐字稿：</div>' +
+        '<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; font-size: 0.84rem; line-height: 1.6; color: #334155; max-height: 38vh; overflow-y: auto;">' +
+          (item.discussion_text || item.solution_html || '').replace(/Speaker ([0-9]):/g, '<strong style="color: #2563eb;">Speaker $1:</strong>') +
+        '</div>' +
+      '</div>';
+    } else if (taskKey === "RTS") {
+      detailHtml += '<div style="margin-bottom: 14px;">' +
+        '<div style="font-size: 0.82rem; font-weight: 700; color: #1e293b; margin-bottom: 6px;">🎯 考场情景与作答要求：</div>' +
+        '<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; font-size: 0.84rem; line-height: 1.6; color: #334155; margin-bottom: 10px;">' +
+          item.situation_text +
+        '</div>' +
+        '<div style="font-size: 0.82rem; font-weight: 700; color: #15803d; margin-bottom: 6px;">🌟 官方满分参考回答：</div>' +
+        '<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px; font-size: 0.84rem; line-height: 1.6; color: #166534;">' +
+          item.reference_response +
+        '</div>' +
+      '</div>';
+    } else if (taskKey === "FIB-D" || taskKey === "FIB-DD") {
+      detailHtml += '<div style="margin-bottom: 14px;">' +
+        '<div style="font-size: 0.82rem; font-weight: 700; color: #1e293b; margin-bottom: 6px;">📖 学术阅读长文 (带空位)：</div>' +
+        '<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; font-size: 0.86rem; line-height: 1.7; color: #1e293b; max-height: 32vh; overflow-y: auto;">' +
+          item.content +
+        '</div>' +
+      '</div>';
+      if (item.translation) {
+        detailHtml += '<div style="margin-bottom: 14px;">' +
+          '<div style="font-size: 0.82rem; font-weight: 700; color: #0284c7; margin-bottom: 6px;">🌐 全文精译与选项解析：</div>' +
+          '<div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 12px; font-size: 0.82rem; line-height: 1.6; color: #0369a1; max-height: 25vh; overflow-y: auto;">' +
+            item.translation +
+          '</div>' +
+        '</div>';
+      }
+    } else if (taskKey === "WE") {
+      detailHtml += '<div style="margin-bottom: 14px;">' +
+        '<div style="font-size: 0.82rem; font-weight: 700; color: #1e293b; margin-bottom: 6px;">📝 作文真题题干：</div>' +
+        '<div style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: 8px; padding: 12px; font-size: 0.86rem; line-height: 1.6; color: #9a3412; font-weight: 600; margin-bottom: 10px;">' +
+          item.prompt +
+        '</div>' +
+        '<div style="font-size: 0.82rem; font-weight: 700; color: #15803d; margin-bottom: 6px;">🌟 官方高分参考范文与破题思路：</div>' +
+        '<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px; font-size: 0.84rem; line-height: 1.65; color: #166534; max-height: 35vh; overflow-y: auto;">' +
+          (item.sample_essay || item.solution_html || '暂无范文') +
+        '</div>' +
+      '</div>';
+    } else if (taskKey === "SWT") {
+      detailHtml += '<div style="margin-bottom: 14px;">' +
+        '<div style="font-size: 0.82rem; font-weight: 700; color: #1e293b; margin-bottom: 6px;">📖 原文材料长文：</div>' +
+        '<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; font-size: 0.84rem; line-height: 1.65; color: #334155; max-height: 30vh; overflow-y: auto; margin-bottom: 10px;">' +
+          item.passage +
+        '</div>' +
+        '<div style="font-size: 0.82rem; font-weight: 700; color: #15803d; margin-bottom: 6px;">🌟 官方标准一句话总结答案 (One-sentence Summary)：</div>' +
+        '<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px; font-size: 0.84rem; line-height: 1.6; color: #166534; font-weight: 600;">' +
+          (item.sample_summary || item.solution_html || '') +
+        '</div>' +
+      '</div>';
+    } else if (taskKey === "SST") {
+      detailHtml += '<div style="margin-bottom: 14px;">' +
+        '<div style="font-size: 0.82rem; font-weight: 700; color: #1e293b; margin-bottom: 6px;">🎙️ 讲座逐字稿：</div>' +
+        '<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; font-size: 0.84rem; line-height: 1.6; color: #334155; max-height: 25vh; overflow-y: auto; margin-bottom: 10px;">' +
+          item.transcript +
+        '</div>' +
+        '<div style="font-size: 0.82rem; font-weight: 700; color: #15803d; margin-bottom: 6px;">🌟 官方 50~70 词高分总结范文与要点：</div>' +
+        '<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px; font-size: 0.84rem; line-height: 1.6; color: #166534;">' +
+          (item.sample_summary || item.solution_html || '') +
+        '</div>' +
+      '</div>';
+    } else if (taskKey === "RO") {
+      detailHtml += '<div style="margin-bottom: 14px;">' +
+        '<div style="font-size: 0.82rem; font-weight: 700; color: #1e293b; margin-bottom: 6px;">🔀 乱序段落内容：</div>' +
+        '<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; font-size: 0.84rem; line-height: 1.65; color: #334155; margin-bottom: 10px;">' +
+          item.content +
+        '</div>' +
+        '<div style="font-size: 0.82rem; font-weight: 700; color: #15803d; margin-bottom: 6px;">🌟 官方正确排列顺序与指代逻辑：</div>' +
+        '<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px; font-size: 0.84rem; line-height: 1.6; color: #166534; font-weight: 600;">' +
+          item.correct_order +
+        '</div>' +
+      '</div>';
+    }
+
+    detailHtml += '</div>';
+    panel.innerHTML = detailHtml;
+  }
 
   function switchTab(mode) {
     if (mode === "score-explorer") {
@@ -9411,6 +9657,31 @@
     <div style="display: flex; gap: 8px; justify-content: center;">
       <button class="nav-btn" onclick="closeFirstVisitModal()" style="padding: 8px 16px; font-size: 0.85rem;">使用默认档案</button>
       <button class="btn-submit" onclick="submitFirstVisitProfile()" style="padding: 8px 24px; font-size: 0.9rem; background: #2563eb;">🚀 开始专属备考</button>
+    </div>
+  </div>
+<!-- 每日打卡各题型真题库与在线练习弹窗 MODAL -->
+<div id="planner-bank-viewer-modal" class="modal-overlay" onclick="handlePlannerBankModalClick(event)">
+  <div class="modal-dialog" style="max-width: 960px; width: 95%;">
+    <div class="modal-header-explorer" style="background: #1e293b; color: white;">
+      <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+        <span id="pb-modal-badge" class="explorer-header-badge" style="background:#ea580c;color:white;font-size:0.85rem;">SGD</span>
+        <h2 id="pb-modal-title" style="font-size:1.15rem;font-weight:800;color:white;margin:0;">全真题库</h2>
+        <span id="pb-modal-count-badge" class="safe-mark-badge" style="background: #059669; color: white;">已就绪</span>
+      </div>
+      <button class="modal-close-btn" onclick="closePlannerBankModal()" style="color:white;">&times;</button>
+    </div>
+    <div class="modal-body" style="padding: 16px 20px; overflow-y: auto; -webkit-overflow-scrolling: touch; flex: 1 1 auto; min-height: 0; overscroll-behavior: contain;">
+      <div style="display: flex; gap: 16px; flex-wrap: wrap;" id="pb-modal-content">
+        <!-- 左侧题目快速导航列表 -->
+        <div style="flex: 1 1 260px; max-width: 320px; border-right: 1px solid #e2e8f0; padding-right: 14px;">
+          <input type="text" id="pb-search-input" placeholder="🔍 搜索题号或标题..." oninput="filterPlannerBankQuestions()" style="width: 100%; box-sizing: border-box; padding: 7px 10px; font-size: 0.82rem; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 8px;">
+          <div id="pb-questions-list" style="max-height: 58vh; overflow-y: auto; display: flex; flex-direction: column; gap: 4px;"></div>
+        </div>
+        <!-- 右侧题目详情与交互区 -->
+        <div style="flex: 2 1 360px; min-width: 280px;" id="pb-question-detail-panel">
+          <div style="text-align: center; color: #94a3b8; padding: 40px 0;">请从左侧选择题目进行强化练习</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
