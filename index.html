@@ -1897,8 +1897,14 @@
 
     <div id="practice-result" class="result-box"></div>
 
-    <!-- 本题历史答题记录 (置于页面最底部，防第二次练习时瞄到答案) -->
-    <div id="curr-q-history-box" style="margin-top: 24px; border-top: 1.5px dashed #cbd5e1; padding-top: 16px; display: none;"></div>
+    <!-- 本题历史答题记录 (置于页面最底部，默认折叠收起，点开才展开，彻底防瞄答案) -->
+    <details id="curr-q-history-box" style="margin-top: 24px; border: 1.5px dashed #cbd5e1; border-radius: 10px; padding: 10px 14px; background: #f8fafc; display: none;">
+      <summary style="cursor: pointer; font-size: 0.88rem; font-weight: 700; color: #475569; user-select: none; display: flex; align-items: center; justify-content: space-between;">
+        <span id="curr-q-history-summary-title">📜 查看本题往次作答历史 (默认已折叠防瞄)</span>
+        <span style="font-size: 0.78rem; color: #2563eb; font-weight: 600;">点击展开 / 收起 ▾</span>
+      </summary>
+      <div id="curr-q-history-content" style="margin-top: 12px; display: flex; flex-direction: column; gap: 8px;"></div>
+    </details>
   </div>
 
   <!-- TAB 2: MISTAKE DIAGNOSIS NOTEBOOK -->
@@ -4287,6 +4293,8 @@
     }
     const retryBtn = document.getElementById("btn-retry-practice");
     if (retryBtn) retryBtn.style.display = "none";
+    const histBox = document.getElementById("curr-q-history-box");
+    if (histBox) histBox.removeAttribute("open");
     if (input) input.focus();
   }
 
@@ -4305,30 +4313,36 @@
       const retryBtn = document.getElementById("btn-retry-practice");
       if (retryBtn) retryBtn.style.display = "none";
     }
+    const histBox = document.getElementById("curr-q-history-box");
+    if (histBox) histBox.removeAttribute("open");
   }
 
-  // 渲染当前题目往次答题记录 (置于页面最底部，默认不直接暴露标准答案，防第二次练习瞄答案)
+  // 渲染当前题目往次答题记录 (置于页面最底部，默认严格折叠收起，点开才展开，彻底防瞄答案)
   function renderCurrentQuestionHistory(qid) {
     const box = document.getElementById("curr-q-history-box");
     if (!box) return;
     const qLogs = practiceLogs.filter(l => String(l.qid) === String(qid));
     if (!qLogs || qLogs.length === 0) {
       box.style.display = "none";
-      box.innerHTML = "";
+      box.removeAttribute("open");
       return;
     }
 
-    let html = '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;">';
-    html += '<div style="font-weight: 700; color: #334155; font-size: 0.92rem; display: flex; align-items: center; gap: 6px;">';
-    html += '<span>📜 本题历史作答档案 (已练 ' + qLogs.length + ' 次 · 独立置于底部防瞄答案)</span>';
-    html += '</div>';
-    html += '<span style="font-size: 0.78rem; color: var(--text-muted);">共记录 ' + qLogs.length + ' 次作答流水</span>';
-    html += '</div>';
+    // 默认强制折叠收起，绝不在练习时直接展示，杜绝瞄到任何答案或往次作答
+    box.removeAttribute("open");
 
-    html += '<div style="display: flex; flex-direction: column; gap: 8px;">';
+    const titleEl = document.getElementById("curr-q-history-summary-title");
+    if (titleEl) {
+      titleEl.innerText = "📜 查看本题往次作答历史 (共 " + qLogs.length + " 次记录 · 默认已折叠防瞄)";
+    }
+
+    const contentEl = document.getElementById("curr-q-history-content");
+    if (!contentEl) return;
+
+    let html = "";
     qLogs.forEach((log, idx) => {
       let logPctClass = log.pct >= 90 ? "pct-pass" : (log.pct >= 70 ? "pct-warn" : "pct-fail");
-      html += '<div class="prev-attempt-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 14px;">';
+      html += '<div class="prev-attempt-card" style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 14px; margin-bottom: 8px;">';
       html += '<div style="display: flex; justify-content: space-between; font-size: 0.84rem; margin-bottom: 6px; color: var(--text-muted);">';
       html += '<span><strong>第 ' + (qLogs.length - idx) + ' 次作答</strong> · ' + log.timeStr + '</span>';
       html += '<span class="pct-badge ' + logPctClass + '" style="font-size: 0.75rem; padding: 2px 8px;">' + log.score + ' / ' + log.total + ' 分 (' + log.pct + '%)</span>';
@@ -4346,17 +4360,15 @@
         html += '</div>';
       }
 
-      // 将标准答案置于点击折叠内，绝不默认展开，防止第二次做题时瞄到
       html += '<details style="margin-top: 6px; font-size: 0.82rem; color: #64748b;">';
       html += '<summary style="cursor: pointer; color: #0284c7; font-weight: 600;">👁️ 查看当时标准原句 (防瞄遮罩，点击展开)</summary>';
-      html += '<div style="margin-top: 4px; padding: 6px 10px; background: white; border: 1px solid #e2e8f0; border-radius: 6px; font-family: monospace; color: #0f172a;">' + formatClickableSentence(log.sentence, log.qid) + '</div>';
+      html += '<div style="margin-top: 4px; padding: 6px 10px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; font-family: monospace; color: #0f172a;">' + formatClickableSentence(log.sentence, log.qid) + '</div>';
       html += '</details>';
 
       html += '</div>';
     });
-    html += '</div>';
 
-    box.innerHTML = html;
+    contentEl.innerHTML = html;
     box.style.display = "block";
   }
 
