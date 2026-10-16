@@ -1883,18 +1883,22 @@
     </div>
 
     <form spellcheck="false" autocomplete="off" autocorrect="off" onsubmit="return false;" style="margin: 0; padding: 0;">
-      <textarea id="practice-input" lang="zxx" spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off" writingsuggestions="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false" data-ms-editor="false" aria-autocomplete="none" placeholder="请在此输入听写内容... (敲击回车 Enter 即可直接批改)" oninput="updateWordCount('practice-input', 'practice-wc')" onkeydown="handleEnter(event, 'practice')"></textarea>
+      <textarea id="practice-input" lang="zxx" spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off" writingsuggestions="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false" data-ms-editor="false" aria-autocomplete="none" placeholder="请在此输入听写内容... (敲击回车 Enter 即可直接批改)" oninput="handlePracticeInput()" onkeydown="handleEnter(event, 'practice')"></textarea>
     </form>
 
     <div class="action-row">
       <span class="word-counter" id="practice-wc">单词数: 0</span>
       <div style="display: flex; gap: 8px;">
-        <button class="nav-btn" onclick="document.getElementById('practice-input').value=''; updateWordCount('practice-input', 'practice-wc');">清空</button>
+        <button class="nav-btn" onclick="clearPracticeInputAndResult()" title="清空输入框并收起答案，方便二次练习">清空</button>
+        <button class="nav-btn" id="btn-retry-practice" style="display: none; background: #eef2ff; color: #4338ca; border-color: #c7d2fe; font-weight: 600;" onclick="retryCurrentPractice()" title="清空内容、隐藏答案并自动重播音频">🔄 再练一次 (防瞄答案)</button>
         <button class="btn-submit" onclick="gradeCurrentPractice()">立即批改 (Enter)</button>
       </div>
     </div>
 
     <div id="practice-result" class="result-box"></div>
+
+    <!-- 本题历史答题记录 (置于页面最底部，防第二次练习时瞄到答案) -->
+    <div id="curr-q-history-box" style="margin-top: 24px; border-top: 1.5px dashed #cbd5e1; padding-top: 16px; display: none;"></div>
   </div>
 
   <!-- TAB 2: MISTAKE DIAGNOSIS NOTEBOOK -->
@@ -3451,9 +3455,12 @@
     let pctClass = res.pct >= 90 ? "pct-pass" : (res.pct >= 70 ? "pct-warn" : "pct-fail");
     const q = res.targetItem;
     const numDisplay = q.ultra_index ? ("极限#" + q.ultra_index) : ("往期#" + (q.raw_index || q.index));
-    let html = '<div class="score-header">';
+    let html = '<div class="score-header" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">';
+    html += '<div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">';
     html += '<span class="score-badge">第 ' + (currentIndex + 1) + ' 题 (' + numDisplay + ' · #' + q.qid + '): ' + res.score + ' / ' + res.total + ' 分</span>';
     html += '<span class="pct-badge ' + pctClass + '">正确率: ' + res.pct + '%</span>';
+    html += '</div>';
+    html += '<button class="nav-btn" style="font-size: 0.8rem; padding: 4px 12px; background: #eef2ff; color: #4338ca; border-color: #c7d2fe; font-weight: 700;" onclick="retryCurrentPractice()" title="清空输入框并收起答案，方便二次练习">🔄 再练一次 (防瞄答案)</button>';
     html += '</div>';
 
     // 突出标明萤火虫官方分类标签
@@ -3590,12 +3597,12 @@
 
     html += '</div>';
 
-    // 如果本题之前有历史作答记录，展示往次作答对比诊断
+    // 如果本题之前有历史作答记录，展示往次战绩趋势（完整答题记录独立置于页面最下方，防瞄答案）
     if (prevLogs && prevLogs.length > 0) {
-      html += '<div class="prev-attempt-box">';
-      html += '<div style="font-weight: 700; color: #1e293b; font-size: 0.95rem; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">';
-      html += '<span>📜 本题往次作答对比 (共练过 ' + (prevLogs.length + 1) + ' 次 · 本次为第 ' + (prevLogs.length + 1) + ' 次):</span>';
-      html += '<span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">往次记录 ' + prevLogs.length + ' 条</span>';
+      html += '<div class="prev-attempt-box" style="margin-top: 14px; padding: 12px 14px;">';
+      html += '<div style="font-weight: 700; color: #1e293b; font-size: 0.88rem; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">';
+      html += '<span>📜 往次战绩趋势 (共练过 ' + (prevLogs.length + 1) + ' 次 · 本次为第 ' + (prevLogs.length + 1) + ' 次):</span>';
+      html += '<span style="font-size: 0.78rem; font-weight: normal; color: var(--text-muted);">往次答题档案已移至页面最下方 ↓</span>';
       html += '</div>';
 
       const last = prevLogs[0];
@@ -3609,32 +3616,7 @@
       } else {
         html += '<div class="trend-badge trend-down">⚠️ 较上次下降 ' + Math.abs(diff) + ' 分 (上次得分: ' + last.score + '/' + last.total + ')，注意细节！</div>';
       }
-
-      html += '<div style="display: flex; flex-direction: column; gap: 8px;">';
-      prevLogs.forEach((log, idx) => {
-        let logPctClass = log.pct >= 90 ? "pct-pass" : (log.pct >= 70 ? "pct-warn" : "pct-fail");
-        html += '<div class="prev-attempt-card">';
-        html += '<div style="display: flex; justify-content: space-between; font-size: 0.84rem; margin-bottom: 4px; color: var(--text-muted);">';
-        html += '<span><strong>第 ' + (prevLogs.length - idx) + ' 次作答</strong> · ' + log.timeStr + '</span>';
-        html += '<span class="pct-badge ' + logPctClass + '" style="font-size: 0.75rem; padding: 2px 8px;">' + log.score + ' / ' + log.total + ' 分 (' + log.pct + '%)</span>';
-        html += '</div>';
-        html += '<div style="font-size: 0.9rem; color: #1e293b; font-family: monospace; word-break: break-all;">作答: ' + log.userInput + '</div>';
-
-        if (!log.isPerfect) {
-          html += '<div style="font-size: 0.82rem; margin-top: 4px; display: flex; flex-wrap: wrap; gap: 8px;">';
-          if (log.missingWords && log.missingWords.length > 0) {
-            html += '<span><strong style="color: var(--danger);">漏词:</strong> ' + log.missingWords.map(w => '<span class="tag tag-miss" style="font-size: 0.75rem; padding: 1px 5px;">' + w + '</span>').join(" ") + '</span>';
-          }
-          if (log.typos && log.typos.length > 0) {
-            html += '<span><strong style="color: var(--warn);">拼写:</strong> ' + log.typos.map(t => '<span class="tag tag-typo" style="font-size: 0.75rem; padding: 1px 5px;">' + t.typed + '➡️' + t.expected + '</span>').join(" ") + '</span>';
-          }
-          html += '</div>';
-        } else {
-          html += '<div style="color: var(--success); font-size: 0.8rem; font-weight: 600; margin-top: 2px;">🎉 当时为满分作答</div>';
-        }
-        html += '</div>';
-      });
-      html += '</div></div>';
+      html += '</div>';
     }
 
     targetEl.innerHTML = html;
@@ -3983,6 +3965,11 @@
     const resBox = document.getElementById("practice-result");
     resBox.innerHTML = "";
     resBox.classList.remove("show");
+    const retryBtn = document.getElementById("btn-retry-practice");
+    if (retryBtn) retryBtn.style.display = "none";
+    if (typeof renderCurrentQuestionHistory === "function") {
+      renderCurrentQuestionHistory(q.qid);
+    }
     highlightActiveInList();
   }
 
@@ -4284,6 +4271,93 @@
     const res = evaluate(text, QUESTIONS[currentIndex]);
     renderResult(res, document.getElementById("practice-result"), prevLogs);
     recordAttempt(res);
+    const retryBtn = document.getElementById("btn-retry-practice");
+    if (retryBtn) retryBtn.style.display = "inline-block";
+    renderCurrentQuestionHistory(qid);
+  }
+
+  function clearPracticeInputAndResult() {
+    const input = document.getElementById("practice-input");
+    if (input) input.value = "";
+    updateWordCount("practice-input", "practice-wc");
+    const resBox = document.getElementById("practice-result");
+    if (resBox) {
+      resBox.innerHTML = "";
+      resBox.classList.remove("show");
+    }
+    const retryBtn = document.getElementById("btn-retry-practice");
+    if (retryBtn) retryBtn.style.display = "none";
+    if (input) input.focus();
+  }
+
+  function retryCurrentPractice() {
+    clearPracticeInputAndResult();
+    playAudioCurrent();
+  }
+
+  function handlePracticeInput() {
+    updateWordCount("practice-input", "practice-wc");
+    // 当考生在输入框重新输入文字准备第二次练习时，自动收起批改答案，彻底杜绝瞄到答案
+    const resBox = document.getElementById("practice-result");
+    if (resBox && resBox.classList.contains("show")) {
+      resBox.classList.remove("show");
+      resBox.innerHTML = "";
+      const retryBtn = document.getElementById("btn-retry-practice");
+      if (retryBtn) retryBtn.style.display = "none";
+    }
+  }
+
+  // 渲染当前题目往次答题记录 (置于页面最底部，默认不直接暴露标准答案，防第二次练习瞄答案)
+  function renderCurrentQuestionHistory(qid) {
+    const box = document.getElementById("curr-q-history-box");
+    if (!box) return;
+    const qLogs = practiceLogs.filter(l => String(l.qid) === String(qid));
+    if (!qLogs || qLogs.length === 0) {
+      box.style.display = "none";
+      box.innerHTML = "";
+      return;
+    }
+
+    let html = '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;">';
+    html += '<div style="font-weight: 700; color: #334155; font-size: 0.92rem; display: flex; align-items: center; gap: 6px;">';
+    html += '<span>📜 本题历史作答档案 (已练 ' + qLogs.length + ' 次 · 独立置于底部防瞄答案)</span>';
+    html += '</div>';
+    html += '<span style="font-size: 0.78rem; color: var(--text-muted);">共记录 ' + qLogs.length + ' 次作答流水</span>';
+    html += '</div>';
+
+    html += '<div style="display: flex; flex-direction: column; gap: 8px;">';
+    qLogs.forEach((log, idx) => {
+      let logPctClass = log.pct >= 90 ? "pct-pass" : (log.pct >= 70 ? "pct-warn" : "pct-fail");
+      html += '<div class="prev-attempt-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 14px;">';
+      html += '<div style="display: flex; justify-content: space-between; font-size: 0.84rem; margin-bottom: 6px; color: var(--text-muted);">';
+      html += '<span><strong>第 ' + (qLogs.length - idx) + ' 次作答</strong> · ' + log.timeStr + '</span>';
+      html += '<span class="pct-badge ' + logPctClass + '" style="font-size: 0.75rem; padding: 2px 8px;">' + log.score + ' / ' + log.total + ' 分 (' + log.pct + '%)</span>';
+      html += '</div>';
+      html += '<div style="font-size: 0.88rem; color: #1e293b; font-family: monospace; word-break: break-all; margin-bottom: 4px;"><strong>当时作答:</strong> ' + log.userInput + '</div>';
+
+      if (!log.isPerfect) {
+        html += '<div style="font-size: 0.8rem; margin-top: 4px; display: flex; flex-wrap: wrap; gap: 6px;">';
+        if (log.missingWords && log.missingWords.length > 0) {
+          html += '<span><strong style="color: var(--danger);">漏词:</strong> ' + log.missingWords.map(w => '<span class="tag tag-miss" style="font-size: 0.75rem; padding: 1px 5px;">' + w + '</span>').join(" ") + '</span>';
+        }
+        if (log.typos && log.typos.length > 0) {
+          html += '<span><strong style="color: var(--warn);">拼写:</strong> ' + log.typos.map(t => '<span class="tag tag-typo" style="font-size: 0.75rem; padding: 1px 5px;">' + t.typed + '➡️' + t.expected + '</span>').join(" ") + '</span>';
+        }
+        html += '</div>';
+      }
+
+      // 将标准答案置于点击折叠内，绝不默认展开，防止第二次做题时瞄到
+      html += '<details style="margin-top: 6px; font-size: 0.82rem; color: #64748b;">';
+      html += '<summary style="cursor: pointer; color: #0284c7; font-weight: 600;">👁️ 查看当时标准原句 (防瞄遮罩，点击展开)</summary>';
+      html += '<div style="margin-top: 4px; padding: 6px 10px; background: white; border: 1px solid #e2e8f0; border-radius: 6px; font-family: monospace; color: #0f172a;">' + formatClickableSentence(log.sentence, log.qid) + '</div>';
+      html += '</details>';
+
+      html += '</div>';
+    });
+    html += '</div>';
+
+    box.innerHTML = html;
+    box.style.display = "block";
   }
 
   function gradeFreeInput() {
