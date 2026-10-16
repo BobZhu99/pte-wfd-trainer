@@ -3298,8 +3298,10 @@
       addWordsUsed: res.addWordsUsed,
       timeStr: timeStr
     };
+    const todayPrefix = now.getFullYear() + "/" + (now.getMonth() + 1) + "/" + now.getDate();
+    const alreadyPracticedToday = practiceLogs.some(l => String(l.qid) === String(qid) && l.timeStr && l.timeStr.startsWith(todayPrefix));
     practiceLogs.unshift(logEntry); // 最新排在最前
-    if (typeof incrementDailyPracticeCount === "function") {
+    if (!alreadyPracticedToday && typeof incrementDailyPracticeCount === "function") {
       incrementDailyPracticeCount("WFD", 1);
     }
 
@@ -3362,33 +3364,41 @@
       if (s.failCount > 0) mistakeCount++;
     });
 
-    // 统计今日已练题数
+    // 统计今日已练去重题目个数 (去重: 一道题练N次只算1题)
     const now = new Date();
     const todayPrefix = now.getFullYear() + "/" + (now.getMonth() + 1) + "/" + now.getDate();
-    let todayCount = practiceLogs.filter(l => l.timeStr && l.timeStr.startsWith(todayPrefix)).length;
-    if (typeof getPlannerTodayActuals === "function") {
+    const todayLogs = practiceLogs.filter(l => l.timeStr && l.timeStr.startsWith(todayPrefix));
+    const todayUniqueQids = new Set(todayLogs.map(l => String(l.qid)));
+    const todayUniqueCount = todayUniqueQids.size;
+    const todayTotalAttempts = todayLogs.length;
+
+    // 严格同步 Planner 中的今日 WFD 完成题数 (按去重题目个数计算)
+    if (typeof getPlannerTodayActuals === "function" && typeof savePlannerTodayActuals === "function") {
       const acts = getPlannerTodayActuals();
-      if (acts && acts["WFD"] && acts["WFD"] > todayCount) {
-        todayCount = acts["WFD"];
+      if (acts["WFD"] !== todayUniqueCount) {
+        acts["WFD"] = todayUniqueCount;
+        savePlannerTodayActuals(acts);
+        if (typeof recordDailyFootprint === "function") recordDailyFootprint();
       }
     }
+
     const statTodayEl = document.getElementById("stat-today-count");
     if (statTodayEl) {
-      statTodayEl.innerText = todayCount;
+      statTodayEl.innerText = todayUniqueCount;
     }
     const statTodayLabelEl = document.getElementById("stat-today-label");
     if (statTodayLabelEl && typeof getPlannerGoals === "function") {
       const goals = getPlannerGoals();
       const target = (goals && goals["WFD"]) || 0;
       if (target > 0) {
-        statTodayLabelEl.innerHTML = '今日已练 (' + todayCount + '/' + target + ') <span style="font-size: 0.72rem; color: #15803d; font-weight: 600;">↗ 打卡</span>';
+        statTodayLabelEl.innerHTML = '今日已练 (' + todayUniqueCount + '/' + target + '题) <span style="font-size: 0.72rem; color: #15803d; font-weight: 600;">↗ 打卡</span>';
       } else {
-        statTodayLabelEl.innerHTML = '今日已练 <span style="font-size: 0.72rem; color: #15803d; font-weight: 600;">↗ 打卡</span>';
+        statTodayLabelEl.innerHTML = '今日已练 (去重) <span style="font-size: 0.72rem; color: #15803d; font-weight: 600;">↗ 打卡</span>';
       }
     }
     const currTodayBadge = document.getElementById("curr-q-today-badge");
     if (currTodayBadge) {
-      currTodayBadge.innerText = "📅 今日已练: " + todayCount + " 题";
+      currTodayBadge.innerText = "📅 今日已练: " + todayUniqueCount + " 道题" + (todayTotalAttempts > todayUniqueCount ? " (共" + todayTotalAttempts + "次)" : "");
     }
 
     // 统计当前生效题库范围内的已练题数
@@ -3722,10 +3732,15 @@
     const todayLogs = practiceLogs.filter(l => l.timeStr && l.timeStr.startsWith(todayPrefix));
     let html = "";
     if (todayLogs.length > 0) {
+      const todayUniqueQids = new Set(todayLogs.map(l => String(l.qid)));
+      const todayUniqueCount = todayUniqueQids.size;
       const todayAvgPct = Math.round(todayLogs.reduce((acc, c) => acc + (c.pct || 0), 0) / todayLogs.length);
-      const todayPerfect = todayLogs.filter(l => l.isPerfect || l.score === l.total).length;
+      const todayPerfectUnique = Array.from(todayUniqueQids).filter(qid => {
+        const qLogs = todayLogs.filter(l => String(l.qid) === qid);
+        return qLogs.some(l => l.isPerfect || l.score === l.total);
+      }).length;
       html += '<div style="background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 10px; padding: 12px 16px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">';
-      html += '<div><span style="font-size: 1.05rem; font-weight: 800; color: #166534;">📅 今日已完成: ' + todayLogs.length + ' 题</span> <span style="font-size: 0.82rem; color: #15803d; margin-left: 8px;">(满分: ' + todayPerfect + ' 题)</span></div>';
+      html += '<div><span style="font-size: 1.05rem; font-weight: 800; color: #166534;">📅 今日已练: ' + todayUniqueCount + ' 道题</span> <span style="font-size: 0.82rem; color: #15803d; margin-left: 8px;">(去重统计 · 累计作答 ' + todayLogs.length + ' 次 · 满分题数: ' + todayPerfectUnique + ' 道)</span></div>';
       html += '<div style="font-size: 0.88rem; font-weight: 700; color: #15803d;">今日平均正确率: ' + todayAvgPct + '%</div>';
       html += '</div>';
     }
