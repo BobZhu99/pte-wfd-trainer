@@ -2060,6 +2060,12 @@
         "questionId": "2c908087672b1edc01672e9a9f4501a3",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1480760278508400641.m4a",
+        "questionId": "melon_122047",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2070,16 +2076,16 @@
       "tagRepeat": true,
       "tagNew": false,
       "tagDaily": true,
-      "tagShared": false,
-      "tagMelon106": false
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "离开讲堂前，请在出席表上签名。",
     "is_ultra": true,
-    "melon_qid": null,
-    "melon_sentence": null,
+    "melon_qid": "122047",
+    "melon_sentence": "Remember to sign the attendance register before leaving the lecture hall.",
     "trial_words": [],
-    "is_overlap": false,
-    "is_melon_106": false
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 33,
@@ -2961,6 +2967,12 @@
         "questionId": "2c908087672b1edc01672f1821c40437",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458754123561222146.m4a",
+        "questionId": "melon_121157",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -2971,16 +2983,18 @@
       "tagRepeat": true,
       "tagNew": false,
       "tagDaily": true,
-      "tagShared": false,
-      "tagMelon106": false
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "由于报名人数不足，夏季课程取消了。",
     "is_ultra": true,
-    "melon_qid": null,
-    "melon_sentence": null,
-    "trial_words": [],
-    "is_overlap": false,
-    "is_melon_106": false
+    "melon_qid": "121157",
+    "melon_sentence": "The summer course has been (was) canceled due to insufficient enrollment.",
+    "trial_words": [
+      "was"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 47,
@@ -5382,6 +5396,12 @@
         "questionId": "0bb0611b0658712281cdabab0c6978e9",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1820323403668676610.m4a",
+        "questionId": "melon_121393",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5392,16 +5412,16 @@
       "tagRepeat": true,
       "tagNew": false,
       "tagDaily": true,
-      "tagShared": false,
-      "tagMelon106": false
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "在关闭电脑之前，确保你已经保存了所有的文件。",
     "is_ultra": true,
-    "melon_qid": null,
-    "melon_sentence": null,
+    "melon_qid": "121393",
+    "melon_sentence": "Make sure you have saved all the files before turning off the computer.",
     "trial_words": [],
-    "is_overlap": false,
-    "is_melon_106": false
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 83,
@@ -5725,6 +5745,12 @@
         "questionId": "0615ceb6af24b35a3e1d2153ea42e9e1",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1820798930242297858.m4a",
+        "questionId": "melon_121544",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -5735,16 +5761,16 @@
       "tagRepeat": true,
       "tagNew": false,
       "tagDaily": true,
-      "tagShared": false,
-      "tagMelon106": false
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "位于三楼的咖啡机今天不能用了。",
     "is_ultra": true,
-    "melon_qid": null,
-    "melon_sentence": null,
+    "melon_qid": "121544",
+    "melon_sentence": "The coffee machine on the third floor is not working today.",
     "trial_words": [],
-    "is_overlap": false,
-    "is_melon_106": false
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 88,
@@ -6424,6 +6450,12 @@
         "questionId": "ae14aa5eed2d19c575228bf50be16cca",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459335445413400578.m4a",
+        "questionId": "melon_122006",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6434,16 +6466,19 @@
       "tagRepeat": true,
       "tagNew": false,
       "tagDaily": true,
-      "tagShared": false,
-      "tagMelon106": false
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "计算机算法的最基本特征应该是计数与运算。",
     "is_ultra": true,
-    "melon_qid": null,
-    "melon_sentence": null,
-    "trial_words": [],
-    "is_overlap": false,
-    "is_melon_106": false
+    "melon_qid": "122006",
+    "melon_sentence": "A very basic feature/definition of computing would be counting and calculating.",
+    "trial_words": [
+      "definition",
+      "feature"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 99,
@@ -7748,6 +7783,12 @@
         "questionId": "a614f9e129db4313a92bf639b1f8512f",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459362796339761153.m4a",
+        "questionId": "melon_121184",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -7758,16 +7799,20 @@
       "tagRepeat": true,
       "tagNew": false,
       "tagDaily": true,
-      "tagShared": false,
-      "tagMelon106": false
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "本课程相当重视批判性思维技能。",
     "is_ultra": true,
-    "melon_qid": null,
-    "melon_sentence": null,
-    "trial_words": [],
-    "is_overlap": false,
-    "is_melon_106": false
+    "melon_qid": "121184",
+    "melon_sentence": "This course considerably emphasizes on the critical thinking skills (to think critically).",
+    "trial_words": [
+      "critically",
+      "think",
+      "to"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 119,
@@ -8445,6 +8490,12 @@
         "questionId": "fdb6e89289439d74f2088b410db42c66",
         "title": "挑战难度（女）",
         "type": 5
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1467780517289029633.m4a",
+        "questionId": "melon_121277",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -8455,16 +8506,16 @@
       "tagRepeat": false,
       "tagNew": false,
       "tagDaily": true,
-      "tagShared": false,
-      "tagMelon106": false
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "建立信任不是一朝一夕就能实现的。",
     "is_ultra": true,
-    "melon_qid": null,
-    "melon_sentence": null,
+    "melon_qid": "121277",
+    "melon_sentence": "Building trust is not something that can be achieved overnight.",
     "trial_words": [],
-    "is_overlap": false,
-    "is_melon_106": false
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 129,
@@ -8805,6 +8856,12 @@
         "questionId": "824799fbde657f23058877b7c26b3f35",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20250831/17566228526132543.m4a",
+        "questionId": "melon_121494",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -8815,16 +8872,16 @@
       "tagRepeat": false,
       "tagNew": false,
       "tagDaily": true,
-      "tagShared": false,
-      "tagMelon106": false
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "有人认为这是改革的热情，也有人认为这是鲁莽。",
     "is_ultra": true,
-    "melon_qid": null,
-    "melon_sentence": null,
+    "melon_qid": "121494",
+    "melon_sentence": "Some people regarded it as reforming zeal, while others regarded it as recklessness.",
     "trial_words": [],
-    "is_overlap": false,
-    "is_melon_106": false
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 135,
@@ -9180,6 +9237,12 @@
         "questionId": "6011932685a37448561ea043eb38da9a",
         "title": "正常难度（男2）",
         "type": 4
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1940431514370068482.m4a",
+        "questionId": "melon_121092",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -9190,16 +9253,16 @@
       "tagRepeat": true,
       "tagNew": false,
       "tagDaily": true,
-      "tagShared": false,
-      "tagMelon106": false
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "她首先针对上一讲的内容进行了概述。",
     "is_ultra": true,
-    "melon_qid": null,
-    "melon_sentence": null,
+    "melon_qid": "121092",
+    "melon_sentence": "She began by giving an outline of her previous lecture.",
     "trial_words": [],
-    "is_overlap": false,
-    "is_melon_106": false
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 142,
@@ -9911,6 +9974,12 @@
         "questionId": "1fa1a4fc05275fd9229bb8af843efda8",
         "title": "正常难度（女1）",
         "type": 1
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1729033986484756481.m4a",
+        "questionId": "melon_121339",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -9921,16 +9990,19 @@
       "tagRepeat": true,
       "tagNew": false,
       "tagDaily": true,
-      "tagShared": false,
-      "tagMelon106": false
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "该部门正在做一些关于气候变化的重要工作。",
     "is_ultra": true,
-    "melon_qid": null,
-    "melon_sentence": null,
-    "trial_words": [],
-    "is_overlap": false,
-    "is_melon_106": false
+    "melon_qid": "121339",
+    "melon_sentence": "The government department is/was doing some crucial works on climate change.",
+    "trial_words": [
+      "is",
+      "was"
+    ],
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 156,

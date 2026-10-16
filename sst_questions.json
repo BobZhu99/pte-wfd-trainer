@@ -1,33 +1,875 @@
 [
   {
     "index": 1,
-    "qid": "F111026",
-    "title": "Einstein 爱因斯坦",
+    "qid": "M100202",
+    "melon_id": 4538,
+    "title": "MPA V2：鱼类行为研究",
     "audio_url": "",
-    "transcript": "Einstein 爱因斯坦",
+    "transcript": "暂无原文及音频（听力材料声音极为模糊，像是在水底录制的，有巨大的背景音，还望注意！）",
     "sample_summary": "",
-    "source": "萤火虫官方周预测"
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 6,
+    "qid": "M100197",
+    "melon_id": 4149,
+    "title": "Worker Bees 工蜂（Jacky老师考场确认升级）",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260914/17893914519033866.mp3",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 7,
+    "qid": "M100196",
+    "melon_id": 4132,
+    "title": "Poetry and Literature 诗歌与文学 ",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260324/17743227227504587.m4a",
+    "transcript": "My lectures are going to presume no special knowledge on your part. I see this as a course that&#39;s an introduction to the literature of a period, to modern poetry. We&#39;ll be studying several poets in some detail. The presumption is that they all reward and demand a certain amount of close reading. At the same time, I do mean to give you some sense of the period in which they&#39;re writing, some sense of modernism as a field, as one of the richest fields in English language writing. Finally, though, this really is a course in poetry, plain and simple. I mean to introduce you to particular poems, to give you ways to possess them, enjoy them, be puzzled or frustrated by them too; to learn something from them and to care about them and to carry them with you as you go forward after this class.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 8,
+    "qid": "M100195",
+    "melon_id": 4133,
+    "title": "Food Waste in United States 美国的食物浪费",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1665983896216408065.m4a",
+    "transcript": "The United States is considered the biggest food-wasting country in the world. Consumers collectively throw away more than all the retailers together in the US. In total, private US households waste around 43% of all food. According to &quot;Save the Food&quot;, a national public service campaign, this could translate into an annual financial loss of $1,500 for a family of four. \nIn fact, over 40 million tons (36 million tonnes) of food ends up in landfills every year, worth more than $161 billion. 60% of food waste comes from general consumption. \n\nThere are two main sources of food waste. The majority of food waste comes from supermarkets, especially in the used-by section. The other factor is what people purchase and how they eat, so purchasing all items is not a good idea. Avoiding food waste efficiently along the supply chain and in all our households can result in a win-win scenario. \n\nHalving food waste could help meet the demand for nutrition of our growing population, and equally minimize the negative environmental effects of agriculture.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
   },
   {
     "index": 2,
-    "qid": "F111021",
-    "title": "University Competition 高校竞争",
-    "audio_url": "",
-    "transcript": "University Competition 高校竞争",
+    "qid": "M100201",
+    "melon_id": 4221,
+    "title": "Ice Core 冰芯（音频非原文，仅为近似参考用）",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1762335951419367425.m4a",
+    "transcript": "（考场原音据会议有较大背景音，类似于水族馆中的声音）One of the things I love about working on ice is it&#39;s actually just visually very beautiful. The Antarctic is a beautiful and exceptional place to work. Much of what I do is to try to understand changes in climate over the last hundreds to thousands to even hundreds of thousands of years.\n \nAn ice core is a continuous section of ice drilled into a glacier or an ice sheet. We&#39;re sending this instrument down which is just a cutting tool and the thing goes down a meter at a time. You bring it up and now you have these long tubes of ice.\n \nDrilling an ice core is kind of like a time machine. You can go back and find out what was the atmosphere like 50,000 years ago. It&#39;s snow that has fallen and then it&#39;s compressed, trapping the atmosphere. You can count the layers in ice cores like you can count tree rings and that means that you can actually determine when certain events in climate happened within a few years.",
     "sample_summary": "",
-    "source": "萤火虫官方周预测"
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
   },
   {
     "index": 3,
-    "qid": "F111013",
-    "title": "Vitamin D 维他命D [V1: 阳光维他命]",
-    "audio_url": "",
-    "transcript": "Vitamin D 维他命D [V1: 阳光维他命]",
+    "qid": "M100200",
+    "melon_id": 4157,
+    "title": "Neolithic Stones 石器时代的石头",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1686300160050618370.m4a",
+    "transcript": "I suppose you wouldn&#39;t expect perhaps to find a mathematician in a museum of historical objects, but actually, the objects that I&#39;ve been drawn to in this museum have quite a lot of mathematical significance. These Neolithic stones, discovered in Scotland, dating back 5,000 years, are probably the first examples of humans exploring the concept of symmetry. And that&#39;s what I do as a practicing mathematician. I spend my life trying to understand what symmetries are possible, in nature and in mathematics and abstractly. And here I&#39;ve got a connection, going back 5,000 years, to people who are already trying to understand -how can l arrange patches on the side of these stone balls in a symmetrical manner?\n\n\nOne of the intriguing things about these stones is that we don&#39;t actually know what they&#39;re for. They might have been for divination -trying to predict the future. They might have been part of a game. They look very much like dice, but we don&#39;t really think there is any game associated with them. Maybe they were just for chucking around. They&#39;re very nice in the hand when you hold them. Or maybe they were symbols of power in the clan. I suppose that&#39;s why l like them because we don’t really know what they are.\n\n\nIf I had a theory about why they were doing this, it would be that actually, they were starting to be mathematicians, and that here we see the first example of abstract thought at work, that these weren&#39;t for a purpose. Mathematics is a great subject, created a lot of the technology around us, but mathematicians we create our mathematical objects for the joy and the beauty, so it will be lovely to think that these didn&#39;t actually have a use, that they were just really a celebration of what’s possible.",
     "sample_summary": "",
-    "source": "萤火虫官方周预测"
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 5,
+    "qid": "M100198",
+    "melon_id": 4156,
+    "title": "The Development of Machines 机械的发展",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260914/17893914741374059.mp3",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 9,
+    "qid": "M100194",
+    "melon_id": 4134,
+    "title": " Bees’ Communication 蜜蜂的交流",
+    "audio_url": "",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 10,
+    "qid": "M100192",
+    "melon_id": 4129,
+    "title": "Social Skills and Children社交技能与儿童",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1668230055022563330.m4a",
+    "transcript": "Social skills are vital in enabling an individual to have and maintain positive interactions with others. Many of these skills are crucial in making and sustaining friendships. Social interactions do not always run smoothly and an individual needs to be able to implement appropriate strategies, such as conflict resolution when difficulties in interactions arise. It is also important for individuals to have &#39;empathy&#39; as it allows them to respond in an understanding and caring way to how others are feeling. Children are facing social difficulties with particular risks. Young people who do not have strong relationships with the adults in their family are even more at risk. In an experiment in a high school, which lasted for 8 to 12 weeks, the students were told to be a movie director and to choose their own story structure. The students worked with each other, which involved lots of different skills, and social interactivity. The movies they had made were actually cool. Then, the researchers tested the intervention effect, and they found this can improve their self-regulation and critical thinking skills.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 11,
+    "qid": "M100191",
+    "melon_id": 3629,
+    "title": "The Internet 因特网",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260914/17893914149786008.mp3",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 12,
+    "qid": "M100190",
+    "melon_id": 1957,
+    "title": "Credit Cards 信用卡",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260914/17893913811691010.mp3",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 13,
+    "qid": "M100189",
+    "melon_id": 1956,
+    "title": "Internet Changed Journalism 网络改变了新闻业",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20251222/17663759335939039.MP3",
+    "transcript": "该文本【非考场原文】，仅供SST听力练习所用！\n文本由PTE大西瓜满分答案后制，答案可放心使用！\n\nOver the past few decades, the way journalism is produced and consumed has changed dramatically, particularly since the rise of the Internet.\nTraditionally, news was controlled by professional journalists and large media organizations, and information spread relatively slowly through newspapers, radio, and television. However, with the development of digital technology, this process has become much faster and more accessible to the public.\nAt first, many people were skeptical about these changes and questioned the reliability of online journalism. Over time, however, audiences have gradually become more enthusiastic about this new form of media. The Internet has significantly improved the speed at which news spreads and allows people to gain information almost instantly, often from multiple sources.\nIn today’s world, journalism is no longer limited to professional reporters. Even a short, ordinary video recorded by an individual can become a form of news reporting, demonstrating how modern journalism has evolved into a more participatory and dynamic process.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 14,
+    "qid": "M100188",
+    "melon_id": 1955,
+    "title": "Negativity Bias 消极偏见（原The Exposure to Emotions 情绪的表露）",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260901/17882457992262181.m4a",
+    "transcript": "Negativity bias refers to the psychological phenomenon where humans tend to focus more on negative emotions or experiences than positive ones. Although we experience positive emotions like contentment and pleasure more frequently, these feelings tend to be lighter in intensity and are less likely to be remembered or linger in our minds. On the other hand, negative emotions such as fear, anger, or sadness, although less frequent, tend to be much stronger and more intense, making them easier to recall and harder to forget. This bias has evolutionary significance. In the past, paying more attention to negative events like threats or dangers would have been advantageous for survival. By being more sensitive to potential threats—whether from predators, environmental hazards, or social conflicts—humans could respond quickly to life\u001ethreatening situations. This heightened awareness of negative stimuli would have helped our ancestors make decisions that favored safety and survival. In today&#39;s world, while the immediate life\u001ethreatening threats may have diminished, the negativity bias still plays a role in how we assess situations, sometimes leading us to focus on potential risks or problems rather than opportunities or positive outcomes. Understanding this bias can help us manage our reactions and potentially shift our focus towards a more balanced perspective.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 15,
+    "qid": "M100185",
+    "melon_id": 1953,
+    "title": "Internet Structure 网络结构",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1524784503610961922.mp3",
+    "transcript": "原文仅在每月押题班课堂中展示。",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
   },
   {
     "index": 4,
+    "qid": "M100199",
+    "melon_id": 4155,
+    "title": "Climate Change as a Challenge 气候变暖带来的挑战",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1683778189333127169.m4a",
+    "transcript": "（考场音频有较大背景音，背景音有水声）\nHumans are faced with many challenges, one of which is climate change. An experiment was conducted on the environment and climate in the 1930s when people first noticed climate change. Humans have been trying to change their lifestyles to deal with it, but the observation of climate change is difficult from area to area. A method is introduced to help understand the mechanism of the climate system. Researchers predict that temperatures will increase about two to 10 degrees Fahrenheit by the end of the century. What&#39;s less certain is what rising temperatures mean for the planet. Some climate models predict subtle changes. Others forecast rising sea levels, which could flood coastal areas around the world. Weather patterns could change, making hurricanes more frequent. Severe droughts could become more common in warm areas, and species unable to adapt to the changing conditions would face extinction, although much remains to be learned about global warming. Many organizations advocate cutting greenhouse gas emissions to reduce the impact of global warming. Consumers can help by saving energy around the house, switching to compact fluorescent light bulbs, and driving fewer miles in the car each week. These simple changes may help keep the earth cooler in the future.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 16,
+    "qid": "M100183",
+    "melon_id": 3626,
+    "title": "Renewable Energy 可再生能源",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20251222/17663763767779999.MP3",
+    "transcript": "该文本【非考场原文】，仅供SST听力练习所用！\n文本由PTE大西瓜满分答案后制，答案可放心使用！\n\n\nFor many years, energy production has relied heavily on annually consumable resources such as coal, oil, and other fossil fuels. These sources are limited and cannot be replenished once they are used, which raises serious concerns about long-term sustainability.\nAs a result, increasing attention has been given to alternative forms of renewable energy, including wind power, tidal energy, and other natural sources. These renewable energies all contribute to reducing dependence on fossil fuels and lowering environmental impact. However, despite their advantages, a major challenge remains, particularly in terms of energy storage and reliability.\nTo address this issue, scientists and engineers are actively searching for energy resources that are both usable and truly renewable on a large scale. Among the available options, solar energy stands out as one of the most promising solutions.\nSolar power is abundant, renewable, and increasingly cost-effective, which suggests that future technological development and investment should focus more heavily on advancing solar energy systems.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 17,
+    "qid": "M100182",
+    "melon_id": 1952,
+    "title": "Young People Communities 年轻人群",
+    "audio_url": "",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 19,
+    "qid": "M100179",
+    "melon_id": 4130,
+    "title": "Stock Market and Big Companies 股市与大公司",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1826098585616310273.m4a",
+    "transcript": "The stock market is where investors connect to buy and sell investments — most commonly, stocks, which are shares of ownership in a public company. When you need groceries, you go to the supermarket. When you&#39;re ready to buy stocks or mutual funds, you&#39;ll usually buy them online through the stock market, which anyone can access with a brokerage account or employee retirement plan. The term &#39;stock market&#39; often refers to one of the major stock market indexes. However, there are some different uses of the stock market before and after. In the 18th century, manufacturing companies came into the market. Traditional companies used stocks to raise money, and input money into companies, while modern companies used stocks to output money. From 19th to 20th century, however, modern companies, such as Apple, Google and Microsoft are big enough to earn money, and use stocks differently. The stock market also inclined to put money into big companies.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 20,
+    "qid": "M100178",
+    "melon_id": 4143,
+    "title": "A Good Engineer 优秀的工程师",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1668230552945168386.m4a",
+    "transcript": "Today, this course you are going to take is about what is engineering and how to work with a complicated system. You guys should know the answers, because all of you guys are from the engineering course. Especially, when you design, build, debug and develop something new, during these process, you are working with the complicated system. How to program complicated systems and how would you know it actually works before producing it. Sometimes, the inspirations are from your daily life, you probably need to consider your personal life experience. And from the common everyday life to the tiny things that you cannot see virtually, and the inspirations normally exist in the tiny levels. A complicated system such as your laptops running Microsoft systems. That means the system is not able to see, which means you guys have to virtualize it. Engineering is here to help virtualize by using systems. Nowadays, the complicated systems are relatively reliable, and you guys work upon these and need to deliver the new outcomes which are reliable as well. This is what we do now and we are good at. Engineering is to help virtualize by using systems. In order to develop and produce a reliable system, you need consider more on the risks, potentials, predictability and accuracy.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 21,
+    "qid": "M100177",
+    "melon_id": 4128,
+    "title": "The Stability of Mood情绪稳定",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20251222/17663766620644182.MP3",
+    "transcript": "该文本【非考场原文】，仅供SST听力练习所用！\n文本由PTE大西瓜满分答案后制，答案可放心使用！\n\n\nThe stability of emotion varies significantly among different people, and this difference strongly influences how happy they appear in daily life. Some individuals experience intense emotional changes, with moods that rise and fall like a roller coaster, while others remain emotionally loose and calm most of the time.\nAccording to psychological research, the secret of happiness is not constant excitement, but mild contentment. Mild contentment allows people to maintain emotional stability rather than being controlled by extreme emotions. People who experience mild contentment are often more satisfied with their lives because their emotions remain balanced and predictable.\nHappiness, therefore, is closely related to emotional and psychological perception. Two people may live under similar conditions, yet one appears happy while the other does not. This difference does not necessarily depend on external circumstances, but on how individuals interpret their emotional experiences.\nTo maintain the stability of emotion, people should find a balance between intense feelings and loose emotions. Developing mild contentment helps individuals achieve psychological stability and leads to a more sustainable sense of happiness.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 22,
+    "qid": "M100176",
+    "melon_id": 4098,
+    "title": "MPA V1. Marine Campaign 海洋行动计划",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1668230759032295426.m4a",
+    "transcript": "（音频近似，仅作参考，非原文！）\nThe ocean provides habitats for 98% fish, the source of protein feeding 4.8 billion of people. But human activities and climate change have left corals bleached in some oceans. There are many species of fish that are endangered. The government set up a network, called MPA marine campaign, in which countries and organizations have been collaborating with each other to protect the environment for 32 years. A marine protected area (MPA) is a zone designated and managed to protect marine habitats and species for the good of the ocean, society, economy and culture. Within MPAs, human activities such as fishing, vessel traffic and tourism are regulated. MPAs can come in the form of a fully protected marine reserve, a moderately protected marine park, or a no-take zone among others. But MPA is facing with lots of challenges, as some developing countries lack management and resources, and feel being excluded.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 18,
+    "qid": "M100181",
+    "melon_id": 3676,
+    "title": "Organization Study 组织研究",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458826630515441665.m4a",
+    "transcript": "Organization studies seem to draw on the whole family of Social Sciences, clearly psychology, clearly sociology, but also economics, anthropology, politics, as we said, philosophy to a degree history, sometimes read literary studies, cultural citizen, so on and so forth. Yeah, I think that&#39;s absolutely right. And for me, that&#39;s absolutely the pleasure and even on good days, the joy of doing organization studies, because it enables you not just enables, but requires you, in some sense, to have some kind of broad familiarization of that sort.\n\n\nNow, there&#39;s a price to be paid for that because that kind of breadth, if you like, does come, I suppose as the cost of depth. And I guess there would be people who are clearly within academic disciplines of sociology or economics or whatever, who might say, well, these are sort of magpie-sh, amateurish kind of forays into our territory. You know, I wouldn&#39;t necessarily disown that idea. But I think that what studying organizations teaches us and teaches me is actually the artificiality of those academic subdivisions. And as soon as we start, we’ll actually think about something like the organized world, then immediately, the kinds of things that come into focus are things that have traditionally been studied by different demands.\nAnd so, I think it&#39;s a liberating idea, the idea that we don&#39;t need to be bound by those strictures and structures of disciplinary division, and that we can be free actually to imagine and think about the social world through an agglomeration of techniques and ideas and theories and concepts from across the social sciences.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 23,
+    "qid": "M100175",
+    "melon_id": 4097,
+    "title": "Leadership 领导阶层",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1668231249275129857.m4a",
+    "transcript": "A leader can define or clarify goals by issuing a memo or an executive order, an edict or a fatwa or a tweet, by passing a law, barking a command, or presenting an interesting idea in a meeting of colleagues. Leaders can mobilize people’s energies in ways that range from subtle, quiet persuasion to the coercive threat or the use of deadly force. Sometimes a charismatic leader such as Martin Luther King Jr. can define goals and mobilize energies through rhetoric and the power of example.\nWe can think of leadership as a spectrum, in terms of both visibility and the power the leader wields. On one end of the spectrum, we have the most visible: authoritative leaders like the president of the United States or the prime minister of the United Kingdom, or a dictator such as Hitler or Qaddafi. At the opposite end of the spectrum is casual, low-key leadership found in countless situations every day around the world, leadership that can make a significant difference to the individuals whose lives are touched by it.\nOver the centuries, the first kind–the out-in-front, authoritative leadership–has generally been exhibited by men. Some men in positions of great authority, including Nelson Mandela, have chosen a strategy of “leading from behind”; more often, however, top leaders have been quite visible in their exercise of power. Women (as well as some men) have provided casual, low-key leadership behind the scenes. But this pattern has been changing, as more women have taken up opportunities for visible, authoritative leadership.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 24,
+    "qid": "M100174",
+    "melon_id": 4142,
+    "title": "Global Economy 全球经济",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1668231103892164610.m4a",
+    "transcript": "Today, more and more people realize that the global economic and financial crisis also concerns common ethical values and standards. I am pretty concerned that the global economy has become unethical and unfair. Recent experiences have proved that the sustainability of the market economy is by no means guaranteed. Indeed, one cannot escape the fact that the emergence of global capitalism has brought with it an entirely new set of risks. The global economic and financial crisis concerns common ethical standards. For example, the trade between Europe and the United States has been unfair, which needs to be further negotiated. These problems of the global economy should be on the agenda for the following years. Obviously, all ethical values and standards are culture-bound, but there are core values and standards that are universal. I strongly believe that in the long run, the global market economy will only be accepted in the different regions and nations if it is socially acceptable.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 25,
+    "qid": "M100173",
+    "melon_id": 4102,
+    "title": "Sleep and Brain睡眠与大脑的关系",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1668231723319562241.m4a",
+    "transcript": "（This is a new memory-learning memory. It is a good thing for you to get enough sleep, and a bad thing for you if not. People need to sleep before learning, and people also need to sleep after learning. When you are asleep, the memory can consolidate all the information into your brain.）此部分原音音频缺失。\nFrom this point, it may only get worse. Not only will I tell you about the wonderfully good things that happen when you get sleep, but the alarmingly bad things that happen when you don&#39;t get enough both for your brain and your body. Let me start with the brain and the functions of learning and memory, because what we&#39;ve discovered over the past 10 or so years is that you need sleep after learning to essentially hit the save button on those new memories so that you don&#39;t forget. But recently, we discovered that you also need sleep before learning and now to actually prepare your brain almost like a dry sponge, ready to initially soak up new information. And without sleep, the memory circuits of the brain essentially become waterlogged, as it were. And you can&#39;t absorb new memories.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 26,
+    "qid": "M100172",
+    "melon_id": 4141,
+    "title": "Paper Rejection 被拒绝的论文",
+    "audio_url": "",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 27,
+    "qid": "M100170",
+    "melon_id": 1082,
+    "title": "Globalization and Detraditionalization 全球化与去全球化",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1775476276543381506.MP3",
+    "transcript": "So, I think you all know what I mean by globalization, don&#39;t you? This is the idea that we all live in a global village. With instant communications, we can share ideas, and consume cultural artifacts from countries all over the world, just by going into the Internet and all dream up, basically. The world is shrinking. In terms of speeds, it is accelerating, but in terms of distance, it&#39;s shrinking. What do I mean by detraditionalization? I mean the disappearance or the erosion, for the better word to use, the erosion of traditional cultures, of conventional ways of doing things, of conventional moralities. More and more young people around the world are rejecting the culture they grow up in, and it&#39;s probably a little bit cruel. But some imitating a Hollywood model of society, rather than the one which they inherit from their local tradition background. OK?",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 28,
+    "qid": "M100169",
+    "melon_id": 1084,
+    "title": "The History of Software 软件的历史 ",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458824612992303106.mp3",
+    "transcript": "The history of software is of course very very new. And the whole IT industry is really only 60, 70 years old which is extraordinary. And to be so close to the birth of a major new technology, a major new discipline is quite remarkable given where we got to in those 60, 70 years. And the progression has been not so much a progression as a stampede because Moore&#39;s Law, the rapid expansion in the power of computing and the rapid fall of the cost of computing and storage and communications, has made it feasible for information technology to move into all sorts of areas of life that were never originally envisaged. What has happened is that there has been as I said a stampede for people to pick the low-hanging fruit. And that is what&#39;s guided the development of software and information technology over the past decades and continues to do so with a number of consequences that we will explore.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 30,
+    "qid": "M100167",
+    "melon_id": 1085,
+    "title": "Books: The Republic 柏拉图的书：理想国",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458820980909588481.mp3",
+    "transcript": "Why should we read the Republic?\nI met lots of students asked this question to themselves when they’re given it as a set of books at the beginning of their university course. But in fact, there are many good reasons to read the Republic.\nAnd the first one I would pick on is just that it is immensely readable. It’s not Plato did not write philosophy like a dry textbook. He wrote it like a living conversation. The whole of the Republic which is a fairly fat book is a living conversation written in short almost soundbite type answers, but nevertheless, developing some very very important ideas. So, my first answer then we should read the Republic just because it is readable. It was written by a genius and it’s worth reading. It’s easy to read. It’s not difficult.\nBut then there&#39;s also obviously the thoughts, the content of the book and he&#39;s asking this absolutely fundamental question: &quot;why should we bother to be good?&quot; &quot;what&#39;s in it for us effectively?&quot;. It seems when we look at the world, it looks as though injustice pays. It looks as though crime pays whereas the good people get trodden down. So, Plato addresses this absolutely fundamental question &quot;why should we be good&quot;. I’m not going to tell you his answer. Read the book.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 31,
+    "qid": "M100166",
+    "melon_id": 3625,
+    "title": "World's Globalization 世界的全球化",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1460128278839857153.mp3",
+    "transcript": "Globalization is an overused and often misunderstood concept. We hear it all the time on news broadcasts and in any type of public discussion. But the starting point for understanding globalization is that it is industries and markets that globalize, not countries. That’s why it’s helpful to think of Globalisation as ‘the integration of economic activities across borders’. Q1 - But why does globalization matter? I would argue globalization matters because it means the rise of interconnectedness between countries and markets across the world. For example, one of the reasons why the financial crash of 2007/2008 was so serious was because the financial and banking systems of countries around the world have become so closely interconnected with the globalization of markets.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 32,
+    "qid": "M100163",
+    "melon_id": 4140,
+    "title": "Luxury Brand 奢侈品牌",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1668231937132597249.m4a",
+    "transcript": "The question today of what makes a luxury brand a luxury brand and how do we distinguish it is very hard to answer. The standard business response is to say, ‘they are more exclusive’. And we get exclusivity by having high price and relatively small amounts of the product available. The reality, however, of luxury brands is that they are sold in their millions, and in some cases, are not priced that much higher than the standard output. The only way I can really answer your question is to say, it is all relative. As you said in your introduction, it wasn’t that long ago in Australia that we would have considered two televisions to be a luxury, or even further back, one color television. And you can make a strong argument, for example, that Starbucks in China, right now, is a luxury purchase – because of its cost, because of how frequently it is purchased by many people. So, I think the long answer is a complicated one, but the answer is, it depends who you talk to. I think in the business community what we would say, is that there is a small cluster of ‘more expensive brands’ which have a distinct strategy that we would identify as being ‘luxury brands’ and they start with the Rolls Royces and the Tiffanys and the Louis Vuittons of the world. And, I think that tends to be how we see them.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 33,
+    "qid": "M100142",
+    "melon_id": 1951,
+    "title": "Network 交通网",
+    "audio_url": "",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 34,
+    "qid": "M100141",
+    "melon_id": 3624,
+    "title": "Motivation 动机",
+    "audio_url": "",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 35,
+    "qid": "M100139",
+    "melon_id": 1086,
+    "title": "The Industrial Revolution Ver.1 工业革命",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458821975051911170.mp3",
+    "transcript": "Through the 1950s and into the 1960s, the idea of the Industrial Revolution was that it was the work of some genius inventors who created machines used primarily in the textile industry but also in mining that eliminated blocks to assembly line production. Then everybody was crowded into factories and the new brave world opened up. In fact, one of the most interesting books and great classics that is still in print was written by an economic historian at Harvard who&#39;s still alive called David Landes. It&#39;s a good book called The Unbound Prometheus, which was basically that. Some of the inventions that I briefly describe in your reading, the spinning Jenny, etc, refer to that. Well, and that kind of analysis led one to concentrate on England where the Industrial Revolution began, and to view industrialization as being a situation of winners and losers by not going as fast.\nNow, that analysis has been really rejected greatly over the past years, because Industrial Revolution is measured by more than simply large factories with industrial workers and the number of machines. This is the point of the beginning of this. The more that we look at the Industrial Revolution, the more that we see that the Industrial Revolution was first and foremost an intensification of forms of production, of kinds of production that were already there. And thus, we spend more time looking at, you know, the intensification of artisanal production, craft production, of domestic industry, which we&#39;ve already mentioned, that is people mostly women but also men and children, too, working in the countryside. The rapid rise of industrial production was very much tied to traditional forms of production.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 29,
+    "qid": "M100168",
+    "melon_id": 1083,
+    "title": "Language and Vocabulary 语言与词汇",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458768845182386177.mp3",
+    "transcript": "Well, a historical linguist compares languages at several levels. You start out looking for basic vocabulary. All languages of the world, natural languages at least, have words for eye and head and nose and ear and for sky and earth and for water, sand and for sibling, mother and father. They may not have words for uncle and aunt. It becomes much vaguer because in one culture an aunt is different when it comes from your father&#39;s side than from your mother&#39;s side. You don&#39;t include snow. Most people know what snow is but in the tropics you don&#39;t have it. So you look for notions that are totally comparable and that occur everywhere in the world. You take the hundred or two hundred most universal notions in the human life, those which you call the basic vocabulary. So you take basic vocabularies and languages that you think are related. You look for words that sound the same.",
+    "sample_summary": "1. 历史语言学家会对语言进行几个层次的比较。\n\n2. 当你寻找基本词汇时，你会发现世界上所有的语言都有一些单词，但它们也可能没有一些单词。\n3. 所以，你要寻找的基本词汇的概念是完全可比较的，而且世界各地都有。\n4. 所以，你会找那些你认为相关的、听起来相同的基本词汇和语言。",
+    "solution_html": "<p>1. 历史语言学家会对语言进行几个层次的比较。<br/></p><p>2. 当你寻找基本词汇时，你会发现世界上所有的语言都有一些单词，但它们也可能没有一些单词。</p><p>3. 所以，你要寻找的基本词汇的概念是完全可比较的，而且世界各地都有。</p><p>4. 所以，你会找那些你认为相关的、听起来相同的基本词汇和语言。</p><p>&nbsp; &nbsp;</p><p><br/></p><p><br/></p>",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 36,
+    "qid": "M100125",
+    "melon_id": 3623,
+    "title": "Recycling Water 循环用水",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458824249253871618.m4a",
+    "transcript": "Why do we need to recycle water? Because we don’t generate much new water. Chemically the process of generating water, which is basically taking hydrogen and oxygen and burning them to produce water, is not a process that happens a lot anymore. So in terms of our total volume of water in the world, yes it is changing, but it’s not changing significantly relative to the rate at which we are using or demand fresh new water. Now there are a lot of different areas of technology involved in water recycling, and we are later in the interview going to get to industrial use and the reclamation of sewerage. What about in the home at the moment; what sort of technology is being utilized in the home when we talk about water recycling? Well very little on average. Typically, in a modern home, we turn on the tap, we take a glass of water, we probably in turning on that tap flush ten glasses of water down the sink. We take a shower, we use fresh water, we do a whole range of things, and there is nominally very little recycling of that. It goes down the drain and it goes off to a waste water treatment plant. There is actually very, very little recycling at a local level. People don’t actually say well I’m now going to take the water I just used, put it through a sophisticated process and reuse it and have a closed loop. It’s not a closed loop in the home.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 37,
+    "qid": "M100123",
+    "melon_id": 1087,
+    "title": "Canned Food 罐装食物",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458823594984390657.mp3",
+    "transcript": "One of the things that was going on during the Great Depression was the beginning of this sort of modern food technology that rules, you know, the way Americans eat today. That is there are a lot of canned foods were being - coming onto the market at the time. And also, refrigerators were really becoming very, very popular during the Great Depression, both in cities and in rural parts of the country.\nThanks to electrification, the Rural Electrification Administration, people could buy appliances. You know, farmers could buy appliances. And that meant frozen foods were becoming big. And, you know, at that time, few people could afford to buy them during the early years of the Great Depression. But, you know, gradually, these things picked up. And so, this was, like, the sort of beginning of the era when people were starting to think about supermarkets with rows and rows of freezer cases and rows and rows of canned foods.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 38,
+    "qid": "M100121",
+    "melon_id": 1950,
+    "title": "The Definition of Great Idea 伟��想法的定义",
+    "audio_url": "",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 39,
+    "qid": "M100118",
+    "melon_id": 3743,
+    "title": "Mars and Earth 火星与地球",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20251222/1766376758371406.MP3",
+    "transcript": "该文本【非考场原文】，仅供SST听力练习所用！\n文本由PTE大西瓜满分答案后制，答案可放心使用！\n\n\nMars, the neighboring planet to Earth, has long attracted scientific interest because of its relative proximity to our planet. Although it is much smaller than Earth, Mars shares several geological similarities with Earth’s surface. Scientists have identified mountains, hills, and vast desert regions on Mars, most of which are covered with rocky materials.\nThese similarities suggest that Mars may have experienced geological processes comparable to those on Earth in the past. However, despite extensive research, there is still no clear evidence confirming the current existence of liquid water on the planet.\nNevertheless, scientific observations have revealed traces of heavy gases in the Martian environment. Due to the planet’s relatively low gravity, these heavy gases do not easily escape into space, allowing Mars to retain a thin layer of atmosphere.\nAlthough this atmosphere is far less dense than Earth’s, it provides important clues about the planet’s physical conditions and its potential to support scientific exploration in the future.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 40,
+    "qid": "M100117",
+    "melon_id": 1088,
+    "title": "English 英语",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458743746370781185.m4a",
+    "transcript": "English, as you have already read, is not a pure language. I don&#39;t think there really are any pure languages in the world. But English is definitely not a pure language. English, in fact, has borrowed from over 350 languages in its history. So it&#39;s a variety of many languages. Some people say it’s like a dog, a mongrel dog, a dog that has been made up of many different dogs. The English language is like that. By looking at the history of the English language we learn about the history of the English people. The two things are closely connected. So, in fact, today we are not only learning about language but we are learning about history. The fact that English has borrowed words from over 350 languages has been viewed differently throughout history. So for example in Shakespeare&#39;s time people were very angry about words which were not, they thought, original English words – words which came from other languages, they didn’t like them.",
+    "sample_summary": "1. 英语不是一门纯粹的语言。\n\n2. 它在历史上，曾从超过350种语言里借过内容，所以它是一种很多语言的变体。\n\n3. 英语语言的历史和英国人的历史是密切相关的。  \n4. 纵观历史，人们对英语借用其他语言词汇的看法各不相同。 \n5. 所以，在莎士比亚时期，人们不喜欢那些不纯正的英语单词。",
+    "solution_html": "<p>1. 英语不是一门纯粹的语言。<br/></p><p>2. 它在历史上，曾从超过350种语言里借过内容，所以它是一种很多语言的变体。<br/></p><p>3. 英语语言的历史和英国人的历史是密切相关的。&nbsp;&nbsp;</p><p>4. 纵观历史，人们对英语借用其他语言词汇的看法各不相同。&nbsp;</p><p>5. 所以，在莎士比亚时期，人们不喜欢那些不纯正的英语单词。</p><p>&nbsp; &nbsp;</p><p><br/></p><p><br/></p>",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 41,
+    "qid": "M100116",
+    "melon_id": 1949,
+    "title": "Food Crisis 食物危机",
+    "audio_url": "",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 42,
+    "qid": "M100115",
+    "melon_id": 1958,
+    "title": "Biological Engineering 生物工程",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1460154926129778690.m4a",
+    "transcript": "Now I&#39;m going to talk about biology, especially applications used in biological systems. The biological system does not always stay the same, but it evolves. Biology engineering is the next level of engineering. Nowadays, scientists rewrite DNAs by cutting the pieces, and can create new organisms, so they can engineer and design nature. While scientists could only cut and paste DNA from one organism to another 40 years ago, they can now write and synthesize DNA to create new organisms with new techniques. If these organisms have a bacterium, when they go to the lab tomorrow, they will see millions of bacteria. Besides, scientists are building a cellular factory and cultivating millions of bacteria based on one bacterium. People also want to see a natural world in the future.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 43,
+    "qid": "M100114",
+    "melon_id": 1959,
+    "title": "Natural Selection of Buildings 建筑的物竞天择",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1460154549812629506.m4a",
+    "transcript": "Design of buildings is important according to architectural textbooks. At its roots, architecture exists to create the physical environment in which people live, but architecture is more than just the built environment, it’s also a part of our culture. It stands as a representation of how we see ourselves, as well as how we see the world. There are poorly designed buildings, but also some great building works. In the Victoria Era, architects designed buildings based on bricks and other materials. The design of flaws was based on lighting as it would not only affect appearance but also health conditions. The materials that buildings are made of also matter. For example, the design of ground floors must ensure that the building is able to withstand the weight of the higher levels. In the 20th century, many old buildings with design flaws were demolished or modified through a natural selection process, which means they are an altered state rather than an original state. This is an application of Darwin&#39;s theory of natural selection to modification of old buildings, which means buildings should adapt to the new world to survive, or be pulled down. So, it&#39;s argued to be unfair to criticize the demolition, although some people believe that whether to be remained should be decided based on their nature and functions. As the world became more and more connected, the styles evolved, but even in modern construction, there is still an importance in honoring the cultural nuances in the built environment.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 44,
+    "qid": "M100113",
+    "melon_id": 3622,
+    "title": "Research on Social Science 社会科学调查 ",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260914/17893913466028885.mp3",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 46,
+    "qid": "M100111",
+    "melon_id": 1947,
+    "title": "The Online Research 线上调查",
+    "audio_url": "",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 45,
+    "qid": "M100112",
+    "melon_id": 1948,
+    "title": "Drop Out of School 辍学",
+    "audio_url": "",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 48,
+    "qid": "M100109",
+    "melon_id": 1090,
+    "title": "Climate and Crops 气候与农作物",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1483075581120638978.mp3",
+    "transcript": "Now we spend a lot of time thinking about how climate will affect crops. But crops affect climate themselves and they do this in two ways.\nFirst of all, about one-quarter of the land surface is used for growing crops. Another 10-15 % are used for pasture. So a substantial amount of the land surface is used in crop and agricultural production. And how we use that land affects our climate. If we were, for example, to deforest a substantial area and replace it with annual crop such as soybean. Then we would alter the characteristics of the land surface, alter the way that water and heat flows from the land surface to the atmosphere and back. And ultimately change the regional climate if there is a large enough change the land surface.\nSo this is an absolutely fascinating topic and one that&#39;s really quite difficult to understand because of the complexity. It&#39;s difficult because it needs us as crops scientists to work even more closely with our climate scientist, colleagues. And it&#39;s difficult because we have to join our models together.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 47,
+    "qid": "M100110",
+    "melon_id": 1089,
+    "title": "The City of Rome 罗马城",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458822542365081601.mp3",
+    "transcript": "But you can see from the relatively crooked and narrow streets of the city of Rome as they look from above today. You can see that again, the city grew in a fairly ad hoc way, as I mentioned. It wasn&#39;t planned all at once. It just grew up over time, beginning in the eighth century B.C... Now this is interesting because what we know about the Romans is when they were left to own devices and they could build the city from scratch, they didn’t let it grow in an ad hoc way. They structured it in a, in a very care, very methodical way. That was basically based on military strategy, military planning. The Romans they couldn&#39;t have conquered the world without obviously having a masterful military enterprise and they everywhere they went on their various campaigns, their various military campaigns. They would build, build camps and those camps were always laid out in a very geometric plan along a grid, usually square or rectangular. So, when we begin to see the Romans building their ideal Roman city, they turn to that so call castrum or military camp design.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 49,
+    "qid": "M100107",
+    "melon_id": 1946,
+    "title": "Australian Culture Diversity 澳洲多元文化",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20251222/17663768087118746.MP3",
+    "transcript": "该文本【非考场原文】，仅供SST听力练习所用！\n文本由PTE大西瓜满分答案后制，答案可放心使用！\n\n\nAustralia is widely recognized as a multicultural country, and it is also home to one of the world’s oldest continuous cultures, which belongs to its Indigenous peoples. At the same time, Australia has attracted immigrants from all over the world, creating a society shaped by cultural diversity.\nThis cultural diversity is clearly reflected in many areas of Australian life, including education, business, and social development. Presentations and studies on multiculturalism often highlight how diversity contributes to Australia’s productivity and innovation by bringing together different skills, perspectives, and experiences.\nAccording to official statistics, nearly half of the Australian population were either born overseas or have at least one parent who was born in another country. This demonstrates the significant role migration plays in shaping the nation’s identity.\nMoreover, migrants make substantial contributions to Australia’s economy by participating in the workforce, starting businesses, and supporting long-term economic growth.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 50,
+    "qid": "M100106",
+    "melon_id": 1945,
+    "title": "The Separation of Powers三权分立",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20251222/17663768629694447.MP3",
+    "transcript": "该文本【非考场原文】，仅供SST听力练习所用！\n文本由PTE大西瓜满分答案后制，答案可放心使用！\n\n\nIn the United States, the principle of the separation of powers is established by the Constitution and forms the foundation of the political system. This principle divides government authority into three distinct branches: legislative, executive, and judicial power, in order to prevent any single branch from becoming too powerful.\nLegislative power refers to the responsibility of making laws and is exercised mainly by Congress. Members of Congress debate, propose, and pass legislation that reflects the will of the people. Executive power, by contrast, focuses on carrying out and enforcing these laws. This power is led by the President, who oversees government departments and ensures that laws are implemented in practice.\nJudicial power is held by the courts and plays a crucial role in interpreting laws. Judges examine how laws should be applied and determine whether they are consistent with the Constitution. Through this process, the judicial branch helps resolve disputes and protect citizens’ rights.\nToday, the roles and responsibilities of these three branches are relatively clear and well defined. However, in the early history of the United States, the boundaries between legislative, executive, and judicial power were often blurred. Over time, constitutional interpretation and legal decisions have gradually clarified these roles, strengthening the balance of power within the government system.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 51,
+    "qid": "M100102",
+    "melon_id": 1943,
+    "title": "The Term ‘need’ in English Language “need”在英文中的含义 ",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20251222/17663769648207631.MP3",
+    "transcript": "该文本【非考场原文】，仅供SST听力练习所用！\n文本由PTE大西瓜满分答案后制，答案可放心使用！\n\n\nThe term ‘need’ in the English language can have different meanings depending on the context, and it is often used to express a strong desire rather than referring only to basic or essential things. In everyday conversation, people might say they “need” something simply because they want it, even if it is not strictly necessary for survival.\nWhen we turn to the natural world, however, the concept of need takes on a more objective meaning. Certain things, such as food, water, and shelter, are essential for living, and in this sense, needs are fundamental requirements for sustaining life.\nFrom a psychological perspective, ‘need’ describes a state in which a person experiences a lack of something important. This lack generates a drive or motivation to fulfill the need, which is a natural aspect of human behavior. Psychologists study these needs to understand how they influence actions, emotions, and overall well-being.\nTherefore, the word ‘need’ can range from a simple expression of desire to an essential biological requirement or a psychological condition, depending on how it is understood in language, nature, or human psychology.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 52,
+    "qid": "M100096",
+    "melon_id": 1941,
+    "title": "Managers 经理",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20251222/17663770079841079.MP3",
+    "transcript": "该文本【非考场原文】，仅供SST听力练习所用！\n文本由PTE大西瓜满分答案后制，答案可放心使用！\n\n\nAlthough managers often have extremely busy schedules and spend long hours overseeing the daily operations of a company, it is equally important for them to continue learning and developing their skills. Reading books, attending seminars, or even returning to universities for further study can provide managers with new ideas, insights, and strategies that are essential for effective leadership.\nWhile experience in the workplace is valuable, it is not the only requirement for a successful manager. Having a broad perspective allows managers to understand complex situations, anticipate challenges, and make informed decisions that benefit their organization.\nIn addition to professional knowledge, managers should strive to know their organizations thoroughly, including internal processes, company culture, and employee needs. By combining practical understanding with academic knowledge, managers can become experts—or in a sense, professors—of management, capable of leading their teams effectively and fostering long-term organizational growth.\nTherefore, continuous learning, a wide perspective, and deep organizational knowledge are key qualities that distinguish outstanding managers from those who rely solely on experience.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 53,
+    "qid": "M100094",
+    "melon_id": 1940,
+    "title": "Shrinking Newspaper Industry 衰弱的新闻报纸业",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260914/17893913139023790.mp3",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 54,
+    "qid": "M100092",
+    "melon_id": 3627,
+    "title": "Moral Objectivism and Moral Absolutism 道德的绝对主义和客观主义",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458817047399022594.mp3",
+    "transcript": "With the concept of moral objectivism, basically, what we&#39;re looking at is the idea that there can be some universal moral principles: some rules, some ideas and guidelines that are valid for all people in all social environments and all situations. The idea that we can essentially have some signposts or a road map to guide behavior is going to be consistent across all individuals.\n \nNow if we take a look at this (at) in one perspective, we can come up with a view of moral absolutism.\nIn the area of moral absolutism, basically what we have, is illustrated on the right-hand side of this slide, is a very firm and unyielding boundary between what is right and what is wrong. And so, within moral absolutism, basically what you have are these non-overridable principles. They must be followed. They must never be violated and there were no exceptions: it is always right; it is always wrong; and nothing is subject to interpretation and nothing is dependent upon the situation.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 55,
+    "qid": "M100091",
+    "melon_id": 1939,
+    "title": "The Design of Hospitals 医院的设计",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1485646973489934337.mp3",
+    "transcript": "There’s been a long history of research into therapeutic environments and their impact on patient recovery ever since Florence Nightingale wrote about the recuperative benefits of fresh air, daylight and views of the outside world.\n \nArchitecture has played a part in patient care. A survey in 2004 once again by Price Waterhouse Coopers and cave extracted key findings which included that patients with access to daylight and external views require less medication and recover faster. Single occupancy rooms can reduce medical errors and encourage family and friends to visit which in turn leads to greater support and faster recovery. Patients recover faster in quieter environments where they&#39;re able to rest and sleep more easily. And there&#39;s also strong evidence that nature whether a garden or a courtyard or a view from a room for a view through a window just more than provide a pleasant setting. Research shows that it can have a direct impact on reducing stress and pain and speeding up recovery.\n \nRadical improvements in hospital design also published by cabe in 2003 showed that over 90% of nurses and all directors of nursing believe that a well-designed environment is significantly linked to the patient recovery rates.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 57,
+    "qid": "M100089",
+    "melon_id": 1938,
+    "title": "The Impacts of Hooks in Persuasive Essay “勾人的部分”与论文",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20251222/17663770687901567.MP3",
+    "transcript": "该文本【非考场原文】，仅供SST听力练习所用！\n文本由PTE大西瓜满分答案后制，答案可放心使用！\n\n\nKnowing how to write a persuasive essay is an essential skill for students and professionals alike, as it allows them to present ideas convincingly and influence their audience. Before beginning the writing process, it is important to gather relevant materials, research thoroughly, and plan the overall structure of the essay. This preparation ensures that the arguments presented are coherent, well-supported, and persuasive.\nOne of the most important elements of a persuasive essay is the use of a hook in the first paragraph. Hooks are typically four to five sentences long and are designed to grab the reader’s attention immediately. They often create a sense of urgency by using strong language and can be emotionally appealing or even shocking to engage the audience effectively.\nBeyond attracting attention, writing persuasive essays provides a valuable opportunity for reflection. It allows the writer to synthesize what they have read and learned, critically evaluate information, and present it in a structured, convincing manner. In this way, the essay-writing process not only develops persuasive skills but also reinforces understanding and learning.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 59,
+    "qid": "M100072",
+    "melon_id": 3630,
+    "title": "HTML 超文本标记语言",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458826434851160066.mp3",
+    "transcript": "Well, the 90s came around and it finally clicked that normal people could get online, which hadn&#39;t really clicked before. And the little trick that finally put it together was Tim Berners Lee’s HTML, so thank you to the UK for providing the fellow who finally put the missing chink in place. And then what happened in the 90s was this extraordinary outpouring of creativity and constructiveness from millions and millions of people. There were millions of people making web pages, creating content online, creating social experiments, creating lessons - all sorts of things. And the first decade of the web took place without much of a profit motive, without any particular charismatic figures driving it, without fear, without a desire for an afterlife or any other religious gambits, without advertising, without any of the traditional motivational schemes. It simply happened because people enjoyed it and it was a good idea.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 56,
+    "qid": "M100090",
+    "melon_id": 3620,
+    "title": "Automated Vehicles 自动化汽车",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260914/17893912775593457.mp3",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 60,
+    "qid": "M100071",
+    "melon_id": 1652,
+    "title": "Misuse of Drugs 误食药品 ",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458816277136064513.mp3",
+    "transcript": "But what are the dangers of keeping these drugs at home. Then, there are a number of dangers. Parents should know that leftover drugs are dangerous because they may be accidentally ingested by children. Either adults don’t keep the bottles properly closed and stored, or because even young kids can sometimes open childproof lids.\n \nPatients may use the drugs after their expiration day. The leftover drugs may be taken for the wrong reasons. For example, someone may have a viral infection and self-prescribed to leftover into microbial that was prescribed for a bacterial infection, but that drug will have no effect as the viral infections. Drugs that are leftover might be given to or taken by someone else who may have a serious allergy to the medicine, and who for that reason would not be prescribed to medicine under the supervision of a physician. Finally, inappropriate use of drugs promotes drug resistance if the drug is taken for the wrong indication, the wrong duration, or in the wrong dosage.\n \nTell what can people do about this, how the situation be improved. I think physicians, patients and parents of patients can take steps to improve this situation. First of all, physicians should prescribe the drug only when appropriate, only in the correct amount and only for the correct duration. Also, the physician must stress to the patient that the full course of drug must be taken. This is recommended even if the symptoms resolved, before the end of the prescription, and parents of children on antibiotics need to ensure they complete their courses as well.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 61,
+    "qid": "M100068",
+    "melon_id": 3766,
+    "title": "Abstraction 抽象化",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1460130888225427457.m4a",
+    "transcript": "So the topic for today is Abstraction, and this is very important layer... ,because, layer of computer, because you cannot anything with a computer unless you have a symbolic system in place, right? So we talk about the origin of symbolic systems. Language is a classic symbolic system. Apparently, one theory for why language evolved is that people communicated in sign languages with movement quite well for a long time. And it turned out that they wanted to communicate even while they were doing things. So while they were trying to straggle dinosaurs, not the dinosaurs, the rhinoceros, they wanted to say: ‘come and help me’ and they use sign language to do it. They had to let go of the rhinoceros and the rhinoceros ran away. So you can see that’s a good idea to be able to do something with your hands and be able to communicate at the same time.\n因为考场原音音频你懂的原因，音频质量较低，大西瓜已为你高清重制。",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 62,
+    "qid": "M100067",
+    "melon_id": 1963,
+    "title": "Adam Smith 亚当·史密斯",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20251222/17663771229617554.MP3",
+    "transcript": "该文本【非考场原文】，仅供SST听力练习所用！\n文本由PTE大西瓜满分答案后制，答案可放心使用！\n\n\nIndustrialization refers to the process by which a nation increases its production and output, transforming its economy from primarily agricultural to more diversified forms of production. In 1776, many British economists believed that a nation’s wealth was measured mainly by the accumulation of money and resources generated through agriculture.\nHowever, Adam Smith challenged this view by arguing that the wealth of a nation should also include manufacturing, which at that time was primarily handcrafted. He emphasized that production and economic activity beyond agriculture were essential for assessing a country’s true prosperity.\nEconomic development, therefore, can be understood as a nation’s ability to increase its output over time. One common way to monitor this output is through income, which serves as an indicator of how much a country produces and earns.\nConsequently, national income can be considered roughly equivalent to the total output of a nation, reflecting both agricultural and industrial contributions, and providing a practical measure of economic growth and development.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 63,
+    "qid": "M100066",
+    "melon_id": 1651,
+    "title": "Industrialization 工业化 ",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458744204699156481.mp3",
+    "transcript": "Within most developed countries, notions of pragmatism, notions of the fact that we have democracies, have succeeded in tempering the market economy. In the 19th century, 18th century, the Industrial Revolution has some very negative effects on people, particularly working classes all over the world. We see data where life expectancy was reduced, hikes we were reduced. We can look at the medical record and can see that actually, living standards, much among large fractions of population, actually went down. But eventually, we passed the legislation about working conditions. And eventually, we circumscribed some of the worst kinds of behavior. We eventually, in the 20th century, we put regulations that imposed better environmental conditions. And so, some of the damage was reversed, and that we have made the market economy work in ways that the benefits of the all is far more what we shared in the world a hundred years ago.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 58,
+    "qid": "M100088",
+    "melon_id": 3753,
+    "title": "Chimpanzees and non-human rights 大猩猩与非人权",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/upload/20260914/17893912388434535.mp3",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 64,
+    "qid": "M100065",
+    "melon_id": 3750,
+    "title": "Study of Genes基因研究",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1460145781985021953.m4a",
+    "transcript": "The discovery of the structure of DNA was really important, allowing scientists to start looking at and thinking about the effect of genes, and how they might affect behaviour. Okay? So early on, we might just think the genes were responsible for our physical structure, our height, our hair colour, and so on, and not so much for our behaviour. But we now know that there&#39;s probably at least some degree of genetic responsibility, for all of our actual behaviours that are psychological behaviours as well, not just physical behaviours. And the mapping of the human genome that was completed in 2001. What is that? I won&#39;t even dare ask if anyone has heard about that. That gave us a lot of interesting information. And it&#39;s been allowing both the study of biology but also the study of psychology and neuroscience to progress rapidly and start integrating information about what we know from genes and studying it.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 65,
+    "qid": "M100064",
+    "melon_id": 1650,
+    "title": "Australian House Price 澳洲房价上涨",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458815449163677697.m4a",
+    "transcript": "Well, it’s like, why is Australian housing is so expensive?\nEssentially, it’s a by-product of how well the Australian economy has been doing over the last 15 years. We’ve had 15 years of more or less uninterrupted economic growth during which average earning has risen by close to 90 percent.\nWhile over the course of that period, the standard variable mortgage rate has roughly halved. That meant that the amount which a typical home buying household can afford to borrow under rules which aren’t strictly applied as they used to be has more than doubled.\nOver the same period, rising immigration and falling average household size have meant that the number of households looking for accommodation has risen by about one and a half million. That’s around 200 thousand more than the number of dwellings has increased by.\nSo you’ve had a substantial increase in the purchasing power of households, no net increase in the supply of housing. And hence, all of that additional purchasing power has gone into pushing up the price of housing.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 66,
+    "qid": "M100061",
+    "melon_id": 3628,
+    "title": "The Human Rights Act  in UK 英国人权法案",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458825604647403522.m4a",
+    "transcript": "The Human Rights Act can be seen as far-reaching, and some would argue controversial in the UK’s history of rights. At the same time, it can be described as a somewhat cautious document that provides the starting point for a wider application of law to rights.\n \nIn many ways, the freedom protections contained in the Human Rights Act were not new to people in the UK. The act puts into UK law most of the clauses of the European Convention on Human Rights. The convention itself was devised following the end of the Second World War by the Council of Europe. UK law has played a significant role in the drafting of the Convention and the UK was among the first governments to ratify the convention in 1951.\n \nRights are sometimes described as being of a positive or a negative nature. That’s to say some can be expressed as a right to and others as freedom from. The 1998 act puts into place 15 specific rights and freedoms which include rights to liberty and security, a free trial, free expression, free elections and the right to marry and found a family. There are also freedoms from torture, from slavery or forced labor and from discrimination on grounds such as race, sex, religion, political opinion or social origin.\n \nThe Human Rights Act has been described as the start of a process. The act itself does not expand on the provisions made by the European Convention which some would consider is following a baseline or a minimum standard for human rights.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 68,
+    "qid": "M100059",
+    "melon_id": 1648,
+    "title": "The Big Bang Theory 宇宙大爆炸 ",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458814521039699969.m4a",
+    "transcript": "One of the most amazing things that’s happened even in my lifetime is the prediction of cosmology. When I started out forty odd years ago, we thought we knew that the universe began with a big bang, some people doubted even then. We thought the universe was about ten or twenty billion years old. But now for really very sound scientific reasons we can say that the universe did started in a Big Bang and it’s 13.8 billion years old. So it’s not 14, it’s not 13 because a decimal point in there and that’s a stunning achievement to know that. And we also know that the laws of physical that apply to tiny particles inside atoms also explains what happened in the big bang. You can’t have one without the other. A very neat example of this is that when you apply nuclear physics, that kind of physics to understand how stars work, you find out that the oldest stars in the universe are about 13 billion years old. So their universe is just a little bit older than the stars. Fantastic, even if we done it and counted in the other way around and said that the stars were older than the universe, we would say science were in deep trouble. But it’s not, everything fits together and we know how the universe began, we got to know how the way it is. The future that it ‘ll suspects we don’t know quite well what’s going, but we got some ideas, which are as good as those ideas we had 40 years ago about how big bang happened.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 67,
+    "qid": "M100060",
+    "melon_id": 3749,
+    "title": "Brand Value and Consumers 品牌价值与消费者",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1460145006818922498.m4a",
+    "transcript": "It turns out consumers are incredibly smart. They combine a lifetime of experience with that brand, combined with whatever its designed appeal is, how it makes them feel, performance and price. And they do all that in a few seconds. So brands are essential to our business to allow us to deliver the increased consumer value associated with our products. We&#39;re not into the generic business of toilet paper. We&#39;re into probably about the softest product you&#39;re going to want to buy. We&#39;re not into a generic soap. We&#39;re into the best, you know, stain removing laundry detergent you&#39;re going to buy. But we&#39;re going to want you to remember that as the tide brand.\n \nNow, that means there&#39;s a second moment of truth. If they do select you and they pay 50% more than they would have paid for Walmart&#39;s brand, when they get home, it’d better perform when it&#39;s used. And here&#39;s where the science starts, folks. There&#39;s an amazing number of fundamental engineering contradictions, right? Airplanes deal with, you know, weight and strength. I want something that&#39;s light but strong. That&#39;s an engineering contradiction. Once I deal with our things, got to be strong but soft. They have to be strong even when they&#39;re wet. Bright but not tear, liquids, mixtures, not common things, but they need... they can&#39;t separate. You don&#39;t want to shake before use, before you pour down in your washing machine.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 69,
+    "qid": "M100058",
+    "melon_id": 3767,
+    "title": "Fishing Industry in Africa 非洲渔业",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1460142696843743233.m4a",
+    "transcript": "In my view, it&#39;s impossible to talk about wildlife, and not think about its role in livelihood. And I guess part of that is my own view, part of the research that I do in Africa. (此句据回忆，考试中略有不同) In most eastern-west Africa. I look a role, all the humans rely on wildlife as the source of food, and also the source of income. And we talk about our wildlife, it seems we talk about fish, we are talking about what probably the single most important source of protein for human that across the globe. And so, billions of, or more than a billion of people rely on fish as their primary source of animal protein, and most of these people living in poverty. So, the management of fish resource of wildlife in that sense causing incredibly important to livelihoods and health. And also, wildlife tourism is the multiple billion-dollar industry, and in many places, such as Africa, south America, it can be the No.1 source of income, it can be the No.1 source of foreign income for economies.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 70,
+    "qid": "M100056",
+    "melon_id": 1091,
+    "title": "Happiness 幸福感",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458820258553970689.m4a",
+    "transcript": "So, happiness economics can help us get to these questions, and I&#39;ll try to give you some examples of this. Now, even though there&#39;s a lot of scepticism, originally about using this survey - surveys what people say make them happy. The number of reason that we are getting increasingly confident in doing so. One is that their consistent pattern, remarkable consistent pattern, that determines well-being across large samples of people, across countries, across the world, and over time. Some of the basic things that make people happy, and I will show you some of these income, health, marital status, employment status. Some of these very basic things are remarkably consistent across countries across world. So that gives us some sense that these surveys are picking up consistent patterns. And when we know what consistent patterns are, we can look at how other things that very much more, affect people&#39;s well-being. The environment and equality, the natures institution, raging on living, and all kinds of other things that very much more.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 71,
+    "qid": "M100055",
+    "melon_id": 3704,
+    "title": "Definition of Words 单词在字典中的定义",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458827044535189505.m4a",
+    "transcript": "What&#39;s the literal definition of &quot;risk&quot;? Business schools use risk analysis. So, what do we mean by &quot;risk&quot;？And when you got a dictionary, and you look at the definition of risk, this is literal, literal definition of risk. What you see is, the definition for example, the possibility of loss or injury, a dangerous element or factor, chance of loss, degree of probability of such loss, and so on. \nSo, risk has two parts, as you look at the literal definition of risk. One part of it is the consequence of some kind of particular danger, hazard loss. And the other part of it is about the probability, possibility or chance. Ok, so even in the literal definition of risk, there are these two parts of it: chance and consequence, OK? \nAnd then at least as far as English language concerns, when you look up the word safe or safety, which you&#39;ll earn as, it&#39;s a little bit of a loop, a little circular argument that free from harm or risks, secure from threat or danger, harm or loss, the condition of being safe and so on so forth. And why we take out of that? At least when we discuss totay, when we are talking about safe at least in English language, we are talking about absolute: something is either safe, or is not safe.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 72,
+    "qid": "M100054",
+    "melon_id": 1962,
+    "title": "Body Fat Experiment 体脂变化实验",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458743885210632194.mp3",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 73,
+    "qid": "M100052",
+    "melon_id": 3748,
+    "title": "Decline of Bees 蜜蜂数量消亡",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1460130577666576385.m4a",
+    "transcript": "So, various conclusions. Yes, bees are in decline. （考场中听不清楚Bees这个词）These declines are well documented, they are real, and reported by good, strong scientific evidence. It is the only evidence that counts. The drives to decline are many. They are varied, depending on species. The fact of pollinator loss could be absolutely huge. So, is it a catastrophe? Not yet, but it could be. On the positive side, we&#39;re aware of the problem, aware this is being raised with time, and people are taking actions fast. We&#39;ve recognized the problem. And that, at least, is being done.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 74,
+    "qid": "M100038",
+    "melon_id": 1646,
+    "title": "Einstein 爱因斯坦 ",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458813056648790018.mp3",
+    "transcript": "For thousands of years, philosophers and astronomers and thinkers of all sorts imagined that the universe, the space around us was rather like this floor in front of us. It was fixed and unchangeable, and things happened on it just like people walk around. So, the stars, the comets, and the planets, and the other heavenly bodies moved around and traced down their parts on this completely unchanging stage of space. In the 20th century, as the result of Einstein’s work, that view of the universe was completely transformed. We began to understand that there was no absolutely fixed stage of space at all on which celestial motions were played out. But in some sense on the larger scale of the universe, the space itself was in the state of continuous dynamic change. That was the prediction made by Einstein. But it wasn’t Einstein who had the honor of making the discovery that our universe is really like that. That distinction fell to the astronomer Edwin Hubble.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 75,
+    "qid": "M100035",
+    "melon_id": 1645,
+    "title": "Vitamin D 维他命 D ",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458817738041507841.mp3",
+    "transcript": "So today we&#39;re going to finish talking about the fat-soluble vitamins. I&#39;m going to start with Vitamin D. And I think probably most of you know that Vitamin D is called the ‘sunshine vitamin’. And it&#39;s called that because there&#39;s absolutely no dietary need for vitamin D if you get adequate sunshine. And the real important word there is “if” because it turns out that in climates, which aren&#39;t near the equator, there&#39;s a big question as to whether or not using these you get adequate sunshine. And that&#39;s important because foods are not naturally abundant in vitamin D. And that&#39;s why milk is fortified but the fortification may not be enough. So again, if exposure to sunlight is adequate, no need for vitamin D. So, Vitamin D really isn&#39;t the Vitamin. It&#39;s a prohormone. When human beings evolve, we evolved in tropical climates and ran around naked. There was plenty of skin exposure to sunlight. And so, there was no dietary need for Vitamin D. As humans migrated away from that equatorial regions, they actually created a need for Vitamin D in food because sunlight was inadequate, particularly during the winter.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 76,
+    "qid": "M100030",
+    "melon_id": 1960,
+    "title": "Computers and Artificial Intelligence 计算机与人工智能",
+    "audio_url": "",
+    "transcript": "",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 77,
+    "qid": "M100028",
+    "melon_id": 1092,
+    "title": "Emotions 情绪",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458819558944063490.mp3",
+    "transcript": "To understand the Fight or Flight response, it helps to think about the role of emotions in our lives. Many of us would prefer to focus on our logical thinking nature and ignore our sometimes troublesome emotions, but emotions have a purpose. Our most basic emotions like fear, anger or disgust are vital messengers: they evolved as signals to help us meet our basic needs for self-preservation and safety. It would be dangerous to be indecisive about a threat to our survival so the brain runs information from our senses through the most primitive, reactive parts of our brain first. These areas of the brain control instinctive responses and they don’t do too much thinking. This more primitive part of our brain communicates with the rest of our brain and our body to create signals we cannot ignore easily: powerful emotions and symptoms.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 79,
+    "qid": "M100019",
+    "melon_id": 3746,
+    "title": "Global Warming 全球变暖",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1460130995884822529.m4a",
+    "transcript": "There can now be no reasonable, science-based, doubt about the reality of global climate change effects brought on by the cumulative and rapidly growing emission of so-called greenhouse gases – primarily carbon dioxide - into the atmosphere. As these effects become increasingly more obvious worldwide, so commercial interests, groups of concerned individuals and national governments have been gripped by what amounts to mass panic about what to do about it.\nTo many, Paul Ehrlich&#39;s Malthusian（马尔萨斯主义的） “Population Bomb” of 1968 appears about to explode in the world’s face in an indirect version of his millenarian vision of population growth, which outpaces agricultural production capacity with predictably catastrophic results for humanity. And his three-part crisis scenario does indeed seem now to be present: a rapid rate of change, a limit of some sort, and delays in perceiving that limit. Ehrlich&#39;s work was roundly criticized at the time, and later, from many quarters（来自许多方面）, and much of what he predicted did not come about. Nevertheless, can the world afford to take the risk that the climate scientists have got it wrong? Is it not in everyone’s interests to apply the Precautionary Principle in attempting to avoid the worst of their predictions – （now, rather than at some future time? As the Chairman of the Intergovernmental Panel on Climate Change, Mr. Rajendra Pachauri has recently pointed out, eleven of the warmest years since instrumental records（仪器记载） began have occurred in the past twelve years, while major precipitation changes are taking place on a global scale.）文中括号中的部分存在于一个版本里，而另一个版本中并不存在。",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 78,
+    "qid": "M100027",
+    "melon_id": 1093,
+    "title": "Smile of Mothers and Their Babies 母婴的微笑互动",
+    "audio_url": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1458818893362544642.mp3",
+    "transcript": "Ever try to get a baby to smile? It can seem close to impossible—and then suddenly there it is: that elusive, seemingly joyous grin. Well it turns out those smiles aren’t spontaneous—they’re strategic.\nResearchers have found that when babies smile, it&#39;s for a reason. They want whoever they’re interacting with— typically a parent—to smile back. And they time it just so, a smile here and a smile there. The researchers call it sophisticated timing. The study is in the journal PLoS ONE.\nThe researchers enlisted real mothers and infants and quantified their interactions, which fell into four categories. One: babies wanted to maximize the amount of time smiling at their mothers. Two: they wanted to maximize the time the mothers smiled at them. Three: they wanted to experience simultaneous smiling, and four: no smiling at all.\nBy studying when smiles happened and what the subsequent effect was, the investigators were able to figure out that for mothers the goal 70 percent of the time was to be smiling simultaneously—while for babies 80 percent of the time they just wanted their mother smiling at them. So, mothers want the interaction, while babies just want to be smiled at.\nSo your baby may not be able to feed itself, talk or even turn over yet. But when it comes to smiles, babies seem to know exactly what they&#39;re up to.",
+    "sample_summary": "",
+    "solution_html": "",
+    "source": "大西瓜周二真题预测"
+  },
+  {
+    "index": 80,
     "qid": "F111009",
     "title": "Biology, DNA & RNA 生物与DNA",
     "audio_url": "",
@@ -36,52 +878,16 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 5,
-    "qid": "F111024",
-    "title": "Definition of Globalization 全球化的定义",
+    "index": 81,
+    "qid": "F111021",
+    "title": "University Competition 高校竞争",
     "audio_url": "",
-    "transcript": "Definition of Globalization 全球化的定义",
+    "transcript": "University Competition 高校竞争",
     "sample_summary": "",
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 6,
-    "qid": "F111043",
-    "title": "The Definition of Risk 定义风险",
-    "audio_url": "",
-    "transcript": "The Definition of Risk 定义风险",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 7,
-    "qid": "F111046",
-    "title": "Wildlife as Food and Income 野生动物作为食物与经济来源",
-    "audio_url": "",
-    "transcript": "Wildlife as Food and Income 野生动物作为食物与经济来源",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 8,
-    "qid": "F111047",
-    "title": "Big Bang Theory 宇宙大爆炸",
-    "audio_url": "",
-    "transcript": "Big Bang Theory 宇宙大爆炸",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 9,
-    "qid": "F111050",
-    "title": "The Decline of Bees 蜜蜂数量减少",
-    "audio_url": "",
-    "transcript": "The Decline of Bees 蜜蜂数量减少",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 10,
+    "index": 82,
     "qid": "F111049",
     "title": "Obese Women 女性体脂实验",
     "audio_url": "",
@@ -90,61 +896,25 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 11,
-    "qid": "F111054",
-    "title": "Misuse of Drugs 用药不当的危害",
+    "index": 83,
+    "qid": "F111046",
+    "title": "Wildlife as Food and Income 野生动物作为食物与经济来源",
     "audio_url": "",
-    "transcript": "Misuse of Drugs 用药不当的危害",
+    "transcript": "Wildlife as Food and Income 野生动物作为食物与经济来源",
     "sample_summary": "",
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 12,
-    "qid": "F111059",
-    "title": "Genes Affect Human Behaviors 基因影响人类行为",
+    "index": 84,
+    "qid": "F111050",
+    "title": "The Decline of Bees 蜜蜂数量减少",
     "audio_url": "",
-    "transcript": "Genes Affect Human Behaviors 基因影响人类行为",
+    "transcript": "The Decline of Bees 蜜蜂数量减少",
     "sample_summary": "",
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 13,
-    "qid": "F111064",
-    "title": "Market Economy 市场经济",
-    "audio_url": "",
-    "transcript": "Market Economy 市场经济",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 14,
-    "qid": "F111092",
-    "title": "Therapeutic Environment 治疗环境",
-    "audio_url": "",
-    "transcript": "Therapeutic Environment 治疗环境",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 15,
-    "qid": "F111093",
-    "title": "Babies Just Want to Be Smiled at 婴儿喜欢笑容",
-    "audio_url": "",
-    "transcript": "Babies Just Want to Be Smiled at 婴儿喜欢笑容",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 16,
-    "qid": "F111096",
-    "title": "Newspaper Industry 新闻业下滑",
-    "audio_url": "",
-    "transcript": "Newspaper Industry 新闻业下滑",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 17,
+    "index": 85,
     "qid": "F111053",
     "title": "Smart Consumers and Brand 品牌与顾客需求",
     "audio_url": "",
@@ -153,43 +923,43 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 18,
-    "qid": "F111101",
-    "title": "The Separation of Powers 三权分立",
+    "index": 86,
+    "qid": "F111059",
+    "title": "Genes Affect Human Behaviors 基因影响人类行为",
     "audio_url": "",
-    "transcript": "The Separation of Powers 三权分立",
+    "transcript": "Genes Affect Human Behaviors 基因影响人类行为",
     "sample_summary": "",
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 19,
-    "qid": "F111100",
-    "title": "Chimpanzees 拯救大猩猩",
+    "index": 87,
+    "qid": "F111064",
+    "title": "Market Economy 市场经济",
     "audio_url": "",
-    "transcript": "Chimpanzees 拯救大猩猩",
+    "transcript": "Market Economy 市场经济",
     "sample_summary": "",
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 20,
-    "qid": "F111097",
-    "title": "Automated Vehicles 自动化汽车",
+    "index": 88,
+    "qid": "F111092",
+    "title": "Therapeutic Environment 治疗环境",
     "audio_url": "",
-    "transcript": "Automated Vehicles 自动化汽车",
+    "transcript": "Therapeutic Environment 治疗环境",
     "sample_summary": "",
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 21,
-    "qid": "F111072",
-    "title": "Climate Change Predictions 气候变暖预测",
+    "index": 89,
+    "qid": "F111093",
+    "title": "Babies Just Want to Be Smiled at 婴儿喜欢笑容",
     "audio_url": "",
-    "transcript": "Climate Change Predictions 气候变暖预测",
+    "transcript": "Babies Just Want to Be Smiled at 婴儿喜欢笑容",
     "sample_summary": "",
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 22,
+    "index": 90,
     "qid": "F111103",
     "title": "Fight-or-flight Response 迎战或逃跑反应",
     "audio_url": "",
@@ -198,7 +968,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 23,
+    "index": 91,
     "qid": "F111105",
     "title": "Need 需要和需求",
     "audio_url": "",
@@ -207,7 +977,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 24,
+    "index": 92,
     "qid": "F111110",
     "title": "What happened to Journalism 网络影响传媒",
     "audio_url": "",
@@ -216,16 +986,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 25,
-    "qid": "F111111",
-    "title": "Cultural Diversity in Australia 澳大利亚多元文化",
-    "audio_url": "",
-    "transcript": "Cultural Diversity in Australia 澳大利亚多元文化",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 26,
+    "index": 93,
     "qid": "F111112",
     "title": "Manager 经理应该自我提升",
     "audio_url": "",
@@ -234,16 +995,16 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 27,
-    "qid": "F111116",
-    "title": "The History of Software 软件发展史",
+    "index": 94,
+    "qid": "F111111",
+    "title": "Cultural Diversity in Australia 澳大利亚多元文化",
     "audio_url": "",
-    "transcript": "The History of Software 软件发展史",
+    "transcript": "Cultural Diversity in Australia 澳大利亚多元文化",
     "sample_summary": "",
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 28,
+    "index": 95,
     "qid": "F111122",
     "title": "Roman City Planning 罗马城市规划",
     "audio_url": "",
@@ -252,25 +1013,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 29,
-    "qid": "F111121",
-    "title": "Canned Food during the Great Depression 大萧条时期的罐装食品",
-    "audio_url": "",
-    "transcript": "Canned Food during the Great Depression 大萧条时期的罐装食品",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 30,
-    "qid": "F111114",
-    "title": "Credit Card Experiment 信用卡实验",
-    "audio_url": "",
-    "transcript": "Credit Card Experiment 信用卡实验",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 31,
+    "index": 96,
     "qid": "F111123",
     "title": "Synthetic Biology & Genetic Engineering 合成生物学与基因工程",
     "audio_url": "",
@@ -279,52 +1022,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 32,
-    "qid": "F111126",
-    "title": "Online Research 线上调研",
-    "audio_url": "",
-    "transcript": "Online Research 线上调研",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 33,
-    "qid": "F111129",
-    "title": "Great Ideas 好想法",
-    "audio_url": "",
-    "transcript": "Great Ideas 好想法",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 34,
-    "qid": "F111130",
-    "title": "Demolition of Buildings 拆除建筑",
-    "audio_url": "",
-    "transcript": "Demolition of Buildings 拆除建筑",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 35,
-    "qid": "F111128",
-    "title": "Food Crisis 粮食危机",
-    "audio_url": "",
-    "transcript": "Food Crisis 粮食危机",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 36,
-    "qid": "F111131",
-    "title": "Negativity Bias 消极偏差",
-    "audio_url": "",
-    "transcript": "Negativity Bias 消极偏差",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 37,
+    "index": 97,
     "qid": "F111134",
     "title": "Water Recycling 水的循环利用",
     "audio_url": "",
@@ -333,16 +1031,16 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 38,
-    "qid": "F111135",
-    "title": "Misunderstanding of Globalization 对全球化的误解",
+    "index": 98,
+    "qid": "F111130",
+    "title": "Demolition of Buildings 拆除建筑",
     "audio_url": "",
-    "transcript": "Misunderstanding of Globalization 对全球化的误解",
+    "transcript": "Demolition of Buildings 拆除建筑",
     "sample_summary": "",
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 39,
+    "index": 99,
     "qid": "F111139",
     "title": "Why Should We Read The Republic? 为什么要读《理想国》",
     "audio_url": "",
@@ -351,7 +1049,16 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 40,
+    "index": 100,
+    "qid": "F111135",
+    "title": "Misunderstanding of Globalization 对全球化的误解",
+    "audio_url": "",
+    "transcript": "Misunderstanding of Globalization 对全球化的误解",
+    "sample_summary": "",
+    "source": "萤火虫官方周预测"
+  },
+  {
+    "index": 101,
     "qid": "F111136",
     "title": "Inequality in Children 儿童成长的不平等",
     "audio_url": "",
@@ -360,52 +1067,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 41,
-    "qid": "F111143",
-    "title": "Two Types of Motivation 两类动机",
-    "audio_url": "",
-    "transcript": "Two Types of Motivation 两类动机",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 42,
-    "qid": "F111146",
-    "title": "The Industrial Revolution 工业革命",
-    "audio_url": "",
-    "transcript": "The Industrial Revolution 工业革命",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 43,
-    "qid": "F111147",
-    "title": "Organization Studies 组织研究",
-    "audio_url": "",
-    "transcript": "Organization Studies 组织研究",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 44,
-    "qid": "F111183",
-    "title": "Stock Market and Modern Business 股票市场与现代企业",
-    "audio_url": "",
-    "transcript": "Stock Market and Modern Business 股票市场与现代企业",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 45,
-    "qid": "F111185",
-    "title": "The Stability of Mood 情绪稳定",
-    "audio_url": "",
-    "transcript": "The Stability of Mood 情绪稳定",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 46,
+    "index": 102,
     "qid": "F111184",
     "title": "A Luxury Brand 奢侈品",
     "audio_url": "",
@@ -414,16 +1076,16 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 47,
-    "qid": "F111189",
-    "title": "Social Difficulties in Children 儿童的社交困难",
+    "index": 103,
+    "qid": "F111143",
+    "title": "Two Types of Motivation 两类动机",
     "audio_url": "",
-    "transcript": "Social Difficulties in Children 儿童的社交困难",
+    "transcript": "Two Types of Motivation 两类动机",
     "sample_summary": "",
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 48,
+    "index": 104,
     "qid": "F111186",
     "title": "Women Leadership 女性领导力",
     "audio_url": "",
@@ -432,25 +1094,16 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 49,
-    "qid": "F111190",
-    "title": "English Language in Poem 诗歌语言",
+    "index": 105,
+    "qid": "F111189",
+    "title": "Social Difficulties in Children 儿童的社交困难",
     "audio_url": "",
-    "transcript": "English Language in Poem 诗歌语言",
+    "transcript": "Social Difficulties in Children 儿童的社交困难",
     "sample_summary": "",
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 50,
-    "qid": "F111194",
-    "title": "Paper Rejection 论文遭拒",
-    "audio_url": "",
-    "transcript": "Paper Rejection 论文遭拒",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 51,
+    "index": 106,
     "qid": "F111195",
     "title": "Bees' Genes and Darwin 蜜蜂基因与达尔文",
     "audio_url": "",
@@ -459,16 +1112,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 52,
-    "qid": "F111196",
-    "title": "Machines Increase Unemployment 机器增加失业率",
-    "audio_url": "",
-    "transcript": "Machines Increase Unemployment 机器增加失业率",
-    "sample_summary": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 53,
+    "index": 107,
     "qid": "F111199",
     "title": "Symmetry in Mathematics 数学中的对称性",
     "audio_url": "",
@@ -477,7 +1121,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 54,
+    "index": 108,
     "qid": "F111206",
     "title": "Hook 议论文开篇",
     "audio_url": "",
@@ -486,7 +1130,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 55,
+    "index": 109,
     "qid": "F111219",
     "title": "African American Civil Rights Movement 美国黑人人权运动",
     "audio_url": "",
@@ -495,7 +1139,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 56,
+    "index": 110,
     "qid": "F111260",
     "title": "Bees Waggle Dance (女生版) 蜜蜂摇摆舞",
     "audio_url": "",
@@ -504,7 +1148,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 57,
+    "index": 111,
     "qid": "F111266",
     "title": "Modern Poetry 现代诗歌",
     "audio_url": "",
