@@ -164,6 +164,7 @@
   #btn-module-karaoke.active .sidebar-active-indicator { background: #c084fc; display: block; }
   #btn-module-planner.active .sidebar-active-indicator { background: #f59e0b; display: block; }
   #btn-module-overview.active .sidebar-active-indicator { background: #34d399; display: block; }
+  #btn-module-fibd.active .sidebar-active-indicator { background: #0284c7; display: block; }
 
   /* ================= 每日练题目标与实战打卡看板样式 ================= */
 
@@ -1683,14 +1684,14 @@
       </button>
 
       <!-- 按钮 5: FIB-D 阅读下拉填空 -->
-      <a href="fib_d_practice.html" target="_blank" class="sidebar-btn" id="btn-module-fibd" style="text-decoration: none;" title="FIB-D 阅读下拉填空 · 极高频极限预测">
+      <button class="sidebar-btn" id="btn-module-fibd" onclick="switchAppModule('fibd')" title="FIB-D 阅读下拉填空 · 极高频极限预测">
         <span class="sidebar-btn-icon">📖</span>
         <div class="sidebar-btn-content">
           <div class="sidebar-btn-title">FIB-D 下拉填空</div>
           <div class="sidebar-btn-desc">🔥 159道极高频 · 智能做题</div>
         </div>
-        <span style="font-size: 10px; background: #fee2e2; color: #dc2626; font-weight: 700; padding: 2px 6px; border-radius: 4px; margin-left: auto;">极高频</span>
-      </a>
+        <span class="sidebar-active-indicator"></span>
+      </button>
     </nav>
 
     <!-- 底部快捷工具与冲刺倒计时 -->
@@ -2078,6 +2079,26 @@
         </div>
       </div>
       <iframe id="karaoke-iframe" src="speaking_karaoke.html" style="width: 100%; height: calc(100vh - 160px); min-height: 820px; border: 1px solid var(--border); border-radius: 14px; background: #ffffff;" allow="microphone"></iframe>
+    </div>
+
+    <!-- 模块: FIB-D 阅读下拉填空 (Reading & Writing: Fill in the Blanks) -->
+    <div id="module-view-fibd" class="module-view" style="display: none;">
+      <div class="fibd-banner" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #4338ca 100%); color: white; padding: 16px 22px; border-radius: 14px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; box-shadow: 0 4px 15px rgba(2, 132, 199, 0.25);">
+        <div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 1.5rem;">📖</span>
+            <h2 style="font-size: 1.25rem; font-weight: 800; margin: 0; color: white;">PTE FIB-D 阅读下拉填空 · 极高频极限预测真题训练器</h2>
+            <span class="badge" style="background: rgba(255,255,255,0.2); color: white; border: none; font-weight: 700;">159 道极高频 · 官方供分 阅读 25% · 全科 7%</span>
+          </div>
+          <p style="font-size: 0.82rem; color: #e0f2fe; margin: 4px 0 0;">真题机经全量覆盖 · 真实下拉选词交互 · 自动评分与订正 · 核心高频搭配词库 · 做题自动计入每日打卡</p>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <a href="fib_d_practice.html" target="_blank" class="nav-btn" style="text-decoration:none; background: rgba(255,255,255,0.18); color: white; border: 1px solid rgba(255,255,255,0.35); padding: 7px 14px; border-radius: 8px; font-weight: 700; font-size: 0.82rem; display: inline-flex; align-items: center; gap: 6px; backdrop-filter: blur(4px);">
+            ↗ 全屏独立窗口打开
+          </a>
+        </div>
+      </div>
+      <iframe id="fibd-iframe" src="fib_d_practice.html" style="width: 100%; height: calc(100vh - 160px); min-height: 850px; border: 1px solid var(--border); border-radius: 14px; background: #ffffff;"></iframe>
     </div>
 
     <!-- 模块 3: 每日备考目标与实战打卡看板 -->
@@ -4493,7 +4514,7 @@
     if (activeBtn) activeBtn.classList.add("active");
 
     // 2. 切换主模块视图可见性
-    const modules = ["wfd", "karaoke", "planner", "overview"];
+    const modules = ["wfd", "karaoke", "fibd", "planner", "overview"];
     modules.forEach(m => {
       const el = document.getElementById("module-view-" + m);
       if (el) el.style.display = (m === moduleName) ? "block" : "none";
@@ -4508,6 +4529,12 @@
       const iframe = document.getElementById("karaoke-iframe");
       if (iframe && (!iframe.src || iframe.src === "about:blank")) {
         iframe.src = "speaking_karaoke.html";
+      }
+    } else if (moduleName === "fibd") {
+      stopCurrentAudio();
+      const iframe = document.getElementById("fibd-iframe");
+      if (iframe && (!iframe.src || iframe.src === "about:blank")) {
+        iframe.src = "fib_d_practice.html";
       }
     } else if (moduleName === "planner") {
       stopCurrentAudio();
@@ -4548,7 +4575,7 @@
     { key: "SWT", name: "SWT 总结文本", english: "Summarize Written Text", category: "writing", unit: "篇", tier: "tier1", isCore: true, weight: "写作 28% + 阅读 23%", desc: "一句话概括长文，连接词拼接关键句", bankCount: 123, bankRoute: "modal", bankDesc: "123篇双机构真题标准摘要" },
 
     // 阅读 (Reading - 5题)
-    { key: "FIB-D", name: "FIB-D 阅读填空", english: "Reading Dropdown", category: "reading", unit: "篇", tier: "tier1", isCore: true, weight: "阅读 25% · 全科 7%", desc: "阅读第一大题，学术高频固定搭配", bankCount: 216, bankRoute: "modal", bankDesc: "216篇萤火虫周预测真题" },
+    { key: "FIB-D", name: "FIB-D 阅读填空", english: "Reading Dropdown", category: "reading", unit: "篇", tier: "tier1", isCore: true, weight: "阅读 25% · 全科 7%", desc: "阅读第一大题，学术高频固定搭配", bankCount: 216, bankRoute: "fibd", bankDesc: "216篇萤火虫周预测真题" },
     { key: "FIB-DD", name: "FIB-DD 拖拽填空", english: "Reading Drag & Drop", category: "reading", unit: "篇", tier: "tier2", isCore: false, weight: "阅读 20% · 全科 6%", desc: "词性语法预判，从选词库拖拽填空", bankCount: 146, bankRoute: "modal", bankDesc: "146篇萤火虫周预测真题" },
     { key: "RO", name: "RO 段落重排", english: "Re-order Paragraphs", category: "reading", unit: "题", tier: "tier3", isCore: false, weight: "阅读 9% · 全科 3%", desc: "成对计分，找首句与代词指代关系", bankCount: 76, bankRoute: "modal", bankDesc: "76题萤火虫周预测真题" },
     { key: "R-MCM", name: "R-MCM 阅读多选", english: "Reading Multi Choice", category: "reading", unit: "题", tier: "tier3", isCore: false, weight: "阅读 5% · 倒扣分", desc: "倒扣分题型！不确定只选 1 个最稳选项" },
@@ -5358,10 +5385,12 @@
                     '<button type="button" onclick="switchAppModule(&apos;wfd&apos;)" style="width: 100%; padding: 7px 10px; background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; border-radius: 6px; font-weight: 700; font-size: 0.8rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px;">🚀 立即开始 WFD 极速听写打卡 (182题已就绪) ↗</button>' :
                    ((t.key === "RS" || t.key === "RA" || t.key === "DI") ?
                     '<button type="button" onclick="switchAppModule(&apos;karaoke&apos;)" style="width: 100%; padding: 7px 10px; background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; border-radius: 6px; font-weight: 700; font-size: 0.8rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px;">🎙️ 直达 ' + t.name.split(' ')[0] + ' 卡拉OK流利度训练器 ↗</button>' :
+                   (t.key === "FIB-D" ?
+                    '<button type="button" onclick="switchAppModule(&apos;fibd&apos;)" style="width: 100%; padding: 7px 10px; background: #e0f2fe; color: #0284c7; border: 1px solid #bae6fd; border-radius: 6px; font-weight: 700; font-size: 0.8rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px;">📖 直达 FIB-D 下拉填空训练器 (🔥159道极高频) ↗</button>' :
                    (t.bankRoute === "modal" ?
                     '<button type="button" onclick="openPlannerBankModal(&apos;' + t.key + '&apos;)" style="width: 100%; padding: 7px 10px; background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; border-radius: 6px; font-weight: 700; font-size: 0.8rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px;">📖 刷 ' + t.name.split(' ')[0] + ' 真题库 (' + t.bankDesc + ') ↗</button>' :
                     '<button type="button" onclick="openTaskDetail(&apos;' + t.key + '&apos;)" style="width: 100%; padding: 7px 10px; background: #f8fafc; color: #475569; border: 1px solid #e2e8f0; border-radius: 6px; font-weight: 600; font-size: 0.78rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px;">🔍 查看考场交互与破题技巧 ↗</button>'
-                   ))) +
+                   )))) +
                 '</div>' +
               '</div>' +
             '</div>';
@@ -5433,6 +5462,8 @@
     const hash = (window.location.hash || "").replace("#", "").toLowerCase();
     if (hash === "karaoke" || hash === "speaking") {
       switchAppModule("karaoke");
+    } else if (hash === "fibd" || hash === "fib-d" || hash === "reading") {
+      switchAppModule("fibd");
     } else if (hash === "planner" || hash === "tracker" || hash === "plan") {
       switchAppModule("planner");
     } else if (hash === "overview" || hash === "score-explorer" || hash === "scoring") {
@@ -5667,6 +5698,17 @@
     initModuleRouting();
     if (typeof renderPlannerView === "function") renderPlannerView();
     if (typeof renderHomeCheckinWidget === "function") renderHomeCheckinWidget();
+  });
+
+  window.addEventListener("message", (event) => {
+    if (event.data && event.data.type === "PTE_CHECKIN_INCREMENT") {
+      const taskKey = event.data.taskKey || "FIB-D";
+      if (typeof incrementDailyPracticeCount === "function") {
+        incrementDailyPracticeCount(taskKey, 1);
+      }
+      if (typeof renderHomeCheckinWidget === "function") renderHomeCheckinWidget();
+      if (typeof renderPlannerView === "function") renderPlannerView();
+    }
   });
 
   // =========================================================================

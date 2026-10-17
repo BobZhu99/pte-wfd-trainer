@@ -1032,6 +1032,10 @@
 
       <!-- 学情数据与刷题进度条 -->
       <div class="stats-bar">
+        <div class="stat-item" style="background: #e0f2fe; padding: 4px 10px; border-radius: 6px; border: 1px solid #bae6fd;">
+          <span style="color: #0369a1; font-weight: 700;">🎯 今日打卡进度:</span>
+          <span class="stat-val" id="statPlannerCheckin" style="color: #0284c7; font-weight: 800;">0 / 2 篇</span>
+        </div>
         <div class="stat-item">当前题号: <span class="stat-val" id="statCurProgress">1 / 159</span></div>
         <div class="stat-item">已作答: <span class="stat-val" id="statAnsweredCount">0</span> 题</div>
         <div class="stat-item">平均正确率: <span class="stat-val success" id="statAccuracy">0%</span></div>
@@ -1322,6 +1326,120 @@
         } catch (e) {}
         updateCategoryCounts();
         renderMatrixDrawer();
+        updateCheckinDisplay();
+      }
+
+      function getActiveProfileId() {
+        return localStorage.getItem("pte_active_profile_id") || "bob_zhu";
+      }
+
+      function getTodayDateStr() {
+        const d = new Date();
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, "0");
+        const day = String(d.getDate()).padStart(2, "0");
+        return y + "-" + m + "-" + day;
+      }
+
+      function getPlannerGoalForFibD() {
+        const pid = getActiveProfileId();
+        try {
+          const saved = localStorage.getItem("pte_planner_goals_" + pid);
+          if (saved) {
+            const g = JSON.parse(saved);
+            if (g && g["FIB-D"] !== undefined) return g["FIB-D"];
+          }
+        } catch(e) {}
+        return 2;
+      }
+
+      function getPlannerActualForFibD() {
+        const pid = getActiveProfileId();
+        const today = getTodayDateStr();
+        try {
+          const saved = localStorage.getItem("pte_planner_act_" + pid + "_" + today);
+          if (saved) {
+            const a = JSON.parse(saved);
+            if (a && a["FIB-D"] !== undefined) return a["FIB-D"];
+          }
+        } catch(e) {}
+        return 0;
+      }
+
+      function updateCheckinDisplay() {
+        const goal = getPlannerGoalForFibD();
+        const act = getPlannerActualForFibD();
+        const el = document.getElementById('statPlannerCheckin');
+        if (el) {
+          if (goal > 0 && act >= goal) {
+            el.innerHTML = '<span style="color:#10b981; font-weight:800;">' + act + ' / ' + goal + ' 篇 (✓ 已达标)</span>';
+          } else {
+            el.innerHTML = '<span style="color:#0284c7; font-weight:800;">' + act + ' / ' + goal + ' 篇</span>';
+          }
+        }
+      }
+
+      function showToastCheckin(msg) {
+        let toast = document.getElementById('checkinToast');
+        if (!toast) {
+          toast = document.createElement('div');
+          toast.id = 'checkinToast';
+          toast.style.cssText = 'position:fixed; bottom:24px; right:24px; background:linear-gradient(135deg,#047857,#10b981); color:#fff; padding:12px 20px; border-radius:10px; box-shadow:0 10px 25px rgba(16,185,129,0.35); z-index:9999; font-weight:700; font-size:14px; transition:all 0.3s ease; opacity:0; transform:translateY(10px); display:flex; align-items:center; gap:8px;';
+          document.body.appendChild(toast);
+        }
+        toast.innerHTML = '<span>🎯</span> ' + msg;
+        toast.style.opacity = '1';
+        toast.style.transform = 'translateY(0)';
+        setTimeout(function() {
+          toast.style.opacity = '0';
+          toast.style.transform = 'translateY(10px)';
+        }, 3200);
+      }
+
+      function recordPlannerCheckin(qid) {
+        const pid = getActiveProfileId();
+        const today = getTodayDateStr();
+        const actKey = "pte_planner_act_" + pid + "_" + today;
+        let acts = {};
+        try {
+          const saved = localStorage.getItem(actKey);
+          if (saved) acts = JSON.parse(saved);
+        } catch (e) {}
+        if (!acts) acts = {};
+
+        const setKey = "pte_fib_d_practiced_today_" + pid + "_" + today;
+        let practicedList = [];
+        try {
+          const pSaved = localStorage.getItem(setKey);
+          if (pSaved) practicedList = JSON.parse(pSaved);
+        } catch(e) {}
+        if (!Array.isArray(practicedList)) practicedList = [];
+
+        const isFirstToday = !practicedList.includes(String(qid));
+        if (isFirstToday) {
+          practicedList.push(String(qid));
+          try { localStorage.setItem(setKey, JSON.stringify(practicedList)); } catch(e) {}
+          acts["FIB-D"] = (acts["FIB-D"] || 0) + 1;
+          try { localStorage.setItem(actKey, JSON.stringify(acts)); } catch(e) {}
+
+          // 如果嵌套在 iframe，通知父页面立即更新打卡看板与小部件
+          if (window.parent && window.parent !== window) {
+            try {
+              if (typeof window.parent.incrementDailyPracticeCount === "function") {
+                window.parent.incrementDailyPracticeCount("FIB-D", 1);
+              }
+              window.parent.postMessage({ type: "PTE_CHECKIN_INCREMENT", taskKey: "FIB-D", qid: qid }, "*");
+            } catch(e) {}
+          }
+
+          const goal = getPlannerGoalForFibD();
+          if (goal > 0 && acts["FIB-D"] >= goal && (acts["FIB-D"] - 1) < goal) {
+            showToastCheckin("🎉 太棒了！今日 FIB-D 练题目标已圆满达成 (" + acts["FIB-D"] + "/" + goal + " 篇)！");
+          } else {
+            showToastCheckin("🎉 本题已成功计入今日打卡：FIB-D +1 篇（今日已完成 " + acts["FIB-D"] + "/" + goal + " 篇）！");
+          }
+        }
+        updateCheckinDisplay();
       }
 
       // 获取当前题目
@@ -1514,6 +1632,7 @@
         });
 
         saveRecords();
+        recordPlannerCheckin(q.qid);
 
         // 高亮空格与展示解析
         highlightGradedBlanks(q, userRecords[q.qid]);
@@ -1865,6 +1984,7 @@
 
       // 初始化运行
       updateCategoryCounts();
+      updateCheckinDisplay();
       filterQuestions();
     })();
   </script>
