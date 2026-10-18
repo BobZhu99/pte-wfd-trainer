@@ -1,0 +1,492 @@
+{
+  "F101003": {
+    "prompt": "Some people think human behaviors can be changed by laws, while others think laws have little effect. What is your opinion.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        1
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Can Laws Change People's Behaviour?",
+    "prompt_zh": "有人认为法律可以改变人的行为，另一些人认为法律作用很小。你的观点是什么？"
+  },
+  "F101004": {
+    "prompt": "In some companies, some employers involve employees in the decision-making process of products and services. What are the advantages and disadvantages of such a policy?",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        1,
+        2
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Employees Taking Part in Company Decisions",
+    "prompt_zh": "有些公司的雇主让员工参与产品和服务的决策过程。这种政策有哪些优点和缺点？"
+  },
+  "F101005": {
+    "prompt": "The formal written examination can be a valid method to assess students’ learning. To what extent do you agree or disagree? Use your own experience.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        2
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Written Exams and Student Learning",
+    "prompt_zh": "正式笔试可以是评估学生学习成果的有效方式。你在多大程度上同意或不同意？请结合自己的经历说明。"
+  },
+  "F101006": {
+    "prompt": "“The value of travel has been overrated”. It is said that one can be a brilliant scholar without leaving one's home base. Do you think travel is a necessary component of a quality education?",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        4
+      ]
+    },
+    "prompt_variants": [
+      {
+        "en": "It is often argued that studying overseas is overrated. There are many scholars who study locally. To what extent do you agree with this?",
+        "zh": "有人认为出国留学被高估了，很多学者都在本地学习。你在多大程度上同意？"
+      }
+    ],
+    "title_en": "Is Travel Necessary for Education?",
+    "prompt_zh": "有人说旅行的价值被高估了，一个人不离开家乡也能成为出色的学者。你认为旅行是优质教育的必要组成部分吗？"
+  },
+  "F101007": {
+    "prompt": "For a less developed country, the disadvantages of tourism are as great as the advantages. Please discuss this statement, and give and explain your opinion.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        5
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Tourism in Less Developed Countries",
+    "prompt_zh": "对欠发达国家来说，旅游业的坏处和好处一样大。请讨论这一说法，并给出和解释你的观点。"
+  },
+  "F101009": {
+    "prompt": "“The information revolution by modern mass communication has both positive and negative consequences for individuals and for society.” To what extent do you agree? Explain with your own experience.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        6
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "The Benefits and Problems of Modern Media",
+    "prompt_zh": "现代大众传播带来的信息革命，对个人和社会既有积极影响也有消极影响。你在多大程度上同意？请结合自己的经历解释。"
+  },
+  "F101010": {
+    "prompt": "The mass media, including TV, radio and newspapers, influence our society and shape our opinions and characters. What is your opinion?",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        7
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "How Media Shape Opinions and Behaviour",
+    "prompt_zh": "电视、广播和报纸等大众传媒影响社会，并塑造人们的观点和性格。你的观点是什么？"
+  },
+  "F101011": {
+    "prompt": "Mass media, including TV and newspapers, have a great influence on humans, particularly on the younger generation. It has a pivotal role in shaping people's opinions. Discuss the extent you agree or disagree. Use your own experience or examples.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        8
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "How Media Influence Young People",
+    "prompt_zh": "电视和报纸等大众传媒对人们，尤其是年轻一代有很大影响，并在塑造观点方面起重要作用。你在多大程度上同意或不同意？请用自己的经历或例子说明。"
+  },
+  "F101012": {
+    "prompt": "Climate change is a concerning global issue. Who should take the responsibility: governments, big companies or individuals?",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        9
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Who Should Take Responsibility for Climate Change?",
+    "prompt_zh": "气候变化是一个令人担忧的全球问题。政府、大公司和个人，谁应该承担责任？"
+  },
+  "F101013": {
+    "prompt": "Television serves many useful functions. It helps people to relax. We can learn from television, and it can also be seen as a companion for the lonely. To what extent do you agree with this? Explain why with your own experience.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        10
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "The Uses of Television",
+    "prompt_zh": "电视有很多有用的功能：帮助放松、提供学习机会，也能陪伴孤独的人。你在多大程度上同意？请结合自己的经历解释原因。"
+  },
+  "F101015": {
+    "prompt": "Should marketing in companies producing consumer goods like food and clothing, place emphasis on the reputation of the company or short-term strategies like discounts and special offers? Why?",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        11
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Brand Reputation or Discounts?",
+    "prompt_zh": "生产食品、服装等消费品的公司，在营销中应该更重视公司声誉，还是折扣和特价等短期策略？为什么？"
+  },
+  "F101016": {
+    "prompt": "You are given climate change as the field of study. Which area would you prefer? Explain why you pick this particular area of your study and give an example in the area you pick.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        12
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Choosing an Area of Climate Research",
+    "prompt_zh": "如果让你研究气候变化，你会选择哪个方面？请解释为什么选择这个具体领域，并给出该领域的一个例子。"
+  },
+  "F101028": {
+    "prompt": "There are both problems and benefits for high school students to study plays and works of theaters written centuries ago. Discuss and use your own experience.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        13
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Studying Old Plays at School",
+    "prompt_zh": "高中生学习几百年前写成的戏剧作品既有问题也有好处。请讨论，并结合自己的经历说明。"
+  },
+  "F101030": {
+    "prompt": "In many towns and cities, large shopping malls are replacing small local shops. Do you think this is a positive development? Give your reasons and examples.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        14
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Shopping Malls Replacing Small Shops",
+    "prompt_zh": "在许多城镇和城市，大型购物商场正在取代当地小商店。你认为这是积极的变化吗？请给出理由和例子。"
+  },
+  "F101039": {
+    "prompt": "Medical technology is responsible for increasing the average life expectancy. Do you think it is a curse or a blessing?",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        15
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Medical Technology and Longer Lives",
+    "prompt_zh": "医疗技术使平均寿命延长。你认为这是好事还是坏事？"
+  },
+  "F101040": {
+    "prompt": "Some people point out that experiential learning (i.e. learning by doing) can work well in formal education. However, others think a traditional form of teaching is the best. Do you think experiential learning is beneficial in high school or college?",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        17
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Learning by Doing at School",
+    "prompt_zh": "有人认为实践学习，也就是通过亲手做来学习，适合正规教育；另一些人认为传统教学最好。你认为实践学习对高中或大学教育有益吗？"
+  },
+  "F101042": {
+    "prompt": "Should parents be held legally responsible for the actions of their children? Do you agree with this opinion? Support your position with your own study, experience or observations.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        18
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Parents' Responsibility for Their Children",
+    "prompt_zh": "家长是否应该为孩子的行为承担法律责任？你是否同意？请用自己的研究、经历或观察支持观点。"
+  },
+  "F101043": {
+    "prompt": "Some universities deduct students’ marks if assignments are given late. What is your opinion and give your recommendations?",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        19
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Taking Marks Off for Late Assignments",
+    "prompt_zh": "有些大学会对迟交作业扣分。你的观点是什么？请给出建议。"
+  },
+  "F101044": {
+    "prompt": "In order to study effectively, it requires comfort, peace and time. So it is impossible for a student to combine learning and employment at the same time, because one distracts the other. Is it realistic to combine them at the same time in our life today? Support your opinion with examples.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        20
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Combining Work and Study",
+    "prompt_zh": "有效学习需要舒适、安静和时间。有人认为学生不可能同时兼顾学习与工作，因为两者相互干扰。在今天的生活中，同时兼顾两者是否现实？请用例子支持观点。"
+  },
+  "F101055": {
+    "prompt": "The world’s governments and organizations are facing a lot of issues. Which do you think is the most pressing problem for the inhabitants on our planet? And give solutions.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        21,
+        22
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "The Most Serious Global Problem and Solutions",
+    "prompt_zh": "世界各国政府和组织面临很多问题。你认为对地球居民来说，最紧迫的问题是什么？请给出解决办法。"
+  },
+  "F101056": {
+    "prompt": "How does the design of buildings affect, either positively or negatively, where people work and live?",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        22,
+        23
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Building Design, Work and Daily Life",
+    "prompt_zh": "建筑设计会怎样积极或消极地影响人们工作和生活的地方？"
+  },
+  "F101062": {
+    "prompt": "Living in the countryside or having a city life, which one do you prefer? Please use examples or your personal experience to support your opinion.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        23
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "City Life or Country Life?",
+    "prompt_zh": "生活在乡村还是城市，你更喜欢哪一种？请用例子或个人经历支持你的观点。"
+  },
+  "F101122": {
+    "prompt": "Some people argue that experience is the best teacher. Life experiences can teach more effectively than books or formal school education. How far do you agree with this idea? Support your opinion with reasons and/or your personal experience.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        25
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Life Experience or Books?",
+    "prompt_zh": "有人认为经验是最好的老师，生活经历比书本或正规学校教育更有效。你在多大程度上同意？请用理由或个人经历支持观点。"
+  },
+  "F101123": {
+    "prompt": "With the increase of digital media available online, the role of the library has become obsolete. Universities should only procure new digital media rather than constantly update textbooks. Discuss both the advantages and disadvantages of this position and give your own point of view.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        26
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Digital Books or Paper Books?",
+    "prompt_zh": "随着网上数字资料增多，有人认为图书馆的作用已经过时，大学应只购买新的数字资料，而不是持续更新纸质教材。请讨论这个主张的优缺点，并给出自己的观点。"
+  },
+  "F101124": {
+    "prompt": "As cities are expanding, some people claim governments should look forward to creating better networks of public transport available for everyone rather than building more roads for vehicle owning population. What’s your opinion? Give some examples or experience to support.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        27
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Better Public Transport or More Roads?",
+    "prompt_zh": "随着城市扩大，有人认为政府应优先改善人人可用的公共交通网络，而不是为汽车使用者修更多道路。你的观点是什么？请用例子或经历支持观点。"
+  },
+  "F101126": {
+    "prompt": "The time people devote to jobs leaves very little time for personal life. How widespread is the problem? What problem will this shortage of time cause?",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        28
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Too Much Work and Too Little Personal Time",
+    "prompt_zh": "人们投入工作的大量时间，使个人生活的时间很少。这个问题有多普遍？缺少个人时间会带来哪些问题？"
+  },
+  "F101127": {
+    "prompt": "Nowadays, it is increasingly more difficult to maintain the right balance between work and other aspects of one’s life, such as time with family and leisure needs. How important do you think this balance is? Why do people find it hard to achieve?",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        29
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Work-Life Balance: Importance and Difficulties",
+    "prompt_zh": "如今，保持工作与家庭、休闲等生活方面的平衡越来越困难。你认为这种平衡有多重要？为什么人们觉得难以实现？"
+  },
+  "F101128": {
+    "prompt": "In our technological world, the number of new inventions has been evolving on a daily basis. Please describe a new invention and explain the impact, either beneficial or detrimental, that you feel it has had on society.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        30
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "A New Invention and Its Effects",
+    "prompt_zh": "当今世界不断出现新发明。请描述一项新发明，解释你认为它对社会带来的有益或有害影响。"
+  },
+  "F101132": {
+    "prompt": "In modern society, unemployment among young people is a serious problem. One solution is to shorten the working week and put more people to work. Give your opinion of the idea, considering the advantages and disadvantages, whether it can apply to young people or the whole workforce.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        31
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Shorter Working Weeks and Unemployment",
+    "prompt_zh": "年轻人失业是一个严重问题。一个办法是缩短工作周，让更多人有工作。请讨论这种办法的优缺点，以及它是否适用于年轻人或所有劳动者，并给出你的观点。"
+  },
+  "F101134": {
+    "prompt": "People who are famous entertainers or sportspeople should give up the right to privacy because this is the price of fame. To what extent do you agree or disagree with this point of view? Give your reasons or use your own experiences to support.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        32,
+        33
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Fame and Privacy",
+    "prompt_zh": "著名艺人或运动员应该放弃隐私权，因为这是成名的代价。你在多大程度上同意或不同意？请给出理由或结合自己的经历说明。"
+  },
+  "F101135": {
+    "prompt": "“In the future, people will work fewer hours at their jobs.” To what extent do you agree with it? Please support your opinion with your own experience.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        34
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Will People Work Fewer Hours?",
+    "prompt_zh": "未来人们的工作时间会减少。你在多大程度上同意？请用自己的经历支持观点。"
+  },
+  "F101136": {
+    "prompt": "Age restrictions can be seen everywhere. It is believed that people should not do things until they reach the right age, such as marriage, and driving. Select one activity and state the minimum age that you think. Support with your own experiences.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        35
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Age Limits",
+    "prompt_zh": "年龄限制随处可见。有人认为，人们应达到合适年龄后才能做某些事情，例如结婚和开车。请选择一种活动，说明你认为适合的最低年龄，并用自己的经历支持观点。"
+  },
+  "F101137": {
+    "prompt": "Some people think learning a foreign language at school should be compulsory. To what extent do you agree with it? Use your experience or examples to support your viewpoint.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        36
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Should Foreign Languages Be Compulsory?",
+    "prompt_zh": "有人认为学校应把外语设为必修课。你在多大程度上同意？请结合自己的经历或例子支持观点。"
+  },
+  "F101138": {
+    "prompt": "Many countries spend large amounts of money on the restoration of historic buildings rather than on modern housing. To what extent do you agree or disagree with this analysis? What are advantages and disadvantages of this? Support your writing with your experience or examples.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        37
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Protecting Old Buildings and Building New Homes",
+    "prompt_zh": "许多国家花大量资金修复历史建筑，而不是建设现代住房。你在多大程度上同意或不同意这种做法？它有哪些优点和缺点？请结合自己的经历或例子说明。"
+  },
+  "F101139": {
+    "prompt": "It is getting harder for children to live and grow in the 21st century than in the past. Do you agree or disagree?",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        38
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Growing Up in the 21st Century",
+    "prompt_zh": "与过去相比，孩子在21世纪生活和成长更加困难。你同意还是不同意？"
+  },
+  "F101140": {
+    "prompt": "\"Should there be a maximum wage for high-paying people?\" To what extent do you agree with this statement? Please give your reasons and/or arguments.",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        40
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Should There Be a Maximum Wage?",
+    "prompt_zh": "是否应该给高收入人群设置最高工资？你在多大程度上同意？请给出理由或论据。"
+  },
+  "F101143": {
+    "prompt": "Advanced technology such as artificial intelligence can translate a foreign language easily. To what extent do you think learning a foreign language is unnecessary?",
+    "prompt_source": {
+      "file": "分装版/WE.pdf",
+      "provider": "萤火虫",
+      "pages": [
+        41
+      ]
+    },
+    "prompt_variants": [],
+    "title_en": "Learning Languages When AI Can Translate",
+    "prompt_zh": "人工智能等先进技术能够轻松翻译外语。你在多大程度上认为学习外语已经没有必要？"
+  }
+}

@@ -556,7 +556,10 @@ def make_outlines(bank):
             ])
         result.append({
             'index': index, 'qid': item['qid'], 'qids': item['qids'],
-            'title': item['title'].strip(), 'values': values,
+            'title': item['title'].strip(), 'title_en': item['title_en'],
+            'question': {'en': item['prompt'], 'zh': item['prompt_zh']},
+            'question_variants': item.get('prompt_variants', []),
+            'question_source': item['prompt_source'], 'values': values,
             'opening': {'en': opening_en, 'zh': opening_zh},
             'body1': bodies[0], 'body2': bodies[1],
             'closing': {'en': closing_en, 'zh': closing_zh},
@@ -574,15 +577,22 @@ def render_markdown(outlines):
         '**例子全部已经配好，均为写作示例，可以直接用来记忆句式和思路，不需要另外编例子。**', '',
         '固定结构：Whether → Although → I believe → because 1 and 2；两段主体各用“理由—解释—例子—回扣”；结尾重复观点和两个要点。', '',
         '**Whether** 是正确拼写。理由可以重复熟词，例子可以重复常见场景。利弊题的一段写好处、一段写坏处；原因、问题、建议题只调整段落任务。', '',
-        '## 题目目录', '', '| 序号 | 题目 | 机构题号 |', '|---|---|---|',
+        '## 题目目录', '', '| 序号 | 中文题目 | 英文题目 | 机构题号 |', '|---|---|---|---|',
     ]
     for o in outlines:
-        lines.append(f"| {o['index']} | {o['title']} | {' / '.join(o['qids'])} |")
+        lines.append(f"| {o['index']} | {o['title']} | {o['title_en']} | {' / '.join(o['qids'])} |")
     for o in outlines:
         v = o['values']
         lines += [
             '', '---', '', f"## {o['index']:02d}. {o['title']}", '',
+            '**英文标题：** ' + o['title_en'], '',
             '**题号：** ' + ' / '.join('#' + qid for qid in o['qids']), '',
+            '### 英文原题与中文释义', '', o['question']['en'], '', o['question']['zh'], '',
+            '英文原文来源：萤火虫题库《WE.pdf》，PDF第' + '、'.join(str(p) for p in o['question_source']['pages']) + '页。', '',
+        ]
+        for variant in o['question_variants']:
+            lines += ['**另一种英文问法：**', '', variant['en'], '', variant['zh'], '']
+        lines += [
             f"**只记三点：** {v['position']['zh']}；①{v['r1']['zh']}；②{v['r2']['zh']}。", '',
         ]
         if o['note']:

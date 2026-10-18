@@ -1,5 +1,6 @@
 // 同题关系经题目文本核对后登记在配置中；不按标题相似度自动合并。
 const config = require('./we_high_frequency_ids.json');
+const englishQuestions = require('./we_english_questions.json');
 
 function mergeWeQuestions(records) {
   const orderedIds = [...config.melon.map(id => 'M' + id), ...config.firefly.map(id => 'F' + id)];
@@ -30,14 +31,23 @@ function mergeWeQuestions(records) {
     if (consumed.has(id)) continue;
     const qids = pairs.has(id) ? [id, pairs.get(id)] : [id];
     qids.forEach(qid => consumed.add(qid));
-    const variants = qids.map(qid => ({ ...byId.get(qid) }));
+    const variants = qids.map(qid => ({ ...byId.get(qid), ...(englishQuestions[qid] || {}) }));
     const primary = variants.find(item => item.qid.startsWith('F')) || variants[0];
+    variants.filter(item => item.qid.startsWith('M')).forEach(item => {
+      item.title_en = primary.title_en;
+      item.shared_prompt_en = primary.prompt;
+      item.shared_prompt_source_qid = primary.qid;
+    });
     merged.push({
       index: merged.length + 1,
       qid: primary.qid,
       qids,
       title: primary.title,
+      title_en: primary.title_en,
       prompt: primary.prompt,
+      prompt_zh: primary.prompt_zh,
+      prompt_source: primary.prompt_source,
+      prompt_variants: primary.prompt_variants || [],
       sample_essay: primary.sample_essay || '',
       source: [...new Set(variants.map(item => item.source))].join(' + '),
       is_overlap: variants.length > 1,
