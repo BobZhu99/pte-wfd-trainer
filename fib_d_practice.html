@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>PTE FIB-D 阅读下拉填空·极高频极限预测真题训练器</title>
+  <script>
+    // 嵌在主页 iframe 里时加 is-embedded：隐藏与主页横幅重复的标题和模块导航
+    try { if (window.self !== window.top) document.documentElement.classList.add('is-embedded'); } catch (e) { document.documentElement.classList.add('is-embedded'); }
+  </script>
   <style>
     :root {
       --primary: #0284c7;
@@ -917,8 +921,57 @@
       color: #475569;
     }
 
+    /* 未计分的「查看解析」/ 背题模式横幅 */
+    .score-banner.reveal {
+      background: linear-gradient(135deg, #eff6ff, #dbeafe);
+      border-color: #93c5fd;
+    }
+
+    .score-banner.reveal .score-val-text {
+      color: #1d4ed8;
+      font-size: 17px;
+    }
+
+    /* 窄屏下按钮整颗换行，不把文字挤成两行 */
+    .q-actions-right,
+    .nav-buttons-left,
+    .nav-buttons-right,
+    .module-tabs {
+      flex-wrap: wrap;
+    }
+
+    .btn-action-tool,
+    .btn,
+    .module-tab,
+    .filter-chip,
+    .instruction-bar .blank-count {
+      white-space: nowrap;
+    }
+
+    .instruction-bar {
+      flex-wrap: wrap;
+      gap: 6px 16px;
+    }
+
+    /* 嵌在主页 iframe 里：主页横幅已有标题和模块导航，只保留答题卡按钮 */
+    .is-embedded .brand,
+    .is-embedded .module-tabs {
+      display: none;
+    }
+
+    .is-embedded .nav-container {
+      justify-content: flex-end;
+    }
+
     /* 移动端与平板响应式适配 */
     @media (max-width: 768px) {
+      header {
+        position: static; /* 手机上吸顶页头约占 1/4 屏 */
+      }
+      .kbd-hint,
+      .shortcuts-bar {
+        display: none; /* 触屏没有键盘快捷键 */
+      }
       .app-body {
         padding: 12px 14px 30px;
       }
@@ -1079,7 +1132,7 @@
       <!-- 官方题目指引 -->
       <div class="instruction-bar">
         <span><strong>Instructions:</strong> In the text below some words are missing. Choose the correct word in the drop-down box to restore the text.</span>
-        <span style="font-size: 12px; color: #64748b;">本题空格数: <strong id="qBlankCount">5</strong> 个</span>
+        <span class="blank-count" style="font-size: 12px; color: #64748b;">本题空格数: <strong id="qBlankCount">5</strong> 个</span>
       </div>
 
       <!-- 阅读段落与交互下拉框 -->
@@ -1091,19 +1144,19 @@
       <div class="question-footer">
         <div class="nav-buttons-left">
           <button class="btn btn-default" id="btnPrev">
-            <span>←</span> 上一题 (Alt+P)
+            <span>←</span> 上一题 <span class="kbd-hint">(Alt+P)</span>
           </button>
           <button class="btn btn-default" id="btnNext">
-            下一题 (Alt+N) <span>→</span>
+            下一题 <span class="kbd-hint">(Alt+N)</span> <span>→</span>
           </button>
         </div>
 
         <div class="nav-buttons-right">
-          <button class="btn btn-warning" id="btnShowAnswer">
-            <span>💡</span> 查看解析 (Alt+S)
+          <button class="btn btn-warning" id="btnShowAnswer" title="显示正确答案与解析（不计分、不计入打卡）">
+            <span>💡</span> 查看解析 <span class="kbd-hint">(Alt+S)</span>
           </button>
           <button class="btn btn-primary" id="btnSubmit">
-            <span>🚀</span> 提交批改 (Enter)
+            <span>🚀</span> 提交批改 <span class="kbd-hint">(Enter)</span>
           </button>
         </div>
       </div>
@@ -1148,7 +1201,8 @@
       <span class="kbd">Alt + N</span> 下一题 &nbsp;|&nbsp;
       <span class="kbd">Enter</span> 提交批改 &nbsp;|&nbsp;
       <span class="kbd">Alt + S</span> 查看答案 &nbsp;|&nbsp;
-      <span class="kbd">M</span> 切换背题/做题
+      <span class="kbd">M</span> 切换背题/做题 &nbsp;|&nbsp;
+      <span class="kbd">Esc</span> 关闭答题卡
     </div>
   </main>
 
@@ -1181,16 +1235,42 @@
   <!-- 页面交互与答题引擎 -->
   <script>
     (function() {
-      // 存储键名
-      const STORAGE_KEY_RECORDS = 'pte_fib_d_records_v1';
+      // 存储键名：做题记录按学员档案分开存 pte_fib_d_records_v1_<档案id>（主页删除档案时一并清理）。
+      // 旧版所有档案共用 pte_fib_d_records_v1：首次运行时并入 prof_default（原主人的档案），旧键保留作备份
+      const LEGACY_KEY_RECORDS = 'pte_fib_d_records_v1';
+      const KEY_RECORDS_MIGRATED = 'pte_fib_d_records_migrated_v1';
       const STORAGE_KEY_STATE = 'pte_fib_d_ui_state_v1';
 
-      // 学习历史记录
-      let userRecords = {};
-      try {
-        const saved = localStorage.getItem(STORAGE_KEY_RECORDS);
-        if (saved) userRecords = JSON.parse(saved);
-      } catch (e) { userRecords = {}; }
+      function recordsKeyFor(pid) {
+        return LEGACY_KEY_RECORDS + '_' + pid;
+      }
+
+      function readRecordsObject(key) {
+        try {
+          const v = JSON.parse(localStorage.getItem(key) || '{}');
+          return (v && typeof v === 'object' && !Array.isArray(v)) ? v : {};
+        } catch (e) {
+          return {};
+        }
+      }
+
+      function migrateLegacyRecords() {
+        try {
+          if (localStorage.getItem(KEY_RECORDS_MIGRATED)) return;
+          if (localStorage.getItem(LEGACY_KEY_RECORDS)) {
+            const target = recordsKeyFor('prof_default');
+            // prof_default 已有新记录时只补上缺的题，不覆盖
+            const merged = Object.assign({}, readRecordsObject(LEGACY_KEY_RECORDS), readRecordsObject(target));
+            localStorage.setItem(target, JSON.stringify(merged));
+          }
+          localStorage.setItem(KEY_RECORDS_MIGRATED, new Date().toISOString());
+        } catch (e) {}
+      }
+
+      // 学习历史记录：属于 recordsPid 这个档案；主页切换档案时（storage 事件）整体换掉
+      migrateLegacyRecords();
+      let recordsPid = getActiveProfileId();
+      let userRecords = readRecordsObject(recordsKeyFor(recordsPid));
 
       // 界面筛选状态
       let currentBank = 'ultra'; // 'ultra' (159) | 'frequent' (206) | 'all' (216) | 'wrong' | 'starred'
@@ -1201,6 +1281,28 @@
       let filteredList = [];
       let currentIndex = 0; // 在当前 filteredList 中的索引
 
+      // 刷新后恢复：题库分类、难度、做题/背题模式和停留的题目
+      function saveUiState() {
+        try {
+          const q = filteredList[currentIndex];
+          localStorage.setItem(STORAGE_KEY_STATE, JSON.stringify({
+            bank: currentBank,
+            diff: currentDiff,
+            studyMode: isStudyMode,
+            qid: q ? q.qid : null
+          }));
+        } catch (e) {}
+      }
+
+      function loadUiState() {
+        try {
+          const s = JSON.parse(localStorage.getItem(STORAGE_KEY_STATE) || 'null');
+          return (s && typeof s === 'object') ? s : null;
+        } catch (e) {
+          return null;
+        }
+      }
+
       // DOM 元素引用
       const passageContent = document.getElementById('passageContent');
       const qBadgeNum = document.getElementById('qBadgeNum');
@@ -1210,6 +1312,7 @@
       const feedbackSection = document.getElementById('feedbackSection');
       const scoreBanner = document.getElementById('scoreBanner');
       const scoreBannerText = document.getElementById('scoreBannerText');
+      const scoreBannerTip = document.getElementById('scoreBannerTip');
       const vocabChipsContainer = document.getElementById('vocabChipsContainer');
       const translationText = document.getElementById('translationText');
 
@@ -1247,7 +1350,8 @@
         ALL_FIB_QUESTIONS.forEach(q => {
           const rec = userRecords[q.qid];
           if (rec) {
-            answeredCount++;
+            // 只收藏/标掌握、或选了没提交的题不算「已作答」
+            if (rec.lastScore !== undefined) answeredCount++;
             if (rec.isStarred) starredCount++;
             if (rec.isMastered) masteredCount++;
             if (rec.lastScore !== undefined && rec.lastScore < rec.totalBlanks) {
@@ -1280,7 +1384,7 @@
       }
 
       // 根据当前筛选条件计算题目子集
-      function filterQuestions() {
+      function applyFilters() {
         const kw = searchKeyword.trim().toLowerCase();
 
         filteredList = ALL_FIB_QUESTIONS.filter(q => {
@@ -1315,6 +1419,10 @@
         }
 
         drawerTotalCount.textContent = filteredList.length;
+      }
+
+      function filterQuestions() {
+        applyFilters();
         renderMatrixDrawer();
         renderCurrentQuestion();
       }
@@ -1322,7 +1430,7 @@
       // 保存记录到 LocalStorage
       function saveRecords() {
         try {
-          localStorage.setItem(STORAGE_KEY_RECORDS, JSON.stringify(userRecords));
+          localStorage.setItem(recordsKeyFor(recordsPid), JSON.stringify(userRecords));
         } catch (e) {}
         updateCategoryCounts();
         renderMatrixDrawer();
@@ -1330,7 +1438,7 @@
       }
 
       function getActiveProfileId() {
-        return localStorage.getItem("pte_active_profile_id") || "bob_zhu";
+        return localStorage.getItem("pte_active_profile_id") || "prof_default";
       }
 
       function getTodayDateStr() {
@@ -1341,16 +1449,26 @@
         return y + "-" + m + "-" + day;
       }
 
+      // 与主页 getPlannerGoals() 保持一致：从没设过目标时用 Competent 预设（FIB-D 3 篇，见 build_wfd_web.py 的 PLANNER_PRESETS），
+      // 存成 {} 是用户主动清零，此时目标为 0；兼容旧键名 FIB_D
       function getPlannerGoalForFibD() {
         const pid = getActiveProfileId();
+        let g = null;
         try {
           const saved = localStorage.getItem("pte_planner_goals_" + pid);
-          if (saved) {
-            const g = JSON.parse(saved);
-            if (g && g["FIB-D"] !== undefined) return g["FIB-D"];
-          }
+          if (saved !== null) g = JSON.parse(saved);
         } catch(e) {}
-        return 2;
+        if (!g || typeof g !== "object") return 3;
+        if (g["FIB-D"] !== undefined) return Number(g["FIB-D"]) || 0;
+        if (g["FIB_D"] !== undefined) return Number(g["FIB_D"]) || 0;
+        return 0;
+      }
+
+      function readFibDActual(acts) {
+        if (!acts) return 0;
+        if (acts["FIB-D"] !== undefined) return Number(acts["FIB-D"]) || 0;
+        if (acts["FIB_D"] !== undefined) return Number(acts["FIB_D"]) || 0;
+        return 0;
       }
 
       function getPlannerActualForFibD() {
@@ -1358,12 +1476,13 @@
         const today = getTodayDateStr();
         try {
           const saved = localStorage.getItem("pte_planner_act_" + pid + "_" + today);
-          if (saved) {
-            const a = JSON.parse(saved);
-            if (a && a["FIB-D"] !== undefined) return a["FIB-D"];
-          }
+          if (saved) return readFibDActual(JSON.parse(saved));
         } catch(e) {}
         return 0;
+      }
+
+      function formatCheckinProgress(act, goal) {
+        return goal > 0 ? (act + ' / ' + goal + ' 篇') : (act + ' 篇（今日未设目标）');
       }
 
       function updateCheckinDisplay() {
@@ -1374,7 +1493,7 @@
           if (goal > 0 && act >= goal) {
             el.innerHTML = '<span style="color:#10b981; font-weight:800;">' + act + ' / ' + goal + ' 篇 (✓ 已达标)</span>';
           } else {
-            el.innerHTML = '<span style="color:#0284c7; font-weight:800;">' + act + ' / ' + goal + ' 篇</span>';
+            el.innerHTML = '<span style="color:#0284c7; font-weight:800;">' + formatCheckinProgress(act, goal) + '</span>';
           }
         }
       }
@@ -1384,7 +1503,7 @@
         if (!toast) {
           toast = document.createElement('div');
           toast.id = 'checkinToast';
-          toast.style.cssText = 'position:fixed; bottom:24px; right:24px; background:linear-gradient(135deg,#047857,#10b981); color:#fff; padding:12px 20px; border-radius:10px; box-shadow:0 10px 25px rgba(16,185,129,0.35); z-index:9999; font-weight:700; font-size:14px; transition:all 0.3s ease; opacity:0; transform:translateY(10px); display:flex; align-items:center; gap:8px;';
+          toast.style.cssText = 'position:fixed; bottom:24px; right:24px; max-width:calc(100vw - 48px); background:linear-gradient(135deg,#047857,#10b981); color:#fff; padding:12px 20px; border-radius:10px; box-shadow:0 10px 25px rgba(16,185,129,0.35); z-index:9999; font-weight:700; font-size:14px; transition:all 0.3s ease; opacity:0; transform:translateY(10px); display:flex; align-items:center; gap:8px; pointer-events:none;';
           document.body.appendChild(toast);
         }
         toast.innerHTML = '<span>🎯</span> ' + msg;
@@ -1419,16 +1538,13 @@
         if (isFirstToday) {
           practicedList.push(String(qid));
           try { localStorage.setItem(setKey, JSON.stringify(practicedList)); } catch(e) {}
-          acts["FIB-D"] = (acts["FIB-D"] || 0) + 1;
+          acts["FIB-D"] = readFibDActual(acts) + 1;
           try { localStorage.setItem(actKey, JSON.stringify(acts)); } catch(e) {}
 
-          // 如果嵌套在 iframe，通知父页面立即更新打卡看板与小部件
+          // 如果嵌套在主页面 iframe 里，只通知父页面刷新看板（+1 已写入 localStorage，父页面不能再加，否则重复计数）
           if (window.parent && window.parent !== window) {
             try {
-              if (typeof window.parent.incrementDailyPracticeCount === "function") {
-                window.parent.incrementDailyPracticeCount("FIB-D", 1);
-              }
-              window.parent.postMessage({ type: "PTE_CHECKIN_INCREMENT", taskKey: "FIB-D", qid: qid }, "*");
+              window.parent.postMessage({ type: "PTE_CHECKIN_UPDATED", taskKey: "FIB-D", qid: qid }, "*");
             } catch(e) {}
           }
 
@@ -1436,7 +1552,7 @@
           if (goal > 0 && acts["FIB-D"] >= goal && (acts["FIB-D"] - 1) < goal) {
             showToastCheckin("🎉 太棒了！今日 FIB-D 练题目标已圆满达成 (" + acts["FIB-D"] + "/" + goal + " 篇)！");
           } else {
-            showToastCheckin("🎉 本题已成功计入今日打卡：FIB-D +1 篇（今日已完成 " + acts["FIB-D"] + "/" + goal + " 篇）！");
+            showToastCheckin("🎉 本题已成功计入今日打卡：FIB-D +1 篇（今日已完成 " + formatCheckinProgress(acts["FIB-D"], goal) + "）！");
           }
         }
         updateCheckinDisplay();
@@ -1447,30 +1563,10 @@
         return filteredList[currentIndex];
       }
 
-      // 渲染当前题目
-      function renderCurrentQuestion() {
+      // 收藏 / 掌握按钮状态
+      function refreshQuestionToolbar() {
         const q = getCurrentQ();
-        if (!q) {
-          passageContent.innerHTML = '<div style="text-align: center; color: #94a3b8; padding: 60px 20px;">' +
-            '<div style="font-size: 36px; margin-bottom: 12px;">📭</div>' +
-            '<p style="font-size: 16px; font-weight: 600;">暂无符合条件的题目</p>' +
-            '<p style="font-size: 13px; margin-top: 6px;">可尝试切换标签、重置难度或清空搜索关键词</p>' +
-            '</div>';
-          qBadgeNum.textContent = '#--';
-          qTitle.textContent = '无题目';
-          document.getElementById('statCurProgress').textContent = '0 / 0';
-          feedbackSection.classList.remove('show');
-          return;
-        }
-
-        // 更新头部信息
-        document.getElementById('statCurProgress').textContent = (currentIndex + 1) + ' / ' + filteredList.length;
-        qBadgeNum.textContent = '#' + q.qid;
-        qTitle.textContent = q.title;
-        qBlankCount.textContent = q.blankCount || (q.orderedBlanks ? q.orderedBlanks.length : 0);
-
-        // 更新星标与掌握按钮状态
-        const rec = userRecords[q.qid] || {};
+        const rec = (q && userRecords[q.qid]) || {};
         if (rec.isStarred) {
           btnToggleStar.classList.add('active-starred');
           btnToggleStar.innerHTML = '<span>★</span> 已收藏';
@@ -1486,6 +1582,45 @@
           btnToggleMastered.classList.remove('active-mastered');
           btnToggleMastered.innerHTML = '<span>✅</span> 标为掌握';
         }
+      }
+
+      // 渲染当前题目
+      let lastRenderedQid = null;
+      function renderCurrentQuestion() {
+        const q = getCurrentQ();
+        // 换题时停掉上一题的全文朗读，按钮状态复位
+        if (!q || q.qid !== lastRenderedQid) stopPassageSpeech();
+        lastRenderedQid = q ? q.qid : null;
+        saveUiState();
+        if (!q) {
+          passageContent.innerHTML = '<div style="text-align: center; color: #94a3b8; padding: 60px 20px;">' +
+            '<div style="font-size: 36px; margin-bottom: 12px;">📭</div>' +
+            '<p style="font-size: 16px; font-weight: 600;">暂无符合条件的题目</p>' +
+            '<p style="font-size: 13px; margin-top: 6px;">可尝试切换标签、重置难度或清空搜索关键词</p>' +
+            '</div>';
+          qBadgeNum.textContent = '#--';
+          qTitle.textContent = '无题目';
+          qTagsRow.innerHTML = '';
+          qBlankCount.textContent = '0';
+          document.getElementById('statCurProgress').textContent = '0 / 0';
+          feedbackSection.classList.remove('show');
+          refreshQuestionToolbar();
+          btnPrev.disabled = true;
+          btnNext.disabled = true;
+          btnPrev.style.opacity = '0.5';
+          btnNext.style.opacity = '0.5';
+          return;
+        }
+
+        // 更新头部信息
+        document.getElementById('statCurProgress').textContent = (currentIndex + 1) + ' / ' + filteredList.length;
+        qBadgeNum.textContent = '#' + q.qid;
+        qTitle.textContent = q.title;
+        qBlankCount.textContent = q.blankCount || (q.orderedBlanks ? q.orderedBlanks.length : 0);
+
+        // 更新星标与掌握按钮状态
+        const rec = userRecords[q.qid] || {};
+        refreshQuestionToolbar();
 
         // 标签渲染
         let tagsHtml = '';
@@ -1569,6 +1704,7 @@
             const sel = document.getElementById('select_blank_' + i);
             if (sel) {
               sel.addEventListener('change', function() {
+                clearBlankMark(i); // 批改后改选：去掉这一空旧的对错标记，避免改对了还显示红色
                 onUserSelectBlank(q.qid, i, this.value);
               });
             }
@@ -1582,6 +1718,17 @@
             feedbackSection.classList.remove('show');
           }
         }
+      }
+
+      function clearBlankMark(i) {
+        const wrap = document.getElementById('wrap_blank_' + i);
+        const sel = document.getElementById('select_blank_' + i);
+        if (wrap) {
+          wrap.classList.remove('correct', 'wrong');
+          const tip = wrap.querySelector('.correct-badge-tip');
+          if (tip) tip.remove();
+        }
+        if (sel) sel.classList.remove('correct', 'wrong');
       }
 
       // 用户选择某个空格
@@ -1601,7 +1748,7 @@
       // 提交批改逻辑
       function gradeCurrentQuestion() {
         const q = getCurrentQ();
-        if (!q) return;
+        if (!q || isStudyMode) return; // 背题模式没有下拉框，批改只会记 0 分
 
         const ordered = q.orderedBlanks || [];
         let correctCount = 0;
@@ -1685,11 +1832,22 @@
       function renderFeedbackContent(q, rec) {
         const ordered = q.orderedBlanks || [];
         const total = ordered.length;
-        const score = (rec && rec.lastScore !== undefined) ? rec.lastScore : total;
+        const graded = !!(rec && rec.lastScore !== undefined);
+        const score = graded ? rec.lastScore : 0;
         const pct = total > 0 ? Math.round((score / total) * 100) : 0;
 
-        // 得分横幅
-        if (score === total) {
+        // 得分横幅：没批改过（背题模式 / 查看解析）只说明已显示答案，不能显示成满分
+        scoreBannerTip.textContent = '官方评分逻辑: 答对 1 词得 1 分，不倒扣分。';
+        if (!graded) {
+          scoreBanner.className = 'score-banner reveal';
+          if (isStudyMode) {
+            scoreBannerText.innerHTML = '<span>📖</span> 背题模式：已直接显示全部 ' + total + ' 个空的正确答案（未计分）';
+            scoreBannerTip.textContent = '切回「实战做题模考」即可自测计分。';
+          } else {
+            scoreBannerText.innerHTML = '<span>💡</span> 已显示全部 ' + total + ' 个空的正确答案与解析（本次未计分、不计入打卡）';
+            scoreBannerTip.textContent = '想计分：按自己的判断重新选择后点「提交批改」。';
+          }
+        } else if (score === total) {
           scoreBanner.className = 'score-banner';
           scoreBannerText.innerHTML = '<span>🎉</span> 满分！全部填对: ' + score + ' / ' + total + ' (' + pct + '%) · 掌握极佳！';
         } else if (score >= total * 0.6) {
@@ -1706,7 +1864,6 @@
           const items = q.keyWords.split('|').map(s => s.trim()).filter(Boolean);
           let vocabHtml = '';
           items.forEach(function(item) {
-            const parts = item.split(/\s+(?=[a-z]+\.)|(?<=\w)\s+([a-z]+\.)/i);
             const word = item.split(/\s+/)[0];
             vocabHtml += '<div class="vocab-chip">' +
                          '<span class="vocab-word">' + item + '</span>' +
@@ -1726,21 +1883,27 @@
         }
       }
 
-      // 查看解析按钮
+      // 查看解析：标出每空对错并显示正确答案和中英解析；不计分、不计入打卡、不改动已选答案
+      // （旧版会把正确答案填进下拉框再批改，等于每看一次解析就记一次满分并打卡 +1）
       function showFullAnswers() {
         const q = getCurrentQ();
         if (!q) return;
 
-        const ordered = q.orderedBlanks || [];
-        for (let i = 1; i <= ordered.length; i++) {
-          const b = ordered[i - 1];
-          const sel = document.getElementById('select_blank_' + i);
-          if (sel && b) {
-            sel.value = b.correctAnswer;
-            onUserSelectBlank(q.qid, i, b.correctAnswer);
+        if (!isStudyMode) {
+          const ordered = q.orderedBlanks || [];
+          const current = {};
+          for (let i = 1; i <= ordered.length; i++) {
+            const sel = document.getElementById('select_blank_' + i);
+            current[i] = sel ? sel.value : '';
           }
+          highlightGradedBlanks(q, { answers: current });
         }
-        gradeCurrentQuestion();
+        renderFeedbackContent(q, userRecords[q.qid]);
+        feedbackSection.classList.add('show');
+
+        setTimeout(function() {
+          feedbackSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
       }
 
       // 重置当前题目
@@ -1787,14 +1950,21 @@
       };
 
       let isPlayingFull = false;
+      let currentUtter = null;
+      function stopPassageSpeech() {
+        if (!isPlayingFull) return;
+        isPlayingFull = false;
+        currentUtter = null;
+        try { window.speechSynthesis.cancel(); } catch (e) {}
+        btnAudioTTS.innerHTML = '<span>🔊</span> 全文朗读';
+      }
+
       function togglePassageSpeech() {
         const q = getCurrentQ();
         if (!q || !window.speechSynthesis) return;
 
         if (isPlayingFull) {
-          window.speechSynthesis.cancel();
-          isPlayingFull = false;
-          btnAudioTTS.innerHTML = '<span>🔊</span> 全文朗读';
+          stopPassageSpeech();
           return;
         }
 
@@ -1804,15 +1974,16 @@
         const utter = new SpeechSynthesisUtterance(plainText);
         utter.lang = 'en-US';
         utter.rate = 0.95;
+        // 只处理当前这一段的结束事件；被换题取消的旧朗读回调不能把新朗读的按钮状态改掉
         utter.onend = function() {
+          if (utter !== currentUtter) return;
           isPlayingFull = false;
+          currentUtter = null;
           btnAudioTTS.innerHTML = '<span>🔊</span> 全文朗读';
         };
-        utter.onerror = function() {
-          isPlayingFull = false;
-          btnAudioTTS.innerHTML = '<span>🔊</span> 全文朗读';
-        };
+        utter.onerror = utter.onend;
 
+        currentUtter = utter;
         window.speechSynthesis.speak(utter);
         isPlayingFull = true;
         btnAudioTTS.innerHTML = '<span>⏹️</span> 停止朗读';
@@ -1946,33 +2117,52 @@
 
       // 全局快捷键
       window.addEventListener('keydown', function(e) {
-        // 如果焦点在输入框中，不触发单键快捷键
-        if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) {
+        const key = e.key || '';
+        // Esc: 关闭答题卡抽屉
+        if (key === 'Escape' || key === 'Esc') {
+          if (drawerPanel.classList.contains('open')) {
+            e.preventDefault();
+            closeDrawer();
+          }
           return;
         }
 
-        // Alt + P: 上一题
-        if ((e.altKey && e.key.toLowerCase() === 'p') || e.key === 'ArrowLeft') {
+        const t = e.target;
+        const tag = t && t.tagName;
+        // 如果焦点在输入框中，不触发单键快捷键
+        if (tag === 'INPUT' || tag === 'TEXTAREA' || (t && t.isContentEditable)) {
+          return;
+        }
+        // Ctrl/Cmd 组合键留给浏览器；答题卡打开时不在背后翻题
+        if (e.ctrlKey || e.metaKey || drawerPanel.classList.contains('open')) return;
+
+        const k = key.toLowerCase();
+        const onSelect = tag === 'SELECT';                 // 下拉框里方向键/字母键用于选选项
+        const onButton = tag === 'BUTTON' || tag === 'A';  // 按钮上的 Enter 交给按钮本身
+        const plain = !e.altKey && !e.shiftKey;
+
+        // Alt + P / ←: 上一题
+        if ((e.altKey && (k === 'p' || e.code === 'KeyP')) || (plain && !onSelect && key === 'ArrowLeft')) {
           e.preventDefault();
           if (currentIndex > 0) { currentIndex--; renderCurrentQuestion(); }
         }
-        // Alt + N: 下一题
-        else if ((e.altKey && e.key.toLowerCase() === 'n') || e.key === 'ArrowRight') {
+        // Alt + N / →: 下一题
+        else if ((e.altKey && (k === 'n' || e.code === 'KeyN')) || (plain && !onSelect && key === 'ArrowRight')) {
           e.preventDefault();
           if (currentIndex < filteredList.length - 1) { currentIndex++; renderCurrentQuestion(); }
         }
         // Enter: 提交批改
-        else if (e.key === 'Enter' && !isStudyMode) {
+        else if (key === 'Enter' && plain && !onButton && !isStudyMode) {
           e.preventDefault();
           gradeCurrentQuestion();
         }
         // Alt + S: 查看答案
-        else if (e.altKey && e.key.toLowerCase() === 's') {
+        else if (e.altKey && (k === 's' || e.code === 'KeyS')) {
           e.preventDefault();
           showFullAnswers();
         }
         // M: 模式切换
-        else if (e.key.toLowerCase() === 'm' && !e.altKey && !e.ctrlKey) {
+        else if (k === 'm' && plain && !onSelect) {
           e.preventDefault();
           if (isStudyMode) {
             btnModeExam.click();
@@ -1982,10 +2172,59 @@
         }
       });
 
-      // 初始化运行
+      // 主页或另一个标签页（「全屏独立窗口打开」）改了做题记录 / 打卡 / 目标 / 当前档案时同步过来，
+      // 否则这里内存里的旧记录会在下次保存时把那边的新记录覆盖掉
+      window.addEventListener('storage', function(e) {
+        // 主页切换了学员档案：换成新档案的做题记录，停在同一题（错题本 / 收藏筛选下不在列表里就回到第一题）
+        if ((e.key === null || e.key === 'pte_active_profile_id') && getActiveProfileId() !== recordsPid) {
+          const keepQ = getCurrentQ();
+          recordsPid = getActiveProfileId();
+          userRecords = readRecordsObject(recordsKeyFor(recordsPid));
+          applyFilters();
+          const keepIdx = keepQ ? filteredList.findIndex(function(q) { return q.qid === keepQ.qid; }) : -1;
+          currentIndex = keepIdx >= 0 ? keepIdx : 0;
+          updateCategoryCounts();
+          renderMatrixDrawer();
+          renderCurrentQuestion();
+        } else if (e.key === null || e.key === recordsKeyFor(recordsPid)) {
+          userRecords = readRecordsObject(recordsKeyFor(recordsPid));
+          updateCategoryCounts();
+          renderMatrixDrawer();
+          refreshQuestionToolbar();
+        }
+        if (e.key === null || e.key.indexOf('pte_planner_') === 0 || e.key === 'pte_active_profile_id') {
+          updateCheckinDisplay();
+        }
+      });
+
+      // 嵌在主页里切到别的模块时 iframe 被隐藏，停止全文朗读，避免后台继续出声
+      setInterval(function() {
+        if (!isPlayingFull) return;
+        try {
+          if (window.frameElement && window.frameElement.getClientRects().length === 0) stopPassageSpeech();
+        } catch (e) {}
+      }, 1000);
+
+      // 初始化运行：先恢复上次的筛选、模式和题目，再渲染（顺序反了会先用默认状态覆盖存档）
+      const savedState = loadUiState();
+      if (savedState) {
+        if (['ultra', 'frequent', 'all', 'wrong', 'starred'].indexOf(savedState.bank) !== -1) currentBank = savedState.bank;
+        if (['all', '1', '2', '3'].indexOf(savedState.diff) !== -1) currentDiff = savedState.diff;
+        isStudyMode = savedState.studyMode === true;
+        bankChips.forEach(function(c) { c.classList.toggle('active', c.getAttribute('data-bank') === currentBank); });
+        diffChips.forEach(function(c) { c.classList.toggle('active', c.getAttribute('data-diff') === currentDiff); });
+        btnModeStudy.classList.toggle('active', isStudyMode);
+        btnModeExam.classList.toggle('active', !isStudyMode);
+      }
       updateCategoryCounts();
       updateCheckinDisplay();
-      filterQuestions();
+      applyFilters();
+      if (savedState && savedState.qid) {
+        const savedIdx = filteredList.findIndex(function(q) { return q.qid === savedState.qid; });
+        if (savedIdx > 0) currentIndex = savedIdx;
+      }
+      renderMatrixDrawer();
+      renderCurrentQuestion();
     })();
   </script>
 </body>

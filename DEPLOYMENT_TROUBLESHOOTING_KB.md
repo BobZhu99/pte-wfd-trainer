@@ -18,6 +18,10 @@
    - [Case 09: WFD 官方评分准则与试词（多词容错）逻辑](#case-09-wfd-官方评分准则与试词多词容错逻辑)
    - [Case 10: 澳洲内政部 DHA 2025.8.7 语言新政大改革 (LIN 25/016 与 LIN 25/089) 替代旧法一刀切](#case-10-澳洲内政部-dha-202587-语言新政大改革-lin-25016-与-lin-25089-替代旧法一刀切)
    - [Case 11: iPad 与平板端响应式断点遗漏（侧边栏变顶栏但主体 margin-left 遗留）](#case-11-ipad-与平板端响应式断点遗漏侧边栏变顶栏但主体-margin-left-遗留)
+   - [Case 12: 考试总览中「独立计时 vs 合并计时」模糊字符串匹配导致 SST 与 WFD 徽章反转](#case-12-考试总览中独立计时-vs-合并计时模糊字符串匹配导致-sst-与-wfd-徽章反转)
+   - [Case 13: 数据只写镜像 key 导致刷新丢失 / iframe 打卡重复计数 / 重复按钮](#case-13-数据只写镜像-key-导致刷新丢失--iframe-打卡重复计数--重复按钮2026-10-18-全站审计)
+   - [Case 14: 云同步漏掉每日打卡，手机上打的卡电脑看不到](#case-14-云同步漏掉每日打卡手机上打的卡电脑看不到2026-10-18)
+   - [Case 15: 在一台设备清空 / 删除后，其他设备同步时又把数据合并回来](#case-15-在一台设备清空--删除后其他设备同步时又把数据合并回来2026-10-18)
 2. [上线前自动化自检清单 (Pre-Deployment Checklist SOP)](#二上线前自动化自检清单-pre-deployment-checklist-sop)
 3. [核心数据与权威基准对照表 (Ground Truth Reference)](#三核心数据与权威基准对照表)
 
@@ -150,7 +154,7 @@
   1. `build_wfd_web.py` 内部写入自动化复制管道：
      ```python
      shutil.copy2(DIR / "pte_tasks.json", deploy_dir / "pte_tasks.json")
-     shutil.copy2(DIR / "pte-score-explorer-embed.html", deploy_dir / "pte-score-explorer-embed.html")
+     # pte-score-explorer-embed.html 已于 2026-10-18 弃用（旧版独立页面，已移到 _archive/），不再复制
      shutil.copy2(DATA_FILE, deploy_dir / "wfd_current.json")
      ```
   2. 部署时统一在 `deploy_github_pages` 内执行 `git add -A && git commit && git push origin main`。
@@ -219,6 +223,67 @@
 
 ---
 
+
+
+### Case 12: 考试总览中「独立计时 vs 合并计时」模糊字符串匹配导致 SST 与 WFD 徽章反转
+- **故障现象**：在「PTE 考试总览」页面中，听力首题 **SST (总结听力文本)** 被误标为红色【⚠️ 合并计时】；而听力终局压轴大题 **WFD (听写句子)** 却被误标为绿色【⏱️ 独立计时】。
+- **根本原因**：
+  - 前端渲染采用了脆弱的包含判定：`const isMergedTimer = task.timing.timerType.includes("合并");`。
+  - SST 的文本描述为：“单题独立倒计时（每道 SST 各给 10:00，绝不影响后续听力合并时间！）”，因包含“合并”两字，被代码误判为【合并计时】！
+  - WFD 的文本描述为：“⚠️ 听力 Section 2 剩余时间（若前面磨蹭，此处将直接超时！必须预留 5~6 分钟！）”，因未包含“合并”二字，被代码误判为【独立计时】！
+  - 两大听力主力题型的计时标签彻底颠倒，严重误导考生对考场配时的认知。
+- **官方权威基准与防御方案**：
+  1. **权威机制**：
+     - **SST**：单题独立计时（Strictly 10 minutes per question），独立倒计时、时间完全隔离；
+     - **WFD**：属于听力 Section 2 整体合并倒计时（共用约 20~23 分钟池），单题无独立时间，必须抢时间留给压轴 WFD。
+  2. **防御架构**：
+     - 在 `pte_tasks.json` 中为 22 题型引入机器专用的原子字段 `"timingMode": "solo" | "merged"`，杜绝脆弱文本推导；
+     - 前端双重严密判断：`task.timing.timingMode === "merged" || (task.timing.timerType && task.timing.timerType.indexOf("合并") !== -1 && task.timing.timerType.indexOf("单题独立") === -1)`；
+     - 在考试总览顶部新增直观的「PTE 官方 3 大 Part 考场计时架构全局总览卡片」，将全场 120 分钟连续机考、Part 1 口语录音控时+写作独立10/20分、Part 2 阅读合并倒计时29~30分、Part 3 听力 SST 单题独立10分与 Section 2 整体合并倒计时层级结构化呈现。
+
+---
+
+### Case 13: 数据只写镜像 key 导致刷新丢失 / iframe 打卡重复计数 / 重复按钮（2026-10-18 全站审计）
+- **故障现象**：
+  1. 生词本新增/标记/删除、「清空错题本」「清空所有记录」「清空生词本」刷新后失效（生词丢失、清掉的记录复活）；
+  2. FIB-D 嵌在主页时每做 1 篇打卡记 3 次，卡拉OK 每次记 2 次；WFD 手动 +1 会被自动计数覆盖；「今日数据归零」后目标又变回 Competent 预设；
+  3. 「题库发布基准日期」显示的是网页构建日期，同步失败（Token 失效）后重新构建仍显示「今日最新同步」；
+  4. WFD 页头的档案/考期/每日打卡/云同步/题库管理与侧栏重复，题库管理、云同步各有 4 个入口。
+- **根本原因与铁律**：
+  1. 做题记录、错题、生词的**唯一保存入口是 `saveActiveUserData()`**（写 `pte_wfd_*_<档案id>` + 镜像 key）。禁止只写 `pte_wfd_logs / pte_wfd_qstats / pte_wfd_vocab` 镜像 key——加载时按档案 key 读取，镜像会被覆盖；
+  2. 内嵌页（`build_fib_d_web.js`、`build_speaking_web.py`）自己把 +1 写进 `pte_planner_act_<档案id>_<日期>`，只发 `PTE_CHECKIN_UPDATED` 消息；**父页面收到消息只刷新，不能再 +1**；
+  3. 每日目标存成 `{}` 是合法的「已清零」状态，只有 key 不存在时才套用默认方案；WFD 自动计数只往上补齐，不覆盖手动打卡；
+  4. 题库日期取 `sync_history.log` 最后一次成功同步，`sync_status.json` 显示最近一次失败原因；本地导入的题库绑定内置题库指纹 `BUILTIN_BANK_ID`，重新构建后自动作废；
+  5. 全局操作只放两处：桌面端侧栏 + 平板/手机端 `.mobile-utility-bar`（≤1024px 才显示）。新模块不要再加这些入口的副本。
+- **回归测试**：`tests/runtime_test.mjs` / `tests/runtime_test2.mjs`（无头 Edge + CDP，覆盖上述全部场景，共 37 项）。
+
+---
+
+### Case 14: 云同步漏掉每日打卡，手机上打的卡电脑看不到（2026-10-18）
+- **故障现象**：跨设备云同步（Gist / 同步暗号 / 备份文件）只带 WFD 做题记录、错题、生词；每日打卡的目标、每日完成数、历史只存在本机 localStorage，手机上打的卡电脑看不到。
+- **修复与铁律**：
+  1. 备份包新增 `checkin` 字段（`collectCheckinSyncData()`）：当前档案的 `pte_planner_goals_<档案id>` 及时间戳 `pte_planner_goals_ts_<档案id>`、`pte_planner_hist_<档案id>`、最近 30 天的 `pte_planner_act_<档案id>_<日期>` 和 `pte_fib_d_practiced_today_<档案id>_<日期>`；
+  2. 合并 `applyCheckinSyncData(remote, true)`（在 `mergeStudyData()` 档案守卫之后、`updateStats()` 之前）：每天每个题型的完成数取两端最大值，FIB-D 当日已练题号取并集；历史按 date 合并，同一天取 totalActual 更大的那条；目标以 `goalsUpdatedAt` 更新的一端为准（本机从未设置过目标时直接采用对方的）。今日完成数或目标有变化就 `recordDailyFootprint()` 重算今日足迹；
+  3. 三处「完全覆盖」导入调用 `applyCheckinSyncData(remote, false)`：目标、历史、最近 30 天完成数以备份包为准，30 天以前的不动；旧版备份包没有 `checkin` 字段时本机打卡保持不变；
+  4. 目标只能经 `savePlannerGoals()` 保存（它同时写时间戳）；合并写入时保留对方的时间戳，不能写 `Date.now()`，否则两端来回覆盖；
+  5. 打卡数据保存后防抖推送到 Gist（`schedulePlannerCloudPush()`，与听写批改共用「自动上传」开关）。**撤回 -1、改小、今日归零、清空打卡历史必须 `schedulePlannerCloudPush(true)` 强制推送**，否则下一次自动同步会按「取最大值」把云端里本机的旧数字合并回来；
+  6. 撤回 / 改小 / 今日归零会记 `pte_planner_act_reset_<档案id>_<日期>`（题型 → 时间，`*` = 当天全部归零），随 `checkin.actsReset` 同步：合并时撤回记录更新的一端以它的数字为准，否则取最大值；清空打卡历史见 Case 15。剩余限制：两台设备**都没同步过**就同时练同一题型时取最大值而不是相加；一台撤回 / 归零时另一台尚未同步的新打卡会被覆盖（正常先后使用、自动同步开着时不会发生）。
+- **回归测试**：`tests/runtime_test3.mjs`（两个独立无头 Edge 各自打卡、互相导入备份包后核对计数 / 历史 / 目标；另测三种覆盖导入、旧版备份包、档案守卫、打卡与撤回后的 Gist 推送，共 19 项）。
+
+---
+
+### Case 15: 在一台设备清空 / 删除后，其他设备同步时又把数据合并回来（2026-10-18）
+- **故障现象**：云同步按并集合并，清空做题记录、清空错题本、删除 / 清空生词、清空打卡历史之后，另一台设备（或旧备份包）一合并就把旧数据带回来。
+- **修复：删除标记（tombstone）**
+  1. 每次清空 / 删除都记时间戳到 `pte_sync_marks_<档案id>`：`logsClearedAt`（清空所有记录）、`mistakesClearedAt`（清空错题本）、`vocabClearedAt`、`vocabDeleted{单词: 时间}`、`plannerHistClearedAt`，随备份包的 `syncMarks` 字段同步；
+  2. `mergeStudyData()` 先 `mergeSyncMarks()` 取两端较新的标记，两端都丢掉早于标记的流水 / 生词；**还没应用过该标记的一端**，战绩统计按标记之后的流水重建（`normalizeSideStats()`），所以旧设备、旧备份包都不会把错题合并回来；
+  3. 时间判断：流水用 `id`（`Date.now()`）；生词用新增的 `addedTs`，旧生词的 `id` 带 0~999 毫秒随机数，取 `id - 999`；
+  4. 「完全覆盖」导入（恢复备份）调用 `adoptSyncMarksForRestore()`，记 `marksResetAt`，让在此之前的所有清空标记失效，恢复的数据不会被其他设备再次删掉；
+  5. 新增清空 / 删除功能时必须同时 `updateSyncMarks(...)` 记标记，否则又会出现「删了又回来」。
+- **回归测试**：`tests/runtime_test4.mjs`（两个无头 Edge 互相合并，覆盖上述全部清空 / 删除、旧设备 / 旧备份包、撤回、归零、恢复备份，共 21 项）。
+
+---
+
 ## 二、上线前自动化自检清单 (Pre-Deployment Checklist SOP)
 
 每次更新完代码，请严格按以下步骤依次执行：
@@ -239,7 +304,7 @@ flowchart TD
 ```powershell
 node -e "
 const fs = require('fs');
-['wfd_practice.html', 'index.html', 'pte-score-explorer-embed.html', 'deploy_github_pages/index.html'].forEach(f => {
+['wfd_practice.html', 'index.html', 'deploy_github_pages/index.html', 'speaking_karaoke.html', 'fib_d_practice.html'].forEach(f => {
   const content = fs.readFileSync(f, 'utf8');
   const scripts = content.match(/<script[\s\S]*?<\/script>/gi) || [];
   scripts.forEach((s, idx) => {
@@ -295,3 +360,25 @@ cd ..
 | **20** | **SMW** | Select Missing Word | **1%** | - | **1%** | - | - | 抓 Beep 音前上下文语境 |
 | **21** | **HIW** | Highlight Incorrect Words | **4%** | - | **8%** | **13%** | - | ⚠️ 倒扣分题型！鼠标光标跟读划词 |
 | **22** | **WFD** | Write from Dictation | **5%** | - | **13%** | - | **23%** | **考试压轴总命门！** 写作23%+听力13% |
+
+### PTE 官方 22 题型计分维度与单题满分 (Pearson Test Taker Score Guide 第 7 章 · 2025.8.7 新版)
+> 来源：[PTE Academic Score Guide – Test Taker](https://www.pearsonpte.com/content/dam/ELL/pte/pearsonpte/pdfs/pte-academic-pdfs/PTE-Academic-Test-Taker-Score-Guide.pdf)（PDF 生成于 2026-03-04）。网页「考试总览」的「📐 官方计分」行与弹窗分档细则，全部读取 `pte_tasks.json` 每个题型的 `scoring` 字段；`update_tasks_from_table1.py` 重建任务表时会原样保留该字段。
+> ⚠️ 旧版（2025.8.7 前）的 DI/RL 内容 0–5、SWT 满分 7、WE 满分 15、SST 满分 10 已过时，禁止回退。
+
+| 题型 | 计分维度与分值 | 单题满分 | 计分方式 |
+| :---: | :--- | :---: | :--- |
+| RA | 内容（替换/漏读/插入各算 1 错，满分随原文长度）+ 发音 0–5 + 流利度 0–5 | 内容 + 10 | 部分计分 |
+| RS | 内容 0–3 + 发音 0–5 + 流利度 0–5 | 13 | 部分计分 |
+| DI / RL / SGD / RTS | 内容 0–6 + 发音 0–5 + 流利度 0–5 | 16 | 部分计分；内容 AI + 人工复核 |
+| ASQ | 词汇 0–1 | 1 | 对错计分 |
+| SWT | 内容 0–4 + 形式 0–1（单句 5–75 词）+ 语法 0–2 + 词汇 0–2 | 9 | 部分计分；内容 AI + 人工复核 |
+| WE | 内容 0–6 + 形式 0–2（200–300 词）+ 发展结构连贯 0–6 + 语法 0–2 + 语言范围 0–6 + 词汇范围 0–2 + 拼写 0–2 | 26 | 部分计分；内容/结构/语言范围 AI + 人工复核 |
+| SST | 内容 0–4 + 形式 0–2（50–70 词）+ 语法 0–2 + 词汇 0–2 + 拼写 0–2 | 12 | 部分计分；内容 AI + 人工复核 |
+| FIB-D / FIB-DD | 每个填对的空 1 分 | 空数 | 部分计分 |
+| RO | 每对顺序正确的相邻段落 1 分 | 段落数 − 1 | 部分计分 |
+| R-MCM / L-MCM / HIW | 选对 +1，选错 −1，最低 0 分 | 正确项数 | 部分计分 + 倒扣 |
+| FIB-L / WFD | 每个拼写正确的词 1 分 | 空数 / 原句词数 | 部分计分 |
+| R-MCS / HCS / L-MCS / SMW | 答对 1 分，答错 0 分 | 1 | 对错计分 |
+
+- **一票否决**：内容或形式 0 分 → 整题 0 分；未作答、答非所问或大量背诵/预制模板内容 → 内容 0 分。
+- **发音、流利度只由 AI 评分**；DI/RL/RTS/SGD/SWT/WE/SST 的内容分由 AI + 人工专家双评，分歧时第二位人工终裁。
