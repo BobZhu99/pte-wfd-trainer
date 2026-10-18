@@ -1,0 +1,3996 @@
+[
+  {
+    "index": 1,
+    "qid": "F101062",
+    "qids": [
+      "M077055",
+      "F101062"
+    ],
+    "title": "城市生活与乡村生活，你喜欢哪个？",
+    "values": {
+      "topic": {
+        "en": "city life is better than country life",
+        "zh": "城市生活是否比乡村生活好"
+      },
+      "although": {
+        "en": "country life is quiet",
+        "zh": "乡村生活很安静"
+      },
+      "position": {
+        "en": "city life is better for me",
+        "zh": "城市生活更适合我"
+      },
+      "r1": {
+        "en": "city life saves travel time",
+        "zh": "城市生活节省出行时间"
+      },
+      "x1": {
+        "en": "shops and schools are usually nearby",
+        "zh": "商店和学校通常就在附近"
+      },
+      "e1": {
+        "en": "I can walk to a shop in five minutes",
+        "zh": "我走五分钟就能到商店"
+      },
+      "c1": {
+        "en": "this helps me save time",
+        "zh": "这帮助我节省时间"
+      },
+      "r2": {
+        "en": "it is easier to get medical help in cities",
+        "zh": "在城市更容易得到医疗帮助"
+      },
+      "x2": {
+        "en": "there are more hospitals nearby",
+        "zh": "附近有更多医院"
+      },
+      "e2": {
+        "en": "I can reach a hospital quickly when I feel ill",
+        "zh": "我不舒服时可以很快到医院"
+      },
+      "c2": {
+        "en": "this makes my life easier",
+        "zh": "这让我的生活更方便"
+      }
+    },
+    "opening": {
+      "en": "Whether city life is better than country life has been widely discussed. Although country life is quiet, I believe city life is better for me because city life saves travel time and it is easier to get medical help in cities.",
+      "zh": "关于“城市生活是否比乡村生活好”已有很多讨论。虽然乡村生活很安静，但我认为城市生活更适合我，因为城市生活节省出行时间，而且在城市更容易得到医疗帮助。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, city life saves travel time.",
+        "zh": "城市生活节省出行时间。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because shops and schools are usually nearby.",
+        "zh": "这是因为商店和学校通常就在附近。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I can walk to a shop in five minutes.",
+        "zh": "例如，我走五分钟就能到商店。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me save time.",
+        "zh": "这帮助我节省时间。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, it is easier to get medical help in cities.",
+        "zh": "在城市更容易得到医疗帮助。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because there are more hospitals nearby.",
+        "zh": "这是因为附近有更多医院。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I can reach a hospital quickly when I feel ill.",
+        "zh": "例如，我不舒服时可以很快到医院。"
+      },
+      {
+        "label": "回扣",
+        "en": "This makes my life easier.",
+        "zh": "这让我的生活更方便。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe city life is better for me because city life saves travel time and it is easier to get medical help in cities.",
+      "zh": "总之，我认为城市生活更适合我，因为城市生活节省出行时间，而且在城市更容易得到医疗帮助。"
+    },
+    "note": ""
+  },
+  {
+    "index": 2,
+    "qid": "F101134",
+    "qids": [
+      "M077053",
+      "F101134"
+    ],
+    "title": "名人是否要放弃隐私",
+    "values": {
+      "topic": {
+        "en": "famous people should give up their privacy",
+        "zh": "名人是否应该放弃隐私"
+      },
+      "although": {
+        "en": "fans want to know about their lives",
+        "zh": "粉丝想了解他们的生活"
+      },
+      "position": {
+        "en": "famous people should keep their privacy",
+        "zh": "名人应该保留隐私"
+      },
+      "r1": {
+        "en": "privacy helps them rest",
+        "zh": "隐私帮助他们休息"
+      },
+      "x1": {
+        "en": "they need quiet time after work",
+        "zh": "他们工作后需要安静的时间"
+      },
+      "e1": {
+        "en": "a singer can rest at home without cameras outside",
+        "zh": "歌手可以在家休息，外面没有相机拍摄"
+      },
+      "c1": {
+        "en": "this helps the singer feel less stressed",
+        "zh": "这帮助歌手减轻压力"
+      },
+      "r2": {
+        "en": "privacy protects their family life",
+        "zh": "隐私保护他们的家庭生活"
+      },
+      "x2": {
+        "en": "their children also need a normal life",
+        "zh": "他们的孩子也需要正常生活"
+      },
+      "e2": {
+        "en": "an actor can take a child to school without being followed",
+        "zh": "演员可以不被跟拍地送孩子上学"
+      },
+      "c2": {
+        "en": "this makes family life easier",
+        "zh": "这让家庭生活更轻松"
+      }
+    },
+    "opening": {
+      "en": "Whether famous people should give up their privacy has been widely discussed. Although fans want to know about their lives, I believe famous people should keep their privacy because privacy helps them rest and privacy protects their family life.",
+      "zh": "关于“名人是否应该放弃隐私”已有很多讨论。虽然粉丝想了解他们的生活，但我认为名人应该保留隐私，因为隐私帮助他们休息，而且隐私保护他们的家庭生活。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, privacy helps them rest.",
+        "zh": "隐私帮助他们休息。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because they need quiet time after work.",
+        "zh": "这是因为他们工作后需要安静的时间。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a singer can rest at home without cameras outside.",
+        "zh": "例如，歌手可以在家休息，外面没有相机拍摄。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps the singer feel less stressed.",
+        "zh": "这帮助歌手减轻压力。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, privacy protects their family life.",
+        "zh": "隐私保护他们的家庭生活。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because their children also need a normal life.",
+        "zh": "这是因为他们的孩子也需要正常生活。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, an actor can take a child to school without being followed.",
+        "zh": "例如，演员可以不被跟拍地送孩子上学。"
+      },
+      {
+        "label": "回扣",
+        "en": "This makes family life easier.",
+        "zh": "这让家庭生活更轻松。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe famous people should keep their privacy because privacy helps them rest and privacy protects their family life.",
+      "zh": "总之，我认为名人应该保留隐私，因为隐私帮助他们休息，而且隐私保护他们的家庭生活。"
+    },
+    "note": ""
+  },
+  {
+    "index": 3,
+    "qid": "F101136",
+    "qids": [
+      "M077045",
+      "F101136"
+    ],
+    "title": "年龄限制",
+    "values": {
+      "topic": {
+        "en": "young people should wait until 25 to drive",
+        "zh": "年轻人是否应等到25岁才能开车"
+      },
+      "although": {
+        "en": "driving can be dangerous",
+        "zh": "开车可能有危险"
+      },
+      "position": {
+        "en": "18 is a suitable age to start driving",
+        "zh": "18岁是开始开车的合适年龄"
+      },
+      "r1": {
+        "en": "young people need time to learn road safety",
+        "zh": "年轻人需要时间学习道路安全"
+      },
+      "x1": {
+        "en": "they must understand traffic rules before driving",
+        "zh": "他们开车前必须理解交通规则"
+      },
+      "e1": {
+        "en": "I took driving lessons at 18 and learned to check my mirrors",
+        "zh": "我18岁时上驾驶课，学会查看后视镜"
+      },
+      "c1": {
+        "en": "this helped me drive more safely",
+        "zh": "这帮助我更安全地开车"
+      },
+      "r2": {
+        "en": "driving at 18 makes daily life easier",
+        "zh": "18岁可以开车让日常生活更方便"
+      },
+      "x2": {
+        "en": "young adults need to travel to school or work",
+        "zh": "年轻成年人需要去上学或上班"
+      },
+      "e2": {
+        "en": "I drove to college instead of waiting for a bus",
+        "zh": "我开车去大学，不用等公交"
+      },
+      "c2": {
+        "en": "this helped me save time",
+        "zh": "这帮助我节省时间"
+      }
+    },
+    "opening": {
+      "en": "Whether young people should wait until 25 to drive has been widely discussed. Although driving can be dangerous, I believe 18 is a suitable age to start driving because young people need time to learn road safety and driving at 18 makes daily life easier.",
+      "zh": "关于“年轻人是否应等到25岁才能开车”已有很多讨论。虽然开车可能有危险，但我认为18岁是开始开车的合适年龄，因为年轻人需要时间学习道路安全，而且18岁可以开车让日常生活更方便。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, young people need time to learn road safety.",
+        "zh": "年轻人需要时间学习道路安全。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because they must understand traffic rules before driving.",
+        "zh": "这是因为他们开车前必须理解交通规则。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I took driving lessons at 18 and learned to check my mirrors.",
+        "zh": "例如，我18岁时上驾驶课，学会查看后视镜。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helped me drive more safely.",
+        "zh": "这帮助我更安全地开车。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, driving at 18 makes daily life easier.",
+        "zh": "18岁可以开车让日常生活更方便。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because young adults need to travel to school or work.",
+        "zh": "这是因为年轻成年人需要去上学或上班。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I drove to college instead of waiting for a bus.",
+        "zh": "例如，我开车去大学，不用等公交。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helped me save time.",
+        "zh": "这帮助我节省时间。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe 18 is a suitable age to start driving because young people need time to learn road safety and driving at 18 makes daily life easier.",
+      "zh": "总之，我认为18岁是开始开车的合适年龄，因为年轻人需要时间学习道路安全，而且18岁可以开车让日常生活更方便。"
+    },
+    "note": "开车统一选18岁。问25岁限制，就说不必等到25岁；问最低年龄，就明确回答18岁。"
+  },
+  {
+    "index": 4,
+    "qid": "F101138",
+    "qids": [
+      "M077020",
+      "F101138"
+    ],
+    "title": "国家把钱花在建筑修复，而非现代住房",
+    "values": {
+      "topic": {
+        "en": "governments should spend money on old buildings",
+        "zh": "政府是否应该花钱保护古建筑"
+      },
+      "although": {
+        "en": "new homes are also needed",
+        "zh": "人们也需要新住房"
+      },
+      "position": {
+        "en": "old buildings should be protected, but new homes also need money",
+        "zh": "古建筑应该保护，但新住房也需要资金"
+      },
+      "r1": {
+        "en": "old buildings help people learn history",
+        "zh": "古建筑帮助人们学习历史"
+      },
+      "x1": {
+        "en": "people can see how others lived in the past",
+        "zh": "人们能看到过去的人怎样生活"
+      },
+      "e1": {
+        "en": "I visited an old house and saw an old kitchen",
+        "zh": "我参观古老住宅，看到了旧式厨房"
+      },
+      "c1": {
+        "en": "this helped me understand life in the past",
+        "zh": "这帮助我理解过去的生活"
+      },
+      "r2": {
+        "en": "building repairs can leave less money for new homes",
+        "zh": "修复建筑可能挤占新住房的资金"
+      },
+      "x2": {
+        "en": "governments cannot spend the same money twice",
+        "zh": "政府不能把同一笔钱花两次"
+      },
+      "e2": {
+        "en": "an expensive repair project may leave no money for new flats",
+        "zh": "昂贵的修复工程可能使政府没钱建新公寓"
+      },
+      "c2": {
+        "en": "this can make it harder to provide enough homes",
+        "zh": "这可能使政府更难提供足够住房"
+      }
+    },
+    "opening": {
+      "en": "Whether governments should spend money on old buildings has been widely discussed. Although new homes are also needed, I believe old buildings should be protected, but new homes also need money because old buildings help people learn history and building repairs can leave less money for new homes.",
+      "zh": "关于“政府是否应该花钱保护古建筑”已有很多讨论。虽然人们也需要新住房，但我认为古建筑应该保护，但新住房也需要资金，因为古建筑帮助人们学习历史，而且修复建筑可能挤占新住房的资金。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, old buildings help people learn history.",
+        "zh": "古建筑帮助人们学习历史。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because people can see how others lived in the past.",
+        "zh": "这是因为人们能看到过去的人怎样生活。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I visited an old house and saw an old kitchen.",
+        "zh": "例如，我参观古老住宅，看到了旧式厨房。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helped me understand life in the past.",
+        "zh": "这帮助我理解过去的生活。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, building repairs can leave less money for new homes.",
+        "zh": "修复建筑可能挤占新住房的资金。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because governments cannot spend the same money twice.",
+        "zh": "这是因为政府不能把同一笔钱花两次。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, an expensive repair project may leave no money for new flats.",
+        "zh": "例如，昂贵的修复工程可能使政府没钱建新公寓。"
+      },
+      {
+        "label": "回扣",
+        "en": "This can make it harder to provide enough homes.",
+        "zh": "这可能使政府更难提供足够住房。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe old buildings should be protected, but new homes also need money because old buildings help people learn history and building repairs can leave less money for new homes.",
+      "zh": "总之，我认为古建筑应该保护，但新住房也需要资金，因为古建筑帮助人们学习历史，而且修复建筑可能挤占新住房的资金。"
+    },
+    "note": "第二段是保护古建筑的好处，第三段是资金取舍的坏处；问到住房时，用第三段回应住房。"
+  },
+  {
+    "index": 5,
+    "qid": "F101003",
+    "qids": [
+      "M077018",
+      "F101003"
+    ],
+    "title": "法律改变人的行为",
+    "values": {
+      "topic": {
+        "en": "laws can change people's behaviour",
+        "zh": "法律是否可以改变人的行为"
+      },
+      "although": {
+        "en": "some people still break laws",
+        "zh": "有些人仍然违法"
+      },
+      "position": {
+        "en": "laws can change behaviour",
+        "zh": "法律可以改变行为"
+      },
+      "r1": {
+        "en": "punishment can stop people from breaking rules",
+        "zh": "惩罚可以阻止人们违反规则"
+      },
+      "x1": {
+        "en": "people do not want to pay fines",
+        "zh": "人们不想交罚款"
+      },
+      "e1": {
+        "en": "drivers may slow down when speeding leads to a fine",
+        "zh": "超速会被罚款时，司机可能减速"
+      },
+      "c1": {
+        "en": "this can make roads safer",
+        "zh": "这可以让道路更安全"
+      },
+      "r2": {
+        "en": "laws tell people what they must do",
+        "zh": "法律告诉人们必须做什么"
+      },
+      "x2": {
+        "en": "clear rules make the right action easier to understand",
+        "zh": "清楚的规则使人更容易知道该怎么做"
+      },
+      "e2": {
+        "en": "drivers stop at red lights because the rule is clear",
+        "zh": "司机在红灯时停车，因为规则很清楚"
+      },
+      "c2": {
+        "en": "this helps people behave properly",
+        "zh": "这帮助人们正确行动"
+      }
+    },
+    "opening": {
+      "en": "Whether laws can change people's behaviour has been widely discussed. Although some people still break laws, I believe laws can change behaviour because punishment can stop people from breaking rules and laws tell people what they must do.",
+      "zh": "关于“法律是否可以改变人的行为”已有很多讨论。虽然有些人仍然违法，但我认为法律可以改变行为，因为惩罚可以阻止人们违反规则，而且法律告诉人们必须做什么。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, punishment can stop people from breaking rules.",
+        "zh": "惩罚可以阻止人们违反规则。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because people do not want to pay fines.",
+        "zh": "这是因为人们不想交罚款。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, drivers may slow down when speeding leads to a fine.",
+        "zh": "例如，超速会被罚款时，司机可能减速。"
+      },
+      {
+        "label": "回扣",
+        "en": "This can make roads safer.",
+        "zh": "这可以让道路更安全。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, laws tell people what they must do.",
+        "zh": "法律告诉人们必须做什么。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because clear rules make the right action easier to understand.",
+        "zh": "这是因为清楚的规则使人更容易知道该怎么做。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, drivers stop at red lights because the rule is clear.",
+        "zh": "例如，司机在红灯时停车，因为规则很清楚。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps people behave properly.",
+        "zh": "这帮助人们正确行动。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe laws can change behaviour because punishment can stop people from breaking rules and laws tell people what they must do.",
+      "zh": "总之，我认为法律可以改变行为，因为惩罚可以阻止人们违反规则，而且法律告诉人们必须做什么。"
+    },
+    "note": ""
+  },
+  {
+    "index": 6,
+    "qid": "F101124",
+    "qids": [
+      "M077003",
+      "F101124"
+    ],
+    "title": "政府应该改善公共交通还是多修路",
+    "values": {
+      "topic": {
+        "en": "governments should improve public transport rather than build more roads",
+        "zh": "政府是否应该优先改善公共交通而不是多修路"
+      },
+      "although": {
+        "en": "more roads can help drivers",
+        "zh": "更多道路能帮助司机"
+      },
+      "position": {
+        "en": "public transport should come first",
+        "zh": "应该优先改善公共交通"
+      },
+      "r1": {
+        "en": "public transport saves people money",
+        "zh": "公共交通帮助人们省钱"
+      },
+      "x1": {
+        "en": "bus fares can cost less than driving and parking",
+        "zh": "公交票价可能比开车和停车的费用低"
+      },
+      "e1": {
+        "en": "I spend three dollars on a bus instead of ten dollars on parking",
+        "zh": "我花三元坐公交，不用花十元停车"
+      },
+      "c1": {
+        "en": "this helps me save money",
+        "zh": "这帮助我省钱"
+      },
+      "r2": {
+        "en": "public transport can reduce traffic",
+        "zh": "公共交通可以减少拥堵"
+      },
+      "x2": {
+        "en": "one bus can carry many people",
+        "zh": "一辆公交车能载很多人"
+      },
+      "e2": {
+        "en": "a full bus can replace many cars",
+        "zh": "一辆满载的公交可以代替很多汽车"
+      },
+      "c2": {
+        "en": "this can make the roads less crowded",
+        "zh": "这可以让道路不那么拥挤"
+      }
+    },
+    "opening": {
+      "en": "Whether governments should improve public transport rather than build more roads has been widely discussed. Although more roads can help drivers, I believe public transport should come first because public transport saves people money and public transport can reduce traffic.",
+      "zh": "关于“政府是否应该优先改善公共交通而不是多修路”已有很多讨论。虽然更多道路能帮助司机，但我认为应该优先改善公共交通，因为公共交通帮助人们省钱，而且公共交通可以减少拥堵。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, public transport saves people money.",
+        "zh": "公共交通帮助人们省钱。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because bus fares can cost less than driving and parking.",
+        "zh": "这是因为公交票价可能比开车和停车的费用低。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I spend three dollars on a bus instead of ten dollars on parking.",
+        "zh": "例如，我花三元坐公交，不用花十元停车。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me save money.",
+        "zh": "这帮助我省钱。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, public transport can reduce traffic.",
+        "zh": "公共交通可以减少拥堵。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because one bus can carry many people.",
+        "zh": "这是因为一辆公交车能载很多人。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a full bus can replace many cars.",
+        "zh": "例如，一辆满载的公交可以代替很多汽车。"
+      },
+      {
+        "label": "回扣",
+        "en": "This can make the roads less crowded.",
+        "zh": "这可以让道路不那么拥挤。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe public transport should come first because public transport saves people money and public transport can reduce traffic.",
+      "zh": "总之，我认为应该优先改善公共交通，因为公共交通帮助人们省钱，而且公共交通可以减少拥堵。"
+    },
+    "note": ""
+  },
+  {
+    "index": 7,
+    "qid": "F101042",
+    "qids": [
+      "M077002",
+      "F101042"
+    ],
+    "title": "家长需要为孩子的行为负法律责任吗",
+    "values": {
+      "topic": {
+        "en": "parents should share legal responsibility for their children's actions",
+        "zh": "家长是否应为孩子的行为承担部分法律责任"
+      },
+      "although": {
+        "en": "parents cannot watch children all the time",
+        "zh": "家长不能一直看着孩子"
+      },
+      "position": {
+        "en": "parents should share responsibility when their young children cause harm",
+        "zh": "年幼孩子造成伤害时，家长应分担责任"
+      },
+      "r1": {
+        "en": "parents can teach children basic rules",
+        "zh": "家长可以教孩子基本规则"
+      },
+      "x1": {
+        "en": "young children learn from adults at home",
+        "zh": "年幼孩子会向家里的成年人学习"
+      },
+      "e1": {
+        "en": "a parent can teach a child not to damage other people's things",
+        "zh": "家长可以教孩子不破坏别人的东西"
+      },
+      "c1": {
+        "en": "this helps children behave better",
+        "zh": "这帮助孩子表现得更好"
+      },
+      "r2": {
+        "en": "responsibility makes parents pay more attention",
+        "zh": "承担责任让家长更留意"
+      },
+      "x2": {
+        "en": "parents may act earlier when they notice a problem",
+        "zh": "家长发现问题时可能更早采取行动"
+      },
+      "e2": {
+        "en": "a parent can stop a child from throwing stones at windows",
+        "zh": "家长可以阻止孩子向窗户扔石头"
+      },
+      "c2": {
+        "en": "this helps prevent damage",
+        "zh": "这帮助防止损坏"
+      }
+    },
+    "opening": {
+      "en": "Whether parents should share legal responsibility for their children's actions has been widely discussed. Although parents cannot watch children all the time, I believe parents should share responsibility when their young children cause harm because parents can teach children basic rules and responsibility makes parents pay more attention.",
+      "zh": "关于“家长是否应为孩子的行为承担部分法律责任”已有很多讨论。虽然家长不能一直看着孩子，但我认为年幼孩子造成伤害时，家长应分担责任，因为家长可以教孩子基本规则，而且承担责任让家长更留意。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, parents can teach children basic rules.",
+        "zh": "家长可以教孩子基本规则。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because young children learn from adults at home.",
+        "zh": "这是因为年幼孩子会向家里的成年人学习。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a parent can teach a child not to damage other people's things.",
+        "zh": "例如，家长可以教孩子不破坏别人的东西。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps children behave better.",
+        "zh": "这帮助孩子表现得更好。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, responsibility makes parents pay more attention.",
+        "zh": "承担责任让家长更留意。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because parents may act earlier when they notice a problem.",
+        "zh": "这是因为家长发现问题时可能更早采取行动。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a parent can stop a child from throwing stones at windows.",
+        "zh": "例如，家长可以阻止孩子向窗户扔石头。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps prevent damage.",
+        "zh": "这帮助防止损坏。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe parents should share responsibility when their young children cause harm because parents can teach children basic rules and responsibility makes parents pay more attention.",
+      "zh": "总之，我认为年幼孩子造成伤害时，家长应分担责任，因为家长可以教孩子基本规则，而且承担责任让家长更留意。"
+    },
+    "note": ""
+  },
+  {
+    "index": 8,
+    "qid": "F101140",
+    "qids": [
+      "M076023",
+      "F101140"
+    ],
+    "title": "要不要限定最高薪资",
+    "values": {
+      "topic": {
+        "en": "there should be a maximum wage",
+        "zh": "是否应该设置最高工资"
+      },
+      "although": {
+        "en": "some people earn much more than others",
+        "zh": "有些人的收入远高于其他人"
+      },
+      "position": {
+        "en": "there should not be a maximum wage",
+        "zh": "不应该设置最高工资"
+      },
+      "r1": {
+        "en": "higher pay can encourage hard work",
+        "zh": "更高工资可以鼓励努力工作"
+      },
+      "x1": {
+        "en": "people want a reward for doing a good job",
+        "zh": "人们希望做好工作能得到回报"
+      },
+      "e1": {
+        "en": "a worker may work harder to earn a bonus",
+        "zh": "员工可能为得到奖金而更加努力"
+      },
+      "c1": {
+        "en": "this can improve the quality of work",
+        "zh": "这可以提高工作质量"
+      },
+      "r2": {
+        "en": "good pay helps companies keep good workers",
+        "zh": "好工资帮助公司留住好员工"
+      },
+      "x2": {
+        "en": "workers may leave if they can earn more elsewhere",
+        "zh": "如果别处工资更高，员工可能离开"
+      },
+      "e2": {
+        "en": "a good cook may stay at a restaurant that pays well",
+        "zh": "好厨师可能留在工资高的餐厅"
+      },
+      "c2": {
+        "en": "this helps the business run well",
+        "zh": "这帮助企业正常运作"
+      }
+    },
+    "opening": {
+      "en": "Whether there should be a maximum wage has been widely discussed. Although some people earn much more than others, I believe there should not be a maximum wage because higher pay can encourage hard work and good pay helps companies keep good workers.",
+      "zh": "关于“是否应该设置最高工资”已有很多讨论。虽然有些人的收入远高于其他人，但我认为不应该设置最高工资，因为更高工资可以鼓励努力工作，而且好工资帮助公司留住好员工。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, higher pay can encourage hard work.",
+        "zh": "更高工资可以鼓励努力工作。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because people want a reward for doing a good job.",
+        "zh": "这是因为人们希望做好工作能得到回报。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a worker may work harder to earn a bonus.",
+        "zh": "例如，员工可能为得到奖金而更加努力。"
+      },
+      {
+        "label": "回扣",
+        "en": "This can improve the quality of work.",
+        "zh": "这可以提高工作质量。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, good pay helps companies keep good workers.",
+        "zh": "好工资帮助公司留住好员工。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because workers may leave if they can earn more elsewhere.",
+        "zh": "这是因为如果别处工资更高，员工可能离开。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a good cook may stay at a restaurant that pays well.",
+        "zh": "例如，好厨师可能留在工资高的餐厅。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps the business run well.",
+        "zh": "这帮助企业正常运作。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe there should not be a maximum wage because higher pay can encourage hard work and good pay helps companies keep good workers.",
+      "zh": "总之，我认为不应该设置最高工资，因为更高工资可以鼓励努力工作，而且好工资帮助公司留住好员工。"
+    },
+    "note": ""
+  },
+  {
+    "index": 9,
+    "qid": "F101132",
+    "qids": [
+      "M076015",
+      "F101132"
+    ],
+    "title": "减少工时以缓解失业率",
+    "values": {
+      "topic": {
+        "en": "shorter working weeks can reduce unemployment",
+        "zh": "缩短工作周是否能减少失业"
+      },
+      "although": {
+        "en": "shorter hours do not suit every job",
+        "zh": "较短工时并不适合所有工作"
+      },
+      "position": {
+        "en": "shorter working weeks can help some workers but also cause problems",
+        "zh": "缩短工作周能帮助部分员工，也会带来问题"
+      },
+      "r1": {
+        "en": "sharing work can create more jobs",
+        "zh": "分担工作可以创造更多岗位"
+      },
+      "x1": {
+        "en": "one person's hours can be shared with another worker",
+        "zh": "一个人的工时可以分给另一位员工"
+      },
+      "e1": {
+        "en": "a shop can give some hours to a young person looking for work",
+        "zh": "商店可以把一些工时分给正在找工作的年轻人"
+      },
+      "c1": {
+        "en": "this gives more people a chance to work",
+        "zh": "这让更多人有工作的机会"
+      },
+      "r2": {
+        "en": "shorter hours can mean lower pay",
+        "zh": "工时缩短可能意味着工资降低"
+      },
+      "x2": {
+        "en": "some workers are paid by the hour",
+        "zh": "有些员工按小时拿工资"
+      },
+      "e2": {
+        "en": "an adult working fewer paid hours may find it hard to pay rent",
+        "zh": "有的成年人有薪工时减少后，可能难以付房租"
+      },
+      "c2": {
+        "en": "this can make daily life harder",
+        "zh": "这可能让日常生活更困难"
+      }
+    },
+    "opening": {
+      "en": "Whether shorter working weeks can reduce unemployment has been widely discussed. Although shorter hours do not suit every job, I believe shorter working weeks can help some workers but also cause problems because sharing work can create more jobs and shorter hours can mean lower pay.",
+      "zh": "关于“缩短工作周是否能减少失业”已有很多讨论。虽然较短工时并不适合所有工作，但我认为缩短工作周能帮助部分员工，也会带来问题，因为分担工作可以创造更多岗位，而且工时缩短可能意味着工资降低。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, sharing work can create more jobs.",
+        "zh": "分担工作可以创造更多岗位。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because one person's hours can be shared with another worker.",
+        "zh": "这是因为一个人的工时可以分给另一位员工。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a shop can give some hours to a young person looking for work.",
+        "zh": "例如，商店可以把一些工时分给正在找工作的年轻人。"
+      },
+      {
+        "label": "回扣",
+        "en": "This gives more people a chance to work.",
+        "zh": "这让更多人有工作的机会。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, shorter hours can mean lower pay.",
+        "zh": "工时缩短可能意味着工资降低。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because some workers are paid by the hour.",
+        "zh": "这是因为有些员工按小时拿工资。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, an adult working fewer paid hours may find it hard to pay rent.",
+        "zh": "例如，有的成年人有薪工时减少后，可能难以付房租。"
+      },
+      {
+        "label": "回扣",
+        "en": "This can make daily life harder.",
+        "zh": "这可能让日常生活更困难。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe shorter working weeks can help some workers but also cause problems because sharing work can create more jobs and shorter hours can mean lower pay.",
+      "zh": "总之，我认为缩短工作周能帮助部分员工，也会带来问题，因为分担工作可以创造更多岗位，而且工时缩短可能意味着工资降低。"
+    },
+    "note": "一利一弊。年轻人可用分工得到岗位，成年人可能因收入下降而受影响；立场是适用于部分工作，并非所有人。"
+  },
+  {
+    "index": 10,
+    "qid": "F101135",
+    "qids": [
+      "M076014",
+      "F101135"
+    ],
+    "title": "未来人们工时会减少",
+    "values": {
+      "topic": {
+        "en": "people will work fewer hours in the future",
+        "zh": "人们未来是否会工作更少时间"
+      },
+      "although": {
+        "en": "some jobs will still need people",
+        "zh": "有些工作仍然需要人"
+      },
+      "position": {
+        "en": "people may work fewer hours in the future",
+        "zh": "人们未来可能工作更少时间"
+      },
+      "r1": {
+        "en": "computers can save time in offices",
+        "zh": "电脑可以节省办公室的工作时间"
+      },
+      "x1": {
+        "en": "they can finish simple tasks quickly",
+        "zh": "它们可以快速完成简单任务"
+      },
+      "e1": {
+        "en": "I use a computer to add numbers instead of doing it by hand",
+        "zh": "我用电脑加数字，不用手算"
+      },
+      "c1": {
+        "en": "this helps me finish work faster",
+        "zh": "这帮助我更快完成工作"
+      },
+      "r2": {
+        "en": "machines can do factory work faster",
+        "zh": "机器可以更快完成工厂工作"
+      },
+      "x2": {
+        "en": "they can repeat the same task many times",
+        "zh": "它们可以反复执行同一任务"
+      },
+      "e2": {
+        "en": "a machine can pack boxes while workers check the results",
+        "zh": "机器装箱，工人检查结果"
+      },
+      "c2": {
+        "en": "this may reduce the time workers need",
+        "zh": "这可能减少员工所需的时间"
+      }
+    },
+    "opening": {
+      "en": "Whether people will work fewer hours in the future has been widely discussed. Although some jobs will still need people, I believe people may work fewer hours in the future because computers can save time in offices and machines can do factory work faster.",
+      "zh": "关于“人们未来是否会工作更少时间”已有很多讨论。虽然有些工作仍然需要人，但我认为人们未来可能工作更少时间，因为电脑可以节省办公室的工作时间，而且机器可以更快完成工厂工作。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, computers can save time in offices.",
+        "zh": "电脑可以节省办公室的工作时间。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because they can finish simple tasks quickly.",
+        "zh": "这是因为它们可以快速完成简单任务。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I use a computer to add numbers instead of doing it by hand.",
+        "zh": "例如，我用电脑加数字，不用手算。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me finish work faster.",
+        "zh": "这帮助我更快完成工作。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, machines can do factory work faster.",
+        "zh": "机器可以更快完成工厂工作。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because they can repeat the same task many times.",
+        "zh": "这是因为它们可以反复执行同一任务。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a machine can pack boxes while workers check the results.",
+        "zh": "例如，机器装箱，工人检查结果。"
+      },
+      {
+        "label": "回扣",
+        "en": "This may reduce the time workers need.",
+        "zh": "这可能减少员工所需的时间。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe people may work fewer hours in the future because computers can save time in offices and machines can do factory work faster.",
+      "zh": "总之，我认为人们未来可能工作更少时间，因为电脑可以节省办公室的工作时间，而且机器可以更快完成工厂工作。"
+    },
+    "note": ""
+  },
+  {
+    "index": 11,
+    "qid": "F101056",
+    "qids": [
+      "M076008",
+      "F101056"
+    ],
+    "title": "建筑设计对工作生活的影响",
+    "values": {
+      "topic": {
+        "en": "building design affects work and daily life",
+        "zh": "建筑设计是否影响工作和生活"
+      },
+      "although": {
+        "en": "good buildings can cost more",
+        "zh": "好的建筑可能更贵"
+      },
+      "position": {
+        "en": "good building design improves daily life",
+        "zh": "好的建筑设计能改善日常生活"
+      },
+      "r1": {
+        "en": "good design makes rooms more comfortable",
+        "zh": "好的设计让房间更舒适"
+      },
+      "x1": {
+        "en": "windows can bring in light and fresh air",
+        "zh": "窗户可以带来光线和新鲜空气"
+      },
+      "e1": {
+        "en": "I feel better in a bright room with an open window",
+        "zh": "在明亮且开窗的房间里，我感觉更好"
+      },
+      "c1": {
+        "en": "this makes my home more comfortable",
+        "zh": "这让我的家更舒适"
+      },
+      "r2": {
+        "en": "quiet rooms help people focus",
+        "zh": "安静的房间帮助人们集中注意力"
+      },
+      "x2": {
+        "en": "less noise means fewer breaks in their attention",
+        "zh": "噪音少，注意力就较少被打断"
+      },
+      "e2": {
+        "en": "I finish homework faster in a quiet room",
+        "zh": "我在安静的房间做作业更快"
+      },
+      "c2": {
+        "en": "this helps me study better",
+        "zh": "这帮助我更好地学习"
+      }
+    },
+    "opening": {
+      "en": "Whether building design affects work and daily life has been widely discussed. Although good buildings can cost more, I believe good building design improves daily life because good design makes rooms more comfortable and quiet rooms help people focus.",
+      "zh": "关于“建筑设计是否影响工作和生活”已有很多讨论。虽然好的建筑可能更贵，但我认为好的建筑设计能改善日常生活，因为好的设计让房间更舒适，而且安静的房间帮助人们集中注意力。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, good design makes rooms more comfortable.",
+        "zh": "好的设计让房间更舒适。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because windows can bring in light and fresh air.",
+        "zh": "这是因为窗户可以带来光线和新鲜空气。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I feel better in a bright room with an open window.",
+        "zh": "例如，在明亮且开窗的房间里，我感觉更好。"
+      },
+      {
+        "label": "回扣",
+        "en": "This makes my home more comfortable.",
+        "zh": "这让我的家更舒适。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, quiet rooms help people focus.",
+        "zh": "安静的房间帮助人们集中注意力。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because less noise means fewer breaks in their attention.",
+        "zh": "这是因为噪音少，注意力就较少被打断。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I finish homework faster in a quiet room.",
+        "zh": "例如，我在安静的房间做作业更快。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me study better.",
+        "zh": "这帮助我更好地学习。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe good building design improves daily life because good design makes rooms more comfortable and quiet rooms help people focus.",
+      "zh": "总之，我认为好的建筑设计能改善日常生活，因为好的设计让房间更舒适，而且安静的房间帮助人们集中注意力。"
+    },
+    "note": ""
+  },
+  {
+    "index": 12,
+    "qid": "F101044",
+    "qids": [
+      "M076006",
+      "F101044"
+    ],
+    "title": "兼顾工作和学习",
+    "values": {
+      "topic": {
+        "en": "students can work and study at the same time",
+        "zh": "学生是否能兼顾工作和学习"
+      },
+      "although": {
+        "en": "working takes time and energy",
+        "zh": "工作会花费时间和精力"
+      },
+      "position": {
+        "en": "students can combine study with a small part-time job",
+        "zh": "学生可以兼顾学习和少量兼职工作"
+      },
+      "r1": {
+        "en": "a short part-time job leaves time for study",
+        "zh": "工时较短的兼职能留下学习时间"
+      },
+      "x1": {
+        "en": "students do not have to work every day",
+        "zh": "学生不必每天上班"
+      },
+      "e1": {
+        "en": "I work for a few hours on Saturday and study on weekdays",
+        "zh": "我周六工作几小时，平日学习"
+      },
+      "c1": {
+        "en": "this helps me keep enough study time",
+        "zh": "这帮助我保留足够的学习时间"
+      },
+      "r2": {
+        "en": "a simple plan helps students manage both tasks",
+        "zh": "简单的计划帮助学生兼顾两件事"
+      },
+      "x2": {
+        "en": "they can choose different times for work and study",
+        "zh": "他们可以把工作和学习安排在不同时间"
+      },
+      "e2": {
+        "en": "I finish homework before my evening shift",
+        "zh": "我在晚上上班前完成作业"
+      },
+      "c2": {
+        "en": "this helps me avoid missing schoolwork",
+        "zh": "这帮助我避免耽误学业"
+      }
+    },
+    "opening": {
+      "en": "Whether students can work and study at the same time has been widely discussed. Although working takes time and energy, I believe students can combine study with a small part-time job because a short part-time job leaves time for study and a simple plan helps students manage both tasks.",
+      "zh": "关于“学生是否能兼顾工作和学习”已有很多讨论。虽然工作会花费时间和精力，但我认为学生可以兼顾学习和少量兼职工作，因为工时较短的兼职能留下学习时间，而且简单的计划帮助学生兼顾两件事。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, a short part-time job leaves time for study.",
+        "zh": "工时较短的兼职能留下学习时间。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because students do not have to work every day.",
+        "zh": "这是因为学生不必每天上班。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I work for a few hours on Saturday and study on weekdays.",
+        "zh": "例如，我周六工作几小时，平日学习。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me keep enough study time.",
+        "zh": "这帮助我保留足够的学习时间。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, a simple plan helps students manage both tasks.",
+        "zh": "简单的计划帮助学生兼顾两件事。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because they can choose different times for work and study.",
+        "zh": "这是因为他们可以把工作和学习安排在不同时间。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I finish homework before my evening shift.",
+        "zh": "例如，我在晚上上班前完成作业。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me avoid missing schoolwork.",
+        "zh": "这帮助我避免耽误学业。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe students can combine study with a small part-time job because a short part-time job leaves time for study and a simple plan helps students manage both tasks.",
+      "zh": "总之，我认为学生可以兼顾学习和少量兼职工作，因为工时较短的兼职能留下学习时间，而且简单的计划帮助学生兼顾两件事。"
+    },
+    "note": ""
+  },
+  {
+    "index": 13,
+    "qid": "F101127",
+    "qids": [
+      "M076002",
+      "F101127"
+    ],
+    "title": "兼顾工作与私人生活（重要性与成因）",
+    "values": {
+      "topic": {
+        "en": "people can keep a good balance between work and life",
+        "zh": "人们是否能保持工作和生活的平衡"
+      },
+      "although": {
+        "en": "work is important",
+        "zh": "工作很重要"
+      },
+      "position": {
+        "en": "this balance matters but is hard to keep",
+        "zh": "这种平衡很重要，但很难保持"
+      },
+      "r1": {
+        "en": "time away from work helps people rest",
+        "zh": "工作以外的时间帮助人们休息"
+      },
+      "x1": {
+        "en": "people need sleep and time to relax",
+        "zh": "人们需要睡眠和放松时间"
+      },
+      "e1": {
+        "en": "I feel better after a quiet evening at home",
+        "zh": "在家度过一个安静的晚上后，我感觉更好"
+      },
+      "c1": {
+        "en": "this helps me stay well",
+        "zh": "这帮助我保持良好状态"
+      },
+      "r2": {
+        "en": "long working hours leave little free time",
+        "zh": "长工时使空闲时间很少"
+      },
+      "x2": {
+        "en": "people may still have work to finish at night",
+        "zh": "人们晚上可能仍有工作要完成"
+      },
+      "e2": {
+        "en": "a worker answering emails at home misses a family meal",
+        "zh": "员工在家回复邮件，错过了家庭晚餐"
+      },
+      "c2": {
+        "en": "this makes work-life balance harder",
+        "zh": "这使工作和生活更难平衡"
+      }
+    },
+    "opening": {
+      "en": "Whether people can keep a good balance between work and life has been widely discussed. Although work is important, I believe this balance matters but is hard to keep because time away from work helps people rest and long working hours leave little free time.",
+      "zh": "关于“人们是否能保持工作和生活的平衡”已有很多讨论。虽然工作很重要，但我认为这种平衡很重要，但很难保持，因为工作以外的时间帮助人们休息，而且长工时使空闲时间很少。"
+    },
+    "body1": [
+      {
+        "label": "本段重点",
+        "en": "First, time away from work helps people rest.",
+        "zh": "工作以外的时间帮助人们休息。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because people need sleep and time to relax.",
+        "zh": "这是因为人们需要睡眠和放松时间。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I feel better after a quiet evening at home.",
+        "zh": "例如，在家度过一个安静的晚上后，我感觉更好。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me stay well.",
+        "zh": "这帮助我保持良好状态。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "本段重点",
+        "en": "Second, long working hours leave little free time.",
+        "zh": "长工时使空闲时间很少。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because people may still have work to finish at night.",
+        "zh": "这是因为人们晚上可能仍有工作要完成。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a worker answering emails at home misses a family meal.",
+        "zh": "例如，员工在家回复邮件，错过了家庭晚餐。"
+      },
+      {
+        "label": "回扣",
+        "en": "This makes work-life balance harder.",
+        "zh": "这使工作和生活更难平衡。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe this balance matters but is hard to keep because time away from work helps people rest and long working hours leave little free time.",
+      "zh": "总之，我认为这种平衡很重要，但很难保持，因为工作以外的时间帮助人们休息，而且长工时使空闲时间很少。"
+    },
+    "note": "第二段回答“为什么重要”，第三段回答“为什么难”。不要把第三段写成第二个好处。"
+  },
+  {
+    "index": 14,
+    "qid": "F101126",
+    "qids": [
+      "M076001",
+      "F101126"
+    ],
+    "title": "兼顾工作和私人生活（普遍性与后果）",
+    "values": {
+      "topic": {
+        "en": "work leaves people too little personal time",
+        "zh": "工作是否让人们缺少私人时间"
+      },
+      "although": {
+        "en": "jobs provide money for daily life",
+        "zh": "工作提供生活所需的钱"
+      },
+      "position": {
+        "en": "this problem is common and can harm daily life",
+        "zh": "这个问题很常见，也会损害日常生活"
+      },
+      "r1": {
+        "en": "many people work long hours",
+        "zh": "很多人工作时间很长"
+      },
+      "x1": {
+        "en": "some jobs require extra work after normal hours",
+        "zh": "有些工作需要在正常工时后加班"
+      },
+      "e1": {
+        "en": "several people I know often get home late from work",
+        "zh": "我认识的几个人经常很晚下班回家"
+      },
+      "c1": {
+        "en": "this shows that the problem affects many people",
+        "zh": "这表明这个问题影响很多人"
+      },
+      "r2": {
+        "en": "little free time harms rest and family life",
+        "zh": "空闲时间少会影响休息和家庭生活"
+      },
+      "x2": {
+        "en": "people cannot relax or spend enough time with family",
+        "zh": "人们不能放松，也没有足够时间陪家人"
+      },
+      "e2": {
+        "en": "a tired worker may miss dinner with the children",
+        "zh": "疲惫的员工可能错过和孩子一起吃晚餐"
+      },
+      "c2": {
+        "en": "this can make family life harder",
+        "zh": "这可能让家庭生活更困难"
+      }
+    },
+    "opening": {
+      "en": "Whether work leaves people too little personal time has been widely discussed. Although jobs provide money for daily life, I believe this problem is common and can harm daily life because many people work long hours and little free time harms rest and family life.",
+      "zh": "关于“工作是否让人们缺少私人时间”已有很多讨论。虽然工作提供生活所需的钱，但我认为这个问题很常见，也会损害日常生活，因为很多人工作时间很长，而且空闲时间少会影响休息和家庭生活。"
+    },
+    "body1": [
+      {
+        "label": "本段重点",
+        "en": "First, many people work long hours.",
+        "zh": "很多人工作时间很长。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because some jobs require extra work after normal hours.",
+        "zh": "这是因为有些工作需要在正常工时后加班。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, several people I know often get home late from work.",
+        "zh": "例如，我认识的几个人经常很晚下班回家。"
+      },
+      {
+        "label": "回扣",
+        "en": "This shows that the problem affects many people.",
+        "zh": "这表明这个问题影响很多人。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "本段重点",
+        "en": "Second, little free time harms rest and family life.",
+        "zh": "空闲时间少会影响休息和家庭生活。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because people cannot relax or spend enough time with family.",
+        "zh": "这是因为人们不能放松，也没有足够时间陪家人。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a tired worker may miss dinner with the children.",
+        "zh": "例如，疲惫的员工可能错过和孩子一起吃晚餐。"
+      },
+      {
+        "label": "回扣",
+        "en": "This can make family life harder.",
+        "zh": "这可能让家庭生活更困难。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe this problem is common and can harm daily life because many people work long hours and little free time harms rest and family life.",
+      "zh": "总之，我认为这个问题很常见，也会损害日常生活，因为很多人工作时间很长，而且空闲时间少会影响休息和家庭生活。"
+    },
+    "note": "第二段回答“有多普遍”，第三段回答“有什么后果”。"
+  },
+  {
+    "index": 15,
+    "qid": "F101009",
+    "qids": [
+      "M075009",
+      "F101009"
+    ],
+    "title": "大众传媒引发的信息革命带来的利弊",
+    "values": {
+      "topic": {
+        "en": "modern media bring both benefits and problems",
+        "zh": "现代传媒是否既有好处也有问题"
+      },
+      "although": {
+        "en": "getting information is easier now",
+        "zh": "现在获取信息更容易"
+      },
+      "position": {
+        "en": "modern media have both good and bad sides",
+        "zh": "现代传媒既有好处也有坏处"
+      },
+      "r1": {
+        "en": "media help people learn useful information",
+        "zh": "传媒帮助人们了解有用信息"
+      },
+      "x1": {
+        "en": "news can reach many people quickly",
+        "zh": "新闻能很快传给很多人"
+      },
+      "e1": {
+        "en": "I check the weather news before leaving home",
+        "zh": "我出门前查看天气新闻"
+      },
+      "c1": {
+        "en": "this helps me plan my day",
+        "zh": "这帮助我安排一天"
+      },
+      "r2": {
+        "en": "false information can confuse people",
+        "zh": "错误信息可能误导人们"
+      },
+      "x2": {
+        "en": "some stories are shared before anyone checks them",
+        "zh": "有些消息未经核实就被传播"
+      },
+      "e2": {
+        "en": "someone may change travel plans because of a false train notice",
+        "zh": "有人可能因假的列车通知改变出行计划"
+      },
+      "c2": {
+        "en": "this can waste people's time",
+        "zh": "这可能浪费人们的时间"
+      }
+    },
+    "opening": {
+      "en": "Whether modern media bring both benefits and problems has been widely discussed. Although getting information is easier now, I believe modern media have both good and bad sides because media help people learn useful information and false information can confuse people.",
+      "zh": "关于“现代传媒是否既有好处也有问题”已有很多讨论。虽然现在获取信息更容易，但我认为现代传媒既有好处也有坏处，因为传媒帮助人们了解有用信息，而且错误信息可能误导人们。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, media help people learn useful information.",
+        "zh": "传媒帮助人们了解有用信息。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because news can reach many people quickly.",
+        "zh": "这是因为新闻能很快传给很多人。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I check the weather news before leaving home.",
+        "zh": "例如，我出门前查看天气新闻。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me plan my day.",
+        "zh": "这帮助我安排一天。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, false information can confuse people.",
+        "zh": "错误信息可能误导人们。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because some stories are shared before anyone checks them.",
+        "zh": "这是因为有些消息未经核实就被传播。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, someone may change travel plans because of a false train notice.",
+        "zh": "例如，有人可能因假的列车通知改变出行计划。"
+      },
+      {
+        "label": "回扣",
+        "en": "This can waste people's time.",
+        "zh": "这可能浪费人们的时间。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe modern media have both good and bad sides because media help people learn useful information and false information can confuse people.",
+      "zh": "总之，我认为现代传媒既有好处也有坏处，因为传媒帮助人们了解有用信息，而且错误信息可能误导人们。"
+    },
+    "note": "一利一弊：得到信息更快，也可能被错误信息误导。"
+  },
+  {
+    "index": 16,
+    "qid": "F101011",
+    "qids": [
+      "M075008",
+      "F101011"
+    ],
+    "title": "大众传媒对年轻人的影响",
+    "values": {
+      "topic": {
+        "en": "media influence young people's opinions",
+        "zh": "传媒是否影响年轻人的观点"
+      },
+      "although": {
+        "en": "parents and teachers also influence them",
+        "zh": "家长和老师也会影响他们"
+      },
+      "position": {
+        "en": "media strongly influence young people",
+        "zh": "传媒对年轻人影响很大"
+      },
+      "r1": {
+        "en": "news can change what young people think",
+        "zh": "新闻可以改变年轻人的想法"
+      },
+      "x1": {
+        "en": "it introduces problems they have not seen before",
+        "zh": "新闻会介绍他们以前没见过的问题"
+      },
+      "e1": {
+        "en": "I cared more about litter after watching a report about dirty beaches",
+        "zh": "看过海滩垃圾的报道后，我更在意乱扔垃圾的问题"
+      },
+      "c1": {
+        "en": "this changed my view of the problem",
+        "zh": "这改变了我对这个问题的看法"
+      },
+      "r2": {
+        "en": "advertisements can change buying choices",
+        "zh": "广告可以改变购买选择"
+      },
+      "x2": {
+        "en": "young people often notice products shown many times",
+        "zh": "年轻人常会注意反复出现的产品"
+      },
+      "e2": {
+        "en": "I wanted a pair of shoes after seeing the same advertisement",
+        "zh": "看过同一个广告后，我想买那双鞋"
+      },
+      "c2": {
+        "en": "this shows how media affect daily choices",
+        "zh": "这说明传媒怎样影响日常选择"
+      }
+    },
+    "opening": {
+      "en": "Whether media influence young people's opinions has been widely discussed. Although parents and teachers also influence them, I believe media strongly influence young people because news can change what young people think and advertisements can change buying choices.",
+      "zh": "关于“传媒是否影响年轻人的观点”已有很多讨论。虽然家长和老师也会影响他们，但我认为传媒对年轻人影响很大，因为新闻可以改变年轻人的想法，而且广告可以改变购买选择。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, news can change what young people think.",
+        "zh": "新闻可以改变年轻人的想法。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because it introduces problems they have not seen before.",
+        "zh": "这是因为新闻会介绍他们以前没见过的问题。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I cared more about litter after watching a report about dirty beaches.",
+        "zh": "例如，看过海滩垃圾的报道后，我更在意乱扔垃圾的问题。"
+      },
+      {
+        "label": "回扣",
+        "en": "This changed my view of the problem.",
+        "zh": "这改变了我对这个问题的看法。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, advertisements can change buying choices.",
+        "zh": "广告可以改变购买选择。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because young people often notice products shown many times.",
+        "zh": "这是因为年轻人常会注意反复出现的产品。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I wanted a pair of shoes after seeing the same advertisement.",
+        "zh": "例如，看过同一个广告后，我想买那双鞋。"
+      },
+      {
+        "label": "回扣",
+        "en": "This shows how media affect daily choices.",
+        "zh": "这说明传媒怎样影响日常选择。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe media strongly influence young people because news can change what young people think and advertisements can change buying choices.",
+      "zh": "总之，我认为传媒对年轻人影响很大，因为新闻可以改变年轻人的想法，而且广告可以改变购买选择。"
+    },
+    "note": ""
+  },
+  {
+    "index": 17,
+    "qid": "F101013",
+    "qids": [
+      "M075003",
+      "F101013"
+    ],
+    "title": "电视功能（学习、放松、陪伴）",
+    "values": {
+      "topic": {
+        "en": "television is useful in daily life",
+        "zh": "电视在日常生活中是否有用"
+      },
+      "although": {
+        "en": "watching too much television wastes time",
+        "zh": "看太多电视浪费时间"
+      },
+      "position": {
+        "en": "television is useful",
+        "zh": "电视是有用的"
+      },
+      "r1": {
+        "en": "television helps people learn",
+        "zh": "电视帮助人们学习"
+      },
+      "x1": {
+        "en": "programmes can explain useful things simply",
+        "zh": "节目可以简单地解释有用的东西"
+      },
+      "e1": {
+        "en": "I learned to cook a simple meal from a cooking show",
+        "zh": "我从烹饪节目学会做一道简单的菜"
+      },
+      "c1": {
+        "en": "this helped me learn a useful skill",
+        "zh": "这帮助我学会一项有用技能"
+      },
+      "r2": {
+        "en": "television helps people relax and feel less alone",
+        "zh": "电视帮助人们放松，并减少孤独感"
+      },
+      "x2": {
+        "en": "funny shows and friendly voices can make evenings happier",
+        "zh": "有趣的节目和亲切的声音能让晚上更愉快"
+      },
+      "e2": {
+        "en": "I watch a comedy when I spend an evening alone",
+        "zh": "我独自度过晚上时看喜剧"
+      },
+      "c2": {
+        "en": "this helps me relax and feel less lonely",
+        "zh": "这帮助我放松，并减少孤独感"
+      }
+    },
+    "opening": {
+      "en": "Whether television is useful in daily life has been widely discussed. Although watching too much television wastes time, I believe television is useful because television helps people learn and television helps people relax and feel less alone.",
+      "zh": "关于“电视在日常生活中是否有用”已有很多讨论。虽然看太多电视浪费时间，但我认为电视是有用的，因为电视帮助人们学习，而且电视帮助人们放松，并减少孤独感。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, television helps people learn.",
+        "zh": "电视帮助人们学习。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because programmes can explain useful things simply.",
+        "zh": "这是因为节目可以简单地解释有用的东西。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I learned to cook a simple meal from a cooking show.",
+        "zh": "例如，我从烹饪节目学会做一道简单的菜。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helped me learn a useful skill.",
+        "zh": "这帮助我学会一项有用技能。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, television helps people relax and feel less alone.",
+        "zh": "电视帮助人们放松，并减少孤独感。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because funny shows and friendly voices can make evenings happier.",
+        "zh": "这是因为有趣的节目和亲切的声音能让晚上更愉快。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I watch a comedy when I spend an evening alone.",
+        "zh": "例如，我独自度过晚上时看喜剧。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me relax and feel less lonely.",
+        "zh": "这帮助我放松，并减少孤独感。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe television is useful because television helps people learn and television helps people relax and feel less alone.",
+      "zh": "总之，我认为电视是有用的，因为电视帮助人们学习，而且电视帮助人们放松，并减少孤独感。"
+    },
+    "note": "理由一覆盖学习；理由二同时覆盖放松和陪伴。"
+  },
+  {
+    "index": 18,
+    "qid": "F101007",
+    "qids": [
+      "M074006",
+      "F101007"
+    ],
+    "title": "欠发达国家的旅游业利弊相当",
+    "values": {
+      "topic": {
+        "en": "tourism brings as many problems as benefits to poorer countries",
+        "zh": "旅游是否给较贫穷国家带来同样多的利与弊"
+      },
+      "although": {
+        "en": "tourism brings money",
+        "zh": "旅游会带来收入"
+      },
+      "position": {
+        "en": "tourism has both clear benefits and serious problems",
+        "zh": "旅游既有明显好处，也有严重问题"
+      },
+      "r1": {
+        "en": "tourism creates local jobs",
+        "zh": "旅游创造当地工作岗位"
+      },
+      "x1": {
+        "en": "visitors need food and places to stay",
+        "zh": "游客需要食物和住宿"
+      },
+      "e1": {
+        "en": "a small hotel can hire local people to clean rooms",
+        "zh": "小旅馆可以雇当地人打扫房间"
+      },
+      "c1": {
+        "en": "this helps local people earn money",
+        "zh": "这帮助当地人赚钱"
+      },
+      "r2": {
+        "en": "tourism can damage local places",
+        "zh": "旅游可能损害当地环境"
+      },
+      "x2": {
+        "en": "too many visitors can leave rubbish behind",
+        "zh": "太多游客可能留下垃圾"
+      },
+      "e2": {
+        "en": "a popular beach may be covered with empty bottles",
+        "zh": "热门海滩可能到处都是空瓶子"
+      },
+      "c2": {
+        "en": "this makes the area a worse place to live",
+        "zh": "这让当地变得不那么适合居住"
+      }
+    },
+    "opening": {
+      "en": "Whether tourism brings as many problems as benefits to poorer countries has been widely discussed. Although tourism brings money, I believe tourism has both clear benefits and serious problems because tourism creates local jobs and tourism can damage local places.",
+      "zh": "关于“旅游是否给较贫穷国家带来同样多的利与弊”已有很多讨论。虽然旅游会带来收入，但我认为旅游既有明显好处，也有严重问题，因为旅游创造当地工作岗位，而且旅游可能损害当地环境。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, tourism creates local jobs.",
+        "zh": "旅游创造当地工作岗位。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because visitors need food and places to stay.",
+        "zh": "这是因为游客需要食物和住宿。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a small hotel can hire local people to clean rooms.",
+        "zh": "例如，小旅馆可以雇当地人打扫房间。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps local people earn money.",
+        "zh": "这帮助当地人赚钱。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, tourism can damage local places.",
+        "zh": "旅游可能损害当地环境。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because too many visitors can leave rubbish behind.",
+        "zh": "这是因为太多游客可能留下垃圾。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a popular beach may be covered with empty bottles.",
+        "zh": "例如，热门海滩可能到处都是空瓶子。"
+      },
+      {
+        "label": "回扣",
+        "en": "This makes the area a worse place to live.",
+        "zh": "这让当地变得不那么适合居住。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe tourism has both clear benefits and serious problems because tourism creates local jobs and tourism can damage local places.",
+      "zh": "总之，我认为旅游既有明显好处，也有严重问题，因为旅游创造当地工作岗位，而且旅游可能损害当地环境。"
+    },
+    "note": "一利一弊。采取折中观点：就业收入是好处，环境破坏是坏处，很难说只有一面。"
+  },
+  {
+    "index": 19,
+    "qid": "F101015",
+    "qids": [
+      "M074005",
+      "F101015"
+    ],
+    "title": "日用消费品的营销应该重品牌还是重优惠",
+    "values": {
+      "topic": {
+        "en": "companies should focus on their name or on discounts",
+        "zh": "公司应该重视品牌还是折扣"
+      },
+      "although": {
+        "en": "discounts can attract buyers quickly",
+        "zh": "折扣能快速吸引买家"
+      },
+      "position": {
+        "en": "companies should focus more on a trusted name",
+        "zh": "公司应该更重视可信的品牌"
+      },
+      "r1": {
+        "en": "a trusted name makes buying easier",
+        "zh": "可信的品牌让购买更容易"
+      },
+      "x1": {
+        "en": "people worry less about the quality",
+        "zh": "人们较少担心质量"
+      },
+      "e1": {
+        "en": "I buy the same brand of milk because I know its quality",
+        "zh": "我买同一个牌子的牛奶，因为我了解它的质量"
+      },
+      "c1": {
+        "en": "this helps me choose quickly",
+        "zh": "这帮助我快速选择"
+      },
+      "r2": {
+        "en": "good quality brings customers back",
+        "zh": "好质量会让顾客再次购买"
+      },
+      "x2": {
+        "en": "a useful product gives people a reason to buy again",
+        "zh": "好用的产品让人有再次购买的理由"
+      },
+      "e2": {
+        "en": "I buy the same shoes again because the first pair lasted well",
+        "zh": "第一双鞋很耐穿，所以我又买了同款"
+      },
+      "c2": {
+        "en": "this helps the company keep customers",
+        "zh": "这帮助公司留住顾客"
+      }
+    },
+    "opening": {
+      "en": "Whether companies should focus on their name or on discounts has been widely discussed. Although discounts can attract buyers quickly, I believe companies should focus more on a trusted name because a trusted name makes buying easier and good quality brings customers back.",
+      "zh": "关于“公司应该重视品牌还是折扣”已有很多讨论。虽然折扣能快速吸引买家，但我认为公司应该更重视可信的品牌，因为可信的品牌让购买更容易，而且好质量会让顾客再次购买。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, a trusted name makes buying easier.",
+        "zh": "可信的品牌让购买更容易。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because people worry less about the quality.",
+        "zh": "这是因为人们较少担心质量。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I buy the same brand of milk because I know its quality.",
+        "zh": "例如，我买同一个牌子的牛奶，因为我了解它的质量。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me choose quickly.",
+        "zh": "这帮助我快速选择。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, good quality brings customers back.",
+        "zh": "好质量会让顾客再次购买。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because a useful product gives people a reason to buy again.",
+        "zh": "这是因为好用的产品让人有再次购买的理由。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I buy the same shoes again because the first pair lasted well.",
+        "zh": "例如，第一双鞋很耐穿，所以我又买了同款。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps the company keep customers.",
+        "zh": "这帮助公司留住顾客。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe companies should focus more on a trusted name because a trusted name makes buying easier and good quality brings customers back.",
+      "zh": "总之，我认为公司应该更重视可信的品牌，因为可信的品牌让购买更容易，而且好质量会让顾客再次购买。"
+    },
+    "note": ""
+  },
+  {
+    "index": 20,
+    "qid": "F101004",
+    "qids": [
+      "M074004",
+      "F101004"
+    ],
+    "title": "员工参与决策的利弊",
+    "values": {
+      "topic": {
+        "en": "employees should help make company decisions",
+        "zh": "员工是否应该参与公司决策"
+      },
+      "although": {
+        "en": "managers have the final responsibility",
+        "zh": "经理负最终责任"
+      },
+      "position": {
+        "en": "letting workers help can bring good ideas but take more time",
+        "zh": "让员工参与能带来好想法，但会花更多时间"
+      },
+      "r1": {
+        "en": "employees can suggest useful ideas",
+        "zh": "员工可以提出有用的想法"
+      },
+      "x1": {
+        "en": "they deal with daily problems at work",
+        "zh": "他们每天处理工作中的实际问题"
+      },
+      "e1": {
+        "en": "a shop worker can suggest a clearer place for price signs",
+        "zh": "店员可以建议把价格牌放在更清楚的位置"
+      },
+      "c1": {
+        "en": "this can make shopping easier",
+        "zh": "这可以让购物更方便"
+      },
+      "r2": {
+        "en": "more opinions can slow decisions",
+        "zh": "更多意见可能让决策变慢"
+      },
+      "x2": {
+        "en": "people may disagree and need more discussion",
+        "zh": "人们可能不同意，需要更多讨论"
+      },
+      "e2": {
+        "en": "a team may spend a whole meeting choosing a new uniform",
+        "zh": "团队可能花整场会议选择新制服"
+      },
+      "c2": {
+        "en": "this leaves less time for other work",
+        "zh": "这让其他工作的时间变少"
+      }
+    },
+    "opening": {
+      "en": "Whether employees should help make company decisions has been widely discussed. Although managers have the final responsibility, I believe letting workers help can bring good ideas but take more time because employees can suggest useful ideas and more opinions can slow decisions.",
+      "zh": "关于“员工是否应该参与公司决策”已有很多讨论。虽然经理负最终责任，但我认为让员工参与能带来好想法，但会花更多时间，因为员工可以提出有用的想法，而且更多意见可能让决策变慢。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, employees can suggest useful ideas.",
+        "zh": "员工可以提出有用的想法。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because they deal with daily problems at work.",
+        "zh": "这是因为他们每天处理工作中的实际问题。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a shop worker can suggest a clearer place for price signs.",
+        "zh": "例如，店员可以建议把价格牌放在更清楚的位置。"
+      },
+      {
+        "label": "回扣",
+        "en": "This can make shopping easier.",
+        "zh": "这可以让购物更方便。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, more opinions can slow decisions.",
+        "zh": "更多意见可能让决策变慢。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because people may disagree and need more discussion.",
+        "zh": "这是因为人们可能不同意，需要更多讨论。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a team may spend a whole meeting choosing a new uniform.",
+        "zh": "例如，团队可能花整场会议选择新制服。"
+      },
+      {
+        "label": "回扣",
+        "en": "This leaves less time for other work.",
+        "zh": "这让其他工作的时间变少。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe letting workers help can bring good ideas but take more time because employees can suggest useful ideas and more opinions can slow decisions.",
+      "zh": "总之，我认为让员工参与能带来好想法，但会花更多时间，因为员工可以提出有用的想法，而且更多意见可能让决策变慢。"
+    },
+    "note": "一利一弊：想法更实用，但讨论可能拖慢决定。"
+  },
+  {
+    "index": 21,
+    "qid": "F101030",
+    "qids": [
+      "M074001",
+      "F101030"
+    ],
+    "title": "大商场替代小商铺",
+    "values": {
+      "topic": {
+        "en": "large shopping malls replacing small shops is a good change",
+        "zh": "大商场替代小商店是否是好变化"
+      },
+      "although": {
+        "en": "small shops are useful",
+        "zh": "小商店也很有用"
+      },
+      "position": {
+        "en": "shopping malls can improve daily shopping",
+        "zh": "商场可以改善日常购物"
+      },
+      "r1": {
+        "en": "shopping malls save travel time",
+        "zh": "商场节省出行时间"
+      },
+      "x1": {
+        "en": "many different shops are in one place",
+        "zh": "很多不同商店集中在一起"
+      },
+      "e1": {
+        "en": "I buy food and clothes in the same shopping mall",
+        "zh": "我在同一个商场买食物和衣服"
+      },
+      "c1": {
+        "en": "this helps me finish shopping faster",
+        "zh": "这帮助我更快买完东西"
+      },
+      "r2": {
+        "en": "shopping malls make prices easier to compare",
+        "zh": "商场让价格更容易比较"
+      },
+      "x2": {
+        "en": "customers can visit several shops quickly",
+        "zh": "顾客可以很快逛几家商店"
+      },
+      "e2": {
+        "en": "I compare the price of a shirt in two nearby shops",
+        "zh": "我在附近两家店比较一件衬衫的价格"
+      },
+      "c2": {
+        "en": "this helps me save money",
+        "zh": "这帮助我省钱"
+      }
+    },
+    "opening": {
+      "en": "Whether large shopping malls replacing small shops is a good change has been widely discussed. Although small shops are useful, I believe shopping malls can improve daily shopping because shopping malls save travel time and shopping malls make prices easier to compare.",
+      "zh": "关于“大商场替代小商店是否是好变化”已有很多讨论。虽然小商店也很有用，但我认为商场可以改善日常购物，因为商场节省出行时间，而且商场让价格更容易比较。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, shopping malls save travel time.",
+        "zh": "商场节省出行时间。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because many different shops are in one place.",
+        "zh": "这是因为很多不同商店集中在一起。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I buy food and clothes in the same shopping mall.",
+        "zh": "例如，我在同一个商场买食物和衣服。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me finish shopping faster.",
+        "zh": "这帮助我更快买完东西。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, shopping malls make prices easier to compare.",
+        "zh": "商场让价格更容易比较。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because customers can visit several shops quickly.",
+        "zh": "这是因为顾客可以很快逛几家商店。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I compare the price of a shirt in two nearby shops.",
+        "zh": "例如，我在附近两家店比较一件衬衫的价格。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me save money.",
+        "zh": "这帮助我省钱。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe shopping malls can improve daily shopping because shopping malls save travel time and shopping malls make prices easier to compare.",
+      "zh": "总之，我认为商场可以改善日常购物，因为商场节省出行时间，而且商场让价格更容易比较。"
+    },
+    "note": ""
+  },
+  {
+    "index": 22,
+    "qid": "F101012",
+    "qids": [
+      "M073006",
+      "F101012"
+    ],
+    "title": "气候变化谁负责",
+    "values": {
+      "topic": {
+        "en": "governments should take the main responsibility for climate change",
+        "zh": "政府是否应对气候变化承担主要责任"
+      },
+      "although": {
+        "en": "companies and individuals should also help",
+        "zh": "公司和个人也应该帮忙"
+      },
+      "position": {
+        "en": "governments should take the main responsibility",
+        "zh": "政府应该承担主要责任"
+      },
+      "r1": {
+        "en": "governments can make rules for everyone",
+        "zh": "政府可以制定适用于所有人的规则"
+      },
+      "x1": {
+        "en": "one clear rule can guide many companies",
+        "zh": "一条清楚的规则可以指导很多公司"
+      },
+      "e1": {
+        "en": "a government can tell factories to use cleaner machines",
+        "zh": "政府可以要求工厂使用更清洁的机器"
+      },
+      "c1": {
+        "en": "this helps many places become cleaner",
+        "zh": "这帮助很多地方变得更清洁"
+      },
+      "r2": {
+        "en": "governments can pay for better public transport",
+        "zh": "政府可以出资改善公共交通"
+      },
+      "x2": {
+        "en": "better buses can help more people leave cars at home",
+        "zh": "更好的公交可以让更多人不开车"
+      },
+      "e2": {
+        "en": "a new bus route can help workers travel without driving",
+        "zh": "新公交线路能帮助员工不开车去上班"
+      },
+      "c2": {
+        "en": "this can reduce car use",
+        "zh": "这可以减少汽车使用"
+      }
+    },
+    "opening": {
+      "en": "Whether governments should take the main responsibility for climate change has been widely discussed. Although companies and individuals should also help, I believe governments should take the main responsibility because governments can make rules for everyone and governments can pay for better public transport.",
+      "zh": "关于“政府是否应对气候变化承担主要责任”已有很多讨论。虽然公司和个人也应该帮忙，但我认为政府应该承担主要责任，因为政府可以制定适用于所有人的规则，而且政府可以出资改善公共交通。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, governments can make rules for everyone.",
+        "zh": "政府可以制定适用于所有人的规则。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because one clear rule can guide many companies.",
+        "zh": "这是因为一条清楚的规则可以指导很多公司。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a government can tell factories to use cleaner machines.",
+        "zh": "例如，政府可以要求工厂使用更清洁的机器。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps many places become cleaner.",
+        "zh": "这帮助很多地方变得更清洁。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, governments can pay for better public transport.",
+        "zh": "政府可以出资改善公共交通。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because better buses can help more people leave cars at home.",
+        "zh": "这是因为更好的公交可以让更多人不开车。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a new bus route can help workers travel without driving.",
+        "zh": "例如，新公交线路能帮助员工不开车去上班。"
+      },
+      {
+        "label": "回扣",
+        "en": "This can reduce car use.",
+        "zh": "这可以减少汽车使用。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe governments should take the main responsibility because governments can make rules for everyone and governments can pay for better public transport.",
+      "zh": "总之，我认为政府应该承担主要责任，因为政府可以制定适用于所有人的规则，而且政府可以出资改善公共交通。"
+    },
+    "note": "主要责任选政府；Although保留公司与个人也需要帮助这一点。"
+  },
+  {
+    "index": 23,
+    "qid": "F101016",
+    "qids": [
+      "M073005",
+      "F101016"
+    ],
+    "title": "研究气候变化的某方面",
+    "values": {
+      "topic": {
+        "en": "rising temperatures should be a main area of climate study",
+        "zh": "气温上升是否应成为气候研究的重点"
+      },
+      "although": {
+        "en": "many climate problems need study",
+        "zh": "很多气候问题都需要研究"
+      },
+      "position": {
+        "en": "I would study rising temperatures",
+        "zh": "我会研究气温上升"
+      },
+      "r1": {
+        "en": "hot weather affects daily life",
+        "zh": "炎热天气影响日常生活"
+      },
+      "x1": {
+        "en": "people may find it hard to sleep or work",
+        "zh": "人们可能难以入睡或工作"
+      },
+      "e1": {
+        "en": "I find it hard to sleep on very hot nights",
+        "zh": "天气很热的晚上，我难以入睡"
+      },
+      "c1": {
+        "en": "this shows why we need ways to deal with heat",
+        "zh": "这说明我们为什么需要应对高温的方法"
+      },
+      "r2": {
+        "en": "hot weather can damage crops",
+        "zh": "炎热天气可能损害庄稼"
+      },
+      "x2": {
+        "en": "plants can dry out when there is too much heat",
+        "zh": "太热时植物可能干枯"
+      },
+      "e2": {
+        "en": "the plants in my garden dried out during a hot week",
+        "zh": "一周的高温让我的花园植物干枯了"
+      },
+      "c2": {
+        "en": "this shows why heat matters for growing food",
+        "zh": "这说明高温为什么会影响粮食种植"
+      }
+    },
+    "opening": {
+      "en": "Whether rising temperatures should be a main area of climate study has been widely discussed. Although many climate problems need study, I believe I would study rising temperatures because hot weather affects daily life and hot weather can damage crops.",
+      "zh": "关于“气温上升是否应成为气候研究的重点”已有很多讨论。虽然很多气候问题都需要研究，但我认为我会研究气温上升，因为炎热天气影响日常生活，而且炎热天气可能损害庄稼。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, hot weather affects daily life.",
+        "zh": "炎热天气影响日常生活。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because people may find it hard to sleep or work.",
+        "zh": "这是因为人们可能难以入睡或工作。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I find it hard to sleep on very hot nights.",
+        "zh": "例如，天气很热的晚上，我难以入睡。"
+      },
+      {
+        "label": "回扣",
+        "en": "This shows why we need ways to deal with heat.",
+        "zh": "这说明我们为什么需要应对高温的方法。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, hot weather can damage crops.",
+        "zh": "炎热天气可能损害庄稼。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because plants can dry out when there is too much heat.",
+        "zh": "这是因为太热时植物可能干枯。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, the plants in my garden dried out during a hot week.",
+        "zh": "例如，一周的高温让我的花园植物干枯了。"
+      },
+      {
+        "label": "回扣",
+        "en": "This shows why heat matters for growing food.",
+        "zh": "这说明高温为什么会影响粮食种植。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe I would study rising temperatures because hot weather affects daily life and hot weather can damage crops.",
+      "zh": "总之，我认为我会研究气温上升，因为炎热天气影响日常生活，而且炎热天气可能损害庄稼。"
+    },
+    "note": "研究方向固定选气温上升，不要中途换成另一个方向。"
+  },
+  {
+    "index": 24,
+    "qid": "F101055",
+    "qids": [
+      "M073001",
+      "F101055"
+    ],
+    "title": "政府面临的最严重的问题是什么",
+    "values": {
+      "topic": {
+        "en": "air pollution should be a main concern for governments",
+        "zh": "空气污染是否应成为政府重点关注的问题"
+      },
+      "although": {
+        "en": "governments face many problems",
+        "zh": "政府面临很多问题"
+      },
+      "position": {
+        "en": "air pollution needs urgent action",
+        "zh": "空气污染需要尽快处理"
+      },
+      "r1": {
+        "en": "air pollution harms people's health",
+        "zh": "空气污染损害人们的健康"
+      },
+      "x1": {
+        "en": "people need clean air to stay healthy",
+        "zh": "人们需要干净空气来保持健康"
+      },
+      "e1": {
+        "en": "smoke from cars makes me cough beside a busy road",
+        "zh": "在繁忙道路旁，汽车烟雾让我咳嗽"
+      },
+      "c1": {
+        "en": "this shows why clean air is important",
+        "zh": "这说明干净空气为什么重要"
+      },
+      "r2": {
+        "en": "better buses can help reduce air pollution",
+        "zh": "更好的公交可以帮助减少空气污染"
+      },
+      "x2": {
+        "en": "more people can travel without using their own cars",
+        "zh": "更多人可以不开自己的车出行"
+      },
+      "e2": {
+        "en": "a frequent bus service helps me leave my car at home",
+        "zh": "班次多的公交让我可以把车留在家里"
+      },
+      "c2": {
+        "en": "this can help make the air cleaner",
+        "zh": "这可以帮助空气变干净"
+      }
+    },
+    "opening": {
+      "en": "Whether air pollution should be a main concern for governments has been widely discussed. Although governments face many problems, I believe air pollution needs urgent action because air pollution harms people's health and better buses can help reduce air pollution.",
+      "zh": "关于“空气污染是否应成为政府重点关注的问题”已有很多讨论。虽然政府面临很多问题，但我认为空气污染需要尽快处理，因为空气污染损害人们的健康，而且更好的公交可以帮助减少空气污染。"
+    },
+    "body1": [
+      {
+        "label": "本段重点",
+        "en": "First, air pollution harms people's health.",
+        "zh": "空气污染损害人们的健康。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because people need clean air to stay healthy.",
+        "zh": "这是因为人们需要干净空气来保持健康。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, smoke from cars makes me cough beside a busy road.",
+        "zh": "例如，在繁忙道路旁，汽车烟雾让我咳嗽。"
+      },
+      {
+        "label": "回扣",
+        "en": "This shows why clean air is important.",
+        "zh": "这说明干净空气为什么重要。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "本段重点",
+        "en": "Second, better buses can help reduce air pollution.",
+        "zh": "更好的公交可以帮助减少空气污染。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because more people can travel without using their own cars.",
+        "zh": "这是因为更多人可以不开自己的车出行。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a frequent bus service helps me leave my car at home.",
+        "zh": "例如，班次多的公交让我可以把车留在家里。"
+      },
+      {
+        "label": "回扣",
+        "en": "This can help make the air cleaner.",
+        "zh": "这可以帮助空气变干净。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe air pollution needs urgent action because air pollution harms people's health and better buses can help reduce air pollution.",
+      "zh": "总之，我认为空气污染需要尽快处理，因为空气污染损害人们的健康，而且更好的公交可以帮助减少空气污染。"
+    },
+    "note": "第二段解释为什么是严重问题，第三段给出改善公交的解决办法。"
+  },
+  {
+    "index": 25,
+    "qid": "F101143",
+    "qids": [
+      "M072011",
+      "F101143"
+    ],
+    "title": "既然有人工智能翻译，还需要学外语吗？",
+    "values": {
+      "topic": {
+        "en": "learning languages is still needed when AI can translate",
+        "zh": "人工智能可以翻译后，是否仍需要学习外语"
+      },
+      "although": {
+        "en": "AI translation is useful",
+        "zh": "人工智能翻译很有用"
+      },
+      "position": {
+        "en": "learning a foreign language is still useful",
+        "zh": "学习外语仍然有用"
+      },
+      "r1": {
+        "en": "language skills make talking easier",
+        "zh": "外语能力让交流更容易"
+      },
+      "x1": {
+        "en": "people can speak without checking a phone",
+        "zh": "人们不用查看手机就能说话"
+      },
+      "e1": {
+        "en": "I order food in English without using a translation app",
+        "zh": "我用英语点餐，不用翻译软件"
+      },
+      "c1": {
+        "en": "this helps me talk to people faster",
+        "zh": "这帮助我更快和别人交流"
+      },
+      "r2": {
+        "en": "language skills help people notice translation mistakes",
+        "zh": "外语能力帮助人们发现翻译错误"
+      },
+      "x2": {
+        "en": "an app may choose the wrong word",
+        "zh": "软件可能选错词"
+      },
+      "e2": {
+        "en": "I notice that an app gives the wrong meaning for a food name",
+        "zh": "我发现软件把一种食物的名称翻译错了"
+      },
+      "c2": {
+        "en": "this helps me avoid mistakes",
+        "zh": "这帮助我避免错误"
+      }
+    },
+    "opening": {
+      "en": "Whether learning languages is still needed when AI can translate has been widely discussed. Although AI translation is useful, I believe learning a foreign language is still useful because language skills make talking easier and language skills help people notice translation mistakes.",
+      "zh": "关于“人工智能可以翻译后，是否仍需要学习外语”已有很多讨论。虽然人工智能翻译很有用，但我认为学习外语仍然有用，因为外语能力让交流更容易，而且外语能力帮助人们发现翻译错误。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, language skills make talking easier.",
+        "zh": "外语能力让交流更容易。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because people can speak without checking a phone.",
+        "zh": "这是因为人们不用查看手机就能说话。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I order food in English without using a translation app.",
+        "zh": "例如，我用英语点餐，不用翻译软件。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me talk to people faster.",
+        "zh": "这帮助我更快和别人交流。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, language skills help people notice translation mistakes.",
+        "zh": "外语能力帮助人们发现翻译错误。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because an app may choose the wrong word.",
+        "zh": "这是因为软件可能选错词。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I notice that an app gives the wrong meaning for a food name.",
+        "zh": "例如，我发现软件把一种食物的名称翻译错了。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me avoid mistakes.",
+        "zh": "这帮助我避免错误。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe learning a foreign language is still useful because language skills make talking easier and language skills help people notice translation mistakes.",
+      "zh": "总之，我认为学习外语仍然有用，因为外语能力让交流更容易，而且外语能力帮助人们发现翻译错误。"
+    },
+    "note": ""
+  },
+  {
+    "index": 26,
+    "qid": "F101128",
+    "qids": [
+      "M072008",
+      "F101128"
+    ],
+    "title": "描述一个新发明及其优点或缺点",
+    "values": {
+      "topic": {
+        "en": "smartphones are a useful invention",
+        "zh": "智能手机是否是一项有用的发明"
+      },
+      "although": {
+        "en": "phones can distract people",
+        "zh": "手机可能让人分心"
+      },
+      "position": {
+        "en": "smartphones improve daily life",
+        "zh": "智能手机改善日常生活"
+      },
+      "r1": {
+        "en": "smartphones make contact easier",
+        "zh": "智能手机让联系更容易"
+      },
+      "x1": {
+        "en": "people can call others wherever they are",
+        "zh": "人们在不同地点都可以联系别人"
+      },
+      "e1": {
+        "en": "I call my family when I am away from home",
+        "zh": "我离家时给家人打电话"
+      },
+      "c1": {
+        "en": "this helps me stay close to my family",
+        "zh": "这帮助我与家人保持联系"
+      },
+      "r2": {
+        "en": "smartphones help people find their way",
+        "zh": "智能手机帮助人们找路"
+      },
+      "x2": {
+        "en": "map apps show where to go",
+        "zh": "地图软件会显示路线"
+      },
+      "e2": {
+        "en": "I use a map app to find a new shop",
+        "zh": "我用地图软件找一家新商店"
+      },
+      "c2": {
+        "en": "this helps me save time",
+        "zh": "这帮助我节省时间"
+      }
+    },
+    "opening": {
+      "en": "Whether smartphones are a useful invention has been widely discussed. Although phones can distract people, I believe smartphones improve daily life because smartphones make contact easier and smartphones help people find their way.",
+      "zh": "关于“智能手机是否是一项有用的发明”已有很多讨论。虽然手机可能让人分心，但我认为智能手机改善日常生活，因为智能手机让联系更容易，而且智能手机帮助人们找路。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, smartphones make contact easier.",
+        "zh": "智能手机让联系更容易。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because people can call others wherever they are.",
+        "zh": "这是因为人们在不同地点都可以联系别人。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I call my family when I am away from home.",
+        "zh": "例如，我离家时给家人打电话。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me stay close to my family.",
+        "zh": "这帮助我与家人保持联系。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, smartphones help people find their way.",
+        "zh": "智能手机帮助人们找路。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because map apps show where to go.",
+        "zh": "这是因为地图软件会显示路线。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I use a map app to find a new shop.",
+        "zh": "例如，我用地图软件找一家新商店。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me save time.",
+        "zh": "这帮助我节省时间。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe smartphones improve daily life because smartphones make contact easier and smartphones help people find their way.",
+      "zh": "总之，我认为智能手机改善日常生活，因为智能手机让联系更容易，而且智能手机帮助人们找路。"
+    },
+    "note": "新发明固定选智能手机，两个好处固定为联系家人和找路。"
+  },
+  {
+    "index": 27,
+    "qid": "F101039",
+    "qids": [
+      "M072004",
+      "F101039"
+    ],
+    "title": "医学技术延长人们寿命是好是坏",
+    "values": {
+      "topic": {
+        "en": "longer lives made possible by medical technology are a good thing",
+        "zh": "医疗技术延长寿命是否是好事"
+      },
+      "although": {
+        "en": "medical care can cost a lot",
+        "zh": "医疗可能很贵"
+      },
+      "position": {
+        "en": "longer lives are a good thing",
+        "zh": "寿命延长是好事"
+      },
+      "r1": {
+        "en": "medical care gives people more years to live",
+        "zh": "医疗让人们有更多时间生活"
+      },
+      "x1": {
+        "en": "doctors can treat more illnesses",
+        "zh": "医生可以治疗更多疾病"
+      },
+      "e1": {
+        "en": "a person can recover after treatment and return home",
+        "zh": "一个人可以在治疗后康复回家"
+      },
+      "c1": {
+        "en": "this gives the person more time to enjoy life",
+        "zh": "这让这个人有更多时间享受生活"
+      },
+      "r2": {
+        "en": "longer lives give families more time together",
+        "zh": "寿命延长让家人有更多相处时间"
+      },
+      "x2": {
+        "en": "older people can spend more years with younger family members",
+        "zh": "老人可以多陪伴年轻家人几年"
+      },
+      "e2": {
+        "en": "a grandfather can watch his grandchildren grow up",
+        "zh": "爷爷可以看着孙辈长大"
+      },
+      "c2": {
+        "en": "this can make family life happier",
+        "zh": "这可以让家庭生活更幸福"
+      }
+    },
+    "opening": {
+      "en": "Whether longer lives made possible by medical technology are a good thing has been widely discussed. Although medical care can cost a lot, I believe longer lives are a good thing because medical care gives people more years to live and longer lives give families more time together.",
+      "zh": "关于“医疗技术延长寿命是否是好事”已有很多讨论。虽然医疗可能很贵，但我认为寿命延长是好事，因为医疗让人们有更多时间生活，而且寿命延长让家人有更多相处时间。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, medical care gives people more years to live.",
+        "zh": "医疗让人们有更多时间生活。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because doctors can treat more illnesses.",
+        "zh": "这是因为医生可以治疗更多疾病。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a person can recover after treatment and return home.",
+        "zh": "例如，一个人可以在治疗后康复回家。"
+      },
+      {
+        "label": "回扣",
+        "en": "This gives the person more time to enjoy life.",
+        "zh": "这让这个人有更多时间享受生活。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, longer lives give families more time together.",
+        "zh": "寿命延长让家人有更多相处时间。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because older people can spend more years with younger family members.",
+        "zh": "这是因为老人可以多陪伴年轻家人几年。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a grandfather can watch his grandchildren grow up.",
+        "zh": "例如，爷爷可以看着孙辈长大。"
+      },
+      {
+        "label": "回扣",
+        "en": "This can make family life happier.",
+        "zh": "这可以让家庭生活更幸福。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe longer lives are a good thing because medical care gives people more years to live and longer lives give families more time together.",
+      "zh": "总之，我认为寿命延长是好事，因为医疗让人们有更多时间生活，而且寿命延长让家人有更多相处时间。"
+    },
+    "note": ""
+  },
+  {
+    "index": 28,
+    "qid": "F101139",
+    "qids": [
+      "M071053",
+      "F101139"
+    ],
+    "title": "21世纪的孩子越来越难",
+    "values": {
+      "topic": {
+        "en": "children's lives are harder today than in the past",
+        "zh": "现在孩子的生活是否比过去更难"
+      },
+      "although": {
+        "en": "children have more useful technology now",
+        "zh": "现在的孩子有更多有用的技术"
+      },
+      "position": {
+        "en": "children face more pressure today",
+        "zh": "现在的孩子面临更多压力"
+      },
+      "r1": {
+        "en": "schoolwork can take up much of their time",
+        "zh": "学业可能占据他们很多时间"
+      },
+      "x1": {
+        "en": "children may have homework and extra classes",
+        "zh": "孩子可能既有作业又有补习课"
+      },
+      "e1": {
+        "en": "a child may finish school and then attend another class",
+        "zh": "孩子放学后可能还要再上一节课"
+      },
+      "c1": {
+        "en": "this leaves less time to rest",
+        "zh": "这使休息时间变少"
+      },
+      "r2": {
+        "en": "phones can make it harder to focus",
+        "zh": "手机可能让专注变得更难"
+      },
+      "x2": {
+        "en": "games and messages can interrupt study",
+        "zh": "游戏和消息会打断学习"
+      },
+      "e2": {
+        "en": "a child keeps checking messages while doing homework",
+        "zh": "孩子做作业时不断看消息"
+      },
+      "c2": {
+        "en": "this makes schoolwork take longer",
+        "zh": "这使完成作业所需的时间更长"
+      }
+    },
+    "opening": {
+      "en": "Whether children's lives are harder today than in the past has been widely discussed. Although children have more useful technology now, I believe children face more pressure today because schoolwork can take up much of their time and phones can make it harder to focus.",
+      "zh": "关于“现在孩子的生活是否比过去更难”已有很多讨论。虽然现在的孩子有更多有用的技术，但我认为现在的孩子面临更多压力，因为学业可能占据他们很多时间，而且手机可能让专注变得更难。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, schoolwork can take up much of their time.",
+        "zh": "学业可能占据他们很多时间。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because children may have homework and extra classes.",
+        "zh": "这是因为孩子可能既有作业又有补习课。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a child may finish school and then attend another class.",
+        "zh": "例如，孩子放学后可能还要再上一节课。"
+      },
+      {
+        "label": "回扣",
+        "en": "This leaves less time to rest.",
+        "zh": "这使休息时间变少。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, phones can make it harder to focus.",
+        "zh": "手机可能让专注变得更难。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because games and messages can interrupt study.",
+        "zh": "这是因为游戏和消息会打断学习。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a child keeps checking messages while doing homework.",
+        "zh": "例如，孩子做作业时不断看消息。"
+      },
+      {
+        "label": "回扣",
+        "en": "This makes schoolwork take longer.",
+        "zh": "这使完成作业所需的时间更长。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe children face more pressure today because schoolwork can take up much of their time and phones can make it harder to focus.",
+      "zh": "总之，我认为现在的孩子面临更多压力，因为学业可能占据他们很多时间，而且手机可能让专注变得更难。"
+    },
+    "note": ""
+  },
+  {
+    "index": 29,
+    "qid": "F101040",
+    "qids": [
+      "M071041",
+      "F101040"
+    ],
+    "title": "体验式学习在学校有无好处",
+    "values": {
+      "topic": {
+        "en": "learning by doing is useful at school",
+        "zh": "在学校通过实践学习是否有用"
+      },
+      "although": {
+        "en": "books are also useful",
+        "zh": "书本也有用"
+      },
+      "position": {
+        "en": "learning by doing helps students learn",
+        "zh": "实践帮助学生学习"
+      },
+      "r1": {
+        "en": "doing a task makes it easier to remember",
+        "zh": "亲手做一件事让人更容易记住"
+      },
+      "x1": {
+        "en": "students connect an idea with a real action",
+        "zh": "学生把知识与实际行动联系起来"
+      },
+      "e1": {
+        "en": "I grew a plant in class and remembered that it needed water",
+        "zh": "我在课堂上种植物，记住了植物需要水"
+      },
+      "c1": {
+        "en": "this helped me remember the lesson",
+        "zh": "这帮助我记住课堂内容"
+      },
+      "r2": {
+        "en": "practice builds useful skills",
+        "zh": "练习培养有用技能"
+      },
+      "x2": {
+        "en": "students learn to complete tasks themselves",
+        "zh": "学生学会自己完成任务"
+      },
+      "e2": {
+        "en": "I learned to cook by making a simple meal",
+        "zh": "我通过做一道简单的菜学会做饭"
+      },
+      "c2": {
+        "en": "this helped me do the task by myself",
+        "zh": "这帮助我自己完成这件事"
+      }
+    },
+    "opening": {
+      "en": "Whether learning by doing is useful at school has been widely discussed. Although books are also useful, I believe learning by doing helps students learn because doing a task makes it easier to remember and practice builds useful skills.",
+      "zh": "关于“在学校通过实践学习是否有用”已有很多讨论。虽然书本也有用，但我认为实践帮助学生学习，因为亲手做一件事让人更容易记住，而且练习培养有用技能。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, doing a task makes it easier to remember.",
+        "zh": "亲手做一件事让人更容易记住。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because students connect an idea with a real action.",
+        "zh": "这是因为学生把知识与实际行动联系起来。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I grew a plant in class and remembered that it needed water.",
+        "zh": "例如，我在课堂上种植物，记住了植物需要水。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helped me remember the lesson.",
+        "zh": "这帮助我记住课堂内容。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, practice builds useful skills.",
+        "zh": "练习培养有用技能。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because students learn to complete tasks themselves.",
+        "zh": "这是因为学生学会自己完成任务。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I learned to cook by making a simple meal.",
+        "zh": "例如，我通过做一道简单的菜学会做饭。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helped me do the task by myself.",
+        "zh": "这帮助我自己完成这件事。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe learning by doing helps students learn because doing a task makes it easier to remember and practice builds useful skills.",
+      "zh": "总之，我认为实践帮助学生学习，因为亲手做一件事让人更容易记住，而且练习培养有用技能。"
+    },
+    "note": ""
+  },
+  {
+    "index": 30,
+    "qid": "F101006",
+    "qids": [
+      "M071027",
+      "F101006"
+    ],
+    "title": "旅行对于教育的必要性",
+    "values": {
+      "topic": {
+        "en": "travel is necessary for a good education",
+        "zh": "旅行是否是良好教育的必要条件"
+      },
+      "although": {
+        "en": "travel can teach useful things",
+        "zh": "旅行能教人有用的东西"
+      },
+      "position": {
+        "en": "a good education does not require travel",
+        "zh": "获得良好教育并不一定需要旅行"
+      },
+      "r1": {
+        "en": "students can learn well at local schools",
+        "zh": "学生可以在本地学校学得很好"
+      },
+      "x1": {
+        "en": "local teachers can explain the same basic subjects",
+        "zh": "本地老师也能讲解相同的基础科目"
+      },
+      "e1": {
+        "en": "I learned maths at a school near my home",
+        "zh": "我在家附近的学校学习数学"
+      },
+      "c1": {
+        "en": "this shows that learning does not require travel",
+        "zh": "这说明学习不一定需要旅行"
+      },
+      "r2": {
+        "en": "online lessons bring learning to people's homes",
+        "zh": "网络课程把学习带到人们家里"
+      },
+      "x2": {
+        "en": "students can watch teachers from other places",
+        "zh": "学生能观看其他地方老师的课程"
+      },
+      "e2": {
+        "en": "I watch an English lesson online at home",
+        "zh": "我在家上网看英语课"
+      },
+      "c2": {
+        "en": "this helps me learn without leaving home",
+        "zh": "这帮助我足不出户地学习"
+      }
+    },
+    "opening": {
+      "en": "Whether travel is necessary for a good education has been widely discussed. Although travel can teach useful things, I believe a good education does not require travel because students can learn well at local schools and online lessons bring learning to people's homes.",
+      "zh": "关于“旅行是否是良好教育的必要条件”已有很多讨论。虽然旅行能教人有用的东西，但我认为获得良好教育并不一定需要旅行，因为学生可以在本地学校学得很好，而且网络课程把学习带到人们家里。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, students can learn well at local schools.",
+        "zh": "学生可以在本地学校学得很好。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because local teachers can explain the same basic subjects.",
+        "zh": "这是因为本地老师也能讲解相同的基础科目。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I learned maths at a school near my home.",
+        "zh": "例如，我在家附近的学校学习数学。"
+      },
+      {
+        "label": "回扣",
+        "en": "This shows that learning does not require travel.",
+        "zh": "这说明学习不一定需要旅行。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, online lessons bring learning to people's homes.",
+        "zh": "网络课程把学习带到人们家里。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because students can watch teachers from other places.",
+        "zh": "这是因为学生能观看其他地方老师的课程。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I watch an English lesson online at home.",
+        "zh": "例如，我在家上网看英语课。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me learn without leaving home.",
+        "zh": "这帮助我足不出户地学习。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe a good education does not require travel because students can learn well at local schools and online lessons bring learning to people's homes.",
+      "zh": "总之，我认为获得良好教育并不一定需要旅行，因为学生可以在本地学校学得很好，而且网络课程把学习带到人们家里。"
+    },
+    "note": "问旅行必要性：不必旅行也能学好；问留学被高估：不必出国也能学好。两个理由共用。"
+  },
+  {
+    "index": 31,
+    "qid": "F101005",
+    "qids": [
+      "M071026",
+      "F101005"
+    ],
+    "title": "书面考试是否有效评估学习成果",
+    "values": {
+      "topic": {
+        "en": "written exams are a useful way to test learning",
+        "zh": "笔试是否是检验学习的有效方式"
+      },
+      "although": {
+        "en": "presentations can also be useful",
+        "zh": "演讲展示也有用"
+      },
+      "position": {
+        "en": "written exams are useful",
+        "zh": "笔试有用"
+      },
+      "r1": {
+        "en": "exams show what students understand",
+        "zh": "考试显示学生理解了什么"
+      },
+      "x1": {
+        "en": "students must answer questions by themselves",
+        "zh": "学生必须独立答题"
+      },
+      "e1": {
+        "en": "I remembered a maths formula but could not use it in an exam",
+        "zh": "我记得一个数学公式，但考试时不会运用"
+      },
+      "c1": {
+        "en": "this showed that I needed more practice",
+        "zh": "这说明我需要更多练习"
+      },
+      "r2": {
+        "en": "exam results help students plan their study",
+        "zh": "考试结果帮助学生安排学习"
+      },
+      "x2": {
+        "en": "wrong answers show what needs more work",
+        "zh": "错误答案显示哪些地方需要加强"
+      },
+      "e2": {
+        "en": "I reviewed the questions I got wrong after an exam",
+        "zh": "考试后我复习了做错的题"
+      },
+      "c2": {
+        "en": "this helped me improve my learning",
+        "zh": "这帮助我改进学习"
+      }
+    },
+    "opening": {
+      "en": "Whether written exams are a useful way to test learning has been widely discussed. Although presentations can also be useful, I believe written exams are useful because exams show what students understand and exam results help students plan their study.",
+      "zh": "关于“笔试是否是检验学习的有效方式”已有很多讨论。虽然演讲展示也有用，但我认为笔试有用，因为考试显示学生理解了什么，而且考试结果帮助学生安排学习。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, exams show what students understand.",
+        "zh": "考试显示学生理解了什么。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because students must answer questions by themselves.",
+        "zh": "这是因为学生必须独立答题。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I remembered a maths formula but could not use it in an exam.",
+        "zh": "例如，我记得一个数学公式，但考试时不会运用。"
+      },
+      {
+        "label": "回扣",
+        "en": "This showed that I needed more practice.",
+        "zh": "这说明我需要更多练习。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, exam results help students plan their study.",
+        "zh": "考试结果帮助学生安排学习。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because wrong answers show what needs more work.",
+        "zh": "这是因为错误答案显示哪些地方需要加强。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I reviewed the questions I got wrong after an exam.",
+        "zh": "例如，考试后我复习了做错的题。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helped me improve my learning.",
+        "zh": "这帮助我改进学习。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe written exams are useful because exams show what students understand and exam results help students plan their study.",
+      "zh": "总之，我认为笔试有用，因为考试显示学生理解了什么，而且考试结果帮助学生安排学习。"
+    },
+    "note": ""
+  },
+  {
+    "index": 32,
+    "qid": "F101043",
+    "qids": [
+      "M071013",
+      "F101043"
+    ],
+    "title": "学校扣迟交作业学生的分数",
+    "values": {
+      "topic": {
+        "en": "universities should take marks off for late work",
+        "zh": "大学是否应该对迟交作业扣分"
+      },
+      "although": {
+        "en": "students can have real problems",
+        "zh": "学生可能遇到实际困难"
+      },
+      "position": {
+        "en": "schools should take off a few marks, but give extra time for real problems",
+        "zh": "学校应该扣少量分数，但实际困难应允许延期"
+      },
+      "r1": {
+        "en": "deadlines should be fair to all students",
+        "zh": "截止日期应对所有学生公平"
+      },
+      "x1": {
+        "en": "students who finish on time should not be treated worse",
+        "zh": "按时完成的学生不应受到不利对待"
+      },
+      "e1": {
+        "en": "I submit work on time while another student asks for extra days without a reason",
+        "zh": "我按时交作业，另一名学生却无理由要求多几天"
+      },
+      "c1": {
+        "en": "taking off a few marks helps keep the rules fair",
+        "zh": "扣少量分数帮助规则保持公平"
+      },
+      "r2": {
+        "en": "schools should allow extra time for real problems",
+        "zh": "学校应为实际困难允许延期"
+      },
+      "x2": {
+        "en": "illness can stop students from finishing work",
+        "zh": "生病可能使学生无法完成作业"
+      },
+      "e2": {
+        "en": "a student in hospital may need a few extra days",
+        "zh": "住院的学生可能需要多几天"
+      },
+      "c2": {
+        "en": "this helps students finish work without unfair punishment",
+        "zh": "这帮助学生完成作业，避免不公平的惩罚"
+      }
+    },
+    "opening": {
+      "en": "Whether universities should take marks off for late work has been widely discussed. Although students can have real problems, I believe schools should take off a few marks, but give extra time for real problems because deadlines should be fair to all students and schools should allow extra time for real problems.",
+      "zh": "关于“大学是否应该对迟交作业扣分”已有很多讨论。虽然学生可能遇到实际困难，但我认为学校应该扣少量分数，但实际困难应允许延期，因为截止日期应对所有学生公平，而且学校应为实际困难允许延期。"
+    },
+    "body1": [
+      {
+        "label": "本段重点",
+        "en": "First, deadlines should be fair to all students.",
+        "zh": "截止日期应对所有学生公平。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because students who finish on time should not be treated worse.",
+        "zh": "这是因为按时完成的学生不应受到不利对待。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I submit work on time while another student asks for extra days without a reason.",
+        "zh": "例如，我按时交作业，另一名学生却无理由要求多几天。"
+      },
+      {
+        "label": "回扣",
+        "en": "Taking off a few marks helps keep the rules fair.",
+        "zh": "扣少量分数帮助规则保持公平。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "本段重点",
+        "en": "Second, schools should allow extra time for real problems.",
+        "zh": "学校应为实际困难允许延期。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because illness can stop students from finishing work.",
+        "zh": "这是因为生病可能使学生无法完成作业。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a student in hospital may need a few extra days.",
+        "zh": "例如，住院的学生可能需要多几天。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps students finish work without unfair punishment.",
+        "zh": "这帮助学生完成作业，避免不公平的惩罚。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe schools should take off a few marks, but give extra time for real problems because deadlines should be fair to all students and schools should allow extra time for real problems.",
+      "zh": "总之，我认为学校应该扣少量分数，但实际困难应允许延期，因为截止日期应对所有学生公平，而且学校应为实际困难允许延期。"
+    },
+    "note": "第二段表达扣分观点，第三段给出允许合理延期的建议。"
+  },
+  {
+    "index": 33,
+    "qid": "F101123",
+    "qids": [
+      "M071012",
+      "F101123"
+    ],
+    "title": "大学购买数码媒体取代纸质书的利弊",
+    "values": {
+      "topic": {
+        "en": "universities should replace paper books with digital books",
+        "zh": "大学是否应该用电子书替代纸质书"
+      },
+      "although": {
+        "en": "digital books are useful",
+        "zh": "电子书有用"
+      },
+      "position": {
+        "en": "universities should use digital books but keep some paper books",
+        "zh": "大学应该用电子书，但也保留一些纸质书"
+      },
+      "r1": {
+        "en": "digital books can save printing costs",
+        "zh": "电子书可以节省印刷费用"
+      },
+      "x1": {
+        "en": "the same file can be used without printing more pages",
+        "zh": "同一个文件可以重复使用，不必多印纸张"
+      },
+      "e1": {
+        "en": "I read class notes on a screen instead of printing them",
+        "zh": "我在屏幕上读课堂笔记，不把它们打印出来"
+      },
+      "c1": {
+        "en": "this helps save paper and money",
+        "zh": "这帮助节省纸张和金钱"
+      },
+      "r2": {
+        "en": "digital books are hard to use without a working device",
+        "zh": "没有能用的设备时，电子书很难使用"
+      },
+      "x2": {
+        "en": "students need a phone or computer with enough power",
+        "zh": "学生需要有电的手机或电脑"
+      },
+      "e2": {
+        "en": "I cannot read an electronic book when my phone battery is dead",
+        "zh": "手机没电时，我看不了电子书"
+      },
+      "c2": {
+        "en": "keeping paper books gives students another choice",
+        "zh": "保留纸质书让学生多一个选择"
+      }
+    },
+    "opening": {
+      "en": "Whether universities should replace paper books with digital books has been widely discussed. Although digital books are useful, I believe universities should use digital books but keep some paper books because digital books can save printing costs and digital books are hard to use without a working device.",
+      "zh": "关于“大学是否应该用电子书替代纸质书”已有很多讨论。虽然电子书有用，但我认为大学应该用电子书，但也保留一些纸质书，因为电子书可以节省印刷费用，而且没有能用的设备时，电子书很难使用。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, digital books can save printing costs.",
+        "zh": "电子书可以节省印刷费用。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because the same file can be used without printing more pages.",
+        "zh": "这是因为同一个文件可以重复使用，不必多印纸张。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I read class notes on a screen instead of printing them.",
+        "zh": "例如，我在屏幕上读课堂笔记，不把它们打印出来。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps save paper and money.",
+        "zh": "这帮助节省纸张和金钱。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, digital books are hard to use without a working device.",
+        "zh": "没有能用的设备时，电子书很难使用。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because students need a phone or computer with enough power.",
+        "zh": "这是因为学生需要有电的手机或电脑。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I cannot read an electronic book when my phone battery is dead.",
+        "zh": "例如，手机没电时，我看不了电子书。"
+      },
+      {
+        "label": "回扣",
+        "en": "Keeping paper books gives students another choice.",
+        "zh": "保留纸质书让学生多一个选择。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe universities should use digital books but keep some paper books because digital books can save printing costs and digital books are hard to use without a working device.",
+      "zh": "总之，我认为大学应该用电子书，但也保留一些纸质书，因为电子书可以节省印刷费用，而且没有能用的设备时，电子书很难使用。"
+    },
+    "note": "第二段是电子书的好处，第三段是电子书的局限。结论保留纸质书，不能说完全替代。"
+  },
+  {
+    "index": 34,
+    "qid": "F101122",
+    "qids": [
+      "M071011",
+      "F101122"
+    ],
+    "title": "与书本，正统教育相比，人生经历经验是更好的老师？",
+    "values": {
+      "topic": {
+        "en": "life experience teaches better than books",
+        "zh": "生活经验是否比书本教得更好"
+      },
+      "although": {
+        "en": "books provide useful information",
+        "zh": "书本提供有用信息"
+      },
+      "position": {
+        "en": "experience is often a better teacher",
+        "zh": "经验通常是更好的老师"
+      },
+      "r1": {
+        "en": "personal experience is easier to remember",
+        "zh": "亲身经历更容易记住"
+      },
+      "x1": {
+        "en": "people remember what happens to them",
+        "zh": "人们会记得发生在自己身上的事情"
+      },
+      "e1": {
+        "en": "I remember missing a bus because I left home late",
+        "zh": "我记得自己因为出门晚而错过公交"
+      },
+      "c1": {
+        "en": "this taught me to leave earlier",
+        "zh": "这教会我早点出门"
+      },
+      "r2": {
+        "en": "experience helps people solve real problems",
+        "zh": "经验帮助人们解决实际问题"
+      },
+      "x2": {
+        "en": "people learn by trying a task themselves",
+        "zh": "人们通过亲自尝试来学习"
+      },
+      "e2": {
+        "en": "I learned to cook by making a simple meal",
+        "zh": "我通过做一道简单的菜学会做饭"
+      },
+      "c2": {
+        "en": "this helped me do the task by myself",
+        "zh": "这帮助我自己完成这件事"
+      }
+    },
+    "opening": {
+      "en": "Whether life experience teaches better than books has been widely discussed. Although books provide useful information, I believe experience is often a better teacher because personal experience is easier to remember and experience helps people solve real problems.",
+      "zh": "关于“生活经验是否比书本教得更好”已有很多讨论。虽然书本提供有用信息，但我认为经验通常是更好的老师，因为亲身经历更容易记住，而且经验帮助人们解决实际问题。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, personal experience is easier to remember.",
+        "zh": "亲身经历更容易记住。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because people remember what happens to them.",
+        "zh": "这是因为人们会记得发生在自己身上的事情。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I remember missing a bus because I left home late.",
+        "zh": "例如，我记得自己因为出门晚而错过公交。"
+      },
+      {
+        "label": "回扣",
+        "en": "This taught me to leave earlier.",
+        "zh": "这教会我早点出门。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, experience helps people solve real problems.",
+        "zh": "经验帮助人们解决实际问题。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because people learn by trying a task themselves.",
+        "zh": "这是因为人们通过亲自尝试来学习。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I learned to cook by making a simple meal.",
+        "zh": "例如，我通过做一道简单的菜学会做饭。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helped me do the task by myself.",
+        "zh": "这帮助我自己完成这件事。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe experience is often a better teacher because personal experience is easier to remember and experience helps people solve real problems.",
+      "zh": "总之，我认为经验通常是更好的老师，因为亲身经历更容易记住，而且经验帮助人们解决实际问题。"
+    },
+    "note": ""
+  },
+  {
+    "index": 35,
+    "qid": "F101028",
+    "qids": [
+      "M071007",
+      "F101028"
+    ],
+    "title": "高中学习百年前戏剧的利弊",
+    "values": {
+      "topic": {
+        "en": "students should study plays written long ago",
+        "zh": "学生是否应该学习很久以前写的戏剧"
+      },
+      "although": {
+        "en": "old plays can be difficult",
+        "zh": "古老戏剧可能很难"
+      },
+      "position": {
+        "en": "old plays can be useful, but students need help",
+        "zh": "古老戏剧可能有用，但学生需要帮助"
+      },
+      "r1": {
+        "en": "old plays help students learn about the past",
+        "zh": "古老戏剧帮助学生了解过去"
+      },
+      "x1": {
+        "en": "stories show old ways of living",
+        "zh": "故事会展示过去的生活方式"
+      },
+      "e1": {
+        "en": "I read a play that showed how families lived long ago",
+        "zh": "我读过一部展示过去家庭生活的戏剧"
+      },
+      "c1": {
+        "en": "this helped me understand history",
+        "zh": "这帮助我理解历史"
+      },
+      "r2": {
+        "en": "old language can be hard to understand",
+        "zh": "古老的语言可能很难理解"
+      },
+      "x2": {
+        "en": "some words are not used in daily life today",
+        "zh": "有些词现在日常生活中不用了"
+      },
+      "e2": {
+        "en": "I needed my teacher to explain several old words",
+        "zh": "我需要老师解释几个古老的词"
+      },
+      "c2": {
+        "en": "simple notes can make the play easier to read",
+        "zh": "简单的注释可以让戏剧更容易读懂"
+      }
+    },
+    "opening": {
+      "en": "Whether students should study plays written long ago has been widely discussed. Although old plays can be difficult, I believe old plays can be useful, but students need help because old plays help students learn about the past and old language can be hard to understand.",
+      "zh": "关于“学生是否应该学习很久以前写的戏剧”已有很多讨论。虽然古老戏剧可能很难，但我认为古老戏剧可能有用，但学生需要帮助，因为古老戏剧帮助学生了解过去，而且古老的语言可能很难理解。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, old plays help students learn about the past.",
+        "zh": "古老戏剧帮助学生了解过去。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because stories show old ways of living.",
+        "zh": "这是因为故事会展示过去的生活方式。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I read a play that showed how families lived long ago.",
+        "zh": "例如，我读过一部展示过去家庭生活的戏剧。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helped me understand history.",
+        "zh": "这帮助我理解历史。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, old language can be hard to understand.",
+        "zh": "古老的语言可能很难理解。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because some words are not used in daily life today.",
+        "zh": "这是因为有些词现在日常生活中不用了。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I needed my teacher to explain several old words.",
+        "zh": "例如，我需要老师解释几个古老的词。"
+      },
+      {
+        "label": "回扣",
+        "en": "Simple notes can make the play easier to read.",
+        "zh": "简单的注释可以让戏剧更容易读懂。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe old plays can be useful, but students need help because old plays help students learn about the past and old language can be hard to understand.",
+      "zh": "总之，我认为古老戏剧可能有用，但学生需要帮助，因为古老戏剧帮助学生了解过去，而且古老的语言可能很难理解。"
+    },
+    "note": "第二段写好处，第三段写困难和简单办法。"
+  },
+  {
+    "index": 36,
+    "qid": "F101010",
+    "qids": [
+      "F101010"
+    ],
+    "title": "大众传媒影响社会与个性",
+    "values": {
+      "topic": {
+        "en": "media shape people's views and behaviour",
+        "zh": "传媒是否塑造人们的观点和行为"
+      },
+      "although": {
+        "en": "people can think for themselves",
+        "zh": "人们可以独立思考"
+      },
+      "position": {
+        "en": "media influence both views and behaviour",
+        "zh": "传媒既影响观点也影响行为"
+      },
+      "r1": {
+        "en": "news changes how people see problems",
+        "zh": "新闻改变人们看待问题的方式"
+      },
+      "x1": {
+        "en": "it gives people information they did not have before",
+        "zh": "新闻提供人们以前不知道的信息"
+      },
+      "e1": {
+        "en": "I cared more about litter after watching a report about dirty beaches",
+        "zh": "看过海滩垃圾的报道后，我更在意乱扔垃圾的问题"
+      },
+      "c1": {
+        "en": "this changed my view of the problem",
+        "zh": "这改变了我对这个问题的看法"
+      },
+      "r2": {
+        "en": "programmes can encourage new habits",
+        "zh": "节目可以鼓励新的习惯"
+      },
+      "x2": {
+        "en": "people may copy useful actions they see",
+        "zh": "人们可能模仿看到的有用行为"
+      },
+      "e2": {
+        "en": "I started using a shopping bag again after watching a programme about waste",
+        "zh": "看过关于垃圾的节目后，我开始重复使用购物袋"
+      },
+      "c2": {
+        "en": "this helped me change a daily habit",
+        "zh": "这帮助我改变一个日常习惯"
+      }
+    },
+    "opening": {
+      "en": "Whether media shape people's views and behaviour has been widely discussed. Although people can think for themselves, I believe media influence both views and behaviour because news changes how people see problems and programmes can encourage new habits.",
+      "zh": "关于“传媒是否塑造人们的观点和行为”已有很多讨论。虽然人们可以独立思考，但我认为传媒既影响观点也影响行为，因为新闻改变人们看待问题的方式，而且节目可以鼓励新的习惯。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, news changes how people see problems.",
+        "zh": "新闻改变人们看待问题的方式。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because it gives people information they did not have before.",
+        "zh": "这是因为新闻提供人们以前不知道的信息。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I cared more about litter after watching a report about dirty beaches.",
+        "zh": "例如，看过海滩垃圾的报道后，我更在意乱扔垃圾的问题。"
+      },
+      {
+        "label": "回扣",
+        "en": "This changed my view of the problem.",
+        "zh": "这改变了我对这个问题的看法。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, programmes can encourage new habits.",
+        "zh": "节目可以鼓励新的习惯。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because people may copy useful actions they see.",
+        "zh": "这是因为人们可能模仿看到的有用行为。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I started using a shopping bag again after watching a programme about waste.",
+        "zh": "例如，看过关于垃圾的节目后，我开始重复使用购物袋。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helped me change a daily habit.",
+        "zh": "这帮助我改变一个日常习惯。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe media influence both views and behaviour because news changes how people see problems and programmes can encourage new habits.",
+      "zh": "总之，我认为传媒既影响观点也影响行为，因为新闻改变人们看待问题的方式，而且节目可以鼓励新的习惯。"
+    },
+    "note": ""
+  },
+  {
+    "index": 37,
+    "qid": "F101137",
+    "qids": [
+      "F101137"
+    ],
+    "title": "外语应该成为必修课吗",
+    "values": {
+      "topic": {
+        "en": "all students should learn a foreign language",
+        "zh": "是否所有学生都应该学习外语"
+      },
+      "although": {
+        "en": "learning a language takes time",
+        "zh": "学习一门语言需要时间"
+      },
+      "position": {
+        "en": "schools should require students to learn a foreign language",
+        "zh": "学校应该要求学生学习外语"
+      },
+      "r1": {
+        "en": "language skills make travel easier",
+        "zh": "外语能力让旅行更方便"
+      },
+      "x1": {
+        "en": "travellers can ask for help directly",
+        "zh": "旅行者可以直接求助"
+      },
+      "e1": {
+        "en": "I use English to ask where the bus stop is",
+        "zh": "我用英语询问公交站在哪里"
+      },
+      "c1": {
+        "en": "this helps me find my way",
+        "zh": "这帮助我找到路"
+      },
+      "r2": {
+        "en": "language skills can help at work",
+        "zh": "外语能力可以在工作中帮忙"
+      },
+      "x2": {
+        "en": "workers may need to speak to foreign customers",
+        "zh": "员工可能需要与外国顾客交流"
+      },
+      "e2": {
+        "en": "a shop worker uses English to help a visitor buy a ticket",
+        "zh": "店员用英语帮助游客买票"
+      },
+      "c2": {
+        "en": "this helps the worker serve more customers",
+        "zh": "这帮助员工接待更多顾客"
+      }
+    },
+    "opening": {
+      "en": "Whether all students should learn a foreign language has been widely discussed. Although learning a language takes time, I believe schools should require students to learn a foreign language because language skills make travel easier and language skills can help at work.",
+      "zh": "关于“是否所有学生都应该学习外语”已有很多讨论。虽然学习一门语言需要时间，但我认为学校应该要求学生学习外语，因为外语能力让旅行更方便，而且外语能力可以在工作中帮忙。"
+    },
+    "body1": [
+      {
+        "label": "理由",
+        "en": "First, language skills make travel easier.",
+        "zh": "外语能力让旅行更方便。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because travellers can ask for help directly.",
+        "zh": "这是因为旅行者可以直接求助。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, I use English to ask where the bus stop is.",
+        "zh": "例如，我用英语询问公交站在哪里。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps me find my way.",
+        "zh": "这帮助我找到路。"
+      }
+    ],
+    "body2": [
+      {
+        "label": "理由",
+        "en": "Second, language skills can help at work.",
+        "zh": "外语能力可以在工作中帮忙。"
+      },
+      {
+        "label": "解释",
+        "en": "This is because workers may need to speak to foreign customers.",
+        "zh": "这是因为员工可能需要与外国顾客交流。"
+      },
+      {
+        "label": "例子",
+        "en": "For example, a shop worker uses English to help a visitor buy a ticket.",
+        "zh": "例如，店员用英语帮助游客买票。"
+      },
+      {
+        "label": "回扣",
+        "en": "This helps the worker serve more customers.",
+        "zh": "这帮助员工接待更多顾客。"
+      }
+    ],
+    "closing": {
+      "en": "In conclusion, I believe schools should require students to learn a foreign language because language skills make travel easier and language skills can help at work.",
+      "zh": "总之，我认为学校应该要求学生学习外语，因为外语能力让旅行更方便，而且外语能力可以在工作中帮忙。"
+    },
+    "note": ""
+  }
+]
