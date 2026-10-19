@@ -392,3 +392,4 @@ cd ..
 - 极简双语提纲存放在 `we_memory_outlines.json`，由 `build_we_memory_outlines.py` 生成，同时产出37题 Markdown 下载文件。网页构建时按题号校验并内嵌，不能按列表位置错配；缺少对应提纲时构建失败。
 - WE 详情默认展示四段记忆提纲，可切换中英对照、只看英文、只看中文；机构参考内容放在下方折叠区。上线时须同时发布提纲 JSON 与 Markdown 下载文件。
 - 37题英文原文已从本地 `分装版/WE.pdf` 提取到 `we_english_questions.json`（`extract_we_english_questions.py`），附PDF页码、英文短标题和中文释义；合并与每日同步均读取这份元数据。旅行题的留学变体单独保存为 `prompt_variants`，不得把中文提示或变体标记混进主英文题干。网页和下载提纲都显示英文原题。
+- 记忆提纲另附 `expanded` 简单拓展版：沿用同一观点和例子，由 `we_expansion_content.py` 补充相关解释与细节。37篇均为4段、210–225词，只计算英文正文；构建时重算词数并校验。网页可切换极简/拓展版本及中英显示，“复制英文正文”不带题干、中文或标签。发布须包含拓展版 Markdown 与生成模块。

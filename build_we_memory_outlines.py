@@ -2,6 +2,7 @@
 import json
 import sys
 from pathlib import Path
+from we_expansion_content import build_expansion, render_expanded_markdown
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
@@ -565,6 +566,7 @@ def make_outlines(bank):
             'closing': {'en': closing_en, 'zh': closing_zh},
             'note': NOTES.get(index, ''),
         })
+        result[-1]['expanded'] = build_expansion(result[-1])
     assert len(result) == len(bank) == 37
     assert [item['index'] for item in result] == list(range(1, 38))
     return result
@@ -612,4 +614,8 @@ if __name__ == '__main__':
     (ROOT / 'we_memory_outlines.json').write_text(json.dumps(outlines, ensure_ascii=False, indent=2), encoding='utf-8')
     target = ROOT / 'WE_37题_极简双语记忆提纲.md'
     target.write_text(render_markdown(outlines), encoding='utf-8')
+    expanded_target = ROOT / 'WE_37题_简单拓展版_200词.md'
+    expanded_target.write_text(render_expanded_markdown(outlines), encoding='utf-8')
     print(f'Created {len(outlines)} bilingual outlines: {target}')
+    counts = [o['expanded']['word_count'] for o in outlines]
+    print(f'Created {len(outlines)} expanded essays: {min(counts)}–{max(counts)} English words each.')
