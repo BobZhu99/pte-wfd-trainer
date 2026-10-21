@@ -393,3 +393,13 @@ cd ..
 - WE 详情默认展示四段记忆提纲，可切换中英对照、只看英文、只看中文；机构参考内容放在下方折叠区。上线时须同时发布提纲 JSON 与 Markdown 下载文件。
 - 37题英文原文已从本地 `分装版/WE.pdf` 提取到 `we_english_questions.json`（`extract_we_english_questions.py`），附PDF页码、英文短标题和中文释义；合并与每日同步均读取这份元数据。旅行题的留学变体单独保存为 `prompt_variants`，不得把中文提示或变体标记混进主英文题干。网页和下载提纲都显示英文原题。
 - 记忆提纲另附 `expanded` 简单拓展版：沿用同一观点和例子，由 `we_expansion_content.py` 补充相关解释与细节。37篇均为4段、210–225词，只计算英文正文；构建时重算词数并校验。网页可切换极简/拓展版本及中英显示，“复制英文正文”不带题干、中文或标签。发布须包含拓展版 Markdown 与生成模块。
+
+### 题库同步口径与两家 PDF 资料合并（2026-10-21）
+- **同步口径**：大西瓜拉【周二真题预测】（classifyId 10；WFD 另按最高频标签 frequency=132，该标签 10 月起改名「10月最高频」）；萤火虫拉【极高频】（`getSpeedQuestionList` 的 `type: "1"`；`""` = 全部周预测，`"2"` = 极限预测）。`daily_sync_both_banks.js` 与 `sync_planner_question_banks.js` 均已改为极高频；口语 RA/RS/DI 的极高频标签由 `sync_speaking_firefly.js` 校准（萤火虫列表里有这题时以最新标签为准，不再只增不减）。
+- **只同步不推送**：`node daily_sync_both_banks.js --no-deploy`。脚本先写 `sync_status.json` / `sync_history.log` 再编译（以前编译在前，网页总显示上一次的同步状态）。
+- **资料来源**：萤火虫 `分装版/*.pdf`（各题型极限预测分装：答案、中文逻辑梳理、关键词表；绿色字 = 关键词 / FIB-L 答案 / HIW 错词，红色字 = SST 主题词）；大西瓜「…满分资料合集」目录（易筋经、SST·轻松记、SWT·轻松记、WFD·轻松记，每月初更新）。
+- **流程**：换新 PDF 后运行 `python extract_material_banks.py` → `material_banks.json`（约 75 秒）；每次 `build_wfd_web.py` 调用 `merge_material_banks.py` 把资料按题库重新匹配，生成 `material_banks_web.json` 并复制到 `deploy_github_pages/`。网页只内嵌 `MATERIAL_BANK_META`（版本号、题数、备考建议），正文在打开题库弹窗时按 `?v=版本号` 加载，避免 index.html 变大、避免 CDN 旧缓存。必须通过网站或本地服务打开，`file://` 打开时资料加载失败并有提示。
+- **匹配规则（宁可不合并也不错配）**：先按题号（大西瓜 `M`+编号、萤火虫 `F`+编号或原编号）；再按英文标题（词级相似度 ≥ 0.82，8 个字母以下的短标题只认完全一致）；最后看内容重合（英文实词 + 中文二字组）或「标题较像且内容也最像并明显领先」。对不上的题作为「资料补充」追加到 SST / SWT / SGD / RTS / RO；WE（已核对的 37 题）与 FIB-DD 只挂资料不追加。同一家同一题号的多份资料合成一条，小节被完全覆盖的那份（SWT 易筋经 ⊆ 轻松记）去掉。
+- **新题库**：RL / ASQ / FIB-L / HIW 全部由资料生成（`PLANNER_BANK_MAP` 中 `materialOnly: true`，`bankRoute: "modal"`）。
+- **已知原始数据问题**：大西瓜 RTS 题库的 `reference_response` 是中文情景（网页显示为「情景说明（中文）」）；大西瓜 SWT 的 `passage` 只是作答说明、`sample_summary` 混着原文、答案与中文（有资料时不再显示这两块）；SST 的 `sample_summary` 为空、RO 的 `correct_order` 为空（答案都来自资料）。
+- **回归测试**：`tests/runtime_test2.mjs` 的同步日期与同步失败提醒改为读页面内嵌的 `SYNC_STATUS`，不再写死某次同步的日期。

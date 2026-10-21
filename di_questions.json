@@ -1093,368 +1093,6 @@
   },
   {
     "index": 6,
-    "qid": "031012",
-    "title": "Average annual hospital visits per capita Glasgow residents",
-    "image_url": "di_images/031012.png",
-    "online_image_url": "https://upload.fireflyau.com/pte/old/i/20181125075920_ce20bcb4-7300-401b-af26-b2ac1657a0ec.png",
-    "text": "This line chart shows information about average number of annual hospital visits per capita Glasgow residents. Firstly, the highest number can be found in 2010, which is around 3.25. Secondly, the second highest number is located in 2000, which is about 3. Thirdly, the lowest figure is for 1970, and the number is around 2.2. Furthermore, there may be an increasing trend in the future. In summary, this chart uses real data to describe average number of annual hospital visits per capita Glasgow residents.",
-    "word_count": 84,
-    "question_info": "【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：描述最大值（2010年医院访问人数最多，数值为3.1）\n内容点二：描述最小值（1960年医院访问认罪最低，数值是2.4）\n内容点三：描述趋势（1960年到2010年从2.4上升到了3.1）\n",
-    "ai_keywords": "Average annual hospital visits per capita Glasgow residents,twenty ten,two thousand and ten,three,three point two,three point one,two thousand,nineteen seventy,two,two point one,Average annual hospital visits,Average annual hospital visits per capita,nineteen ninety,two point five,nineteen eighty,two point four,two point three,nineteen sixty,zero,point five,zero point five,one,one point five,line,largest,highest,smallest,lowest,maximum,minimum,trend,increasing,decreasing,upward,downward,fluctuation",
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "极高频",
-      "difficulty": "简单",
-      "degree": 1,
-      "isForecast": true,
-      "tagHigh": true,
-      "tagNew": true,
-      "isJJ": true
-    },
-    "translation": "【满分范文参考译文】\n此折线图显示了格拉斯哥居民人均每年就诊医院次数的信息。首先，2010年的数字最高，约为3.25。其次，第二高的是2000年，约为3。第三，最低的是1970年，约为2.2。而且，未来可能还会有增加的趋势。总之，该图表使用真实数据来描述格拉斯哥居民人均每年就诊的医院次数。\n\n【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：描述最大值（2010年医院访问人数最多，数值为3.1）\n内容点二：描述最小值（1960年医院访问认罪最低，数值是2.4）\n内容点三：描述趋势（1960年到2010年从2.4上升到了3.1）",
-    "audio_url": "di_audio/031012.mp3",
-    "audio_duration": 35.25,
-    "word_timings": [
-      [
-        0.1,
-        0.25
-      ],
-      [
-        0.362,
-        0.25
-      ],
-      [
-        0.625,
-        0.312
-      ],
-      [
-        0.95,
-        0.25
-      ],
-      [
-        1.212,
-        0.65
-      ],
-      [
-        1.875,
-        0.275
-      ],
-      [
-        2.163,
-        0.35
-      ],
-      [
-        2.525,
-        0.287
-      ],
-      [
-        2.825,
-        0.1
-      ],
-      [
-        2.938,
-        0.388
-      ],
-      [
-        3.337,
-        0.487
-      ],
-      [
-        3.837,
-        0.4
-      ],
-      [
-        4.25,
-        0.163
-      ],
-      [
-        4.425,
-        0.412
-      ],
-      [
-        4.85,
-        0.45
-      ],
-      [
-        5.312,
-        0.688
-      ],
-      [
-        6.862,
-        0.65
-      ],
-      [
-        7.638,
-        0.075
-      ],
-      [
-        7.725,
-        0.412
-      ],
-      [
-        8.15,
-        0.325
-      ],
-      [
-        8.488,
-        0.138
-      ],
-      [
-        8.637,
-        0.113
-      ],
-      [
-        8.762,
-        0.325
-      ],
-      [
-        9.1,
-        0.213
-      ],
-      [
-        9.312,
-        0.85
-      ],
-      [
-        10.363,
-        0.175
-      ],
-      [
-        10.55,
-        0.1
-      ],
-      [
-        10.662,
-        0.325
-      ],
-      [
-        11,
-        1.288
-      ],
-      [
-        13.15,
-        0.7
-      ],
-      [
-        13.963,
-        0.1
-      ],
-      [
-        14.075,
-        0.35
-      ],
-      [
-        14.438,
-        0.375
-      ],
-      [
-        14.825,
-        0.325
-      ],
-      [
-        15.162,
-        0.175
-      ],
-      [
-        15.35,
-        0.463
-      ],
-      [
-        15.825,
-        0.163
-      ],
-      [
-        15.987,
-        0.65
-      ],
-      [
-        16.812,
-        0.163
-      ],
-      [
-        16.988,
-        0.1
-      ],
-      [
-        17.1,
-        0.275
-      ],
-      [
-        17.387,
-        0.438
-      ],
-      [
-        18.688,
-        0.537
-      ],
-      [
-        19.363,
-        0.1
-      ],
-      [
-        19.475,
-        0.388
-      ],
-      [
-        19.875,
-        0.35
-      ],
-      [
-        20.238,
-        0.175
-      ],
-      [
-        20.425,
-        0.138
-      ],
-      [
-        20.575,
-        0.975
-      ],
-      [
-        21.775,
-        0.125
-      ],
-      [
-        21.913,
-        0.062
-      ],
-      [
-        21.988,
-        0.325
-      ],
-      [
-        22.325,
-        0.15
-      ],
-      [
-        22.488,
-        0.338
-      ],
-      [
-        22.837,
-        0.887
-      ],
-      [
-        24.587,
-        0.738
-      ],
-      [
-        25.45,
-        0.15
-      ],
-      [
-        25.613,
-        0.15
-      ],
-      [
-        25.775,
-        0.138
-      ],
-      [
-        25.925,
-        0.1
-      ],
-      [
-        26.038,
-        0.537
-      ],
-      [
-        26.587,
-        0.325
-      ],
-      [
-        26.925,
-        0.075
-      ],
-      [
-        27.012,
-        0.075
-      ],
-      [
-        27.1,
-        0.588
-      ],
-      [
-        28.55,
-        0.175
-      ],
-      [
-        28.738,
-        0.537
-      ],
-      [
-        29.425,
-        0.2
-      ],
-      [
-        29.637,
-        0.25
-      ],
-      [
-        29.9,
-        0.338
-      ],
-      [
-        30.25,
-        0.225
-      ],
-      [
-        30.488,
-        0.35
-      ],
-      [
-        30.85,
-        0.1
-      ],
-      [
-        30.962,
-        0.425
-      ],
-      [
-        31.4,
-        0.362
-      ],
-      [
-        31.775,
-        0.287
-      ],
-      [
-        32.075,
-        0.1
-      ],
-      [
-        32.188,
-        0.388
-      ],
-      [
-        32.587,
-        0.487
-      ],
-      [
-        33.087,
-        0.375
-      ],
-      [
-        33.475,
-        0.163
-      ],
-      [
-        33.65,
-        0.412
-      ],
-      [
-        34.075,
-        0.475
-      ],
-      [
-        34.562,
-        0.688
-      ]
-    ]
-  },
-  {
-    "index": 7,
     "qid": "031021",
     "title": "Life Expectancy (Years) at Birth by Sex",
     "image_url": "di_images/031021.png",
@@ -1840,7 +1478,7 @@
     ]
   },
   {
-    "index": 8,
+    "index": 7,
     "qid": "031024",
     "title": "Daily temperature in Beijing China",
     "image_url": "di_images/031024.png",
@@ -2218,7 +1856,7 @@
     ]
   },
   {
-    "index": 9,
+    "index": 8,
     "qid": "031033",
     "title": "Temperature and CO2 for the Last 400,000 Years",
     "image_url": "di_images/031033.png",
@@ -2243,7 +1881,7 @@
     "word_timings": []
   },
   {
-    "index": 10,
+    "index": 9,
     "qid": "031036",
     "title": "Food price vs oil price",
     "image_url": "di_images/031036.png",
@@ -2601,7 +2239,7 @@
     ]
   },
   {
-    "index": 11,
+    "index": 10,
     "qid": "031049",
     "title": "Annual per capita Meat Consumption (kg)",
     "image_url": "di_images/031049.png",
@@ -2971,7 +2609,7 @@
     ]
   },
   {
-    "index": 12,
+    "index": 11,
     "qid": "031053",
     "title": "Australian Age Group",
     "image_url": "di_images/031053.png",
@@ -3317,7 +2955,7 @@
     ]
   },
   {
-    "index": 13,
+    "index": 12,
     "qid": "031058",
     "title": "Internet Population in Millions of Users",
     "image_url": "di_images/031058.png",
@@ -3647,7 +3285,7 @@
     ]
   },
   {
-    "index": 14,
+    "index": 13,
     "qid": "031062",
     "title": "Average Rainfall in Inches",
     "image_url": "di_images/031062.png",
@@ -3973,7 +3611,7 @@
     ]
   },
   {
-    "index": 15,
+    "index": 14,
     "qid": "031065",
     "title": "The Taxation by Countries by Payroll and Superannuation",
     "image_url": "di_images/031065.png",
@@ -4339,7 +3977,7 @@
     ]
   },
   {
-    "index": 16,
+    "index": 15,
     "qid": "031073",
     "title": "Water Use in Gulf Countries in 2000",
     "image_url": "di_images/031073.png",
@@ -4717,7 +4355,7 @@
     ]
   },
   {
-    "index": 17,
+    "index": 16,
     "qid": "031074",
     "title": "Percentage of Students Proficient in a Foreign Language",
     "image_url": "di_images/031074.png",
@@ -5099,7 +4737,7 @@
     ]
   },
   {
-    "index": 18,
+    "index": 17,
     "qid": "031076",
     "title": "Population of Major European Countries in 1996 and 2007",
     "image_url": "di_images/031076.png",
@@ -5501,385 +5139,7 @@
     ]
   },
   {
-    "index": 19,
-    "qid": "031079",
-    "title": "GDP Accumulated Growth in Percentage in Constant Prices",
-    "image_url": "di_images/031079.png",
-    "online_image_url": "https://upload.fireflyau.com/pte/old/i/20181125085852_2eaa27cc-f4cd-4a3b-84ed-c6bcd599339a.png",
-    "text": "This bar chart shows information about GDP accumulated growth in percentage in constant prices. If you look at 1990-1998, the highest number can be found in China, which is around 125%. The lowest figure is located in Sweden, which is about 5%. If you look at 1990-2006,  the highest number is for China, and the number is around 325%. Furthermore, most countries and regions have the GDP accumelated growth below 100%. In summary, this chart uses real data to describe GDP accumulated growth in percentage in constant prices.",
-    "word_count": 88,
-    "question_info": "【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：1990-1998年，China的GDP增长速度最高有130%，瑞士最低，有6%\n内容点二：1990-2006,年，Chian的GDP增长速度最高，有330%，意大利最低，有15%。\n",
-    "ai_keywords": "GDP Accumulated Growth in Percentage in Constant Prices,china,three hundred and thirty percent,one hundred and thirty percent,finland,ten percent,switzerland,five percent,nineteen ninety to nineteen ninety-eight,nineteen ninety to two thousand and six,australia,austria,belgium,brazil,canada,denmark,france,germany,greece,hong kong,iceland,india,ireland,israel,italy,japan,korea,mexico,netherlands,new zealand,norway,poland,singapore,south africa,spain,sweden,taiwan,turkey,united kingdom,united states,zero percent,fifty percent,one hundred percent,one hundred and fifty percent,two hundred percent,two hundred and fifty percent,three hundred percent,three hundred and fifty percent,bar,largest,highest,smallest,lowest,maximum,minimum,trend,increasing,decreasing,upward,downward,fluctuation",
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "极高频",
-      "difficulty": "普通",
-      "degree": 2,
-      "isForecast": true,
-      "tagHigh": true,
-      "tagNew": true,
-      "isJJ": true
-    },
-    "translation": "【满分范文参考译文】\n该条形图显示了以不变价格计算的 GDP 累计增长百分比信息。如果你看看1990-1998年，中国的比例最高，约为125%。最低的数字位于瑞典，约为 5%。如果你看一下1990-2006年，这个数字最高的是中国，大约是325%。此外，大多数国家和地区GDP累计增速低于100%。总之，该图表使用真实数据来描述以不变价格计算的 GDP 累计增长百分比。\n\n【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：1990-1998年，China的GDP增长速度最高有130%，瑞士最低，有6%\n内容点二：1990-2006,年，Chian的GDP增长速度最高，有330%，意大利最低，有15%。",
-    "audio_url": "di_audio/031079.mp3",
-    "audio_duration": 40.45,
-    "word_timings": [
-      [
-        0.1,
-        0.25
-      ],
-      [
-        0.362,
-        0.212
-      ],
-      [
-        0.588,
-        0.338
-      ],
-      [
-        0.938,
-        0.237
-      ],
-      [
-        1.188,
-        0.65
-      ],
-      [
-        1.85,
-        0.287
-      ],
-      [
-        2.15,
-        0.55
-      ],
-      [
-        2.712,
-        0.688
-      ],
-      [
-        3.413,
-        0.388
-      ],
-      [
-        3.812,
-        0.1
-      ],
-      [
-        3.925,
-        0.537
-      ],
-      [
-        4.475,
-        0.113
-      ],
-      [
-        4.6,
-        0.438
-      ],
-      [
-        5.05,
-        0.688
-      ],
-      [
-        6.6,
-        0.163
-      ],
-      [
-        6.775,
-        0.138
-      ],
-      [
-        6.925,
-        0.175
-      ],
-      [
-        7.112,
-        0.1
-      ],
-      [
-        7.225,
-        1.975
-      ],
-      [
-        9.412,
-        0.087
-      ],
-      [
-        9.512,
-        0.388
-      ],
-      [
-        9.912,
-        0.338
-      ],
-      [
-        10.262,
-        0.15
-      ],
-      [
-        10.425,
-        0.113
-      ],
-      [
-        10.55,
-        0.275
-      ],
-      [
-        10.838,
-        0.113
-      ],
-      [
-        10.963,
-        0.438
-      ],
-      [
-        11.662,
-        0.163
-      ],
-      [
-        11.838,
-        0.1
-      ],
-      [
-        11.95,
-        0.338
-      ],
-      [
-        12.3,
-        1.7
-      ],
-      [
-        14.863,
-        0.15
-      ],
-      [
-        15.025,
-        0.375
-      ],
-      [
-        15.412,
-        0.325
-      ],
-      [
-        15.75,
-        0.15
-      ],
-      [
-        15.912,
-        0.45
-      ],
-      [
-        16.375,
-        0.113
-      ],
-      [
-        16.5,
-        0.412
-      ],
-      [
-        17.087,
-        0.15
-      ],
-      [
-        17.25,
-        0.087
-      ],
-      [
-        17.35,
-        0.275
-      ],
-      [
-        17.637,
-        0.9
-      ],
-      [
-        19.4,
-        0.163
-      ],
-      [
-        19.575,
-        0.138
-      ],
-      [
-        19.725,
-        0.175
-      ],
-      [
-        19.913,
-        0.087
-      ],
-      [
-        20.012,
-        1.925
-      ],
-      [
-        22.125,
-        0.087
-      ],
-      [
-        22.225,
-        0.388
-      ],
-      [
-        22.625,
-        0.3
-      ],
-      [
-        22.938,
-        0.15
-      ],
-      [
-        23.1,
-        0.138
-      ],
-      [
-        23.25,
-        0.487
-      ],
-      [
-        23.975,
-        0.125
-      ],
-      [
-        24.113,
-        0.062
-      ],
-      [
-        24.188,
-        0.325
-      ],
-      [
-        24.525,
-        0.138
-      ],
-      [
-        24.675,
-        0.325
-      ],
-      [
-        25.012,
-        1.762
-      ],
-      [
-        27.637,
-        0.713
-      ],
-      [
-        28.512,
-        0.275
-      ],
-      [
-        28.8,
-        0.4
-      ],
-      [
-        29.212,
-        0.1
-      ],
-      [
-        29.325,
-        0.438
-      ],
-      [
-        29.775,
-        0.125
-      ],
-      [
-        29.913,
-        0.087
-      ],
-      [
-        30.012,
-        0.562
-      ],
-      [
-        30.587,
-        0.637
-      ],
-      [
-        31.238,
-        0.338
-      ],
-      [
-        31.587,
-        0.338
-      ],
-      [
-        31.938,
-        1.163
-      ],
-      [
-        33.962,
-        0.175
-      ],
-      [
-        34.15,
-        0.537
-      ],
-      [
-        34.812,
-        0.2
-      ],
-      [
-        35.025,
-        0.25
-      ],
-      [
-        35.288,
-        0.325
-      ],
-      [
-        35.625,
-        0.225
-      ],
-      [
-        35.862,
-        0.338
-      ],
-      [
-        36.212,
-        0.1
-      ],
-      [
-        36.325,
-        0.438
-      ],
-      [
-        36.775,
-        0.613
-      ],
-      [
-        37.4,
-        0.688
-      ],
-      [
-        38.1,
-        0.388
-      ],
-      [
-        38.5,
-        0.1
-      ],
-      [
-        38.612,
-        0.537
-      ],
-      [
-        39.163,
-        0.125
-      ],
-      [
-        39.3,
-        0.438
-      ],
-      [
-        39.75,
-        0.7
-      ]
-    ]
-  },
-  {
-    "index": 20,
+    "index": 18,
     "qid": "031081",
     "title": "Drinking Habits by Age in US",
     "image_url": "di_images/031081.png",
@@ -6241,7 +5501,32 @@
     ]
   },
   {
-    "index": 21,
+    "index": 19,
+    "qid": "031086",
+    "title": "Beginning of flow chart for quiz",
+    "image_url": "di_images/031086.jpg",
+    "online_image_url": "https://upload.fireflyau.com/pte/SDI/i/cb21fb80edbc90be9c7afa8f7edf49ba.jpg",
+    "text": "This flow chart shows information about beginning of flow chart for quiz. According to the picture we can see that firstly, the process starts from the first stage, which is called slide 1 click to start quiz. Secondly, it goes to the second stage, which is about slide 2 question 1. Thirdly, it comes to the third stage, which is called click true or click false. Furthermore, the process comes to the ending point, which is about slide 5 question 2. Furthermore, slide 4 which is wrong and slide 3 which is correct also carry important weight. In summary, the process shows details about flow chart for quiz.",
+    "word_count": 108,
+    "question_info": "Beginning of flow chart for quiz",
+    "ai_keywords": "Beginning of flow chart for quiz,click to start quiz,question one,click true,wrong click to go to next question,question 2,correct click to go to next question,click false,slide one,slide two,slide three,slide four,slide five,process,flow,stage,step,phase",
+    "tags": {
+      "tier": "极限预测",
+      "frequency": "极高频",
+      "difficulty": "简单",
+      "degree": 1,
+      "isForecast": true,
+      "tagHigh": true,
+      "tagNew": false,
+      "isJJ": true
+    },
+    "translation": "【DI 25秒实战答题结构】\n1. 引入(0-6s)：本图清晰呈现了关于 Beginning of flow chart for quiz 的核心统计数据。\n2. 关键点一(6-12s)：观察数值最高峰，重点报出最大值及对应主体。\n3. 关键点二(12-18s)：对比次高峰或最低数值，指出变化趋势。\n4. 总结(18-24s)：整体而言，本图采用详实数据生动刻画了 Beginning of flow chart for quiz 的整体面貌。",
+    "audio_url": "di_audio/031086.mp3",
+    "audio_duration": 49.8,
+    "word_timings": []
+  },
+  {
+    "index": 20,
     "qid": "031091",
     "title": "Expected City Visits by Country of Origin in 2018",
     "image_url": "di_images/031091.png",
@@ -6631,7 +5916,7 @@
     ]
   },
   {
-    "index": 22,
+    "index": 21,
     "qid": "031100",
     "title": "Age Percentage by Gender",
     "image_url": "di_images/031100.png",
@@ -6977,7 +6262,7 @@
     ]
   },
   {
-    "index": 23,
+    "index": 22,
     "qid": "031105",
     "title": "Precipitation and Average Temperature",
     "image_url": "di_images/031105.png",
@@ -7323,7 +6608,7 @@
     ]
   },
   {
-    "index": 24,
+    "index": 23,
     "qid": "031109",
     "title": "Climate Graph for Port Moresby, Papua New Guinea",
     "image_url": "di_images/031109.png",
@@ -7709,7 +6994,7 @@
     ]
   },
   {
-    "index": 25,
+    "index": 24,
     "qid": "031131",
     "title": "Languages have influenced English",
     "image_url": "di_images/031131.png",
@@ -8059,7 +7344,7 @@
     ]
   },
   {
-    "index": 26,
+    "index": 25,
     "qid": "031132",
     "title": "Approximate Composition of the Air",
     "image_url": "di_images/031132.png",
@@ -8401,7 +7686,7 @@
     ]
   },
   {
-    "index": 27,
+    "index": 26,
     "qid": "031133",
     "title": "Pet Expenditure in US",
     "image_url": "di_images/031133.png",
@@ -8739,7 +8024,7 @@
     ]
   },
   {
-    "index": 28,
+    "index": 27,
     "qid": "031134",
     "title": "Causes of Deforestation in the Brazilian Amazon 2000-2005",
     "image_url": "di_images/031134.png",
@@ -9105,7 +8390,7 @@
     ]
   },
   {
-    "index": 29,
+    "index": 28,
     "qid": "031141",
     "title": "Size of Nine Planets",
     "image_url": "di_images/031141.png",
@@ -9130,7 +8415,7 @@
     "word_timings": []
   },
   {
-    "index": 30,
+    "index": 29,
     "qid": "031142",
     "title": "Typing Postures",
     "image_url": "di_images/031142.png",
@@ -9596,7 +8881,7 @@
     ]
   },
   {
-    "index": 31,
+    "index": 30,
     "qid": "031143",
     "title": "Adults Healthy BMI Chart",
     "image_url": "di_images/031143.png",
@@ -9998,7 +9283,7 @@
     ]
   },
   {
-    "index": 32,
+    "index": 31,
     "qid": "031145",
     "title": "How Solar Yard Lights Work",
     "image_url": "di_images/031145.png",
@@ -10424,7 +9709,7 @@
     ]
   },
   {
-    "index": 33,
+    "index": 32,
     "qid": "031146",
     "title": "Student Accommodation of Southampton University",
     "image_url": "di_images/031146.jpg",
@@ -10862,7 +10147,7 @@
     ]
   },
   {
-    "index": 34,
+    "index": 33,
     "qid": "031148",
     "title": "Food Pyramid",
     "image_url": "di_images/031148.png",
@@ -11288,7 +10573,7 @@
     ]
   },
   {
-    "index": 35,
+    "index": 34,
     "qid": "031149",
     "title": "Government Expenditure: Education - All Sectors",
     "image_url": "di_images/031149.png",
@@ -11642,7 +10927,7 @@
     ]
   },
   {
-    "index": 36,
+    "index": 35,
     "qid": "031151",
     "title": "Library Plan",
     "image_url": "di_images/031151.png",
@@ -12032,7 +11317,7 @@
     ]
   },
   {
-    "index": 37,
+    "index": 36,
     "qid": "031152",
     "title": "Oxbow Lake Formation",
     "image_url": "di_images/031152.png",
@@ -12410,7 +11695,7 @@
     ]
   },
   {
-    "index": 38,
+    "index": 37,
     "qid": "031156",
     "title": "The Eatwell Plate",
     "image_url": "di_images/031156.png",
@@ -12824,7 +12109,7 @@
     ]
   },
   {
-    "index": 39,
+    "index": 38,
     "qid": "031159",
     "title": "Layers of the Earth",
     "image_url": "di_images/031159.png",
@@ -13238,7 +12523,7 @@
     ]
   },
   {
-    "index": 40,
+    "index": 39,
     "qid": "031160",
     "title": "Student Accommodation - Floor Plan",
     "image_url": "di_images/031160.jpg",
@@ -13636,7 +12921,7 @@
     ]
   },
   {
-    "index": 41,
+    "index": 40,
     "qid": "031162",
     "title": "Fundamental Needs Model with Abraham Maslow’s Hierarchy of Needs",
     "image_url": "di_images/031162.png",
@@ -14074,7 +13359,7 @@
     ]
   },
   {
-    "index": 42,
+    "index": 41,
     "qid": "031164",
     "title": "The World’s Water",
     "image_url": "di_images/031164.png",
@@ -14436,7 +13721,7 @@
     ]
   },
   {
-    "index": 43,
+    "index": 42,
     "qid": "031168",
     "title": "Computers Then and Now",
     "image_url": "di_images/031168.png",
@@ -14834,7 +14119,7 @@
     ]
   },
   {
-    "index": 44,
+    "index": 43,
     "qid": "031169",
     "title": "Different Heights of Four Trees",
     "image_url": "di_images/031169.png",
@@ -15160,7 +14445,7 @@
     ]
   },
   {
-    "index": 45,
+    "index": 44,
     "qid": "031170",
     "title": "Human Arms and Wings",
     "image_url": "di_images/031170.png",
@@ -15602,7 +14887,7 @@
     ]
   },
   {
-    "index": 46,
+    "index": 45,
     "qid": "031172",
     "title": "Wind Power to Electricity",
     "image_url": "di_images/031172.jpg",
@@ -16000,7 +15285,7 @@
     ]
   },
   {
-    "index": 47,
+    "index": 46,
     "qid": "031173",
     "title": "Layers of the Earth and the distance",
     "image_url": "di_images/031173.png",
@@ -16370,7 +15655,7 @@
     ]
   },
   {
-    "index": 48,
+    "index": 47,
     "qid": "031174",
     "title": "Bird Feeder",
     "image_url": "di_images/031174.png",
@@ -16780,7 +16065,7 @@
     ]
   },
   {
-    "index": 49,
+    "index": 48,
     "qid": "031175",
     "title": "Parts of a Tree",
     "image_url": "di_images/031175.png",
@@ -17190,7 +16475,7 @@
     ]
   },
   {
-    "index": 50,
+    "index": 49,
     "qid": "031181",
     "title": "Distribution of Tropical Rain Forests",
     "image_url": "di_images/031181.png",
@@ -17656,7 +16941,7 @@
     ]
   },
   {
-    "index": 51,
+    "index": 50,
     "qid": "031192",
     "title": "Population Density in Australia  2011",
     "image_url": "di_images/031192.png",
@@ -18122,7 +17407,7 @@
     ]
   },
   {
-    "index": 52,
+    "index": 51,
     "qid": "031196",
     "title": "Annual Sunshine Hours for France ",
     "image_url": "di_images/031196.png",
@@ -18528,7 +17813,7 @@
     ]
   },
   {
-    "index": 53,
+    "index": 52,
     "qid": "031197",
     "title": "Global Warming Predictions by Temperature Increase ",
     "image_url": "di_images/031197.png",
@@ -18914,7 +18199,7 @@
     ]
   },
   {
-    "index": 54,
+    "index": 53,
     "qid": "031201",
     "title": " Germination of Bean Plants ",
     "image_url": "di_images/031201.png",
@@ -19272,7 +18557,7 @@
     ]
   },
   {
-    "index": 55,
+    "index": 54,
     "qid": "031202",
     "title": " Water Cycle (color)",
     "image_url": "di_images/031202.png",
@@ -19598,7 +18883,7 @@
     ]
   },
   {
-    "index": 56,
+    "index": 55,
     "qid": "031204",
     "title": "Life Cycle of a Frog ",
     "image_url": "di_images/031204.png",
@@ -19996,7 +19281,7 @@
     ]
   },
   {
-    "index": 57,
+    "index": 56,
     "qid": "031209",
     "title": "Life Cycle of an Apple Tree ",
     "image_url": "di_images/031209.jpg",
@@ -20350,7 +19635,7 @@
     ]
   },
   {
-    "index": 58,
+    "index": 57,
     "qid": "031214",
     "title": "Tesco Extra Music Download  ",
     "image_url": "di_images/031214.png",
@@ -20680,7 +19965,7 @@
     ]
   },
   {
-    "index": 59,
+    "index": 58,
     "qid": "031220",
     "title": "From Glacier to Iceberg to Ocean Water ",
     "image_url": "di_images/031220.png",
@@ -21142,7 +20427,7 @@
     ]
   },
   {
-    "index": 60,
+    "index": 59,
     "qid": "031224",
     "title": "Fungus Gnat Lifecycle in 28 Days",
     "image_url": "di_images/031224.png",
@@ -21536,7 +20821,7 @@
     ]
   },
   {
-    "index": 61,
+    "index": 60,
     "qid": "031225",
     "title": "Adding an Article to Wikipedia ",
     "image_url": "di_images/031225.png",
@@ -21561,477 +20846,7 @@
     "word_timings": []
   },
   {
-    "index": 62,
-    "qid": "031226",
-    "title": "Where the Air Pollution Comes From",
-    "image_url": "di_images/031226.png",
-    "online_image_url": "https://upload.fireflyau.com/pte/old/i/20181125103447_d3746b7b-2d9d-45aa-83af-6064f4822fd1.png",
-    "text": "This flow chart shows information about where the air pollution comes from. According to the picture we can see that firstly, the process starts from the first stage, which is called emissions to atmosphere, nitrogen oxides and sulfur dioxide from industry, transportation, ore smelting and power generation. Secondly, it goes to the second stage, which is about chemical transformation, nitric acid and sulfuric acid. Thirdly, it comes to the third stage, which is called particulates gases dry fallout or condensation. Furthermore, the process comes to the ending point, which is about precipitation, acid rain, fog, snow, and mist. In summary, the process shows details about where the air pollution comes from. ",
-    "word_count": 111,
-    "question_info": "【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n根据流程图箭头回答\n",
-    "ai_keywords": "industry,transportation,ore smelting,power generation,emissions to atmosphere,chemical transformation,dry fallout,particulates,gases,condensation,precipitation,acid rain,fog,snow and mist,nitrogeon oxides,sulfur dioxide,nitric acid,sulfuric acid,pollution,emissions,atmosphere,nitrogen,oxides,sulfur,dioxide,air,chemical,transformation,nitric,acid,sulfuric,orange,blue,green,grey,arrow,process,flow,stage,step,phase,first,second,third,last,final,lastly,finally",
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "极高频",
-      "difficulty": "普通",
-      "degree": 2,
-      "isForecast": true,
-      "tagHigh": true,
-      "tagNew": true,
-      "isJJ": true
-    },
-    "translation": "【满分范文参考译文】\n该流程图显示了有关空气污染来源的信息。从图中我们可以看到，首先，这个过程从第一阶段开始，即工业、交通、矿石冶炼和发电向大气排放的氮氧化物和二氧化硫。其次，进入第二阶段，化学转化，硝酸和硫酸。第三，进入第三阶段，称为颗粒气体干燥沉降或凝结。再者，这个过程到了终点，就是降水、酸雨、雾、雪、雾。总之，该过程显示了有关空气污染来源的详细信息。\n\n【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n根据流程图箭头回答",
-    "audio_url": "di_audio/031226.mp3",
-    "audio_duration": 45.4,
-    "word_timings": [
-      [
-        0.1,
-        0.263
-      ],
-      [
-        0.375,
-        0.188
-      ],
-      [
-        0.575,
-        0.375
-      ],
-      [
-        0.963,
-        0.25
-      ],
-      [
-        1.225,
-        0.625
-      ],
-      [
-        1.863,
-        0.237
-      ],
-      [
-        2.112,
-        0.138
-      ],
-      [
-        2.263,
-        0.087
-      ],
-      [
-        2.362,
-        0.175
-      ],
-      [
-        2.55,
-        0.475
-      ],
-      [
-        3.038,
-        0.275
-      ],
-      [
-        3.325,
-        0.375
-      ],
-      [
-        4.562,
-        0.425
-      ],
-      [
-        5,
-        0.075
-      ],
-      [
-        5.088,
-        0.1
-      ],
-      [
-        5.2,
-        0.412
-      ],
-      [
-        5.625,
-        0.125
-      ],
-      [
-        5.763,
-        0.175
-      ],
-      [
-        5.95,
-        0.163
-      ],
-      [
-        6.125,
-        0.175
-      ],
-      [
-        6.312,
-        0.588
-      ],
-      [
-        7.062,
-        0.1
-      ],
-      [
-        7.175,
-        0.45
-      ],
-      [
-        7.638,
-        0.35
-      ],
-      [
-        8,
-        0.15
-      ],
-      [
-        8.162,
-        0.087
-      ],
-      [
-        8.262,
-        0.338
-      ],
-      [
-        8.613,
-        0.525
-      ],
-      [
-        9.338,
-        0.163
-      ],
-      [
-        9.512,
-        0.113
-      ],
-      [
-        9.637,
-        0.263
-      ],
-      [
-        9.912,
-        0.5
-      ],
-      [
-        10.425,
-        0.1
-      ],
-      [
-        10.537,
-        0.725
-      ],
-      [
-        11.488,
-        0.5
-      ],
-      [
-        12,
-        0.7
-      ],
-      [
-        12.8,
-        0.163
-      ],
-      [
-        12.975,
-        0.35
-      ],
-      [
-        13.338,
-        0.625
-      ],
-      [
-        13.975,
-        0.163
-      ],
-      [
-        14.15,
-        0.6
-      ],
-      [
-        14.925,
-        0.963
-      ],
-      [
-        16.1,
-        0.138
-      ],
-      [
-        16.25,
-        0.575
-      ],
-      [
-        16.837,
-        0.113
-      ],
-      [
-        16.962,
-        0.325
-      ],
-      [
-        17.3,
-        0.825
-      ],
-      [
-        18.988,
-        0.675
-      ],
-      [
-        19.812,
-        0.1
-      ],
-      [
-        19.925,
-        0.225
-      ],
-      [
-        20.163,
-        0.087
-      ],
-      [
-        20.262,
-        0.1
-      ],
-      [
-        20.375,
-        0.375
-      ],
-      [
-        20.762,
-        0.525
-      ],
-      [
-        21.462,
-        0.163
-      ],
-      [
-        21.637,
-        0.087
-      ],
-      [
-        21.738,
-        0.275
-      ],
-      [
-        22.025,
-        0.388
-      ],
-      [
-        22.425,
-        0.925
-      ],
-      [
-        23.587,
-        0.375
-      ],
-      [
-        23.975,
-        0.463
-      ],
-      [
-        24.525,
-        0.15
-      ],
-      [
-        24.688,
-        0.575
-      ],
-      [
-        25.275,
-        0.5
-      ],
-      [
-        26.637,
-        0.537
-      ],
-      [
-        27.275,
-        0.1
-      ],
-      [
-        27.387,
-        0.25
-      ],
-      [
-        27.65,
-        0.075
-      ],
-      [
-        27.738,
-        0.1
-      ],
-      [
-        27.85,
-        0.3
-      ],
-      [
-        28.163,
-        0.525
-      ],
-      [
-        28.825,
-        0.15
-      ],
-      [
-        28.988,
-        0.1
-      ],
-      [
-        29.1,
-        0.237
-      ],
-      [
-        29.35,
-        0.675
-      ],
-      [
-        30.038,
-        0.425
-      ],
-      [
-        30.475,
-        0.225
-      ],
-      [
-        30.712,
-        0.45
-      ],
-      [
-        31.175,
-        0.1
-      ],
-      [
-        31.288,
-        0.95
-      ],
-      [
-        33.1,
-        0.738
-      ],
-      [
-        33.975,
-        0.1
-      ],
-      [
-        34.087,
-        0.487
-      ],
-      [
-        34.587,
-        0.287
-      ],
-      [
-        34.888,
-        0.087
-      ],
-      [
-        34.987,
-        0.1
-      ],
-      [
-        35.1,
-        0.338
-      ],
-      [
-        35.45,
-        0.463
-      ],
-      [
-        36.087,
-        0.163
-      ],
-      [
-        36.263,
-        0.087
-      ],
-      [
-        36.362,
-        0.25
-      ],
-      [
-        36.625,
-        0.912
-      ],
-      [
-        37.7,
-        0.325
-      ],
-      [
-        38.038,
-        0.35
-      ],
-      [
-        38.562,
-        0.388
-      ],
-      [
-        39.1,
-        0.512
-      ],
-      [
-        39.788,
-        0.15
-      ],
-      [
-        39.95,
-        0.55
-      ],
-      [
-        41.362,
-        0.175
-      ],
-      [
-        41.55,
-        0.512
-      ],
-      [
-        42.188,
-        0.1
-      ],
-      [
-        42.3,
-        0.425
-      ],
-      [
-        42.737,
-        0.263
-      ],
-      [
-        43.013,
-        0.525
-      ],
-      [
-        43.55,
-        0.237
-      ],
-      [
-        43.8,
-        0.125
-      ],
-      [
-        43.938,
-        0.087
-      ],
-      [
-        44.038,
-        0.188
-      ],
-      [
-        44.237,
-        0.487
-      ],
-      [
-        44.737,
-        0.275
-      ],
-      [
-        45.025,
-        0.375
-      ]
-    ]
-  },
-  {
-    "index": 63,
+    "index": 61,
     "qid": "031239",
     "title": "Sports Participation by Gender at Different Ages ",
     "image_url": "di_images/031239.png",
@@ -22541,7 +21356,7 @@
     ]
   },
   {
-    "index": 64,
+    "index": 62,
     "qid": "031251",
     "title": "Body Mass Index of Obese, Overweight, Normal and Underweight People",
     "image_url": "di_images/031251.png",
@@ -22923,7 +21738,7 @@
     ]
   },
   {
-    "index": 65,
+    "index": 63,
     "qid": "031256",
     "title": "Chiang Mai, Thailand",
     "image_url": "di_images/031256.png",
@@ -22948,7 +21763,7 @@
     "word_timings": []
   },
   {
-    "index": 66,
+    "index": 64,
     "qid": "031259",
     "title": "Eclipse",
     "image_url": "di_images/031259.png",
@@ -23338,7 +22153,7 @@
     ]
   },
   {
-    "index": 67,
+    "index": 65,
     "qid": "031261",
     "title": "Blackpoll birds migration",
     "image_url": "di_images/031261.png",
@@ -23720,7 +22535,7 @@
     ]
   },
   {
-    "index": 68,
+    "index": 66,
     "qid": "031264",
     "title": "Input-Output Process",
     "image_url": "di_images/031264.png",
@@ -24086,7 +22901,7 @@
     ]
   },
   {
-    "index": 69,
+    "index": 67,
     "qid": "031266",
     "title": "Trading Goods in Ancient Egypt",
     "image_url": "di_images/031266.png",
@@ -24532,7 +23347,7 @@
     ]
   },
   {
-    "index": 70,
+    "index": 68,
     "qid": "031267",
     "title": "DELL Recycling",
     "image_url": "di_images/031267.png",
@@ -24918,369 +23733,7 @@
     ]
   },
   {
-    "index": 71,
-    "qid": "031269",
-    "title": "Luxembourg 2016",
-    "image_url": "di_images/031269.png",
-    "online_image_url": "https://upload.fireflyau.com/pte/old/i/20191211_6f096c49-4b53-4652-89b4-f322de4af7fd.png",
-    "text": "This bar chart shows information about Luxembourg 2016. If you look at male, the highest number can be found in 45-49 years old, which is around 23 thousand. The lowest figure is located in 100+ years old, which is about 1 thousand. If you look at female,  the highest number is for 35-39 years old, and the number is around 22 thousand. Furthermore, the male population may be higher than the female population. In summary, this chart uses real data to describe Luxembourg 2016.",
-    "word_count": 84,
-    "question_info": "【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：Male中最大的是45-49岁，大约25%\n内容点二：Male中最小的是95-99岁，大约2%\n内容点三：Female中最小的是100岁，大约3%\n",
-    "ai_keywords": "Luxembourg,age group,population,twenty sixteen,two thousand and sixteen,male,female,two thousand sixteen,fifty to fifty-four,thirty-five to thirty-nine,twenty,twenty-one,twenty-two,twenty-three,nineteen,forty-five to forty,bar,biggest,largest,highest,smallest,lowest,maximum,minimum,trend,increasing,decreasing,upward,downward,fluctuation,pink,blue,plus,twenty-sixteen,zero,five,ten,fifteen,twenty-five,one hundred,one hundred plus,ninety-five to ninety-nine,ninety to zero four,eighty-five to eighty-nine,eighty to eighty-four,seventy-five to seventy-nine,seventy to seventy-four,sixty-five to sixty-nine,sixty to sixty-four,fifty-five to fifty-nine,forty-five to forty-nine,forty to forty-four,thirty to thirty-four,twenty-five to twenty-nine,twenty to twenty-four,fifteen to nineteen,ten to fourteen,five to nine,zero to four,thirteen,one,two,three,four,six,seven,eight,nine,eleven,twelve,fourteen,sixteen,seventeen,eighteen,twenty-four,thousands",
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "极高频",
-      "difficulty": "普通",
-      "degree": 2,
-      "isForecast": true,
-      "tagHigh": true,
-      "tagNew": true,
-      "isJJ": true
-    },
-    "translation": "【满分范文参考译文】\n这张条形图显示了2016年卢森堡的信息。如果你看一下男性，最多可以发现45-49岁的人，大约是2.3万。最低的数字位于100+岁，也就是1000左右。如果以女性来看，35-39岁的人数最多，大约在2.2万人左右。此外，男性人口可能高于女性人口。综上所述，这张图表使用真实数据来描述卢森堡2016年。\n\n【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：Male中最大的是45-49岁，大约25%\n内容点二：Male中最小的是95-99岁，大约2%\n内容点三：Female中最小的是100岁，大约3%",
-    "audio_url": "di_audio/031269.mp3",
-    "audio_duration": 34,
-    "word_timings": [
-      [
-        0.1,
-        0.25
-      ],
-      [
-        0.362,
-        0.212
-      ],
-      [
-        0.588,
-        0.338
-      ],
-      [
-        0.938,
-        0.237
-      ],
-      [
-        1.188,
-        0.637
-      ],
-      [
-        1.837,
-        0.263
-      ],
-      [
-        2.112,
-        0.55
-      ],
-      [
-        2.675,
-        1.25
-      ],
-      [
-        4.787,
-        0.163
-      ],
-      [
-        4.963,
-        0.138
-      ],
-      [
-        5.112,
-        0.175
-      ],
-      [
-        5.3,
-        0.087
-      ],
-      [
-        5.4,
-        0.438
-      ],
-      [
-        5.95,
-        0.087
-      ],
-      [
-        6.05,
-        0.412
-      ],
-      [
-        6.475,
-        0.325
-      ],
-      [
-        6.812,
-        0.138
-      ],
-      [
-        6.963,
-        0.113
-      ],
-      [
-        7.088,
-        0.312
-      ],
-      [
-        7.412,
-        0.113
-      ],
-      [
-        7.537,
-        1.121
-      ],
-      [
-        8.659,
-        0.561
-      ],
-      [
-        9.22,
-        0.28
-      ],
-      [
-        9.7,
-        0.163
-      ],
-      [
-        9.875,
-        0.1
-      ],
-      [
-        9.988,
-        0.325
-      ],
-      [
-        10.325,
-        0.537
-      ],
-      [
-        10.875,
-        0.625
-      ],
-      [
-        12.363,
-        0.15
-      ],
-      [
-        12.525,
-        0.388
-      ],
-      [
-        12.925,
-        0.338
-      ],
-      [
-        13.275,
-        0.163
-      ],
-      [
-        13.45,
-        0.475
-      ],
-      [
-        13.938,
-        0.125
-      ],
-      [
-        14.075,
-        0.487
-      ],
-      [
-        14.575,
-        0.312
-      ],
-      [
-        14.9,
-        0.25
-      ],
-      [
-        15.162,
-        0.312
-      ],
-      [
-        15.65,
-        0.15
-      ],
-      [
-        15.812,
-        0.1
-      ],
-      [
-        15.925,
-        0.263
-      ],
-      [
-        16.2,
-        0.2
-      ],
-      [
-        16.413,
-        0.625
-      ],
-      [
-        17.9,
-        0.163
-      ],
-      [
-        18.075,
-        0.138
-      ],
-      [
-        18.225,
-        0.188
-      ],
-      [
-        18.425,
-        0.1
-      ],
-      [
-        18.538,
-        0.55
-      ],
-      [
-        19.2,
-        0.087
-      ],
-      [
-        19.3,
-        0.412
-      ],
-      [
-        19.725,
-        0.325
-      ],
-      [
-        20.062,
-        0.188
-      ],
-      [
-        20.262,
-        0.15
-      ],
-      [
-        20.425,
-        1.121
-      ],
-      [
-        21.546,
-        0.561
-      ],
-      [
-        22.107,
-        0.28
-      ],
-      [
-        22.637,
-        0.113
-      ],
-      [
-        22.762,
-        0.062
-      ],
-      [
-        22.837,
-        0.312
-      ],
-      [
-        23.163,
-        0.138
-      ],
-      [
-        23.312,
-        0.312
-      ],
-      [
-        23.637,
-        0.463
-      ],
-      [
-        24.113,
-        0.6
-      ],
-      [
-        25.575,
-        0.725
-      ],
-      [
-        26.413,
-        0.087
-      ],
-      [
-        26.512,
-        0.25
-      ],
-      [
-        26.775,
-        0.762
-      ],
-      [
-        27.55,
-        0.138
-      ],
-      [
-        27.7,
-        0.138
-      ],
-      [
-        27.85,
-        0.362
-      ],
-      [
-        28.225,
-        0.138
-      ],
-      [
-        28.375,
-        0.075
-      ],
-      [
-        28.462,
-        0.388
-      ],
-      [
-        28.863,
-        0.875
-      ],
-      [
-        30.6,
-        0.175
-      ],
-      [
-        30.788,
-        0.537
-      ],
-      [
-        31.462,
-        0.188
-      ],
-      [
-        31.663,
-        0.25
-      ],
-      [
-        31.925,
-        0.325
-      ],
-      [
-        32.263,
-        0.225
-      ],
-      [
-        32.5,
-        0.35
-      ],
-      [
-        32.862,
-        0.1
-      ],
-      [
-        32.975,
-        0.438
-      ],
-      [
-        33.425,
-        0.575
-      ]
-    ]
-  },
-  {
-    "index": 72,
+    "index": 69,
     "qid": "031273",
     "title": "Journeys in UK by purpose",
     "image_url": "di_images/031273.png",
@@ -25746,7 +24199,7 @@
     ]
   },
   {
-    "index": 73,
+    "index": 70,
     "qid": "031277",
     "title": "Tomato Life Cycle",
     "image_url": "di_images/031277.jpg",
@@ -26120,7 +24573,7 @@
     ]
   },
   {
-    "index": 74,
+    "index": 71,
     "qid": "031278",
     "title": "Garbage Classification",
     "image_url": "di_images/031278.jpg",
@@ -26145,7 +24598,7 @@
     "word_timings": []
   },
   {
-    "index": 75,
+    "index": 72,
     "qid": "031281",
     "title": "Income by Age and Gender in the UK",
     "image_url": "di_images/031281.png",
@@ -26551,7 +25004,7 @@
     ]
   },
   {
-    "index": 76,
+    "index": 73,
     "qid": "031282",
     "title": "Ice Shelf",
     "image_url": "di_images/031282.jpg",
@@ -26576,7 +25029,7 @@
     "word_timings": []
   },
   {
-    "index": 77,
+    "index": 74,
     "qid": "031284",
     "title": "Fruits",
     "image_url": "di_images/031284.png",
@@ -26950,7 +25403,7 @@
     ]
   },
   {
-    "index": 78,
+    "index": 75,
     "qid": "031290",
     "title": "World Population Density (Orange)",
     "image_url": "di_images/031290.png",
@@ -27308,7 +25761,7 @@
     ]
   },
   {
-    "index": 79,
+    "index": 76,
     "qid": "031293",
     "title": "Iron Age Hut",
     "image_url": "di_images/031293.png",
@@ -27678,7 +26131,7 @@
     ]
   },
   {
-    "index": 80,
+    "index": 77,
     "qid": "031297",
     "title": "Mosquito life cycle",
     "image_url": "di_images/031297.jpg",
@@ -28016,7 +26469,7 @@
     ]
   },
   {
-    "index": 81,
+    "index": 78,
     "qid": "031299",
     "title": "How to form acid rain (非原图)",
     "image_url": "di_images/031299.png",
@@ -28462,7 +26915,7 @@
     ]
   },
   {
-    "index": 82,
+    "index": 79,
     "qid": "031300",
     "title": "What is E-waste",
     "image_url": "di_images/031300.png",
@@ -28880,7 +27333,7 @@
     ]
   },
   {
-    "index": 83,
+    "index": 80,
     "qid": "031301",
     "title": "Internet users who accessed via a mobile phone ",
     "image_url": "di_images/031301.jpg",
@@ -29266,7 +27719,7 @@
     ]
   },
   {
-    "index": 84,
+    "index": 81,
     "qid": "031303",
     "title": "Gate",
     "image_url": "di_images/031303.jpg",
@@ -29620,7 +28073,7 @@
     ]
   },
   {
-    "index": 85,
+    "index": 82,
     "qid": "031304",
     "title": "Recycle of old plastic bottles",
     "image_url": "di_images/031304.jpg",
@@ -30014,7 +28467,7 @@
     ]
   },
   {
-    "index": 86,
+    "index": 83,
     "qid": "031305",
     "title": "Climate zones",
     "image_url": "di_images/031305.jpg",
@@ -30039,7 +28492,7 @@
     "word_timings": []
   },
   {
-    "index": 87,
+    "index": 84,
     "qid": "031308",
     "title": "The world's biggest chocolate consumers",
     "image_url": "di_images/031308.png",
@@ -30064,7 +28517,7 @@
     "word_timings": []
   },
   {
-    "index": 88,
+    "index": 85,
     "qid": "031310",
     "title": "Australian Domestic Airline Passengers",
     "image_url": "di_images/031310.jpg",
@@ -30458,7 +28911,7 @@
     ]
   },
   {
-    "index": 89,
+    "index": 86,
     "qid": "031312",
     "title": "Popularity of cultural websites in Scotland 2013",
     "image_url": "di_images/031312.png",
@@ -30836,7 +29289,7 @@
     ]
   },
   {
-    "index": 90,
+    "index": 87,
     "qid": "031318",
     "title": "Honey: Percentage of national production",
     "image_url": "di_images/031318.jpg",
@@ -31198,7 +29651,7 @@
     ]
   },
   {
-    "index": 91,
+    "index": 88,
     "qid": "031322",
     "title": "Supply chain management",
     "image_url": "di_images/031322.png",
@@ -31223,7 +29676,7 @@
     "word_timings": []
   },
   {
-    "index": 92,
+    "index": 89,
     "qid": "031323",
     "title": "Best food for brain health",
     "image_url": "di_images/031323.png",
@@ -31665,7 +30118,7 @@
     ]
   },
   {
-    "index": 93,
+    "index": 90,
     "qid": "031324",
     "title": "Buying school bags at a stationery shop",
     "image_url": "di_images/031324.jpg",
@@ -32095,7 +30548,7 @@
     ]
   },
   {
-    "index": 94,
+    "index": 91,
     "qid": "031325",
     "title": "Pet Ownership",
     "image_url": "di_images/031325.png",
@@ -32449,7 +30902,7 @@
     ]
   },
   {
-    "index": 95,
+    "index": 92,
     "qid": "031327",
     "title": "Tomato Processing Cycle",
     "image_url": "di_images/031327.png",
@@ -32474,7 +30927,7 @@
     "word_timings": []
   },
   {
-    "index": 96,
+    "index": 93,
     "qid": "031328",
     "title": "Average Travel Time to Work Ontario 2016",
     "image_url": "di_images/031328.png",
@@ -32848,7 +31301,7 @@
     ]
   },
   {
-    "index": 97,
+    "index": 94,
     "qid": "031329",
     "title": "New Zealand House Price",
     "image_url": "di_images/031329.png",
@@ -33246,7 +31699,7 @@
     ]
   },
   {
-    "index": 98,
+    "index": 95,
     "qid": "031331",
     "title": "Australia: Inbound visitors 2005 - 2006",
     "image_url": "di_images/031331.png",
@@ -33624,7 +32077,7 @@
     ]
   },
   {
-    "index": 99,
+    "index": 96,
     "qid": "031334",
     "title": "Wind Power Global Capacity",
     "image_url": "di_images/031334.png",
@@ -33958,7 +32411,7 @@
     ]
   },
   {
-    "index": 100,
+    "index": 97,
     "qid": "031337",
     "title": "Food Pyramid 1970s vs 2010s",
     "image_url": "di_images/031337.jpg",
@@ -33983,7 +32436,7 @@
     "word_timings": []
   },
   {
-    "index": 101,
+    "index": 98,
     "qid": "031340",
     "title": "Percentage of Volunteer Job",
     "image_url": "di_images/031340.png",
@@ -34357,405 +32810,7 @@
     ]
   },
   {
-    "index": 102,
-    "qid": "031345",
-    "title": "Salt Solution Mining Process",
-    "image_url": "di_images/031345.png",
-    "online_image_url": "https://upload.fireflyau.com/pte/SDI/i/09827d1e1496016dd19a2b5f6412747b.png",
-    "text": "This flow chart shows information about salt solution mining process. According to the picture we can see that firstly, the process starts from the first stage, which is called pumping water into the ground. Secondly, it goes to the second stage, which is about salt dissolving to form brine. Thirdly, it comes to the third stage, which is called brine being collected in the tank. Furthermore, the process comes to the ending point, which is about sending brine to the chemical plant. In summary, the process shows details about salt solution mining process.",
-    "word_count": 93,
-    "question_info": "【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：图片描述了盐的提取流程。\n内容点二：从左侧引入 Water（水），通过 Pump（泵） 注入地下。水注入 盐床（Salt bed） 中，将其中的盐溶解形成 Brine（盐水）。形成的盐水被泵回地面，通过管道输送至 Tank（储罐）。储罐中的盐水继续输送至 Chemical plant（化工厂） 进行后续加工。\n内容点三：图示结构横截面展示了地下盐床、岩层以及上下水流动路径。",
-    "ai_keywords": "salt dissolved to brine,salt bed,water,pump,brine,tank,chemical plant,salt,dissolved,bed,plant,black,green,purple,blue,process,flow,stage,step,phase,first,second,third,last,final,lastly,finally",
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "极高频",
-      "difficulty": "困难",
-      "degree": 3,
-      "isForecast": true,
-      "tagHigh": true,
-      "tagNew": true,
-      "isJJ": true
-    },
-    "translation": "【满分范文参考译文】\n该流程图显示了有关盐溶液开采过程的信息。从图中我们可以看到，首先，这个过程从第一阶段开始，这就是将水抽入地下。其次，进入第二阶段，即盐溶解形成盐水。第三，进入第三阶段，即盐水被收集到罐中。此外，该过程到达终点，即将盐水发送至化工厂。总之，该过程显示了盐溶液开采过程的详细信息。\n\n【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：图片描述了盐的提取流程。\n内容点二：从左侧引入 Water（水），通过 Pump（泵） 注入地下。水注入 盐床（Salt bed） 中，将其中的盐溶解形成 Brine（盐水）。形成的盐水被泵回地面，通过管道输送至 Tank（储罐）。储罐中的盐水继续输送至 Chemical plant（化工厂） 进行后续加工。\n内容点三：图示结构横截面展示了地下盐床、岩层以及上下水流动路径。",
-    "audio_url": "di_audio/031345.mp3",
-    "audio_duration": 34.02,
-    "word_timings": [
-      [
-        0.1,
-        0.25
-      ],
-      [
-        0.362,
-        0.188
-      ],
-      [
-        0.562,
-        0.362
-      ],
-      [
-        0.938,
-        0.237
-      ],
-      [
-        1.188,
-        0.6
-      ],
-      [
-        1.8,
-        0.263
-      ],
-      [
-        2.075,
-        0.25
-      ],
-      [
-        2.337,
-        0.475
-      ],
-      [
-        2.825,
-        0.312
-      ],
-      [
-        3.15,
-        0.738
-      ],
-      [
-        4.75,
-        0.425
-      ],
-      [
-        5.188,
-        0.075
-      ],
-      [
-        5.275,
-        0.1
-      ],
-      [
-        5.388,
-        0.425
-      ],
-      [
-        5.825,
-        0.113
-      ],
-      [
-        5.95,
-        0.175
-      ],
-      [
-        6.138,
-        0.163
-      ],
-      [
-        6.312,
-        0.188
-      ],
-      [
-        6.513,
-        0.588
-      ],
-      [
-        7.3,
-        0.1
-      ],
-      [
-        7.412,
-        0.438
-      ],
-      [
-        7.862,
-        0.338
-      ],
-      [
-        8.213,
-        0.138
-      ],
-      [
-        8.363,
-        0.087
-      ],
-      [
-        8.463,
-        0.338
-      ],
-      [
-        8.812,
-        0.525
-      ],
-      [
-        9.525,
-        0.15
-      ],
-      [
-        9.688,
-        0.113
-      ],
-      [
-        9.812,
-        0.287
-      ],
-      [
-        10.113,
-        0.388
-      ],
-      [
-        10.512,
-        0.325
-      ],
-      [
-        10.85,
-        0.2
-      ],
-      [
-        11.062,
-        0.1
-      ],
-      [
-        11.175,
-        0.512
-      ],
-      [
-        12.55,
-        0.688
-      ],
-      [
-        13.375,
-        0.1
-      ],
-      [
-        13.488,
-        0.225
-      ],
-      [
-        13.725,
-        0.087
-      ],
-      [
-        13.825,
-        0.1
-      ],
-      [
-        13.938,
-        0.375
-      ],
-      [
-        14.325,
-        0.525
-      ],
-      [
-        15,
-        0.163
-      ],
-      [
-        15.175,
-        0.087
-      ],
-      [
-        15.275,
-        0.275
-      ],
-      [
-        15.562,
-        0.275
-      ],
-      [
-        15.85,
-        0.475
-      ],
-      [
-        16.337,
-        0.1
-      ],
-      [
-        16.45,
-        0.263
-      ],
-      [
-        16.725,
-        0.463
-      ],
-      [
-        18.05,
-        0.537
-      ],
-      [
-        18.712,
-        0.113
-      ],
-      [
-        18.837,
-        0.25
-      ],
-      [
-        19.1,
-        0.087
-      ],
-      [
-        19.2,
-        0.1
-      ],
-      [
-        19.312,
-        0.3
-      ],
-      [
-        19.625,
-        0.537
-      ],
-      [
-        20.3,
-        0.15
-      ],
-      [
-        20.462,
-        0.113
-      ],
-      [
-        20.587,
-        0.287
-      ],
-      [
-        20.887,
-        0.338
-      ],
-      [
-        21.238,
-        0.225
-      ],
-      [
-        21.475,
-        0.463
-      ],
-      [
-        21.95,
-        0.075
-      ],
-      [
-        22.038,
-        0.087
-      ],
-      [
-        22.137,
-        0.5
-      ],
-      [
-        23.5,
-        0.713
-      ],
-      [
-        24.337,
-        0.1
-      ],
-      [
-        24.45,
-        0.487
-      ],
-      [
-        24.95,
-        0.287
-      ],
-      [
-        25.25,
-        0.087
-      ],
-      [
-        25.35,
-        0.1
-      ],
-      [
-        25.462,
-        0.325
-      ],
-      [
-        25.8,
-        0.463
-      ],
-      [
-        26.438,
-        0.15
-      ],
-      [
-        26.6,
-        0.1
-      ],
-      [
-        26.712,
-        0.287
-      ],
-      [
-        27.012,
-        0.362
-      ],
-      [
-        27.387,
-        0.338
-      ],
-      [
-        27.738,
-        0.087
-      ],
-      [
-        27.837,
-        0.1
-      ],
-      [
-        27.95,
-        0.4
-      ],
-      [
-        28.363,
-        0.55
-      ],
-      [
-        29.775,
-        0.175
-      ],
-      [
-        29.962,
-        0.512
-      ],
-      [
-        30.587,
-        0.1
-      ],
-      [
-        30.7,
-        0.425
-      ],
-      [
-        31.137,
-        0.263
-      ],
-      [
-        31.413,
-        0.5
-      ],
-      [
-        31.925,
-        0.263
-      ],
-      [
-        32.2,
-        0.25
-      ],
-      [
-        32.462,
-        0.487
-      ],
-      [
-        32.962,
-        0.325
-      ],
-      [
-        33.3,
-        0.725
-      ]
-    ]
-  },
-  {
-    "index": 103,
+    "index": 99,
     "qid": "031346",
     "title": "Wage Growth, Consumption, Household Debt",
     "image_url": "di_images/031346.jpeg",
@@ -35085,7 +33140,7 @@
     ]
   },
   {
-    "index": 104,
+    "index": 100,
     "qid": "031347",
     "title": "Pre-tax profits of the 1,000 Largest Banks",
     "image_url": "di_images/031347.jpg",
@@ -35483,409 +33538,7 @@
     ]
   },
   {
-    "index": 105,
-    "qid": "031349",
-    "title": "Estimated Number of U.S. Households that Own a Pet",
-    "image_url": "di_images/031349.png",
-    "online_image_url": "https://upload.fireflyau.com/pte/SDI/i/fa4f803581f46afc357cef3c47df9572.png",
-    "text": "This pie chart shows information about estimated number of US households that own a pet. Firstly, the highest number can be found in dog, which is around 65.1 million and 44.6%. Secondly, the second highest number is located in cat, which is about 46.5 million and 31.9%. Thirdly, the lowest figure is for horse and saltwater fish, and the number is around 2.2 million and 1.5%. Furthermore, small animal, bird and reptile have a similar value. In summary, this chart uses real data to describe estimated number of US households that own a pet.",
-    "word_count": 94,
-    "question_info": "【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：这张图展示了关于美国家庭宠物拥有情况的数据。\n内容点二：狗和猫是最主流宠物：狗是美国家庭拥有最多的宠物，约6510万户（占比44.6%）；猫紧随其后，约4650万户（占比31.9%），两者合计占所有宠物类型家庭的76.5%，占据绝对主导地位。\n内容点三：鱼类、小型动物和鸟类也较常见：淡水鱼（1110万户，7.6%）、小型动物（如仓鼠等，670万户，4.6%）、鸟类（610万户，4.2%）和爬行动物（600万户，4.1%）也有相当数量的家庭饲养，但普及率远低于猫狗。\n内容点四：小众宠物占比极低：马（220万户，1.5%）和海水鱼（220万户，1.5%）的拥有家庭数量最少，占比均仅为1.5%，属于相对小众的宠物选择。",
-    "ai_keywords": "Estimated Number of US Households that Own a Pet,dog,horse,saltwater fish,two point two million,two million,sixty-five point one million,sixty-five million,forty-four point six,forty-four,forty-five,one point five,one,two,percent,Estimated Number,US,Households,Own a Pet,pet,cat,bird,small animal,animal,reptile,fish,freshwater fish,thirty-one,thirty-one point nine,thirty-two,forty-six point five,forty-six,six point one,six,four point two,four,seven point six,seven,eight,four point one,four point six,five,million,orange,grey,blue,green,line/bar/pie/table,biggest,largest,highest,smallest,lowest,maximum,minimum,trend,increasing,decreasing,upward,downward,fluctuation",
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "极高频",
-      "difficulty": "困难",
-      "degree": 3,
-      "isForecast": true,
-      "tagHigh": true,
-      "tagNew": true,
-      "isJJ": true
-    },
-    "translation": "【满分范文参考译文】\n此饼图显示了有关拥有宠物的美国家庭的估计数量的信息。首先，狗的数量最多，约为6510万只，占44.6%。其次，第二高的数字位于cat，约为4650万，占31.9%。第三，马和咸水鱼的数量最少，大约为220万条和1.5%。此外，小动物、鸟类和爬行动物也具有相似的价值。总之，该图表使用真实数据来描述拥有宠物的美国家庭的估计数量。\n\n【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：这张图展示了关于美国家庭宠物拥有情况的数据。\n内容点二：狗和猫是最主流宠物：狗是美国家庭拥有最多的宠物，约6510万户（占比44.6%）；猫紧随其后，约4650万户（占比31.9%），两者合计占所有宠物类型家庭的76.5%，占据绝对主导地位。\n内容点三：鱼类、小型动物和鸟类也较常见：淡水鱼（1110万户，7.6%）、小型动物（如仓鼠等，670万户，4.6%）、鸟类（610万户，4.2%）和爬行动物（600万户，4.1%）也有相当数量的家庭饲养，但普及率远低于猫狗。\n内容点四：小众宠物占比极低：马（220万户，1.5%）和海水鱼（220万户，1.5%）的拥有家庭数量最少，占比均仅为1.5%，属于相对小众的宠物选择。",
-    "audio_url": "di_audio/031349.mp3",
-    "audio_duration": 40.91,
-    "word_timings": [
-      [
-        0.1,
-        0.237
-      ],
-      [
-        0.35,
-        0.175
-      ],
-      [
-        0.537,
-        0.362
-      ],
-      [
-        0.912,
-        0.237
-      ],
-      [
-        1.163,
-        0.625
-      ],
-      [
-        1.8,
-        0.275
-      ],
-      [
-        2.087,
-        0.525
-      ],
-      [
-        2.625,
-        0.287
-      ],
-      [
-        2.925,
-        0.075
-      ],
-      [
-        3.013,
-        0.3
-      ],
-      [
-        3.325,
-        0.6
-      ],
-      [
-        3.938,
-        0.15
-      ],
-      [
-        4.1,
-        0.113
-      ],
-      [
-        4.225,
-        0.05
-      ],
-      [
-        4.287,
-        0.487
-      ],
-      [
-        5.638,
-        0.65
-      ],
-      [
-        6.412,
-        0.075
-      ],
-      [
-        6.5,
-        0.388
-      ],
-      [
-        6.9,
-        0.312
-      ],
-      [
-        7.225,
-        0.15
-      ],
-      [
-        7.388,
-        0.113
-      ],
-      [
-        7.513,
-        0.275
-      ],
-      [
-        7.8,
-        0.113
-      ],
-      [
-        7.925,
-        0.438
-      ],
-      [
-        8.588,
-        0.163
-      ],
-      [
-        8.762,
-        0.1
-      ],
-      [
-        8.875,
-        0.35
-      ],
-      [
-        9.238,
-        1.225
-      ],
-      [
-        10.475,
-        0.463
-      ],
-      [
-        10.95,
-        0.113
-      ],
-      [
-        11.075,
-        1.812
-      ],
-      [
-        13.75,
-        0.688
-      ],
-      [
-        14.562,
-        0.1
-      ],
-      [
-        14.675,
-        0.35
-      ],
-      [
-        15.037,
-        0.375
-      ],
-      [
-        15.425,
-        0.325
-      ],
-      [
-        15.762,
-        0.175
-      ],
-      [
-        15.95,
-        0.438
-      ],
-      [
-        16.4,
-        0.125
-      ],
-      [
-        16.538,
-        0.45
-      ],
-      [
-        17.225,
-        0.163
-      ],
-      [
-        17.4,
-        0.087
-      ],
-      [
-        17.5,
-        0.287
-      ],
-      [
-        17.8,
-        1.25
-      ],
-      [
-        19.062,
-        0.5
-      ],
-      [
-        19.575,
-        0.125
-      ],
-      [
-        19.712,
-        1.725
-      ],
-      [
-        22.3,
-        0.55
-      ],
-      [
-        22.988,
-        0.1
-      ],
-      [
-        23.1,
-        0.388
-      ],
-      [
-        23.5,
-        0.325
-      ],
-      [
-        23.837,
-        0.15
-      ],
-      [
-        24,
-        0.15
-      ],
-      [
-        24.163,
-        0.338
-      ],
-      [
-        24.512,
-        0.175
-      ],
-      [
-        24.7,
-        0.487
-      ],
-      [
-        25.2,
-        0.475
-      ],
-      [
-        25.875,
-        0.1
-      ],
-      [
-        25.988,
-        0.075
-      ],
-      [
-        26.075,
-        0.325
-      ],
-      [
-        26.413,
-        0.138
-      ],
-      [
-        26.562,
-        0.35
-      ],
-      [
-        26.925,
-        0.662
-      ],
-      [
-        27.6,
-        0.463
-      ],
-      [
-        28.075,
-        0.138
-      ],
-      [
-        28.225,
-        1.4
-      ],
-      [
-        30.488,
-        0.713
-      ],
-      [
-        31.363,
-        0.362
-      ],
-      [
-        31.738,
-        0.463
-      ],
-      [
-        32.325,
-        0.237
-      ],
-      [
-        32.575,
-        0.113
-      ],
-      [
-        32.7,
-        0.537
-      ],
-      [
-        33.25,
-        0.15
-      ],
-      [
-        33.413,
-        0.062
-      ],
-      [
-        33.487,
-        0.425
-      ],
-      [
-        33.925,
-        0.537
-      ],
-      [
-        35.325,
-        0.188
-      ],
-      [
-        35.525,
-        0.537
-      ],
-      [
-        36.212,
-        0.2
-      ],
-      [
-        36.425,
-        0.263
-      ],
-      [
-        36.7,
-        0.338
-      ],
-      [
-        37.05,
-        0.225
-      ],
-      [
-        37.288,
-        0.35
-      ],
-      [
-        37.65,
-        0.1
-      ],
-      [
-        37.763,
-        0.425
-      ],
-      [
-        38.2,
-        0.525
-      ],
-      [
-        38.737,
-        0.287
-      ],
-      [
-        39.038,
-        0.075
-      ],
-      [
-        39.125,
-        0.3
-      ],
-      [
-        39.438,
-        0.588
-      ],
-      [
-        40.038,
-        0.163
-      ],
-      [
-        40.212,
-        0.125
-      ],
-      [
-        40.35,
-        0.05
-      ],
-      [
-        40.413,
-        0.5
-      ]
-    ]
-  },
-  {
-    "index": 106,
+    "index": 101,
     "qid": "031351",
     "title": "Market Share of Pet Services and Products",
     "image_url": "di_images/031351.png",
@@ -36247,7 +33900,7 @@
     ]
   },
   {
-    "index": 107,
+    "index": 102,
     "qid": "031352",
     "title": "Chemical experiment",
     "image_url": "di_images/031352.png",
@@ -36629,7 +34282,7 @@
     ]
   },
   {
-    "index": 108,
+    "index": 103,
     "qid": "031354",
     "title": "Population age groups in Australia",
     "image_url": "di_images/031354.jpg",
@@ -36971,7 +34624,7 @@
     ]
   },
   {
-    "index": 109,
+    "index": 104,
     "qid": "031357",
     "title": "Share of Companies",
     "image_url": "di_images/031357.png",
@@ -37313,7 +34966,7 @@
     ]
   },
   {
-    "index": 110,
+    "index": 105,
     "qid": "031360",
     "title": "Annual Height Increase",
     "image_url": "di_images/031360.png",
@@ -37723,7 +35376,7 @@
     ]
   },
   {
-    "index": 111,
+    "index": 106,
     "qid": "031361",
     "title": "Volunteer Rate by Age",
     "image_url": "di_images/031361.png",
@@ -38121,7 +35774,7 @@
     ]
   },
   {
-    "index": 112,
+    "index": 107,
     "qid": "031363",
     "title": "Comparison of Birth Rates between Male and Female on Sunday",
     "image_url": "di_images/031363.png",
@@ -38543,349 +36196,7 @@
     ]
   },
   {
-    "index": 113,
-    "qid": "031365",
-    "title": "Types of Clubs that People Belong to",
-    "image_url": "di_images/031365.png",
-    "online_image_url": "https://upload.fireflyau.com/pte/SDI/i/882551a0d49cdd031f2308ec67a457cf.png",
-    "text": "This bar chart shows information about the types of clubs that people belong to in the year ended March 2015. Firstly, the highest number can be found in sport, which is around 28%. Secondly, the second highest number is located in religion, which is about 21%. Thirdly, the lowest figure is for political clubs, and the number is around 3%. Furthermore, hobby accounts for approximately 16%. In summary, this chart uses real data to describe the types of clubs.",
-    "word_count": 79,
-    "question_info": "【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：这是一张横向柱状图，展示截至 2015年3月 人们参与不同类型俱乐部的比例。\n内容点二：体育类俱乐部的参与率最高，约为 27%。\n内容点三：宗教类俱乐部位居第二，占比约 21%。兴趣类俱乐部排名第三，参与率大约为 15%。志愿者类和职业类俱乐部的比例相近，均在 11%–12% 左右。社区类俱乐部参与率较低，约为 6%。其他类型俱乐部占比约 5%。\n内容点四：政治类俱乐部的参与比例最低，仅约 3%。",
-    "ai_keywords": "Types of clubs that people belong to Year ended March 2015,percent,sport,thirty,twenty,religion,political,hobby,volunteer,professional,neighborhood,other,five,ten,fifteen,twenty-five,increase,decrease,stable,fluctuate,bar",
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "极高频",
-      "difficulty": "普通",
-      "degree": 2,
-      "isForecast": true,
-      "tagHigh": true,
-      "tagNew": true,
-      "isJJ": true
-    },
-    "translation": "【满分范文参考译文】\n此条形图显示了截至 2015 年 3 月的一年中人们所属俱乐部类型的信息。首先，体育运动中的人数最多，约为 28%。其次，第二高的数字位于宗教领域，约为21%。第三，政治俱乐部的比例最低，约为3%。此外，爱好约占16%。综上所述，这张图表使用了真实的数据来描述俱乐部的类型。\n\n【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：这是一张横向柱状图，展示截至 2015年3月 人们参与不同类型俱乐部的比例。\n内容点二：体育类俱乐部的参与率最高，约为 27%。\n内容点三：宗教类俱乐部位居第二，占比约 21%。兴趣类俱乐部排名第三，参与率大约为 15%。志愿者类和职业类俱乐部的比例相近，均在 11%–12% 左右。社区类俱乐部参与率较低，约为 6%。其他类型俱乐部占比约 5%。\n内容点四：政治类俱乐部的参与比例最低，仅约 3%。",
-    "audio_url": "di_audio/031365.mp3",
-    "audio_duration": 33.19,
-    "word_timings": [
-      [
-        0.1,
-        0.25
-      ],
-      [
-        0.362,
-        0.225
-      ],
-      [
-        0.6,
-        0.338
-      ],
-      [
-        0.95,
-        0.25
-      ],
-      [
-        1.212,
-        0.637
-      ],
-      [
-        1.863,
-        0.225
-      ],
-      [
-        2.1,
-        0.075
-      ],
-      [
-        2.188,
-        0.3
-      ],
-      [
-        2.5,
-        0.087
-      ],
-      [
-        2.6,
-        0.45
-      ],
-      [
-        3.062,
-        0.15
-      ],
-      [
-        3.225,
-        0.287
-      ],
-      [
-        3.525,
-        0.338
-      ],
-      [
-        3.875,
-        0.113
-      ],
-      [
-        4,
-        0.1
-      ],
-      [
-        4.112,
-        0.062
-      ],
-      [
-        4.188,
-        0.375
-      ],
-      [
-        4.575,
-        0.237
-      ],
-      [
-        4.825,
-        0.517
-      ],
-      [
-        5.342,
-        1.033
-      ],
-      [
-        7.237,
-        0.65
-      ],
-      [
-        8.012,
-        0.075
-      ],
-      [
-        8.1,
-        0.4
-      ],
-      [
-        8.512,
-        0.312
-      ],
-      [
-        8.838,
-        0.138
-      ],
-      [
-        8.988,
-        0.113
-      ],
-      [
-        9.113,
-        0.275
-      ],
-      [
-        9.4,
-        0.113
-      ],
-      [
-        9.525,
-        0.475
-      ],
-      [
-        10.175,
-        0.163
-      ],
-      [
-        10.35,
-        0.1
-      ],
-      [
-        10.463,
-        0.325
-      ],
-      [
-        10.8,
-        1.125
-      ],
-      [
-        12.787,
-        0.688
-      ],
-      [
-        13.6,
-        0.1
-      ],
-      [
-        13.713,
-        0.35
-      ],
-      [
-        14.075,
-        0.375
-      ],
-      [
-        14.463,
-        0.325
-      ],
-      [
-        14.8,
-        0.175
-      ],
-      [
-        14.988,
-        0.45
-      ],
-      [
-        15.45,
-        0.1
-      ],
-      [
-        15.562,
-        0.55
-      ],
-      [
-        16.337,
-        0.175
-      ],
-      [
-        16.525,
-        0.1
-      ],
-      [
-        16.637,
-        0.275
-      ],
-      [
-        16.925,
-        1.175
-      ],
-      [
-        18.962,
-        0.55
-      ],
-      [
-        19.65,
-        0.1
-      ],
-      [
-        19.762,
-        0.388
-      ],
-      [
-        20.163,
-        0.325
-      ],
-      [
-        20.5,
-        0.163
-      ],
-      [
-        20.675,
-        0.138
-      ],
-      [
-        20.825,
-        0.475
-      ],
-      [
-        21.312,
-        0.537
-      ],
-      [
-        22.075,
-        0.113
-      ],
-      [
-        22.2,
-        0.062
-      ],
-      [
-        22.275,
-        0.325
-      ],
-      [
-        22.613,
-        0.15
-      ],
-      [
-        22.775,
-        0.325
-      ],
-      [
-        23.113,
-        0.875
-      ],
-      [
-        24.85,
-        0.725
-      ],
-      [
-        25.775,
-        0.25
-      ],
-      [
-        26.038,
-        0.412
-      ],
-      [
-        26.462,
-        0.138
-      ],
-      [
-        26.613,
-        0.65
-      ],
-      [
-        27.275,
-        1.113
-      ],
-      [
-        29.25,
-        0.175
-      ],
-      [
-        29.438,
-        0.537
-      ],
-      [
-        30.113,
-        0.2
-      ],
-      [
-        30.325,
-        0.25
-      ],
-      [
-        30.587,
-        0.338
-      ],
-      [
-        30.938,
-        0.225
-      ],
-      [
-        31.175,
-        0.35
-      ],
-      [
-        31.538,
-        0.1
-      ],
-      [
-        31.65,
-        0.4
-      ],
-      [
-        32.062,
-        0.075
-      ],
-      [
-        32.15,
-        0.3
-      ],
-      [
-        32.462,
-        0.075
-      ],
-      [
-        32.55,
-        0.637
-      ]
-    ]
-  },
-  {
-    "index": 114,
+    "index": 108,
     "qid": "031367",
     "title": "Legal Immigrants by Region",
     "image_url": "di_images/031367.png",
@@ -39291,7 +36602,7 @@
     ]
   },
   {
-    "index": 115,
+    "index": 109,
     "qid": "031371",
     "title": "Weekly Household Spending",
     "image_url": "di_images/031371.png",
@@ -39685,7 +36996,7 @@
     ]
   },
   {
-    "index": 116,
+    "index": 110,
     "qid": "031375",
     "title": "Population Growth of Canada",
     "image_url": "di_images/031375.jpg",
@@ -39991,7 +37302,7 @@
     ]
   },
   {
-    "index": 117,
+    "index": 111,
     "qid": "031376",
     "title": "Australia Visitors by Airplane",
     "image_url": "di_images/031376.png",
@@ -40289,7 +37600,7 @@
     ]
   },
   {
-    "index": 118,
+    "index": 112,
     "qid": "031378",
     "title": "Causes & Reason People Delete APP",
     "image_url": "di_images/031378.png",
@@ -40314,7 +37625,7 @@
     "word_timings": []
   },
   {
-    "index": 119,
+    "index": 113,
     "qid": "031381",
     "title": "UK Unemployment Rate",
     "image_url": "di_images/031381.png",
@@ -40644,7 +37955,7 @@
     ]
   },
   {
-    "index": 120,
+    "index": 114,
     "qid": "031383",
     "title": "Population Density in Australia（purple）",
     "image_url": "di_images/031383.jpeg",
@@ -40966,7 +38277,7 @@
     ]
   },
   {
-    "index": 121,
+    "index": 115,
     "qid": "031384",
     "title": "Renewable Energy Share by Sector",
     "image_url": "di_images/031384.jpg",
@@ -41320,7 +38631,7 @@
     ]
   },
   {
-    "index": 122,
+    "index": 116,
     "qid": "031386",
     "title": "France Electricity Production",
     "image_url": "di_images/031386.jpeg",
@@ -41718,7 +39029,7 @@
     ]
   },
   {
-    "index": 123,
+    "index": 117,
     "qid": "031388",
     "title": "Estimated Sales of Jeans Next Year in Turkey",
     "image_url": "di_images/031388.jpg",
@@ -42112,7 +39423,7 @@
     ]
   },
   {
-    "index": 124,
+    "index": 118,
     "qid": "031389",
     "title": "Rainfall and Temperature",
     "image_url": "di_images/031389.png",
@@ -42458,7 +39769,7 @@
     ]
   },
   {
-    "index": 125,
+    "index": 119,
     "qid": "031391",
     "title": "Number of vehicles licensed (million) in Britain",
     "image_url": "di_images/031391.png",
@@ -42844,7 +40155,7 @@
     ]
   },
   {
-    "index": 126,
+    "index": 120,
     "qid": "031392",
     "title": "Egg Freshness Test in Water",
     "image_url": "di_images/031392.png",
@@ -43202,7 +40513,7 @@
     ]
   },
   {
-    "index": 127,
+    "index": 121,
     "qid": "031393",
     "title": "Customer Purchasing Reasons",
     "image_url": "di_images/031393.png",
@@ -43520,7 +40831,7 @@
     ]
   },
   {
-    "index": 128,
+    "index": 122,
     "qid": "031394",
     "title": "River Cross Section",
     "image_url": "di_images/031394.jpg",
@@ -43906,7 +41217,7 @@
     ]
   },
   {
-    "index": 129,
+    "index": 123,
     "qid": "031395",
     "title": "Online Purchase Trend",
     "image_url": "di_images/031395.jpg",
@@ -43931,7 +41242,7 @@
     "word_timings": []
   },
   {
-    "index": 130,
+    "index": 124,
     "qid": "031396",
     "title": "Gallery Map",
     "image_url": "di_images/031396.jpg",
@@ -43956,7 +41267,7 @@
     "word_timings": []
   },
   {
-    "index": 131,
+    "index": 125,
     "qid": "031397",
     "title": "Food Pyramid v2",
     "image_url": "di_images/031397.jpg",
@@ -44342,7 +41653,7 @@
     ]
   },
   {
-    "index": 132,
+    "index": 126,
     "qid": "031398",
     "title": "Meeting Room Floor Plan",
     "image_url": "di_images/031398.jpg",
@@ -44732,7 +42043,7 @@
     ]
   },
   {
-    "index": 133,
+    "index": 127,
     "qid": "031399",
     "title": "Leisure Center Usage Over 1 Day",
     "image_url": "di_images/031399.png",
@@ -45102,7 +42413,7 @@
     ]
   },
   {
-    "index": 134,
+    "index": 128,
     "qid": "031400",
     "title": "Renewable Electricity Generation",
     "image_url": "di_images/031400.jpg",
@@ -45464,7 +42775,7 @@
     ]
   },
   {
-    "index": 135,
+    "index": 129,
     "qid": "031401",
     "title": "Overseas-born People in Australia",
     "image_url": "di_images/031401.png",
@@ -45862,7 +43173,7 @@
     ]
   },
   {
-    "index": 136,
+    "index": 130,
     "qid": "031403",
     "title": "Rainforest Layer",
     "image_url": "di_images/031403.png",
@@ -46500,7 +43811,7 @@
     ]
   },
   {
-    "index": 137,
+    "index": 131,
     "qid": "031404",
     "title": "Velocity",
     "image_url": "di_images/031404.jpg",
@@ -46525,7 +43836,7 @@
     "word_timings": []
   },
   {
-    "index": 138,
+    "index": 132,
     "qid": "031405",
     "title": "US Insurance",
     "image_url": "di_images/031405.png",
@@ -46550,7 +43861,747 @@
     "word_timings": []
   },
   {
-    "index": 139,
+    "index": 133,
+    "qid": "031012",
+    "title": "Average annual hospital visits per capita Glasgow residents",
+    "image_url": "di_images/031012.png",
+    "online_image_url": "https://upload.fireflyau.com/pte/old/i/20181125075920_ce20bcb4-7300-401b-af26-b2ac1657a0ec.png",
+    "text": "This line chart shows information about average number of annual hospital visits per capita Glasgow residents. Firstly, the highest number can be found in 2010, which is around 3.25. Secondly, the second highest number is located in 2000, which is about 3. Thirdly, the lowest figure is for 1970, and the number is around 2.2. Furthermore, there may be an increasing trend in the future. In summary, this chart uses real data to describe average number of annual hospital visits per capita Glasgow residents.",
+    "word_count": 84,
+    "question_info": "【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：描述最大值（2010年医院访问人数最多，数值为3.1）\n内容点二：描述最小值（1960年医院访问认罪最低，数值是2.4）\n内容点三：描述趋势（1960年到2010年从2.4上升到了3.1）\n",
+    "ai_keywords": "Average annual hospital visits per capita Glasgow residents,twenty ten,two thousand and ten,three,three point two,three point one,two thousand,nineteen seventy,two,two point one,Average annual hospital visits,Average annual hospital visits per capita,nineteen ninety,two point five,nineteen eighty,two point four,two point three,nineteen sixty,zero,point five,zero point five,one,one point five,line,largest,highest,smallest,lowest,maximum,minimum,trend,increasing,decreasing,upward,downward,fluctuation",
+    "tags": {
+      "tier": "极限预测",
+      "frequency": "预测新增",
+      "difficulty": "简单",
+      "degree": 1,
+      "isForecast": true,
+      "tagHigh": false,
+      "tagNew": true,
+      "isJJ": true
+    },
+    "translation": "【满分范文参考译文】\n此折线图显示了格拉斯哥居民人均每年就诊医院次数的信息。首先，2010年的数字最高，约为3.25。其次，第二高的是2000年，约为3。第三，最低的是1970年，约为2.2。而且，未来可能还会有增加的趋势。总之，该图表使用真实数据来描述格拉斯哥居民人均每年就诊的医院次数。\n\n【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：描述最大值（2010年医院访问人数最多，数值为3.1）\n内容点二：描述最小值（1960年医院访问认罪最低，数值是2.4）\n内容点三：描述趋势（1960年到2010年从2.4上升到了3.1）",
+    "audio_url": "di_audio/031012.mp3",
+    "audio_duration": 35.25,
+    "word_timings": [
+      [
+        0.1,
+        0.25
+      ],
+      [
+        0.362,
+        0.25
+      ],
+      [
+        0.625,
+        0.312
+      ],
+      [
+        0.95,
+        0.25
+      ],
+      [
+        1.212,
+        0.65
+      ],
+      [
+        1.875,
+        0.275
+      ],
+      [
+        2.163,
+        0.35
+      ],
+      [
+        2.525,
+        0.287
+      ],
+      [
+        2.825,
+        0.1
+      ],
+      [
+        2.938,
+        0.388
+      ],
+      [
+        3.337,
+        0.487
+      ],
+      [
+        3.837,
+        0.4
+      ],
+      [
+        4.25,
+        0.163
+      ],
+      [
+        4.425,
+        0.412
+      ],
+      [
+        4.85,
+        0.45
+      ],
+      [
+        5.312,
+        0.688
+      ],
+      [
+        6.862,
+        0.65
+      ],
+      [
+        7.638,
+        0.075
+      ],
+      [
+        7.725,
+        0.412
+      ],
+      [
+        8.15,
+        0.325
+      ],
+      [
+        8.488,
+        0.138
+      ],
+      [
+        8.637,
+        0.113
+      ],
+      [
+        8.762,
+        0.325
+      ],
+      [
+        9.1,
+        0.213
+      ],
+      [
+        9.312,
+        0.85
+      ],
+      [
+        10.363,
+        0.175
+      ],
+      [
+        10.55,
+        0.1
+      ],
+      [
+        10.662,
+        0.325
+      ],
+      [
+        11,
+        1.288
+      ],
+      [
+        13.15,
+        0.7
+      ],
+      [
+        13.963,
+        0.1
+      ],
+      [
+        14.075,
+        0.35
+      ],
+      [
+        14.438,
+        0.375
+      ],
+      [
+        14.825,
+        0.325
+      ],
+      [
+        15.162,
+        0.175
+      ],
+      [
+        15.35,
+        0.463
+      ],
+      [
+        15.825,
+        0.163
+      ],
+      [
+        15.987,
+        0.65
+      ],
+      [
+        16.812,
+        0.163
+      ],
+      [
+        16.988,
+        0.1
+      ],
+      [
+        17.1,
+        0.275
+      ],
+      [
+        17.387,
+        0.438
+      ],
+      [
+        18.688,
+        0.537
+      ],
+      [
+        19.363,
+        0.1
+      ],
+      [
+        19.475,
+        0.388
+      ],
+      [
+        19.875,
+        0.35
+      ],
+      [
+        20.238,
+        0.175
+      ],
+      [
+        20.425,
+        0.138
+      ],
+      [
+        20.575,
+        0.975
+      ],
+      [
+        21.775,
+        0.125
+      ],
+      [
+        21.913,
+        0.062
+      ],
+      [
+        21.988,
+        0.325
+      ],
+      [
+        22.325,
+        0.15
+      ],
+      [
+        22.488,
+        0.338
+      ],
+      [
+        22.837,
+        0.887
+      ],
+      [
+        24.587,
+        0.738
+      ],
+      [
+        25.45,
+        0.15
+      ],
+      [
+        25.613,
+        0.15
+      ],
+      [
+        25.775,
+        0.138
+      ],
+      [
+        25.925,
+        0.1
+      ],
+      [
+        26.038,
+        0.537
+      ],
+      [
+        26.587,
+        0.325
+      ],
+      [
+        26.925,
+        0.075
+      ],
+      [
+        27.012,
+        0.075
+      ],
+      [
+        27.1,
+        0.588
+      ],
+      [
+        28.55,
+        0.175
+      ],
+      [
+        28.738,
+        0.537
+      ],
+      [
+        29.425,
+        0.2
+      ],
+      [
+        29.637,
+        0.25
+      ],
+      [
+        29.9,
+        0.338
+      ],
+      [
+        30.25,
+        0.225
+      ],
+      [
+        30.488,
+        0.35
+      ],
+      [
+        30.85,
+        0.1
+      ],
+      [
+        30.962,
+        0.425
+      ],
+      [
+        31.4,
+        0.362
+      ],
+      [
+        31.775,
+        0.287
+      ],
+      [
+        32.075,
+        0.1
+      ],
+      [
+        32.188,
+        0.388
+      ],
+      [
+        32.587,
+        0.487
+      ],
+      [
+        33.087,
+        0.375
+      ],
+      [
+        33.475,
+        0.163
+      ],
+      [
+        33.65,
+        0.412
+      ],
+      [
+        34.075,
+        0.475
+      ],
+      [
+        34.562,
+        0.688
+      ]
+    ]
+  },
+  {
+    "index": 134,
+    "qid": "031079",
+    "title": "GDP Accumulated Growth in Percentage in Constant Prices",
+    "image_url": "di_images/031079.png",
+    "online_image_url": "https://upload.fireflyau.com/pte/old/i/20181125085852_2eaa27cc-f4cd-4a3b-84ed-c6bcd599339a.png",
+    "text": "This bar chart shows information about GDP accumulated growth in percentage in constant prices. If you look at 1990-1998, the highest number can be found in China, which is around 125%. The lowest figure is located in Sweden, which is about 5%. If you look at 1990-2006,  the highest number is for China, and the number is around 325%. Furthermore, most countries and regions have the GDP accumelated growth below 100%. In summary, this chart uses real data to describe GDP accumulated growth in percentage in constant prices.",
+    "word_count": 88,
+    "question_info": "【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：1990-1998年，China的GDP增长速度最高有130%，瑞士最低，有6%\n内容点二：1990-2006,年，Chian的GDP增长速度最高，有330%，意大利最低，有15%。\n",
+    "ai_keywords": "GDP Accumulated Growth in Percentage in Constant Prices,china,three hundred and thirty percent,one hundred and thirty percent,finland,ten percent,switzerland,five percent,nineteen ninety to nineteen ninety-eight,nineteen ninety to two thousand and six,australia,austria,belgium,brazil,canada,denmark,france,germany,greece,hong kong,iceland,india,ireland,israel,italy,japan,korea,mexico,netherlands,new zealand,norway,poland,singapore,south africa,spain,sweden,taiwan,turkey,united kingdom,united states,zero percent,fifty percent,one hundred percent,one hundred and fifty percent,two hundred percent,two hundred and fifty percent,three hundred percent,three hundred and fifty percent,bar,largest,highest,smallest,lowest,maximum,minimum,trend,increasing,decreasing,upward,downward,fluctuation",
+    "tags": {
+      "tier": "极限预测",
+      "frequency": "预测新增",
+      "difficulty": "普通",
+      "degree": 2,
+      "isForecast": true,
+      "tagHigh": false,
+      "tagNew": true,
+      "isJJ": true
+    },
+    "translation": "【满分范文参考译文】\n该条形图显示了以不变价格计算的 GDP 累计增长百分比信息。如果你看看1990-1998年，中国的比例最高，约为125%。最低的数字位于瑞典，约为 5%。如果你看一下1990-2006年，这个数字最高的是中国，大约是325%。此外，大多数国家和地区GDP累计增速低于100%。总之，该图表使用真实数据来描述以不变价格计算的 GDP 累计增长百分比。\n\n【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：1990-1998年，China的GDP增长速度最高有130%，瑞士最低，有6%\n内容点二：1990-2006,年，Chian的GDP增长速度最高，有330%，意大利最低，有15%。",
+    "audio_url": "di_audio/031079.mp3",
+    "audio_duration": 40.45,
+    "word_timings": [
+      [
+        0.1,
+        0.25
+      ],
+      [
+        0.362,
+        0.212
+      ],
+      [
+        0.588,
+        0.338
+      ],
+      [
+        0.938,
+        0.237
+      ],
+      [
+        1.188,
+        0.65
+      ],
+      [
+        1.85,
+        0.287
+      ],
+      [
+        2.15,
+        0.55
+      ],
+      [
+        2.712,
+        0.688
+      ],
+      [
+        3.413,
+        0.388
+      ],
+      [
+        3.812,
+        0.1
+      ],
+      [
+        3.925,
+        0.537
+      ],
+      [
+        4.475,
+        0.113
+      ],
+      [
+        4.6,
+        0.438
+      ],
+      [
+        5.05,
+        0.688
+      ],
+      [
+        6.6,
+        0.163
+      ],
+      [
+        6.775,
+        0.138
+      ],
+      [
+        6.925,
+        0.175
+      ],
+      [
+        7.112,
+        0.1
+      ],
+      [
+        7.225,
+        1.975
+      ],
+      [
+        9.412,
+        0.087
+      ],
+      [
+        9.512,
+        0.388
+      ],
+      [
+        9.912,
+        0.338
+      ],
+      [
+        10.262,
+        0.15
+      ],
+      [
+        10.425,
+        0.113
+      ],
+      [
+        10.55,
+        0.275
+      ],
+      [
+        10.838,
+        0.113
+      ],
+      [
+        10.963,
+        0.438
+      ],
+      [
+        11.662,
+        0.163
+      ],
+      [
+        11.838,
+        0.1
+      ],
+      [
+        11.95,
+        0.338
+      ],
+      [
+        12.3,
+        1.7
+      ],
+      [
+        14.863,
+        0.15
+      ],
+      [
+        15.025,
+        0.375
+      ],
+      [
+        15.412,
+        0.325
+      ],
+      [
+        15.75,
+        0.15
+      ],
+      [
+        15.912,
+        0.45
+      ],
+      [
+        16.375,
+        0.113
+      ],
+      [
+        16.5,
+        0.412
+      ],
+      [
+        17.087,
+        0.15
+      ],
+      [
+        17.25,
+        0.087
+      ],
+      [
+        17.35,
+        0.275
+      ],
+      [
+        17.637,
+        0.9
+      ],
+      [
+        19.4,
+        0.163
+      ],
+      [
+        19.575,
+        0.138
+      ],
+      [
+        19.725,
+        0.175
+      ],
+      [
+        19.913,
+        0.087
+      ],
+      [
+        20.012,
+        1.925
+      ],
+      [
+        22.125,
+        0.087
+      ],
+      [
+        22.225,
+        0.388
+      ],
+      [
+        22.625,
+        0.3
+      ],
+      [
+        22.938,
+        0.15
+      ],
+      [
+        23.1,
+        0.138
+      ],
+      [
+        23.25,
+        0.487
+      ],
+      [
+        23.975,
+        0.125
+      ],
+      [
+        24.113,
+        0.062
+      ],
+      [
+        24.188,
+        0.325
+      ],
+      [
+        24.525,
+        0.138
+      ],
+      [
+        24.675,
+        0.325
+      ],
+      [
+        25.012,
+        1.762
+      ],
+      [
+        27.637,
+        0.713
+      ],
+      [
+        28.512,
+        0.275
+      ],
+      [
+        28.8,
+        0.4
+      ],
+      [
+        29.212,
+        0.1
+      ],
+      [
+        29.325,
+        0.438
+      ],
+      [
+        29.775,
+        0.125
+      ],
+      [
+        29.913,
+        0.087
+      ],
+      [
+        30.012,
+        0.562
+      ],
+      [
+        30.587,
+        0.637
+      ],
+      [
+        31.238,
+        0.338
+      ],
+      [
+        31.587,
+        0.338
+      ],
+      [
+        31.938,
+        1.163
+      ],
+      [
+        33.962,
+        0.175
+      ],
+      [
+        34.15,
+        0.537
+      ],
+      [
+        34.812,
+        0.2
+      ],
+      [
+        35.025,
+        0.25
+      ],
+      [
+        35.288,
+        0.325
+      ],
+      [
+        35.625,
+        0.225
+      ],
+      [
+        35.862,
+        0.338
+      ],
+      [
+        36.212,
+        0.1
+      ],
+      [
+        36.325,
+        0.438
+      ],
+      [
+        36.775,
+        0.613
+      ],
+      [
+        37.4,
+        0.688
+      ],
+      [
+        38.1,
+        0.388
+      ],
+      [
+        38.5,
+        0.1
+      ],
+      [
+        38.612,
+        0.537
+      ],
+      [
+        39.163,
+        0.125
+      ],
+      [
+        39.3,
+        0.438
+      ],
+      [
+        39.75,
+        0.7
+      ]
+    ]
+  },
+  {
+    "index": 135,
     "qid": "031136",
     "title": "Enrollments on Six Courses",
     "image_url": "di_images/031136.png",
@@ -46575,7 +44626,1981 @@
     "word_timings": []
   },
   {
+    "index": 136,
+    "qid": "031226",
+    "title": "Where the Air Pollution Comes From",
+    "image_url": "di_images/031226.png",
+    "online_image_url": "https://upload.fireflyau.com/pte/old/i/20181125103447_d3746b7b-2d9d-45aa-83af-6064f4822fd1.png",
+    "text": "This flow chart shows information about where the air pollution comes from. According to the picture we can see that firstly, the process starts from the first stage, which is called emissions to atmosphere, nitrogen oxides and sulfur dioxide from industry, transportation, ore smelting and power generation. Secondly, it goes to the second stage, which is about chemical transformation, nitric acid and sulfuric acid. Thirdly, it comes to the third stage, which is called particulates gases dry fallout or condensation. Furthermore, the process comes to the ending point, which is about precipitation, acid rain, fog, snow, and mist. In summary, the process shows details about where the air pollution comes from. ",
+    "word_count": 111,
+    "question_info": "【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n根据流程图箭头回答\n",
+    "ai_keywords": "industry,transportation,ore smelting,power generation,emissions to atmosphere,chemical transformation,dry fallout,particulates,gases,condensation,precipitation,acid rain,fog,snow and mist,nitrogeon oxides,sulfur dioxide,nitric acid,sulfuric acid,pollution,emissions,atmosphere,nitrogen,oxides,sulfur,dioxide,air,chemical,transformation,nitric,acid,sulfuric,orange,blue,green,grey,arrow,process,flow,stage,step,phase,first,second,third,last,final,lastly,finally",
+    "tags": {
+      "tier": "极限预测",
+      "frequency": "预测新增",
+      "difficulty": "普通",
+      "degree": 2,
+      "isForecast": true,
+      "tagHigh": false,
+      "tagNew": true,
+      "isJJ": true
+    },
+    "translation": "【满分范文参考译文】\n该流程图显示了有关空气污染来源的信息。从图中我们可以看到，首先，这个过程从第一阶段开始，即工业、交通、矿石冶炼和发电向大气排放的氮氧化物和二氧化硫。其次，进入第二阶段，化学转化，硝酸和硫酸。第三，进入第三阶段，称为颗粒气体干燥沉降或凝结。再者，这个过程到了终点，就是降水、酸雨、雾、雪、雾。总之，该过程显示了有关空气污染来源的详细信息。\n\n【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n根据流程图箭头回答",
+    "audio_url": "di_audio/031226.mp3",
+    "audio_duration": 45.4,
+    "word_timings": [
+      [
+        0.1,
+        0.263
+      ],
+      [
+        0.375,
+        0.188
+      ],
+      [
+        0.575,
+        0.375
+      ],
+      [
+        0.963,
+        0.25
+      ],
+      [
+        1.225,
+        0.625
+      ],
+      [
+        1.863,
+        0.237
+      ],
+      [
+        2.112,
+        0.138
+      ],
+      [
+        2.263,
+        0.087
+      ],
+      [
+        2.362,
+        0.175
+      ],
+      [
+        2.55,
+        0.475
+      ],
+      [
+        3.038,
+        0.275
+      ],
+      [
+        3.325,
+        0.375
+      ],
+      [
+        4.562,
+        0.425
+      ],
+      [
+        5,
+        0.075
+      ],
+      [
+        5.088,
+        0.1
+      ],
+      [
+        5.2,
+        0.412
+      ],
+      [
+        5.625,
+        0.125
+      ],
+      [
+        5.763,
+        0.175
+      ],
+      [
+        5.95,
+        0.163
+      ],
+      [
+        6.125,
+        0.175
+      ],
+      [
+        6.312,
+        0.588
+      ],
+      [
+        7.062,
+        0.1
+      ],
+      [
+        7.175,
+        0.45
+      ],
+      [
+        7.638,
+        0.35
+      ],
+      [
+        8,
+        0.15
+      ],
+      [
+        8.162,
+        0.087
+      ],
+      [
+        8.262,
+        0.338
+      ],
+      [
+        8.613,
+        0.525
+      ],
+      [
+        9.338,
+        0.163
+      ],
+      [
+        9.512,
+        0.113
+      ],
+      [
+        9.637,
+        0.263
+      ],
+      [
+        9.912,
+        0.5
+      ],
+      [
+        10.425,
+        0.1
+      ],
+      [
+        10.537,
+        0.725
+      ],
+      [
+        11.488,
+        0.5
+      ],
+      [
+        12,
+        0.7
+      ],
+      [
+        12.8,
+        0.163
+      ],
+      [
+        12.975,
+        0.35
+      ],
+      [
+        13.338,
+        0.625
+      ],
+      [
+        13.975,
+        0.163
+      ],
+      [
+        14.15,
+        0.6
+      ],
+      [
+        14.925,
+        0.963
+      ],
+      [
+        16.1,
+        0.138
+      ],
+      [
+        16.25,
+        0.575
+      ],
+      [
+        16.837,
+        0.113
+      ],
+      [
+        16.962,
+        0.325
+      ],
+      [
+        17.3,
+        0.825
+      ],
+      [
+        18.988,
+        0.675
+      ],
+      [
+        19.812,
+        0.1
+      ],
+      [
+        19.925,
+        0.225
+      ],
+      [
+        20.163,
+        0.087
+      ],
+      [
+        20.262,
+        0.1
+      ],
+      [
+        20.375,
+        0.375
+      ],
+      [
+        20.762,
+        0.525
+      ],
+      [
+        21.462,
+        0.163
+      ],
+      [
+        21.637,
+        0.087
+      ],
+      [
+        21.738,
+        0.275
+      ],
+      [
+        22.025,
+        0.388
+      ],
+      [
+        22.425,
+        0.925
+      ],
+      [
+        23.587,
+        0.375
+      ],
+      [
+        23.975,
+        0.463
+      ],
+      [
+        24.525,
+        0.15
+      ],
+      [
+        24.688,
+        0.575
+      ],
+      [
+        25.275,
+        0.5
+      ],
+      [
+        26.637,
+        0.537
+      ],
+      [
+        27.275,
+        0.1
+      ],
+      [
+        27.387,
+        0.25
+      ],
+      [
+        27.65,
+        0.075
+      ],
+      [
+        27.738,
+        0.1
+      ],
+      [
+        27.85,
+        0.3
+      ],
+      [
+        28.163,
+        0.525
+      ],
+      [
+        28.825,
+        0.15
+      ],
+      [
+        28.988,
+        0.1
+      ],
+      [
+        29.1,
+        0.237
+      ],
+      [
+        29.35,
+        0.675
+      ],
+      [
+        30.038,
+        0.425
+      ],
+      [
+        30.475,
+        0.225
+      ],
+      [
+        30.712,
+        0.45
+      ],
+      [
+        31.175,
+        0.1
+      ],
+      [
+        31.288,
+        0.95
+      ],
+      [
+        33.1,
+        0.738
+      ],
+      [
+        33.975,
+        0.1
+      ],
+      [
+        34.087,
+        0.487
+      ],
+      [
+        34.587,
+        0.287
+      ],
+      [
+        34.888,
+        0.087
+      ],
+      [
+        34.987,
+        0.1
+      ],
+      [
+        35.1,
+        0.338
+      ],
+      [
+        35.45,
+        0.463
+      ],
+      [
+        36.087,
+        0.163
+      ],
+      [
+        36.263,
+        0.087
+      ],
+      [
+        36.362,
+        0.25
+      ],
+      [
+        36.625,
+        0.912
+      ],
+      [
+        37.7,
+        0.325
+      ],
+      [
+        38.038,
+        0.35
+      ],
+      [
+        38.562,
+        0.388
+      ],
+      [
+        39.1,
+        0.512
+      ],
+      [
+        39.788,
+        0.15
+      ],
+      [
+        39.95,
+        0.55
+      ],
+      [
+        41.362,
+        0.175
+      ],
+      [
+        41.55,
+        0.512
+      ],
+      [
+        42.188,
+        0.1
+      ],
+      [
+        42.3,
+        0.425
+      ],
+      [
+        42.737,
+        0.263
+      ],
+      [
+        43.013,
+        0.525
+      ],
+      [
+        43.55,
+        0.237
+      ],
+      [
+        43.8,
+        0.125
+      ],
+      [
+        43.938,
+        0.087
+      ],
+      [
+        44.038,
+        0.188
+      ],
+      [
+        44.237,
+        0.487
+      ],
+      [
+        44.737,
+        0.275
+      ],
+      [
+        45.025,
+        0.375
+      ]
+    ]
+  },
+  {
+    "index": 137,
+    "qid": "031269",
+    "title": "Luxembourg 2016",
+    "image_url": "di_images/031269.png",
+    "online_image_url": "https://upload.fireflyau.com/pte/old/i/20191211_6f096c49-4b53-4652-89b4-f322de4af7fd.png",
+    "text": "This bar chart shows information about Luxembourg 2016. If you look at male, the highest number can be found in 45-49 years old, which is around 23 thousand. The lowest figure is located in 100+ years old, which is about 1 thousand. If you look at female,  the highest number is for 35-39 years old, and the number is around 22 thousand. Furthermore, the male population may be higher than the female population. In summary, this chart uses real data to describe Luxembourg 2016.",
+    "word_count": 84,
+    "question_info": "【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：Male中最大的是45-49岁，大约25%\n内容点二：Male中最小的是95-99岁，大约2%\n内容点三：Female中最小的是100岁，大约3%\n",
+    "ai_keywords": "Luxembourg,age group,population,twenty sixteen,two thousand and sixteen,male,female,two thousand sixteen,fifty to fifty-four,thirty-five to thirty-nine,twenty,twenty-one,twenty-two,twenty-three,nineteen,forty-five to forty,bar,biggest,largest,highest,smallest,lowest,maximum,minimum,trend,increasing,decreasing,upward,downward,fluctuation,pink,blue,plus,twenty-sixteen,zero,five,ten,fifteen,twenty-five,one hundred,one hundred plus,ninety-five to ninety-nine,ninety to zero four,eighty-five to eighty-nine,eighty to eighty-four,seventy-five to seventy-nine,seventy to seventy-four,sixty-five to sixty-nine,sixty to sixty-four,fifty-five to fifty-nine,forty-five to forty-nine,forty to forty-four,thirty to thirty-four,twenty-five to twenty-nine,twenty to twenty-four,fifteen to nineteen,ten to fourteen,five to nine,zero to four,thirteen,one,two,three,four,six,seven,eight,nine,eleven,twelve,fourteen,sixteen,seventeen,eighteen,twenty-four,thousands",
+    "tags": {
+      "tier": "极限预测",
+      "frequency": "预测新增",
+      "difficulty": "普通",
+      "degree": 2,
+      "isForecast": true,
+      "tagHigh": false,
+      "tagNew": true,
+      "isJJ": true
+    },
+    "translation": "【满分范文参考译文】\n这张条形图显示了2016年卢森堡的信息。如果你看一下男性，最多可以发现45-49岁的人，大约是2.3万。最低的数字位于100+岁，也就是1000左右。如果以女性来看，35-39岁的人数最多，大约在2.2万人左右。此外，男性人口可能高于女性人口。综上所述，这张图表使用真实数据来描述卢森堡2016年。\n\n【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：Male中最大的是45-49岁，大约25%\n内容点二：Male中最小的是95-99岁，大约2%\n内容点三：Female中最小的是100岁，大约3%",
+    "audio_url": "di_audio/031269.mp3",
+    "audio_duration": 34,
+    "word_timings": [
+      [
+        0.1,
+        0.25
+      ],
+      [
+        0.362,
+        0.212
+      ],
+      [
+        0.588,
+        0.338
+      ],
+      [
+        0.938,
+        0.237
+      ],
+      [
+        1.188,
+        0.637
+      ],
+      [
+        1.837,
+        0.263
+      ],
+      [
+        2.112,
+        0.55
+      ],
+      [
+        2.675,
+        1.25
+      ],
+      [
+        4.787,
+        0.163
+      ],
+      [
+        4.963,
+        0.138
+      ],
+      [
+        5.112,
+        0.175
+      ],
+      [
+        5.3,
+        0.087
+      ],
+      [
+        5.4,
+        0.438
+      ],
+      [
+        5.95,
+        0.087
+      ],
+      [
+        6.05,
+        0.412
+      ],
+      [
+        6.475,
+        0.325
+      ],
+      [
+        6.812,
+        0.138
+      ],
+      [
+        6.963,
+        0.113
+      ],
+      [
+        7.088,
+        0.312
+      ],
+      [
+        7.412,
+        0.113
+      ],
+      [
+        7.537,
+        1.121
+      ],
+      [
+        8.659,
+        0.561
+      ],
+      [
+        9.22,
+        0.28
+      ],
+      [
+        9.7,
+        0.163
+      ],
+      [
+        9.875,
+        0.1
+      ],
+      [
+        9.988,
+        0.325
+      ],
+      [
+        10.325,
+        0.537
+      ],
+      [
+        10.875,
+        0.625
+      ],
+      [
+        12.363,
+        0.15
+      ],
+      [
+        12.525,
+        0.388
+      ],
+      [
+        12.925,
+        0.338
+      ],
+      [
+        13.275,
+        0.163
+      ],
+      [
+        13.45,
+        0.475
+      ],
+      [
+        13.938,
+        0.125
+      ],
+      [
+        14.075,
+        0.487
+      ],
+      [
+        14.575,
+        0.312
+      ],
+      [
+        14.9,
+        0.25
+      ],
+      [
+        15.162,
+        0.312
+      ],
+      [
+        15.65,
+        0.15
+      ],
+      [
+        15.812,
+        0.1
+      ],
+      [
+        15.925,
+        0.263
+      ],
+      [
+        16.2,
+        0.2
+      ],
+      [
+        16.413,
+        0.625
+      ],
+      [
+        17.9,
+        0.163
+      ],
+      [
+        18.075,
+        0.138
+      ],
+      [
+        18.225,
+        0.188
+      ],
+      [
+        18.425,
+        0.1
+      ],
+      [
+        18.538,
+        0.55
+      ],
+      [
+        19.2,
+        0.087
+      ],
+      [
+        19.3,
+        0.412
+      ],
+      [
+        19.725,
+        0.325
+      ],
+      [
+        20.062,
+        0.188
+      ],
+      [
+        20.262,
+        0.15
+      ],
+      [
+        20.425,
+        1.121
+      ],
+      [
+        21.546,
+        0.561
+      ],
+      [
+        22.107,
+        0.28
+      ],
+      [
+        22.637,
+        0.113
+      ],
+      [
+        22.762,
+        0.062
+      ],
+      [
+        22.837,
+        0.312
+      ],
+      [
+        23.163,
+        0.138
+      ],
+      [
+        23.312,
+        0.312
+      ],
+      [
+        23.637,
+        0.463
+      ],
+      [
+        24.113,
+        0.6
+      ],
+      [
+        25.575,
+        0.725
+      ],
+      [
+        26.413,
+        0.087
+      ],
+      [
+        26.512,
+        0.25
+      ],
+      [
+        26.775,
+        0.762
+      ],
+      [
+        27.55,
+        0.138
+      ],
+      [
+        27.7,
+        0.138
+      ],
+      [
+        27.85,
+        0.362
+      ],
+      [
+        28.225,
+        0.138
+      ],
+      [
+        28.375,
+        0.075
+      ],
+      [
+        28.462,
+        0.388
+      ],
+      [
+        28.863,
+        0.875
+      ],
+      [
+        30.6,
+        0.175
+      ],
+      [
+        30.788,
+        0.537
+      ],
+      [
+        31.462,
+        0.188
+      ],
+      [
+        31.663,
+        0.25
+      ],
+      [
+        31.925,
+        0.325
+      ],
+      [
+        32.263,
+        0.225
+      ],
+      [
+        32.5,
+        0.35
+      ],
+      [
+        32.862,
+        0.1
+      ],
+      [
+        32.975,
+        0.438
+      ],
+      [
+        33.425,
+        0.575
+      ]
+    ]
+  },
+  {
+    "index": 138,
+    "qid": "031345",
+    "title": "Salt Solution Mining Process",
+    "image_url": "di_images/031345.png",
+    "online_image_url": "https://upload.fireflyau.com/pte/SDI/i/09827d1e1496016dd19a2b5f6412747b.png",
+    "text": "This flow chart shows information about salt solution mining process. According to the picture we can see that firstly, the process starts from the first stage, which is called pumping water into the ground. Secondly, it goes to the second stage, which is about salt dissolving to form brine. Thirdly, it comes to the third stage, which is called brine being collected in the tank. Furthermore, the process comes to the ending point, which is about sending brine to the chemical plant. In summary, the process shows details about salt solution mining process.",
+    "word_count": 93,
+    "question_info": "【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：图片描述了盐的提取流程。\n内容点二：从左侧引入 Water（水），通过 Pump（泵） 注入地下。水注入 盐床（Salt bed） 中，将其中的盐溶解形成 Brine（盐水）。形成的盐水被泵回地面，通过管道输送至 Tank（储罐）。储罐中的盐水继续输送至 Chemical plant（化工厂） 进行后续加工。\n内容点三：图示结构横截面展示了地下盐床、岩层以及上下水流动路径。",
+    "ai_keywords": "salt dissolved to brine,salt bed,water,pump,brine,tank,chemical plant,salt,dissolved,bed,plant,black,green,purple,blue,process,flow,stage,step,phase,first,second,third,last,final,lastly,finally",
+    "tags": {
+      "tier": "极限预测",
+      "frequency": "预测新增",
+      "difficulty": "困难",
+      "degree": 3,
+      "isForecast": true,
+      "tagHigh": false,
+      "tagNew": true,
+      "isJJ": true
+    },
+    "translation": "【满分范文参考译文】\n该流程图显示了有关盐溶液开采过程的信息。从图中我们可以看到，首先，这个过程从第一阶段开始，这就是将水抽入地下。其次，进入第二阶段，即盐溶解形成盐水。第三，进入第三阶段，即盐水被收集到罐中。此外，该过程到达终点，即将盐水发送至化工厂。总之，该过程显示了盐溶液开采过程的详细信息。\n\n【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：图片描述了盐的提取流程。\n内容点二：从左侧引入 Water（水），通过 Pump（泵） 注入地下。水注入 盐床（Salt bed） 中，将其中的盐溶解形成 Brine（盐水）。形成的盐水被泵回地面，通过管道输送至 Tank（储罐）。储罐中的盐水继续输送至 Chemical plant（化工厂） 进行后续加工。\n内容点三：图示结构横截面展示了地下盐床、岩层以及上下水流动路径。",
+    "audio_url": "di_audio/031345.mp3",
+    "audio_duration": 34.02,
+    "word_timings": [
+      [
+        0.1,
+        0.25
+      ],
+      [
+        0.362,
+        0.188
+      ],
+      [
+        0.562,
+        0.362
+      ],
+      [
+        0.938,
+        0.237
+      ],
+      [
+        1.188,
+        0.6
+      ],
+      [
+        1.8,
+        0.263
+      ],
+      [
+        2.075,
+        0.25
+      ],
+      [
+        2.337,
+        0.475
+      ],
+      [
+        2.825,
+        0.312
+      ],
+      [
+        3.15,
+        0.738
+      ],
+      [
+        4.75,
+        0.425
+      ],
+      [
+        5.188,
+        0.075
+      ],
+      [
+        5.275,
+        0.1
+      ],
+      [
+        5.388,
+        0.425
+      ],
+      [
+        5.825,
+        0.113
+      ],
+      [
+        5.95,
+        0.175
+      ],
+      [
+        6.138,
+        0.163
+      ],
+      [
+        6.312,
+        0.188
+      ],
+      [
+        6.513,
+        0.588
+      ],
+      [
+        7.3,
+        0.1
+      ],
+      [
+        7.412,
+        0.438
+      ],
+      [
+        7.862,
+        0.338
+      ],
+      [
+        8.213,
+        0.138
+      ],
+      [
+        8.363,
+        0.087
+      ],
+      [
+        8.463,
+        0.338
+      ],
+      [
+        8.812,
+        0.525
+      ],
+      [
+        9.525,
+        0.15
+      ],
+      [
+        9.688,
+        0.113
+      ],
+      [
+        9.812,
+        0.287
+      ],
+      [
+        10.113,
+        0.388
+      ],
+      [
+        10.512,
+        0.325
+      ],
+      [
+        10.85,
+        0.2
+      ],
+      [
+        11.062,
+        0.1
+      ],
+      [
+        11.175,
+        0.512
+      ],
+      [
+        12.55,
+        0.688
+      ],
+      [
+        13.375,
+        0.1
+      ],
+      [
+        13.488,
+        0.225
+      ],
+      [
+        13.725,
+        0.087
+      ],
+      [
+        13.825,
+        0.1
+      ],
+      [
+        13.938,
+        0.375
+      ],
+      [
+        14.325,
+        0.525
+      ],
+      [
+        15,
+        0.163
+      ],
+      [
+        15.175,
+        0.087
+      ],
+      [
+        15.275,
+        0.275
+      ],
+      [
+        15.562,
+        0.275
+      ],
+      [
+        15.85,
+        0.475
+      ],
+      [
+        16.337,
+        0.1
+      ],
+      [
+        16.45,
+        0.263
+      ],
+      [
+        16.725,
+        0.463
+      ],
+      [
+        18.05,
+        0.537
+      ],
+      [
+        18.712,
+        0.113
+      ],
+      [
+        18.837,
+        0.25
+      ],
+      [
+        19.1,
+        0.087
+      ],
+      [
+        19.2,
+        0.1
+      ],
+      [
+        19.312,
+        0.3
+      ],
+      [
+        19.625,
+        0.537
+      ],
+      [
+        20.3,
+        0.15
+      ],
+      [
+        20.462,
+        0.113
+      ],
+      [
+        20.587,
+        0.287
+      ],
+      [
+        20.887,
+        0.338
+      ],
+      [
+        21.238,
+        0.225
+      ],
+      [
+        21.475,
+        0.463
+      ],
+      [
+        21.95,
+        0.075
+      ],
+      [
+        22.038,
+        0.087
+      ],
+      [
+        22.137,
+        0.5
+      ],
+      [
+        23.5,
+        0.713
+      ],
+      [
+        24.337,
+        0.1
+      ],
+      [
+        24.45,
+        0.487
+      ],
+      [
+        24.95,
+        0.287
+      ],
+      [
+        25.25,
+        0.087
+      ],
+      [
+        25.35,
+        0.1
+      ],
+      [
+        25.462,
+        0.325
+      ],
+      [
+        25.8,
+        0.463
+      ],
+      [
+        26.438,
+        0.15
+      ],
+      [
+        26.6,
+        0.1
+      ],
+      [
+        26.712,
+        0.287
+      ],
+      [
+        27.012,
+        0.362
+      ],
+      [
+        27.387,
+        0.338
+      ],
+      [
+        27.738,
+        0.087
+      ],
+      [
+        27.837,
+        0.1
+      ],
+      [
+        27.95,
+        0.4
+      ],
+      [
+        28.363,
+        0.55
+      ],
+      [
+        29.775,
+        0.175
+      ],
+      [
+        29.962,
+        0.512
+      ],
+      [
+        30.587,
+        0.1
+      ],
+      [
+        30.7,
+        0.425
+      ],
+      [
+        31.137,
+        0.263
+      ],
+      [
+        31.413,
+        0.5
+      ],
+      [
+        31.925,
+        0.263
+      ],
+      [
+        32.2,
+        0.25
+      ],
+      [
+        32.462,
+        0.487
+      ],
+      [
+        32.962,
+        0.325
+      ],
+      [
+        33.3,
+        0.725
+      ]
+    ]
+  },
+  {
+    "index": 139,
+    "qid": "031349",
+    "title": "Estimated Number of U.S. Households that Own a Pet",
+    "image_url": "di_images/031349.png",
+    "online_image_url": "https://upload.fireflyau.com/pte/SDI/i/fa4f803581f46afc357cef3c47df9572.png",
+    "text": "This pie chart shows information about estimated number of US households that own a pet. Firstly, the highest number can be found in dog, which is around 65.1 million and 44.6%. Secondly, the second highest number is located in cat, which is about 46.5 million and 31.9%. Thirdly, the lowest figure is for horse and saltwater fish, and the number is around 2.2 million and 1.5%. Furthermore, small animal, bird and reptile have a similar value. In summary, this chart uses real data to describe estimated number of US households that own a pet.",
+    "word_count": 94,
+    "question_info": "【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：这张图展示了关于美国家庭宠物拥有情况的数据。\n内容点二：狗和猫是最主流宠物：狗是美国家庭拥有最多的宠物，约6510万户（占比44.6%）；猫紧随其后，约4650万户（占比31.9%），两者合计占所有宠物类型家庭的76.5%，占据绝对主导地位。\n内容点三：鱼类、小型动物和鸟类也较常见：淡水鱼（1110万户，7.6%）、小型动物（如仓鼠等，670万户，4.6%）、鸟类（610万户，4.2%）和爬行动物（600万户，4.1%）也有相当数量的家庭饲养，但普及率远低于猫狗。\n内容点四：小众宠物占比极低：马（220万户，1.5%）和海水鱼（220万户，1.5%）的拥有家庭数量最少，占比均仅为1.5%，属于相对小众的宠物选择。",
+    "ai_keywords": "Estimated Number of US Households that Own a Pet,dog,horse,saltwater fish,two point two million,two million,sixty-five point one million,sixty-five million,forty-four point six,forty-four,forty-five,one point five,one,two,percent,Estimated Number,US,Households,Own a Pet,pet,cat,bird,small animal,animal,reptile,fish,freshwater fish,thirty-one,thirty-one point nine,thirty-two,forty-six point five,forty-six,six point one,six,four point two,four,seven point six,seven,eight,four point one,four point six,five,million,orange,grey,blue,green,line/bar/pie/table,biggest,largest,highest,smallest,lowest,maximum,minimum,trend,increasing,decreasing,upward,downward,fluctuation",
+    "tags": {
+      "tier": "极限预测",
+      "frequency": "预测新增",
+      "difficulty": "困难",
+      "degree": 3,
+      "isForecast": true,
+      "tagHigh": false,
+      "tagNew": true,
+      "isJJ": true
+    },
+    "translation": "【满分范文参考译文】\n此饼图显示了有关拥有宠物的美国家庭的估计数量的信息。首先，狗的数量最多，约为6510万只，占44.6%。其次，第二高的数字位于cat，约为4650万，占31.9%。第三，马和咸水鱼的数量最少，大约为220万条和1.5%。此外，小动物、鸟类和爬行动物也具有相似的价值。总之，该图表使用真实数据来描述拥有宠物的美国家庭的估计数量。\n\n【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：这张图展示了关于美国家庭宠物拥有情况的数据。\n内容点二：狗和猫是最主流宠物：狗是美国家庭拥有最多的宠物，约6510万户（占比44.6%）；猫紧随其后，约4650万户（占比31.9%），两者合计占所有宠物类型家庭的76.5%，占据绝对主导地位。\n内容点三：鱼类、小型动物和鸟类也较常见：淡水鱼（1110万户，7.6%）、小型动物（如仓鼠等，670万户，4.6%）、鸟类（610万户，4.2%）和爬行动物（600万户，4.1%）也有相当数量的家庭饲养，但普及率远低于猫狗。\n内容点四：小众宠物占比极低：马（220万户，1.5%）和海水鱼（220万户，1.5%）的拥有家庭数量最少，占比均仅为1.5%，属于相对小众的宠物选择。",
+    "audio_url": "di_audio/031349.mp3",
+    "audio_duration": 40.91,
+    "word_timings": [
+      [
+        0.1,
+        0.237
+      ],
+      [
+        0.35,
+        0.175
+      ],
+      [
+        0.537,
+        0.362
+      ],
+      [
+        0.912,
+        0.237
+      ],
+      [
+        1.163,
+        0.625
+      ],
+      [
+        1.8,
+        0.275
+      ],
+      [
+        2.087,
+        0.525
+      ],
+      [
+        2.625,
+        0.287
+      ],
+      [
+        2.925,
+        0.075
+      ],
+      [
+        3.013,
+        0.3
+      ],
+      [
+        3.325,
+        0.6
+      ],
+      [
+        3.938,
+        0.15
+      ],
+      [
+        4.1,
+        0.113
+      ],
+      [
+        4.225,
+        0.05
+      ],
+      [
+        4.287,
+        0.487
+      ],
+      [
+        5.638,
+        0.65
+      ],
+      [
+        6.412,
+        0.075
+      ],
+      [
+        6.5,
+        0.388
+      ],
+      [
+        6.9,
+        0.312
+      ],
+      [
+        7.225,
+        0.15
+      ],
+      [
+        7.388,
+        0.113
+      ],
+      [
+        7.513,
+        0.275
+      ],
+      [
+        7.8,
+        0.113
+      ],
+      [
+        7.925,
+        0.438
+      ],
+      [
+        8.588,
+        0.163
+      ],
+      [
+        8.762,
+        0.1
+      ],
+      [
+        8.875,
+        0.35
+      ],
+      [
+        9.238,
+        1.225
+      ],
+      [
+        10.475,
+        0.463
+      ],
+      [
+        10.95,
+        0.113
+      ],
+      [
+        11.075,
+        1.812
+      ],
+      [
+        13.75,
+        0.688
+      ],
+      [
+        14.562,
+        0.1
+      ],
+      [
+        14.675,
+        0.35
+      ],
+      [
+        15.037,
+        0.375
+      ],
+      [
+        15.425,
+        0.325
+      ],
+      [
+        15.762,
+        0.175
+      ],
+      [
+        15.95,
+        0.438
+      ],
+      [
+        16.4,
+        0.125
+      ],
+      [
+        16.538,
+        0.45
+      ],
+      [
+        17.225,
+        0.163
+      ],
+      [
+        17.4,
+        0.087
+      ],
+      [
+        17.5,
+        0.287
+      ],
+      [
+        17.8,
+        1.25
+      ],
+      [
+        19.062,
+        0.5
+      ],
+      [
+        19.575,
+        0.125
+      ],
+      [
+        19.712,
+        1.725
+      ],
+      [
+        22.3,
+        0.55
+      ],
+      [
+        22.988,
+        0.1
+      ],
+      [
+        23.1,
+        0.388
+      ],
+      [
+        23.5,
+        0.325
+      ],
+      [
+        23.837,
+        0.15
+      ],
+      [
+        24,
+        0.15
+      ],
+      [
+        24.163,
+        0.338
+      ],
+      [
+        24.512,
+        0.175
+      ],
+      [
+        24.7,
+        0.487
+      ],
+      [
+        25.2,
+        0.475
+      ],
+      [
+        25.875,
+        0.1
+      ],
+      [
+        25.988,
+        0.075
+      ],
+      [
+        26.075,
+        0.325
+      ],
+      [
+        26.413,
+        0.138
+      ],
+      [
+        26.562,
+        0.35
+      ],
+      [
+        26.925,
+        0.662
+      ],
+      [
+        27.6,
+        0.463
+      ],
+      [
+        28.075,
+        0.138
+      ],
+      [
+        28.225,
+        1.4
+      ],
+      [
+        30.488,
+        0.713
+      ],
+      [
+        31.363,
+        0.362
+      ],
+      [
+        31.738,
+        0.463
+      ],
+      [
+        32.325,
+        0.237
+      ],
+      [
+        32.575,
+        0.113
+      ],
+      [
+        32.7,
+        0.537
+      ],
+      [
+        33.25,
+        0.15
+      ],
+      [
+        33.413,
+        0.062
+      ],
+      [
+        33.487,
+        0.425
+      ],
+      [
+        33.925,
+        0.537
+      ],
+      [
+        35.325,
+        0.188
+      ],
+      [
+        35.525,
+        0.537
+      ],
+      [
+        36.212,
+        0.2
+      ],
+      [
+        36.425,
+        0.263
+      ],
+      [
+        36.7,
+        0.338
+      ],
+      [
+        37.05,
+        0.225
+      ],
+      [
+        37.288,
+        0.35
+      ],
+      [
+        37.65,
+        0.1
+      ],
+      [
+        37.763,
+        0.425
+      ],
+      [
+        38.2,
+        0.525
+      ],
+      [
+        38.737,
+        0.287
+      ],
+      [
+        39.038,
+        0.075
+      ],
+      [
+        39.125,
+        0.3
+      ],
+      [
+        39.438,
+        0.588
+      ],
+      [
+        40.038,
+        0.163
+      ],
+      [
+        40.212,
+        0.125
+      ],
+      [
+        40.35,
+        0.05
+      ],
+      [
+        40.413,
+        0.5
+      ]
+    ]
+  },
+  {
     "index": 140,
+    "qid": "031365",
+    "title": "Types of Clubs that People Belong to",
+    "image_url": "di_images/031365.png",
+    "online_image_url": "https://upload.fireflyau.com/pte/SDI/i/882551a0d49cdd031f2308ec67a457cf.png",
+    "text": "This bar chart shows information about the types of clubs that people belong to in the year ended March 2015. Firstly, the highest number can be found in sport, which is around 28%. Secondly, the second highest number is located in religion, which is about 21%. Thirdly, the lowest figure is for political clubs, and the number is around 3%. Furthermore, hobby accounts for approximately 16%. In summary, this chart uses real data to describe the types of clubs.",
+    "word_count": 79,
+    "question_info": "【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：这是一张横向柱状图，展示截至 2015年3月 人们参与不同类型俱乐部的比例。\n内容点二：体育类俱乐部的参与率最高，约为 27%。\n内容点三：宗教类俱乐部位居第二，占比约 21%。兴趣类俱乐部排名第三，参与率大约为 15%。志愿者类和职业类俱乐部的比例相近，均在 11%–12% 左右。社区类俱乐部参与率较低，约为 6%。其他类型俱乐部占比约 5%。\n内容点四：政治类俱乐部的参与比例最低，仅约 3%。",
+    "ai_keywords": "Types of clubs that people belong to Year ended March 2015,percent,sport,thirty,twenty,religion,political,hobby,volunteer,professional,neighborhood,other,five,ten,fifteen,twenty-five,increase,decrease,stable,fluctuate,bar",
+    "tags": {
+      "tier": "极限预测",
+      "frequency": "预测新增",
+      "difficulty": "普通",
+      "degree": 2,
+      "isForecast": true,
+      "tagHigh": false,
+      "tagNew": true,
+      "isJJ": true
+    },
+    "translation": "【满分范文参考译文】\n此条形图显示了截至 2015 年 3 月的一年中人们所属俱乐部类型的信息。首先，体育运动中的人数最多，约为 28%。其次，第二高的数字位于宗教领域，约为21%。第三，政治俱乐部的比例最低，约为3%。此外，爱好约占16%。综上所述，这张图表使用了真实的数据来描述俱乐部的类型。\n\n【DI 解题思路多种多样，以下思路仅供参考】\n\n参考思路：\n内容点一：这是一张横向柱状图，展示截至 2015年3月 人们参与不同类型俱乐部的比例。\n内容点二：体育类俱乐部的参与率最高，约为 27%。\n内容点三：宗教类俱乐部位居第二，占比约 21%。兴趣类俱乐部排名第三，参与率大约为 15%。志愿者类和职业类俱乐部的比例相近，均在 11%–12% 左右。社区类俱乐部参与率较低，约为 6%。其他类型俱乐部占比约 5%。\n内容点四：政治类俱乐部的参与比例最低，仅约 3%。",
+    "audio_url": "di_audio/031365.mp3",
+    "audio_duration": 33.19,
+    "word_timings": [
+      [
+        0.1,
+        0.25
+      ],
+      [
+        0.362,
+        0.225
+      ],
+      [
+        0.6,
+        0.338
+      ],
+      [
+        0.95,
+        0.25
+      ],
+      [
+        1.212,
+        0.637
+      ],
+      [
+        1.863,
+        0.225
+      ],
+      [
+        2.1,
+        0.075
+      ],
+      [
+        2.188,
+        0.3
+      ],
+      [
+        2.5,
+        0.087
+      ],
+      [
+        2.6,
+        0.45
+      ],
+      [
+        3.062,
+        0.15
+      ],
+      [
+        3.225,
+        0.287
+      ],
+      [
+        3.525,
+        0.338
+      ],
+      [
+        3.875,
+        0.113
+      ],
+      [
+        4,
+        0.1
+      ],
+      [
+        4.112,
+        0.062
+      ],
+      [
+        4.188,
+        0.375
+      ],
+      [
+        4.575,
+        0.237
+      ],
+      [
+        4.825,
+        0.517
+      ],
+      [
+        5.342,
+        1.033
+      ],
+      [
+        7.237,
+        0.65
+      ],
+      [
+        8.012,
+        0.075
+      ],
+      [
+        8.1,
+        0.4
+      ],
+      [
+        8.512,
+        0.312
+      ],
+      [
+        8.838,
+        0.138
+      ],
+      [
+        8.988,
+        0.113
+      ],
+      [
+        9.113,
+        0.275
+      ],
+      [
+        9.4,
+        0.113
+      ],
+      [
+        9.525,
+        0.475
+      ],
+      [
+        10.175,
+        0.163
+      ],
+      [
+        10.35,
+        0.1
+      ],
+      [
+        10.463,
+        0.325
+      ],
+      [
+        10.8,
+        1.125
+      ],
+      [
+        12.787,
+        0.688
+      ],
+      [
+        13.6,
+        0.1
+      ],
+      [
+        13.713,
+        0.35
+      ],
+      [
+        14.075,
+        0.375
+      ],
+      [
+        14.463,
+        0.325
+      ],
+      [
+        14.8,
+        0.175
+      ],
+      [
+        14.988,
+        0.45
+      ],
+      [
+        15.45,
+        0.1
+      ],
+      [
+        15.562,
+        0.55
+      ],
+      [
+        16.337,
+        0.175
+      ],
+      [
+        16.525,
+        0.1
+      ],
+      [
+        16.637,
+        0.275
+      ],
+      [
+        16.925,
+        1.175
+      ],
+      [
+        18.962,
+        0.55
+      ],
+      [
+        19.65,
+        0.1
+      ],
+      [
+        19.762,
+        0.388
+      ],
+      [
+        20.163,
+        0.325
+      ],
+      [
+        20.5,
+        0.163
+      ],
+      [
+        20.675,
+        0.138
+      ],
+      [
+        20.825,
+        0.475
+      ],
+      [
+        21.312,
+        0.537
+      ],
+      [
+        22.075,
+        0.113
+      ],
+      [
+        22.2,
+        0.062
+      ],
+      [
+        22.275,
+        0.325
+      ],
+      [
+        22.613,
+        0.15
+      ],
+      [
+        22.775,
+        0.325
+      ],
+      [
+        23.113,
+        0.875
+      ],
+      [
+        24.85,
+        0.725
+      ],
+      [
+        25.775,
+        0.25
+      ],
+      [
+        26.038,
+        0.412
+      ],
+      [
+        26.462,
+        0.138
+      ],
+      [
+        26.613,
+        0.65
+      ],
+      [
+        27.275,
+        1.113
+      ],
+      [
+        29.25,
+        0.175
+      ],
+      [
+        29.438,
+        0.537
+      ],
+      [
+        30.113,
+        0.2
+      ],
+      [
+        30.325,
+        0.25
+      ],
+      [
+        30.587,
+        0.338
+      ],
+      [
+        30.938,
+        0.225
+      ],
+      [
+        31.175,
+        0.35
+      ],
+      [
+        31.538,
+        0.1
+      ],
+      [
+        31.65,
+        0.4
+      ],
+      [
+        32.062,
+        0.075
+      ],
+      [
+        32.15,
+        0.3
+      ],
+      [
+        32.462,
+        0.075
+      ],
+      [
+        32.55,
+        0.637
+      ]
+    ]
+  },
+  {
+    "index": 141,
     "qid": "031373",
     "title": "The Study Space",
     "image_url": "di_images/031373.png",
@@ -46600,7 +46625,7 @@
     "word_timings": []
   },
   {
-    "index": 141,
+    "index": 142,
     "qid": "031387",
     "title": "China Age Group",
     "image_url": "di_images/031387.jpg",
