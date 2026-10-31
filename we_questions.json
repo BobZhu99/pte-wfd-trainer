@@ -97,7 +97,7 @@
         "shared_prompt_source_qid": "F101134"
       },
       {
-        "index": 63,
+        "index": 65,
         "qid": "F101134",
         "title": "名人是否要放弃隐私",
         "prompt": "People who are famous entertainers or sportspeople should give up the right to privacy because this is the price of fame. To what extent do you agree or disagree with this point of view? Give your reasons or use your own experiences to support.",
@@ -156,7 +156,7 @@
         "shared_prompt_source_qid": "F101136"
       },
       {
-        "index": 67,
+        "index": 66,
         "qid": "F101136",
         "title": "年龄限制",
         "prompt": "Age restrictions can be seen everywhere. It is believed that people should not do things until they reach the right age, such as marriage, and driving. Select one activity and state the minimum age that you think. Support with your own experiences.",
@@ -214,7 +214,7 @@
         "shared_prompt_source_qid": "F101138"
       },
       {
-        "index": 69,
+        "index": 70,
         "qid": "F101138",
         "title": "国家把钱花在建筑修复，而非现代住房",
         "prompt": "Many countries spend large amounts of money on the restoration of historic buildings rather than on modern housing. To what extent do you agree or disagree with this analysis? What are advantages and disadvantages of this? Support your writing with your experience or examples.",
@@ -272,7 +272,7 @@
         "shared_prompt_source_qid": "F101003"
       },
       {
-        "index": 38,
+        "index": 37,
         "qid": "F101003",
         "title": "法律改变人的行为 ",
         "prompt": "Some people think human behaviors can be changed by laws, while others think laws have little effect. What is your opinion.",
@@ -330,7 +330,7 @@
         "shared_prompt_source_qid": "F101124"
       },
       {
-        "index": 61,
+        "index": 60,
         "qid": "F101124",
         "title": "政府应该改善公共交通还是多修路",
         "prompt": "As cities are expanding, some people claim governments should look forward to creating better networks of public transport available for everyone rather than building more roads for vehicle owning population. What’s your opinion? Give some examples or experience to support.",
@@ -388,7 +388,7 @@
         "shared_prompt_source_qid": "F101042"
       },
       {
-        "index": 51,
+        "index": 52,
         "qid": "F101042",
         "title": "家长需要为孩子的行为负法律责任吗",
         "prompt": "Should parents be held legally responsible for the actions of their children? Do you agree with this opinion? Support your position with your own study, experience or observations.",
@@ -504,7 +504,7 @@
         "shared_prompt_source_qid": "F101132"
       },
       {
-        "index": 66,
+        "index": 64,
         "qid": "F101132",
         "title": "减少工时以缓解失业率",
         "prompt": "In modern society, unemployment among young people is a serious problem. One solution is to shorten the working week and put more people to work. Give your opinion of the idea, considering the advantages and disadvantages, whether it can apply to young people or the whole workforce.",
@@ -562,7 +562,7 @@
         "shared_prompt_source_qid": "F101135"
       },
       {
-        "index": 64,
+        "index": 71,
         "qid": "F101135",
         "title": "未来人们工时会减少",
         "prompt": "“In the future, people will work fewer hours at their jobs.” To what extent do you agree with it? Please support your opinion with your own experience.",
@@ -621,7 +621,7 @@
         "shared_prompt_source_qid": "F101056"
       },
       {
-        "index": 55,
+        "index": 57,
         "qid": "F101056",
         "title": "建筑设计对工作生活的影响",
         "prompt": "How does the design of buildings affect, either positively or negatively, where people work and live?",
@@ -680,7 +680,7 @@
         "shared_prompt_source_qid": "F101044"
       },
       {
-        "index": 53,
+        "index": 54,
         "qid": "F101044",
         "title": "兼顾工作和学习",
         "prompt": "In order to study effectively, it requires comfort, peace and time. So it is impossible for a student to combine learning and employment at the same time, because one distracts the other. Is it realistic to combine them at the same time in our life today? Support your opinion with examples.",
@@ -796,7 +796,7 @@
         "shared_prompt_source_qid": "F101126"
       },
       {
-        "index": 60,
+        "index": 61,
         "qid": "F101126",
         "title": "兼顾工作和私人生活（普遍性与后果）",
         "prompt": "The time people devote to jobs leaves very little time for personal life. How widespread is the problem? What problem will this shortage of time cause?",
@@ -912,7 +912,7 @@
         "shared_prompt_source_qid": "F101011"
       },
       {
-        "index": 43,
+        "index": 42,
         "qid": "F101011",
         "title": "大众传媒对年轻人的影响 ",
         "prompt": "Mass media, including TV and newspapers, have a great influence on humans, particularly on the younger generation. It has a pivotal role in shaping people's opinions. Discuss the extent you agree or disagree. Use your own experience or examples.",
@@ -970,7 +970,7 @@
         "shared_prompt_source_qid": "F101013"
       },
       {
-        "index": 45,
+        "index": 46,
         "qid": "F101013",
         "title": "电视功能（学习、放松、陪伴）",
         "prompt": "Television serves many useful functions. It helps people to relax. We can learn from television, and it can also be seen as a companion for the lonely. To what extent do you agree with this? Explain why with your own experience.",
@@ -1028,7 +1028,7 @@
         "shared_prompt_source_qid": "F101007"
       },
       {
-        "index": 40,
+        "index": 36,
         "qid": "F101007",
         "title": "欠发达国家的旅游业利弊相当",
         "prompt": "For a less developed country, the disadvantages of tourism are as great as the advantages. Please discuss this statement, and give and explain your opinion.",
@@ -1086,7 +1086,7 @@
         "shared_prompt_source_qid": "F101015"
       },
       {
-        "index": 47,
+        "index": 45,
         "qid": "F101015",
         "title": "日用消费品的营销应该重品牌还是重优惠",
         "prompt": "Should marketing in companies producing consumer goods like food and clothing, place emphasis on the reputation of the company or short-term strategies like discounts and special offers? Why?",
@@ -1145,7 +1145,7 @@
         "shared_prompt_source_qid": "F101004"
       },
       {
-        "index": 39,
+        "index": 44,
         "qid": "F101004",
         "title": "员工参与决策的利弊",
         "prompt": "In some companies, some employers involve employees in the decision-making process of products and services. What are the advantages and disadvantages of such a policy?",
@@ -1262,7 +1262,7 @@
         "shared_prompt_source_qid": "F101012"
       },
       {
-        "index": 44,
+        "index": 43,
         "qid": "F101012",
         "title": "气候变化谁负责",
         "prompt": "Climate change is a concerning global issue. Who should take the responsibility: governments, big companies or individuals?",
@@ -1320,7 +1320,7 @@
         "shared_prompt_source_qid": "F101016"
       },
       {
-        "index": 46,
+        "index": 48,
         "qid": "F101016",
         "title": "研究气候变化的某方面",
         "prompt": "You are given climate change as the field of study. Which area would you prefer? Explain why you pick this particular area of your study and give an example in the area you pick.",
@@ -1379,7 +1379,7 @@
         "shared_prompt_source_qid": "F101055"
       },
       {
-        "index": 54,
+        "index": 55,
         "qid": "F101055",
         "title": "政府面临的最严重的问题是什么",
         "prompt": "The world’s governments and organizations are facing a lot of issues. Which do you think is the most pressing problem for the inhabitants on our planet? And give solutions.",
@@ -1438,7 +1438,7 @@
         "shared_prompt_source_qid": "F101143"
       },
       {
-        "index": 70,
+        "index": 69,
         "qid": "F101143",
         "title": "既然有人工智能翻译，还需要学外语吗？",
         "prompt": "Advanced technology such as artificial intelligence can translate a foreign language easily. To what extent do you think learning a foreign language is unnecessary?",
@@ -1496,7 +1496,7 @@
         "shared_prompt_source_qid": "F101128"
       },
       {
-        "index": 65,
+        "index": 63,
         "qid": "F101128",
         "title": "描述一个新发明及其优点或缺点",
         "prompt": "In our technological world, the number of new inventions has been evolving on a daily basis. Please describe a new invention and explain the impact, either beneficial or detrimental, that you feel it has had on society.",
@@ -1612,7 +1612,7 @@
         "shared_prompt_source_qid": "F101139"
       },
       {
-        "index": 71,
+        "index": 68,
         "qid": "F101139",
         "title": "21世纪的孩子越来越难",
         "prompt": "It is getting harder for children to live and grow in the 21st century than in the past. Do you agree or disagree?",
@@ -1670,7 +1670,7 @@
         "shared_prompt_source_qid": "F101040"
       },
       {
-        "index": 52,
+        "index": 51,
         "qid": "F101040",
         "title": "体验式学习在学校有无好处",
         "prompt": "Some people point out that experiential learning (i.e. learning by doing) can work well in formal education. However, others think a traditional form of teaching is the best. Do you think experiential learning is beneficial in high school or college?",
@@ -1733,7 +1733,7 @@
         "shared_prompt_source_qid": "F101006"
       },
       {
-        "index": 36,
+        "index": 38,
         "qid": "F101006",
         "title": "旅行对于教育的必要性",
         "prompt": "“The value of travel has been overrated”. It is said that one can be a brilliant scholar without leaving one's home base. Do you think travel is a necessary component of a quality education?",
@@ -1796,7 +1796,7 @@
         "shared_prompt_source_qid": "F101005"
       },
       {
-        "index": 37,
+        "index": 39,
         "qid": "F101005",
         "title": "书面考试是否有效评估学习成果",
         "prompt": "The formal written examination can be a valid method to assess students’ learning. To what extent do you agree or disagree? Use your own experience.",
@@ -1854,7 +1854,7 @@
         "shared_prompt_source_qid": "F101043"
       },
       {
-        "index": 57,
+        "index": 53,
         "qid": "F101043",
         "title": "学校扣迟交作业学生的分数",
         "prompt": "Some universities deduct students’ marks if assignments are given late. What is your opinion and give your recommendations?",
@@ -2028,7 +2028,7 @@
         "shared_prompt_source_qid": "F101028"
       },
       {
-        "index": 48,
+        "index": 47,
         "qid": "F101028",
         "title": "高中学习百年前戏剧的利弊",
         "prompt": "There are both problems and benefits for high school students to study plays and works of theaters written centuries ago. Discuss and use your own experience.",
@@ -2071,7 +2071,7 @@
     "merge_note": "",
     "variants": [
       {
-        "index": 42,
+        "index": 40,
         "qid": "F101010",
         "title": "大众传媒影响社会与个性",
         "prompt": "The mass media, including TV, radio and newspapers, influence our society and shape our opinions and characters. What is your opinion?",
@@ -2114,7 +2114,7 @@
     "merge_note": "本题讨论外语是否应设为必修课；大西瓜#072011标题也列出这一变体。请与AI翻译是否使外语学习多余的题目分开作答。",
     "variants": [
       {
-        "index": 68,
+        "index": 67,
         "qid": "F101137",
         "title": "外语应该成为必修课吗",
         "prompt": "Some people think learning a foreign language at school should be compulsory. To what extent do you agree with it? Use your experience or examples to support your viewpoint.",

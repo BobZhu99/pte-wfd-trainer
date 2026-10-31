@@ -397,9 +397,18 @@ cd ..
 ### 题库同步口径与两家 PDF 资料合并（2026-10-21）
 - **同步口径**：大西瓜拉【周二真题预测】（classifyId 10；WFD 另按最高频标签 frequency=132，该标签 10 月起改名「10月最高频」）；萤火虫拉【极高频】（`getSpeedQuestionList` 的 `type: "1"`；`""` = 全部周预测，`"2"` = 极限预测）。`daily_sync_both_banks.js` 与 `sync_planner_question_banks.js` 均已改为极高频；口语 RA/RS/DI 的极高频标签由 `sync_speaking_firefly.js` 校准（萤火虫列表里有这题时以最新标签为准，不再只增不减）。
 - **只同步不推送**：`node daily_sync_both_banks.js --no-deploy`。脚本先写 `sync_status.json` / `sync_history.log` 再编译（以前编译在前，网页总显示上一次的同步状态）。
-- **资料来源**：萤火虫 `分装版/*.pdf`（各题型极限预测分装：答案、中文逻辑梳理、关键词表；绿色字 = 关键词 / FIB-L 答案 / HIW 错词，红色字 = SST 主题词）；大西瓜「…满分资料合集」目录（易筋经、SST·轻松记、SWT·轻松记、WFD·轻松记，每月初更新）。
+- **资料来源**：萤火虫 `预测题库/<日期> 萤火虫/*.pdf` 与 `分装版/*.pdf`（各题型极限预测分装：答案、中文逻辑梳理、关键词表；绿色字 = 关键词 / FIB-L 答案 / HIW 错词，红色字 = SST 主题词）；大西瓜「…满分资料合集」目录（易筋经、SST·轻松记、SWT·轻松记、WFD·轻松记，每月初更新）。
 - **流程**：换新 PDF 后运行 `python extract_material_banks.py` → `material_banks.json`（约 75 秒）；每次 `build_wfd_web.py` 调用 `merge_material_banks.py` 把资料按题库重新匹配，生成 `material_banks_web.json` 并复制到 `deploy_github_pages/`。网页只内嵌 `MATERIAL_BANK_META`（版本号、题数、备考建议），正文在打开题库弹窗时按 `?v=版本号` 加载，避免 index.html 变大、避免 CDN 旧缓存。必须通过网站或本地服务打开，`file://` 打开时资料加载失败并有提示。
 - **匹配规则（宁可不合并也不错配）**：先按题号（大西瓜 `M`+编号、萤火虫 `F`+编号或原编号）；再按英文标题（词级相似度 ≥ 0.82，8 个字母以下的短标题只认完全一致）；最后看内容重合（英文实词 + 中文二字组）或「标题较像且内容也最像并明显领先」。对不上的题作为「资料补充」追加到 SST / SWT / SGD / RTS / RO；WE（已核对的 37 题）与 FIB-DD 只挂资料不追加。同一家同一题号的多份资料合成一条，小节被完全覆盖的那份（SWT 易筋经 ⊆ 轻松记）去掉。
 - **新题库**：RL / ASQ / FIB-L / HIW 全部由资料生成（`PLANNER_BANK_MAP` 中 `materialOnly: true`，`bankRoute: "modal"`）。
 - **已知原始数据问题**：大西瓜 RTS 题库的 `reference_response` 是中文情景（网页显示为「情景说明（中文）」）；大西瓜 SWT 的 `passage` 只是作答说明、`sample_summary` 混着原文、答案与中文（有资料时不再显示这两块）；SST 的 `sample_summary` 为空、RO 的 `correct_order` 为空（答案都来自资料）。
 - **回归测试**：`tests/runtime_test2.mjs` 的同步日期与同步失败提醒改为读页面内嵌的 `SYNC_STATUS`，不再写死某次同步的日期。
+
+### 每周预测 PDF 与接口的对应关系（2026-10-31）
+- **萤火虫每周新包**放在 `预测题库/<日期> 萤火虫/`，共 14 个 PDF（页脚连续到「共 267 页」，FIB-L、HIW 那两页不在包内）。逐题核对：新包 = 接口 `type: "2"` 极限预测，**不是**同步用的 `type: "1"` 极高频。WFD 152 ⊂ 189，FIB-D 164 ⊂ 167，RO 12 ⊂ 65，RS 16 ⊂ 118。不要拿新包当极高频全集，否则 RS、RO 会被砍掉大半。RA / DI 不在 speed 接口里，`pte/S/{RA,DI}/getList` 也不返回 tag5，只有新包能看出这两类的极限预测（RA 10 题、DI 72 题）。
+- **题号可能是 7 位**（如 `#1311188`），解析 PDF 题头不能写死 6 位。
+- **资料提取**：`extract_material_banks.py` 优先读 `预测题库/` 下最新一期（按目录名排序），同一题号以新包为准；新包没有的题型和题号回退到 `分装版/`，掉出极限预测的题仍保留答案。萤火虫 ASQ 题头「问题？-答案」会拆成题目与答案。
+- **大西瓜每周 PDF**（`预测题库/*地表最强每周真题预测*.pdf`）只有题单和部分原文，不进资料，可用来核对接口：WFD 154 句、SWT 70 题、WE 35 题分别对应 10 月最高频标签。SST 有 1 题差异：PDF 列 48+7（10-27 生成），接口是最高频 49 + 低频 6。
+- **防冲掉**：`sync_planner_question_banks.js` 的 SWT / SST 是两家合并写入，某一家接口没返回题目时用 `keepLocalItems()` 沿用本地这一家的题；以前大西瓜 Token 过期时 M 开头的题会被整段冲掉。
+- **RA 新题**：`sync_speaking_firefly.js` 现在和 RS / DI 一样补抓缺失的预测题（`pte/practise/findOneQuestion`，`questionType: 'SRA'`：`questionInfo` 原文、`questionInfo2` 译文）。音频用 edge-tts 生成，没有逐词打点，高亮按估算时长。脚本结尾把新音频和图片复制到 `deploy_github_pages/`。
+- **已知问题**：SST / SWT 用标题前 8 个字符判断两家同题（`item.title.includes(q.title.slice(0, 8))`），会误判，如 SST 111072、SWT 091062 没有独立条目，只在「资料补充」里有答案、没有原声。另外 SST 111043（The Definition of Risk）的资料挂到了 M100121（The Definition of Great Idea）下。只比标题无法可靠区分（同一讲座两家标题也可能完全不同），需要比原文才能根治。
