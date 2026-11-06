@@ -193,14 +193,6 @@
   },
   {
     "index": 25,
-    "qid": "061080",
-    "title": "BCGI Global Tree Search 全球树木搜索系统",
-    "content": "BCGI Global Tree Search 全球树木搜索系统",
-    "correct_order": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 26,
     "qid": "061081",
     "title": "Monash Student Ne Tan 莫纳什大学学生谭讷",
     "content": "Monash Student Ne Tan 莫纳什大学学生谭讷",
@@ -208,7 +200,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 27,
+    "index": 26,
     "qid": "061087",
     "title": "Historical Records 历史记录",
     "content": "Historical Records 历史记录",
@@ -216,7 +208,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 28,
+    "index": 27,
     "qid": "061088",
     "title": "Music Record in Brazil 巴西音乐记录任务",
     "content": "Music Record in Brazil 巴西音乐记录任务",
@@ -224,7 +216,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 29,
+    "index": 28,
     "qid": "061091",
     "title": "Grasses 草的成长",
     "content": "Grasses 草的成长",
@@ -232,7 +224,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 30,
+    "index": 29,
     "qid": "061094",
     "title": "Earthquake in San Francisco 旧金山大地震",
     "content": "Earthquake in San Francisco 旧金山大地震",
@@ -240,7 +232,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 31,
+    "index": 30,
     "qid": "061098",
     "title": "Fibers for Clothing 服装用纤维",
     "content": "Fibers for Clothing 服装用纤维",
@@ -248,7 +240,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 32,
+    "index": 31,
     "qid": "061109",
     "title": "International Economics 国际经济学",
     "content": "International Economics 国际经济学",
@@ -256,7 +248,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 33,
+    "index": 32,
     "qid": "061123",
     "title": "Gender Stereotype 性别刻板印象",
     "content": "Gender Stereotype 性别刻板印象",
@@ -264,10 +256,18 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 34,
+    "index": 33,
     "qid": "061126",
     "title": "Rosa Parks 罗莎·帕克斯",
     "content": "Rosa Parks 罗莎·帕克斯",
+    "correct_order": "",
+    "source": "萤火虫官方周预测"
+  },
+  {
+    "index": 34,
+    "qid": "061127",
+    "title": "Manchester Medical School 曼彻斯特医学院",
+    "content": "Manchester Medical School 曼彻斯特医学院",
     "correct_order": "",
     "source": "萤火虫官方周预测"
   },
@@ -433,14 +433,6 @@
   },
   {
     "index": 55,
-    "qid": "061211",
-    "title": "Velcro 维可牢",
-    "content": "Velcro 维可牢",
-    "correct_order": "",
-    "source": "萤火虫官方周预测"
-  },
-  {
-    "index": 56,
     "qid": "061218",
     "title": "E-waste 电子废物",
     "content": "E-waste 电子废物",
@@ -448,7 +440,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 57,
+    "index": 56,
     "qid": "061221",
     "title": "Mink 貂",
     "content": "Mink 貂",
@@ -456,7 +448,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 58,
+    "index": 57,
     "qid": "061230",
     "title": "Wind in the Valleys 山谷中的风",
     "content": "Wind in the Valleys 山谷中的风",
@@ -464,7 +456,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 59,
+    "index": 58,
     "qid": "061250",
     "title": "Underground Life in Coober Pedy 库伯佩迪的地下生活",
     "content": "Underground Life in Coober Pedy 库伯佩迪的地下生活",
@@ -472,7 +464,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 60,
+    "index": 59,
     "qid": "061254",
     "title": "Bank Account 银行账户",
     "content": "Bank Account 银行账户",
@@ -480,7 +472,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 61,
+    "index": 60,
     "qid": "061257",
     "title": "Exam Review 复习考试（残缺）",
     "content": "Exam Review 复习考试（残缺）",
@@ -488,7 +480,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 62,
+    "index": 61,
     "qid": "061260",
     "title": "Ripple 波纹",
     "content": "Ripple 波纹",
@@ -496,7 +488,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 63,
+    "index": 62,
     "qid": "061261",
     "title": "Sign Language 手语",
     "content": "Sign Language 手语",
@@ -504,7 +496,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 64,
+    "index": 63,
     "qid": "061262",
     "title": "School Uniform 校服",
     "content": "School Uniform 校服",
@@ -512,7 +504,7 @@
     "source": "萤火虫官方周预测"
   },
   {
-    "index": 65,
+    "index": 64,
     "qid": "061263",
     "title": "Amazon Drought 亚马逊干旱",
     "content": "Amazon Drought 亚马逊干旱",

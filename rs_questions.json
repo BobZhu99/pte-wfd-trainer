@@ -1755,139 +1755,6 @@
   },
   {
     "index": 18,
-    "qid": "021052",
-    "sentence": "In the last few weeks, we've been looking at various aspects of the social history of London.",
-    "word_count": 17,
-    "translation": "在过去的几周里，我们了解了伦敦社会历史的各个方面。",
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "极高频",
-      "difficulty": "困难",
-      "degree": 3,
-      "isForecast": true,
-      "tagHigh": true,
-      "tagNew": false,
-      "isJJ": true
-    },
-    "teacher_audios": [
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/581ed28086eeddfe38e3a6884d1c0cdd.mp3",
-        "questionId": "2c908087672b1edc01672f9b8aa9073f",
-        "title": "正常难度（女1）",
-        "type": 1
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/593a25bf4fcefab770298e55d84b5451.mp3",
-        "questionId": "2c908087672b1edc01672f9b8aa9073f",
-        "title": "正常难度（女2）",
-        "type": 4
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/73ddbfbc2bdb0a79f1ddc4fa1d953416.mp3",
-        "questionId": "2c908087672b1edc01672f9b8aa9073f",
-        "title": "正常难度（男2）",
-        "type": 3
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/4101da5b7ab4850cc8624ea210c7b94b.mp3",
-        "questionId": "2c908087672b1edc01672f9b8aa9073f",
-        "title": "正常难度（男2）",
-        "type": 3
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/8c1c2562f96ff9767db5a5206f040ad7.mp3",
-        "questionId": "2c908087672b1edc01672f9b8aa9073f",
-        "title": "挑战难度（女）",
-        "type": 5
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/358b8e0828e57e8abdc9a59e7bd88d70.mp3",
-        "questionId": "2c908087672b1edc01672f9b8aa9073f",
-        "title": "挑战难度（男）",
-        "type": 6
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/22e320efad0eba6f282c2a5a5115362f.mp3",
-        "questionId": "2c908087672b1edc01672f9b8aa9073f",
-        "title": "意群分割版",
-        "type": 7
-      }
-    ],
-    "audio_url": "rs_audio/021052.mp3",
-    "audio_duration": 4.86,
-    "word_timings": [
-      [
-        0.1,
-        0.138
-      ],
-      [
-        0.25,
-        0.087
-      ],
-      [
-        0.35,
-        0.35
-      ],
-      [
-        0.713,
-        0.175
-      ],
-      [
-        0.9,
-        0.45
-      ],
-      [
-        1.462,
-        0.163
-      ],
-      [
-        1.637,
-        0.175
-      ],
-      [
-        1.825,
-        0.325
-      ],
-      [
-        2.163,
-        0.087
-      ],
-      [
-        2.263,
-        0.412
-      ],
-      [
-        2.688,
-        0.6
-      ],
-      [
-        3.3,
-        0.075
-      ],
-      [
-        3.388,
-        0.087
-      ],
-      [
-        3.487,
-        0.388
-      ],
-      [
-        3.888,
-        0.362
-      ],
-      [
-        4.263,
-        0.087
-      ],
-      [
-        4.362,
-        0.5
-      ]
-    ]
-  },
-  {
-    "index": 19,
     "qid": "021057",
     "sentence": "It is quite clear that the rising prosperity does not make people feel more content.",
     "word_count": 15,
@@ -2012,7 +1879,7 @@
     ]
   },
   {
-    "index": 20,
+    "index": 19,
     "qid": "021067",
     "sentence": "Meteorology is a detailed study of earth's atmosphere.",
     "word_count": 8,
@@ -2109,7 +1976,7 @@
     ]
   },
   {
-    "index": 21,
+    "index": 20,
     "qid": "021077",
     "sentence": "No more than four people can be in the lab at once.",
     "word_count": 12,
@@ -2222,7 +2089,7 @@
     ]
   },
   {
-    "index": 22,
+    "index": 21,
     "qid": "021081",
     "sentence": "Our class is divided into two groups. You come with me, and the others just stay here.",
     "word_count": 17,
@@ -2355,7 +2222,7 @@
     ]
   },
   {
-    "index": 23,
+    "index": 22,
     "qid": "021091",
     "sentence": "In this library, reserve collection books can be borrowed for up to three hours.",
     "word_count": 14,
@@ -2470,7 +2337,7 @@
     ]
   },
   {
-    "index": 24,
+    "index": 23,
     "qid": "021092",
     "sentence": "The residence hall is closed prior to the academic building closing time at the end of the semester.",
     "word_count": 18,
@@ -2607,7 +2474,7 @@
     ]
   },
   {
-    "index": 25,
+    "index": 24,
     "qid": "021094",
     "sentence": "She is an expert in eighteenth century French literature.",
     "word_count": 9,
@@ -2708,7 +2575,7 @@
     ]
   },
   {
-    "index": 26,
+    "index": 25,
     "qid": "021099",
     "sentence": "Students are so scared of writing essays because they have never learned how.",
     "word_count": 13,
@@ -2770,7 +2637,7 @@
     "audio_url": "rs_audio/021099.mp3"
   },
   {
-    "index": 27,
+    "index": 26,
     "qid": "021101",
     "sentence": "Most students can get access to computers on a daily basis.",
     "word_count": 11,
@@ -2867,7 +2734,7 @@
     ]
   },
   {
-    "index": 28,
+    "index": 27,
     "qid": "021106",
     "sentence": "The agricultural sector in that country is heavily subsidized.",
     "word_count": 9,
@@ -2929,7 +2796,7 @@
     "audio_url": "rs_audio/021106.mp3"
   },
   {
-    "index": 29,
+    "index": 28,
     "qid": "021109",
     "sentence": "The Internet provides unusual opportunities for students and current events.",
     "word_count": 10,
@@ -3034,7 +2901,7 @@
     ]
   },
   {
-    "index": 30,
+    "index": 29,
     "qid": "021110",
     "sentence": "The course comprises twenty hours of lectures, seminars, and tutorials per week.",
     "word_count": 12,
@@ -3147,7 +3014,7 @@
     ]
   },
   {
-    "index": 31,
+    "index": 30,
     "qid": "021116",
     "sentence": "The contest includes both land living history and the human history.",
     "word_count": 11,
@@ -3256,7 +3123,7 @@
     ]
   },
   {
-    "index": 32,
+    "index": 31,
     "qid": "021117",
     "sentence": "The country suffered a series of invasions by tribes from present-day Germany and Denmark.",
     "word_count": 14,
@@ -3318,7 +3185,7 @@
     "audio_url": "rs_audio/021117.mp3"
   },
   {
-    "index": 33,
+    "index": 32,
     "qid": "021119",
     "sentence": "I would like an egg and tomatoes on white sandwich bread with orange juice.",
     "word_count": 14,
@@ -3439,7 +3306,7 @@
     ]
   },
   {
-    "index": 34,
+    "index": 33,
     "qid": "021120",
     "sentence": "The date of the invention of the first clock was disputed among historians.",
     "word_count": 13,
@@ -3556,7 +3423,7 @@
     ]
   },
   {
-    "index": 35,
+    "index": 34,
     "qid": "021135",
     "sentence": "The minimal mark for Distinction to be awarded is 75%.",
     "word_count": 10,
@@ -3661,7 +3528,7 @@
     ]
   },
   {
-    "index": 36,
+    "index": 35,
     "qid": "021137",
     "sentence": "The office opens on Mondays and Thursdays directly following the freshman induction seminar.",
     "word_count": 13,
@@ -3778,7 +3645,7 @@
     ]
   },
   {
-    "index": 37,
+    "index": 36,
     "qid": "021140",
     "sentence": "The part of the story is the story of my father.",
     "word_count": 11,
@@ -3887,7 +3754,7 @@
     ]
   },
   {
-    "index": 38,
+    "index": 37,
     "qid": "021150",
     "sentence": "The seminar on writing skills has been cancelled.",
     "word_count": 8,
@@ -3984,7 +3851,7 @@
     ]
   },
   {
-    "index": 39,
+    "index": 38,
     "qid": "021157",
     "sentence": "The topic next week on colonial era will be the nuclear disarmament.",
     "word_count": 12,
@@ -4097,7 +3964,7 @@
     ]
   },
   {
-    "index": 40,
+    "index": 39,
     "qid": "021158",
     "sentence": "The trial experiment is to increase the interests of the issue and the jurisdiction clause.",
     "word_count": 15,
@@ -4222,7 +4089,7 @@
     ]
   },
   {
-    "index": 41,
+    "index": 40,
     "qid": "021160",
     "sentence": "The United Kingdom is a constitutional monarchy and parliamentary democracy.",
     "word_count": 10,
@@ -4327,7 +4194,7 @@
     ]
   },
   {
-    "index": 42,
+    "index": 41,
     "qid": "021178",
     "sentence": "To receive the reimbursement, you must keep the original receipts.",
     "word_count": 10,
@@ -4389,7 +4256,7 @@
     "audio_url": "rs_audio/021178.mp3"
   },
   {
-    "index": 43,
+    "index": 42,
     "qid": "021183",
     "sentence": "We are not going to accept the assignment after the due date on Friday.",
     "word_count": 14,
@@ -4510,7 +4377,7 @@
     ]
   },
   {
-    "index": 44,
+    "index": 43,
     "qid": "021207",
     "sentence": "A demonstrated ability to write clear, correct and concise English is bigotry.",
     "word_count": 12,
@@ -4623,7 +4490,7 @@
     ]
   },
   {
-    "index": 45,
+    "index": 44,
     "qid": "021213",
     "sentence": "Globalization has been an overwhelming urban and urbanization phenomenon.",
     "word_count": 9,
@@ -4724,7 +4591,7 @@
     ]
   },
   {
-    "index": 46,
+    "index": 45,
     "qid": "021214",
     "sentence": "We're constantly looking for ways to bring industry and agriculture close together.",
     "word_count": 12,
@@ -4837,7 +4704,7 @@
     ]
   },
   {
-    "index": 47,
+    "index": 46,
     "qid": "021219",
     "sentence": "I'm glad you got here safely.",
     "word_count": 6,
@@ -4926,7 +4793,7 @@
     ]
   },
   {
-    "index": 48,
+    "index": 47,
     "qid": "021225",
     "sentence": "Newspapers across the country have been reporting stories of the president.",
     "word_count": 11,
@@ -5035,7 +4902,7 @@
     ]
   },
   {
-    "index": 49,
+    "index": 48,
     "qid": "021232",
     "sentence": "The first person in space was from the Soviet Union.",
     "word_count": 10,
@@ -5140,7 +5007,7 @@
     ]
   },
   {
-    "index": 50,
+    "index": 49,
     "qid": "021233",
     "sentence": "The lecture tomorrow will discuss the educational policies in the United States.",
     "word_count": 12,
@@ -5200,6 +5067,68 @@
       }
     ],
     "audio_url": "rs_audio/021233.mp3"
+  },
+  {
+    "index": 50,
+    "qid": "021238",
+    "sentence": "There is a pharmacy on campus near the store.",
+    "word_count": 9,
+    "translation": "校园有一家药店在商店的附近。",
+    "tags": {
+      "tier": "极限预测",
+      "frequency": "极高频",
+      "difficulty": "简单",
+      "degree": 1,
+      "isForecast": true,
+      "tagHigh": true,
+      "tagNew": false,
+      "isJJ": true
+    },
+    "teacher_audios": [
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/0d1e66b2ad73bff33cd7034944435f41.mp3",
+        "questionId": "2c908087672b1edc016730811d2d0a50",
+        "title": "正常难度（女1）",
+        "type": 1
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/7c4422e27d2a163dcf32bdd1a9e4d1cf.mp3",
+        "questionId": "2c908087672b1edc016730811d2d0a50",
+        "title": "正常难度（男1）",
+        "type": 2
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/82d58cc2e42281f0e6cdd3aca2f2c709.mp3",
+        "questionId": "2c908087672b1edc016730811d2d0a50",
+        "title": "正常难度（女2）",
+        "type": 4
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/e4b12d9c19d4aafd69eb7645261f44a8.mp3",
+        "questionId": "2c908087672b1edc016730811d2d0a50",
+        "title": "正常难度（男2）",
+        "type": 3
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/d4011468982784710a93bc73cdf849cc.mp3",
+        "questionId": "2c908087672b1edc016730811d2d0a50",
+        "title": "挑战难度（女）",
+        "type": 5
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/039d84ce3a2a739ee8bc1e4d17c97d71.mp3",
+        "questionId": "2c908087672b1edc016730811d2d0a50",
+        "title": "挑战难度（男）",
+        "type": 6
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/559c86be1fd39b9097d9244f746657c4.mp3",
+        "questionId": "2c908087672b1edc016730811d2d0a50",
+        "title": "意群分割版",
+        "type": 7
+      }
+    ],
+    "audio_url": "rs_audio/021238.mp3"
   },
   {
     "index": 51,
@@ -12382,15 +12311,15 @@
   },
   {
     "index": 119,
-    "qid": "021021",
-    "sentence": "Being a vegan means not consuming any animal product.",
-    "word_count": 9,
-    "translation": "成为素食主义者意味着不吃任何动物产品。",
+    "qid": "021052",
+    "sentence": "In the last few weeks, we've been looking at various aspects of the social history of London.",
+    "word_count": 17,
+    "translation": "在过去的几周里，我们了解了伦敦社会历史的各个方面。",
     "tags": {
       "tier": "极限预测",
       "frequency": "预测新增",
-      "difficulty": "简单",
-      "degree": 1,
+      "difficulty": "困难",
+      "degree": 3,
       "isForecast": true,
       "tagHigh": false,
       "tagNew": true,
@@ -12398,86 +12327,118 @@
     },
     "teacher_audios": [
       {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/31a0a54809702c71a54496a92fdf8607.mp3",
-        "questionId": "2c908087672b1edc01672f8f8a8006d1",
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/581ed28086eeddfe38e3a6884d1c0cdd.mp3",
+        "questionId": "2c908087672b1edc01672f9b8aa9073f",
         "title": "正常难度（女1）",
         "type": 1
       },
       {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/5b9939de1e2db73952be841dad690207.mp3",
-        "questionId": "2c908087672b1edc01672f8f8a8006d1",
-        "title": "正常难度（男1）",
-        "type": 2
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/816f1ce87b01d198887dd7b3b0856914.mp3",
-        "questionId": "2c908087672b1edc01672f8f8a8006d1",
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/593a25bf4fcefab770298e55d84b5451.mp3",
+        "questionId": "2c908087672b1edc01672f9b8aa9073f",
         "title": "正常难度（女2）",
         "type": 4
       },
       {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/eaecf22ad4bbc95e79c552bf35a84447.mp3",
-        "questionId": "2c908087672b1edc01672f8f8a8006d1",
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/73ddbfbc2bdb0a79f1ddc4fa1d953416.mp3",
+        "questionId": "2c908087672b1edc01672f9b8aa9073f",
         "title": "正常难度（男2）",
         "type": 3
       },
       {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/7b72491cc2a0039359aad5435b703997.mp3",
-        "questionId": "2c908087672b1edc01672f8f8a8006d1",
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/4101da5b7ab4850cc8624ea210c7b94b.mp3",
+        "questionId": "2c908087672b1edc01672f9b8aa9073f",
+        "title": "正常难度（男2）",
+        "type": 3
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/8c1c2562f96ff9767db5a5206f040ad7.mp3",
+        "questionId": "2c908087672b1edc01672f9b8aa9073f",
         "title": "挑战难度（女）",
         "type": 5
       },
       {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/f2793ea956f3a2889b0e2f8fb425edbe.mp3",
-        "questionId": "2c908087672b1edc01672f8f8a8006d1",
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/358b8e0828e57e8abdc9a59e7bd88d70.mp3",
+        "questionId": "2c908087672b1edc01672f9b8aa9073f",
         "title": "挑战难度（男）",
         "type": 6
       },
       {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/54a6662d257b487e9fb62e0e7df0944a.mp3",
-        "questionId": "2c908087672b1edc01672f8f8a8006d1",
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/22e320efad0eba6f282c2a5a5115362f.mp3",
+        "questionId": "2c908087672b1edc01672f9b8aa9073f",
         "title": "意群分割版",
         "type": 7
       }
     ],
-    "audio_url": "rs_audio/021021.mp3",
-    "audio_duration": 3.09,
+    "audio_url": "rs_audio/021052.mp3",
+    "audio_duration": 4.86,
     "word_timings": [
       [
         0.1,
-        0.275
+        0.138
       ],
       [
-        0.388,
-        0.05
+        0.25,
+        0.087
       ],
       [
-        0.45,
-        0.4
+        0.35,
+        0.35
       ],
       [
-        0.863,
-        0.263
+        0.713,
+        0.175
       ],
       [
-        1.137,
-        0.225
+        0.9,
+        0.45
       ],
       [
-        1.375,
-        0.562
+        1.462,
+        0.163
       ],
       [
-        1.95,
-        0.212
+        1.637,
+        0.175
       ],
       [
-        2.175,
+        1.825,
         0.325
       ],
       [
-        2.513,
-        0.575
+        2.163,
+        0.087
+      ],
+      [
+        2.263,
+        0.412
+      ],
+      [
+        2.688,
+        0.6
+      ],
+      [
+        3.3,
+        0.075
+      ],
+      [
+        3.388,
+        0.087
+      ],
+      [
+        3.487,
+        0.388
+      ],
+      [
+        3.888,
+        0.362
+      ],
+      [
+        4.263,
+        0.087
+      ],
+      [
+        4.362,
+        0.5
       ]
     ]
   },
@@ -12806,301 +12767,6 @@
   },
   {
     "index": 123,
-    "qid": "021455",
-    "sentence": "This framework allows us to pose further research questions more systematically.",
-    "word_count": 11,
-    "translation": "这一框架使我们能够更系统地提出更多的研究问题。",
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "预测新增",
-      "difficulty": "困难",
-      "degree": 3,
-      "isForecast": true,
-      "tagHigh": false,
-      "tagNew": true,
-      "isJJ": true
-    },
-    "teacher_audios": [
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/21b80010ffaaada91c3baed3c0f36529.mp3",
-        "questionId": "8ef1a67e288a7b0a506f80a863f4d633",
-        "title": "正常难度（女1）",
-        "type": 1
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/842808654333900a118bc2cb6d41fa88.mp3",
-        "questionId": "8ef1a67e288a7b0a506f80a863f4d633",
-        "title": "正常难度（男1）",
-        "type": 2
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/b998e8865b45069a7baf0b9496a95c2e.mp3",
-        "questionId": "8ef1a67e288a7b0a506f80a863f4d633",
-        "title": "正常难度（女2）",
-        "type": 4
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/4df7e9871df2420c8b0107fe5aba6b5a.mp3",
-        "questionId": "8ef1a67e288a7b0a506f80a863f4d633",
-        "title": "正常难度（男2）",
-        "type": 3
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/081e2c9612cacf6bee5675396487bbbe.mp3",
-        "questionId": "8ef1a67e288a7b0a506f80a863f4d633",
-        "title": "意群分割版",
-        "type": 7
-      }
-    ],
-    "audio_url": "rs_audio/021455.mp3",
-    "audio_duration": 4.24,
-    "word_timings": [
-      [
-        0.1,
-        0.25
-      ],
-      [
-        0.362,
-        0.45
-      ],
-      [
-        0.825,
-        0.338
-      ],
-      [
-        1.175,
-        0.125
-      ],
-      [
-        1.312,
-        0.1
-      ],
-      [
-        1.425,
-        0.287
-      ],
-      [
-        1.725,
-        0.325
-      ],
-      [
-        2.062,
-        0.438
-      ],
-      [
-        2.513,
-        0.525
-      ],
-      [
-        3.05,
-        0.2
-      ],
-      [
-        3.263,
-        0.975
-      ]
-    ]
-  },
-  {
-    "index": 124,
-    "qid": "021478",
-    "sentence": "Tuition fees will vary according to the field of study.",
-    "word_count": 10,
-    "translation": "学费会根据学习领域的不同而有所不同。",
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "预测新增",
-      "difficulty": "普通",
-      "degree": 2,
-      "isForecast": true,
-      "tagHigh": false,
-      "tagNew": true,
-      "isJJ": true
-    },
-    "teacher_audios": [
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/20443f0ae0642c898e0ce9bdc3b6a27e.mp3",
-        "questionId": "9927e7f54d3ef0ad97760de226594871",
-        "title": "正常难度（女1）",
-        "type": 1
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/5cb3e57d9b7876b857c73a3ea8fd597b.mp3",
-        "questionId": "9927e7f54d3ef0ad97760de226594871",
-        "title": "正常难度（男1）",
-        "type": 2
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/1f880d7f094c7e85f83137c8e12f0524.mp3",
-        "questionId": "9927e7f54d3ef0ad97760de226594871",
-        "title": "正常难度（女2）",
-        "type": 4
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/67b7172cf6cf02e2e17457e0d121e7e6.mp3",
-        "questionId": "9927e7f54d3ef0ad97760de226594871",
-        "title": "正常难度（男2）",
-        "type": 3
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/1c3b7b75ada76d832dff7a3ec740249d.mp3",
-        "questionId": "9927e7f54d3ef0ad97760de226594871",
-        "title": "挑战难度（女）",
-        "type": 5
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/3d5b62aced4934854ff5ea7bc2c0f49b.mp3",
-        "questionId": "9927e7f54d3ef0ad97760de226594871",
-        "title": "挑战难度（男）",
-        "type": 6
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/d932a0a1bbdda6ce8e6428c72da618b3.mp3",
-        "questionId": "9927e7f54d3ef0ad97760de226594871",
-        "title": "意群分割版",
-        "type": 7
-      }
-    ],
-    "audio_url": "rs_audio/021478.mp3",
-    "audio_duration": 2.82,
-    "word_timings": [
-      [
-        0.1,
-        0.45
-      ],
-      [
-        0.562,
-        0.3
-      ],
-      [
-        0.875,
-        0.113
-      ],
-      [
-        1,
-        0.275
-      ],
-      [
-        1.288,
-        0.4
-      ],
-      [
-        1.7,
-        0.087
-      ],
-      [
-        1.8,
-        0.087
-      ],
-      [
-        1.9,
-        0.312
-      ],
-      [
-        2.225,
-        0.075
-      ],
-      [
-        2.312,
-        0.512
-      ]
-    ]
-  },
-  {
-    "index": 125,
-    "qid": "021615",
-    "sentence": "Transportation is only provided under special circumstances.",
-    "word_count": 7,
-    "translation": "只有在特殊情况下才提供运输服务。",
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "预测新增",
-      "difficulty": "普通",
-      "degree": 2,
-      "isForecast": true,
-      "tagHigh": false,
-      "tagNew": true,
-      "isJJ": true
-    },
-    "teacher_audios": [
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/89c12685b11a1df5b9aee3529b2e97ef.mp3",
-        "questionId": "291a877f3c68969e27a550d0b8a08907",
-        "title": "正常难度（女1）",
-        "type": 1
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/4e9899db7985ab7e6e48246c16820d60.mp3",
-        "questionId": "291a877f3c68969e27a550d0b8a08907",
-        "title": "正常难度（男1）",
-        "type": 2
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/c680faae31684338a90a769728f63892.mp3",
-        "questionId": "291a877f3c68969e27a550d0b8a08907",
-        "title": "正常难度（女2）",
-        "type": 4
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/f1801380bb497c0632a3ee8875b93bee.mp3",
-        "questionId": "291a877f3c68969e27a550d0b8a08907",
-        "title": "正常难度（男2）",
-        "type": 3
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/4affa1e85c726d7e5e7e366b023402a3.mp3",
-        "questionId": "291a877f3c68969e27a550d0b8a08907",
-        "title": "挑战难度（女）",
-        "type": 5
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/734aeb30b588921da715b35646698d4e.mp3",
-        "questionId": "291a877f3c68969e27a550d0b8a08907",
-        "title": "挑战难度（男）",
-        "type": 6
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/d30971d661e9a544d13b85318f078cf4.mp3",
-        "questionId": "291a877f3c68969e27a550d0b8a08907",
-        "title": "意群分割版",
-        "type": 7
-      }
-    ],
-    "audio_url": "rs_audio/021615.mp3",
-    "audio_duration": 3.56,
-    "word_timings": [
-      [
-        0.1,
-        0.825
-      ],
-      [
-        0.938,
-        0.163
-      ],
-      [
-        1.113,
-        0.237
-      ],
-      [
-        1.363,
-        0.487
-      ],
-      [
-        1.863,
-        0.225
-      ],
-      [
-        2.1,
-        0.375
-      ],
-      [
-        2.487,
-        1.075
-      ]
-    ]
-  },
-  {
-    "index": 126,
     "qid": "021016",
     "sentence": "Allergy problems do run in the family, but we don't understand why.",
     "word_count": 12,
@@ -13213,7 +12879,7 @@
     ]
   },
   {
-    "index": 127,
+    "index": 124,
     "qid": "021018",
     "sentence": "Anyone who has a problem with their accommodation should speak to the welfare officer.",
     "word_count": 14,
@@ -13291,7 +12957,7 @@
     ]
   },
   {
-    "index": 128,
+    "index": 125,
     "qid": "021019",
     "sentence": "Basketball was created in eighteen ninety one by a physical educational instructor.",
     "word_count": 12,
@@ -13361,7 +13027,108 @@
     ]
   },
   {
-    "index": 129,
+    "index": 126,
+    "qid": "021021",
+    "sentence": "Being a vegan means not consuming any animal product.",
+    "word_count": 9,
+    "translation": "成为素食主义者意味着不吃任何动物产品。",
+    "tags": {
+      "tier": "机经练习",
+      "frequency": "高频",
+      "difficulty": "简单",
+      "degree": 1,
+      "isForecast": false,
+      "tagHigh": false,
+      "tagNew": false,
+      "isJJ": true
+    },
+    "teacher_audios": [
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/31a0a54809702c71a54496a92fdf8607.mp3",
+        "questionId": "2c908087672b1edc01672f8f8a8006d1",
+        "title": "正常难度（女1）",
+        "type": 1
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/5b9939de1e2db73952be841dad690207.mp3",
+        "questionId": "2c908087672b1edc01672f8f8a8006d1",
+        "title": "正常难度（男1）",
+        "type": 2
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/816f1ce87b01d198887dd7b3b0856914.mp3",
+        "questionId": "2c908087672b1edc01672f8f8a8006d1",
+        "title": "正常难度（女2）",
+        "type": 4
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/eaecf22ad4bbc95e79c552bf35a84447.mp3",
+        "questionId": "2c908087672b1edc01672f8f8a8006d1",
+        "title": "正常难度（男2）",
+        "type": 3
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/7b72491cc2a0039359aad5435b703997.mp3",
+        "questionId": "2c908087672b1edc01672f8f8a8006d1",
+        "title": "挑战难度（女）",
+        "type": 5
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/f2793ea956f3a2889b0e2f8fb425edbe.mp3",
+        "questionId": "2c908087672b1edc01672f8f8a8006d1",
+        "title": "挑战难度（男）",
+        "type": 6
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/54a6662d257b487e9fb62e0e7df0944a.mp3",
+        "questionId": "2c908087672b1edc01672f8f8a8006d1",
+        "title": "意群分割版",
+        "type": 7
+      }
+    ],
+    "audio_url": "rs_audio/021021.mp3",
+    "audio_duration": 3.09,
+    "word_timings": [
+      [
+        0.1,
+        0.275
+      ],
+      [
+        0.388,
+        0.05
+      ],
+      [
+        0.45,
+        0.4
+      ],
+      [
+        0.863,
+        0.263
+      ],
+      [
+        1.137,
+        0.225
+      ],
+      [
+        1.375,
+        0.562
+      ],
+      [
+        1.95,
+        0.212
+      ],
+      [
+        2.175,
+        0.325
+      ],
+      [
+        2.513,
+        0.575
+      ]
+    ]
+  },
+  {
+    "index": 127,
     "qid": "021023",
     "sentence": "Please pass the handouts along to the rest of the people in your row.",
     "word_count": 14,
@@ -13439,7 +13206,7 @@
     ]
   },
   {
-    "index": 130,
+    "index": 128,
     "qid": "021025",
     "sentence": "Dr. Green's office has been moved to the second floor of the building.",
     "word_count": 13,
@@ -13556,7 +13323,7 @@
     ]
   },
   {
-    "index": 131,
+    "index": 129,
     "qid": "021028",
     "sentence": "Don't forget to hand in your assignments by the end of next week.",
     "word_count": 13,
@@ -13630,7 +13397,7 @@
     ]
   },
   {
-    "index": 132,
+    "index": 130,
     "qid": "021029",
     "sentence": "During the next few centuries, London became one of the most powerful and prosperous cities in Europe.",
     "word_count": 17,
@@ -13720,7 +13487,7 @@
     ]
   },
   {
-    "index": 133,
+    "index": 131,
     "qid": "021031",
     "sentence": "Essays should be typed with double space in white paper.",
     "word_count": 10,
@@ -13825,7 +13592,7 @@
     ]
   },
   {
-    "index": 134,
+    "index": 132,
     "qid": "021034",
     "sentence": "Fees are heavily discounted, and bursaries are available for delegates.",
     "word_count": 10,
@@ -13887,7 +13654,7 @@
     ]
   },
   {
-    "index": 135,
+    "index": 133,
     "qid": "021035",
     "sentence": "He was not the only one to call for legal reform in the 16th century.",
     "word_count": 15,
@@ -13969,7 +13736,7 @@
     ]
   },
   {
-    "index": 136,
+    "index": 134,
     "qid": "021036",
     "sentence": "Higher numbers of patients were infected than during previous outbreaks of the illness.",
     "word_count": 13,
@@ -14043,7 +13810,7 @@
     ]
   },
   {
-    "index": 137,
+    "index": 135,
     "qid": "021045",
     "sentence": "I will check again but I am pretty sure we are supposed to read Chapter Two.",
     "word_count": 16,
@@ -14129,7 +13896,7 @@
     ]
   },
   {
-    "index": 138,
+    "index": 136,
     "qid": "021046",
     "sentence": "I will now demonstrate how the reaction can be arrested by adding a dilute acid.",
     "word_count": 15,
@@ -14211,7 +13978,7 @@
     ]
   },
   {
-    "index": 139,
+    "index": 137,
     "qid": "021047",
     "sentence": "I'll start with a brief history of the district, and then focus on life in the first half of the 20th century.",
     "word_count": 22,
@@ -14321,7 +14088,7 @@
     ]
   },
   {
-    "index": 140,
+    "index": 138,
     "qid": "021048",
     "sentence": "I've got a tutorial in an hour and I haven't had any time to prepare for it.",
     "word_count": 17,
@@ -14411,7 +14178,7 @@
     ]
   },
   {
-    "index": 141,
+    "index": 139,
     "qid": "021078",
     "sentence": "Novelists have a major role to play in reflecting their time to their readers.",
     "word_count": 14,
@@ -14489,7 +14256,7 @@
     ]
   },
   {
-    "index": 142,
+    "index": 140,
     "qid": "021079",
     "sentence": "On behalf of our department, I would like to thank you for your participation.",
     "word_count": 14,
@@ -14567,7 +14334,7 @@
     ]
   },
   {
-    "index": 143,
+    "index": 141,
     "qid": "021080",
     "sentence": "On this project, you will be asked to work as a group of three.",
     "word_count": 14,
@@ -14645,7 +14412,7 @@
     ]
   },
   {
-    "index": 144,
+    "index": 142,
     "qid": "021083",
     "sentence": "Overcrowding and poor sanitary conditions affected the daily life of the majority of the population.",
     "word_count": 15,
@@ -14727,7 +14494,7 @@
     ]
   },
   {
-    "index": 145,
+    "index": 143,
     "qid": "021090",
     "sentence": "Put the knife and fork next to the spoon near the edge of the table.",
     "word_count": 15,
@@ -14809,7 +14576,7 @@
     ]
   },
   {
-    "index": 146,
+    "index": 144,
     "qid": "021098",
     "sentence": "Students are held accountable for adhering to established community standards.",
     "word_count": 10,
@@ -14871,7 +14638,7 @@
     ]
   },
   {
-    "index": 147,
+    "index": 145,
     "qid": "021104",
     "sentence": "Studies suggest there may be a correlation between educational achievement and family size.",
     "word_count": 13,
@@ -14945,7 +14712,7 @@
     ]
   },
   {
-    "index": 148,
+    "index": 146,
     "qid": "021105",
     "sentence": "The aesthetic implications of this study have not yet been fully explored.",
     "word_count": 12,
@@ -15015,7 +14782,7 @@
     ]
   },
   {
-    "index": 149,
+    "index": 147,
     "qid": "021112",
     "sentence": "Each group should submit a rough outline of their project to their tutor.",
     "word_count": 13,
@@ -15089,7 +14856,7 @@
     ]
   },
   {
-    "index": 150,
+    "index": 148,
     "qid": "021125",
     "sentence": "Glass is not a real solid, because it doesn't have a crystal structure.",
     "word_count": 13,
@@ -15163,7 +14930,7 @@
     ]
   },
   {
-    "index": 151,
+    "index": 149,
     "qid": "021136",
     "sentence": "The mismatch between the intended and reported uses of the instrument has become clear.",
     "word_count": 14,
@@ -15241,7 +15008,7 @@
     ]
   },
   {
-    "index": 152,
+    "index": 150,
     "qid": "021144",
     "sentence": "The real reason for global hunger is not the lack of food, but poverty.",
     "word_count": 14,
@@ -15319,7 +15086,7 @@
     ]
   },
   {
-    "index": 153,
+    "index": 151,
     "qid": "021149",
     "sentence": "The School of Arts and Design is having an open day on Thursday next week.",
     "word_count": 15,
@@ -15401,7 +15168,7 @@
     ]
   },
   {
-    "index": 154,
+    "index": 152,
     "qid": "021153",
     "sentence": "The student welfare officer can help with questions about exam techniques.",
     "word_count": 11,
@@ -15510,7 +15277,7 @@
     ]
   },
   {
-    "index": 155,
+    "index": 153,
     "qid": "021154",
     "sentence": "The study showed that people's moods can be affected by news and weather reports.",
     "word_count": 14,
@@ -15588,7 +15355,7 @@
     ]
   },
   {
-    "index": 156,
+    "index": 154,
     "qid": "021155",
     "sentence": "The technology they introduced meant that metal and leather goods were produced there for the first time.",
     "word_count": 17,
@@ -15678,7 +15445,7 @@
     ]
   },
   {
-    "index": 157,
+    "index": 155,
     "qid": "021177",
     "sentence": "This year, we are planning to use a different type of assessment for this module.",
     "word_count": 15,
@@ -15760,7 +15527,7 @@
     ]
   },
   {
-    "index": 158,
+    "index": 156,
     "qid": "021179",
     "sentence": "Try to explain how your ideas are linked so that there is a logical flow.",
     "word_count": 15,
@@ -15842,7 +15609,7 @@
     ]
   },
   {
-    "index": 159,
+    "index": 157,
     "qid": "021181",
     "sentence": "We are also going to be more prescriptive about what you focus on in your presentation.",
     "word_count": 16,
@@ -15928,7 +15695,7 @@
     ]
   },
   {
-    "index": 160,
+    "index": 158,
     "qid": "021182",
     "sentence": "We are delighted to have professor Robert to join our faculty.",
     "word_count": 11,
@@ -16037,7 +15804,7 @@
     ]
   },
   {
-    "index": 161,
+    "index": 159,
     "qid": "021193",
     "sentence": "We would like people to write a case study, describing an organization they know.",
     "word_count": 14,
@@ -16115,7 +15882,7 @@
     ]
   },
   {
-    "index": 162,
+    "index": 160,
     "qid": "021194",
     "sentence": "We've decided to ask you to write four short pieces of written coursework this semester.",
     "word_count": 15,
@@ -16197,7 +15964,7 @@
     ]
   },
   {
-    "index": 163,
+    "index": 161,
     "qid": "021195",
     "sentence": "When I was in school, I had many of the same problems you have now.",
     "word_count": 15,
@@ -16279,7 +16046,7 @@
     ]
   },
   {
-    "index": 164,
+    "index": 162,
     "qid": "021206",
     "sentence": "Thirty nine point five percent of Californian residents don't speak English at home.",
     "word_count": 13,
@@ -16353,7 +16120,7 @@
     ]
   },
   {
-    "index": 165,
+    "index": 163,
     "qid": "021208",
     "sentence": "Biographical information should be removed prior to the publication of the results.",
     "word_count": 12,
@@ -16423,7 +16190,7 @@
     ]
   },
   {
-    "index": 166,
+    "index": 164,
     "qid": "021211",
     "sentence": "Due to the rising demand for courses, the university should also increase their academic staff, too.",
     "word_count": 16,
@@ -16509,7 +16276,7 @@
     ]
   },
   {
-    "index": 167,
+    "index": 165,
     "qid": "021216",
     "sentence": "I think it's really difficult for an Englishman to imitate a real American accent.",
     "word_count": 14,
@@ -16587,7 +16354,7 @@
     ]
   },
   {
-    "index": 168,
+    "index": 166,
     "qid": "021226",
     "sentence": "No crop responds more readily to careful husbandry and skillful cultivation.",
     "word_count": 11,
@@ -16653,7 +16420,7 @@
     ]
   },
   {
-    "index": 169,
+    "index": 167,
     "qid": "021231",
     "sentence": "The facts you have garnered with such infinite trouble invariably fail you at a pinch.",
     "word_count": 15,
@@ -16735,7 +16502,7 @@
     ]
   },
   {
-    "index": 170,
+    "index": 168,
     "qid": "021237",
     "sentence": "There are various approaches for plagiarism across different university departments.",
     "word_count": 10,
@@ -16797,7 +16564,7 @@
     ]
   },
   {
-    "index": 171,
+    "index": 169,
     "qid": "021247",
     "sentence": "As for me, it is a strategy to go to judicial review.",
     "word_count": 12,
@@ -16867,7 +16634,7 @@
     ]
   },
   {
-    "index": 172,
+    "index": 170,
     "qid": "021249",
     "sentence": "By clicking this button, you agree with the terms and conditions of this website.",
     "word_count": 14,
@@ -16945,7 +16712,7 @@
     ]
   },
   {
-    "index": 173,
+    "index": 171,
     "qid": "021253",
     "sentence": "I would like a tomato and cheese sandwich on white bread and orange juice.",
     "word_count": 14,
@@ -17023,7 +16790,7 @@
     ]
   },
   {
-    "index": 174,
+    "index": 172,
     "qid": "021257",
     "sentence": "It is clear that there is little accurate documentation in support of this claim.",
     "word_count": 14,
@@ -17101,7 +16868,7 @@
     ]
   },
   {
-    "index": 175,
+    "index": 173,
     "qid": "021258",
     "sentence": "Most animals have triangular vocal cords, but the lion's mighty pipes are square.",
     "word_count": 13,
@@ -17175,7 +16942,7 @@
     ]
   },
   {
-    "index": 176,
+    "index": 174,
     "qid": "021268",
     "sentence": "The student residence hall is very close to the academic building, just a walking distance.",
     "word_count": 15,
@@ -17257,7 +17024,7 @@
     ]
   },
   {
-    "index": 177,
+    "index": 175,
     "qid": "021273",
     "sentence": "The library is located on the other side of the campus behind the student center.",
     "word_count": 15,
@@ -17339,7 +17106,7 @@
     ]
   },
   {
-    "index": 178,
+    "index": 176,
     "qid": "021280",
     "sentence": "The U.S. ranks twenty second in foreign aid, given as a percentage of GDP.",
     "word_count": 14,
@@ -17417,7 +17184,7 @@
     ]
   },
   {
-    "index": 179,
+    "index": 177,
     "qid": "021281",
     "sentence": "The student service center is located on the ground floor of the Pack Building.",
     "word_count": 14,
@@ -17495,7 +17262,7 @@
     ]
   },
   {
-    "index": 180,
+    "index": 178,
     "qid": "021289",
     "sentence": "This Thursday is the last day for students to withdraw subjects without any penalty.",
     "word_count": 14,
@@ -17573,7 +17340,7 @@
     ]
   },
   {
-    "index": 181,
+    "index": 179,
     "qid": "021293",
     "sentence": "You can find the student service center on level one of the Home Building.",
     "word_count": 14,
@@ -17651,7 +17418,7 @@
     ]
   },
   {
-    "index": 182,
+    "index": 180,
     "qid": "021298",
     "sentence": "I expect a long and stagnant debate for a week or two on this issue.",
     "word_count": 15,
@@ -17733,7 +17500,7 @@
     ]
   },
   {
-    "index": 183,
+    "index": 181,
     "qid": "021303",
     "sentence": "I will be in my office every day from eleven o'clock to two o’clock.",
     "word_count": 14,
@@ -17811,7 +17578,7 @@
     ]
   },
   {
-    "index": 184,
+    "index": 182,
     "qid": "021304",
     "sentence": "Your tutor is there to help you, so do ask if you don't understand something.",
     "word_count": 15,
@@ -17893,7 +17660,7 @@
     ]
   },
   {
-    "index": 185,
+    "index": 183,
     "qid": "021317",
     "sentence": "If you need help, I can give you a hand in finding a flat.",
     "word_count": 14,
@@ -17971,7 +17738,7 @@
     ]
   },
   {
-    "index": 186,
+    "index": 184,
     "qid": "021321",
     "sentence": "If she does speak the language, she will not sit around and wait for a translator.",
     "word_count": 16,
@@ -18057,7 +17824,7 @@
     ]
   },
   {
-    "index": 187,
+    "index": 185,
     "qid": "021324",
     "sentence": "Our school of Arts and Technology accepts applications at all points during the year.",
     "word_count": 14,
@@ -18135,7 +17902,7 @@
     ]
   },
   {
-    "index": 188,
+    "index": 186,
     "qid": "021331",
     "sentence": "His objection to including scientific evidence has brought a lot of criticism to him.",
     "word_count": 14,
@@ -18213,7 +17980,7 @@
     ]
   },
   {
-    "index": 189,
+    "index": 187,
     "qid": "021335",
     "sentence": "The genetic biology technology lab is located in the North Wing of the library.",
     "word_count": 14,
@@ -18291,7 +18058,7 @@
     ]
   },
   {
-    "index": 190,
+    "index": 188,
     "qid": "021341",
     "sentence": "Expertise in particular areas distinguishes you from other graduates.",
     "word_count": 9,
@@ -18349,7 +18116,7 @@
     ]
   },
   {
-    "index": 191,
+    "index": 189,
     "qid": "021342",
     "sentence": "We didn't mean to ask him to do it because he cannot manage it.",
     "word_count": 14,
@@ -18427,7 +18194,7 @@
     ]
   },
   {
-    "index": 192,
+    "index": 190,
     "qid": "021345",
     "sentence": "In English, the months of the year are always capitalized.",
     "word_count": 10,
@@ -18489,7 +18256,7 @@
     ]
   },
   {
-    "index": 193,
+    "index": 191,
     "qid": "021351",
     "sentence": "Students should book a library tour in the first few weeks of the semester.",
     "word_count": 14,
@@ -18567,7 +18334,7 @@
     ]
   },
   {
-    "index": 194,
+    "index": 192,
     "qid": "021377",
     "sentence": "The sports team members often practice on weekdays and play games on weekends.",
     "word_count": 13,
@@ -18641,7 +18408,7 @@
     ]
   },
   {
-    "index": 195,
+    "index": 193,
     "qid": "021382",
     "sentence": "I didn't agree with the author's argument, but his presentation was good.",
     "word_count": 12,
@@ -18711,7 +18478,7 @@
     ]
   },
   {
-    "index": 196,
+    "index": 194,
     "qid": "021396",
     "sentence": "You can have student discount in many campus stores including the coffee house.",
     "word_count": 13,
@@ -18785,7 +18552,7 @@
     ]
   },
   {
-    "index": 197,
+    "index": 195,
     "qid": "021401",
     "sentence": "Don't forget to take the library tour in the first week of the semester.",
     "word_count": 14,
@@ -18863,7 +18630,7 @@
     ]
   },
   {
-    "index": 198,
+    "index": 196,
     "qid": "021403",
     "sentence": "Please sort and order the presentation slides according to the topic and the speech time.",
     "word_count": 15,
@@ -18945,7 +18712,7 @@
     ]
   },
   {
-    "index": 199,
+    "index": 197,
     "qid": "021409",
     "sentence": "The university has a lot of travel scholarships available that students can apply for.",
     "word_count": 14,
@@ -19023,7 +18790,7 @@
     ]
   },
   {
-    "index": 200,
+    "index": 198,
     "qid": "021418",
     "sentence": "This is how we deliver health care to millions of people over the world.",
     "word_count": 14,
@@ -19101,7 +18868,7 @@
     ]
   },
   {
-    "index": 201,
+    "index": 199,
     "qid": "021421",
     "sentence": "The health centre is situated at the corner of the university behind the library.",
     "word_count": 14,
@@ -19179,7 +18946,7 @@
     ]
   },
   {
-    "index": 202,
+    "index": 200,
     "qid": "021422",
     "sentence": "Only those who are over eighteen years of age are eligible to open a bank account in our bank.",
     "word_count": 19,
@@ -19277,7 +19044,7 @@
     ]
   },
   {
-    "index": 203,
+    "index": 201,
     "qid": "021427",
     "sentence": "The trip for professional training will start soon, so pack the items before we leave.",
     "word_count": 15,
@@ -19359,7 +19126,7 @@
     ]
   },
   {
-    "index": 204,
+    "index": 202,
     "qid": "021428",
     "sentence": "When the demand for the course rose, university authorities took on additional academic staff.",
     "word_count": 14,
@@ -19437,7 +19204,7 @@
     ]
   },
   {
-    "index": 205,
+    "index": 203,
     "qid": "021433",
     "sentence": "An extra lecture is about to be scheduled at the end of this week to assist you with revision.",
     "word_count": 19,
@@ -19535,7 +19302,7 @@
     ]
   },
   {
-    "index": 206,
+    "index": 204,
     "qid": "021434",
     "sentence": "The quality of our accommodation is high, but it is still affordable for students.",
     "word_count": 14,
@@ -19613,7 +19380,7 @@
     ]
   },
   {
-    "index": 207,
+    "index": 205,
     "qid": "021438",
     "sentence": "Proteins constitute at least thirty percent of the total mass of all living organisms.",
     "word_count": 14,
@@ -19691,7 +19458,7 @@
     ]
   },
   {
-    "index": 208,
+    "index": 206,
     "qid": "021440",
     "sentence": "Today, I'd like to talk a little bit about the other theories that can explain the variations in climate.",
     "word_count": 19,
@@ -19789,7 +19556,7 @@
     ]
   },
   {
-    "index": 209,
+    "index": 207,
     "qid": "021441",
     "sentence": "The library is located on the north side of the campus.",
     "word_count": 11,
@@ -19855,7 +19622,7 @@
     ]
   },
   {
-    "index": 210,
+    "index": 208,
     "qid": "021442",
     "sentence": "We have three distinctive libraries which are nationally acclaimed.",
     "word_count": 9,
@@ -19913,7 +19680,7 @@
     ]
   },
   {
-    "index": 211,
+    "index": 209,
     "qid": "021444",
     "sentence": "Please don't forget to check your email for the updates of the week.",
     "word_count": 13,
@@ -19987,7 +19754,7 @@
     ]
   },
   {
-    "index": 212,
+    "index": 210,
     "qid": "021447",
     "sentence": "We should focus on innovation, and if we don’t, we are bound to lose out.",
     "word_count": 15,
@@ -20069,7 +19836,7 @@
     ]
   },
   {
-    "index": 213,
+    "index": 211,
     "qid": "021454",
     "sentence": "It is clear that the effects of climate change will damage the world economy.",
     "word_count": 14,
@@ -20190,7 +19957,104 @@
     ]
   },
   {
-    "index": 214,
+    "index": 212,
+    "qid": "021455",
+    "sentence": "This framework allows us to pose further research questions more systematically.",
+    "word_count": 11,
+    "translation": "这一框架使我们能够更系统地提出更多的研究问题。",
+    "tags": {
+      "tier": "机经练习",
+      "frequency": "高频",
+      "difficulty": "困难",
+      "degree": 3,
+      "isForecast": false,
+      "tagHigh": false,
+      "tagNew": false,
+      "isJJ": true
+    },
+    "teacher_audios": [
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/21b80010ffaaada91c3baed3c0f36529.mp3",
+        "questionId": "8ef1a67e288a7b0a506f80a863f4d633",
+        "title": "正常难度（女1）",
+        "type": 1
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/842808654333900a118bc2cb6d41fa88.mp3",
+        "questionId": "8ef1a67e288a7b0a506f80a863f4d633",
+        "title": "正常难度（男1）",
+        "type": 2
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/b998e8865b45069a7baf0b9496a95c2e.mp3",
+        "questionId": "8ef1a67e288a7b0a506f80a863f4d633",
+        "title": "正常难度（女2）",
+        "type": 4
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/4df7e9871df2420c8b0107fe5aba6b5a.mp3",
+        "questionId": "8ef1a67e288a7b0a506f80a863f4d633",
+        "title": "正常难度（男2）",
+        "type": 3
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/081e2c9612cacf6bee5675396487bbbe.mp3",
+        "questionId": "8ef1a67e288a7b0a506f80a863f4d633",
+        "title": "意群分割版",
+        "type": 7
+      }
+    ],
+    "audio_url": "rs_audio/021455.mp3",
+    "audio_duration": 4.24,
+    "word_timings": [
+      [
+        0.1,
+        0.25
+      ],
+      [
+        0.362,
+        0.45
+      ],
+      [
+        0.825,
+        0.338
+      ],
+      [
+        1.175,
+        0.125
+      ],
+      [
+        1.312,
+        0.1
+      ],
+      [
+        1.425,
+        0.287
+      ],
+      [
+        1.725,
+        0.325
+      ],
+      [
+        2.062,
+        0.438
+      ],
+      [
+        2.513,
+        0.525
+      ],
+      [
+        3.05,
+        0.2
+      ],
+      [
+        3.263,
+        0.975
+      ]
+    ]
+  },
+  {
+    "index": 213,
     "qid": "021458",
     "sentence": "Read the safety instructions before using the equipment during the workshop.",
     "word_count": 11,
@@ -20256,7 +20120,7 @@
     ]
   },
   {
-    "index": 215,
+    "index": 214,
     "qid": "021461",
     "sentence": "The books are filled with drawings of machines he invented when he was a student.",
     "word_count": 15,
@@ -20338,7 +20202,7 @@
     ]
   },
   {
-    "index": 216,
+    "index": 215,
     "qid": "021474",
     "sentence": "A man who suffered serious brain damage during an operation is suing the hospital.",
     "word_count": 14,
@@ -20416,7 +20280,7 @@
     ]
   },
   {
-    "index": 217,
+    "index": 216,
     "qid": "021477",
     "sentence": "Note that the deadline for the submission of proposals has been extended for a week.",
     "word_count": 15,
@@ -20494,6 +20358,111 @@
       [
         3.7,
         0.438
+      ]
+    ]
+  },
+  {
+    "index": 217,
+    "qid": "021478",
+    "sentence": "Tuition fees will vary according to the field of study.",
+    "word_count": 10,
+    "translation": "学费会根据学习领域的不同而有所不同。",
+    "tags": {
+      "tier": "机经练习",
+      "frequency": "高频",
+      "difficulty": "普通",
+      "degree": 2,
+      "isForecast": false,
+      "tagHigh": false,
+      "tagNew": false,
+      "isJJ": true
+    },
+    "teacher_audios": [
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/20443f0ae0642c898e0ce9bdc3b6a27e.mp3",
+        "questionId": "9927e7f54d3ef0ad97760de226594871",
+        "title": "正常难度（女1）",
+        "type": 1
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/5cb3e57d9b7876b857c73a3ea8fd597b.mp3",
+        "questionId": "9927e7f54d3ef0ad97760de226594871",
+        "title": "正常难度（男1）",
+        "type": 2
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/1f880d7f094c7e85f83137c8e12f0524.mp3",
+        "questionId": "9927e7f54d3ef0ad97760de226594871",
+        "title": "正常难度（女2）",
+        "type": 4
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/67b7172cf6cf02e2e17457e0d121e7e6.mp3",
+        "questionId": "9927e7f54d3ef0ad97760de226594871",
+        "title": "正常难度（男2）",
+        "type": 3
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/1c3b7b75ada76d832dff7a3ec740249d.mp3",
+        "questionId": "9927e7f54d3ef0ad97760de226594871",
+        "title": "挑战难度（女）",
+        "type": 5
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/3d5b62aced4934854ff5ea7bc2c0f49b.mp3",
+        "questionId": "9927e7f54d3ef0ad97760de226594871",
+        "title": "挑战难度（男）",
+        "type": 6
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/d932a0a1bbdda6ce8e6428c72da618b3.mp3",
+        "questionId": "9927e7f54d3ef0ad97760de226594871",
+        "title": "意群分割版",
+        "type": 7
+      }
+    ],
+    "audio_url": "rs_audio/021478.mp3",
+    "audio_duration": 2.82,
+    "word_timings": [
+      [
+        0.1,
+        0.45
+      ],
+      [
+        0.562,
+        0.3
+      ],
+      [
+        0.875,
+        0.113
+      ],
+      [
+        1,
+        0.275
+      ],
+      [
+        1.288,
+        0.4
+      ],
+      [
+        1.7,
+        0.087
+      ],
+      [
+        1.8,
+        0.087
+      ],
+      [
+        1.9,
+        0.312
+      ],
+      [
+        2.225,
+        0.075
+      ],
+      [
+        2.312,
+        0.512
       ]
     ]
   },
@@ -23855,6 +23824,99 @@
   },
   {
     "index": 265,
+    "qid": "021615",
+    "sentence": "Transportation is only provided under special circumstances.",
+    "word_count": 7,
+    "translation": "只有在特殊情况下才提供运输服务。",
+    "tags": {
+      "tier": "机经练习",
+      "frequency": "高频",
+      "difficulty": "普通",
+      "degree": 2,
+      "isForecast": false,
+      "tagHigh": false,
+      "tagNew": false,
+      "isJJ": true
+    },
+    "teacher_audios": [
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/89c12685b11a1df5b9aee3529b2e97ef.mp3",
+        "questionId": "291a877f3c68969e27a550d0b8a08907",
+        "title": "正常难度（女1）",
+        "type": 1
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/4e9899db7985ab7e6e48246c16820d60.mp3",
+        "questionId": "291a877f3c68969e27a550d0b8a08907",
+        "title": "正常难度（男1）",
+        "type": 2
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/c680faae31684338a90a769728f63892.mp3",
+        "questionId": "291a877f3c68969e27a550d0b8a08907",
+        "title": "正常难度（女2）",
+        "type": 4
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/f1801380bb497c0632a3ee8875b93bee.mp3",
+        "questionId": "291a877f3c68969e27a550d0b8a08907",
+        "title": "正常难度（男2）",
+        "type": 3
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/4affa1e85c726d7e5e7e366b023402a3.mp3",
+        "questionId": "291a877f3c68969e27a550d0b8a08907",
+        "title": "挑战难度（女）",
+        "type": 5
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/734aeb30b588921da715b35646698d4e.mp3",
+        "questionId": "291a877f3c68969e27a550d0b8a08907",
+        "title": "挑战难度（男）",
+        "type": 6
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRS/r/d30971d661e9a544d13b85318f078cf4.mp3",
+        "questionId": "291a877f3c68969e27a550d0b8a08907",
+        "title": "意群分割版",
+        "type": 7
+      }
+    ],
+    "audio_url": "rs_audio/021615.mp3",
+    "audio_duration": 3.56,
+    "word_timings": [
+      [
+        0.1,
+        0.825
+      ],
+      [
+        0.938,
+        0.163
+      ],
+      [
+        1.113,
+        0.237
+      ],
+      [
+        1.363,
+        0.487
+      ],
+      [
+        1.863,
+        0.225
+      ],
+      [
+        2.1,
+        0.375
+      ],
+      [
+        2.487,
+        1.075
+      ]
+    ]
+  },
+  {
+    "index": 266,
     "qid": "021618",
     "sentence": "The critical literature review can thicken and broaden its scope through interpretation.",
     "word_count": 12,
@@ -23924,7 +23986,7 @@
     ]
   },
   {
-    "index": 266,
+    "index": 267,
     "qid": "021622",
     "sentence": "Scientific beneficiary to space exploration is frequently questioned.",
     "word_count": 8,
@@ -23978,7 +24040,7 @@
     ]
   },
   {
-    "index": 267,
+    "index": 268,
     "qid": "021631",
     "sentence": "The university is working towards being more environmentally sustainable.",
     "word_count": 9,
@@ -24036,7 +24098,7 @@
     ]
   },
   {
-    "index": 268,
+    "index": 269,
     "qid": "021633",
     "sentence": "They can tutor other students who need help for the preparation of the course and the test.",
     "word_count": 17,
@@ -24126,7 +24188,7 @@
     ]
   },
   {
-    "index": 269,
+    "index": 270,
     "qid": "021638",
     "sentence": "Marketing involves many activities, including doing research, developing products and promoting them.",
     "word_count": 12,
@@ -24196,7 +24258,7 @@
     ]
   },
   {
-    "index": 270,
+    "index": 271,
     "qid": "021639",
     "sentence": "The financial report for the last quarter will be available this afternoon.",
     "word_count": 12,
@@ -24266,7 +24328,7 @@
     ]
   },
   {
-    "index": 271,
+    "index": 272,
     "qid": "021640",
     "sentence": "Extra seminars will be scheduled to assist you with revision.",
     "word_count": 10,
@@ -24328,7 +24390,7 @@
     ]
   },
   {
-    "index": 272,
+    "index": 273,
     "qid": "021645",
     "sentence": "There are on-going problems with over-consumption of junk food.",
     "word_count": 9,
@@ -24386,7 +24448,7 @@
     ]
   },
   {
-    "index": 273,
+    "index": 274,
     "qid": "021646",
     "sentence": "Factors such as cost and function influence the design of a bridge.",
     "word_count": 12,
@@ -24456,7 +24518,7 @@
     ]
   },
   {
-    "index": 274,
+    "index": 275,
     "qid": "021649",
     "sentence": "Then we go for ones where we know there're guided tours, because this gives good focus for the visit.",
     "word_count": 19,
@@ -24554,7 +24616,7 @@
     ]
   },
   {
-    "index": 275,
+    "index": 276,
     "qid": "021651",
     "sentence": "Even during leisure time you can hear attempts to persuade or influence.",
     "word_count": 12,
@@ -24624,7 +24686,7 @@
     ]
   },
   {
-    "index": 276,
+    "index": 277,
     "qid": "021652",
     "sentence": "Here in this area, you shouldn't find any huge social problems nowadays.",
     "word_count": 12,
@@ -24694,7 +24756,7 @@
     ]
   },
   {
-    "index": 277,
+    "index": 278,
     "qid": "021654",
     "sentence": "But we have confirmed the dates and planned the optional extra visits.",
     "word_count": 12,
@@ -24764,7 +24826,7 @@
     ]
   },
   {
-    "index": 278,
+    "index": 279,
     "qid": "021655",
     "sentence": "In most cases, quality products don't need much advertising.",
     "word_count": 9,
@@ -24822,7 +24884,7 @@
     ]
   },
   {
-    "index": 279,
+    "index": 280,
     "qid": "021656",
     "sentence": "During some stages of sleep, your eyes move rapidly behind your closed eyelids.",
     "word_count": 13,
@@ -24896,7 +24958,7 @@
     ]
   },
   {
-    "index": 280,
+    "index": 281,
     "qid": "021657",
     "sentence": "A new report outlines ways in which cities should address transport issues.",
     "word_count": 12,
@@ -24966,7 +25028,7 @@
     ]
   },
   {
-    "index": 281,
+    "index": 282,
     "qid": "021658",
     "sentence": "Teenagers more than most age groups feel strong pressure to conform.",
     "word_count": 11,
@@ -25032,7 +25094,7 @@
     ]
   },
   {
-    "index": 282,
+    "index": 283,
     "qid": "021660",
     "sentence": "Some people suggest a levy on junk food to discourage its consumption.",
     "word_count": 12,
@@ -25102,7 +25164,7 @@
     ]
   },
   {
-    "index": 283,
+    "index": 284,
     "qid": "021661",
     "sentence": "University students pay a lot of money for their education.",
     "word_count": 10,
@@ -25164,7 +25226,7 @@
     ]
   },
   {
-    "index": 284,
+    "index": 285,
     "qid": "021664",
     "sentence": "The amount of sleep that adults need doesn't change as they get older.",
     "word_count": 13,
@@ -25238,7 +25300,7 @@
     ]
   },
   {
-    "index": 285,
+    "index": 286,
     "qid": "021665",
     "sentence": "It's a difficult one. If you start prohibiting some research, where do you draw the line?",
     "word_count": 16,
@@ -25324,7 +25386,7 @@
     ]
   },
   {
-    "index": 286,
+    "index": 287,
     "qid": "021667",
     "sentence": "The problems that science solves far outweigh the problems that it may bring.",
     "word_count": 13,
@@ -25398,7 +25460,7 @@
     ]
   },
   {
-    "index": 287,
+    "index": 288,
     "qid": "021669",
     "sentence": "Detailed analysis of population growth has revealed some alarming predictions.",
     "word_count": 10,
@@ -25460,7 +25522,7 @@
     ]
   },
   {
-    "index": 288,
+    "index": 289,
     "qid": "021670",
     "sentence": "Visual aids can make presentations clearer and more interesting.",
     "word_count": 9,
@@ -25518,7 +25580,7 @@
     ]
   },
   {
-    "index": 289,
+    "index": 290,
     "qid": "021672",
     "sentence": "My favorite place in my hometown is the main park located downtown.",
     "word_count": 12,
@@ -25588,7 +25650,7 @@
     ]
   },
   {
-    "index": 290,
+    "index": 291,
     "qid": "021673",
     "sentence": "Students do better when they interact with others with completely different perspectives on things.",
     "word_count": 14,
@@ -25666,7 +25728,7 @@
     ]
   },
   {
-    "index": 291,
+    "index": 292,
     "qid": "021679",
     "sentence": "The media are to blame for excessive promotion of unhealthy food.",
     "word_count": 11,
@@ -25732,7 +25794,7 @@
     ]
   },
   {
-    "index": 292,
+    "index": 293,
     "qid": "021680",
     "sentence": "The supplementary energy sources are needed after exertion.",
     "word_count": 8,
@@ -25786,7 +25848,7 @@
     ]
   },
   {
-    "index": 293,
+    "index": 294,
     "qid": "021682",
     "sentence": "The artist is exhibiting in the national art gallery next year.",
     "word_count": 11,
@@ -25852,7 +25914,7 @@
     ]
   },
   {
-    "index": 294,
+    "index": 295,
     "qid": "021686",
     "sentence": "Children, for example, are often exposed to negative role models due to peer pressure.",
     "word_count": 14,
@@ -25930,7 +25992,7 @@
     ]
   },
   {
-    "index": 295,
+    "index": 296,
     "qid": "021687",
     "sentence": "People often conform during their leisure time as well as in their work hours.",
     "word_count": 14,
@@ -26008,7 +26070,7 @@
     ]
   },
   {
-    "index": 296,
+    "index": 297,
     "qid": "021688",
     "sentence": "Conformity involves acting or thinking like other group members.",
     "word_count": 9,
@@ -26066,7 +26128,7 @@
     ]
   },
   {
-    "index": 297,
+    "index": 298,
     "qid": "021689",
     "sentence": "An understanding of persuasive techniques should help you recognize their use.",
     "word_count": 11,
@@ -26132,7 +26194,7 @@
     ]
   },
   {
-    "index": 298,
+    "index": 299,
     "qid": "021690",
     "sentence": "Nowadays, persuasion is an important area of research within social psychology.",
     "word_count": 11,
@@ -26198,7 +26260,7 @@
     ]
   },
   {
-    "index": 299,
+    "index": 300,
     "qid": "021691",
     "sentence": "He needs to talk to you about your industrial architecture class.",
     "word_count": 11,
@@ -26264,7 +26326,7 @@
     ]
   },
   {
-    "index": 300,
+    "index": 301,
     "qid": "021692",
     "sentence": "Often, the point of the advertisements is to raise awareness rather than give information.",
     "word_count": 14,
@@ -26342,7 +26404,7 @@
     ]
   },
   {
-    "index": 301,
+    "index": 302,
     "qid": "021693",
     "sentence": "Generally, consumers trust friends more than commercial information, such as advertisements.",
     "word_count": 11,
@@ -26408,7 +26470,7 @@
     ]
   },
   {
-    "index": 302,
+    "index": 303,
     "qid": "021696",
     "sentence": "Elephants spend some of their sleeping time standing up and some of it lying down.",
     "word_count": 15,
@@ -26490,7 +26552,7 @@
     ]
   },
   {
-    "index": 303,
+    "index": 304,
     "qid": "021697",
     "sentence": "Fatigue is a factor in a significant proportion of road accidents.",
     "word_count": 11,
@@ -26556,7 +26618,7 @@
     ]
   },
   {
-    "index": 304,
+    "index": 305,
     "qid": "021698",
     "sentence": "Having a shower before going to bed can help you sleep.",
     "word_count": 11,
@@ -26622,7 +26684,7 @@
     ]
   },
   {
-    "index": 305,
+    "index": 306,
     "qid": "021702",
     "sentence": "It's my opinion that technological advances will begin to slow.",
     "word_count": 10,
@@ -26684,7 +26746,7 @@
     ]
   },
   {
-    "index": 306,
+    "index": 307,
     "qid": "021706",
     "sentence": "One solution is a system of electric cars available for hire on demand.",
     "word_count": 13,
@@ -26758,7 +26820,7 @@
     ]
   },
   {
-    "index": 307,
+    "index": 308,
     "qid": "021711",
     "sentence": "Copying from the internet threatens to damage your chances of success.",
     "word_count": 11,
@@ -26824,7 +26886,7 @@
     ]
   },
   {
-    "index": 308,
+    "index": 309,
     "qid": "021712",
     "sentence": "To acquire a copy of the presentation, please go to my website.",
     "word_count": 12,
