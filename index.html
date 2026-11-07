@@ -6358,7 +6358,7 @@
   // 📚 每日打卡各题型真题库查看与在线练习弹窗引擎
   // =========================================================================
   const PLANNER_BANK_MAP = {
-    SGD: { file: "sgd_questions.json", name: "SGD 讨论总结", title: "SGD 讨论总结 · 两家原声＋萤火虫原文与答案", unit: "题" },
+    SGD: { file: "sgd_questions.json", name: "SGD 讨论总结", title: "SGD 讨论总结 · 两家原声＋萤火虫原文与答案", unit: "题", practicePage: "sgd_practice.html" },
     RTS: { file: "rts_questions.json", name: "RTS 应对情景", title: "RTS 应对情景 · 大西瓜原声＋萤火虫答案", unit: "题" },
     "FIB-D": { file: "fib_d_questions.json", name: "FIB-D 阅读填空", title: "FIB-D 阅读下拉填空 · 萤火虫极高频", unit: "篇" },
     "FIB-DD": { file: "fib_dd_questions.json", name: "FIB-DD 拖拽填空", title: "FIB-DD 拖拽填空 · 萤火虫极高频＋大西瓜回忆", unit: "篇" },
@@ -6495,6 +6495,10 @@
 
     document.getElementById("pb-modal-badge").innerText = taskKey;
     document.getElementById("pb-modal-title").innerText = config.title;
+    const extLinkEl = document.getElementById("pb-modal-external-link");
+    if (extLinkEl) extLinkEl.innerHTML = config.practicePage
+      ? '<a href="' + config.practicePage + '" target="_blank" style="font-size:0.78rem;font-weight:700;color:#c7d2fe;text-decoration:none;border:1px solid rgba(255,255,255,0.35);padding:4px 12px;border-radius:9999px;display:inline-flex;align-items:center;gap:5px;">↗ 独立训练页 · 本地音频</a>'
+      : '';
     document.getElementById("pb-modal-count-badge").innerText = "加载中...";
     document.getElementById("pb-questions-list").innerHTML = '<div style="padding: 20px; text-align: center; color: #64748b; font-size: 0.85rem;">⏳ 正在调取最新同步题库数据...</div>';
     document.getElementById("pb-question-detail-panel").innerHTML = '<div style="padding: 40px 20px; text-align: center; color: #94a3b8;">加载中...</div>';
@@ -11084,6 +11088,7 @@
         <span id="pb-modal-badge" class="explorer-header-badge" style="background:#ea580c;color:white;font-size:0.85rem;">SGD</span>
         <h2 id="pb-modal-title" style="font-size:1.15rem;font-weight:800;color:white;margin:0;">全真题库</h2>
         <span id="pb-modal-count-badge" class="safe-mark-badge" style="background: #059669; color: white;">已就绪</span>
+        <span id="pb-modal-external-link" style="margin-left:auto; display:inline-flex;"></span>
       </div>
       <button class="modal-close-btn" onclick="closePlannerBankModal()" style="color:white;">&times;</button>
     </div>
