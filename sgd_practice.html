@@ -137,6 +137,19 @@
     .section.open .arrow { transform: rotate(90deg); }
     .section-body { display: none; padding: 14px 16px; border: 1px solid var(--border-color); border-top: none; border-radius: 0 0 var(--radius-md) var(--radius-md); }
     .section.open .section-body { display: block; }
+
+    /* 原文 | 答案 左右分栏(窄屏自动上下堆叠) */
+    .split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; margin-bottom: 8px; }
+    .split-col { min-width: 0; }
+    .split-col-title {
+      font-size: 12px; font-weight: 800; letter-spacing: 1px; color: #64748b;
+      margin-bottom: 8px; padding-left: 2px;
+    }
+    .split-layout .section-body { max-height: 52vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    @media (max-width: 900px) {
+      .split-layout { grid-template-columns: 1fr; }
+      .split-layout .section-body { max-height: none; }
+    }
     .pre-wrap { white-space: pre-wrap; word-break: break-word; font-size: 15px; color: var(--text-main); }
     .kwr { color: #dc2626; font-weight: 700; }
     .kw-legend { font-size: 11px; color: #dc2626; font-weight: 400; margin-left: 4px; }
@@ -362,11 +375,11 @@ function renderCard() {
     }
   } else if (!firefly) {
     answerHtml =
-      '<div class="answer-hidden-box" style="border-style:solid">大西瓜题参考对话即答案:上方「参考对话 · 逐字稿」已含完整内容,直接对照即可。</div>';
+      '<div class="answer-hidden-box" style="border-style:solid">大西瓜题参考对话即答案:「参考对话 · 逐字稿」栏已含完整内容,直接对照即可。</div>';
   }
 
   const discussion = q.discussion || '(本题暂无讨论原文)';
-  const textLabel = firefly ? '讨论原文(听后再看)' : '参考对话 · 逐字稿(即答案)';
+  const textLabel = firefly ? '讨论原文' : '参考对话 · 逐字稿(即答案)';
   const audioHtml =
     '<div class="audio-box">' +
       '<audio id="audioEl" controls preload="none" src="' + esc(q.audio) + '" onerror="audioFallback(this)"></audio>' +
@@ -385,13 +398,21 @@ function renderCard() {
       '</div>' +
       '<div class="source-line">来源:' + esc(q.source) + (firefly ? ' · 官方打分:听力 20% + 口语 19%' : '') + '</div>' +
       audioHtml +
-      '<div class="section" id="secText">' +
-        '<div class="section-head" onclick="toggleSection(this)">' + esc(textLabel) + (q.keywords && q.keywords.length ? '<span class="kw-legend">红色 = 要点关键词</span>' : '') + ' <span class="arrow">▶</span></div>' +
-        '<div class="section-body"><div class="pre-wrap">' + hl(discussion, q.keywords) + '</div></div>' +
+      '<div class="split-layout">' +
+        '<div class="split-col">' +
+          '<div class="split-col-title">📄 原文</div>' +
+          '<div class="section open" id="secText">' +
+            '<div class="section-head" onclick="toggleSection(this)">' + esc(textLabel) + (q.keywords && q.keywords.length ? '<span class="kw-legend">红色 = 要点关键词</span>' : '') + ' <span class="arrow">▶</span></div>' +
+            '<div class="section-body"><div class="pre-wrap">' + hl(discussion, q.keywords) + '</div></div>' +
+          '</div>' +
+          bilingualHtml +
+        '</div>' +
+        '<div class="split-col">' +
+          '<div class="split-col-title">🎯 参考答案</div>' +
+          answerHtml +
+          pointsHtml +
+        '</div>' +
       '</div>' +
-      bilingualHtml +
-      answerHtml +
-      pointsHtml +
     '</div>';
 
   document.getElementById('posText').textContent = '第 ' + (state.idx + 1) + ' / ' + list.length + ' 题';
