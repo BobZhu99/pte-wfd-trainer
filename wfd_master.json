@@ -6025,6 +6025,12 @@
         "questionId": "961f34d4b9c804d1b29b70ba61738623",
         "title": "挑战难度（男）",
         "type": 6
+      },
+      {
+        "audioUrl": "https://melonenglish-1304274226.cos.ap-singapore.myqcloud.com/ucloud/1459363286515486721.m4a",
+        "questionId": "melon_121235",
+        "title": "🍉 大西瓜原声",
+        "type": 10
       }
     ],
     "tags": {
@@ -6035,16 +6041,16 @@
       "tagRepeat": false,
       "tagNew": false,
       "tagDaily": true,
-      "tagShared": false,
-      "tagMelon106": false
+      "tagShared": true,
+      "tagMelon106": true
     },
     "translation": "一位世界知名的经济学和市场营销专家将进行讲座。",
     "is_ultra": true,
-    "melon_qid": null,
-    "melon_sentence": null,
+    "melon_qid": "121235",
+    "melon_sentence": "A world-renowned finance director will give a guest lecture.",
     "trial_words": [],
-    "is_overlap": false,
-    "is_melon_106": false
+    "is_overlap": true,
+    "is_melon_106": true
   },
   {
     "index": 92,
@@ -10176,16 +10182,16 @@
       "tagRepeat": false,
       "tagNew": false,
       "tagDaily": false,
-      "tagShared": true,
-      "tagMelon106": true
+      "tagShared": false,
+      "tagMelon106": false
     },
     "translation": "一位世界级的财务管理专家将带来一场客座讲座。",
     "is_ultra": false,
     "melon_qid": "121235",
     "melon_sentence": "A world-renowned finance director will give a guest lecture.",
     "trial_words": [],
-    "is_overlap": true,
-    "is_melon_106": true
+    "is_overlap": false,
+    "is_melon_106": false
   },
   {
     "index": 158,
