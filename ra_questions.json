@@ -6761,558 +6761,6 @@
   },
   {
     "index": 26,
-    "qid": "011030",
-    "title": "Energy and Pollution",
-    "text": "Humans need to use energy in order to exist. So it is unsurprising that the way people have been producing energy is largely responsible for current environmental problems. Pollution comes in many forms, but those that are most concerning, because of their impact on health, result from the combustion of fuels in power stations and cars.",
-    "word_count": 56,
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "极高频",
-      "difficulty": "简单",
-      "degree": 1,
-      "isForecast": true,
-      "tagHigh": true,
-      "tagNew": false,
-      "isJJ": true
-    },
-    "teacher_audios": [
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/85c1bbebe1edc80d6f88d19186040212.mp3",
-        "questionId": "2c9080876677056601667bb0aa5600ca",
-        "title": "萤火虫高分示范",
-        "type": 1
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/5c44763e7fbd680c3147ccad14c10956.mp3",
-        "questionId": "2c9080876677056601667bb0aa5600ca",
-        "title": "Native Speaker 女声 常速",
-        "type": 2
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/ed2c94e26b3dbaaf5ac671dba46c2e26.mp3",
-        "questionId": "2c9080876677056601667bb0aa5600ca",
-        "title": "Native Speaker 男声 常速",
-        "type": 4
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/5c6678aeb74b04141de4949e3a0460fe.mp3",
-        "questionId": "2c9080876677056601667bb0aa5600ca",
-        "title": "RA最低语速示范",
-        "type": 6
-      }
-    ],
-    "translation": "人类需要使用能量才能生存。因此，人们生产能源的方式是造成当前环境问题的主要原因也就不足为奇了。污染有多种形式，但最令人担忧的污染是由发电站和汽车的燃料燃烧造成的，因为它们对健康有影响。",
-    "audio_url": "ra_audio/011030.mp3",
-    "audio_duration": 20.07,
-    "word_timings": [
-      [
-        0.1,
-        0.45
-      ],
-      [
-        0.562,
-        0.163
-      ],
-      [
-        0.738,
-        0.087
-      ],
-      [
-        0.838,
-        0.25
-      ],
-      [
-        1.1,
-        0.45
-      ],
-      [
-        1.562,
-        0.113
-      ],
-      [
-        1.688,
-        0.237
-      ],
-      [
-        1.938,
-        0.125
-      ],
-      [
-        2.075,
-        0.7
-      ],
-      [
-        3.638,
-        0.225
-      ],
-      [
-        3.875,
-        0.087
-      ],
-      [
-        3.975,
-        0.125
-      ],
-      [
-        4.112,
-        0.688
-      ],
-      [
-        4.812,
-        0.125
-      ],
-      [
-        4.95,
-        0.087
-      ],
-      [
-        5.05,
-        0.175
-      ],
-      [
-        5.237,
-        0.362
-      ],
-      [
-        5.612,
-        0.113
-      ],
-      [
-        5.737,
-        0.163
-      ],
-      [
-        5.912,
-        0.55
-      ],
-      [
-        6.475,
-        0.537
-      ],
-      [
-        7.025,
-        0.15
-      ],
-      [
-        7.188,
-        0.412
-      ],
-      [
-        7.612,
-        0.65
-      ],
-      [
-        8.275,
-        0.163
-      ],
-      [
-        8.45,
-        0.312
-      ],
-      [
-        8.775,
-        0.637
-      ],
-      [
-        9.425,
-        0.7
-      ],
-      [
-        10.988,
-        0.537
-      ],
-      [
-        11.537,
-        0.25
-      ],
-      [
-        11.8,
-        0.1
-      ],
-      [
-        11.912,
-        0.25
-      ],
-      [
-        12.175,
-        0.575
-      ],
-      [
-        12.925,
-        0.163
-      ],
-      [
-        13.1,
-        0.225
-      ],
-      [
-        13.338,
-        0.125
-      ],
-      [
-        13.475,
-        0.075
-      ],
-      [
-        13.562,
-        0.3
-      ],
-      [
-        13.875,
-        0.637
-      ],
-      [
-        14.725,
-        0.338
-      ],
-      [
-        15.075,
-        0.062
-      ],
-      [
-        15.15,
-        0.138
-      ],
-      [
-        15.3,
-        0.438
-      ],
-      [
-        15.75,
-        0.113
-      ],
-      [
-        15.875,
-        0.45
-      ],
-      [
-        16.562,
-        0.362
-      ],
-      [
-        16.938,
-        0.138
-      ],
-      [
-        17.087,
-        0.1
-      ],
-      [
-        17.2,
-        0.55
-      ],
-      [
-        17.762,
-        0.087
-      ],
-      [
-        17.863,
-        0.45
-      ],
-      [
-        18.325,
-        0.113
-      ],
-      [
-        18.45,
-        0.35
-      ],
-      [
-        18.812,
-        0.512
-      ],
-      [
-        19.337,
-        0.113
-      ],
-      [
-        19.462,
-        0.613
-      ]
-    ]
-  },
-  {
-    "index": 27,
-    "qid": "011033",
-    "title": "Hamburg University",
-    "text": "Three professors from Hamburg University's medical faculty traveled last month to Ingeborg's sitting room in East Berlin to test her on the work she carried out in pre-war Germany. They were impressed and a special ceremony took place at Hamburg University Medical Centre on Tuesday, in which she finally received the Ph.D. that the Nazis stole from her.",
-    "word_count": 58,
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "极高频",
-      "difficulty": "简单",
-      "degree": 1,
-      "isForecast": true,
-      "tagHigh": true,
-      "tagNew": false,
-      "isJJ": true
-    },
-    "teacher_audios": [
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/8aa68486c014eba92c55c84734832953.mp3",
-        "questionId": "2c9080876677056601667bb14bd600d0",
-        "title": "萤火虫高分示范",
-        "type": 1
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/55b2733ede621b7ae43ec7ad7fef933e.mp3",
-        "questionId": "2c9080876677056601667bb14bd600d0",
-        "title": "Native Speaker 女声 常速",
-        "type": 2
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/31c4cfa238b6f150031725d534d1e6a4.mp3",
-        "questionId": "2c9080876677056601667bb14bd600d0",
-        "title": "Native Speaker 男声 常速",
-        "type": 4
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/448e2adfff4cb60804fcf35a54b4fe70.mp3",
-        "questionId": "2c9080876677056601667bb14bd600d0",
-        "title": "RA最低语速示范",
-        "type": 6
-      }
-    ],
-    "translation": "汉堡大学医学院的三名教授上个月前往东柏林英格堡的客厅，测试她在战前德国所做的工作。他们印象深刻，周二在汉堡大学医学中心举行了特别仪式，她终于获得了博士学位。纳粹从她那里偷走了。",
-    "audio_url": "ra_audio/011033.mp3",
-    "audio_duration": 19.09,
-    "word_timings": [
-      [
-        0.1,
-        0.25
-      ],
-      [
-        0.362,
-        0.588
-      ],
-      [
-        0.963,
-        0.138
-      ],
-      [
-        1.113,
-        0.388
-      ],
-      [
-        1.512,
-        0.675
-      ],
-      [
-        2.2,
-        0.375
-      ],
-      [
-        2.587,
-        0.512
-      ],
-      [
-        3.112,
-        0.438
-      ],
-      [
-        3.562,
-        0.325
-      ],
-      [
-        3.9,
-        0.375
-      ],
-      [
-        4.287,
-        0.113
-      ],
-      [
-        4.412,
-        0.512
-      ],
-      [
-        4.938,
-        0.275
-      ],
-      [
-        5.225,
-        0.2
-      ],
-      [
-        5.438,
-        0.138
-      ],
-      [
-        5.588,
-        0.237
-      ],
-      [
-        5.838,
-        0.425
-      ],
-      [
-        6.275,
-        0.1
-      ],
-      [
-        6.388,
-        0.312
-      ],
-      [
-        6.713,
-        0.1
-      ],
-      [
-        6.825,
-        0.1
-      ],
-      [
-        6.938,
-        0.075
-      ],
-      [
-        7.025,
-        0.312
-      ],
-      [
-        7.35,
-        0.15
-      ],
-      [
-        7.513,
-        0.325
-      ],
-      [
-        7.85,
-        0.175
-      ],
-      [
-        8.037,
-        0.1
-      ],
-      [
-        8.15,
-        0.4
-      ],
-      [
-        8.562,
-        0.575
-      ],
-      [
-        10,
-        0.15
-      ],
-      [
-        10.162,
-        0.125
-      ],
-      [
-        10.3,
-        0.588
-      ],
-      [
-        10.9,
-        0.113
-      ],
-      [
-        11.025,
-        0.05
-      ],
-      [
-        11.088,
-        0.4
-      ],
-      [
-        11.5,
-        0.575
-      ],
-      [
-        12.088,
-        0.225
-      ],
-      [
-        12.325,
-        0.35
-      ],
-      [
-        12.688,
-        0.1
-      ],
-      [
-        12.8,
-        0.412
-      ],
-      [
-        13.225,
-        0.575
-      ],
-      [
-        13.812,
-        0.412
-      ],
-      [
-        14.238,
-        0.35
-      ],
-      [
-        14.6,
-        0.125
-      ],
-      [
-        14.738,
-        0.525
-      ],
-      [
-        15.537,
-        0.113
-      ],
-      [
-        15.662,
-        0.15
-      ],
-      [
-        15.825,
-        0.138
-      ],
-      [
-        15.975,
-        0.45
-      ],
-      [
-        16.438,
-        0.375
-      ],
-      [
-        16.825,
-        0.075
-      ],
-      [
-        16.913,
-        0.65
-      ],
-      [
-        17.575,
-        0.15
-      ],
-      [
-        17.738,
-        0.062
-      ],
-      [
-        17.812,
-        0.438
-      ],
-      [
-        18.262,
-        0.263
-      ],
-      [
-        18.538,
-        0.163
-      ],
-      [
-        18.712,
-        0.375
-      ]
-    ]
-  },
-  {
-    "index": 28,
     "qid": "011034",
     "title": "The Border",
     "text": "The border itself between Mexico and the United States is fraught with a mix of urban and desert terrain and spans over one thousand nine hundred miles. Both the uninhabited areas of the border and urban areas are where the most drug trafficking and illegal crossings take place. Crime is prevalent in urban cities like El Paso, Texas and San Diego, California.",
@@ -7608,479 +7056,7 @@
     ]
   },
   {
-    "index": 29,
-    "qid": "011035",
-    "title": "Long-Distance Fliers",
-    "text": "Researchers think that long-distance fliers such as the American golden-plover and the white-rumped sandpiper picked up the spores while lining their nests. Then when the birds arrive in new places, they molt - leaving behind the feathers and their precious cargo - to start growing again at the other end of the world.",
-    "word_count": 53,
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "极高频",
-      "difficulty": "困难",
-      "degree": 3,
-      "isForecast": true,
-      "tagHigh": true,
-      "tagNew": false,
-      "isJJ": true
-    },
-    "teacher_audios": [
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/b1cd6abb7cd6881b3a598228ebf3631c.mp3",
-        "questionId": "2c9080876677056601667bb4cef400d4",
-        "title": "萤火虫高分示范",
-        "type": 1
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/fc86ac183d8f3410a22e8db80f4fef4c.mp3",
-        "questionId": "2c9080876677056601667bb4cef400d4",
-        "title": "Native Speaker 女声 常速",
-        "type": 2
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/93f2ca98b1691006e3ccb7eb7d765c56.mp3",
-        "questionId": "2c9080876677056601667bb4cef400d4",
-        "title": "Native Speaker 男声 常速",
-        "type": 4
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/a7ac35ebc2c131e80753b54e5093c38e.mp3",
-        "questionId": "2c9080876677056601667bb4cef400d4",
-        "title": "RA最低语速示范",
-        "type": 6
-      }
-    ],
-    "translation": "研究人员认为，美国金鸻和白腰鹬等长途飞行者在筑巢时会拾取孢子。然后，当鸟儿到达新的地方时，它们会蜕皮——留下羽毛和珍贵的货物——在世界的另一端重新开始生长。",
-    "audio_url": "ra_audio/011035.mp3",
-    "audio_duration": 17.36,
-    "word_timings": [
-      [
-        0.1,
-        0.613
-      ],
-      [
-        0.725,
-        0.225
-      ],
-      [
-        0.963,
-        0.163
-      ],
-      [
-        1.137,
-        0.675
-      ],
-      [
-        1.825,
-        0.463
-      ],
-      [
-        2.3,
-        0.225
-      ],
-      [
-        2.538,
-        0.075
-      ],
-      [
-        2.625,
-        0.087
-      ],
-      [
-        2.725,
-        0.512
-      ],
-      [
-        3.25,
-        0.85
-      ],
-      [
-        4.112,
-        0.075
-      ],
-      [
-        4.2,
-        0.087
-      ],
-      [
-        4.3,
-        0.5
-      ],
-      [
-        4.812,
-        0.688
-      ],
-      [
-        5.513,
-        0.275
-      ],
-      [
-        5.8,
-        0.113
-      ],
-      [
-        5.925,
-        0.1
-      ],
-      [
-        6.037,
-        0.463
-      ],
-      [
-        6.513,
-        0.188
-      ],
-      [
-        6.713,
-        0.325
-      ],
-      [
-        7.05,
-        0.15
-      ],
-      [
-        7.213,
-        0.625
-      ],
-      [
-        8.7,
-        0.287
-      ],
-      [
-        9,
-        0.125
-      ],
-      [
-        9.137,
-        0.1
-      ],
-      [
-        9.25,
-        0.287
-      ],
-      [
-        9.55,
-        0.287
-      ],
-      [
-        9.85,
-        0.1
-      ],
-      [
-        9.963,
-        0.138
-      ],
-      [
-        10.113,
-        0.688
-      ],
-      [
-        10.963,
-        0.113
-      ],
-      [
-        11.088,
-        0.338
-      ],
-      [
-        11.512,
-        0.287
-      ],
-      [
-        11.812,
-        0.362
-      ],
-      [
-        12.188,
-        0.075
-      ],
-      [
-        12.275,
-        0.55
-      ],
-      [
-        12.838,
-        0.163
-      ],
-      [
-        13.012,
-        0.138
-      ],
-      [
-        13.162,
-        0.388
-      ],
-      [
-        13.562,
-        0.588
-      ],
-      [
-        14.262,
-        0.113
-      ],
-      [
-        14.387,
-        0.275
-      ],
-      [
-        14.675,
-        0.375
-      ],
-      [
-        15.062,
-        0.362
-      ],
-      [
-        15.438,
-        0.087
-      ],
-      [
-        15.537,
-        0.087
-      ],
-      [
-        15.637,
-        0.237
-      ],
-      [
-        15.887,
-        0.15
-      ],
-      [
-        16.05,
-        0.062
-      ],
-      [
-        16.125,
-        0.087
-      ],
-      [
-        16.225,
-        0.475
-      ],
-      [
-        16.75,
-        0.28
-      ],
-      [
-        17.08,
-        0.28
-      ]
-    ]
-  },
-  {
-    "index": 30,
-    "qid": "011036",
-    "title": "Spelling System",
-    "text": "The problem begins with the alphabet itself. Building a spelling system for English using letters that come from Latin, despite the two languages not sharing exactly the same set of sounds, is like building a playroom using an IKEA office set.",
-    "word_count": 41,
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "极高频",
-      "difficulty": "简单",
-      "degree": 1,
-      "isForecast": true,
-      "tagHigh": true,
-      "tagNew": false,
-      "isJJ": true
-    },
-    "teacher_audios": [
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/0e995ec91cfd872c0409e90a649de53b.mp3",
-        "questionId": "2c9080876677056601667bb4ff8a00d6",
-        "title": "萤火虫高分示范",
-        "type": 1
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/73c2a082d322338e480790a8a57ffe7a.mp3",
-        "questionId": "2c9080876677056601667bb4ff8a00d6",
-        "title": "Native Speaker 女声 常速",
-        "type": 2
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/215adf935881c0d6ad017122a1f2b808.mp3",
-        "questionId": "2c9080876677056601667bb4ff8a00d6",
-        "title": "Native Speaker 男声 常速",
-        "type": 4
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/d733bc10d4538a62d309c7595eb6f263.mp3",
-        "questionId": "2c9080876677056601667bb4ff8a00d6",
-        "title": "RA最低语速示范",
-        "type": 6
-      }
-    ],
-    "translation": "问题始于字母表本身。尽管两种语言并不共享完全相同的一组声音，但使用来自拉丁语的字母构建英语拼写系统就像使用宜家办公套件构建游戏室一样。",
-    "audio_url": "ra_audio/011036.mp3",
-    "audio_duration": 13.8,
-    "word_timings": [
-      [
-        0.1,
-        0.138
-      ],
-      [
-        0.25,
-        0.4
-      ],
-      [
-        0.662,
-        0.388
-      ],
-      [
-        1.062,
-        0.113
-      ],
-      [
-        1.188,
-        0.1
-      ],
-      [
-        1.3,
-        0.45
-      ],
-      [
-        1.762,
-        0.65
-      ],
-      [
-        3.275,
-        0.375
-      ],
-      [
-        3.663,
-        0.05
-      ],
-      [
-        3.725,
-        0.425
-      ],
-      [
-        4.162,
-        0.4
-      ],
-      [
-        4.575,
-        0.175
-      ],
-      [
-        4.763,
-        0.35
-      ],
-      [
-        5.125,
-        0.3
-      ],
-      [
-        5.438,
-        0.375
-      ],
-      [
-        5.825,
-        0.15
-      ],
-      [
-        5.987,
-        0.2
-      ],
-      [
-        6.2,
-        0.175
-      ],
-      [
-        6.388,
-        0.388
-      ],
-      [
-        7.05,
-        0.412
-      ],
-      [
-        7.475,
-        0.087
-      ],
-      [
-        7.575,
-        0.212
-      ],
-      [
-        7.8,
-        0.575
-      ],
-      [
-        8.387,
-        0.225
-      ],
-      [
-        8.625,
-        0.375
-      ],
-      [
-        9.012,
-        0.487
-      ],
-      [
-        9.512,
-        0.1
-      ],
-      [
-        9.625,
-        0.275
-      ],
-      [
-        9.912,
-        0.2
-      ],
-      [
-        10.125,
-        0.075
-      ],
-      [
-        10.213,
-        0.537
-      ],
-      [
-        10.975,
-        0.113
-      ],
-      [
-        11.1,
-        0.188
-      ],
-      [
-        11.3,
-        0.312
-      ],
-      [
-        11.625,
-        0.05
-      ],
-      [
-        11.688,
-        0.487
-      ],
-      [
-        12.188,
-        0.3
-      ],
-      [
-        12.5,
-        0.075
-      ],
-      [
-        12.588,
-        0.4
-      ],
-      [
-        13,
-        0.325
-      ],
-      [
-        13.338,
-        0.463
-      ]
-    ]
-  },
-  {
-    "index": 31,
+    "index": 27,
     "qid": "011038",
     "title": "Moods",
     "text": "Moods may also have an effect on how information is processed, by influencing the extent to which judges rely on pre-existing, internal information, or focus on new, external information. Positive moods promote more holistic and top-down processing style, while negative moods recruit more stimulus-driven and bottom-up processing.",
@@ -8316,7 +7292,7 @@
     ]
   },
   {
-    "index": 32,
+    "index": 28,
     "qid": "011040",
     "title": "Roman Writers",
     "text": "Roman writers and orators began to expand their imaginative and intellectual horizons and refine the Latin language through the study of Greek literature. Early Roman literature had two kinds: the recording and examination of public life and behaviour through life stories of famous men, and the particularly Roman art of satirical comedy and drama.",
@@ -8580,7 +7556,7 @@
     ]
   },
   {
-    "index": 33,
+    "index": 29,
     "qid": "011044",
     "title": "US Student Debt",
     "text": "The numbers on US student debt, after all, are truly staggering. The average two thousand and fifteen US university graduate who took out loans to help pay for tuition enters the workforce with thirty-five thousand dollars in student debt. In the US, total student debt exceeds one point one five trillion dollars, dwarfing, for instance, the nation's credit card debt.",
@@ -8868,235 +7844,7 @@
     ]
   },
   {
-    "index": 34,
-    "qid": "011049",
-    "title": "Wild Cat",
-    "text": "In the photo, the wild cat's huge paws are clamped onto the side of the white safari Jeep in which Chappell was a passenger. Almost as tall as the Jeep on her hind legs, she appears to be forcing her muzzle into the back window.",
-    "word_count": 45,
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "极高频",
-      "difficulty": "普通",
-      "degree": 2,
-      "isForecast": true,
-      "tagHigh": true,
-      "tagNew": false,
-      "isJJ": true
-    },
-    "teacher_audios": [
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/acfd33df65cdb80c67663b46ac7441a6.mp3",
-        "questionId": "2c9080876677056601667bb808e200f1",
-        "title": "萤火虫高分示范",
-        "type": 1
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/19707b74a0796de2b6f424709d95cdf7.mp3",
-        "questionId": "2c9080876677056601667bb808e200f1",
-        "title": "Native Speaker 女声 常速",
-        "type": 2
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/8229c3fe45f66d67036a53ad0f287fb1.mp3",
-        "questionId": "2c9080876677056601667bb808e200f1",
-        "title": "Native Speaker 男声 常速",
-        "type": 4
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/3cb4cd908228cb6e61ab02ff6e39bbb9.mp3",
-        "questionId": "2c9080876677056601667bb808e200f1",
-        "title": "RA最低语速示范",
-        "type": 6
-      }
-    ],
-    "translation": "照片中，野猫的巨大爪子夹在查普尔乘坐的白色狩猎吉普车的一侧。她的后腿几乎和吉普车一样高，她似乎正把枪口逼近后窗。",
-    "audio_url": "ra_audio/011049.mp3",
-    "audio_duration": 12.85,
-    "word_timings": [
-      [
-        0.1,
-        0.15
-      ],
-      [
-        0.263,
-        0.075
-      ],
-      [
-        0.35,
-        0.487
-      ],
-      [
-        1,
-        0.1
-      ],
-      [
-        1.113,
-        0.312
-      ],
-      [
-        1.438,
-        0.275
-      ],
-      [
-        1.725,
-        0.325
-      ],
-      [
-        2.062,
-        0.388
-      ],
-      [
-        2.462,
-        0.175
-      ],
-      [
-        2.65,
-        0.412
-      ],
-      [
-        3.075,
-        0.212
-      ],
-      [
-        3.3,
-        0.1
-      ],
-      [
-        3.413,
-        0.325
-      ],
-      [
-        3.75,
-        0.062
-      ],
-      [
-        3.825,
-        0.087
-      ],
-      [
-        3.925,
-        0.275
-      ],
-      [
-        4.213,
-        0.412
-      ],
-      [
-        4.638,
-        0.3
-      ],
-      [
-        4.95,
-        0.113
-      ],
-      [
-        5.075,
-        0.212
-      ],
-      [
-        5.3,
-        0.362
-      ],
-      [
-        5.675,
-        0.15
-      ],
-      [
-        5.838,
-        0.05
-      ],
-      [
-        5.9,
-        0.75
-      ],
-      [
-        7.513,
-        0.412
-      ],
-      [
-        7.938,
-        0.087
-      ],
-      [
-        8.037,
-        0.237
-      ],
-      [
-        8.287,
-        0.1
-      ],
-      [
-        8.4,
-        0.1
-      ],
-      [
-        8.512,
-        0.263
-      ],
-      [
-        8.787,
-        0.113
-      ],
-      [
-        8.912,
-        0.125
-      ],
-      [
-        9.05,
-        0.3
-      ],
-      [
-        9.363,
-        0.487
-      ],
-      [
-        10.025,
-        0.175
-      ],
-      [
-        10.213,
-        0.338
-      ],
-      [
-        10.562,
-        0.087
-      ],
-      [
-        10.662,
-        0.125
-      ],
-      [
-        10.8,
-        0.425
-      ],
-      [
-        11.238,
-        0.125
-      ],
-      [
-        11.375,
-        0.4
-      ],
-      [
-        11.787,
-        0.188
-      ],
-      [
-        11.988,
-        0.087
-      ],
-      [
-        12.088,
-        0.263
-      ],
-      [
-        12.363,
-        0.487
-      ]
-    ]
-  },
-  {
-    "index": 35,
+    "index": 30,
     "qid": "011056",
     "title": "Non-Material Culture",
     "text": "For the purposes of argument, culture is divided into material and non-material, and the speaker's aim is to show how they both affect each other. Material developments in tools and technology can affect non-material culture, our customs and beliefs, and the other way around. Genetics is used as an example as it has changed the way we think about life, but also our beliefs have affected its rate of development.",
@@ -9424,7 +8172,7 @@
     ]
   },
   {
-    "index": 36,
+    "index": 31,
     "qid": "011063",
     "title": "Hunted Species",
     "text": "It's not that human activities didn't impact wildlife at all of course. Heavily hunted species, like white-tailed deer, grey squirrels, and raccoons, were photographed somewhat less often in hunted areas. Coyotes showed up more often in hunted areas. While most species didn't avoid hiking trails, the predators actually preferred them.",
@@ -9672,7 +8420,7 @@
     ]
   },
   {
-    "index": 37,
+    "index": 32,
     "qid": "011064",
     "title": "Trade Unions",
     "text": "Trade unions originated in Europe during the Industrial Revolution. Because of the machinery that had become commonplace, skilled labour became less in demand so employers had nearly all of the bargaining power. Employers mistreated the workers and paid them too little for the work they did. Trade unions were organised that would help in the improvement of working conditions.",
@@ -9956,7 +8704,7 @@
     ]
   },
   {
-    "index": 38,
+    "index": 33,
     "qid": "011071",
     "title": "Instrument",
     "text": "Some people disagree that in order for the eye to modify and still remain a useful instrument to its owner, many changes would have had to take place simultaneously. However, it is not necessary to suppose this if the modifications were extremely slight and gradual.",
@@ -10003,7 +8751,7 @@
     "word_timings": []
   },
   {
-    "index": 39,
+    "index": 34,
     "qid": "011082",
     "title": "Fast Radio Burst ",
     "text": "First discovered in 2007, \"fast radio burst\" continue to defy explanation. These cosmic chirps last a thousandth of a second. The characteristics of the radio pulses suggested that they came from galaxies billions of light-years away. However, new works points to a much closer origin-flaring star within our own galaxy.",
@@ -10251,7 +8999,7 @@
     ]
   },
   {
-    "index": 40,
+    "index": 35,
     "qid": "011091",
     "title": "Environment",
     "text": "Environmental problems caused by hard rock mining involve water pollution by metals themselves, chemicals used in processing, acid drainage, and sediment. Metals and metal-like elements in the ore are toxic and prone to cause trouble by ending up in nearby streams and water tables as a result of mining operations.",
@@ -10499,7 +9247,7 @@
     ]
   },
   {
-    "index": 41,
+    "index": 36,
     "qid": "011102",
     "title": "Industrial Revolution",
     "text": "As to the Industrial Revolution, one cannot dispute today the fact that it has succeeded in inaugurating in a number of countries, a level of mass prosperity which was undreamt of in the days preceding the Industrial Revolution. But, on the immediate impact of Industrial Revolution, there were substantial divergences among writers.",
@@ -10755,7 +9503,7 @@
     ]
   },
   {
-    "index": 42,
+    "index": 37,
     "qid": "011106",
     "title": "Vanilla",
     "text": "The uniquely scented flavor of vanilla is second only to chocolate in popularity on the world's palate. It's also the second most expensive spice after saffron. But highly labor-intensive cultivation methods and the plant's temperamental life cycle and propagation mean production on a global scale is struggling to keep up with the increasing demand for the product.",
@@ -11031,7 +9779,7 @@
     ]
   },
   {
-    "index": 43,
+    "index": 38,
     "qid": "011109",
     "title": "Solar Energy",
     "text": "Solar energy is an excellent source of supplying power to homes and companies and by utilizing solar power you're not merely protecting the environment from becoming polluted but also you are saving the rest of the earth's natural resources. Capturing solar energy does not contribute to any pollution and does not harm the atmosphere. One of the factors why many individuals are still hesitant to make use of solar power is because it is expensive. The need of big location of space is another reason why people aren't taking into consideration solar power.",
@@ -11451,7 +10199,7 @@
     ]
   },
   {
-    "index": 44,
+    "index": 39,
     "qid": "011119",
     "title": "Russia ",
     "text": "Long isolated from Western Europe, Russia grew up without participating in the development like the Reformation where many Europeans, taking pride in their unique culture, find dubious value. Russia is, as a result, the most unusual member of European family, if indeed it is European at all. The question is still open to debate, particularly among Russians themselves.",
@@ -11731,7 +10479,7 @@
     ]
   },
   {
-    "index": 45,
+    "index": 40,
     "qid": "011123",
     "title": "Fast Food",
     "text": "Hundreds of millions of people eat fast food every day without giving it much thought. They just unwrap their hamburgers and dig in. An hour or so later, when the burger's all gone and the wrapper's been tossed into the bin, the whole meal has already been forgotten.",
@@ -11971,7 +10719,7 @@
     ]
   },
   {
-    "index": 46,
+    "index": 41,
     "qid": "011129",
     "title": "Shrimp",
     "text": "Shrimp farmers used to hold animals in nursery ponds for 30 to 60 days; now they try to move them into grow-out ponds in less than 30 days. This reduces stress on the animals and dramatically increases survivals in the grow-out ponds. Many farms that abandoned nursery ponds have gone back to them, and the results have been surprisingly positive. They're using the old, uncovered, earthen, nursery ponds.",
@@ -12018,7 +10766,7 @@
     "word_timings": []
   },
   {
-    "index": 47,
+    "index": 42,
     "qid": "011146",
     "title": "A World Without Light ",
     "text": "Have you ever pictured a world without light? Just think how much we rely on man-made light sources in our lives. Without engineers, we wouldn't be able to live the way we do. No streetlights, no TV, no computer displays, no house lights. Engineers design and build all these things.",
@@ -12266,7 +11014,7 @@
     ]
   },
   {
-    "index": 48,
+    "index": 43,
     "qid": "011157",
     "title": "The Training of an Actor",
     "text": "The training of an actor is an intensive process which requires curiosity, courage and commitment. You will learn how to prepare for rehearsal, how to rehearse and how to use independent and proactive processes that inform you to do the best work possible for both stage and screen.",
@@ -12506,7 +11254,7 @@
     ]
   },
   {
-    "index": 49,
+    "index": 44,
     "qid": "011158",
     "title": "Modern Food Production",
     "text": "Globalization has affected what we eat in ways we are only beginning to understand. Modern food production is no longer related to our biological needs but is in direct conflict with them. The relationship between diet and our fertility, our cancer, heart disease and mental illness is becoming clear. Yet much of our food is nutritionally bankrupt.",
@@ -12782,7 +11530,7 @@
     ]
   },
   {
-    "index": 50,
+    "index": 45,
     "qid": "011159",
     "title": "Examination Candidates",
     "text": "The department determines whether or not the candidate has passed the examination. In cases where an appearance for the final public oral examination would constitute a substantial financial hardship for the candidate, the director of graduate studies, may recommend to the dean of the Graduate School for a virtual , video-conferenced examination of the candidate.",
@@ -12829,7 +11577,7 @@
     "word_timings": []
   },
   {
-    "index": 51,
+    "index": 46,
     "qid": "011160",
     "title": "Companies",
     "text": "Companies will want to be known not just for the financial results they generate, but equally for the imprint they leave on society as a whole. First, ensuring that their products contribute positively. Second, operating in a way that approaches a net-neutral impact to the natural environment. And third, cherishing their people.",
@@ -13085,7 +11833,7 @@
     ]
   },
   {
-    "index": 52,
+    "index": 47,
     "qid": "011178",
     "title": "Telecommunication",
     "text": "Today, telecommunication is widespread and devices that assist the progress are common in many parts of the world. There is also a vast array of networks that connect these devices, including computer, telephone and cable networks. Computer communication across the Internet, such as e-mail and instant messaging, is just one of many examples of telecommunication.",
@@ -13353,7 +12101,7 @@
     ]
   },
   {
-    "index": 53,
+    "index": 48,
     "qid": "011191",
     "title": "Charlie Chaplin",
     "text": "Charlie Chaplin and his brother Sydney were placed in an orphanage at a very early age. Becoming a vaudeville performer, he joined Fred Karno's company in 1906. He made his film debut in Making a Living and introduced the famous seedy and soft-hearted gentleman-tramp routine, which became his hallmark. Numerous films for various studios brought him world fame, all based on his mastery of pathos and slapstick acrobatics.",
@@ -13673,7 +12421,7 @@
     ]
   },
   {
-    "index": 54,
+    "index": 49,
     "qid": "011193",
     "title": "Aquaculture",
     "text": "Aquaculture, also known as aquafarming, is the farming of aquatic organisms such as fish, crustaceans, molluscs and aquatic plants. Aquaculture involves cultivating freshwater and saltwater populations under controlled conditions.",
@@ -13837,7 +12585,7 @@
     ]
   },
   {
-    "index": 55,
+    "index": 50,
     "qid": "011194",
     "title": "History is Selective",
     "text": "History is selective. What history books tell us about the past is not everything that happened, but what historians have selected. They cannot put in everything: choices have to be made. Choices must similarly be made about which aspects of the past should be formally taught to the next generation in the shape of school history lessons.",
@@ -14107,7 +12855,7 @@
     ]
   },
   {
-    "index": 56,
+    "index": 51,
     "qid": "011199",
     "title": "Summerhill School",
     "text": "Summerhill School was regarded with considerable suspicion by the educational establishment. Lessons were optional for pupils at the school, and the government of the school was carried out by a School Council, of which all the pupils and staff were members, with everyone having equal voting rights.",
@@ -14343,7 +13091,7 @@
     ]
   },
   {
-    "index": 57,
+    "index": 52,
     "qid": "011202",
     "title": "Tourism",
     "text": "Tourism is a challenging sector that divides statistics since businesses serve tourists, also serve local people. Therefore, it is not straightforward to estimate how much business sectors’ revenues and how many jobs are due to tourist expenditures.",
@@ -14539,211 +13287,7 @@
     ]
   },
   {
-    "index": 58,
-    "qid": "011205",
-    "title": "Dyes and Pigments",
-    "text": "The dyes and pigments available in any particular period in which a specific color photographic process was invented, manufactured and used have profound effects on the quality of color that defines most of the style and particular historical period.",
-    "word_count": 39,
-    "tags": {
-      "tier": "极限预测",
-      "frequency": "极高频",
-      "difficulty": "困难",
-      "degree": 3,
-      "isForecast": true,
-      "tagHigh": true,
-      "tagNew": false,
-      "isJJ": true
-    },
-    "teacher_audios": [
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/27813923d0098af4abe9bfc0e07cf922.mp3",
-        "questionId": "640155f40f5e2811252f6064b7b521ee",
-        "title": "萤火虫高分示范",
-        "type": 1
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/b4b30927eb8e0afc9226f0bc57e1aeeb.mp3",
-        "questionId": "640155f40f5e2811252f6064b7b521ee",
-        "title": "Native Speaker 女声 常速",
-        "type": 2
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/52cbfda889f0c4aa1fcf6f4b71083f9f.mp3",
-        "questionId": "640155f40f5e2811252f6064b7b521ee",
-        "title": "Native Speaker 男声 常速",
-        "type": 4
-      },
-      {
-        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/da7ade4c678b518b44df79265ed6620d.mp3",
-        "questionId": "640155f40f5e2811252f6064b7b521ee",
-        "title": "RA最低语速示范",
-        "type": 6
-      }
-    ],
-    "translation": "在发明、制造和使用特定彩色摄影工艺的任何特定时期可用的染料和颜料对定义大多数风格和特定历史时期的色彩质量具有深远的影响。",
-    "audio_url": "ra_audio/011205.mp3",
-    "audio_duration": 13.88,
-    "word_timings": [
-      [
-        0.1,
-        0.163
-      ],
-      [
-        0.275,
-        0.312
-      ],
-      [
-        0.6,
-        0.1
-      ],
-      [
-        0.713,
-        0.463
-      ],
-      [
-        1.188,
-        0.562
-      ],
-      [
-        1.762,
-        0.188
-      ],
-      [
-        1.962,
-        0.2
-      ],
-      [
-        2.175,
-        0.613
-      ],
-      [
-        2.8,
-        0.5
-      ],
-      [
-        3.312,
-        0.163
-      ],
-      [
-        3.487,
-        0.175
-      ],
-      [
-        3.675,
-        0.05
-      ],
-      [
-        3.737,
-        0.525
-      ],
-      [
-        4.275,
-        0.325
-      ],
-      [
-        4.612,
-        0.65
-      ],
-      [
-        5.275,
-        0.525
-      ],
-      [
-        5.812,
-        0.163
-      ],
-      [
-        5.987,
-        0.562
-      ],
-      [
-        6.775,
-        0.863
-      ],
-      [
-        7.737,
-        0.138
-      ],
-      [
-        7.888,
-        0.263
-      ],
-      [
-        8.162,
-        0.1
-      ],
-      [
-        8.275,
-        0.412
-      ],
-      [
-        8.7,
-        0.45
-      ],
-      [
-        9.162,
-        0.113
-      ],
-      [
-        9.287,
-        0.087
-      ],
-      [
-        9.387,
-        0.438
-      ],
-      [
-        9.838,
-        0.075
-      ],
-      [
-        9.925,
-        0.388
-      ],
-      [
-        10.325,
-        0.15
-      ],
-      [
-        10.488,
-        0.475
-      ],
-      [
-        10.975,
-        0.312
-      ],
-      [
-        11.3,
-        0.062
-      ],
-      [
-        11.375,
-        0.087
-      ],
-      [
-        11.475,
-        0.5
-      ],
-      [
-        11.988,
-        0.087
-      ],
-      [
-        12.088,
-        0.588
-      ],
-      [
-        12.688,
-        0.562
-      ],
-      [
-        13.262,
-        0.613
-      ]
-    ]
-  },
-  {
-    "index": 59,
+    "index": 53,
     "qid": "011207",
     "title": "Flood Control",
     "text": "We’ve spent a lot of money over the last 70 years on flood control, and it’s protected millions of people and has saved us billions of dollars. We’ve built dams to hold back the waters. We’ve built levees to keep the water off the people, and we’ve raised the ones that were originally started in 1718.",
@@ -15015,7 +13559,7 @@
     ]
   },
   {
-    "index": 60,
+    "index": 54,
     "qid": "011226",
     "title": "Eminent Professors",
     "text": "Written by three eminent professors, it has been updated to reflect the shifts of sociological thought in the last five years, making it the most comprehensive, authoritative and up-to-date dictionary available. It is essential reading for all students and teachers of sociology and other related courses - and also the general reader.",
@@ -15271,7 +13815,7 @@
     ]
   },
   {
-    "index": 61,
+    "index": 55,
     "qid": "011230",
     "title": "Babies’ Hearing",
     "text": "Most babies start developing their hearing while still in the womb, prompting some hopeful parents to play classical music to their pregnant bellies. Some research even suggests that infants are listening to adult speech as early as 10 weeks before birth, gathering the basic building blocks of their family's native tongue.",
@@ -15523,7 +14067,7 @@
     ]
   },
   {
-    "index": 62,
+    "index": 56,
     "qid": "011231",
     "title": "Restaurant Location",
     "text": "The physical location of a restaurant in the competitive landscape of the city has long been known as a major factor in its likely success or failure. Once restaurants are established in such environments they can do little about their location. All they can do is work to improve customer access to their premises. Restaurateurs often do this by engaging in battles with local authorities about car parking.",
@@ -15837,7 +14381,7 @@
     ]
   },
   {
-    "index": 63,
+    "index": 57,
     "qid": "011233",
     "title": "Making Notes",
     "text": "The whole purpose of making notes is to aid your learning. It is important to go back over them within a day of making them to make sure they make sense and make them legible for future revisions. Also, going back over them should highlight the key questions of areas in which you want to do further reading.",
@@ -16117,7 +14661,7 @@
     ]
   },
   {
-    "index": 64,
+    "index": 58,
     "qid": "011234",
     "title": "The Word Radical",
     "text": "The word radical from the Latin word for roots means anyone who advocates fundamental change in the political system. Literally, a radical is one who proposes to attack some political or social problem by going deep into the social or economic fabric to get at the root cause and alter this basic weakness.",
@@ -16377,7 +14921,7 @@
     ]
   },
   {
-    "index": 65,
+    "index": 59,
     "qid": "011235",
     "title": "New Textbook",
     "text": "This is a new, accessible and engaging textbook written by academics who also work as consultants with organizations undergoing change. It offers a unique combination of rigorous theoretical exploration together with practical insights from working with those who are actually responsible for managing change.",
@@ -16601,7 +15145,7 @@
     ]
   },
   {
-    "index": 66,
+    "index": 60,
     "qid": "011236",
     "title": "Volcano Behaviors",
     "text": "There were various explanations for volcano behavior before the structure of the earth's mantle as a semisolid material was developed. For decades, awareness that compression and radioactive materials may be heat sources was discounted and volcanic action was often attributed to chemical reactions and a thin layer of molten rock near the surface.",
@@ -16855,7 +15399,7 @@
     ]
   },
   {
-    "index": 67,
+    "index": 61,
     "qid": "011237",
     "title": "Emigrants to North America",
     "text": "In the late 16th and 17th centuries, many English, French and Dutch emigrants went to North America in search of gold and silver. But they did not find it. Instead, settlers were forced to support themselves by cultivating crops that they could sell in Europe, like tobacco, indigo and rice.",
@@ -17103,7 +15647,7 @@
     ]
   },
   {
-    "index": 68,
+    "index": 62,
     "qid": "011247",
     "title": "William Shakespeare",
     "text": "Three hundred and eighty years after his death, William Shakespeare remains the central author of the English-speaking world; he is the most quoted poet and the most regularly produced playwright — and now among the most popular screenwriters as well. Why is that, and who \"is\" he? Why do so many people think his writing is so great? What meanings did his plays have in his own time, and how do we read, speak, or listen to his words now?",
@@ -17471,7 +16015,7 @@
     ]
   },
   {
-    "index": 69,
+    "index": 63,
     "qid": "011249",
     "title": "Your Tutor",
     "text": "Your tutor helps you make the most of your time at university by giving you guidance and support along the way. All new students are allocated a personal tutor who will encourage you to get the most out of your course, direct you to other sources of support and help you achieve your goals.",
@@ -17735,7 +16279,7 @@
     ]
   },
   {
-    "index": 70,
+    "index": 64,
     "qid": "011258",
     "title": "Statistics",
     "text": "Statistics are indicators of change and allow meaningful comparisons to be made. While it may be the issues rather than the statistics as such that grab people's attention, it should be recognized that it is the statistics that informed the issues. Statistical literacy, then, is the ability to accurately understand, interpret and evaluate the data that inform these issues.",
@@ -18013,7 +16557,7 @@
     ]
   },
   {
-    "index": 71,
+    "index": 65,
     "qid": "011268",
     "title": "The Royal Institution",
     "text": "The Royal Institution is an organization that has been around for 209 years. Many of the people that have worked here have been scientists themselves, including Michael Faraday. He made the discoveries that made generating and using electricity much easier, making it possible for us all to switch on lights, cook our dinner, play games consoles much, much more.",
@@ -18297,7 +16841,7 @@
     ]
   },
   {
-    "index": 72,
+    "index": 66,
     "qid": "011271",
     "title": "X-ray",
     "text": "Using an X-ray laser, a research team has investigated how water heats up under extreme conditions. In the process, the scientists were able to observe water that remained liquid even at temperatures of more than 170 degrees Celsius. The investigation revealed an anomalous dynamic behavior of water, which is of fundamental importance for the analysis of sensitive samples using X-ray lasers.",
@@ -18589,7 +17133,7 @@
     ]
   },
   {
-    "index": 73,
+    "index": 67,
     "qid": "011272",
     "title": "The Concerns of EU Residents",
     "text": "In spite of the spectacularly high quality of life for the vast majority of the people who live in the European Union, its inhabitants seem obsessed by the region's relative decline in the world. Slow economic growth rates and high unemployment have reinforced the impression that Europe is unhappy with today and unsure of tomorrow.",
@@ -18857,7 +17401,7 @@
     ]
   },
   {
-    "index": 74,
+    "index": 68,
     "qid": "011274",
     "title": "The Best Time to Visit Canada",
     "text": "The best time to visit Canada is during fall months, when mild temperatures and vibrant fall foliage make scenic drives, hiking, and outdoor exploration especially enjoyable. Travel guides often highlight autumn – especially from late September through October – as a peak season for color changes in Ontario, Quebec, and other regions of the country.",
@@ -19125,7 +17669,7 @@
     ]
   },
   {
-    "index": 75,
+    "index": 69,
     "qid": "011276",
     "title": "Psychology",
     "text": "Psychology is the study of cognitions, emotions, and behavior. Psychologists are involved in a variety of tasks. Many spend their careers designing and performing research to understand how people behave in specific situations, how and why we think the way we do, and how emotions develop and what impact they have on our interactions with others.",
@@ -19172,7 +17716,279 @@
     "word_timings": []
   },
   {
-    "index": 76,
+    "index": 70,
+    "qid": "011030",
+    "title": "Energy and Pollution",
+    "text": "Humans need to use energy in order to exist. So it is unsurprising that the way people have been producing energy is largely responsible for current environmental problems. Pollution comes in many forms, but those that are most concerning, because of their impact on health, result from the combustion of fuels in power stations and cars.",
+    "word_count": 56,
+    "tags": {
+      "tier": "极限预测",
+      "frequency": "预测新增",
+      "difficulty": "简单",
+      "degree": 1,
+      "isForecast": true,
+      "tagHigh": false,
+      "tagNew": true,
+      "isJJ": true
+    },
+    "teacher_audios": [
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/85c1bbebe1edc80d6f88d19186040212.mp3",
+        "questionId": "2c9080876677056601667bb0aa5600ca",
+        "title": "萤火虫高分示范",
+        "type": 1
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/5c44763e7fbd680c3147ccad14c10956.mp3",
+        "questionId": "2c9080876677056601667bb0aa5600ca",
+        "title": "Native Speaker 女声 常速",
+        "type": 2
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/ed2c94e26b3dbaaf5ac671dba46c2e26.mp3",
+        "questionId": "2c9080876677056601667bb0aa5600ca",
+        "title": "Native Speaker 男声 常速",
+        "type": 4
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/5c6678aeb74b04141de4949e3a0460fe.mp3",
+        "questionId": "2c9080876677056601667bb0aa5600ca",
+        "title": "RA最低语速示范",
+        "type": 6
+      }
+    ],
+    "translation": "人类需要使用能量才能生存。因此，人们生产能源的方式是造成当前环境问题的主要原因也就不足为奇了。污染有多种形式，但最令人担忧的污染是由发电站和汽车的燃料燃烧造成的，因为它们对健康有影响。",
+    "audio_url": "ra_audio/011030.mp3",
+    "audio_duration": 20.07,
+    "word_timings": [
+      [
+        0.1,
+        0.45
+      ],
+      [
+        0.562,
+        0.163
+      ],
+      [
+        0.738,
+        0.087
+      ],
+      [
+        0.838,
+        0.25
+      ],
+      [
+        1.1,
+        0.45
+      ],
+      [
+        1.562,
+        0.113
+      ],
+      [
+        1.688,
+        0.237
+      ],
+      [
+        1.938,
+        0.125
+      ],
+      [
+        2.075,
+        0.7
+      ],
+      [
+        3.638,
+        0.225
+      ],
+      [
+        3.875,
+        0.087
+      ],
+      [
+        3.975,
+        0.125
+      ],
+      [
+        4.112,
+        0.688
+      ],
+      [
+        4.812,
+        0.125
+      ],
+      [
+        4.95,
+        0.087
+      ],
+      [
+        5.05,
+        0.175
+      ],
+      [
+        5.237,
+        0.362
+      ],
+      [
+        5.612,
+        0.113
+      ],
+      [
+        5.737,
+        0.163
+      ],
+      [
+        5.912,
+        0.55
+      ],
+      [
+        6.475,
+        0.537
+      ],
+      [
+        7.025,
+        0.15
+      ],
+      [
+        7.188,
+        0.412
+      ],
+      [
+        7.612,
+        0.65
+      ],
+      [
+        8.275,
+        0.163
+      ],
+      [
+        8.45,
+        0.312
+      ],
+      [
+        8.775,
+        0.637
+      ],
+      [
+        9.425,
+        0.7
+      ],
+      [
+        10.988,
+        0.537
+      ],
+      [
+        11.537,
+        0.25
+      ],
+      [
+        11.8,
+        0.1
+      ],
+      [
+        11.912,
+        0.25
+      ],
+      [
+        12.175,
+        0.575
+      ],
+      [
+        12.925,
+        0.163
+      ],
+      [
+        13.1,
+        0.225
+      ],
+      [
+        13.338,
+        0.125
+      ],
+      [
+        13.475,
+        0.075
+      ],
+      [
+        13.562,
+        0.3
+      ],
+      [
+        13.875,
+        0.637
+      ],
+      [
+        14.725,
+        0.338
+      ],
+      [
+        15.075,
+        0.062
+      ],
+      [
+        15.15,
+        0.138
+      ],
+      [
+        15.3,
+        0.438
+      ],
+      [
+        15.75,
+        0.113
+      ],
+      [
+        15.875,
+        0.45
+      ],
+      [
+        16.562,
+        0.362
+      ],
+      [
+        16.938,
+        0.138
+      ],
+      [
+        17.087,
+        0.1
+      ],
+      [
+        17.2,
+        0.55
+      ],
+      [
+        17.762,
+        0.087
+      ],
+      [
+        17.863,
+        0.45
+      ],
+      [
+        18.325,
+        0.113
+      ],
+      [
+        18.45,
+        0.35
+      ],
+      [
+        18.812,
+        0.512
+      ],
+      [
+        19.337,
+        0.113
+      ],
+      [
+        19.462,
+        0.613
+      ]
+    ]
+  },
+  {
+    "index": 71,
     "qid": "011031",
     "title": "Rehabilitation",
     "text": "The primary application we're targeting at first is to give people a decision aid during rehabilitation, following an acute knee injury, to help them understand when they can perform particular activities, and when they can move to different intensities of particular activities. A useful thing to take a crack at.",
@@ -19420,7 +18236,987 @@
     ]
   },
   {
-    "index": 77,
+    "index": 72,
+    "qid": "011033",
+    "title": "Hamburg University",
+    "text": "Three professors from Hamburg University's medical faculty traveled last month to Ingeborg's sitting room in East Berlin to test her on the work she carried out in pre-war Germany. They were impressed and a special ceremony took place at Hamburg University Medical Centre on Tuesday, in which she finally received the Ph.D. that the Nazis stole from her.",
+    "word_count": 58,
+    "tags": {
+      "tier": "极限预测",
+      "frequency": "预测新增",
+      "difficulty": "简单",
+      "degree": 1,
+      "isForecast": true,
+      "tagHigh": false,
+      "tagNew": true,
+      "isJJ": true
+    },
+    "teacher_audios": [
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/8aa68486c014eba92c55c84734832953.mp3",
+        "questionId": "2c9080876677056601667bb14bd600d0",
+        "title": "萤火虫高分示范",
+        "type": 1
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/55b2733ede621b7ae43ec7ad7fef933e.mp3",
+        "questionId": "2c9080876677056601667bb14bd600d0",
+        "title": "Native Speaker 女声 常速",
+        "type": 2
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/31c4cfa238b6f150031725d534d1e6a4.mp3",
+        "questionId": "2c9080876677056601667bb14bd600d0",
+        "title": "Native Speaker 男声 常速",
+        "type": 4
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/448e2adfff4cb60804fcf35a54b4fe70.mp3",
+        "questionId": "2c9080876677056601667bb14bd600d0",
+        "title": "RA最低语速示范",
+        "type": 6
+      }
+    ],
+    "translation": "汉堡大学医学院的三名教授上个月前往东柏林英格堡的客厅，测试她在战前德国所做的工作。他们印象深刻，周二在汉堡大学医学中心举行了特别仪式，她终于获得了博士学位。纳粹从她那里偷走了。",
+    "audio_url": "ra_audio/011033.mp3",
+    "audio_duration": 19.09,
+    "word_timings": [
+      [
+        0.1,
+        0.25
+      ],
+      [
+        0.362,
+        0.588
+      ],
+      [
+        0.963,
+        0.138
+      ],
+      [
+        1.113,
+        0.388
+      ],
+      [
+        1.512,
+        0.675
+      ],
+      [
+        2.2,
+        0.375
+      ],
+      [
+        2.587,
+        0.512
+      ],
+      [
+        3.112,
+        0.438
+      ],
+      [
+        3.562,
+        0.325
+      ],
+      [
+        3.9,
+        0.375
+      ],
+      [
+        4.287,
+        0.113
+      ],
+      [
+        4.412,
+        0.512
+      ],
+      [
+        4.938,
+        0.275
+      ],
+      [
+        5.225,
+        0.2
+      ],
+      [
+        5.438,
+        0.138
+      ],
+      [
+        5.588,
+        0.237
+      ],
+      [
+        5.838,
+        0.425
+      ],
+      [
+        6.275,
+        0.1
+      ],
+      [
+        6.388,
+        0.312
+      ],
+      [
+        6.713,
+        0.1
+      ],
+      [
+        6.825,
+        0.1
+      ],
+      [
+        6.938,
+        0.075
+      ],
+      [
+        7.025,
+        0.312
+      ],
+      [
+        7.35,
+        0.15
+      ],
+      [
+        7.513,
+        0.325
+      ],
+      [
+        7.85,
+        0.175
+      ],
+      [
+        8.037,
+        0.1
+      ],
+      [
+        8.15,
+        0.4
+      ],
+      [
+        8.562,
+        0.575
+      ],
+      [
+        10,
+        0.15
+      ],
+      [
+        10.162,
+        0.125
+      ],
+      [
+        10.3,
+        0.588
+      ],
+      [
+        10.9,
+        0.113
+      ],
+      [
+        11.025,
+        0.05
+      ],
+      [
+        11.088,
+        0.4
+      ],
+      [
+        11.5,
+        0.575
+      ],
+      [
+        12.088,
+        0.225
+      ],
+      [
+        12.325,
+        0.35
+      ],
+      [
+        12.688,
+        0.1
+      ],
+      [
+        12.8,
+        0.412
+      ],
+      [
+        13.225,
+        0.575
+      ],
+      [
+        13.812,
+        0.412
+      ],
+      [
+        14.238,
+        0.35
+      ],
+      [
+        14.6,
+        0.125
+      ],
+      [
+        14.738,
+        0.525
+      ],
+      [
+        15.537,
+        0.113
+      ],
+      [
+        15.662,
+        0.15
+      ],
+      [
+        15.825,
+        0.138
+      ],
+      [
+        15.975,
+        0.45
+      ],
+      [
+        16.438,
+        0.375
+      ],
+      [
+        16.825,
+        0.075
+      ],
+      [
+        16.913,
+        0.65
+      ],
+      [
+        17.575,
+        0.15
+      ],
+      [
+        17.738,
+        0.062
+      ],
+      [
+        17.812,
+        0.438
+      ],
+      [
+        18.262,
+        0.263
+      ],
+      [
+        18.538,
+        0.163
+      ],
+      [
+        18.712,
+        0.375
+      ]
+    ]
+  },
+  {
+    "index": 73,
+    "qid": "011035",
+    "title": "Long-Distance Fliers",
+    "text": "Researchers think that long-distance fliers such as the American golden-plover and the white-rumped sandpiper picked up the spores while lining their nests. Then when the birds arrive in new places, they molt - leaving behind the feathers and their precious cargo - to start growing again at the other end of the world.",
+    "word_count": 53,
+    "tags": {
+      "tier": "极限预测",
+      "frequency": "预测新增",
+      "difficulty": "困难",
+      "degree": 3,
+      "isForecast": true,
+      "tagHigh": false,
+      "tagNew": true,
+      "isJJ": true
+    },
+    "teacher_audios": [
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/b1cd6abb7cd6881b3a598228ebf3631c.mp3",
+        "questionId": "2c9080876677056601667bb4cef400d4",
+        "title": "萤火虫高分示范",
+        "type": 1
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/fc86ac183d8f3410a22e8db80f4fef4c.mp3",
+        "questionId": "2c9080876677056601667bb4cef400d4",
+        "title": "Native Speaker 女声 常速",
+        "type": 2
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/93f2ca98b1691006e3ccb7eb7d765c56.mp3",
+        "questionId": "2c9080876677056601667bb4cef400d4",
+        "title": "Native Speaker 男声 常速",
+        "type": 4
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/a7ac35ebc2c131e80753b54e5093c38e.mp3",
+        "questionId": "2c9080876677056601667bb4cef400d4",
+        "title": "RA最低语速示范",
+        "type": 6
+      }
+    ],
+    "translation": "研究人员认为，美国金鸻和白腰鹬等长途飞行者在筑巢时会拾取孢子。然后，当鸟儿到达新的地方时，它们会蜕皮——留下羽毛和珍贵的货物——在世界的另一端重新开始生长。",
+    "audio_url": "ra_audio/011035.mp3",
+    "audio_duration": 17.36,
+    "word_timings": [
+      [
+        0.1,
+        0.613
+      ],
+      [
+        0.725,
+        0.225
+      ],
+      [
+        0.963,
+        0.163
+      ],
+      [
+        1.137,
+        0.675
+      ],
+      [
+        1.825,
+        0.463
+      ],
+      [
+        2.3,
+        0.225
+      ],
+      [
+        2.538,
+        0.075
+      ],
+      [
+        2.625,
+        0.087
+      ],
+      [
+        2.725,
+        0.512
+      ],
+      [
+        3.25,
+        0.85
+      ],
+      [
+        4.112,
+        0.075
+      ],
+      [
+        4.2,
+        0.087
+      ],
+      [
+        4.3,
+        0.5
+      ],
+      [
+        4.812,
+        0.688
+      ],
+      [
+        5.513,
+        0.275
+      ],
+      [
+        5.8,
+        0.113
+      ],
+      [
+        5.925,
+        0.1
+      ],
+      [
+        6.037,
+        0.463
+      ],
+      [
+        6.513,
+        0.188
+      ],
+      [
+        6.713,
+        0.325
+      ],
+      [
+        7.05,
+        0.15
+      ],
+      [
+        7.213,
+        0.625
+      ],
+      [
+        8.7,
+        0.287
+      ],
+      [
+        9,
+        0.125
+      ],
+      [
+        9.137,
+        0.1
+      ],
+      [
+        9.25,
+        0.287
+      ],
+      [
+        9.55,
+        0.287
+      ],
+      [
+        9.85,
+        0.1
+      ],
+      [
+        9.963,
+        0.138
+      ],
+      [
+        10.113,
+        0.688
+      ],
+      [
+        10.963,
+        0.113
+      ],
+      [
+        11.088,
+        0.338
+      ],
+      [
+        11.512,
+        0.287
+      ],
+      [
+        11.812,
+        0.362
+      ],
+      [
+        12.188,
+        0.075
+      ],
+      [
+        12.275,
+        0.55
+      ],
+      [
+        12.838,
+        0.163
+      ],
+      [
+        13.012,
+        0.138
+      ],
+      [
+        13.162,
+        0.388
+      ],
+      [
+        13.562,
+        0.588
+      ],
+      [
+        14.262,
+        0.113
+      ],
+      [
+        14.387,
+        0.275
+      ],
+      [
+        14.675,
+        0.375
+      ],
+      [
+        15.062,
+        0.362
+      ],
+      [
+        15.438,
+        0.087
+      ],
+      [
+        15.537,
+        0.087
+      ],
+      [
+        15.637,
+        0.237
+      ],
+      [
+        15.887,
+        0.15
+      ],
+      [
+        16.05,
+        0.062
+      ],
+      [
+        16.125,
+        0.087
+      ],
+      [
+        16.225,
+        0.475
+      ],
+      [
+        16.75,
+        0.28
+      ],
+      [
+        17.08,
+        0.28
+      ]
+    ]
+  },
+  {
+    "index": 74,
+    "qid": "011036",
+    "title": "Spelling System",
+    "text": "The problem begins with the alphabet itself. Building a spelling system for English using letters that come from Latin, despite the two languages not sharing exactly the same set of sounds, is like building a playroom using an IKEA office set.",
+    "word_count": 41,
+    "tags": {
+      "tier": "极限预测",
+      "frequency": "预测新增",
+      "difficulty": "简单",
+      "degree": 1,
+      "isForecast": true,
+      "tagHigh": false,
+      "tagNew": true,
+      "isJJ": true
+    },
+    "teacher_audios": [
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/0e995ec91cfd872c0409e90a649de53b.mp3",
+        "questionId": "2c9080876677056601667bb4ff8a00d6",
+        "title": "萤火虫高分示范",
+        "type": 1
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/73c2a082d322338e480790a8a57ffe7a.mp3",
+        "questionId": "2c9080876677056601667bb4ff8a00d6",
+        "title": "Native Speaker 女声 常速",
+        "type": 2
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/215adf935881c0d6ad017122a1f2b808.mp3",
+        "questionId": "2c9080876677056601667bb4ff8a00d6",
+        "title": "Native Speaker 男声 常速",
+        "type": 4
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/d733bc10d4538a62d309c7595eb6f263.mp3",
+        "questionId": "2c9080876677056601667bb4ff8a00d6",
+        "title": "RA最低语速示范",
+        "type": 6
+      }
+    ],
+    "translation": "问题始于字母表本身。尽管两种语言并不共享完全相同的一组声音，但使用来自拉丁语的字母构建英语拼写系统就像使用宜家办公套件构建游戏室一样。",
+    "audio_url": "ra_audio/011036.mp3",
+    "audio_duration": 13.8,
+    "word_timings": [
+      [
+        0.1,
+        0.138
+      ],
+      [
+        0.25,
+        0.4
+      ],
+      [
+        0.662,
+        0.388
+      ],
+      [
+        1.062,
+        0.113
+      ],
+      [
+        1.188,
+        0.1
+      ],
+      [
+        1.3,
+        0.45
+      ],
+      [
+        1.762,
+        0.65
+      ],
+      [
+        3.275,
+        0.375
+      ],
+      [
+        3.663,
+        0.05
+      ],
+      [
+        3.725,
+        0.425
+      ],
+      [
+        4.162,
+        0.4
+      ],
+      [
+        4.575,
+        0.175
+      ],
+      [
+        4.763,
+        0.35
+      ],
+      [
+        5.125,
+        0.3
+      ],
+      [
+        5.438,
+        0.375
+      ],
+      [
+        5.825,
+        0.15
+      ],
+      [
+        5.987,
+        0.2
+      ],
+      [
+        6.2,
+        0.175
+      ],
+      [
+        6.388,
+        0.388
+      ],
+      [
+        7.05,
+        0.412
+      ],
+      [
+        7.475,
+        0.087
+      ],
+      [
+        7.575,
+        0.212
+      ],
+      [
+        7.8,
+        0.575
+      ],
+      [
+        8.387,
+        0.225
+      ],
+      [
+        8.625,
+        0.375
+      ],
+      [
+        9.012,
+        0.487
+      ],
+      [
+        9.512,
+        0.1
+      ],
+      [
+        9.625,
+        0.275
+      ],
+      [
+        9.912,
+        0.2
+      ],
+      [
+        10.125,
+        0.075
+      ],
+      [
+        10.213,
+        0.537
+      ],
+      [
+        10.975,
+        0.113
+      ],
+      [
+        11.1,
+        0.188
+      ],
+      [
+        11.3,
+        0.312
+      ],
+      [
+        11.625,
+        0.05
+      ],
+      [
+        11.688,
+        0.487
+      ],
+      [
+        12.188,
+        0.3
+      ],
+      [
+        12.5,
+        0.075
+      ],
+      [
+        12.588,
+        0.4
+      ],
+      [
+        13,
+        0.325
+      ],
+      [
+        13.338,
+        0.463
+      ]
+    ]
+  },
+  {
+    "index": 75,
+    "qid": "011049",
+    "title": "Wild Cat",
+    "text": "In the photo, the wild cat's huge paws are clamped onto the side of the white safari Jeep in which Chappell was a passenger. Almost as tall as the Jeep on her hind legs, she appears to be forcing her muzzle into the back window.",
+    "word_count": 45,
+    "tags": {
+      "tier": "极限预测",
+      "frequency": "预测新增",
+      "difficulty": "普通",
+      "degree": 2,
+      "isForecast": true,
+      "tagHigh": false,
+      "tagNew": true,
+      "isJJ": true
+    },
+    "teacher_audios": [
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/acfd33df65cdb80c67663b46ac7441a6.mp3",
+        "questionId": "2c9080876677056601667bb808e200f1",
+        "title": "萤火虫高分示范",
+        "type": 1
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/19707b74a0796de2b6f424709d95cdf7.mp3",
+        "questionId": "2c9080876677056601667bb808e200f1",
+        "title": "Native Speaker 女声 常速",
+        "type": 2
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/8229c3fe45f66d67036a53ad0f287fb1.mp3",
+        "questionId": "2c9080876677056601667bb808e200f1",
+        "title": "Native Speaker 男声 常速",
+        "type": 4
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/3cb4cd908228cb6e61ab02ff6e39bbb9.mp3",
+        "questionId": "2c9080876677056601667bb808e200f1",
+        "title": "RA最低语速示范",
+        "type": 6
+      }
+    ],
+    "translation": "照片中，野猫的巨大爪子夹在查普尔乘坐的白色狩猎吉普车的一侧。她的后腿几乎和吉普车一样高，她似乎正把枪口逼近后窗。",
+    "audio_url": "ra_audio/011049.mp3",
+    "audio_duration": 12.85,
+    "word_timings": [
+      [
+        0.1,
+        0.15
+      ],
+      [
+        0.263,
+        0.075
+      ],
+      [
+        0.35,
+        0.487
+      ],
+      [
+        1,
+        0.1
+      ],
+      [
+        1.113,
+        0.312
+      ],
+      [
+        1.438,
+        0.275
+      ],
+      [
+        1.725,
+        0.325
+      ],
+      [
+        2.062,
+        0.388
+      ],
+      [
+        2.462,
+        0.175
+      ],
+      [
+        2.65,
+        0.412
+      ],
+      [
+        3.075,
+        0.212
+      ],
+      [
+        3.3,
+        0.1
+      ],
+      [
+        3.413,
+        0.325
+      ],
+      [
+        3.75,
+        0.062
+      ],
+      [
+        3.825,
+        0.087
+      ],
+      [
+        3.925,
+        0.275
+      ],
+      [
+        4.213,
+        0.412
+      ],
+      [
+        4.638,
+        0.3
+      ],
+      [
+        4.95,
+        0.113
+      ],
+      [
+        5.075,
+        0.212
+      ],
+      [
+        5.3,
+        0.362
+      ],
+      [
+        5.675,
+        0.15
+      ],
+      [
+        5.838,
+        0.05
+      ],
+      [
+        5.9,
+        0.75
+      ],
+      [
+        7.513,
+        0.412
+      ],
+      [
+        7.938,
+        0.087
+      ],
+      [
+        8.037,
+        0.237
+      ],
+      [
+        8.287,
+        0.1
+      ],
+      [
+        8.4,
+        0.1
+      ],
+      [
+        8.512,
+        0.263
+      ],
+      [
+        8.787,
+        0.113
+      ],
+      [
+        8.912,
+        0.125
+      ],
+      [
+        9.05,
+        0.3
+      ],
+      [
+        9.363,
+        0.487
+      ],
+      [
+        10.025,
+        0.175
+      ],
+      [
+        10.213,
+        0.338
+      ],
+      [
+        10.562,
+        0.087
+      ],
+      [
+        10.662,
+        0.125
+      ],
+      [
+        10.8,
+        0.425
+      ],
+      [
+        11.238,
+        0.125
+      ],
+      [
+        11.375,
+        0.4
+      ],
+      [
+        11.787,
+        0.188
+      ],
+      [
+        11.988,
+        0.087
+      ],
+      [
+        12.088,
+        0.263
+      ],
+      [
+        12.363,
+        0.487
+      ]
+    ]
+  },
+  {
+    "index": 76,
     "qid": "011051",
     "title": "Atlantis",
     "text": "For centuries, Atlantis has been one of the western world's favorite legends, a tantalizing blend of fantasy and mystery. Stories tell of a rich and glorious empire that was lost to the sea, where some hope its ruins still lie, waiting to be discovered.",
@@ -19644,7 +19440,7 @@
     ]
   },
   {
-    "index": 78,
+    "index": 77,
     "qid": "011072",
     "title": "Reading ",
     "text": "The student's reading in his own subject slows down, and his comprehension becomes less secure. He expresses himself slowly and often fails to convey his ideas exactly. He is disappointed to find that under pressure he makes a lot of unnecessary mistakes in areas where he knows the correct language forms. His social relations are difficult as he cannot find the right phrase quickly enough to keep a conversation going, so his language often betrays him into dullness, coldness, or worst of all, rudeness. Instead of the students being in control of the language, the language seems now to be in control of the students.",
@@ -20118,7 +19914,7 @@
     ]
   },
   {
-    "index": 79,
+    "index": 78,
     "qid": "011099",
     "title": "Population Growth",
     "text": "How quickly is the world's population growing? In the United States and other developed countries, the current growth rate is very low. In most developing countries, the human population is growing at a rate of 3 people per second. Because of this bustling growth rate, the human population is well on its way to reaching 9 billion within lifetime.",
@@ -20402,7 +20198,7 @@
     ]
   },
   {
-    "index": 80,
+    "index": 79,
     "qid": "011131",
     "title": "Public Demand for Education",
     "text": "Public demand for education has remained strong, reflecting the importance of education as a means of social progress. Aware of the added value of education to the world of work, the government continues to innovate and update the education system in order to produce a qualified and competent workforce.",
@@ -20646,7 +20442,7 @@
     ]
   },
   {
-    "index": 81,
+    "index": 80,
     "qid": "011141",
     "title": "Black Swan",
     "text": "Before the discovery of Australia, people in the old world were convinced that all swans were white, an unassailable belief as it seemed completely confirmed by empirical evidence. The sighting of the first black swan might have been an interesting surprise for a few ornithologists, but that is not where the significance of the story lies.",
@@ -20918,7 +20714,7 @@
     ]
   },
   {
-    "index": 82,
+    "index": 81,
     "qid": "011148",
     "title": "Recycle",
     "text": "When we recycle, used materials are converted into new products, reducing the need to consume natural resources. If used materials are not recycled, new products are made by extracting fresh, raw material from the Earth, through mining and forestry. Recycling helps conserve important raw materials and protects natural habitats for the future.",
@@ -21170,6 +20966,210 @@
       [
         20.9,
         0.588
+      ]
+    ]
+  },
+  {
+    "index": 82,
+    "qid": "011205",
+    "title": "Dyes and Pigments",
+    "text": "The dyes and pigments available in any particular period in which a specific color photographic process was invented, manufactured and used have profound effects on the quality of color that defines most of the style and particular historical period.",
+    "word_count": 39,
+    "tags": {
+      "tier": "极限预测",
+      "frequency": "预测新增",
+      "difficulty": "困难",
+      "degree": 3,
+      "isForecast": true,
+      "tagHigh": false,
+      "tagNew": true,
+      "isJJ": true
+    },
+    "teacher_audios": [
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/27813923d0098af4abe9bfc0e07cf922.mp3",
+        "questionId": "640155f40f5e2811252f6064b7b521ee",
+        "title": "萤火虫高分示范",
+        "type": 1
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/b4b30927eb8e0afc9226f0bc57e1aeeb.mp3",
+        "questionId": "640155f40f5e2811252f6064b7b521ee",
+        "title": "Native Speaker 女声 常速",
+        "type": 2
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/52cbfda889f0c4aa1fcf6f4b71083f9f.mp3",
+        "questionId": "640155f40f5e2811252f6064b7b521ee",
+        "title": "Native Speaker 男声 常速",
+        "type": 4
+      },
+      {
+        "audioUrl": "https://upload.fireflyau.com/pte/SRA/r/da7ade4c678b518b44df79265ed6620d.mp3",
+        "questionId": "640155f40f5e2811252f6064b7b521ee",
+        "title": "RA最低语速示范",
+        "type": 6
+      }
+    ],
+    "translation": "在发明、制造和使用特定彩色摄影工艺的任何特定时期可用的染料和颜料对定义大多数风格和特定历史时期的色彩质量具有深远的影响。",
+    "audio_url": "ra_audio/011205.mp3",
+    "audio_duration": 13.88,
+    "word_timings": [
+      [
+        0.1,
+        0.163
+      ],
+      [
+        0.275,
+        0.312
+      ],
+      [
+        0.6,
+        0.1
+      ],
+      [
+        0.713,
+        0.463
+      ],
+      [
+        1.188,
+        0.562
+      ],
+      [
+        1.762,
+        0.188
+      ],
+      [
+        1.962,
+        0.2
+      ],
+      [
+        2.175,
+        0.613
+      ],
+      [
+        2.8,
+        0.5
+      ],
+      [
+        3.312,
+        0.163
+      ],
+      [
+        3.487,
+        0.175
+      ],
+      [
+        3.675,
+        0.05
+      ],
+      [
+        3.737,
+        0.525
+      ],
+      [
+        4.275,
+        0.325
+      ],
+      [
+        4.612,
+        0.65
+      ],
+      [
+        5.275,
+        0.525
+      ],
+      [
+        5.812,
+        0.163
+      ],
+      [
+        5.987,
+        0.562
+      ],
+      [
+        6.775,
+        0.863
+      ],
+      [
+        7.737,
+        0.138
+      ],
+      [
+        7.888,
+        0.263
+      ],
+      [
+        8.162,
+        0.1
+      ],
+      [
+        8.275,
+        0.412
+      ],
+      [
+        8.7,
+        0.45
+      ],
+      [
+        9.162,
+        0.113
+      ],
+      [
+        9.287,
+        0.087
+      ],
+      [
+        9.387,
+        0.438
+      ],
+      [
+        9.838,
+        0.075
+      ],
+      [
+        9.925,
+        0.388
+      ],
+      [
+        10.325,
+        0.15
+      ],
+      [
+        10.488,
+        0.475
+      ],
+      [
+        10.975,
+        0.312
+      ],
+      [
+        11.3,
+        0.062
+      ],
+      [
+        11.375,
+        0.087
+      ],
+      [
+        11.475,
+        0.5
+      ],
+      [
+        11.988,
+        0.087
+      ],
+      [
+        12.088,
+        0.588
+      ],
+      [
+        12.688,
+        0.562
+      ],
+      [
+        13.262,
+        0.613
       ]
     ]
   },
